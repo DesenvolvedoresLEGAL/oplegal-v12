@@ -9,6 +9,7 @@ import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SmartEventsPage from "./pages/SmartEventsPage";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +22,7 @@ const App = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/smart-events" element={<PlaceholderPage />} />
+          <Route path="/smart-events" element={<SmartEventsPage />} />
           <Route path="/produtos" element={<PlaceholderPage />} />
           <Route path="/implantacao" element={<PlaceholderPage />} />
           <Route path="/beneficios" element={<PlaceholderPage />} />
