@@ -1,0 +1,84 @@
+
+import React, { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
+const HeroSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-legal-black text-white overflow-hidden">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-legal to-legal-black opacity-80"></div>
+      
+      {/* Grid overlay */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDYwIEwgNjAgNjAiIHN0cm9rZT0iIzE5MTk3MDIwIiBmaWxsPSJub25lIiAvPjxwYXRoIGQ9Ik0gNjAgMCBMIDYwIDYwIiBzdHJva2U9IiMxOTE5NzAyMCIgZmlsbD0ibm9uZSIgLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiIC8+PC9zdmc+')] opacity-20"></div>
+
+      {/* Floating elements */}
+      <div className="absolute w-64 h-64 rounded-full bg-legal-green blur-[100px] top-20 -left-20 opacity-20 animate-pulse"></div>
+      <div className="absolute w-96 h-96 rounded-full bg-legal blur-[120px] bottom-0 right-0 opacity-20 animate-pulse" style={{ animationDelay: "1s" }}></div>
+
+      <div className="container mx-auto px-4 z-10 py-24">
+        <div className="text-center max-w-5xl mx-auto">
+          <div className={`mb-6 transition-all duration-1000 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
+            <span className="inline-block bg-legal-green bg-opacity-20 text-legal-green px-4 py-2 rounded-full text-sm font-medium mb-6">
+              A maior TECHCO do Brasil
+            </span>
+          </div>
+          
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
+            <span className="text-legal-green">Smart Events™</span> — o novo padrão para eventos{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">10× mais inteligentes,</span>
+              <span className="absolute bottom-1 left-0 w-full h-2 bg-legal-green opacity-30"></span>
+            </span>{" "}
+            <br className="hidden md:block" />
+            conectados e rentáveis.
+          </h1>
+          
+          <p className={`text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto transition-all duration-1000 delay-600 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
+            Da conectividade invisível ao drone que entrega o café: 
+            a LEGAL cria eventos com ROI real e zero atrito.
+          </p>
+          
+          <div className={`flex flex-col sm:flex-row justify-center gap-4 transition-all duration-1000 delay-900 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
+            <Button 
+              asChild
+              className="bg-legal-green hover:bg-legal-green/90 text-white px-8 py-6 text-lg h-auto"
+            >
+              <Link to="/contato">
+                Quero transformar meu evento
+                <ArrowRight className="ml-2" size={18} />
+              </Link>
+            </Button>
+            <Button 
+              asChild
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-legal px-8 py-6 text-lg h-auto"
+            >
+              <Link to="/smart-events">
+                Conheça Smart Events™
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <span className="text-sm text-gray-400 mb-2">Scroll</span>
+        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+          <div className="w-1 h-2 bg-gray-400 rounded-full mt-2"></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
