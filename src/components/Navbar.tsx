@@ -193,7 +193,7 @@ const Navbar = () => {
             className="border-legal text-legal hover:bg-legal hover:text-white flex items-center"
             asChild
           >
-            <a href="https://blue.legal" target="_blank" rel="noopener noreferrer">
+            <a href="https://blue.operadora.legal" target="_blank" rel="noopener noreferrer">
               Acesso BLUE
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
