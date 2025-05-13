@@ -1,12 +1,11 @@
 
 import React, { useEffect } from "react";
 import HeroSection from "@/components/sections/HeroSection";
-import PillarsSection from "@/components/sections/PillarsSection";
 import ProductsSection from "@/components/sections/ProductsSection";
-import RoadmapSection from "@/components/sections/RoadmapSection";
-import BenefitsSection from "@/components/sections/BenefitsSection";
 import CallToAction from "@/components/CallToAction";
 import ChatbotButton from "@/components/ChatbotButton";
+import WhyLegalSection from "@/components/sections/WhyLegalSection";
+import SuccessStoriesSection from "@/components/sections/SuccessStoriesSection";
 
 const HomePage = () => {
   useEffect(() => {
@@ -35,10 +34,9 @@ const HomePage = () => {
   return (
     <main>
       <HeroSection />
-      <PillarsSection />
-      <ProductsSection />
-      <RoadmapSection />
-      <BenefitsSection />
+      <WhyLegalSection />
+      <ProductsSection titleOverride="Faça mais negócios com a LEGAL" />
+      <SuccessStoriesSection />
       
       <CallToAction
         title="Pronto para transformar seus eventos?"

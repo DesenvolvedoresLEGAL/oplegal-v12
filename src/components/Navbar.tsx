@@ -1,8 +1,18 @@
 
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { 
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,18 +33,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Smart Events™", path: "/smart-events" },
-    { name: "Produtos", path: "/produtos" },
-    { name: "Implantação", path: "/implantacao" },
-    { name: "Benefícios", path: "/beneficios" },
-    { name: "Ofertas", path: "/ofertas" },
-    { name: "Certificação", path: "/certificacao" },
-    { name: "Conteúdo", path: "/conteudo" },
-    { name: "Contato", path: "/contato" }
-  ];
-
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -42,25 +40,164 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
+        {/* Logo */}
+        <Link to="/" className="flex-shrink-0">
           <div className="text-2xl font-bold text-legal">
             <span className="font-space">LEGAL</span>
             <span className="text-legal-green text-sm align-super ml-1">v11</span>
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-1">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Button className="ml-4 bg-legal hover:bg-legal/90">Transforme seu evento</Button>
+        {/* Desktop Navigation - Centered */}
+        <div className="hidden lg:flex items-center justify-center flex-grow">
+          <NavigationMenu className="mx-auto">
+            <NavigationMenuList className="gap-1">
+              {/* Somos LEGAL */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent">Somos LEGAL</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 w-[400px]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <Link to="/somos-legal" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-legal to-legal-purple p-6 no-underline outline-none focus:shadow-md">
+                          <div className="mb-2 mt-4 text-lg font-medium text-white">
+                            Manifesto LEGAL
+                          </div>
+                          <p className="text-sm leading-tight text-white/90">
+                            Somos mais que uma empresa de tecnologia. Somos visionários, executores, criadores de valor e cultivadores de alma.
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <Link to="/missao-visao-valores" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Missão, Visão e Valores</div>
+                        <p className="text-sm text-muted-foreground">Nosso propósito e direção</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/time" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Time</div>
+                        <p className="text-sm text-muted-foreground">Conheça quem faz a LEGAL</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/vagas" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Vagas</div>
+                        <p className="text-sm text-muted-foreground">Venha transformar o futuro conosco</p>
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* SmartEvents */}
+              <NavigationMenuItem>
+                <Link to="/smart-events" className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                  SmartEvents
+                </Link>
+              </NavigationMenuItem>
+
+              {/* Negócios */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent">Negócios</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
+                    <li>
+                      <Link to="/negocios/aero" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">AERO</div>
+                        <p className="text-sm text-muted-foreground pt-1">Soluções para eventos</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/negocios/ai" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">AI</div>
+                        <p className="text-sm text-muted-foreground pt-1">Inteligência artificial</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/negocios/alugue" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">ALUGUE</div>
+                        <p className="text-sm text-muted-foreground pt-1">Equipamentos e soluções</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/negocios/assinatura" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">ASSINATURA</div>
+                        <p className="text-sm text-muted-foreground pt-1">Conectividade contínua</p>
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Universo */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent">Universo</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4">
+                    <li>
+                      <Link to="/universo/tectec" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">TecTec (blog)</div>
+                        <p className="text-sm text-muted-foreground">Novidades e tendências</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/universo/historias" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Histórias</div>
+                        <p className="text-sm text-muted-foreground">Casos de sucesso</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/universo/bits" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">BITS</div>
+                        <p className="text-sm text-muted-foreground">Conteúdos técnicos</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/universo/imprensa" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Imprensa</div>
+                        <p className="text-sm text-muted-foreground">Notícias e releases</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/universo/status" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Status</div>
+                        <p className="text-sm text-muted-foreground">Servidores e serviços</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/universo/faq" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">FAQ</div>
+                        <p className="text-sm text-muted-foreground">Perguntas frequentes</p>
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Contato */}
+              <NavigationMenuItem>
+                <Link to="/contato" className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                  Contato
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
+        {/* Right side - BLUE access button */}
+        <div className="hidden lg:flex">
+          <Button 
+            variant="outline" 
+            className="border-legal text-legal hover:bg-legal hover:text-white flex items-center"
+            asChild
+          >
+            <a href="https://blue.legal" target="_blank" rel="noopener noreferrer">
+              Acesso BLUE
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
         </div>
 
         {/* Mobile Navigation Button */}
@@ -81,17 +218,30 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-2">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Button className="mt-4 bg-legal hover:bg-legal/90">Transforme seu evento</Button>
+          <Link to="/somos-legal" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            Somos LEGAL
+          </Link>
+          <Link to="/smart-events" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            SmartEvents
+          </Link>
+          <Link to="/negocios" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            Negócios
+          </Link>
+          <Link to="/universo" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            Universo
+          </Link>
+          <Link to="/contato" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            Contato
+          </Link>
+          <a 
+            href="https://blue.legal" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="px-4 py-3 mt-2 text-sm font-medium bg-legal text-white rounded-md flex items-center justify-center"
+          >
+            Acesso BLUE
+            <ExternalLink className="ml-2 h-4 w-4" />
+          </a>
         </div>
       </div>
     </nav>

@@ -24,7 +24,34 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            
+            {/* Smart Events */}
             <Route path="/smart-events" element={<SmartEventsPage />} />
+            
+            {/* Somos LEGAL section */}
+            <Route path="/somos-legal" element={<PlaceholderPage />} />
+            <Route path="/missao-visao-valores" element={<PlaceholderPage />} />
+            <Route path="/time" element={<PlaceholderPage />} />
+            <Route path="/vagas" element={<PlaceholderPage />} />
+            
+            {/* Negócios section */}
+            <Route path="/negocios" element={<PlaceholderPage />} />
+            <Route path="/negocios/aero" element={<PlaceholderPage />} />
+            <Route path="/negocios/ai" element={<PlaceholderPage />} />
+            <Route path="/negocios/alugue" element={<PlaceholderPage />} />
+            <Route path="/negocios/assinatura" element={<PlaceholderPage />} />
+            
+            {/* Universo section */}
+            <Route path="/universo" element={<PlaceholderPage />} />
+            <Route path="/universo/tectec" element={<PlaceholderPage />} />
+            <Route path="/universo/historias" element={<PlaceholderPage />} />
+            <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
+            <Route path="/universo/bits" element={<PlaceholderPage />} />
+            <Route path="/universo/imprensa" element={<PlaceholderPage />} />
+            <Route path="/universo/status" element={<PlaceholderPage />} />
+            <Route path="/universo/faq" element={<PlaceholderPage />} />
+            
+            {/* Old routes for backward compatibility */}
             <Route path="/produtos" element={<PlaceholderPage />} />
             <Route path="/implantacao" element={<PlaceholderPage />} />
             <Route path="/beneficios" element={<PlaceholderPage />} />
@@ -32,6 +59,7 @@ const App = () => {
             <Route path="/certificacao" element={<PlaceholderPage />} />
             <Route path="/conteudo" element={<PlaceholderPage />} />
             <Route path="/contato" element={<PlaceholderPage />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

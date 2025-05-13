@@ -1,93 +1,78 @@
 
 import React from "react";
-import { Wifi, Cloud, Send, Bot, ArrowRight } from "lucide-react";
-import SectionTitle from "../SectionTitle";
-import Card from "../Card";
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Card from "@/components/Card";
 import { Link } from "react-router-dom";
+import SectionTitle from "@/components/SectionTitle";
+import { Button } from "@/components/ui/button";
 
-const ProductsSection = () => {
+interface ProductsSectionProps {
+  titleOverride?: string;
+}
+
+const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
+  // Product data
   const products = [
     {
-      icon: <Wifi size={36} />,
-      title: "ALUGUE",
-      subtitle: "Links temporários FWA 5G",
-      description:
-        "Infraestrutura WiFi para qualquer tipo de evento, desde pequenos workshops até grandes congressos e festivais.",
-      features: ["Instalação em 24h", "Escala até 10.000+ dispositivos", "Monitoramento em tempo real", "Suporte 24/7"]
+      title: "LEGAL AERO",
+      description: "Infraestrutura tecnológica para eventos com conectividade garantida.",
+      icon: "🛰️",
+      link: "/negocios/aero"
     },
     {
-      icon: <Cloud size={36} />,
-      title: "ASSINATURA",
-      subtitle: "Planos de internet FWA 5G",
-      description:
-        "Conectividade dedicada para empresas com alta performance, baixa latência e SLA garantido.",
-      features: ["SLA garantido", "Redundância múltipla", "Segurança avançada", "Gestão centralizada"]
+      title: "LEGAL AI",
+      description: "Soluções de inteligência artificial para análise de dados e experiências.",
+      icon: "🧠",
+      link: "/negocios/ai"
     },
     {
-      icon: <Send size={36} />,
-      title: "AERO",
-      subtitle: "Serviços de drones avançados",
-      description:
-        "Soluções aéreas inovadoras, incluindo lavagem em altura e delivery inteligente durante eventos.",
-      features: ["Delivery durante eventos", "Mapeamento aéreo", "Inspeções técnicas", "Cobertura audiovisual"]
+      title: "LEGAL ALUGUE",
+      description: "Aluguel de equipamentos e soluções para eventos e produtividade.",
+      icon: "📱",
+      link: "/negocios/alugue"
     },
     {
-      icon: <Bot size={36} />,
-      title: "AI",
-      subtitle: "Serviços de Inteligência Artificial",
-      description:
-        "Suite completa de soluções com IA para credenciamento, matchmaking e BI para eventos.",
-      features: ["FacePass (facial)", "LinkAI (matchmaking)", "BLUE (BI)", "HubX (gestão)"]
-    },
+      title: "LEGAL ASSINATURA",
+      description: "Conectividade contínua para empresas com FWA de alta performance.",
+      icon: "📶",
+      link: "/negocios/assinatura"
+    }
   ];
 
   return (
-    <section className="py-20 bg-white" id="produtos">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Produtos LEGAL"
-          subtitle="Soluções modulares que podem ser combinadas para criar a experiência ideal para seu evento."
-          center
+          title={titleOverride || "Produtos LEGAL"}
+          subtitle="Soluções completas para conectar pessoas, negócios e tecnologia"
+          center={true}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {products.map((product, index) => (
             <Card
               key={index}
               title={product.title}
-              subtitle={product.subtitle}
-              icon={product.icon}
-              className="flex flex-col h-full"
+              subtitle={product.description}
+              icon={<span className="text-4xl">{product.icon}</span>}
+              className="h-full"
             >
-              <p className="text-gray-600 mb-4">{product.description}</p>
-              <ul className="styled-list mt-4 mb-6 flex-grow">
-                {product.features.map((feature, i) => (
-                  <li key={i}>{feature}</li>
-                ))}
-              </ul>
-              <Button 
-                asChild
-                variant="outline" 
-                className="mt-auto w-full border-legal text-legal hover:bg-legal hover:text-white"
-              >
-                <Link to="/produtos">
-                  Ver detalhes
-                  <ArrowRight className="ml-2" size={16} />
-                </Link>
-              </Button>
+              <Link to={product.link}>
+                <Button variant="ghost" className="mt-4 text-legal hover:text-legal/90 p-0 flex items-center">
+                  Conhecer <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </Card>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="text-center">
           <Button 
-            asChild
-            className="bg-legal hover:bg-legal/90 text-white px-8 py-6 text-lg h-auto"
+            asChild 
+            className="bg-legal hover:bg-legal/90 text-white"
           >
             <Link to="/produtos">
-              Ver todos os produtos
-              <ArrowRight className="ml-2" size={18} />
+              Ver todas as soluções LEGAL
             </Link>
           </Button>
         </div>
