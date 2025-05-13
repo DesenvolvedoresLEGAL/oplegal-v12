@@ -24,7 +24,7 @@ const Card = ({
         hoverEffect ? "card-hover" : ""
       } ${className}`}
     >
-      {icon && <div className="mb-4 text-legal-green">{icon}</div>}
+      {icon && <div className="mb-4 text-legal-cyan">{icon}</div>}
       <h3 className="text-xl font-bold mb-2 text-legal">{title}</h3>
       {subtitle && <p className="text-gray-600 mb-4">{subtitle}</p>}
       {children}

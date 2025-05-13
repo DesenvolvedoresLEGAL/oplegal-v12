@@ -19,7 +19,7 @@ const SectionTitle = ({
   return (
     <div className={`mb-12 ${center ? "text-center" : ""} ${className}`}>
       <h2
-        className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-unica ${
           light ? "text-white" : "text-legal"
         }`}
       >
@@ -27,7 +27,7 @@ const SectionTitle = ({
       </h2>
       {subtitle && (
         <p
-          className={`text-lg md:text-xl max-w-3xl ${
+          className={`text-lg md:text-xl max-w-3xl font-unica ${
             center ? "mx-auto" : ""
           } ${light ? "text-gray-200" : "text-gray-600"}`}
         >

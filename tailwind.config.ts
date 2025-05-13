@@ -54,8 +54,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				legal: {
-					DEFAULT: '#191970', // Azul LEGAL
-					green: '#00C9A7', // Verde digital
+					DEFAULT: '#020cbc', // Updated: Azul LEGAL padrão
+					purple: '#4d2bfb', // Added: Roxo LEGAL
+					cyan: '#03f9ff', // Added: Ciano LEGAL
 					gray: '#F5F5F5', // Cinza neutro
 					black: '#000000' // Preto puro
 				},
@@ -136,8 +137,9 @@ export default {
 				'slide-in-right': 'slide-in-right 0.5s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter var', 'Inter', 'sans-serif'],
-				space: ['Space Grotesk', 'monospace']
+				sans: ['Neue Haas Unica', 'Inter var', 'Inter', 'sans-serif'],
+				space: ['Space Grotesk', 'monospace'],
+				unica: ['Neue Haas Unica', 'sans-serif']
 			}
 		}
 	},
