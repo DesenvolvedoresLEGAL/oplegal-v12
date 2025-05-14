@@ -27,7 +27,7 @@ const WhyLegalSection = () => {
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Por que a LEGAL?"
-          subtitle="A maior TECHCO do Brasil, acelerando a transformação digital de eventos e negócios desde 2005."
+          subtitle="A maior TECHCO do Brasil, acelerando a transformação digital de eventos e negócios desde 2014."
           center={true}
         />
 
