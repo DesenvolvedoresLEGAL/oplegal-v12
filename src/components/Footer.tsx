@@ -1,39 +1,21 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Instagram, 
-  Linkedin, 
-  Twitter, 
-  ArrowUp
-} from "lucide-react";
-
+import { MapPin, Phone, Mail, Instagram, Linkedin, Twitter, ArrowUp } from "lucide-react";
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
-
-  return (
-    <footer className="bg-legal text-white">
+  return <footer className="bg-legal text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 - About */}
           <div>
             <h3 className="text-xl font-bold mb-4">LEGAL</h3>
-            <p className="text-gray-300 mb-4">
-              A maior TECHCO do Brasil e inventora do conceito Smart Events™. 
-              Entregamos o novo padrão para eventos inteligentes, conectados e lucrativos.
-            </p>
-            <button 
-              onClick={scrollToTop} 
-              className="flex items-center text-legal-green hover:text-white transition-colors"
-            >
+            <p className="text-gray-300 mb-4">A maior e melhor TechCo do Brasil, inventora do conceito Smart Events™. Entregamos o novo padrão para eventos inteligentes, conectados e lucrativos.</p>
+            <button onClick={scrollToTop} className="flex items-center text-legal-green hover:text-white transition-colors">
               <span className="mr-1">Voltar ao topo</span>
               <ArrowUp size={16} />
             </button>
@@ -69,17 +51,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-legal-green flex-shrink-0" />
-                <span className="text-gray-300">Av. Paulista, 1000, São Paulo - SP</span>
+                <span className="text-gray-300">Rua Salvador Simões, 801 - 13º Andar - Cj. 1309/1310 - Alto do Ipiranga - São Paulo/SP - CEP: 04276-000</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-legal-green flex-shrink-0" />
-                <span className="text-gray-300">(11) 9999-9999</span>
+                <span className="text-gray-300">(11) 5194-2223</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-legal-green flex-shrink-0" />
-                <a href="mailto:contato@legal.com.br" className="text-gray-300 hover:text-legal-green transition-colors">
-                  contato@legal.com.br
-                </a>
+                <a href="mailto:contato@legal.com.br" className="text-gray-300 hover:text-legal-green transition-colors">sos@operadora.legal</a>
               </li>
             </ul>
             <div className="mt-4 flex space-x-4">
@@ -99,8 +79,6 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} LEGAL. Todos os direitos reservados. Smart Events™ é uma marca registrada da LEGAL.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
