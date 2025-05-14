@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,11 +53,17 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				legal: {
-					DEFAULT: '#020cbc', // Updated: Azul LEGAL padrão
-					purple: '#4d2bfb', // Added: Roxo LEGAL
-					cyan: '#03f9ff', // Added: Ciano LEGAL
-					gray: '#F5F5F5', // Cinza neutro
-					black: '#000000' // Preto puro
+					DEFAULT: '#020cbc',
+					purple: '#4d2bfb',
+					cyan: '#03f9ff',
+					gray: '#F5F5F5',
+					black: '#000000'
+				},
+				bits: {
+				  cyan: '#00E0FF', // Ciano Neon
+				  purple: '#3D00A0', // Roxo Cósmico
+          darkGray: '#1A1F2C', // Cinza escuro para fundos
+          lightGray: '#F6F8FA' // Cinza suave
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -126,7 +131,11 @@ export default {
 				'slide-in-right': {
 					'0%': { transform: 'translateX(100%)' },
 					'100%': { transform: 'translateX(0)' }
-				}
+				},
+        'pulse-glow': {
+          '0%, 100%': { opacity: '1', boxShadow: '0 0 5px #00E0FF' },
+          '50%': { opacity: '0.7', boxShadow: '0 0 20px #00E0FF, 0 0 30px #00E0FF' },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -134,7 +143,8 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'fade-out': 'fade-out 0.5s ease-out forwards',
 				'scale-in': 'scale-in 0.7s ease-out forwards',
-				'slide-in-right': 'slide-in-right 0.5s ease-out'
+				'slide-in-right': 'slide-in-right 0.5s ease-out',
+        'pulse-glow': 'pulse-glow 2.5s infinite ease-in-out',
 			},
 			fontFamily: {
 				sans: ['Neue Haas Unica', 'Inter var', 'Inter', 'sans-serif'],

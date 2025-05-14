@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmartEventsPage from "./pages/SmartEventsPage";
+import BitsPage from "./pages/BitsPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -46,7 +46,7 @@ const App = () => {
             <Route path="/universo/tectec" element={<PlaceholderPage />} />
             <Route path="/universo/historias" element={<PlaceholderPage />} />
             <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
-            <Route path="/universo/bits" element={<PlaceholderPage />} />
+            <Route path="/universo/bits" element={<BitsPage />} />
             <Route path="/universo/imprensa" element={<PlaceholderPage />} />
             <Route path="/universo/status" element={<PlaceholderPage />} />
             <Route path="/universo/faq" element={<PlaceholderPage />} />
