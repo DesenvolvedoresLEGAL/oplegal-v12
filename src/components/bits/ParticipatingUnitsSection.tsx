@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Wifi, Brain, Package, Building } from 'lucide-react'; // Exemplo de ícones para unidades
+import { Wifi, Brain, Package, Building } from 'lucide-react';
 
 const units = [
   { name: "ASSINATURA", description: "Conectividade FWA e soluções de rede.", icon: Wifi, color: "text-sky-400" },
@@ -13,7 +12,7 @@ const ParticipatingUnitsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-bits-purple mb-12 font-space">Unidades Participantes</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-legal-purple mb-12">Unidades Participantes</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {units.map((unit) => (
             <div key={unit.name} className={`p-6 rounded-lg shadow-lg border-t-4 ${unit.color.replace('text-','border-')} bg-bits-lightGray hover:shadow-xl transition-shadow`}>

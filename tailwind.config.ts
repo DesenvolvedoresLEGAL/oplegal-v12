@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,17 +54,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				legal: {
-					DEFAULT: '#020cbc',
-					purple: '#4d2bfb',
-					cyan: '#03f9ff',
+					DEFAULT: '#020cbc', // Azul escuro (Accent)
+					purple: '#4d2bfb',  // Roxo (Primary)
+					cyan: '#03f9ff',    // Ciano (Secondary)
 					gray: '#F5F5F5',
 					black: '#000000'
 				},
 				bits: {
-				  cyan: '#00E0FF', // Ciano Neon
-				  purple: '#3D00A0', // Roxo Cósmico
-          darkGray: '#1A1F2C', // Cinza escuro para fundos
-          lightGray: '#F6F8FA' // Cinza suave
+          // cyan e purple removidos pois usaremos legal.cyan e legal.purple
+          darkGray: '#1A1F2C', // Cinza escuro para fundos (mantido)
+          lightGray: '#F6F8FA' // Cinza suave para fundos (mantido)
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -133,8 +133,8 @@ export default {
 					'100%': { transform: 'translateX(0)' }
 				},
         'pulse-glow': {
-          '0%, 100%': { opacity: '1', boxShadow: '0 0 5px #00E0FF' },
-          '50%': { opacity: '0.7', boxShadow: '0 0 20px #00E0FF, 0 0 30px #00E0FF' },
+          '0%, 100%': { opacity: '1', boxShadow: '0 0 5px #03f9ff' }, // Cor atualizada para legal.cyan
+          '50%': { opacity: '0.7', boxShadow: '0 0 20px #03f9ff, 0 0 30px #03f9ff' }, // Cor atualizada para legal.cyan
         }
 			},
 			animation: {
@@ -148,10 +148,11 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Neue Haas Unica', 'Inter var', 'Inter', 'sans-serif'],
-				space: ['Space Grotesk', 'monospace'],
+				space: ['Space Grotesk', 'monospace'], // Mantido caso seja usado em outro lugar, mas não nos títulos BITS
 				unica: ['Neue Haas Unica', 'sans-serif']
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

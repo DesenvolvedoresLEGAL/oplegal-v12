@@ -14,20 +14,20 @@ const levels = [
   { name: "ORIGIN", points: "0+", color: "bg-gray-500", textColor: "text-gray-500" },
   { name: "QUANTUM", points: "1.000+", color: "bg-sky-500", textColor: "text-sky-500" },
   { name: "NEBULA", points: "5.000+", color: "bg-indigo-500", textColor: "text-indigo-500" },
-  { name: "CELESTIAL", points: "15.000+", color: "bg-purple-500", textColor: "text-purple-500" },
+  { name: "CELESTIAL", points: "15.000+", color: "bg-purple-500", textColor: "text-purple-500" }, // Este roxo pode ser um roxo genérico, não o da marca.
   { name: "GALACTIC", points: "30.000+", color: "bg-pink-500", textColor: "text-pink-500" },
   { name: "COSMIC", points: "50.000+", color: "bg-red-500", textColor: "text-red-500" },
   { name: "ZENITH", points: "100.000+", color: "bg-amber-500", textColor: "text-amber-500" },
   { name: "APEX", points: "250.000+", color: "bg-lime-500", textColor: "text-lime-500" },
   { name: "INFINITE", points: "500.000+", color: "bg-emerald-500", textColor: "text-emerald-500" },
-  { name: "ECLIPSE", points: "1.000.000+", color: "bg-bits-cyan", textColor: "text-bits-cyan" },
+  { name: "ECLIPSE", points: "1.000.000+", color: "bg-legal-cyan", textColor: "text-legal-cyan" }, // Cor atualizada
 ];
 
 const GamifiedLevelsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-bits-purple mb-4 font-space">Níveis Gamificados BITS™</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-legal-purple mb-4">Níveis Gamificados BITS™</h2> {/* Cor e font-space atualizados */}
         <p className="text-center text-gray-700 mb-12 max-w-xl mx-auto">
           Sua jornada no universo BITS™ é dividida em 10 níveis emocionantes. Quanto mais você interage, mais alto você chega e melhores são as recompensas!
         </p>
@@ -56,8 +56,8 @@ const GamifiedLevelsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-bits-purple border-bits-purple hover:bg-bits-purple hover:text-white" />
-          <CarouselNext className="text-bits-purple border-bits-purple hover:bg-bits-purple hover:text-white" />
+          <CarouselPrevious className="text-legal-purple border-legal-purple hover:bg-legal-purple hover:text-white" /> {/* Cores atualizadas */}
+          <CarouselNext className="text-legal-purple border-legal-purple hover:bg-legal-purple hover:text-white" /> {/* Cores atualizadas */}
         </Carousel>
       </div>
     </section>

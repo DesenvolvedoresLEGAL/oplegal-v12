@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Ticket, Briefcase, Crown, Rocket } from 'lucide-react'; // Example Icons
+import { Ticket, Briefcase, Crown, Rocket } from 'lucide-react';
 
 const rewardsData = [
   { points: "1.000 - 4.999 BITS", benefits: ["Descontos progressivos", "Acesso a conteúdos exclusivos"], icon: Ticket },
@@ -15,12 +15,12 @@ const BitsRewardsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-bits-darkGray text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-bits-cyan mb-12 font-space">Recompensas BITS™</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-legal-cyan mb-12">Recompensas BITS™</h2> {/* Cor e font-space atualizados */}
         <div className="space-y-8">
           {rewardsData.map((reward, index) => (
-            <div key={index} className="p-6 bg-gray-800/70 rounded-lg shadow-xl border border-bits-cyan/40 flex flex-col md:flex-row items-center">
+            <div key={index} className="p-6 bg-gray-800/70 rounded-lg shadow-xl border border-legal-cyan/40 flex flex-col md:flex-row items-center">
               <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
-                <reward.icon size={60} className="text-bits-cyan" />
+                <reward.icon size={60} className="text-legal-cyan" />
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{reward.points}</h3>
@@ -34,7 +34,7 @@ const BitsRewardsSection = () => {
         <div className="text-center mt-12">
           <Button
             size="lg"
-            className="bg-bits-cyan text-bits-darkGray hover:bg-bits-cyan/90 font-bold text-lg px-10 py-6"
+            className="bg-legal-cyan text-legal-black hover:bg-legal-cyan/90 font-bold text-lg px-10 py-6" /* Cores atualizadas */
             asChild
           >
              <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer">
