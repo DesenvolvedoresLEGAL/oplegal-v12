@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmartEventsPage from "./pages/SmartEventsPage";
 import BitsPage from "./pages/BitsPage";
+import SomosLegalPage from "./pages/SomosLegalPage"; // Nova importação
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -29,7 +31,7 @@ const App = () => {
             <Route path="/smart-events" element={<SmartEventsPage />} />
             
             {/* Somos LEGAL section */}
-            <Route path="/somos-legal" element={<PlaceholderPage />} />
+            <Route path="/somos-legal" element={<SomosLegalPage />} /> {/* Rota atualizada */}
             <Route path="/missao-visao-valores" element={<PlaceholderPage />} />
             <Route path="/time" element={<PlaceholderPage />} />
             <Route path="/vagas" element={<PlaceholderPage />} />
