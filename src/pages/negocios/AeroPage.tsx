@@ -3,7 +3,7 @@ import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import CallToAction from '@/components/CallToAction';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Drone, Camera, Package, Sparkles } from 'lucide-react';
+import { Rocket, Camera, Package, Sparkles } from 'lucide-react'; // Alterado: Drone para Rocket
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -58,8 +58,9 @@ const AeroPage = () => {
       {/* Hero Section */}
       <section className="py-24 md:py-32 text-center bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Drone className="absolute top-1/4 left-1/4 w-64 h-64 text-white/10 animate-pulse transform -translate-x-1/2 -translate-y-1/2" />
-          <Drone className="absolute bottom-10 right-10 w-32 h-32 text-white/10 animate-ping" />
+          {/* Alterado: Drone para Rocket */}
+          <Rocket className="absolute top-1/4 left-1/4 w-64 h-64 text-white/10 animate-pulse transform -translate-x-1/2 -translate-y-1/2" />
+          <Rocket className="absolute bottom-10 right-10 w-32 h-32 text-white/10 animate-ping" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider mb-6 animate-fade-in" style={{ letterSpacing: '0.05em' }}>
@@ -99,7 +100,8 @@ const AeroPage = () => {
                   <ul className="list-none space-y-2 mb-6 text-sm">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
-                         <Drone className="w-5 h-5 text-legal-cyan mr-2 mt-0.5 flex-shrink-0" />
+                         {/* Alterado: Drone para Rocket */}
+                         <Rocket className="w-5 h-5 text-legal-cyan mr-2 mt-0.5 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
