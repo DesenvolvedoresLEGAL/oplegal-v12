@@ -3,7 +3,7 @@ import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import CallToAction from '@/components/CallToAction';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Brain, Link as LinkIcon, ScanFace, CheckSquare, Zap, Settings, Users, BarChart } from 'lucide-react';
+import { Brain, ScanFace, CheckSquare, Zap, Settings, Users, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -24,13 +24,13 @@ const solutions = [
   {
     id: "linkai",
     name: "LinkAI",
-    description: "Assistente virtual inteligente que oferece suporte personalizado e informações relevantes aos participantes, melhorando o engajamento.",
+    description: "Assistente virtual inteligente que entende seu momento de negócio, conecta você com quem resolve seu maior desafio e otimiza seu tempo para mais foco e resultado.",
     icon: <Zap className="w-12 h-12 text-legal-cyan mb-4" />,
     features: [
-      "Chatbot com Processamento de Linguagem Natural",
-      "Recomendações Personalizadas",
-      "Suporte 24/7",
-      "Integração com Agendas e Mapas",
+      "Match com quem precisa do que você oferece",
+      "Conexão com quem resolve o seu maior desafio",
+      "IA que entende seu momento de negócio",
+      "Mais tempo, mais foco, mais resultado",
     ],
     ctaLink: "/contato?solution=linkai",
   },
