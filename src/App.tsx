@@ -13,6 +13,7 @@ import SmartEventsPage from "./pages/SmartEventsPage";
 import BitsPage from "./pages/BitsPage";
 import SomosLegalPage from "./pages/SomosLegalPage";
 import NegociosPage from "./pages/NegociosPage";
+import AIPage from "./pages/negocios/AIPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -39,7 +40,7 @@ const App = () => {
             {/* Negócios section */}
             <Route path="/negocios" element={<NegociosPage />} />
             <Route path="/negocios/aero" element={<PlaceholderPage />} />
-            <Route path="/negocios/ai" element={<PlaceholderPage />} />
+            <Route path="/negocios/ai" element={<AIPage />} />
             <Route path="/negocios/alugue" element={<PlaceholderPage />} />
             <Route path="/negocios/assinatura" element={<PlaceholderPage />} />
             
