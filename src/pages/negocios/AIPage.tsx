@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import CallToAction from '@/components/CallToAction';
@@ -49,14 +48,15 @@ const solutions = [
   },
   {
     id: "fitscore",
-    name: "FitScore",
-    description: "Algoritmo de IA que analisa perfis e interesses para otimizar o networking, conectando participantes com alta afinidade.",
+    name: "FitScore™",
+    description: "O FitScore™ resolve de forma rápida e objetiva um dos maiores desafios das empresas: avaliar e prever o alinhamento de colaboradores e candidatos com a cultura, valores e performance esperada.",
     icon: <Users className="w-12 h-12 text-legal-cyan mb-4" />,
     features: [
-      "Matchmaking Inteligente",
-      "Sugestões de Conexão Relevantes",
-      "Otimização de Agendas de Reunião",
-      "Análise de Interesses e Perfis",
+      "Identifica quem realmente está alinhado à cultura e ao desempenho esperado",
+      "Reduz o turnover ao prever riscos de desligamento",
+      "Acelera decisões de promoção, retenção ou desligamento com base em dados objetivos",
+      "Otimiza processos seletivos com análises preditivas e personalizadas",
+      "Permite criar times mais coerentes, produtivos e engajados",
     ],
     ctaLink: "/contato?solution=fitscore",
   },
@@ -78,7 +78,7 @@ const AIPage = () => {
             LEGAL AI
           </h1>
           <p className="text-lg md:text-xl font-light max-w-3xl mx-auto mb-8 animate-fade-in animation-delay-300">
-            Inteligência Artificial para Eventos e Negócios Inteligentes. Descubra como nossas soluções <strong className="font-bold text-legal-cyan">HubX</strong>, <strong className="font-bold text-legal-cyan">LinkAI</strong>, <strong className="font-bold text-legal-cyan">FacePass</strong>, e <strong className="font-bold text-legal-cyan">FitScore</strong>, integradas à plataforma SmartEvents, revolucionam a experiência e a gestão.
+            Inteligência Artificial para Eventos e Negócios Inteligentes. Descubra como nossas soluções <strong className="font-bold text-legal-cyan">HubX</strong>, <strong className="font-bold text-legal-cyan">LinkAI</strong>, <strong className="font-bold text-legal-cyan">FacePass</strong>, e <strong className="font-bold text-legal-cyan">FitScore™</strong>, integradas à plataforma SmartEvents, revolucionam a experiência e a gestão.
           </p>
           <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold animate-fade-in animation-delay-600">
             <Link to="/smart-events">Conheça SmartEvents</Link>
@@ -138,7 +138,7 @@ const AIPage = () => {
           />
           <BarChart className="w-24 h-24 text-legal-purple mx-auto mb-6" />
           <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
-            A plataforma SmartEvents serve como a espinha dorsal, permitindo que HubX, LinkAI, FacePass e FitScore trabalhem em harmonia, compartilhando dados e insights para uma experiência unificada e resultados superiores.
+            A plataforma SmartEvents serve como a espinha dorsal, permitindo que HubX, LinkAI, FacePass e FitScore™ trabalhem em harmonia, compartilhando dados e insights para uma experiência unificada e resultados superiores.
           </p>
           <Button asChild size="lg" className="bg-legal-purple hover:bg-legal-purple/90 text-white">
             <Link to="/smart-events">Descubra o Poder do SmartEvents</Link>
