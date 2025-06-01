@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,7 @@ import NegociosPage from "./pages/NegociosPage";
 import AIPage from "./pages/negocios/AIPage";
 import AeroPage from "./pages/negocios/AeroPage";
 import AluguelPage from "./pages/negocios/AluguelPage";
+import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
 import VagasPage from "./pages/VagasPage";
 import ContatoPage from "./pages/ContatoPage";
@@ -48,7 +48,7 @@ const App = () => {
             <Route path="/negocios/aero" element={<AeroPage />} />
             <Route path="/negocios/ai" element={<AIPage />} />
             <Route path="/negocios/alugue" element={<AluguelPage />} />
-            <Route path="/negocios/assinatura" element={<PlaceholderPage />} />
+            <Route path="/negocios/assinatura" element={<AssinaturaPage />} />
             
             {/* Universo section */}
             <Route path="/universo" element={<PlaceholderPage />} />
