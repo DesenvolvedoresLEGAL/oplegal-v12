@@ -10,60 +10,76 @@ import { Brain, Users, BarChart3, Eye, Zap, MessageSquare, Target, Gamepad2 } fr
 
 const aiProducts = [
   {
+    id: 'facepass',
     name: 'FacePass',
     description: 'Credenciamento facial de alta precisão para eventos e controle de acesso.',
     icon: <Eye className="w-6 h-6" />,
     features: ['Reconhecimento facial avançado', 'Check-in automatizado', 'Relatórios de acesso em tempo real'],
-    link: '/contato?produto=facepass'
+    benefits: ['Redução de 90% no tempo de credenciamento', 'Eliminação de filas', 'Segurança aprimorada'],
+    ctaLink: '/contato?produto=facepass'
   },
   {
+    id: 'linkai',
     name: 'LinkAI',
     description: 'Networking inteligente que conecta participantes com interesses em comum.',
     icon: <Users className="w-6 h-6" />,
     features: ['Sugestões de conexões personalizadas', 'Agendamento de reuniões', 'Análise de perfil comportamental'],
-    link: '/contato?produto=linkai'
+    benefits: ['Aumento de 300% nas conexões relevantes', 'ROI mensurável em networking', 'Experiência personalizada'],
+    ctaLink: '/contato?produto=linkai'
   },
   {
+    id: 'fitscore',
     name: 'FitScore™',
     description: 'Análise de perfil comportamental para recrutamento e gestão de equipes.',
     icon: <BarChart3 className="w-6 h-6" />,
     features: ['Mapeamento de competências', 'Identificação de talentos', 'Relatórios de desempenho individual e em grupo'],
-    link: '/contato?produto=fitscore'
+    benefits: ['Redução de 60% no tempo de contratação', 'Aumento da retenção de talentos', 'Decisões baseadas em dados'],
+    ctaLink: '/contato?produto=fitscore'
   },
   {
+    id: 'blue',
     name: 'Blue',
     description: 'Business Intelligence para análise de dados e tomada de decisões estratégicas.',
     icon: <Brain className="w-6 h-6" />,
     features: ['Dashboards personalizados', 'Relatórios interativos', 'Previsões de tendências'],
-    link: '/contato?produto=blue'
+    benefits: ['Tomada de decisão 5x mais rápida', 'Insights acionáveis em tempo real', 'ROI comprovado'],
+    ctaLink: '/contato?produto=blue'
   },
   {
+    id: 'samurai',
     name: 'SamurAI',
     description: 'Captação de leads qualificados através de inteligência artificial.',
     icon: <Target className="w-6 h-6" />,
     features: ['Identificação de potenciais clientes', 'Segmentação de público-alvo', 'Geração de leads automatizada'],
-    link: '/contato?produto=samurai'
+    benefits: ['Aumento de 400% na qualificação de leads', 'Redução do custo de aquisição', 'Pipeline previsível'],
+    ctaLink: '/contato?produto=samurai'
   },
   {
+    id: 'eventrix',
     name: 'Eventrix',
     description: 'Plataforma de gestão de eventos com recursos de inteligência artificial.',
     icon: <Zap className="w-6 h-6" />,
     features: ['Automação de tarefas', 'Personalização da experiência do participante', 'Análise de resultados em tempo real'],
-    link: '/contato?produto=eventrix'
+    benefits: ['Redução de 70% no tempo de organização', 'Experiência do participante otimizada', 'Análises preditivas'],
+    ctaLink: '/contato?produto=eventrix'
   },
   {
+    id: 'humanoid',
     name: 'Humanoid',
     description: 'Chatbot inteligente para atendimento ao cliente e suporte técnico.',
     icon: <MessageSquare className="w-6 h-6" />,
     features: ['Respostas automatizadas', 'Integração com CRM', 'Disponibilidade 24/7'],
-    link: '/contato?produto=humanoid'
+    benefits: ['Redução de 80% no tempo de resposta', 'Satisfação do cliente melhorada', 'Escalabilidade ilimitada'],
+    ctaLink: '/contato?produto=humanoid'
   },
   {
+    id: 'neurafit',
     name: 'NeuraFit',
     description: 'Gamificação para engajamento e motivação de equipes.',
     icon: <Gamepad2 className="w-6 h-6" />,
     features: ['Criação de desafios personalizados', 'Ranking de desempenho', 'Recompensas e reconhecimento'],
-    link: '/contato?produto=neurafit'
+    benefits: ['Aumento de 250% no engajamento', 'Produtividade mensurável', 'Cultura organizacional fortalecida'],
+    ctaLink: '/contato?produto=neurafit'
   },
 ];
 
@@ -158,7 +174,7 @@ const AIPage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {aiProducts.map((product, index) => (
-                <ProductCard key={index} {...product} />
+                <ProductCard key={product.id} {...product} />
               ))}
             </div>
           </div>
