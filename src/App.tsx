@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -21,6 +22,7 @@ import TimePage from "./pages/TimePage";
 import VagasPage from "./pages/VagasPage";
 import ContatoPage from "./pages/ContatoPage";
 import UniversoPage from "./pages/UniversoPage";
+import TecTecPage from "./pages/universo/TecTecPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -53,7 +55,8 @@ const App = () => {
             
             {/* Universo section */}
             <Route path="/universo" element={<UniversoPage />} />
-            <Route path="/universo/tectec" element={<PlaceholderPage />} />
+            <Route path="/universo/tectec" element={<TecTecPage />} />
+            <Route path="/universo/tectec/:id" element={<PlaceholderPage />} />
             <Route path="/universo/historias" element={<PlaceholderPage />} />
             <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
             <Route path="/universo/bits" element={<BitsPage />} />
