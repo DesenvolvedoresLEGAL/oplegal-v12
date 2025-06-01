@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +17,7 @@ import NegociosPage from "./pages/NegociosPage";
 import AIPage from "./pages/negocios/AIPage";
 import AeroPage from "./pages/negocios/AeroPage";
 import TimePage from "./pages/TimePage";
+import VagasPage from "./pages/VagasPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -37,7 +39,7 @@ const App = () => {
             <Route path="/somos-legal" element={<SomosLegalPage />} />
             <Route path="/missao-visao-valores" element={<PlaceholderPage />} />
             <Route path="/time" element={<TimePage />} />
-            <Route path="/vagas" element={<PlaceholderPage />} />
+            <Route path="/vagas" element={<VagasPage />} />
             
             {/* Negócios section */}
             <Route path="/negocios" element={<NegociosPage />} />
