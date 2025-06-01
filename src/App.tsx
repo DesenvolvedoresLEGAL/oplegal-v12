@@ -23,6 +23,7 @@ import VagasPage from "./pages/VagasPage";
 import ContatoPage from "./pages/ContatoPage";
 import UniversoPage from "./pages/UniversoPage";
 import TecTecPage from "./pages/universo/TecTecPage";
+import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -63,6 +64,9 @@ const App = () => {
             <Route path="/universo/imprensa" element={<PlaceholderPage />} />
             <Route path="/universo/status" element={<PlaceholderPage />} />
             <Route path="/universo/faq" element={<PlaceholderPage />} />
+            
+            {/* Admin section */}
+            <Route path="/admin/tectec" element={<TecTecAdminPage />} />
             
             {/* Contact */}
             <Route path="/contato" element={<ContatoPage />} />
