@@ -20,6 +20,7 @@ import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
 import VagasPage from "./pages/VagasPage";
 import ContatoPage from "./pages/ContatoPage";
+import UniversoPage from "./pages/UniversoPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -51,7 +52,7 @@ const App = () => {
             <Route path="/negocios/assinatura" element={<AssinaturaPage />} />
             
             {/* Universo section */}
-            <Route path="/universo" element={<PlaceholderPage />} />
+            <Route path="/universo" element={<UniversoPage />} />
             <Route path="/universo/tectec" element={<PlaceholderPage />} />
             <Route path="/universo/historias" element={<PlaceholderPage />} />
             <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
