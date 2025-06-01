@@ -18,6 +18,7 @@ import AIPage from "./pages/negocios/AIPage";
 import AeroPage from "./pages/negocios/AeroPage";
 import TimePage from "./pages/TimePage";
 import VagasPage from "./pages/VagasPage";
+import ContatoPage from "./pages/ContatoPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -58,6 +59,9 @@ const App = () => {
             <Route path="/universo/status" element={<PlaceholderPage />} />
             <Route path="/universo/faq" element={<PlaceholderPage />} />
             
+            {/* Contact */}
+            <Route path="/contato" element={<ContatoPage />} />
+            
             {/* Old routes for backward compatibility */}
             <Route path="/produtos" element={<PlaceholderPage />} />
             <Route path="/implantacao" element={<PlaceholderPage />} />
@@ -65,7 +69,6 @@ const App = () => {
             <Route path="/ofertas" element={<PlaceholderPage />} />
             <Route path="/certificacao" element={<PlaceholderPage />} />
             <Route path="/conteudo" element={<PlaceholderPage />} />
-            <Route path="/contato" element={<PlaceholderPage />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>

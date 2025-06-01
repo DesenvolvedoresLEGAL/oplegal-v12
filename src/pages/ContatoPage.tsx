@@ -1,0 +1,371 @@
+
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import SectionTitle from '@/components/SectionTitle';
+import CallToAction from '@/components/CallToAction';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { useToast } from '@/hooks/use-toast';
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Clock, 
+  Send,
+  MessageSquare,
+  Users,
+  Headphones,
+  Building
+} from 'lucide-react';
+
+const formSchema = z.object({
+  name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
+  email: z.string().email('Email inválido'),
+  company: z.string().optional(),
+  phone: z.string().optional(),
+  subject: z.string().min(5, 'Assunto deve ter pelo menos 5 caracteres'),
+  message: z.string().min(10, 'Mensagem deve ter pelo menos 10 caracteres'),
+});
+
+type FormData = z.infer<typeof formSchema>;
+
+const contactInfo = [
+  {
+    icon: <MapPin className="w-6 h-6" />,
+    title: "Endereço",
+    content: "Rua Salvador Simões, 801 - 13º Andar - Cj. 1309/1310",
+    subcontent: "Alto do Ipiranga - São Paulo/SP - CEP: 04276-000"
+  },
+  {
+    icon: <Phone className="w-6 h-6" />,
+    title: "Telefone",
+    content: "(11) 5194-2223",
+    subcontent: "Segunda a sexta, 9h às 18h"
+  },
+  {
+    icon: <Mail className="w-6 h-6" />,
+    title: "Email",
+    content: "sos@operadora.legal",
+    subcontent: "Resposta em até 24h"
+  },
+  {
+    icon: <Clock className="w-6 h-6" />,
+    title: "Horário de Atendimento",
+    content: "Segunda a Sexta: 9h às 18h",
+    subcontent: "Sábado: 9h às 12h"
+  }
+];
+
+const supportOptions = [
+  {
+    icon: <MessageSquare className="w-8 h-8" />,
+    title: "Suporte Técnico",
+    description: "Ajuda com produtos e serviços LEGAL",
+    contact: "suporte@operadora.legal"
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    title: "Vendas",
+    description: "Informações sobre produtos e orçamentos",
+    contact: "vendas@operadora.legal"
+  },
+  {
+    icon: <Building className="w-8 h-8" />,
+    title: "Parcerias",
+    description: "Oportunidades de parceria e negócios",
+    contact: "parcerias@operadora.legal"
+  },
+  {
+    icon: <Headphones className="w-8 h-8" />,
+    title: "Atendimento Geral",
+    description: "Dúvidas gerais e informações",
+    contact: "sos@operadora.legal"
+  }
+];
+
+const ContatoPage = () => {
+  const { toast } = useToast();
+  
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      subject: '',
+      message: '',
+    },
+  });
+
+  const onSubmit = (data: FormData) => {
+    console.log('Form submitted:', data);
+    toast({
+      title: "Mensagem enviada!",
+      description: "Recebemos sua mensagem e entraremos em contato em breve.",
+    });
+    form.reset();
+  };
+
+  return (
+    <div className="bg-background text-foreground font-unica">
+      {/* Hero Section */}
+      <section className="py-24 md:py-32 text-center bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <MessageSquare className="absolute top-1/4 left-1/4 w-64 h-64 text-white/10 animate-pulse transform -translate-x-1/2 -translate-y-1/2" />
+          <Mail className="absolute bottom-10 right-10 w-32 h-32 text-white/10 animate-ping" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider mb-6 animate-fade-in" style={{ letterSpacing: '0.05em' }}>
+            CONTATO
+          </h1>
+          <p className="text-lg md:text-xl font-light max-w-3xl mx-auto mb-8 animate-fade-in animation-delay-300">
+            Vamos transformar suas ideias em realidade. Entre em contato conosco e descubra como a LEGAL pode impulsionar seus eventos e negócios.
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Form & Info Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div>
+              <SectionTitle
+                title="FALE CONOSCO"
+                subtitle="Preencha o formulário abaixo e nossa equipe entrará em contato em breve."
+              />
+              <Card className="bg-card border-legal/20 shadow-xl">
+                <CardHeader>
+                  <CardTitle className="text-legal">Envie sua mensagem</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="name"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Nome *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Seu nome completo" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Email *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="seu@email.com" type="email" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                      
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="company"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Empresa</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Nome da empresa" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Telefone</FormLabel>
+                              <FormControl>
+                                <Input placeholder="(11) 99999-9999" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Assunto *</FormLabel>
+                            <FormControl>
+                              <Input placeholder="Sobre o que você gostaria de falar?" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Mensagem *</FormLabel>
+                            <FormControl>
+                              <Textarea 
+                                placeholder="Conte-nos mais detalhes sobre sua necessidade..."
+                                className="min-h-[120px]"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <Button type="submit" className="w-full bg-legal hover:bg-legal/90 text-white">
+                        <Send className="w-4 h-4 mr-2" />
+                        Enviar Mensagem
+                      </Button>
+                    </form>
+                  </Form>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Contact Information */}
+            <div>
+              <SectionTitle
+                title="INFORMAÇÕES DE CONTATO"
+                subtitle="Diversas formas de entrar em contato conosco."
+              />
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <Card key={index} className="bg-white border-legal/20 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="text-legal-cyan">
+                          {info.icon}
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-legal mb-1">{info.title}</h3>
+                          <p className="text-foreground font-medium">{info.content}</p>
+                          {info.subcontent && (
+                            <p className="text-muted-foreground text-sm mt-1">{info.subcontent}</p>
+                          )}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Support Options Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <SectionTitle
+            title="CANAIS DE ATENDIMENTO"
+            subtitle="Encontre o canal ideal para sua necessidade e receba o suporte adequado."
+            center
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {supportOptions.map((option, index) => (
+              <Card key={index} className="bg-white border-legal/20 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                <CardContent className="p-6">
+                  <div className="flex justify-center mb-4 text-legal-cyan">
+                    {option.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-legal mb-2">{option.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-4">{option.description}</p>
+                  <a 
+                    href={`mailto:${option.contact}`}
+                    className="text-legal hover:text-legal-purple transition-colors text-sm font-medium"
+                  >
+                    {option.contact}
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <SectionTitle
+            title="NOSSA LOCALIZAÇÃO"
+            subtitle="Venha nos visitar em nosso escritório no coração de São Paulo."
+            center
+          />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Card className="bg-card border-legal/20 shadow-xl">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-legal mb-6">Escritório Principal</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="w-5 h-5 text-legal-cyan mt-1" />
+                      <div>
+                        <p className="font-medium">Rua Salvador Simões, 801</p>
+                        <p className="text-muted-foreground">13º Andar - Conjuntos 1309/1310</p>
+                        <p className="text-muted-foreground">Alto do Ipiranga - São Paulo/SP</p>
+                        <p className="text-muted-foreground">CEP: 04276-000</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Clock className="w-5 h-5 text-legal-cyan" />
+                      <div>
+                        <p className="font-medium">Horário de Funcionamento</p>
+                        <p className="text-muted-foreground">Segunda a Sexta: 9h às 18h</p>
+                        <p className="text-muted-foreground">Sábado: 9h às 12h</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+              <div className="text-center text-gray-500">
+                <MapPin className="w-12 h-12 mx-auto mb-4" />
+                <p className="text-lg font-medium">Mapa Interativo</p>
+                <p className="text-sm">Localização do escritório LEGAL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <CallToAction
+        title="Pronto para Transformar seus Eventos?"
+        subtitle="Entre em contato conosco hoje mesmo e descubra como podemos elevar seus eventos e negócios ao próximo nível."
+        buttonText="Falar com Especialista"
+        buttonLink="/contato"
+        secondaryButtonText="Ver Produtos"
+        secondaryButtonLink="/smart-events"
+        background="gradient"
+      />
+    </div>
+  );
+};
+
+export default ContatoPage;
