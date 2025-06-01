@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,7 +14,8 @@ import BitsPage from "./pages/BitsPage";
 import SomosLegalPage from "./pages/SomosLegalPage";
 import NegociosPage from "./pages/NegociosPage";
 import AIPage from "./pages/negocios/AIPage";
-import AeroPage from "./pages/negocios/AeroPage"; // Nova importação
+import AeroPage from "./pages/negocios/AeroPage";
+import TimePage from "./pages/TimePage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -36,12 +36,12 @@ const App = () => {
             {/* Somos LEGAL section */}
             <Route path="/somos-legal" element={<SomosLegalPage />} />
             <Route path="/missao-visao-valores" element={<PlaceholderPage />} />
-            <Route path="/time" element={<PlaceholderPage />} />
+            <Route path="/time" element={<TimePage />} />
             <Route path="/vagas" element={<PlaceholderPage />} />
             
             {/* Negócios section */}
             <Route path="/negocios" element={<NegociosPage />} />
-            <Route path="/negocios/aero" element={<AeroPage />} /> {/* Rota atualizada */}
+            <Route path="/negocios/aero" element={<AeroPage />} />
             <Route path="/negocios/ai" element={<AIPage />} />
             <Route path="/negocios/alugue" element={<PlaceholderPage />} />
             <Route path="/negocios/assinatura" element={<PlaceholderPage />} />
