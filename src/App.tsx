@@ -23,6 +23,9 @@ import VagasPage from "./pages/VagasPage";
 import ContatoPage from "./pages/ContatoPage";
 import UniversoPage from "./pages/UniversoPage";
 import TecTecPage from "./pages/universo/TecTecPage";
+import ImprensaPage from "./pages/universo/ImprensaPage";
+import StatusPage from "./pages/universo/StatusPage";
+import FAQPage from "./pages/universo/FAQPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
 
 const App = () => {
@@ -61,9 +64,9 @@ const App = () => {
             <Route path="/universo/historias" element={<PlaceholderPage />} />
             <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
             <Route path="/universo/bits" element={<BitsPage />} />
-            <Route path="/universo/imprensa" element={<PlaceholderPage />} />
-            <Route path="/universo/status" element={<PlaceholderPage />} />
-            <Route path="/universo/faq" element={<PlaceholderPage />} />
+            <Route path="/universo/imprensa" element={<ImprensaPage />} />
+            <Route path="/universo/status" element={<StatusPage />} />
+            <Route path="/universo/faq" element={<FAQPage />} />
             
             {/* Admin section */}
             <Route path="/admin/tectec" element={<TecTecAdminPage />} />
