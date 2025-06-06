@@ -2,6 +2,13 @@
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import TimelineItem from './TimelineItem';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const historia = [
   { year: "2010", event: "Wagner tem a ideia de instalar WiFi em seu carro." },
@@ -38,18 +45,29 @@ const NossaHistoriaSection = () => {
           subtitle="Desde suas origens pré-históricas, sem smartphones, com apenas um modem 3G e um sonho, até se tornar a maior e melhor TechCo para eventos e negócios."
           center
         />
-        <div className="relative max-w-3xl mx-auto">
-          {/* Linha vertical da timeline */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-legal-purple transform -translate-x-1/2 hidden md:block"></div>
-          
-          {historia.map((item, index) => (
-            <TimelineItem 
-              key={index} 
-              year={item.year} 
-              event={item.event} 
-              isLeft={index % 2 === 0} 
-            />
-          ))}
+        
+        <div className="relative max-w-7xl mx-auto mt-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: false,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {historia.map((item, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                  <TimelineItem 
+                    year={item.year} 
+                    event={item.event} 
+                    index={index}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 bg-legal-purple hover:bg-legal-purple/90 text-white border-legal-purple" />
+            <CarouselNext className="hidden md:flex -right-12 bg-legal-purple hover:bg-legal-purple/90 text-white border-legal-purple" />
+          </Carousel>
         </div>
       </div>
     </section>
