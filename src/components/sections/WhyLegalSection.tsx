@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 const WhyLegalSection = () => {
-  const [count, setCount] = useState(155000);
+  const [count, setCount] = useState(165000);
   const targetCount = 166729;
   useEffect(() => {
     const interval = setInterval(() => {
