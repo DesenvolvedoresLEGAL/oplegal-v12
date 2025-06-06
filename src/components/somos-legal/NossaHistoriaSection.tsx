@@ -46,17 +46,22 @@ const NossaHistoriaSection = () => {
           center
         />
         
-        <div className="relative max-w-7xl mx-auto mt-12">
+        {/* Timeline horizontal */}
+        <div className="relative mt-16">
+          {/* Linha principal horizontal */}
+          <div className="absolute top-8 left-8 right-8 h-1 bg-legal-purple/20 hidden md:block"></div>
+          
           <Carousel
             opts={{
               align: "start",
               loop: false,
+              slidesToScroll: 1,
             }}
-            className="w-full"
+            className="w-full max-w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="ml-4">
               {historia.map((item, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <CarouselItem key={`${item.year}-${index}`} className="pl-4 basis-80 md:basis-96 flex-shrink-0">
                   <TimelineItem 
                     year={item.year} 
                     event={item.event} 
@@ -65,9 +70,20 @@ const NossaHistoriaSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-legal-purple hover:bg-legal-purple/90 text-white border-legal-purple" />
-            <CarouselNext className="hidden md:flex -right-12 bg-legal-purple hover:bg-legal-purple/90 text-white border-legal-purple" />
+            
+            {/* Controles do carrossel */}
+            <div className="flex justify-center mt-8 gap-4">
+              <CarouselPrevious className="relative transform-none bg-legal-purple hover:bg-legal-purple/90 text-white border-legal-purple" />
+              <CarouselNext className="relative transform-none bg-legal-purple hover:bg-legal-purple/90 text-white border-legal-purple" />
+            </div>
           </Carousel>
+          
+          {/* Indicador de progresso */}
+          <div className="flex justify-center mt-6">
+            <p className="text-sm text-gray-600">
+              Deslize para ver toda nossa jornada → {historia.length} marcos importantes
+            </p>
+          </div>
         </div>
       </div>
     </section>
