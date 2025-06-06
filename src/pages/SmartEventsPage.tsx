@@ -32,7 +32,7 @@ const SmartEventsPage = () => {
       icon: <Wifi size={36} />,
       title: "Smart Connect",
       description: "Always-on para 10.000+ dispositivos com FWA 5G e WiFi especializado para eventos.",
-      features: ["Conexão 5G", "WiFi de alta densidade", "Baixa latência", "Multi-dispositivos"]
+      features: ["Conexão 5G", "WiFi de alta densidade", "Transmissões Ao Vivo", "Multi-dispositivos"]
     },
     {
       icon: <Radio size={36} />,
