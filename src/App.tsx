@@ -16,6 +16,7 @@ import SomosLegalPage from "./pages/SomosLegalPage";
 import NegociosPage from "./pages/NegociosPage";
 import AIPage from "./pages/negocios/AIPage";
 import AeroPage from "./pages/negocios/AeroPage";
+import AeroWashPage from "./pages/negocios/AeroWashPage";
 import AluguelPage from "./pages/negocios/AluguelPage";
 import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
@@ -53,6 +54,7 @@ const App = () => {
             {/* Negócios section */}
             <Route path="/negocios" element={<NegociosPage />} />
             <Route path="/negocios/aero" element={<AeroPage />} />
+            <Route path="/negocios/aero/wash" element={<AeroWashPage />} />
             <Route path="/negocios/ai" element={<AIPage />} />
             <Route path="/negocios/alugue" element={<AluguelPage />} />
             <Route path="/negocios/assinatura" element={<AssinaturaPage />} />
