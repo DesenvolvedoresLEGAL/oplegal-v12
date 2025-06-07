@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        isScrolled ? "bg-white shadow-md py-2" : "bg-white/95 backdrop-blur-sm py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -54,7 +54,7 @@ const Navbar = () => {
             <NavigationMenuList className="gap-1">
               {/* Somos LEGAL */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Somos LEGAL</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green">Somos LEGAL</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[400px]">
                     <li className="row-span-3">
@@ -93,14 +93,14 @@ const Navbar = () => {
 
               {/* SmartEvents */}
               <NavigationMenuItem>
-                <Link to="/smart-events" className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                <Link to="/smart-events" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-green")}>
                   SmartEvents
                 </Link>
               </NavigationMenuItem>
 
               {/* Negócios */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Negócios</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green">Negócios</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
                     <li>
@@ -133,7 +133,7 @@ const Navbar = () => {
 
               {/* Universo */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Universo</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green">Universo</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4">
                     <li>
@@ -178,7 +178,7 @@ const Navbar = () => {
 
               {/* Contato */}
               <NavigationMenuItem>
-                <Link to="/contato" className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                <Link to="/contato" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-green")}>
                   Contato
                 </Link>
               </NavigationMenuItem>

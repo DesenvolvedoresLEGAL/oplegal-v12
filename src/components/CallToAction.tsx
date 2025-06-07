@@ -49,7 +49,7 @@ const CallToAction = ({
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button
             asChild
-            className="bg-legal-green hover:bg-legal-green/90 text-white px-8 py-6 text-lg h-auto"
+            className="bg-legal-green hover:bg-legal-green/90 text-white px-8 py-6 text-lg h-auto transition-all duration-300"
           >
             <Link to={buttonLink}>{buttonText}</Link>
           </Button>
@@ -58,7 +58,7 @@ const CallToAction = ({
             <Button
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-legal px-8 py-6 text-lg h-auto"
+              className="border-white text-white hover:bg-white hover:text-legal transition-all duration-300 px-8 py-6 text-lg h-auto"
             >
               <Link to={secondaryButtonLink}>{secondaryButtonText}</Link>
             </Button>

@@ -1,14 +1,19 @@
+
 import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-  return <section className="relative min-h-screen flex items-center justify-center bg-legal-black text-white overflow-hidden">
+  
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-legal-black text-white overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-legal to-legal-black opacity-80"></div>
       
@@ -18,8 +23,8 @@ const HeroSection = () => {
       {/* Floating elements */}
       <div className="absolute w-64 h-64 rounded-full bg-legal-green blur-[100px] top-20 -left-20 opacity-20 animate-pulse"></div>
       <div className="absolute w-96 h-96 rounded-full bg-legal blur-[120px] bottom-0 right-0 opacity-20 animate-pulse" style={{
-      animationDelay: "1s"
-    }}></div>
+        animationDelay: "1s"
+      }}></div>
 
       <div className="container mx-auto px-4 z-10 py-24">
         <div className="text-center max-w-5xl mx-auto">
@@ -49,7 +54,7 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-legal px-8 py-6 text-lg h-auto">
+            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-legal-black transition-all duration-300 px-8 py-6 text-lg h-auto">
               <Link to="/smart-events">
                 Conheça Smart Events™
               </Link>
@@ -65,6 +70,8 @@ const HeroSection = () => {
           <div className="w-1 h-2 bg-gray-400 rounded-full mt-2"></div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
