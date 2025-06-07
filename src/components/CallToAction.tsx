@@ -58,7 +58,7 @@ const CallToAction = ({
             <Button
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-legal transition-all duration-300 px-8 py-6 text-lg h-auto"
+              className="border-legal text-legal hover:bg-legal hover:text-white transition-all duration-300 px-8 py-6 text-lg h-auto"
             >
               <Link to={secondaryButtonLink}>{secondaryButtonText}</Link>
             </Button>

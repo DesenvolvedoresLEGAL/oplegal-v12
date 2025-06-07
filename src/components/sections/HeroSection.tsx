@@ -54,7 +54,7 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-legal-black transition-all duration-300 px-8 py-6 text-lg h-auto">
+            <Button asChild variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white transition-all duration-300 px-8 py-6 text-lg h-auto">
               <Link to="/smart-events">
                 Conheça Smart Events™
               </Link>

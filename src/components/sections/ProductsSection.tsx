@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionTitle from "../SectionTitle";
-import { Zap, Brain, Settings, Wifi } from "lucide-react";
+import { Brain, Wifi } from "lucide-react";
 
 interface ProductsSectionProps {
   titleOverride?: string;
@@ -15,7 +15,13 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
     {
       title: "AERO",
       description: "Conectividade premium para eventos sem limites",
-      icon: <Wifi className="w-8 h-8" strokeWidth={1.5} />,
+      icon: <svg className="w-8 h-8" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M12 2L8 6h8l-4-4z"/>
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 15v6"/>
+        <path d="M8 19l8-8"/>
+        <path d="M16 19l-8-8"/>
+      </svg>,
       link: "/negocios/aero",
       features: ["WiFi enterprise", "Streaming 4K", "Cobertura total"]
     },
@@ -29,14 +35,20 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
     {
       title: "ALUGUE",
       description: "Equipamentos e tecnologia sob demanda",
-      icon: <Settings className="w-8 h-8" strokeWidth={1.5} />,
+      icon: <Wifi className="w-8 h-8" strokeWidth={1.5} />,
       link: "/negocios/alugue",
       features: ["Hardware", "Suporte 24h", "Logística"]
     },
     {
       title: "ASSINATURA",
       description: "Conectividade contínua para seu negócio",
-      icon: <Zap className="w-8 h-8" strokeWidth={1.5} />,
+      icon: <svg className="w-8 h-8" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+        <path d="M6 8h4"/>
+        <path d="M6 12h8"/>
+      </svg>,
       link: "/negocios/assinatura",
       features: ["Planos flexíveis", "Suporte dedicado", "Escalabilidade"]
     }
