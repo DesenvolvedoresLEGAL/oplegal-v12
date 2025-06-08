@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -20,6 +19,7 @@ import AeroWashPage from "./pages/negocios/AeroWashPage";
 import AeroDeliveryPage from "./pages/negocios/AeroDeliveryPage";
 import EventrixPage from "./pages/negocios/ai/EventrixPage";
 import FacePassPage from "./pages/negocios/ai/FacePassPage";
+import LinkAIPage from "./pages/negocios/ai/LinkAIPage";
 import AluguelPage from "./pages/negocios/AluguelPage";
 import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
@@ -62,6 +62,7 @@ const App = () => {
             <Route path="/negocios/ai" element={<AIPage />} />
             <Route path="/negocios/ai/eventrix" element={<EventrixPage />} />
             <Route path="/negocios/ai/facepass" element={<FacePassPage />} />
+            <Route path="/negocios/ai/linkai" element={<LinkAIPage />} />
             <Route path="/negocios/alugue" element={<AluguelPage />} />
             <Route path="/negocios/assinatura" element={<AssinaturaPage />} />
             
