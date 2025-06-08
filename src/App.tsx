@@ -31,6 +31,7 @@ import ImprensaPage from "./pages/universo/ImprensaPage";
 import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
+import FitScorePage from "./pages/negocios/ai/FitScorePage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -63,6 +64,7 @@ const App = () => {
             <Route path="/negocios/ai/eventrix" element={<EventrixPage />} />
             <Route path="/negocios/ai/facepass" element={<FacePassPage />} />
             <Route path="/negocios/ai/linkai" element={<LinkAIPage />} />
+            <Route path="/negocios/ai/fitscore" element={<FitScorePage />} />
             <Route path="/negocios/alugue" element={<AluguelPage />} />
             <Route path="/negocios/assinatura" element={<AssinaturaPage />} />
             
