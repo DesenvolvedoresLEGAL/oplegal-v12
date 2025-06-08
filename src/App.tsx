@@ -18,6 +18,7 @@ import AIPage from "./pages/negocios/AIPage";
 import AeroPage from "./pages/negocios/AeroPage";
 import AeroWashPage from "./pages/negocios/AeroWashPage";
 import AeroDeliveryPage from "./pages/negocios/AeroDeliveryPage";
+import EventrixPage from "./pages/negocios/ai/EventrixPage";
 import AluguelPage from "./pages/negocios/AluguelPage";
 import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
