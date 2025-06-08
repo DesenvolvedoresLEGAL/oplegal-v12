@@ -59,6 +59,8 @@ const App = () => {
             <Route path="/negocios/aero/wash" element={<AeroWashPage />} />
             <Route path="/negocios/aero/delivery" element={<AeroDeliveryPage />} />
             <Route path="/negocios/ai" element={<AIPage />} />
+            <Route path="/negocios/ai/eventrix" element={<EventrixPage />} />
+            <Route path="/negocios/ai/facepass" element={<FacePassPage />} />
             <Route path="/negocios/alugue" element={<AluguelPage />} />
             <Route path="/negocios/assinatura" element={<AssinaturaPage />} />
             
