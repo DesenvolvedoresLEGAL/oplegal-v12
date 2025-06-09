@@ -1,3 +1,27 @@
+
+User-agent: *
+Allow: /
+
+# Principais páginas para indexação
+Allow: /somos-legal
+Allow: /smart-events
+Allow: /negocios/
+Allow: /universo/
+Allow: /contato
+
+# Páginas administrativas - não indexar
+Disallow: /admin/
+
+# Páginas de desenvolvimento ou placeholder
+Disallow: /placeholder
+
+# Arquivos de sistema
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /src/
+Disallow: /node_modules/
+
+# Permitir bots específicos
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +34,8 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Sitemap
+Sitemap: https://operadora.legal/sitemap.xml
+
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1

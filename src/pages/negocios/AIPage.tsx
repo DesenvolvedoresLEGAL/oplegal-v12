@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import HeroSection from '@/components/ai/HeroSection';
 import ProductCard from '@/components/ai/ProductCard';
 import StatsSection from '@/components/ai/StatsSection';
@@ -114,50 +115,49 @@ const advancedModules = [
 ];
 
 const AIPage = () => {
+  const aiPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "LEGAL AI",
+    "description": "Ecossistema completo de inteligência artificial para eventos e negócios com 8 produtos transversais integrados",
+    "provider": {
+      "@type": "Organization",
+      "name": "LEGAL"
+    },
+    "serviceType": "Inteligência Artificial para Eventos",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Produtos LEGAL AI",
+      "itemListElement": aiProducts.map((product, index) => ({
+        "@type": "Offer",
+        "position": index + 1,
+        "itemOffered": {
+          "@type": "Service",
+          "name": product.name,
+          "description": product.description
+        }
+      }))
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150"
+    }
+  };
+
   return (
     <>
-      <Helmet>
-        <title>LEGAL AI | Inteligência Artificial para Eventos e Negócios</title>
-        <meta name="description" content="Descubra o ecossistema completo LEGAL AI com 8 produtos de IA: FacePass, LinkAI, FitScore, Blue, SamurAI, Eventrix, Humanoid e NeuraFit. Transforme eventos e negócios com inteligência artificial." />
-        <meta name="keywords" content="LEGAL AI, inteligência artificial eventos, FacePass credenciamento facial, LinkAI networking, FitScore RH, Blue business intelligence, SamurAI captação leads, Eventrix gestão eventos, Humanoid chatbot, NeuraFit gamificação" />
-        <meta property="og:title" content="LEGAL AI | Inteligência Artificial para Eventos e Negócios" />
-        <meta property="og:description" content="Ecossistema completo de IA com 8 produtos transversais para revolucionar eventos corporativos. Credenciamento facial, networking inteligente, analytics de RH e muito mais." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://legal.com.br/negocios/ai" />
-        <meta property="og:image" content="https://legal.com.br/images/legal-ai-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="LEGAL AI | Inteligência Artificial para Eventos e Negócios" />
-        <meta name="twitter:description" content="8 produtos de IA integrados para transformar eventos e negócios. FacePass, LinkAI, FitScore e mais." />
-        <meta name="twitter:image" content="https://legal.com.br/images/legal-ai-twitter.jpg" />
-        <link rel="canonical" href="https://legal.com.br/negocios/ai" />
-        <link rel="alternate" hrefLang="pt-BR" href="https://legal.com.br/negocios/ai" />
-        <link rel="alternate" hrefLang="x-default" href="https://legal.com.br/negocios/ai" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "LEGAL AI",
-            "description": "Ecossistema completo de inteligência artificial para eventos e negócios com 8 produtos transversais integrados",
-            "brand": {
-              "@type": "Brand",
-              "name": "LEGAL"
-            },
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "priceCurrency": "BRL",
-              "url": "https://legal.com.br/negocios/ai"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "150"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="LEGAL AI | Inteligência Artificial para Eventos e Negócios"
+        description="Descubra o ecossistema completo LEGAL AI com 8 produtos de IA: FacePass, LinkAI, FitScore, Blue, SamurAI, Eventrix, Humanoid e NeuraFit. Transforme eventos e negócios com inteligência artificial."
+        keywords="LEGAL AI, inteligência artificial eventos, FacePass credenciamento facial, LinkAI networking, FitScore RH, Blue business intelligence, SamurAI captação leads, Eventrix gestão eventos, Humanoid chatbot, NeuraFit gamificação"
+        url="https://operadora.legal/negocios/ai"
+        type="service"
+        schemaData={aiPageSchema}
+      />
 
       <div className="bg-background text-foreground font-unica">
+        <Breadcrumbs />
         <HeroSection />
         
         {/* Products Grid */}
