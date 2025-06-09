@@ -1,8 +1,9 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import PlaceholderPage from "./pages/PlaceholderPage";
@@ -11,7 +12,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmartEventsPage from "./pages/SmartEventsPage";
 import BitsPage from "./pages/BitsPage";
-import SomosLegalPage from "./pages/SomosLegalPage";
 import MissaoVisaoValoresPage from "./pages/MissaoVisaoValoresPage";
 import NegociosPage from "./pages/NegociosPage";
 import AIPage from "./pages/negocios/AIPage";
@@ -51,8 +51,8 @@ const App = () => {
             {/* Smart Events */}
             <Route path="/smart-events" element={<SmartEventsPage />} />
             
-            {/* Somos LEGAL section */}
-            <Route path="/somos-legal" element={<SomosLegalPage />} />
+            {/* Somos LEGAL section - Redirect old route to new consolidated page */}
+            <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
             <Route path="/missao-visao-valores" element={<MissaoVisaoValoresPage />} />
             <Route path="/time" element={<TimePage />} />
             <Route path="/vagas" element={<VagasPage />} />

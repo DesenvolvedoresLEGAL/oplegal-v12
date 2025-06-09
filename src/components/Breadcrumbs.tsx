@@ -27,7 +27,6 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
       
       // Mapear segmentos para labels amigáveis
       const labelMap: Record<string, string> = {
-        'somos-legal': 'Somos LEGAL',
         'smart-events': 'Smart Events™',
         'negocios': 'Negócios',
         'universo': 'Universo LEGAL',

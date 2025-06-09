@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -59,21 +58,15 @@ const Navbar = () => {
                   <ul className="grid gap-3 p-4 w-[400px]">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
-                        <Link to="/somos-legal" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-legal to-legal-purple p-6 no-underline outline-none focus:shadow-md">
+                        <Link to="/missao-visao-valores" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-legal to-legal-purple p-6 no-underline outline-none focus:shadow-md">
                           <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            Manifesto LEGAL
+                            Missão, Visão e Valores
                           </div>
                           <p className="text-sm leading-tight text-white/90">
-                            Somos mais que uma empresa de tecnologia. Somos visionários, executores, criadores de valor e cultivadores de alma.
+                            Nosso manifesto, propósito, direção e a história sendo construída desde 2010. Conectar 1 milhão até 2030.
                           </p>
                         </Link>
                       </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <Link to="/missao-visao-valores" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">Missão, Visão e Valores</div>
-                        <p className="text-sm text-muted-foreground">Nosso propósito e direção</p>
-                      </Link>
                     </li>
                     <li>
                       <Link to="/time" className="block p-3 hover:bg-accent rounded-md">
@@ -218,8 +211,8 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-2">
-          <Link to="/somos-legal" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-            Somos LEGAL
+          <Link to="/missao-visao-valores" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            Missão, Visão e Valores
           </Link>
           <Link to="/smart-events" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
             SmartEvents
