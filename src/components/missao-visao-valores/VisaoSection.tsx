@@ -1,7 +1,6 @@
-
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
-import { Trophy, BarChart, Star, MapPin, Award } from 'lucide-react';
+import { Trophy, BarChart, Star, MapPin, Award, TrendingUp } from 'lucide-react';
 
 const VisaoSection = () => {
   const metrics = [
