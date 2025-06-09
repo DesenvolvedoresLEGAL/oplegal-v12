@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +13,7 @@ import Footer from "./components/Footer";
 import SmartEventsPage from "./pages/SmartEventsPage";
 import BitsPage from "./pages/BitsPage";
 import SomosLegalPage from "./pages/SomosLegalPage";
+import MissaoVisaoValoresPage from "./pages/MissaoVisaoValoresPage";
 import NegociosPage from "./pages/NegociosPage";
 import AIPage from "./pages/negocios/AIPage";
 import AeroPage from "./pages/negocios/AeroPage";
