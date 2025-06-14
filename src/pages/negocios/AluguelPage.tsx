@@ -107,7 +107,10 @@ const AluguelPage = () => {
     <>
       <Helmet>
         <title>LEGAL ALUGUE | Locação de Conectividade e Tecnologia para Eventos</title>
-        <meta name="description" content="Locação de equipamentos de conectividade para eventos: roteadores 5G SPEEDY, WiFi 6 BLUE6, switches, notebooks e infraestrutura de TI. Suporte 24/7 e instalação rápida." />
+        <meta
+          name="description"
+          content="Alugue conectividade e tecnologia premium para eventos corporativos com a LEGAL. Equipamentos de ponta, instalação rápida e suporte 24/7 para o sucesso do seu evento."
+        />
         <meta name="keywords" content="locação equipamentos eventos, aluguel roteador 5G, WiFi 6 eventos, SPEEDY 5G, BLUE6, conectividade eventos, infraestrutura TI temporária, switches aluguel, notebooks corporativos" />
         <meta property="og:title" content="LEGAL ALUGUE | Locação de Conectividade e Tecnologia para Eventos" />
         <meta property="og:description" content="Aluguel de equipamentos premium para eventos: 5G, WiFi 6, notebooks, switches e mais. Instalação em 24h e suporte técnico especializado." />
