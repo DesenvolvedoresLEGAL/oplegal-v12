@@ -21,7 +21,7 @@ import AeroDeliveryPage from "./pages/negocios/AeroDeliveryPage";
 import EventrixPage from "./pages/negocios/ai/EventrixPage";
 import FacePassPage from "./pages/negocios/ai/FacePassPage";
 import LinkAIPage from "./pages/negocios/ai/LinkAIPage";
-import FitScorePage from "./pages/negocios/ai/FitScorePage";
+import F itScorePage from "./pages/negocios/ai/FitScorePage";
 import AluguelPage from "./pages/negocios/AluguelPage";
 import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
@@ -41,6 +41,7 @@ import FacePassProdutoPage from "./pages/produtos/FacePassPage";
 import FitScoreProdutoPage from "./pages/produtos/FitScorePage";
 import HumanoidPage from "./pages/produtos/HumanoidPage";
 import LinkAIProdutoPage from "./pages/produtos/LinkAIPage";
+import NeurahackPage from "./pages/produtos/NeurahackPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -67,6 +68,7 @@ const App = () => {
             <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
             <Route path="/produtos/humanoid" element={<HumanoidPage />} />
             <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
+            <Route path="/produtos/neurahack" element={<NeurahackPage />} />
             
             {/* Somos LEGAL section - Redirect old route to new consolidated page */}
             <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
