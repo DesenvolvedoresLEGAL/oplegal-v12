@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -51,44 +52,91 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center justify-center flex-grow">
           <NavigationMenu className="mx-auto">
             <NavigationMenuList className="gap-1">
-              {/* Somos LEGAL */}
+              {/* Produtos */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green">Somos LEGAL</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green">Produtos</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[400px]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <Link to="/missao-visao-valores" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-legal to-legal-purple p-6 no-underline outline-none focus:shadow-md">
-                          <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            Missão, Visão e Valores
-                          </div>
-                          <p className="text-sm leading-tight text-white/90">
-                            Nosso manifesto, propósito, direção e a história sendo construída desde 2010. Conectar 1 milhão até 2030.
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
+                  <ul className="grid w-[500px] gap-3 p-4 md:grid-cols-2">
                     <li>
-                      <Link to="/time" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">Time</div>
-                        <p className="text-sm text-muted-foreground">Conheça quem faz a LEGAL</p>
+                      <Link to="/produtos/blue" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Blue</div>
+                        <p className="text-sm text-muted-foreground pt-1">Plataforma de BI com AI</p>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/vagas" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">Vagas</div>
-                        <p className="text-sm text-muted-foreground">Venha transformar o futuro conosco</p>
+                      <Link to="/produtos/blue6" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Blue6</div>
+                        <p className="text-sm text-muted-foreground pt-1">Hotspot wifi</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/brilix" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Brilix</div>
+                        <p className="text-sm text-muted-foreground pt-1">Limpeza em altura com drone</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/eventrix" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Eventrix</div>
+                        <p className="text-sm text-muted-foreground pt-1">Plataforma de gestão de eventos</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/facepass" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">FacePass</div>
+                        <p className="text-sm text-muted-foreground pt-1">Credenciamento rápido com biometria facial</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/fitscore" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">FitScore</div>
+                        <p className="text-sm text-muted-foreground pt-1">Copiloto de contratação e people analytics</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/humanoid" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Humanoid</div>
+                        <p className="text-sm text-muted-foreground pt-1">LDR + SDR para geração de negócios com AI</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/linkai" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">LinkAI</div>
+                        <p className="text-sm text-muted-foreground pt-1">Matchmaking inteligente e com propósito</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/neurahack" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Neurahack</div>
+                        <p className="text-sm text-muted-foreground pt-1">Plataforma de musculação para o cérebro</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/nuvyo" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Nuvyo</div>
+                        <p className="text-sm text-muted-foreground pt-1">Filmagem e fotografia com drone</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/ping" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Ping</div>
+                        <p className="text-sm text-muted-foreground pt-1">Plataforma omnichannel com AI</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/sonix" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Sonix</div>
+                        <p className="text-sm text-muted-foreground pt-1">Delivery com drone</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/produtos/speedy5g" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">Speedy 5G</div>
+                        <p className="text-sm text-muted-foreground pt-1">Conectividade 5G</p>
                       </Link>
                     </li>
                   </ul>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              {/* SmartEvents */}
-              <NavigationMenuItem>
-                <Link to="/smart-events" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-green")}>
-                  SmartEvents
-                </Link>
               </NavigationMenuItem>
 
               {/* Negócios */}
@@ -118,6 +166,46 @@ const Navbar = () => {
                       <Link to="/negocios/assinatura" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">ASSINATURA</div>
                         <p className="text-sm text-muted-foreground pt-1">Conectividade contínua</p>
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* SmartEvents */}
+              <NavigationMenuItem>
+                <Link to="/smart-events" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-green")}>
+                  SmartEvents™
+                </Link>
+              </NavigationMenuItem>
+
+              {/* Somos LEGAL */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green">Somos LEGAL</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 w-[400px]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <Link to="/missao-visao-valores" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-legal to-legal-purple p-6 no-underline outline-none focus:shadow-md">
+                          <div className="mb-2 mt-4 text-lg font-medium text-white">
+                            Missão, Visão e Valores
+                          </div>
+                          <p className="text-sm leading-tight text-white/90">
+                            Nosso manifesto, propósito, direção e a história sendo construída desde 2010. Conectar 1 milhão até 2030.
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <Link to="/time" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Time</div>
+                        <p className="text-sm text-muted-foreground">Conheça quem faz a LEGAL</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/vagas" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Vagas</div>
+                        <p className="text-sm text-muted-foreground">Venha transformar o futuro conosco</p>
                       </Link>
                     </li>
                   </ul>
@@ -187,7 +275,7 @@ const Navbar = () => {
             asChild
           >
             <a href="https://blue.operadora.legal" target="_blank" rel="noopener noreferrer">
-              Acesso BLUE
+              Acesso Blue™
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
@@ -211,14 +299,17 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-2">
-          <Link to="/missao-visao-valores" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-            Missão, Visão e Valores
-          </Link>
-          <Link to="/smart-events" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-            SmartEvents
+          <Link to="/produtos" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            Produtos
           </Link>
           <Link to="/negocios" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
             Negócios
+          </Link>
+          <Link to="/smart-events" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            SmartEvents™
+          </Link>
+          <Link to="/missao-visao-valores" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+            Somos LEGAL
           </Link>
           <Link to="/universo" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
             Universo
@@ -227,12 +318,12 @@ const Navbar = () => {
             Contato
           </Link>
           <a 
-            href="https://blue.legal" 
+            href="https://blue.operadora.legal" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="px-4 py-3 mt-2 text-sm font-medium bg-legal text-white rounded-md flex items-center justify-center"
           >
-            Acesso BLUE
+            Acesso Blue™
             <ExternalLink className="ml-2 h-4 w-4" />
           </a>
         </div>
