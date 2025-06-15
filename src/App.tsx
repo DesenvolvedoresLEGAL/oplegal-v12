@@ -43,6 +43,7 @@ import LinkAIProdutoPage from "./pages/produtos/LinkAIPage";
 import NeurahackPage from "./pages/produtos/NeurahackPage";
 import PingPage from "./pages/produtos/PingPage";
 import SonixPage from "./pages/produtos/SonixPage";
+import Speedy5GPage from "./pages/produtos/Speedy5GPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -72,6 +73,7 @@ const App = () => {
             <Route path="/produtos/neurahack" element={<NeurahackPage />} />
             <Route path="/produtos/ping" element={<PingPage />} />
             <Route path="/produtos/sonix" element={<SonixPage />} />
+            <Route path="/produtos/speedy5g" element={<Speedy5GPage />} />
             
             {/* Somos LEGAL section - Redirect old route to new consolidated page */}
             <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
