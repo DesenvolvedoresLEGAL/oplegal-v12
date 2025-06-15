@@ -20,8 +20,8 @@ const AluguelHero = () => {
           <p className="text-lg md:text-xl font-light max-w-4xl mx-auto mb-8 animate-fade-in animation-delay-300 will-change-transform">
             <strong className="font-bold text-legal-cyan">Aluguel de internet para eventos</strong> e 
             <strong className="font-bold text-legal-cyan"> locação de internet temporária</strong> com tecnologia de ponta. 
-            Oferecemos <strong>soluções de rede para eventos</strong>, <strong>infraestrutura de TI para feiras</strong> e 
-            <strong>Wi-Fi para congressos</strong> com instalação rápida e suporte técnico especializado 24/7.
+            Oferecemos <strong>soluções de rede para eventos</strong>, <strong>infraestrutura de TI para feiras</strong> e
+            <strong> Wi-Fi para congressos</strong> com instalação rápida e suporte técnico especializado 24/7.
           </p>
         </header>
         <nav className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in animation-delay-600 will-change-transform" role="navigation" aria-label="Ações principais">
