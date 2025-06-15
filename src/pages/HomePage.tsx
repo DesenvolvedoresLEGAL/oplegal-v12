@@ -1,10 +1,10 @@
-
 import React, { useEffect } from "react";
 import SEOHead from "@/components/SEOHead";
 import HeroSection from "@/components/sections/HeroSection";
 import WhyLegalSection from "@/components/sections/WhyLegalSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import BenefitsSection from "@/components/sections/BenefitsSection";
+import MovimentoSmartEventsSection from "@/components/sections/MovimentoSmartEventsSection";
 import PillarsSection from "@/components/sections/PillarsSection";
 import RoadmapSection from "@/components/sections/RoadmapSection";
 import SuccessStoriesSection from "@/components/sections/SuccessStoriesSection";
@@ -182,11 +182,14 @@ const HomePage = () => {
         {/* Nossos Produtos - H2 */}
         <ProductsSection titleOverride="Soluções Completas para Eventos Inteligentes" />
         
-        {/* Pilares Smart Events - H2 */}
-        <PillarsSection />
-        
         {/* Benefícios por Stakeholder - H2 */}
         <BenefitsSection />
+        
+        {/* Movimento SmartEvents™ - H2 */}
+        <MovimentoSmartEventsSection />
+        
+        {/* Pilares Smart Events - H2 */}
+        <PillarsSection />
         
         {/* Implementação - H2 */}
         <RoadmapSection />
