@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -36,6 +37,7 @@ import HistoriasPage from "./pages/universo/HistoriasPage";
 import BluePage from "./pages/produtos/BluePage";
 import Blue6Page from "./pages/produtos/Blue6Page";
 import BrilixPage from "./pages/produtos/BrilixPage";
+import EventrixProdutoPage from "./pages/produtos/EventrixPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -57,6 +59,7 @@ const App = () => {
             <Route path="/produtos/blue" element={<BluePage />} />
             <Route path="/produtos/blue6" element={<Blue6Page />} />
             <Route path="/produtos/brilix" element={<BrilixPage />} />
+            <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
             
             {/* Somos LEGAL section - Redirect old route to new consolidated page */}
             <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
