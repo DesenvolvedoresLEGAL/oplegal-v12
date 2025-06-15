@@ -6,23 +6,23 @@ const HumanoidProcess = () => {
   const processSteps = [
     {
       number: "01",
-      title: "Configuração Personalizada",
-      description: "Definimos perfil, personalidade e funções específicas do Humanoid para seu evento."
+      title: "Configuração Inteligente",
+      description: "Definimos ICP, segmentos-alvo e critérios de qualificação personalizados para seu negócio."
     },
     {
       number: "02", 
-      title: "Treinamento IA Especializado",
-      description: "Ajustamos a IA com conhecimento específico sobre seu evento, marca e audiência."
+      title: "Captação Automática",
+      description: "IA rastreia internet 24/7 identificando leads qualificados e os insere no CRM automaticamente."
     },
     {
       number: "03",
-      title: "Implementação e Testes",
-      description: "Instalação no local com testes completos de funcionamento e interação."
+      title: "Qualificação SDR",
+      description: "Leads são qualificados via WhatsApp (Ping) e ligações com IA conversacional natural."
     },
     {
       number: "04",
-      title: "Operação e Monitoramento",
-      description: "Acompanhamento em tempo real com suporte técnico especializado durante todo o evento."
+      title: "Entrega de Oportunidades",
+      description: "Leads qualificados são entregues para seu time de vendas com contexto completo."
     }
   ];
 
@@ -30,8 +30,8 @@ const HumanoidProcess = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Como Implementamos"
-          subtitle="Processo estruturado em 4 etapas para integração perfeita do Humanoid"
+          title="Como Funciona o Humanoid"
+          subtitle="Processo automatizado de captação, qualificação e entrega de oportunidades qualificadas"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

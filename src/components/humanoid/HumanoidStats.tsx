@@ -3,10 +3,10 @@ import React from 'react';
 
 const HumanoidStats = () => {
   const stats = [
-    { number: "98%", label: "Satisfação", description: "Taxa de aprovação dos usuários" },
-    { number: "24/7", label: "Disponibilidade", description: "Operação contínua" },
-    { number: "15+", label: "Idiomas", description: "Suporte multilíngue" },
-    { number: "99.9%", label: "Uptime", description: "Confiabilidade operacional" }
+    { number: "300%", label: "Mais Leads", description: "Aumento na captação qualificada" },
+    { number: "75%", label: "Taxa Conversão", description: "De lead qualificado para oportunidade" },
+    { number: "24/7", label: "Operação", description: "Captação e qualificação contínua" },
+    { number: "95%", label: "Precisão IA", description: "Assertividade na qualificação" }
   ];
 
   return (

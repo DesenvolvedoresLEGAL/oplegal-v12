@@ -16,17 +16,17 @@ const HumanoidPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Humanoid - Robótica Inteligente com IA",
-    "serviceType": "Robotics Technology Service",
+    "name": "Humanoid - Agente de IA para Captação de Leads",
+    "serviceType": "AI Lead Generation Service",
     "provider": {
       "@type": "Organization",
       "name": "LEGAL"
     },
-    "description": "Humanoid: Robótica inteligente com IA para eventos e negócios. Interação natural, automação avançada e experiências memoráveis com tecnologia humanóide de última geração.",
+    "description": "Humanoid: Agente de IA que capta leads e oportunidades na internet, integra com CRM e automatiza processo de SDR com inteligência artificial conversacional.",
     "areaServed": "Brasil",
     "offers": {
       "@type": "Offer",
-      "category": "Robotics Technology"
+      "category": "AI Lead Generation"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -36,21 +36,21 @@ const HumanoidPage = () => {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Interação Humanóide Inteligente"
+            "name": "Captação Inteligente de Leads"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Automação Robótica para Eventos"
+            "name": "Integração Automática com CRM"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Assistência Robótica Personalizada"
+            "name": "SDR com IA Conversacional"
           }
         }
       ]
@@ -60,9 +60,9 @@ const HumanoidPage = () => {
   return (
     <>
       <Helmet>
-        <title>Humanoid - Robótica Inteligente com IA | LEGAL</title>
-        <meta name="description" content="Humanoid: Robótica inteligente com IA para eventos e negócios. Interação natural, automação avançada e experiências memoráveis com tecnologia humanóide revolucionária." />
-        <meta name="keywords" content="Humanoid, robótica, IA, inteligência artificial, eventos, automação, robô humanóide, LEGAL, interação natural, assistência robótica" />
+        <title>Humanoid - Agente de IA para Captação de Leads e SDR | LEGAL</title>
+        <meta name="description" content="Humanoid: Agente de IA que capta leads na internet, integra com CRM e automatiza SDR com inteligência artificial conversacional. Transforme prospects em oportunidades reais." />
+        <meta name="keywords" content="Humanoid, captação de leads, IA, inteligência artificial, CRM, SDR, lead generation, automação de vendas, LEGAL, IA conversacional" />
         <link rel="canonical" href="https://operadora.legal/produtos/humanoid" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -80,12 +80,12 @@ const HumanoidPage = () => {
         <HumanoidDemo />
         <HumanoidFAQ />
         <CallToAction
-          title="Revolucione Seus Eventos com Robótica Inteligente"
-          subtitle="Experimente o poder do Humanoid e transforme a experiência dos seus participantes com tecnologia robótica de última geração e interação humanóide natural."
-          buttonText="Solicitar Demonstração"
+          title="Transforme Leads em Oportunidades Reais"
+          subtitle="Experimente o poder do Humanoid e automatize sua captação de leads com inteligência artificial que converte prospects em vendas reais."
+          buttonText="Começar Teste Gratuito"
           buttonLink="/contato?produto=humanoid"
-          secondaryButtonText="Falar com Especialista"
-          secondaryButtonLink="/contato?tipo=consultoria&produto=humanoid"
+          secondaryButtonText="Agendar Demonstração"
+          secondaryButtonLink="/contato?tipo=demo&produto=humanoid"
           background="gradient"
         />
       </main>

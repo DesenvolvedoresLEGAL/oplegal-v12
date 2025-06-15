@@ -8,28 +8,28 @@ import { Star } from 'lucide-react';
 const HumanoidTestimonials = () => {
   const testimonials = [
     {
-      name: "Roberto Silva",
-      role: "Diretor de Eventos",
-      company: "InnovaCorp",
+      name: "Carlos Mendes",
+      role: "Diretor Comercial",
+      company: "TechSolutions",
       image: "/placeholder.svg",
       rating: 5,
-      quote: "O Humanoid foi o diferencial do nosso evento. Os participantes ficaram impressionados com a naturalidade da interação. Nunca vi tanto engajamento!"
+      quote: "Humanoid triplicou nossa geração de leads qualificados. Em 3 meses, fechamos 40% mais negócios com leads de melhor qualidade."
     },
     {
       name: "Ana Beatriz",
-      role: "Gerente de Marketing",
-      company: "TechExpo",
+      role: "Head de Vendas",
+      company: "GrowthCorp",
       image: "/placeholder.svg",
       rating: 5,
-      quote: "Superou todas as expectativas. O Humanoid não apenas atraiu visitantes, mas criou uma experiência memorável que gerou muito buzz nas redes sociais."
+      quote: "A qualificação via IA é impressionante. Os leads chegam com contexto completo e alta probabilidade de conversão. ROI fantástico!"
     },
     {
-      name: "Carlos Mendes",
+      name: "Roberto Silva",
       role: "CEO",
-      company: "FutureEvents",
+      company: "ScaleUp",
       image: "/placeholder.svg",
       rating: 5,
-      quote: "Tecnologia impressionante! O Humanoid atendeu mais de 500 pessoas durante o evento com personalização total. ROI excepcional."
+      quote: "Transformou nossa prospecção. Enquanto a concorrência gasta horas prospectando, recebemos oportunidades qualificadas automaticamente."
     }
   ];
 
@@ -38,7 +38,7 @@ const HumanoidTestimonials = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Cases de Sucesso"
-          subtitle="Empresas que transformaram seus eventos com tecnologia Humanoid"
+          subtitle="Empresas que transformaram suas vendas com captação automatizada e SDR inteligente"
           center
         />
         

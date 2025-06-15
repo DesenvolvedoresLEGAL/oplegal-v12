@@ -9,8 +9,8 @@ const HumanoidDemo = () => {
     <section className="py-20 bg-gray-50" id="demo">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Veja o Humanoid em Ação"
-          subtitle="Assista uma demonstração completa de como nossa robótica humanóide revoluciona eventos e experiências"
+          title="Veja o Humanoid Captando Leads"
+          subtitle="Demonstração completa de como nossa IA identifica, capta e qualifica leads automaticamente"
           center
         />
         
@@ -22,20 +22,20 @@ const HumanoidDemo = () => {
                 <Bot className="w-20 h-20 mx-auto text-legal-cyan hover:text-white transition-colors cursor-pointer" />
               </div>
               
-              <h3 className="text-2xl font-bold mb-4">Demo Interativa - 15 minutos</h3>
+              <h3 className="text-2xl font-bold mb-4">Demo Ao Vivo - 20 minutos</h3>
               <p className="text-lg mb-6 text-white/90">
-                Veja como o Humanoid funciona desde a configuração até a interação com participantes: 
-                IA conversacional, movimentos naturais e personalização completa em tempo real
+                Veja como o Humanoid funciona na prática: desde a captação na internet até a qualificação 
+                por WhatsApp e ligações com IA, culminando na entrega de oportunidades qualificadas
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button size="lg" className="bg-legal-cyan text-legal hover:bg-legal-cyan/90">
                   <Play className="mr-2 h-5 w-5" />
-                  Assistir Demo
+                  Ver Demonstração
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
                   <Calendar className="mr-2 h-4 w-4" />
-                  Agendar Teste
+                  Agendar Reunião
                 </Button>
               </div>
             </div>
@@ -43,16 +43,16 @@ const HumanoidDemo = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-              <div className="text-2xl font-bold text-legal mb-2">IA Avançada</div>
-              <p className="text-gray-600">Conversação natural e aprendizado contínuo</p>
+              <div className="text-2xl font-bold text-legal mb-2">Setup 1 Dia</div>
+              <p className="text-gray-600">Configuração personalizada e início imediato</p>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-              <div className="text-2xl font-bold text-legal mb-2">Interação</div>
-              <p className="text-gray-600">Movimentos fluidos e expressões realistas</p>
+              <div className="text-2xl font-bold text-legal mb-2">CRM Integrado</div>
+              <p className="text-gray-600">Leads inseridos automaticamente</p>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-              <div className="text-2xl font-bold text-legal mb-2">Personalização</div>
-              <p className="text-gray-600">Configuração adaptável para cada evento</p>
+              <div className="text-2xl font-bold text-legal mb-2">SDR Inteligente</div>
+              <p className="text-gray-600">Qualificação via WhatsApp e ligações</p>
             </div>
           </div>
         </div>

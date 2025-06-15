@@ -2,39 +2,39 @@
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import { Card, CardContent } from '@/components/ui/card';
-import { Bot, MessageSquare, Brain, Shield, Zap, Users } from 'lucide-react';
+import { Search, Database, MessageSquare, Phone, Target, Bot } from 'lucide-react';
 
 const HumanoidFeatures = () => {
   const features = [
     {
-      icon: <Bot className="w-8 h-8" />,
-      title: "Interação Natural",
-      description: "Movimentos fluidos e expressões faciais realistas para interação humanóide autêntica"
+      icon: <Search className="w-8 h-8" />,
+      title: "Captação Inteligente",
+      description: "IA rastreia a internet 24/7 identificando leads qualificados baseados no seu segmento e preferências"
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Integração CRM Automática",
+      description: "Leads captados são automaticamente inseridos no seu CRM com dados enriquecidos e scoring"
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
-      title: "Conversação Inteligente",
-      description: "IA conversacional avançada com processamento de linguagem natural em português"
+      title: "SDR via WhatsApp",
+      description: "Qualificação inteligente de leads via Ping com conversas personalizadas e humanizadas"
     },
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Phone className="w-8 h-8" />,
+      title: "Ligações com IA",
+      description: "IA conversacional realiza ligações de qualificação com naturalidade e eficiência"
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Segmentação Avançada",
+      description: "Filtros inteligentes por segmento, localização, tamanho da empresa e comportamento"
+    },
+    {
+      icon: <Bot className="w-8 h-8" />,
       title: "Aprendizado Contínuo",
-      description: "Machine Learning que evolui com cada interação para respostas mais precisas"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Segurança Garantida",
-      description: "Protocolos de segurança avançados e conformidade total com normas de robótica"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Automação Inteligente",
-      description: "Execução autônoma de tarefas complexas com precisão e eficiência"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Personalização Total",
-      description: "Configuração adaptável para diferentes eventos, marcas e necessidades específicas"
+      description: "Machine Learning otimiza constantemente a captação baseado nos seus melhores clientes"
     }
   ];
 
@@ -42,8 +42,8 @@ const HumanoidFeatures = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Tecnologia Humanóide Avançada"
-          subtitle="Recursos que transforman a interação entre humanos e robôs em experiências extraordinárias"
+          title="Captação e Qualificação Completa"
+          subtitle="Recursos que transformam prospecção manual em uma máquina automatizada de geração de oportunidades"
           center
         />
         

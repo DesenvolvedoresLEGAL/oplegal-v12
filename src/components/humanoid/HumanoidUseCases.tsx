@@ -2,29 +2,29 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import SectionTitle from '@/components/SectionTitle';
-import { Building, Users, Mic, ShoppingBag } from 'lucide-react';
+import { Building, ShoppingCart, Heart, Briefcase } from 'lucide-react';
 
 const HumanoidUseCases = () => {
   const useCases = [
     {
-      title: "Eventos Corporativos",
-      description: "Recepção VIP, apresentações interativas e networking facilitado",
+      title: "Tecnologia & SaaS",
+      description: "Captação de empresas buscando soluções digitais, qualificação de budget e timing de decisão",
       icon: <Building className="w-6 h-6" />
     },
     {
-      title: "Feiras e Exposições",
-      description: "Guia inteligente, informações de produtos e assistência personalizada",
-      icon: <Users className="w-6 h-6" />
+      title: "E-commerce & Varejo",
+      description: "Identificação de lojistas, marketplaces e empreendedores digitais prontos para escalar",
+      icon: <ShoppingCart className="w-6 h-6" />
     },
     {
-      title: "Congressos e Seminários", 
-      description: "Moderação de sessões, Q&A interativo e suporte técnico",
-      icon: <Mic className="w-6 h-6" />
+      title: "Serviços Profissionais", 
+      description: "Captação de escritórios, consultorias e prestadores de serviços especializados",
+      icon: <Briefcase className="w-6 h-6" />
     },
     {
-      title: "Varejo e Showrooms",
-      description: "Consultoria de vendas, demonstrações de produtos e atendimento premium",
-      icon: <ShoppingBag className="w-6 h-6" />
+      title: "Saúde & Bem-estar",
+      description: "Prospecção de clínicas, laboratórios e profissionais da saúde em expansão",
+      icon: <Heart className="w-6 h-6" />
     }
   ];
 
@@ -32,8 +32,8 @@ const HumanoidUseCases = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Casos de Uso"
-          subtitle="Humanoid se adapta a diferentes segmentos e necessidades de negócio"
+          title="Segmentos Atendidos"
+          subtitle="Humanoid se adapta a diferentes mercados e nichos para captação especializada"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

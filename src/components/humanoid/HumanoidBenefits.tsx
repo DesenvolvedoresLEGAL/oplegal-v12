@@ -1,29 +1,29 @@
 
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
-import { Sparkles, Clock, TrendingUp, Heart } from 'lucide-react';
+import { Clock, TrendingUp, DollarSign, Users } from 'lucide-react';
 
 const HumanoidBenefits = () => {
   const benefits = [
     {
-      icon: <Sparkles className="w-6 h-6" />,
-      title: "Experiência Memorável e Diferenciada",
-      description: "Crie momentos únicos que seus participantes jamais esquecerão com interação robótica humanóide"
-    },
-    {
       icon: <Clock className="w-6 h-6" />,
-      title: "Atendimento 24/7 sem Interrupções",
-      description: "Assistência contínua para participantes com disponibilidade total durante todo o evento"
+      title: "Economia de 80% do Tempo",
+      description: "Elimine horas de prospecção manual com captação automatizada e qualificação inteligente"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Aumento de 85% no Engajamento",
-      description: "Participantes interagem mais e permanecem por mais tempo em eventos com Humanoid"
+      title: "Pipeline 5x Maior",
+      description: "Aumente drasticamente seu funil de vendas com captação contínua e qualificada"
     },
     {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Conexão Emocional Autêntica",
-      description: "Tecnologia humanóide que gera conexões genuínas e experiências emocionalmente impactantes"
+      icon: <DollarSign className="w-6 h-6" />,
+      title: "ROI 400% Superior",
+      description: "Retorno exponencial comparado a métodos tradicionais de captação e SDR"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Escala Ilimitada",
+      description: "Capacidade infinita de captação sem aumentar custos operacionais ou equipe"
     }
   ];
 
@@ -31,8 +31,8 @@ const HumanoidBenefits = () => {
     <section className="py-20 bg-gradient-to-r from-legal-purple/10 to-legal-cyan/10">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Impacto Transformador"
-          subtitle="Benefícios reais que revolucionam a experiência em eventos e negócios"
+          title="Resultados Exponenciais"
+          subtitle="Benefícios comprovados que transformam sua estratégia de vendas e aceleram o crescimento"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
