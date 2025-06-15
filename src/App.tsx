@@ -61,7 +61,7 @@ const App = () => {
             {/* Produtos section */}
             <Route path="/produtos/blue" element={<BluePage />} />
             <Route path="/produtos/blue6" element={<Blue6Page />} />
-            <Route path="/produtos/brilix" element={<Bril ixPage />} />
+            <Route path="/produtos/brilix" element={<BrilixPage />} />
             <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
             <Route path="/produtos/facepass" element={<FacePassProdutoPage />} />
             <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
