@@ -29,6 +29,7 @@ import VagasPage from "./pages/VagasPage";
 import ContatoPage from "./pages/ContatoPage";
 import UniversoPage from "./pages/UniversoPage";
 import TecTecPage from "./pages/universo/TecTecPage";
+import HistoriasPage from "./pages/universo/HistoriasPage";
 import ImprensaPage from "./pages/universo/ImprensaPage";
 import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
@@ -101,7 +102,7 @@ const App = () => {
             <Route path="/universo" element={<UniversoPage />} />
             <Route path="/universo/tectec" element={<TecTecPage />} />
             <Route path="/universo/tectec/:id" element={<PlaceholderPage />} />
-            <Route path="/universo/historias" element={<PlaceholderPage />} />
+            <Route path="/universo/historias" element={<HistoriasPage />} />
             <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
             <Route path="/universo/bits" element={<BitsPage />} />
             <Route path="/universo/imprensa" element={<ImprensaPage />} />
