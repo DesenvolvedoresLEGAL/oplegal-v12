@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -32,6 +33,11 @@ import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
 import FitScorePage from "./pages/produtos/FitScorePage";
+import BluePage from "./pages/produtos/BluePage";
+import Blue6Page from "./pages/produtos/Blue6Page";
+import BrilixPage from "./pages/produtos/BrilixPage";
+import EventrixProdutoPage from "./pages/produtos/EventrixPage";
+import FacePassProdutoPage from "./pages/produtos/FacePassPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -79,7 +85,7 @@ const App = () => {
             <Route path="/universo" element={<UniversoPage />} />
             <Route path="/universo/tectec" element={<TecTecPage />} />
             <Route path="/universo/tectec/:id" element={<PlaceholderPage />} />
-            <Route path="/universo/historias" element={<HistoriasPage />} />
+            <Route path="/universo/historias" element={<PlaceholderPage />} />
             <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
             <Route path="/universo/bits" element={<BitsPage />} />
             <Route path="/universo/imprensa" element={<ImprensaPage />} />
