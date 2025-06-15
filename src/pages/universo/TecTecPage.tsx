@@ -13,7 +13,7 @@ import SEOHead from '@/components/SEOHead';
 import TecTecHero from '@/components/tectec/TecTecHero';
 import FeaturedPosts from '@/components/tectec/FeaturedPosts';
 import PostsList from '@/components/tectec/PostsList';
-import TecTecSidebar from '@/components/t rectec/TecTecSidebar';
+import TecTecSidebar from '@/components/tectec/TecTecSidebar';
 import { blogPosts, blogSchema } from '@/data/TecTecData';
 
 const TecTecPage = () => {
