@@ -2,7 +2,7 @@
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Camera, Video, Drone, Image, Film, Zap, Shield, Clock } from 'lucide-react';
+import { Camera, Video, Image, Film, Zap, Shield, Clock } from 'lucide-react';
 
 const NuvyoFeatures = () => {
   const features = [
@@ -25,7 +25,7 @@ const NuvyoFeatures = () => {
       details: ["Color grading profissional", "Estabilização avançada", "Efeitos visuais", "Trilha sonora original"]
     },
     {
-      icon: <Drone className="w-12 h-12 text-legal-cyan" />,
+      icon: <Camera className="w-12 h-12 text-legal-cyan" />,
       title: "Equipamentos de Última Geração",
       description: "Utilizamos os melhores drones do mercado com câmeras profissionais e tecnologia de estabilização avançada.",
       details: ["DJI Inspire 2", "DJI Mavic 3 Pro", "Câmeras Hasselblad", "Gimbal 3 eixos"]

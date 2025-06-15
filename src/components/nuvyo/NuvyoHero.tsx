@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Camera, Video, Drone, Play } from 'lucide-react';
+import { Camera, Video, Play } from 'lucide-react';
 
 const NuvyoHero = () => {
   return (
@@ -10,7 +10,7 @@ const NuvyoHero = () => {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-legal-cyan/20 rounded-full animate-ping"></div>
-        <Drone className="absolute top-1/3 right-1/3 w-48 h-48 text-white/5 animate-bounce" />
+        <Camera className="absolute top-1/3 right-1/3 w-48 h-48 text-white/5 animate-bounce" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -38,11 +38,11 @@ const NuvyoHero = () => {
             <span className="text-sm font-medium">Qualidade 4K/8K</span>
           </div>
           <div className="flex items-center bg-white/10 rounded-full px-4 py-2">
-            <Drone className="w-5 h-5 mr-2 text-legal-cyan" />
+            <Camera className="w-5 h-5 mr-2 text-legal-cyan" />
             <span className="text-sm font-medium">Pilotos Certificados</span>
           </div>
           <div className="flex items-center bg-white/10 rounded-full px-4 py-2">
-            <Camera className="w-5 h-5 mr-2 text-legal-cyan" />
+            <Video className="w-5 h-5 mr-2 text-legal-cyan" />
             <span className="text-sm font-medium">Equipamentos Premium</span>
           </div>
         </div>
