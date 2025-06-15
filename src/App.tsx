@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -20,6 +21,7 @@ import AeroDeliveryPage from "./pages/negocios/AeroDeliveryPage";
 import EventrixPage from "./pages/negocios/ai/EventrixPage";
 import FacePassPage from "./pages/negocios/ai/FacePassPage";
 import LinkAIPage from "./pages/negocios/ai/LinkAIPage";
+import FitScorePage from "./pages/negocios/ai/FitScorePage";
 import AluguelPage from "./pages/negocios/AluguelPage";
 import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
@@ -31,13 +33,14 @@ import ImprensaPage from "./pages/universo/ImprensaPage";
 import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
-import FitScorePage from "./pages/produtos/FitScorePage";
 import BluePage from "./pages/produtos/BluePage";
 import Blue6Page from "./pages/produtos/Blue6Page";
 import BrilixPage from "./pages/produtos/BrilixPage";
 import EventrixProdutoPage from "./pages/produtos/EventrixPage";
 import FacePassProdutoPage from "./pages/produtos/FacePassPage";
+import FitScoreProdutoPage from "./pages/produtos/FitScorePage";
 import HumanoidPage from "./pages/produtos/HumanoidPage";
+import LinkAIProdutoPage from "./pages/produtos/LinkAIPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -58,11 +61,12 @@ const App = () => {
             {/* Produtos section */}
             <Route path="/produtos/blue" element={<BluePage />} />
             <Route path="/produtos/blue6" element={<Blue6Page />} />
-            <Route path="/produtos/brilix" element={<BrilixPage />} />
+            <Route path="/produtos/brilix" element={<Bril ixPage />} />
             <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
             <Route path="/produtos/facepass" element={<FacePassProdutoPage />} />
-            <Route path="/produtos/fitscore" element={<FitScorePage />} />
+            <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
             <Route path="/produtos/humanoid" element={<HumanoidPage />} />
+            <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
             
             {/* Somos LEGAL section - Redirect old route to new consolidated page */}
             <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
