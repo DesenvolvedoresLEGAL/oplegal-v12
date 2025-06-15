@@ -1,11 +1,12 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { Wifi, Shield, Clock, Users, Headphones, Settings, Building2, Stethoscope } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 import CallToAction from '@/components/CallToAction';
-import Button from '@/components/Button';
-import Link from '@/components/Link';
+import { Button } from '@/components/ui/button';
 
 const AssinaturaPage = () => {
   const benefits = [
@@ -141,7 +142,7 @@ const AssinaturaPage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-legal via-legal-purple to-legal-black opacity-80"></div>
           
           {/* Grid overlay */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbHNzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDYwIEwgNjAgNjAiIHN0cm9rZT0iIzE5MTk3MDIwIiBmaWxsPSJub25lIiAvPjxwYXRoIGQ9Ik0gNjAgMCBMIDYwIDYwIiBzdHJva2U9IiMxOTE5NzAyMCIgZmlsbD0ibm9uZSIgLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiIC8+PC9zdmc+')] opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDYwIEwgNjAgNjAiIHN0cm9rZT0iIzE5MTk3MDIwIiBmaWxsPSJub25lIiAvPjxwYXRoIGQ9Ik0gNjAgMCBMIDYwIDYwIiBzdHJva2U9IiMxOTE5NzAyMCIgZmlsbD0ibm9uZSIgLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiIC8+PC9zdmc+')] opacity-20"></div>
 
           {/* Floating elements */}
           <div className="absolute w-64 h-64 rounded-full bg-legal-cyan blur-[100px] top-20 -left-20 opacity-20 animate-pulse"></div>
@@ -164,10 +165,10 @@ const AssinaturaPage = () => {
               </header>
               <nav className="flex flex-col sm:flex-row justify-center gap-4" role="navigation" aria-label="Ações principais">
                 <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
-                  <Link to="/contato?solution=assinatura-5g" title="Solicitar proposta">Solicitar Proposta</Link>
+                  <Link to="/contato?solution=assinatura-5g">Solicitar Proposta</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
-                  <Link to="#planos" title="Ver planos">Ver Planos</Link>
+                  <Link to="#planos">Ver Planos</Link>
                 </Button>
               </nav>
             </div>
