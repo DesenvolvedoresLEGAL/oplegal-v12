@@ -1,10 +1,11 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Shield, Clock, Users, Headphones, Settings, Building2, Stethoscope } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 import CallToAction from '@/components/CallToAction';
+import Button from '@/components/Button';
+import Link from '@/components/Link';
 
 const AssinaturaPage = () => {
   const benefits = [
@@ -135,31 +136,48 @@ const AssinaturaPage = () => {
 
       <div className="bg-background text-foreground font-unica">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-legal via-legal-purple to-legal-secondary pt-20">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative z-10 container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 font-unica">
-              LEGAL <span className="text-legal-cyan">Assinatura</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-unica">
-              Conectividade Empresarial Recorrente com Tecnologia 5G
-            </p>
-            <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto font-unica">
-              Planos mensais de internet 5G empresarial com instalação ágil, suporte 24/7 e gestão remota para empresas de todos os portes
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contato?solution=assinatura-5g"
-                className="bg-legal-cyan text-legal font-bold px-8 py-4 rounded-lg hover:bg-legal-cyan/90 transition-colors"
-              >
-                Solicitar Proposta
-              </a>
-              <a 
-                href="#planos"
-                className="border-2 border-white text-white font-bold px-8 py-4 rounded-lg hover:bg-white hover:text-legal transition-colors"
-              >
-                Ver Planos
-              </a>
+        <section className="relative min-h-screen flex items-center justify-center bg-legal-black text-white overflow-hidden">
+          {/* Background gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-legal via-legal-purple to-legal-black opacity-80"></div>
+          
+          {/* Grid overlay */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbHNzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDYwIEwgNjAgNjAiIHN0cm9rZT0iIzE5MTk3MDIwIiBmaWxsPSJub25lIiAvPjxwYXRoIGQ9Ik0gNjAgMCBMIDYwIDYwIiBzdHJva2U9IiMxOTE5NzAyMCIgZmlsbD0ibm9uZSIgLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiIC8+PC9zdmc+')] opacity-20"></div>
+
+          {/* Floating elements */}
+          <div className="absolute w-64 h-64 rounded-full bg-legal-cyan blur-[100px] top-20 -left-20 opacity-20 animate-pulse"></div>
+          <div className="absolute w-96 h-96 rounded-full bg-legal-purple blur-[120px] bottom-0 right-0 opacity-20 animate-pulse" style={{
+            animationDelay: "1s"
+          }}></div>
+
+          <div className="container mx-auto px-4 relative z-10 py-24">
+            <div className="text-center max-w-5xl mx-auto">
+              <header>
+                <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider mb-6" style={{ letterSpacing: '0.05em' }}>
+                  LEGAL <span className="text-legal-cyan">Assinatura</span>
+                </h1>
+                <p className="text-lg md:text-xl font-light max-w-4xl mx-auto mb-4">
+                  <strong className="font-bold text-legal-cyan">Conectividade Empresarial Recorrente</strong> com Tecnologia 5G
+                </p>
+                <p className="text-base md:text-lg font-light max-w-3xl mx-auto mb-8 text-gray-200">
+                  Planos mensais de internet 5G empresarial com instalação ágil, suporte 24/7 e gestão remota para empresas de todos os portes
+                </p>
+              </header>
+              <nav className="flex flex-col sm:flex-row justify-center gap-4" role="navigation" aria-label="Ações principais">
+                <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
+                  <Link to="/contato?solution=assinatura-5g" title="Solicitar proposta">Solicitar Proposta</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+                  <Link to="#planos" title="Ver planos">Ver Planos</Link>
+                </Button>
+              </nav>
+            </div>
+          </div>
+          
+          {/* Scroll indicator */}
+          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <span className="text-sm text-gray-400 mb-2">Scroll</span>
+            <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+              <div className="w-1 h-2 bg-gray-400 rounded-full mt-2"></div>
             </div>
           </div>
         </section>
