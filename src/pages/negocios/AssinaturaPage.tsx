@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -136,20 +135,8 @@ const AssinaturaPage = () => {
       </Helmet>
 
       <div className="bg-background text-foreground font-unica">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center bg-legal-black text-white overflow-hidden">
-          {/* Background gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-legal via-legal-purple to-legal-black opacity-80"></div>
-          
-          {/* Grid overlay */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDYwIEwgNjAgNjAiIHN0cm9rZT0iIzE5MTk3MDIwIiBmaWxsPSJub25lIiAvPjxwYXRoIGQ9Ik0gNjAgMCBMIDYwIDYwIiBzdHJva2U9IiMxOTE5NzAyMCIgZmlsbD0ibm9uZSIgLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiIC8+PC9zdmc+')] opacity-20"></div>
-
-          {/* Floating elements */}
-          <div className="absolute w-64 h-64 rounded-full bg-legal-cyan blur-[100px] top-20 -left-20 opacity-20 animate-pulse"></div>
-          <div className="absolute w-96 h-96 rounded-full bg-legal-purple blur-[120px] bottom-0 right-0 opacity-20 animate-pulse" style={{
-            animationDelay: "1s"
-          }}></div>
-
+        {/* Hero Section - Igual ao LEGAL AI */}
+        <section className="relative min-h-screen flex items-center justify-center bg-legal text-white overflow-hidden">
           <div className="container mx-auto px-4 relative z-10 py-24">
             <div className="text-center max-w-5xl mx-auto">
               <header>
