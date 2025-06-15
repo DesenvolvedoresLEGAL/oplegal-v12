@@ -29,7 +29,7 @@ const AluguelPage = () => {
     "name": "LEGAL",
     "url": "https://legal.com.br",
     "logo": "https://legal.com.br/images/legal-logo.webp",
-    "description": "A maior TECHCO do Brasil e inventora do conceito Smart Events™",
+    "description": "Aluguel de Internet Para Eventos e Negócios. Locação de Internet 5G e Tecnologia",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "BR"
@@ -133,7 +133,7 @@ const AluguelPage = () => {
   return (
     <>
       <Helmet>
-        <title>LEGAL ALUGUE | Locação de Conectividade e Tecnologia para Eventos</title>
+        <title>LEGAL ALUGUE | Locação de Conectividade e Tecnologia para Eventos e Negócios</title>
         <meta
           name="description"
           content="Alugue conectividade e tecnologia premium para eventos corporativos com a LEGAL. Equipamentos de ponta, instalação rápida e suporte 24/7 para o sucesso do seu evento."
