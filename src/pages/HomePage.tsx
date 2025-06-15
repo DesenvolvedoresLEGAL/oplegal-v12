@@ -4,7 +4,6 @@ import HomePageSEO from "@/components/seo/HomePageSEO";
 import HeroSection from "@/components/sections/HeroSection";
 import WhyLegalSection from "@/components/sections/WhyLegalSection";
 import ProductsSection from "@/components/sections/ProductsSection";
-import BenefitsSection from "@/components/sections/BenefitsSection";
 import MovimentoSmartEventsSection from "@/components/sections/MovimentoSmartEventsSection";
 import PillarsSection from "@/components/sections/PillarsSection";
 import RoadmapSection from "@/components/sections/RoadmapSection";
@@ -31,9 +30,6 @@ const HomePage = () => {
         
         {/* Nossos Produtos - H2 */}
         <ProductsSection titleOverride="Soluções Completas para Eventos Inteligentes" />
-        
-        {/* Benefícios por Stakeholder - H2 */}
-        <BenefitsSection />
         
         {/* Movimento SmartEvents™ - H2 */}
         <MovimentoSmartEventsSection />
