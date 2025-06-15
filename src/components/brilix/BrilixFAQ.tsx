@@ -1,6 +1,7 @@
 
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
+import { Button } from '@/components/ui/button';
 import {
   Accordion,
   AccordionContent,
