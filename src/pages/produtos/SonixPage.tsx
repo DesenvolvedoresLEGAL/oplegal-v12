@@ -15,34 +15,40 @@ import CallToAction from '@/components/CallToAction';
 const SonixPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Sonix - Plataforma de Áudio IA Inteligente",
-    "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "Web-based",
-    "description": "Sonix: Plataforma de processamento de áudio com inteligência artificial para transcrição, análise de sentimentos, tradução automática e insights de áudio avançados.",
+    "@type": "Service",
+    "name": "Sonix - Delivery Premium com Drones",
+    "description": "Sonix: Serviço premium de delivery com drones inteligentes para entregas ultra-rápidas, monitoramento em tempo real e experiência personalizada.",
+    "provider": {
+      "@type": "Organization",
+      "name": "LEGAL",
+      "url": "https://legal.com.br",
+      "logo": "https://legal.com.br/logo.png"
+    },
+    "serviceType": ["Delivery Premium", "Entregas com Drone", "Logística Inteligente"],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Brasil"
+    },
     "offers": {
       "@type": "Offer",
-      "category": "SaaS"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "LEGAL"
-    },
-    "featureList": [
-      "Transcrição de Áudio com IA",
-      "Análise de Sentimentos",
-      "Tradução Automática",
-      "Insights de Áudio Avançados",
-      "Processamento em Tempo Real"
-    ]
+      "name": "Delivery Premium com Drones",
+      "price": "35",
+      "priceCurrency": "BRL",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "35",
+        "priceCurrency": "BRL",
+        "unitText": "por quilômetro"
+      }
+    }
   };
 
   return (
     <>
       <Helmet>
-        <title>Sonix - Plataforma de Áudio IA Inteligente | LEGAL</title>
-        <meta name="description" content="Sonix: Plataforma de processamento de áudio com IA para transcrição automática, análise de sentimentos, tradução e insights avançados. Transforme áudio em conhecimento estratégico." />
-        <meta name="keywords" content="transcrição áudio, análise sentimentos, tradução automática, processamento áudio IA, insights áudio, speech to text, LEGAL Sonix" />
+        <title>Sonix - Delivery Premium com Drones | LEGAL</title>
+        <meta name="description" content="Sonix: Serviço premium de delivery com drones inteligentes. Entregas ultra-rápidas em até 15 minutos, monitoramento em tempo real e experiência personalizada para clientes VIP." />
+        <meta name="keywords" content="delivery premium drone, entrega rápida drone, drone delivery VIP, logística premium, Sonix LEGAL, delivery inteligente" />
         <link rel="canonical" href="https://operadora.legal/produtos/sonix" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -60,12 +66,12 @@ const SonixPage = () => {
         <SonixDemo />
         <SonixFAQ />
         <CallToAction
-          title="Transforme Áudio em Insights Estratégicos"
-          subtitle="Descubra o poder do processamento de áudio com IA. Solicite uma demonstração personalizada do Sonix e veja como transformar conversas em conhecimento."
-          buttonText="Demonstração Gratuita"
+          title="Experimente o Futuro do Delivery"
+          subtitle="Descubra a experiência premium do Sonix. Entregas em até 15 minutos com drones inteligentes e monitoramento em tempo real."
+          buttonText="Solicitar Demonstração"
           buttonLink="/contato?produto=sonix"
-          secondaryButtonText="Acesso Sonix™"
-          secondaryButtonLink="https://sonix.operadora.legal"
+          secondaryButtonText="Ver Preços"
+          secondaryButtonLink="#precos"
           background="gradient"
         />
       </main>

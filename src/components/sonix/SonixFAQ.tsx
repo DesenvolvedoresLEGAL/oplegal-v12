@@ -11,28 +11,36 @@ import {
 const SonixFAQ = () => {
   const faqs = [
     {
-      question: "Quais formatos de áudio o Sonix suporta?",
-      answer: "O Sonix suporta todos os principais formatos de áudio incluindo MP3, WAV, M4A, FLAC, OGG e mais de 20 outros formatos. Também processamos áudio de vídeos MP4, AVI, MOV e outros formatos multimídia."
+      question: "Como funciona o sistema de entrega do Sonix?",
+      answer: "O Sonix utiliza drones autônomos equipados com IA avançada. Você faz o pedido pelo app, nosso sistema otimiza a rota automaticamente, o drone decola e entrega seu pedido em até 15 minutos com precisão GPS centimétrica."
     },
     {
-      question: "Como funciona a análise de sentimentos?",
-      answer: "Nossa IA analisa tom de voz, velocidade da fala, pausas e conteúdo linguístico para identificar emoções como alegria, frustração, ansiedade e confiança. Os resultados são apresentados em tempo real com métricas de confiança."
+      question: "Qual é o peso máximo que o drone pode carregar?",
+      answer: "Nossos drones Sonix podem transportar até 3kg com segurança total. Isso inclui a maioria dos medicamentos, documentos, alimentos e produtos do dia a dia."
     },
     {
-      question: "O Sonix funciona com áudio ao vivo?",
-      answer: "Sim! O Sonix processa áudio em tempo real com latência menor que 200ms. Ideal para reuniões ao vivo, webinars, atendimento ao cliente e transmissões onde você precisa de insights imediatos."
+      question: "O serviço funciona em condições climáticas adversas?",
+      answer: "Nossos drones são resistentes à chuva leve e ventos de até 40km/h. Em condições extremas, o sistema automaticamente reagenda a entrega para garantir segurança total."
     },
     {
-      question: "Posso integrar o Sonix com outras ferramentas?",
-      answer: "Absolutamente! Oferecemos APIs REST robustas, webhooks, integrações nativas com Slack, Teams, Zoom, Google Meet e SDKs para principais linguagens de programação. Também suportamos integrações via Zapier."
+      question: "Como é garantida a segurança das entregas?",
+      answer: "Utilizamos protocolos de segurança militares, certificação ANAC, seguros completos, criptografia de dados e confirmação biométrica para máxima segurança em todas as entregas."
     },
     {
-      question: "Como vocês garantem a segurança dos dados?",
-      answer: "Utilizamos criptografia AES-256 em trânsito e em repouso, data centers certificados SOC 2, conformidade total com LGPD e opção de processamento on-premise para máxima segurança. Seus dados nunca são compartilhados."
+      question: "Posso rastrear minha entrega em tempo real?",
+      answer: "Sim! Nosso app premium permite acompanhar sua entrega em tempo real com GPS de alta precisão, receber notificações automáticas e ter acesso ao ETA dinâmico atualizado constantemente."
     },
     {
-      question: "Qual é a precisão da transcrição?",
-      answer: "Nossa IA alcança 99,5% de precisão em condições ideais e 95%+ mesmo com ruído de fundo. A precisão melhora continuamente com nossos modelos de machine learning que são atualizados mensalmente."
+      question: "Qual é a área de cobertura do Sonix?",
+      answer: "Atualmente cobrimos as principais regiões metropolitanas do Brasil com raio de até 20km. Estamos expandindo rapidamente para cobrir todo o território nacional."
+    },
+    {
+      question: "Como funciona o controle de temperatura para produtos sensíveis?",
+      answer: "Nossos drones possuem compartimentos climatizados que mantêm temperatura controlada entre 2°C e 25°C, ideal para medicamentos, alimentos e produtos sensíveis."
+    },
+    {
+      question: "Quanto custa o serviço Sonix?",
+      answer: "Nosso preço inicia em R$ 35/km com valor fixo transparente. Para clientes frequentes, oferecemos planos de assinatura com descontos progressivos e benefícios exclusivos."
     }
   ];
 
@@ -41,18 +49,17 @@ const SonixFAQ = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Perguntas Frequentes"
-          subtitle="Tire suas dúvidas sobre como o Sonix pode transformar seu conteúdo de áudio"
+          subtitle="Tire todas suas dúvidas sobre o serviço premium de delivery com drones Sonix"
           center
         />
-        
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-legal font-semibold">
+              <AccordionItem key={index} value={`item-${index}`} className="border-legal/20">
+                <AccordionTrigger className="text-left font-bold text-legal hover:text-legal-purple">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600">
+                <AccordionContent className="text-gray-700 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -6,32 +6,32 @@ const SonixProcess = () => {
   const processSteps = [
     {
       number: "01",
-      title: "Captura de Áudio",
-      description: "Upload ou gravação direta com suporte a múltiplos formatos e fontes de áudio."
+      title: "Pedido Inteligente",
+      description: "Faça seu pedido pelo app premium com IA que sugere produtos e otimiza automaticamente sua entrega."
     },
     {
       number: "02", 
-      title: "Processamento IA",
-      description: "Análise avançada com algoritmos de machine learning para transcrição e insights."
+      title: "Preparação Express",
+      description: "Nossa equipe especializada prepara seu pedido em instalações de alta tecnologia em tempo recorde."
     },
     {
       number: "03",
-      title: "Análise Inteligente",
-      description: "Extração de sentimentos, palavras-chave e padrões comportamentais automaticamente."
+      title: "Decolagem Automática",
+      description: "Drone autônomo decola automaticamente e navega pela rota mais eficiente usando IA avançada."
     },
     {
       number: "04",
-      title: "Entrega de Resultados",
-      description: "Relatórios detalhados, dashboards interativos e APIs para integração completa."
+      title: "Entrega Precisa",
+      description: "Chegada no local exato com precisão centimétrica e confirmação automática via app."
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="como-funciona" className="py-20 bg-gradient-to-br from-legal/5 to-legal-purple/5">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Metodologia Sonix"
-          subtitle="Processo estruturado em 4 etapas para máxima extração de valor do seu conteúdo de áudio"
+          title="Como Funciona o Sonix"
+          subtitle="Processo simplificado em 4 etapas para máxima eficiência e experiência premium"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

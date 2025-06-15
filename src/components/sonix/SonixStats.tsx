@@ -3,10 +3,10 @@ import React from 'react';
 
 const SonixStats = () => {
   const stats = [
-    { number: "99.5%", label: "Precisão", description: "Taxa de acerto na transcrição" },
-    { number: "40+", label: "Idiomas", description: "Suporte multilíngue completo" },
-    { number: "200ms", label: "Latência", description: "Processamento em tempo real" },
-    { number: "24/7", label: "Disponibilidade", description: "Processamento contínuo" }
+    { number: "15min", label: "Tempo Médio", description: "Entrega ultra-rápida" },
+    { number: "99.8%", label: "Taxa de Sucesso", description: "Confiabilidade total" },
+    { number: "3kg", label: "Capacidade", description: "Carga máxima" },
+    { number: "20km", label: "Alcance", description: "Raio de cobertura" }
   ];
 
   return (

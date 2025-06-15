@@ -1,68 +1,75 @@
 
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Play, Download, BarChart3 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Play, Smartphone, MapPin, Package } from 'lucide-react';
 
 const SonixDemo = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-legal-purple/10 to-legal-cyan/10">
+    <section className="py-20 bg-gradient-to-br from-legal to-legal-purple text-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Experimente o Sonix em Ação"
-          subtitle="Veja como nossa IA transforma áudio em insights valiosos em segundos"
+          title="Veja o Sonix em Ação"
+          subtitle="Demonstração completa da experiência premium de delivery com drones"
           center
+          className="text-white"
         />
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <Card className="shadow-xl">
-            <CardContent className="p-8">
-              <div className="aspect-video bg-gradient-to-br from-legal to-legal-purple rounded-lg flex items-center justify-center mb-6">
-                <Button size="lg" className="bg-white text-legal hover:bg-gray-100">
-                  <Play className="w-6 h-6 mr-2" />
-                  Assistir Demo
-                </Button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="flex items-center mb-4">
+                <Smartphone className="w-8 h-8 text-legal-cyan mr-3" />
+                <h3 className="text-2xl font-bold">App Premium</h3>
               </div>
-              <h3 className="text-2xl font-bold text-legal mb-4">Demo Interativa</h3>
-              <p className="text-gray-600 mb-6">
-                Veja como o Sonix processa uma reunião real, gerando transcrições precisas, 
-                análise de sentimentos e insights estratégicos em tempo real.
+              <p className="text-gray-200 leading-relaxed">
+                Interface intuitiva com IA que aprende suas preferências e otimiza automaticamente suas entregas.
               </p>
-              <div className="flex gap-4">
-                <Button variant="outline" className="flex-1">
-                  <Download className="w-4 h-4 mr-2" />
-                  Baixar Exemplo
-                </Button>
-                <Button variant="outline" className="flex-1">
-                  <BarChart3 className="w-4 h-4 mr-2" />
-                  Ver Relatório
-                </Button>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="flex items-center mb-4">
+                <MapPin className="w-8 h-8 text-legal-cyan mr-3" />
+                <h3 className="text-2xl font-bold">Rastreamento Real</h3>
               </div>
-            </CardContent>
-          </Card>
+              <p className="text-gray-200 leading-relaxed">
+                Acompanhe seu drone em tempo real com precisão GPS centimétrica e notificações automáticas.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="flex items-center mb-4">
+                <Package className="w-8 h-8 text-legal-cyan mr-3" />
+                <h3 className="text-2xl font-bold">Entrega Inteligente</h3>
+              </div>
+              <p className="text-gray-200 leading-relaxed">
+                Chegada precisa no local exato com confirmação automática e experiência premium.
+              </p>
+            </div>
+          </div>
           
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h4 className="font-bold text-legal mb-2">Transcrição Ultra-Precisa</h4>
-              <p className="text-gray-600 text-sm">
-                99,5% de precisão na conversão de áudio para texto, 
-                incluindo identificação de speakers e timestamps.
+          <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+              <div className="w-32 h-32 mx-auto mb-6 bg-legal-cyan rounded-full flex items-center justify-center">
+                <Play className="w-16 h-16 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Demo Interativa</h3>
+              <p className="text-gray-200 mb-6">
+                Experimente nosso simulador e veja como seria sua primeira entrega com o Sonix.
               </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h4 className="font-bold text-legal mb-2">Análise de Sentimentos</h4>
-              <p className="text-gray-600 text-sm">
-                Detecção automática de emoções, tom e intenções 
-                para insights comportamentais profundos.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h4 className="font-bold text-legal mb-2">Insights Estratégicos</h4>
-              <p className="text-gray-600 text-sm">
-                Palavras-chave, tópicos principais e métricas de 
-                engajamento extraídas automaticamente.
-              </p>
+              <div className="space-y-4">
+                <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold w-full">
+                  <Link to="/contato?demo=sonix">
+                    Agendar Demonstração
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal w-full">
+                  <Link to="#precos">
+                    Ver Preços
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
