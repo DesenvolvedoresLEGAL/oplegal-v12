@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -40,7 +41,7 @@ import FacePassProdutoPage from "./pages/produtos/FacePassPage";
 import FitScoreProdutoPage from "./pages/produtos/FitScorePage";
 import HumanoidPage from "./pages/produtos/HumanoidPage";
 import LinkAIProdutoPage from "./pages/produtos/LinkAIPage";
-import NeurahackPage from "./pages/produtos/NeurahackPage";
+import NuvyoPage from "./pages/produtos/NuvyoPage";
 import PingPage from "./pages/produtos/PingPage";
 import SonixPage from "./pages/produtos/SonixPage";
 import Speedy5GPage from "./pages/produtos/Speedy5GPage";
@@ -72,6 +73,7 @@ const App = () => {
             <Route path="/produtos/humanoid" element={<HumanoidPage />} />
             <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
             <Route path="/produtos/neurafit" element={<NeuraFitPage />} />
+            <Route path="/produtos/nuvyo" element={<NuvyoPage />} />
             <Route path="/produtos/ping" element={<PingPage />} />
             <Route path="/produtos/sonix" element={<SonixPage />} />
             <Route path="/produtos/speedy5g" element={<Speedy5GPage />} />
