@@ -1,26 +1,34 @@
-
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import AluguelHero from '@/components/aluguel/AluguelHero';
 import MainSolutions from '@/components/aluguel/MainSolutions';
-import IndustryUseCases from '@/components/aluguel/IndustryUseCases';
-import DetailedBenefits from '@/components/aluguel/DetailedBenefits';
-import TechnicalAdvantages from '@/components/aluguel/TechnicalAdvantages';
-import AdditionalEquipment from '@/components/aluguel/AdditionalEquipment';
-import StatsSection from '@/components/aluguel/StatsSection';
-import TestimonialsSection from '@/components/aluguel/TestimonialsSection';
-import ProcessSection from '@/components/aluguel/ProcessSection';
-import FAQSection from '@/components/aluguel/FAQSection';
-import CallToAction from '@/components/CallToAction';
+
+// Lazy load components that are not critical for above-the-fold
+const IndustryUseCases = lazy(() => import('@/components/aluguel/IndustryUseCases'));
+const DetailedBenefits = lazy(() => import('@/components/aluguel/DetailedBenefits'));
+const TechnicalAdvantages = lazy(() => import('@/components/aluguel/TechnicalAdvantages'));
+const AdditionalEquipment = lazy(() => import('@/components/aluguel/AdditionalEquipment'));
+const StatsSection = lazy(() => import('@/components/aluguel/StatsSection'));
+const TestimonialsSection = lazy(() => import('@/components/aluguel/TestimonialsSection'));
+const ProcessSection = lazy(() => import('@/components/aluguel/ProcessSection'));
+const FAQSection = lazy(() => import('@/components/aluguel/FAQSection'));
+const CallToAction = lazy(() => import('@/components/CallToAction'));
+
+// Loading component optimized
+const SectionLoader = () => (
+  <div className="py-16 flex justify-center items-center">
+    <div className="w-8 h-8 border-2 border-legal border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 const AluguelPage = () => {
-  // Schema Markup para Organization, Service e Product
+  // Schema Markup for Organization, Service, and Product
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "LEGAL",
     "url": "https://legal.com.br",
-    "logo": "https://legal.com.br/images/legal-logo.png",
+    "logo": "https://legal.com.br/images/legal-logo.webp",
     "description": "A maior TECHCO do Brasil e inventora do conceito Smart Events™",
     "address": {
       "@type": "PostalAddress",
@@ -135,38 +143,71 @@ const AluguelPage = () => {
         <meta property="og:description" content="Aluguel de equipamentos premium para eventos: 5G, WiFi 6, notebooks, switches e mais. Instalação em 24h e suporte técnico especializado." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://legal.com.br/negocios/alugue" />
-        <meta property="og:image" content="https://legal.com.br/images/legal-alugue-og.jpg" />
+        <meta property="og:image" content="https://legal.com.br/images/legal-alugue-og.webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="LEGAL ALUGUE - Locação de equipamentos para eventos corporativos" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="LEGAL ALUGUE | Locação de Conectividade para Eventos" />
         <meta name="twitter:description" content="Equipamentos premium para eventos: 5G, WiFi 6, infraestrutura completa com suporte 24/7." />
-        <meta name="twitter:image" content="https://legal.com.br/images/legal-alugue-twitter.jpg" />
+        <meta name="twitter:image" content="https://legal.com.br/images/legal-alugue-twitter.webp" />
         <link rel="canonical" href="https://legal.com.br/negocios/alugue" />
+        <link rel="preload" href="/fonts/neue-haas-unica.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
         <script type="application/ld+json">
           {JSON.stringify(combinedSchema)}
         </script>
       </Helmet>
 
       <div className="bg-background text-foreground font-unica">
+        {/* Above-the-fold content loads immediately */}
         <AluguelHero />
         <MainSolutions />
-        <IndustryUseCases />
-        <DetailedBenefits />
-        <TechnicalAdvantages />
-        <AdditionalEquipment />
-        <StatsSection />
-        <TestimonialsSection />
-        <ProcessSection />
-        <FAQSection />
         
-        <CallToAction
-          title="Pronto para Conectar seu Evento?"
-          subtitle="Nossa equipe especializada está pronta para dimensionar a solução perfeita para seu evento. Oferecemos orçamento detalhado, site survey gratuito e consultoria técnica especializada."
-          buttonText="Solicitar Orçamento Personalizado"
-          buttonLink="/contato?solution=legal-alugue"
-          secondaryButtonText="Ver Outros Negócios"
-          secondaryButtonLink="/negocios"
-          background="gradient"
-        />
+        {/* Below-the-fold content loads lazily */}
+        <Suspense fallback={<SectionLoader />}>
+          <IndustryUseCases />
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoader />}>
+          <DetailedBenefits />
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoader />}>
+          <TechnicalAdvantages />
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoader />}>
+          <AdditionalEquipment />
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoader />}>
+          <StatsSection />
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoader />}>
+          <TestimonialsSection />
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoader />}>
+          <ProcessSection />
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoader />}>
+          <FAQSection />
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoader />}>
+          <CallToAction
+            title="Pronto para Conectar seu Evento?"
+            subtitle="Nossa equipe especializada está pronta para dimensionar a solução perfeita para seu evento. Oferecemos orçamento detalhado, site survey gratuito e consultoria técnica especializada."
+            buttonText="Solicitar Orçamento Personalizado"
+            buttonLink="/contato?solution=legal-alugue"
+            secondaryButtonText="Ver Outros Negócios"
+            secondaryButtonLink="/negocios"
+            background="gradient"
+          />
+        </Suspense>
       </div>
     </>
   );

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import SectionTitle from '@/components/SectionTitle';
+import OptimizedImage from '@/components/OptimizedImage';
 import { Quote, Star } from 'lucide-react';
 
 const TestimonialsSection = () => {
@@ -12,7 +13,8 @@ const TestimonialsSection = () => {
       company: 'Grupo Hospitalar Premium',
       content: 'A LEGAL transformou nosso congresso médico. O aluguel de internet para eventos foi impecável, com conectividade estável para mais de 2.000 participantes simultâneos. Suporte técnico excepcional!',
       rating: 5,
-      event: 'Congresso Brasileiro de Cardiologia'
+      event: 'Congresso Brasileiro de Cardiologia',
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=80&h=80&fit=crop&crop=face'
     },
     {
       name: 'Carlos Rodrigues',
@@ -20,7 +22,8 @@ const TestimonialsSection = () => {
       company: 'TechExpo Brasil',
       content: 'Locação de internet temporária da LEGAL salvou nossa feira de tecnologia. Instalação em 18 horas, Wi-Fi 6 funcionando perfeitamente para demonstrações de IoT e realidade virtual.',
       rating: 5,
-      event: 'TechExpo 2024'
+      event: 'TechExpo 2024',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face'
     },
     {
       name: 'Ana Oliveira',
@@ -28,7 +31,8 @@ const TestimonialsSection = () => {
       company: 'Federação Industrial',
       content: 'Infraestrutura de TI para feiras nunca foi tão profissional. Equipamentos de ponta, monitoramento 24/7 e equipe técnica sempre disponível. Recomendo para eventos corporativos.',
       rating: 5,
-      event: 'Feira Industrial do Sudeste'
+      event: 'Feira Industrial do Sudeste',
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face'
     },
     {
       name: 'Roberto Lima',
@@ -36,19 +40,52 @@ const TestimonialsSection = () => {
       company: 'Festival Cultural',
       content: 'Soluções de rede para eventos da LEGAL foram fundamentais para nosso festival. Wi-Fi para 15.000 pessoas, streaming ao vivo e pagamentos digitais sem instabilidade.',
       rating: 5,
-      event: 'Festival de Música e Arte'
+      event: 'Festival de Música e Arte',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face'
     }
   ];
 
   const clientLogos = [
-    { name: 'Hospital Sírio-Libanês', logo: '/images/clients/sirio-libanes.png' },
-    { name: 'Grupo Fleury', logo: '/images/clients/fleury.png' },
-    { name: 'FIESP', logo: '/images/clients/fiesp.png' },
-    { name: 'CNI', logo: '/images/clients/cni.png' },
-    { name: 'Sebrae', logo: '/images/clients/sebrae.png' },
-    { name: 'Google', logo: '/images/clients/google.png' },
-    { name: 'Microsoft', logo: '/images/clients/microsoft.png' },
-    { name: 'AWS', logo: '/images/clients/aws.png' }
+    { 
+      name: 'Hospital Sírio-Libanês', 
+      logo: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=120&h=60&fit=crop',
+      alt: 'Logo do Hospital Sírio-Libanês - Cliente LEGAL para eventos médicos'
+    },
+    { 
+      name: 'Grupo Fleury', 
+      logo: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=120&h=60&fit=crop',
+      alt: 'Logo do Grupo Fleury - Soluções de conectividade para laboratórios'
+    },
+    { 
+      name: 'FIESP', 
+      logo: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=120&h=60&fit=crop',
+      alt: 'Logo da FIESP - Infraestrutura de TI para feiras industriais'
+    },
+    { 
+      name: 'CNI', 
+      logo: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=120&h=60&fit=crop',
+      alt: 'Logo da CNI - Eventos corporativos com conectividade premium'
+    },
+    { 
+      name: 'Sebrae', 
+      logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop',
+      alt: 'Logo do Sebrae - Soluções de rede para eventos empresariais'
+    },
+    { 
+      name: 'Google', 
+      logo: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=120&h=60&fit=crop',
+      alt: 'Logo do Google - Parceiro em soluções tecnológicas'
+    },
+    { 
+      name: 'Microsoft', 
+      logo: 'https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?w=120&h=60&fit=crop',
+      alt: 'Logo da Microsoft - Integração com plataformas empresariais'
+    },
+    { 
+      name: 'AWS', 
+      logo: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=120&h=60&fit=crop',
+      alt: 'Logo da AWS - Infraestrutura cloud para eventos'
+    }
   ];
 
   return (
@@ -63,12 +100,16 @@ const TestimonialsSection = () => {
         {/* Client Logos */}
         <div className="mb-16">
           <h3 className="text-center text-lg font-bold text-legal mb-8">Empresas que já utilizaram nossos serviços:</h3>
-          <div className="grid grid-cols-4 md:grid-cols-8 gap-8 items-center opacity-70">
+          <div className="grid grid-cols-4 md:grid-cols-8 gap-8 items-center">
             {clientLogos.map((client, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 mx-auto bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200">
-                  <span className="text-xs font-bold text-gray-600">{client.name.split(' ')[0]}</span>
-                </div>
+              <div key={index} className="text-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <OptimizedImage
+                  src={client.logo}
+                  alt={client.alt}
+                  width={120}
+                  height={60}
+                  className="w-full h-12 object-contain bg-white rounded-lg shadow-sm border border-gray-200 p-2"
+                />
               </div>
             ))}
           </div>
@@ -92,11 +133,20 @@ const TestimonialsSection = () => {
               </blockquote>
               
               <div className="border-t pt-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-bold text-legal">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.position}</p>
-                    <p className="text-sm font-medium text-legal-purple">{testimonial.company}</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <OptimizedImage
+                      src={testimonial.avatar}
+                      alt={`Foto de ${testimonial.name}, ${testimonial.position} na ${testimonial.company}`}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="font-bold text-legal">{testimonial.name}</p>
+                      <p className="text-sm text-gray-600">{testimonial.position}</p>
+                      <p className="text-sm font-medium text-legal-purple">{testimonial.company}</p>
+                    </div>
                   </div>
                   <div className="text-right">
                     <p className="text-xs text-gray-500 font-medium">Evento:</p>
