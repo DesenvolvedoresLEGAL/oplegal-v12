@@ -15,6 +15,8 @@ interface SEOHeadProps {
   schemaData?: object;
   noIndex?: boolean;
   canonical?: string;
+  preconnect?: string[];
+  prefetch?: string[];
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -29,14 +31,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   modifiedTime,
   schemaData,
   noIndex = false,
-  canonical
+  canonical,
+  preconnect = [],
+  prefetch = []
 }) => {
   const siteTitle = "LEGAL - Criadora do Smart Events™";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const currentUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://operadora.legal');
   const canonicalUrl = canonical || currentUrl;
 
-  // Schema.org base para organização
+  // Schema.org base para organização com melhor estrutura para SSR
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -68,6 +72,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   return (
     <Helmet>
+      {/* Preconnect para performance - importante para SSR */}
+      {preconnect.map((url) => (
+        <link key={url} rel="preconnect" href={url} />
+      ))}
+      
+      {/* Prefetch para navegação mais rápida */}
+      {prefetch.map((url) => (
+        <link key={url} rel="prefetch" href={url} />
+      ))}
+
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -75,25 +89,27 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content={author} />
       <link rel="canonical" href={canonicalUrl} />
       
-      {/* Robots */}
+      {/* Robots - otimizado para melhor indexação */}
       <meta name="robots" content={noIndex ? "noindex,nofollow" : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"} />
-      <meta name="googlebot" content={noIndex ? "noindex,nofollow" : "index,follow"} />
+      <meta name="googlebot" content={noIndex ? "noindex,nofollow" : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"} />
       
       {/* Language */}
       <meta httpEquiv="content-language" content="pt-BR" />
       <meta name="language" content="Portuguese" />
       
-      {/* Open Graph */}
+      {/* Open Graph - otimizado para compartilhamento */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:site_name" content="LEGAL" />
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:locale:alternate" content="en_US" />
       
-      {/* Twitter Card */}
+      {/* Twitter Card - otimizado */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@legal_tech" />
       <meta name="twitter:creator" content="@legal_tech" />
@@ -112,7 +128,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         <meta property="article:author" content={author} />
       )}
       
-      {/* Structured Data */}
+      {/* Structured Data - otimizado para SSR */}
       <script type="application/ld+json">
         {JSON.stringify(schemaData || organizationSchema)}
       </script>
@@ -123,6 +139,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="format-detection" content="telephone=no" />
+      
+      {/* Performance hints para SSR */}
+      <meta name="referrer" content="origin-when-cross-origin" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     </Helmet>
   );
 };
