@@ -31,13 +31,7 @@ import ImprensaPage from "./pages/universo/ImprensaPage";
 import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
-import FitScorePage from "./pages/negocios/ai/FitScorePage";
-import HistoriasPage from "./pages/universo/HistoriasPage";
-import BluePage from "./pages/produtos/BluePage";
-import Blue6Page from "./pages/produtos/Blue6Page";
-import BrilixPage from "./pages/produtos/BrilixPage";
-import EventrixProdutoPage from "./pages/produtos/EventrixPage";
-import FacePassProdutoPage from "./pages/produtos/FacePassPage";
+import FitScorePage from "./pages/produtos/FitScorePage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
