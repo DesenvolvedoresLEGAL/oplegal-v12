@@ -2,7 +2,7 @@
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import { Card, CardContent } from '@/components/ui/card';
-import { Phone, MapPin, Camera, Edit, Delivery } from 'lucide-react';
+import { Phone, MapPin, Camera, Edit, Package } from 'lucide-react';
 
 const NuvyoProcess = () => {
   const steps = [
@@ -31,7 +31,7 @@ const NuvyoProcess = () => {
       time: "3-5 dias"
     },
     {
-      icon: <Delivery className="w-12 h-12 text-white" />,
+      icon: <Package className="w-12 h-12 text-white" />,
       title: "Entrega",
       description: "Disponibilização do material em alta resolução através de plataforma segura.",
       time: "Imediata"
