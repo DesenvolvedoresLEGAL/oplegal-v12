@@ -16,10 +16,10 @@ const PingPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Ping - Monitoramento de Infraestrutura com IA",
-    "applicationCategory": "SystemsManagementApplication",
+    "name": "Ping - Plataforma Omnichannel de Atendimento com IA",
+    "applicationCategory": "CustomerServiceApplication",
     "operatingSystem": "Web-based",
-    "description": "Ping: Plataforma de monitoramento de infraestrutura com inteligência artificial para detecção proativa de problemas, análise preditiva e otimização de performance.",
+    "description": "Ping: Plataforma omnichannel de atendimento ao cliente com automação IA. Integração WhatsApp via META, redes sociais unificadas e insights com dashboard inteligente.",
     "offers": {
       "@type": "Offer",
       "category": "SaaS"
@@ -29,20 +29,20 @@ const PingPage = () => {
       "name": "LEGAL"
     },
     "featureList": [
-      "Monitoramento 24/7",
-      "Análise Preditiva com IA",
-      "Alertas Inteligentes",
-      "Dashboard de Performance",
-      "Otimização Automática"
+      "Atendimento Omnichannel",
+      "Automação com IA",
+      "Integração WhatsApp META",
+      "Dashboard de KPIs",
+      "Atendimento Humanizado + IA"
     ]
   };
 
   return (
     <>
       <Helmet>
-        <title>Ping - Monitoramento de Infraestrutura com IA | LEGAL</title>
-        <meta name="description" content="Ping: Plataforma de monitoramento de infraestrutura com IA que detecta problemas antes que aconteçam. Análise preditiva, alertas inteligentes e otimização automática para máxima performance." />
-        <meta name="keywords" content="monitoramento infraestrutura, IA monitoramento, análise preditiva, alertas inteligentes, performance otimização, uptime monitoramento, LEGAL Ping" />
+        <title>Ping - Atendimento Omnichannel com IA | LEGAL</title>
+        <meta name="description" content="Ping: Plataforma omnichannel de atendimento ao cliente com automação IA. Integração WhatsApp via META, todas as redes sociais em um só lugar, dashboard de insights e atendimento humanizado + IA." />
+        <meta name="keywords" content="atendimento omnichannel, automação IA atendimento, WhatsApp Business META, central atendimento, redes sociais unificadas, dashboard KPIs, LEGAL Ping" />
         <link rel="canonical" href="https://operadora.legal/produtos/ping" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -60,11 +60,11 @@ const PingPage = () => {
         <PingDemo />
         <PingFAQ />
         <CallToAction
-          title="Transforme seu Monitoramento de Infraestrutura"
-          subtitle="Implemente inteligência artificial para detectar problemas antes que afetem seus usuários. Solicite uma demonstração personalizada do Ping."
+          title="Transforme seu Atendimento ao Cliente"
+          subtitle="Unifique todas as suas conversas em uma plataforma inteligente. WhatsApp, redes sociais e IA trabalhando juntos para a experiência perfeita."
           buttonText="Demonstração Gratuita"
           buttonLink="/contato?produto=ping"
-          secondaryButtonText="Acesso Ping™"
+          secondaryButtonText="Acessar Ping™"
           secondaryButtonLink="https://ping.operadora.legal"
           background="gradient"
         />

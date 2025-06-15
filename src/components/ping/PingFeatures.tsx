@@ -2,39 +2,39 @@
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import { Card, CardContent } from '@/components/ui/card';
-import { Activity, Brain, Bell, BarChart3, Shield, Zap } from 'lucide-react';
+import { MessageCircle, Users, BarChart3, Bot, Smartphone, Shield } from 'lucide-react';
 
 const PingFeatures = () => {
   const features = [
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Monitoramento 24/7",
-      description: "Vigilância contínua de servidores, aplicações, rede e infraestrutura crítica"
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: "WhatsApp Business Oficial",
+      description: "Integração certificada com META para atendimento profissional via WhatsApp Business API"
     },
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: "IA Preditiva",
-      description: "Machine Learning que aprende padrões e prediz falhas antes que aconteçam"
+      icon: <Users className="w-8 h-8" />,
+      title: "Central Omnichannel",
+      description: "Unifique Instagram, Facebook, Telegram, SMS e mais em uma única interface de atendimento"
     },
     {
-      icon: <Bell className="w-8 h-8" />,
-      title: "Alertas Inteligentes",
-      description: "Notificações contextuais que reduzem ruído e focam no que realmente importa"
+      icon: <Bot className="w-8 h-8" />,
+      title: "IA + Atendimento Humano",
+      description: "Chatbots inteligentes com transferência automática para agentes quando necessário"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Dashboards Avançados",
-      description: "Visualizações em tempo real com métricas personalizáveis e insights acionáveis"
+      title: "Dashboard BLUE Integrado",
+      description: "KPIs, métricas de performance e insights de atendimento com integração ao Blue Analytics"
+    },
+    {
+      icon: <Smartphone className="w-8 h-8" />,
+      title: "App Mobile Nativo",
+      description: "Atenda seus clientes de qualquer lugar com aplicativo mobile completo para agentes"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Detecção de Anomalias",
-      description: "Identificação automática de comportamentos anômalos e ameaças de segurança"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Otimização Automática",
-      description: "Ajustes inteligentes de performance baseados em análise de dados históricos"
+      title: "Segurança Empresarial",
+      description: "Criptografia ponta-a-ponta, compliance LGPD e backup automático de conversas"
     }
   ];
 
@@ -42,8 +42,8 @@ const PingFeatures = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Monitoramento Inteligente de Nova Geração"
-          subtitle="Recursos avançados que transformam dados de infraestrutura em insights estratégicos"
+          title="Atendimento Omnichannel de Nova Geração"
+          subtitle="Recursos avançados que transformam a experiência do cliente e otimizam a produtividade da equipe"
           center
         />
         

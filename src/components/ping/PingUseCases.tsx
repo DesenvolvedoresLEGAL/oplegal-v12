@@ -2,29 +2,29 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import SectionTitle from '@/components/SectionTitle';
-import { Server, Globe, Database, Cloud } from 'lucide-react';
+import { ShoppingCart, Headphones, Heart, Building } from 'lucide-react';
 
 const PingUseCases = () => {
   const useCases = [
     {
-      title: "Data Centers Críticos",
-      description: "Monitoramento de servidores, storage e infraestrutura crítica 24/7",
-      icon: <Server className="w-6 h-6" />
+      title: "E-commerce & Vendas",
+      description: "Suporte a vendas, dúvidas sobre produtos, acompanhamento de pedidos e recuperação de carrinho abandonado",
+      icon: <ShoppingCart className="w-6 h-6" />
     },
     {
-      title: "Aplicações Web",
-      description: "Performance, disponibilidade e experiência do usuário em tempo real",
-      icon: <Globe className="w-6 h-6" />
+      title: "Suporte Técnico",
+      description: "Resolução de problemas, tutoriais automatizados, escalação inteligente para especialistas",
+      icon: <Headphones className="w-6 h-6" />
     },
     {
-      title: "Bancos de Dados", 
-      description: "Otimização de queries, backup automático e integridade de dados",
-      icon: <Database className="w-6 h-6" />
+      title: "Saúde & Bem-estar", 
+      description: "Agendamento de consultas, lembretes de medicação, pré-atendimento e triagem automatizada",
+      icon: <Heart className="w-6 h-6" />
     },
     {
-      title: "Infraestrutura Cloud",
-      description: "Multi-cloud monitoring com otimização de custos e performance",
-      icon: <Cloud className="w-6 h-6" />
+      title: "Serviços Corporativos",
+      description: "Atendimento B2B, suporte a parceiros, gestão de leads e relacionamento empresarial",
+      icon: <Building className="w-6 h-6" />
     }
   ];
 
@@ -33,7 +33,7 @@ const PingUseCases = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Casos de Uso Estratégicos"
-          subtitle="Ping monitora todos os componentes críticos da sua infraestrutura tecnológica"
+          subtitle="Ping atende diversos segmentos com soluções personalizadas para cada necessidade de negócio"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

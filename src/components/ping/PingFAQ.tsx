@@ -6,36 +6,36 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 const PingFAQ = () => {
   const faqs = [
     {
-      question: "Como o Ping consegue prever falhas antes que aconteçam?",
-      answer: "O Ping utiliza algoritmos avançados de Machine Learning que analisam padrões históricos, comportamento de sistema e métricas de performance para identificar anomalias que precedem falhas. A IA aprende continuamente com cada evento, refinando suas predições."
+      question: "Como funciona a integração com WhatsApp Business via META?",
+      answer: "O Ping utiliza a API oficial do WhatsApp Business através da certificação META. Isso garante recursos avançados como mensagens em massa, chatbots, integração com CRM e compliance total com as políticas do WhatsApp."
     },
     {
-      question: "Qual é o tempo de setup e configuração inicial?",
-      answer: "O setup básico do Ping leva menos de 1 hora. Nossa IA faz descoberta automática da infraestrutura e configura monitoramento baseado em best practices. Personalizações avançadas podem ser feitas gradualmente conforme necessário."
+      question: "Posso usar meu número de WhatsApp atual no Ping?",
+      answer: "Sim! Migramos seu número atual para WhatsApp Business API sem perder conversas ou contatos. O processo é guiado e leva apenas algumas horas para ser concluído."
     },
     {
-      question: "O Ping funciona com infraestrutura híbrida e multi-cloud?",
-      answer: "Sim! O Ping monitora ambientes on-premise, cloud (AWS, Azure, GCP) e híbridos. Nossa plataforma oferece visibilidade unificada independente da localização dos seus recursos."
+      question: "Como a IA sabe quando transferir para um atendente humano?",
+      answer: "Nossa IA analisa contexto, sentimento e complexidade da conversa. Ela transfere automaticamente quando detecta frustração, pedidos complexos ou quando o cliente solicita explicitamente falar com humano."
     },
     {
-      question: "Como são configurados os alertas para evitar spam?",
-      answer: "O Ping usa IA para filtrar alertas por relevância e contexto. Configuramos thresholds dinâmicos, correlação de eventos e priorização inteligente para garantir que você receba apenas alertas críticos e acionáveis."
+      question: "Qual é a integração com o Blue para dashboard e KPIs?",
+      answer: "O Ping envia automaticamente dados de atendimento para o Blue Analytics, gerando dashboards com métricas como tempo de resposta, satisfação, resolução, conversão e muito mais em tempo real."
     },
     {
-      question: "Quais métricas e KPIs são monitorados?",
-      answer: "Monitoramos CPU, memória, disco, rede, aplicações, banco de dados, disponibilidade, latência, throughput e métricas customizadas. Dashboards podem ser personalizados para diferentes perfis e necessidades."
+      question: "Quais redes sociais posso integrar além do WhatsApp?",
+      answer: "Instagram Direct, Facebook Messenger, Telegram, SMS, e-mail, chat do site e mais. Todos os canais ficam unificados em uma única interface de atendimento."
     },
     {
-      question: "Como funciona a integração com ferramentas existentes?",
-      answer: "O Ping integra com mais de 200 ferramentas via APIs, webhooks e conectores nativos. Suportamos ITSM, ticketing, ChatOps, DevOps e outras soluções já utilizadas na sua organização."
+      question: "Como funciona o aplicativo mobile para agentes?",
+      answer: "Agentes podem atender clientes pelo app nativo iOS/Android, com todas as funcionalidades: histórico completo, IA assistente, transferências e notificações push em tempo real."
     },
     {
-      question: "Qual é o modelo de pricing do Ping?",
-      answer: "Oferecemos planos flexíveis baseados no número de recursos monitorados e funcionalidades. Inclui teste gratuito de 30 dias, suporte técnico e treinamento da equipe. Entre em contato para proposta personalizada."
+      question: "Quanto tempo leva para implementar o Ping?",
+      answer: "Setup básico em 1 hora, treinamento da IA em 24h e operação completa em até 1 semana. Nosso time de sucesso acompanha todo o processo de implementação."
     },
     {
-      question: "Como são tratados os dados de monitoramento e privacidade?",
-      answer: "Todos os dados são criptografados em trânsito e em repouso. Seguimos rigorosamente LGPD, SOC 2 e ISO 27001. Você mantém controle total sobre seus dados com opções de retenção personalizáveis."
+      question: "Como são tratados os dados e privacidade dos clientes?",
+      answer: "Todos os dados são criptografados ponta-a-ponta, armazenados no Brasil seguindo LGPD rigorosamente. Backup automático, histórico completo e exportação de dados disponíveis."
     }
   ];
 
@@ -44,7 +44,7 @@ const PingFAQ = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Perguntas Frequentes"
-          subtitle="Tire suas dúvidas sobre o Ping e como ele pode transformar seu monitoramento"
+          subtitle="Tire suas dúvidas sobre o Ping e como ele pode revolucionar seu atendimento ao cliente"
           center
         />
         

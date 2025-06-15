@@ -3,10 +3,10 @@ import React from 'react';
 
 const PingStats = () => {
   const stats = [
-    { number: "99.99%", label: "Uptime", description: "Disponibilidade garantida" },
-    { number: "90%", label: "Redução", description: "Diminuição de incidentes" },
-    { number: "24/7", label: "Monitoramento", description: "Vigilância contínua" },
-    { number: "5min", label: "Detecção", description: "Tempo médio de identificação" }
+    { number: "85%", label: "Resolução IA", description: "Problemas resolvidos automaticamente" },
+    { number: "3x", label: "Mais Rápido", description: "Tempo médio de resposta" },
+    { number: "24/7", label: "Disponibilidade", description: "Atendimento contínuo" },
+    { number: "95%", label: "Satisfação", description: "NPS médio dos clientes" }
   ];
 
   return (

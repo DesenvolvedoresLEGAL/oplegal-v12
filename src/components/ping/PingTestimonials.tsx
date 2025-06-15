@@ -7,21 +7,21 @@ import { Star } from 'lucide-react';
 const PingTestimonials = () => {
   const testimonials = [
     {
-      name: "Carlos Silva",
-      role: "CTO, TechCorp",
-      content: "Ping revolucionou nosso monitoramento. Detectamos e resolvemos problemas antes mesmo dos usuários perceberem. ROI excepcional.",
+      name: "Mariana Costa",
+      role: "Gerente de Atendimento, ShopTech",
+      content: "Ping revolucionou nosso atendimento. Conseguimos atender 5x mais clientes com a mesma equipe, e a satisfação aumentou 40%.",
       rating: 5
     },
     {
-      name: "Ana Rodrigues",
-      role: "Gerente de Infraestrutura, DataFlow",
-      content: "A IA preditiva do Ping nos ajudou a reduzir downtime em 90%. Ferramenta indispensável para nossa operação crítica.",
+      name: "Pedro Santos",
+      role: "CEO, HealthCare+",
+      content: "A integração com WhatsApp via META foi perfeita. Nossos pacientes adoram o atendimento rápido e humanizado 24h.",
       rating: 5
     },
     {
-      name: "Roberto Lima",
-      role: "Diretor de TI, CloudTech",
-      content: "Dashboard intuitivo e alertas precisos. Ping transformou como gerenciamos nossa infraestrutura multi-cloud.",
+      name: "Ana Oliveira",
+      role: "Diretora de CX, VendaOnline",
+      content: "O dashboard do Blue integrado ao Ping nos dá insights incríveis. Sabemos exatamente como melhorar nosso atendimento.",
       rating: 5
     }
   ];
@@ -31,7 +31,7 @@ const PingTestimonials = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Depoimentos de Clientes"
-          subtitle="Veja como o Ping transformou a gestão de infraestrutura de empresas líderes"
+          subtitle="Veja como o Ping transformou o atendimento ao cliente de empresas líderes em seus segmentos"
           center
         />
         

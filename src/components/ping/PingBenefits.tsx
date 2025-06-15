@@ -1,29 +1,29 @@
 
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
-import { TrendingDown, Clock, DollarSign, Shield } from 'lucide-react';
+import { TrendingUp, Clock, DollarSign, Users } from 'lucide-react';
 
 const PingBenefits = () => {
   const benefits = [
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Prevenção Proativa de Problemas",
-      description: "Detecte e resolva issues antes que afetem usuários finais e operações críticas"
+      icon: <Users className="w-6 h-6" />,
+      title: "Experiência do Cliente 360°",
+      description: "Histórico completo de conversas em todos os canais para atendimento personalizado e contextual"
     },
     {
       icon: <DollarSign className="w-6 h-6" />,
-      title: "Redução de 75% nos Custos Operacionais",
-      description: "Automatização reduz significativamente custos com manutenção e suporte técnico"
+      title: "Redução de 60% nos Custos",
+      description: "Automação inteligente reduz significativamente a necessidade de agentes para tarefas repetitivas"
     },
     {
-      icon: <TrendingDown className="w-6 h-6" />,
-      title: "85% Menos Downtime Não Planejado",
-      description: "Manutenção preditiva evita paradas inesperadas e garante continuidade operacional"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Aumento de 40% na Conversão",
+      description: "Respostas rápidas e personalizadas aumentam taxa de fechamento e satisfação do cliente"
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Resposta 10x Mais Rápida",
-      description: "Alertas inteligentes aceleram identificação e resolução de problemas críticos"
+      title: "Resposta em Menos de 1 Minuto",
+      description: "IA responde instantaneamente 24/7, com transferência inteligente para humanos quando necessário"
     }
   ];
 
@@ -32,7 +32,7 @@ const PingBenefits = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Resultados Comprovados"
-          subtitle="Benefícios reais que transformam a gestão de infraestrutura da sua organização"
+          subtitle="Benefícios reais que transformam o relacionamento com seus clientes e otimizam sua operação"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

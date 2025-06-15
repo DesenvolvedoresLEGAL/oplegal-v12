@@ -6,23 +6,23 @@ const PingProcess = () => {
   const processSteps = [
     {
       number: "01",
-      title: "Descoberta de Ativos",
-      description: "IA mapeia automaticamente toda infraestrutura, aplicações e dependências críticas."
+      title: "Configuração Automática",
+      description: "Conecte WhatsApp Business, redes sociais e canais existentes em poucos cliques com setup guiado."
     },
     {
       number: "02", 
-      title: "Configuração Inteligente",
-      description: "Setup automático de monitoramento baseado em best practices e padrões da indústria."
+      title: "Treinamento da IA",
+      description: "Nossa IA aprende sobre seu negócio, produtos e tom de voz para atendimento personalizado."
     },
     {
       number: "03",
-      title: "Aprendizado de Padrões",
-      description: "Machine Learning analisa comportamento normal e estabelece baselines dinâmicos."
+      title: "Central Unificada",
+      description: "Todos os canais convergem em uma interface única onde IA e agentes trabalham em harmonia."
     },
     {
       number: "04",
-      title: "Monitoramento Proativo",
-      description: "Vigilância contínua com predição de falhas e otimização automática de performance."
+      title: "Insights Contínuos",
+      description: "Dashboard integrado ao Blue fornece KPIs, métricas e insights para otimização constante."
     }
   ];
 
@@ -30,8 +30,8 @@ const PingProcess = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Metodologia Ping"
-          subtitle="Processo estruturado em 4 etapas para monitoramento inteligente de infraestrutura"
+          title="Como Funciona o Ping"
+          subtitle="Processo simplificado em 4 etapas para implementação rápida e resultados imediatos"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
