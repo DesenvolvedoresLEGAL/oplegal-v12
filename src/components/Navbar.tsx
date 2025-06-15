@@ -106,9 +106,9 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/produtos/neurahack" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Neurahack</div>
-                        <p className="text-sm text-muted-foreground pt-1">Plataforma de musculação para o cérebro</p>
+                      <Link to="/produtos/neurafit" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium leading-none">NeuraFit</div>
+                        <p className="text-sm text-muted-foreground pt-1">Musculação para o cérebro com gamificação</p>
                       </Link>
                     </li>
                     <li>

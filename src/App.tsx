@@ -44,6 +44,7 @@ import NeurahackPage from "./pages/produtos/NeurahackPage";
 import PingPage from "./pages/produtos/PingPage";
 import SonixPage from "./pages/produtos/SonixPage";
 import Speedy5GPage from "./pages/produtos/Speedy5GPage";
+import NeuraFitPage from "./pages/produtos/NeuraFitPage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -70,7 +71,7 @@ const App = () => {
             <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
             <Route path="/produtos/humanoid" element={<HumanoidPage />} />
             <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
-            <Route path="/produtos/neurahack" element={<NeurahackPage />} />
+            <Route path="/produtos/neurafit" element={<NeuraFitPage />} />
             <Route path="/produtos/ping" element={<PingPage />} />
             <Route path="/produtos/sonix" element={<SonixPage />} />
             <Route path="/produtos/speedy5g" element={<Speedy5GPage />} />
