@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -34,6 +33,7 @@ import FAQPage from "./pages/universo/FAQPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
 import FitScorePage from "./pages/negocios/ai/FitScorePage";
 import HistoriasPage from "./pages/universo/HistoriasPage";
+import BluePage from "./pages/produtos/BluePage";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -50,6 +50,9 @@ const App = () => {
             
             {/* Smart Events */}
             <Route path="/smart-events" element={<SmartEventsPage />} />
+            
+            {/* Produtos section */}
+            <Route path="/produtos/blue" element={<BluePage />} />
             
             {/* Somos LEGAL section - Redirect old route to new consolidated page */}
             <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
