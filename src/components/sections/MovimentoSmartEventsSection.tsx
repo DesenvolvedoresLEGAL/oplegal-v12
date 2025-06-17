@@ -20,7 +20,7 @@ const MovimentoSmartEventsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="text-center">
-            <div className="bg-legal-green/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-legal-cyan/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Users className="w-8 h-8 text-legal" />
             </div>
             <h3 className="text-xl font-semibold text-legal mb-2">+3.000 Eventos</h3>
@@ -28,7 +28,7 @@ const MovimentoSmartEventsSection = () => {
           </div>
 
           <div className="text-center">
-            <div className="bg-legal-green/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-legal-cyan/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="w-8 h-8 text-legal" />
             </div>
             <h3 className="text-xl font-semibold text-legal mb-2">22% ROI</h3>
@@ -36,7 +36,7 @@ const MovimentoSmartEventsSection = () => {
           </div>
 
           <div className="text-center">
-            <div className="bg-legal-green/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-legal-cyan/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Globe className="w-8 h-8 text-legal" />
             </div>
             <h3 className="text-xl font-semibold text-legal mb-2">50+ Cidades</h3>
@@ -47,7 +47,7 @@ const MovimentoSmartEventsSection = () => {
         <div className="text-center">
           <Button 
             asChild 
-            className="bg-legal hover:bg-legal/90 text-white px-8 py-6 text-lg h-auto border-2 border-transparent hover:border-legal-cyan focus:border-legal-cyan focus:ring-4 focus:ring-legal-cyan/20"
+            className="bg-legal-purple hover:bg-legal text-white px-8 py-6 text-lg h-auto border-2 border-transparent hover:border-legal-cyan focus:border-legal-cyan focus:ring-4 focus:ring-legal-cyan/20"
           >
             <Link to="/contato" aria-label="Participar do movimento Smart Events - Solicitar demonstração">
               Participar Agora

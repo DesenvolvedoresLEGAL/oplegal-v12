@@ -49,7 +49,7 @@ const CallToAction = ({
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button
             asChild
-            className="bg-legal-green hover:bg-legal-green/90 text-white px-8 py-6 text-lg h-auto transition-all duration-300"
+            className="bg-legal-purple hover:bg-legal text-white px-8 py-6 text-lg h-auto transition-all duration-300"
           >
             <Link to={buttonLink}>{buttonText}</Link>
           </Button>

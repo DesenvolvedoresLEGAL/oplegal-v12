@@ -124,7 +124,7 @@
   background: linear-gradient(135deg, #020cbc 0%, #4d2bfb 50%, #03f9ff 100%);
 }
 
-/* Enhanced contrast for accessibility */
+/* Enhanced contrast for accessibility - cores oficiais LEGAL */
 .btn-primary {
   @apply bg-legal text-white px-6 py-3 rounded-md font-medium transition-all hover:shadow-lg;
   background-color: #020cbc;
@@ -133,12 +133,12 @@
 }
 
 .btn-primary:hover {
-  background-color: #001a7a;
+  background-color: #4d2bfb;
   border-color: #03f9ff;
 }
 
 .btn-primary:focus {
-  background-color: #001a7a;
+  background-color: #4d2bfb;
   border-color: #03f9ff;
   box-shadow: 0 0 0 3px rgba(3, 249, 255, 0.3);
 }

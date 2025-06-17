@@ -25,11 +25,10 @@ const config: Config = {
         'grotesk': ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
       colors: {
-        // LEGAL Brand Colors with improved contrast
-        'legal': '#020cbc',           // Principal - darker for better contrast
+        // LEGAL Brand Colors - cores oficiais
+        'legal': '#020cbc',           // Principal
         'legal-purple': '#4d2bfb',    // Secundária
         'legal-cyan': '#03f9ff',      // Terciária
-        'legal-green': '#00ff7f',     // Verde para CTAs com alto contraste
         'legal-black': '#0a0a0a',     // Preto para backgrounds
         'legal-gray': '#f8fafc',      // Cinza claro para seções
         
