@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -56,12 +57,6 @@ const Navbar = () => {
                 <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green px-2">Produtos</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[500px] gap-3 p-4 md:grid-cols-2">
-                    <li>
-                      <Link to="/produtos/blue" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Blue</div>
-                        <p className="text-sm text-muted-foreground pt-1">Plataforma de BI com AI</p>
-                      </Link>
-                    </li>
                     <li>
                       <Link to="/produtos/blue6" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Blue6</div>

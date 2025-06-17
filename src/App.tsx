@@ -34,7 +34,6 @@ import ImprensaPage from "./pages/universo/ImprensaPage";
 import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
-import BluePage from "./pages/produtos/BluePage";
 import Blue6Page from "./pages/produtos/Blue6Page";
 import BrilixPage from "./pages/produtos/BrilixPage";
 import EventrixProdutoPage from "./pages/produtos/EventrixPage";
@@ -65,7 +64,6 @@ const App = () => {
             <Route path="/smart-events" element={<SmartEventsPage />} />
             
             {/* Produtos section */}
-            <Route path="/produtos/blue" element={<BluePage />} />
             <Route path="/produtos/blue6" element={<Blue6Page />} />
             <Route path="/produtos/brilix" element={<BrilixPage />} />
             <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
