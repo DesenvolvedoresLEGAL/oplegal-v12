@@ -20,6 +20,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
+        'haas': ['Neue Haas Unica', 'Inter', 'system-ui', 'sans-serif'],
         'inter': ['Inter', 'system-ui', 'sans-serif'],
         'grotesk': ['Space Grotesk', 'system-ui', 'sans-serif'],
       },

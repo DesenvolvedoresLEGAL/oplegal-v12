@@ -5,7 +5,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import WhyLegalSection from "@/components/sections/WhyLegalSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import SuccessStoriesSection from "@/components/sections/SuccessStoriesSection";
-import FAQSection from "@/components/sections/FAQSection";
 import CallToAction from "@/components/CallToAction";
 import ChatbotButton from "@/components/ChatbotButton";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
@@ -29,9 +28,6 @@ const HomePage = () => {
         
         {/* Casos de Sucesso - H2 */}
         <SuccessStoriesSection />
-        
-        {/* FAQ - H2 */}
-        <FAQSection />
         
         {/* CTA Final */}
         <CallToAction
