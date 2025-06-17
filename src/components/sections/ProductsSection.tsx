@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -14,16 +13,24 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
   const products = [
     {
       title: "AERO",
-      description: "Soluções aéreas com drones para filmagem, fotografia, delivery e limpeza",
+      description: "Soluções aéreas incríveis com Drones",
       icon: <svg className="w-8 h-8" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path d="M12 2L8 6h8l-4-4z"/>
         <circle cx="12" cy="12" r="3"/>
-        <path d="M12 15v6"/>
-        <path d="M8 19l8-8"/>
-        <path d="M16 19l-8-8"/>
+        <circle cx="12" cy="2" r="1"/>
+        <circle cx="12" cy="22" r="1"/>
+        <circle cx="2" cy="12" r="1"/>
+        <circle cx="22" cy="12" r="1"/>
+        <path d="M8.5 8.5L6 6"/>
+        <path d="M15.5 8.5L18 6"/>
+        <path d="M8.5 15.5L6 18"/>
+        <path d="M15.5 15.5L18 18"/>
+        <line x1="12" y1="6" x2="12" y2="10"/>
+        <line x1="12" y1="14" x2="12" y2="18"/>
+        <line x1="6" y1="12" x2="10" y2="12"/>
+        <line x1="14" y1="12" x2="18" y2="12"/>
       </svg>,
       link: "/negocios/aero",
-      features: ["Filmagem profissional", "Fotografia aérea", "Delivery inteligente", "Limpeza de estruturas"]
+      features: ["Foto/Filmagem", "Delivery inteligente", "Limpeza de estruturas"]
     },
     {
       title: "AI",
