@@ -14,7 +14,7 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
   const products = [
     {
       title: "AERO",
-      description: "Conectividade premium para eventos sem limites",
+      description: "Soluções aéreas com drones para filmagem, fotografia, delivery e limpeza",
       icon: <svg className="w-8 h-8" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" stroke="currentColor">
         <path d="M12 2L8 6h8l-4-4z"/>
         <circle cx="12" cy="12" r="3"/>
@@ -23,21 +23,21 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
         <path d="M16 19l-8-8"/>
       </svg>,
       link: "/negocios/aero",
-      features: ["WiFi enterprise", "Streaming 4K", "Cobertura total"]
+      features: ["Filmagem profissional", "Fotografia aérea", "Delivery inteligente", "Limpeza de estruturas"]
     },
     {
       title: "AI",
       description: "Inteligência artificial que potencializa resultados",
       icon: <Brain className="w-8 h-8" strokeWidth={1.5} />,
       link: "/negocios/ai",
-      features: ["Automação", "Analytics", "Personalização"]
+      features: ["Eficiência", "Analytics", "Personalização"]
     },
     {
       title: "ALUGUE",
-      description: "Equipamentos e tecnologia sob demanda",
+      description: "Conectividade e tecnologia sob demanda",
       icon: <Wifi className="w-8 h-8" strokeWidth={1.5} />,
       link: "/negocios/alugue",
-      features: ["Hardware", "Suporte 24h", "Logística"]
+      features: ["Internet 5G", "Hardwares", "Suporte 24h"]
     },
     {
       title: "ASSINATURA",
