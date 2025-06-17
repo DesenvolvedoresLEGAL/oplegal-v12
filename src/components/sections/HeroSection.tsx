@@ -44,7 +44,7 @@ const HeroSection = () => {
           
           <p className={`text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto transition-all duration-1000 delay-600 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
             Da gestão inteligente até a conectividade super rápida: 
-            a LEGAL cria eventos com ROI real e experiência superior.
+            a LEGAL ajuda a criar eventos surpreendentes e com experiência superior.
           </p>
           
           <div className={`flex flex-col sm:flex-row justify-center gap-4 transition-all duration-1000 delay-900 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
