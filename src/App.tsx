@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -46,6 +45,7 @@ import PingPage from "./pages/produtos/PingPage";
 import SonixPage from "./pages/produtos/SonixPage";
 import Speedy5GPage from "./pages/produtos/Speedy5GPage";
 import NeuraFitPage from "./pages/produtos/NeuraFitPage";
+import SkipLink from "./components/SkipLink";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -56,73 +56,76 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <SkipLink />
           <Navbar />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            
-            {/* Smart Events */}
-            <Route path="/smart-events" element={<SmartEventsPage />} />
-            
-            {/* Produtos section */}
-            <Route path="/produtos/blue6" element={<Blue6Page />} />
-            <Route path="/produtos/brilix" element={<BrilixPage />} />
-            <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
-            <Route path="/produtos/facepass" element={<FacePassProdutoPage />} />
-            <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
-            <Route path="/produtos/humanoid" element={<HumanoidPage />} />
-            <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
-            <Route path="/produtos/neurafit" element={<NeuraFitPage />} />
-            <Route path="/produtos/nuvyo" element={<NuvyoPage />} />
-            <Route path="/produtos/ping" element={<PingPage />} />
-            <Route path="/produtos/sonix" element={<SonixPage />} />
-            <Route path="/produtos/speedy5g" element={<Speedy5GPage />} />
-            
-            {/* Somos LEGAL section - Redirect old route to new consolidated page */}
-            <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
-            <Route path="/missao-visao-valores" element={<MissaoVisaoValoresPage />} />
-            <Route path="/time" element={<TimePage />} />
-            <Route path="/vagas" element={<VagasPage />} />
-            
-            {/* Negócios section */}
-            <Route path="/negocios" element={<NegociosPage />} />
-            <Route path="/negocios/aero" element={<AeroPage />} />
-            <Route path="/negocios/aero/wash" element={<AeroWashPage />} />
-            <Route path="/negocios/aero/delivery" element={<AeroDeliveryPage />} />
-            <Route path="/negocios/ai" element={<AIPage />} />
-            <Route path="/negocios/ai/eventrix" element={<EventrixPage />} />
-            <Route path="/negocios/ai/facepass" element={<FacePassPage />} />
-            <Route path="/negocios/ai/linkai" element={<LinkAIPage />} />
-            <Route path="/negocios/ai/fitscore" element={<FitScorePage />} />
-            <Route path="/negocios/alugue" element={<AluguelPage />} />
-            <Route path="/negocios/assinatura" element={<AssinaturaPage />} />
-            
-            {/* Universo section */}
-            <Route path="/universo" element={<UniversoPage />} />
-            <Route path="/universo/tectec" element={<TecTecPage />} />
-            <Route path="/universo/tectec/:id" element={<PlaceholderPage />} />
-            <Route path="/universo/historias" element={<HistoriasPage />} />
-            <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
-            <Route path="/universo/bits" element={<BitsPage />} />
-            <Route path="/universo/imprensa" element={<ImprensaPage />} />
-            <Route path="/universo/status" element={<StatusPage />} />
-            <Route path="/universo/faq" element={<FAQPage />} />
-            
-            {/* Admin section */}
-            <Route path="/admin/tectec" element={<TecTecAdminPage />} />
-            
-            {/* Contact */}
-            <Route path="/contato" element={<ContatoPage />} />
-            
-            {/* Old routes for backward compatibility */}
-            <Route path="/produtos" element={<PlaceholderPage />} />
-            <Route path="/implantacao" element={<PlaceholderPage />} />
-            <Route path="/beneficios" element={<PlaceholderPage />} />
-            <Route path="/ofertas" element={<PlaceholderPage />} />
-            <Route path="/certificacao" element={<PlaceholderPage />} />
-            <Route path="/conteudo" element={<PlaceholderPage />} />
-            
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <main id="main-content" role="main" tabIndex={-1}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              
+              {/* Smart Events */}
+              <Route path="/smart-events" element={<SmartEventsPage />} />
+              
+              {/* Produtos section */}
+              <Route path="/produtos/blue6" element={<Blue6Page />} />
+              <Route path="/produtos/brilix" element={<BrilixPage />} />
+              <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
+              <Route path="/produtos/facepass" element={<FacePassProdutoPage />} />
+              <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
+              <Route path="/produtos/humanoid" element={<HumanoidPage />} />
+              <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
+              <Route path="/produtos/neurafit" element={<NeuraFitPage />} />
+              <Route path="/produtos/nuvyo" element={<NuvyoPage />} />
+              <Route path="/produtos/ping" element={<PingPage />} />
+              <Route path="/produtos/sonix" element={<SonixPage />} />
+              <Route path="/produtos/speedy5g" element={<Speedy5GPage />} />
+              
+              {/* Somos LEGAL section - Redirect old route to new consolidated page */}
+              <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
+              <Route path="/missao-visao-valores" element={<MissaoVisaoValoresPage />} />
+              <Route path="/time" element={<TimePage />} />
+              <Route path="/vagas" element={<VagasPage />} />
+              
+              {/* Negócios section */}
+              <Route path="/negocios" element={<NegociosPage />} />
+              <Route path="/negocios/aero" element={<AeroPage />} />
+              <Route path="/negocios/aero/wash" element={<AeroWashPage />} />
+              <Route path="/negocios/aero/delivery" element={<AeroDeliveryPage />} />
+              <Route path="/negocios/ai" element={<AIPage />} />
+              <Route path="/negocios/ai/eventrix" element={<EventrixPage />} />
+              <Route path="/negocios/ai/facepass" element={<FacePassPage />} />
+              <Route path="/negocios/ai/linkai" element={<LinkAIPage />} />
+              <Route path="/negocios/ai/fitscore" element={<FitScorePage />} />
+              <Route path="/negocios/alugue" element={<AluguelPage />} />
+              <Route path="/negocios/assinatura" element={<AssinaturaPage />} />
+              
+              {/* Universo section */}
+              <Route path="/universo" element={<UniversoPage />} />
+              <Route path="/universo/tectec" element={<TecTecPage />} />
+              <Route path="/universo/tectec/:id" element={<PlaceholderPage />} />
+              <Route path="/universo/historias" element={<HistoriasPage />} />
+              <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
+              <Route path="/universo/bits" element={<BitsPage />} />
+              <Route path="/universo/imprensa" element={<ImprensaPage />} />
+              <Route path="/universo/status" element={<StatusPage />} />
+              <Route path="/universo/faq" element={<FAQPage />} />
+              
+              {/* Admin section */}
+              <Route path="/admin/tectec" element={<TecTecAdminPage />} />
+              
+              {/* Contact */}
+              <Route path="/contato" element={<ContatoPage />} />
+              
+              {/* Old routes for backward compatibility */}
+              <Route path="/produtos" element={<PlaceholderPage />} />
+              <Route path="/implantacao" element={<PlaceholderPage />} />
+              <Route path="/beneficios" element={<PlaceholderPage />} />
+              <Route path="/ofertas" element={<PlaceholderPage />} />
+              <Route path="/certificacao" element={<PlaceholderPage />} />
+              <Route path="/conteudo" element={<PlaceholderPage />} />
+              
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
           <Footer />
         </BrowserRouter>
       </TooltipProvider>

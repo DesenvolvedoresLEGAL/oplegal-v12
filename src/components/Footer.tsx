@@ -1,84 +1,118 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Instagram, Linkedin, Twitter, ArrowUp } from "lucide-react";
+import { Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
-  return <footer className="bg-legal text-white">
-      <div className="container mx-auto px-4 py-16">
+  return (
+    <footer className="bg-legal-black text-white py-16">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Column 1 - About */}
+          {/* Logo e Descrição */}
           <div>
-            <h3 className="text-xl font-bold mb-4">LEGAL</h3>
-            <p className="text-gray-300 mb-4">A maior e melhor TechCo do Brasil, inventora do conceito Smart Events™. Entregamos o novo padrão para eventos inteligentes, conectados e lucrativos.</p>
-            <button onClick={scrollToTop} className="flex items-center text-legal-green hover:text-white transition-colors">
-              <span className="mr-1">Voltar ao topo</span>
-              <ArrowUp size={16} />
-            </button>
-          </div>
-
-          {/* Column 2 - Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Links Rápidos</h3>
-            <ul className="space-y-2">
-              <li><Link to="/smart-events" className="text-gray-300 hover:text-legal-green transition-colors">Smart Events™</Link></li>
-              <li><Link to="/produtos" className="text-gray-300 hover:text-legal-green transition-colors">Produtos</Link></li>
-              <li><Link to="/implantacao" className="text-gray-300 hover:text-legal-green transition-colors">Implantação</Link></li>
-              <li><Link to="/beneficios" className="text-gray-300 hover:text-legal-green transition-colors">Benefícios</Link></li>
-              <li><Link to="/certificacao" className="text-gray-300 hover:text-legal-green transition-colors">Certificação</Link></li>
-            </ul>
-          </div>
-
-          {/* Column 3 - Resources */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Recursos</h3>
-            <ul className="space-y-2">
-              <li><Link to="/conteudo" className="text-gray-300 hover:text-legal-green transition-colors">Blog TecTec</Link></li>
-              <li><Link to="/conteudo" className="text-gray-300 hover:text-legal-green transition-colors">Whitepaper</Link></li>
-              <li><Link to="/conteudo" className="text-gray-300 hover:text-legal-green transition-colors">Casos de Sucesso</Link></li>
-              <li><Link to="/conteudo" className="text-gray-300 hover:text-legal-green transition-colors">FAQ</Link></li>
-              <li><Link to="/conteudo" className="text-gray-300 hover:text-legal-green transition-colors">Programa Bits</Link></li>
-            </ul>
-          </div>
-
-          {/* Column 4 - Contact */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Contato</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin size={18} className="mr-2 mt-1 text-legal-green flex-shrink-0" />
-                <span className="text-gray-300">Rua Salvador Simões, 801 - 13º Andar - Cj. 1309/1310 - Alto do Ipiranga - São Paulo/SP - CEP: 04276-000</span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={18} className="mr-2 text-legal-green flex-shrink-0" />
-                <span className="text-gray-300">(11) 5194-2223</span>
-              </li>
-              <li className="flex items-center">
-                <Mail size={18} className="mr-2 text-legal-green flex-shrink-0" />
-                <a href="mailto:contato@legal.com.br" className="text-gray-300 hover:text-legal-green transition-colors">sos@operadora.legal</a>
-              </li>
-            </ul>
-            <div className="mt-4 flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors">
+            <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
+            <p className="text-gray-300 mb-6">
+              A maior TechCo do Brasil e criadora do Smart Events™. 
+              Conectamos 1 milhão de pessoas, negócios e coisas até 2030.
+            </p>
+            <div className="flex space-x-4">
+              <a 
+                href="https://instagram.com/legal_oficial" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-legal-green transition-colors p-2"
+                aria-label="Siga a LEGAL no Instagram"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors">
+              <a 
+                href="https://linkedin.com/company/legal-brasil" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-legal-green transition-colors p-2"
+                aria-label="Conecte-se com a LEGAL no LinkedIn"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors">
+              <a 
+                href="https://twitter.com/legal_tech" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-legal-green transition-colors p-2"
+                aria-label="Siga a LEGAL no Twitter"
+              >
                 <Twitter size={20} />
               </a>
             </div>
           </div>
+
+          {/* Smart Events */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-legal-green">Smart Events™</h4>
+            <ul className="space-y-2">
+              <li><Link to="/smart-events" className="text-gray-300 hover:text-white transition-colors">O que é Smart Events</Link></li>
+              <li><Link to="/smart-events#pilares" className="text-gray-300 hover:text-white transition-colors">Pilares Tecnológicos</Link></li>
+              <li><Link to="/smart-events#beneficios" className="text-gray-300 hover:text-white transition-colors">Benefícios</Link></li>
+              <li><Link to="/contato?demo=smart-events" className="text-gray-300 hover:text-white transition-colors">Solicitar Demo</Link></li>
+            </ul>
+          </div>
+
+          {/* Produtos */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-legal-green">Produtos</h4>
+            <ul className="space-y-2">
+              <li><Link to="/produtos/facepass" className="text-gray-300 hover:text-white transition-colors">FacePass</Link></li>
+              <li><Link to="/produtos/linkai" className="text-gray-300 hover:text-white transition-colors">LinkAI</Link></li>
+              <li><Link to="/produtos/eventrix" className="text-gray-300 hover:text-white transition-colors">Eventrix</Link></li>
+              <li><Link to="/produtos/speedy5g" className="text-gray-300 hover:text-white transition-colors">Speedy5G</Link></li>
+            </ul>
+          </div>
+
+          {/* Contato */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-legal-green">Contato</h4>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Mail size={16} className="text-legal-green mr-2 flex-shrink-0" />
+                <a href="mailto:contato@operadora.legal" className="text-gray-300 hover:text-white transition-colors">
+                  contato@operadora.legal
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Phone size={16} className="text-legal-green mr-2 flex-shrink-0" />
+                <a href="tel:+551140042000" className="text-gray-300 hover:text-white transition-colors">
+                  (11) 4004-2000
+                </a>
+              </div>
+              <div className="flex items-start">
+                <MapPin size={16} className="text-legal-green mr-2 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">
+                  São Paulo, SP<br />
+                  Brasil
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} LEGAL. Todos os direitos reservados. Smart Events™ é uma marca registrada da LEGAL.</p>
+
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © 2024 LEGAL. Todos os direitos reservados.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/universo/faq" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Política de Privacidade
+              </Link>
+              <Link to="/universo/faq" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Termos de Uso
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

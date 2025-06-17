@@ -96,43 +96,91 @@
     @apply will-change-auto;
   }
 
-  .aspect-ratio-container {
-    position: relative;
-    width: 100%;
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid #03f9ff;
+    outline-offset: 2px;
   }
 
-  .aspect-ratio-container::before {
-    content: '';
-    display: block;
-    padding-top: 56.25%;
-  }
-
-  .aspect-ratio-container > * {
+  /* Skip to main content for screen readers */
+  .skip-link {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+  }
+
+  .skip-link:focus {
+    top: 6px;
   }
 }
 
-/* Critical CSS for above-the-fold content */
+/* Critical CSS for above-the-fold content - optimized and minified */
 .bg-gradient-legal {
   background: linear-gradient(135deg, #020cbc 0%, #4d2bfb 50%, #03f9ff 100%);
 }
 
-.card-hover {
-  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-  transform: translateZ(0);
-  backface-visibility: hidden;
+/* Enhanced contrast for accessibility */
+.btn-primary {
+  @apply bg-legal text-white px-6 py-3 rounded-md font-medium transition-all hover:shadow-lg;
+  background-color: #020cbc;
+  color: #ffffff;
+  border: 2px solid transparent;
 }
 
-.btn-primary {
-  @apply bg-legal text-white px-6 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:bg-opacity-90;
+.btn-primary:hover {
+  background-color: #001a7a;
+  border-color: #03f9ff;
+}
+
+.btn-primary:focus {
+  background-color: #001a7a;
+  border-color: #03f9ff;
+  box-shadow: 0 0 0 3px rgba(3, 249, 255, 0.3);
 }
 
 .btn-outline {
-  @apply border border-legal text-legal px-6 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:bg-legal hover:text-white;
+  @apply border-2 border-legal text-legal px-6 py-3 rounded-md font-medium transition-all hover:shadow-lg;
+  border-color: #020cbc;
+  color: #020cbc;
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: #020cbc;
+  color: #ffffff;
+}
+
+.btn-outline:focus {
+  background-color: #020cbc;
+  color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(2, 12, 188, 0.3);
+}
+
+/* High contrast link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid #03f9ff;
+  outline-offset: 2px;
+}
+
+/* Optimized card hover effects */
+.card-hover {
+  @apply transition-transform duration-300 hover:shadow-lg hover:-translate-y-1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Performance optimizations */
@@ -144,7 +192,7 @@
   will-change: auto;
 }
 
-/* Lazy loading placeholder with optimized animation */
+/* Optimized loading animation */
 .image-placeholder {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
@@ -152,10 +200,24 @@
 }
 
 @keyframes loading {
-  0% {
-    background-position: 200% 0;
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 768px) {
+  .text-responsive {
+    font-size: clamp(1rem, 4vw, 1.5rem);
   }
-  100% {
-    background-position: -200% 0;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
