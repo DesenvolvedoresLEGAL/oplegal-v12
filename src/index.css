@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://use.typekit.net/mey3npt.css'); /* Added Neue Haas Unica font via Adobe Fonts */
 
@@ -9,34 +10,24 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-
     --radius: 0.5rem;
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -50,28 +41,20 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -97,7 +80,6 @@
   
   body, html {
     @apply font-unica overflow-x-hidden scroll-smooth;
-    /* Otimizações para Core Web Vitals */
     text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -105,18 +87,15 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-unica font-bold;
-    /* Otimização para layout shift */
     font-display: swap;
   }
 
-  /* Otimizações para imagens */
   img {
     max-width: 100%;
     height: auto;
     @apply will-change-auto;
   }
 
-  /* Prevenção de layout shift */
   .aspect-ratio-container {
     position: relative;
     width: 100%;
@@ -125,7 +104,7 @@
   .aspect-ratio-container::before {
     content: '';
     display: block;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 56.25%;
   }
 
   .aspect-ratio-container > * {
@@ -137,57 +116,23 @@
   }
 }
 
-/* Updated LEGAL gradient with new colors */
+/* Critical CSS for above-the-fold content */
 .bg-gradient-legal {
   background: linear-gradient(135deg, #020cbc 0%, #4d2bfb 50%, #03f9ff 100%);
 }
 
 .card-hover {
   @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-  /* Otimização GPU */
   transform: translateZ(0);
   backface-visibility: hidden;
-}
-
-.reveal-on-scroll {
-  @apply opacity-0;
-}
-
-.reveal-on-scroll.visible {
-  @apply animate-fade-in;
-}
-
-.card-pillar {
-  @apply rounded-xl overflow-hidden bg-white shadow-md p-6 card-hover border border-transparent hover:border-legal-cyan;
 }
 
 .btn-primary {
   @apply bg-legal text-white px-6 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:bg-opacity-90;
 }
 
-.btn-secondary {
-  @apply bg-legal-purple text-white px-6 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:bg-opacity-90;
-}
-
 .btn-outline {
   @apply border border-legal text-legal px-6 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:bg-legal hover:text-white;
-}
-
-.styled-list li {
-  @apply flex items-start mb-2;
-}
-
-.styled-list li::before {
-  content: "";
-  @apply block w-1.5 h-1.5 rounded-full bg-legal-cyan mt-2 mr-2 flex-shrink-0;
-}
-
-.section-title {
-  @apply text-4xl md:text-5xl font-bold mb-6 text-legal;
-}
-
-.section-subtitle {
-  @apply text-xl text-gray-700 mb-12 max-w-3xl;
 }
 
 /* Performance optimizations */
@@ -199,7 +144,7 @@
   will-change: auto;
 }
 
-/* Lazy loading placeholder */
+/* Lazy loading placeholder with optimized animation */
 .image-placeholder {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
