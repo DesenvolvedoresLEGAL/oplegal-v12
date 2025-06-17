@@ -39,12 +39,12 @@ const HeroSection = () => {
               <span className="absolute bottom-1 left-0 w-full h-2 bg-legal-green opacity-30"></span>
             </span>{" "}
             <br className="hidden md:block" />
-            conectados e rentáveis.
+            conectados e eficientes.
           </h1>
           
           <p className={`text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto transition-all duration-1000 delay-600 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
-            Da conectividade invisível ao drone que entrega o café: 
-            a LEGAL cria eventos com ROI real e zero atrito.
+            Da gestão inteligente até a conectividade super rápida: 
+            a LEGAL cria eventos com ROI real e experiência superior.
           </p>
           
           <div className={`flex flex-col sm:flex-row justify-center gap-4 transition-all duration-1000 delay-900 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
