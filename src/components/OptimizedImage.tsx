@@ -31,17 +31,23 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       const baseUrl = originalSrc.split('?')[0];
       const params = new URLSearchParams();
       
-      if (width) params.set('w', width.toString());
-      if (height) params.set('h', height.toString());
+      // Use smaller, optimized dimensions
+      if (width && height) {
+        params.set('w', Math.min(width, 800).toString());
+        params.set('h', Math.min(height, 600).toString());
+      } else {
+        params.set('w', '800');
+        params.set('h', '600');
+      }
       params.set('fit', 'crop');
       params.set('fm', 'webp');
-      params.set('q', '80');
+      params.set('q', '75'); // Reduced quality for better performance
+      params.set('auto', 'format');
       
       return `${baseUrl}?${params.toString()}`;
     }
     
-    if (originalSrc.includes('.webp')) return originalSrc;
-    return originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    return originalSrc;
   };
 
   const handleLoad = () => {
@@ -49,8 +55,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   const handleError = () => {
+    console.warn(`Failed to load image: ${src}`);
     setImageError(true);
   };
+
+  // Don't render if there's an error and no fallback
+  if (imageError && !fallback) {
+    return null;
+  }
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
