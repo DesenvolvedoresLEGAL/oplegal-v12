@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -42,10 +41,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
-          <div className="text-2xl font-bold text-legal">
-            <span className="font-space">LEGAL</span>
-            <span className="text-legal-green text-sm align-super ml-1">v11</span>
-          </div>
+          <img 
+            src="/lovable-uploads/0de2869f-f080-4ad5-9ba8-575aea2f9695.png" 
+            alt="LEGAL" 
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation - Centered */}
@@ -54,7 +54,7 @@ const Navbar = () => {
             <NavigationMenuList className="gap-0">
               {/* Produtos */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green px-2">Produtos</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Produtos</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[500px] gap-3 p-4 md:grid-cols-2">
                     <li>
@@ -135,7 +135,7 @@ const Navbar = () => {
 
               {/* Negócios */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green px-2">Negócios</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Negócios</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
                     <li>
@@ -168,14 +168,14 @@ const Navbar = () => {
 
               {/* SmartEvents */}
               <NavigationMenuItem>
-                <Link to="/smart-events" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-green px-2")}>
+                <Link to="/smart-events" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-purple px-2")}>
                   SmartEvents™
                 </Link>
               </NavigationMenuItem>
 
               {/* Somos LEGAL */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green px-2">Somos LEGAL</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Somos LEGAL</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[400px]">
                     <li className="row-span-3">
@@ -208,7 +208,7 @@ const Navbar = () => {
 
               {/* Universo */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-green px-2">Universo</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Universo</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4">
                     <li>
@@ -253,7 +253,7 @@ const Navbar = () => {
 
               {/* Contato */}
               <NavigationMenuItem>
-                <Link to="/contato" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-green px-2")}>
+                <Link to="/contato" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-purple px-2")}>
                   Contato
                 </Link>
               </NavigationMenuItem>
