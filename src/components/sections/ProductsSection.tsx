@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -34,21 +35,21 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
     },
     {
       title: "AI",
-      description: "Inteligência artificial que potencializa resultados",
+      description: "Ganhe eficiência e escalabilidade",
       icon: <Brain className="w-8 h-8" strokeWidth={1.5} />,
       link: "/negocios/ai",
-      features: ["Eficiência", "Analytics", "Personalização"]
+      features: ["Eventrix", "Humanoid", "LinkAI"]
     },
     {
       title: "ALUGUE",
-      description: "Conectividade e tecnologia sob demanda",
+      description: "Internet e tech sob demanda",
       icon: <Wifi className="w-8 h-8" strokeWidth={1.5} />,
       link: "/negocios/alugue",
       features: ["Internet 5G", "Hardwares", "Suporte 24h"]
     },
     {
       title: "ASSINATURA",
-      description: "Conectividade contínua para seu negócio",
+      description: "Conectividade para seu negócio",
       icon: <svg className="w-8 h-8" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" stroke="currentColor">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
         <line x1="8" y1="21" x2="16" y2="21"/>
