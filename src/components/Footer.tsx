@@ -1,46 +1,22 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-legal-black text-white py-16">
+  return <footer className="bg-legal-black text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo e Descrição */}
           <div>
             <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
-            <p className="text-gray-300 mb-6">
-              A maior TechCo do Brasil e criadora do Smart Events™. 
-              Conectamos 1 milhão de pessoas, negócios e coisas até 2030.
-            </p>
+            <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Vamos conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
             <div className="flex space-x-4">
-              <a 
-                href="https://instagram.com/legal_oficial" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-300 hover:text-legal-green transition-colors p-2"
-                aria-label="Siga a LEGAL no Instagram"
-              >
+              <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Instagram">
                 <Instagram size={20} />
               </a>
-              <a 
-                href="https://linkedin.com/company/legal-brasil" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-300 hover:text-legal-green transition-colors p-2"
-                aria-label="Conecte-se com a LEGAL no LinkedIn"
-              >
+              <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Conecte-se com a LEGAL no LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a 
-                href="https://twitter.com/legal_tech" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-300 hover:text-legal-green transition-colors p-2"
-                aria-label="Siga a LEGAL no Twitter"
-              >
+              <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Twitter">
                 <Twitter size={20} />
               </a>
             </div>
@@ -74,15 +50,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail size={16} className="text-legal-green mr-2 flex-shrink-0" />
-                <a href="mailto:contato@operadora.legal" className="text-gray-300 hover:text-white transition-colors">
-                  contato@operadora.legal
-                </a>
+                <a href="mailto:contato@operadora.legal" className="text-gray-300 hover:text-white transition-colors">sos@operadora.legal</a>
               </div>
               <div className="flex items-center">
                 <Phone size={16} className="text-legal-green mr-2 flex-shrink-0" />
-                <a href="tel:+551140042000" className="text-gray-300 hover:text-white transition-colors">
-                  (11) 4004-2000
-                </a>
+                <a href="tel:+551140042000" className="text-gray-300 hover:text-white transition-colors">(11) 5194-2223</a>
               </div>
               <div className="flex items-start">
                 <MapPin size={16} className="text-legal-green mr-2 flex-shrink-0 mt-1" />
@@ -97,9 +69,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 LEGAL. Todos os direitos reservados.
-            </p>
+            <p className="text-gray-400 text-sm">© 2025 LEGAL. Todos os direitos reservados.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/universo/faq" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Política de Privacidade
@@ -111,8 +81,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
