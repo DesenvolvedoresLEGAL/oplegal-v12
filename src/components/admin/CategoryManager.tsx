@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { 
   Plus, 
@@ -15,12 +16,12 @@ import { Badge } from '@/components/ui/badge';
 // Mock data - será substituído por dados reais
 const initialCategories = [
   { id: 1, name: 'Drones', slug: 'drones', count: 5, color: '#020cbc' },
-  { id: 2, name: 'Empreendedorismo', slug: 'empreendedorismo', count: 8, color: '#4d2bfb' },
+  { id: 2, name: 'Educação', slug: 'educacao', count: 3, color: '#4d2bfb' },
   { id: 3, name: 'Eventos', slug: 'eventos', count: 12, color: '#03f9ff' },
   { id: 4, name: 'Inovação', slug: 'inovacao', count: 6, color: '#020cbc' },
-  { id: 5, name: 'Inteligência Artificial', slug: 'inteligencia-artificial', count: 9, color: '#4d2bfb' },
-  { id: 6, name: 'Internet', slug: 'internet', count: 4, color: '#03f9ff' },
-  { id: 7, name: 'Tecnologia', slug: 'tecnologia', count: 15, color: '#020cbc' },
+  { id: 5, name: 'IA', slug: 'ia', count: 9, color: '#4d2bfb' },
+  { id: 6, name: 'Tecnologia', slug: 'tecnologia', count: 15, color: '#03f9ff' },
+  { id: 7, name: 'Telecom', slug: 'telecom', count: 8, color: '#020cbc' },
   { id: 8, name: 'Trendings', slug: 'trendings', count: 7, color: '#4d2bfb' }
 ];
 

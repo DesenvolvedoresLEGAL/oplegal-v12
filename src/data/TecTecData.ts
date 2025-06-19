@@ -1,3 +1,4 @@
+
 // Mock data otimizado com conteúdo mais rico e palavras-chave de cauda longa
 export const featuredPosts = [
   {
@@ -22,7 +23,7 @@ export const featuredPosts = [
     authorBio: 'Especialista em Conectividade 5G na LEGAL com mais de 8 anos de experiência',
     date: '2024-05-28',
     readTime: '8 min',
-    category: 'Tecnologia',
+    category: 'Telecom',
     tags: ['5G', 'eventos corporativos', 'tecnologia', 'conectividade empresarial'],
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop',
     featured: true,
@@ -47,7 +48,7 @@ export const featuredPosts = [
     authorBio: 'Diretor de IA da LEGAL e palestrante internacional sobre tecnologia em eventos',
     date: '2024-05-25',
     readTime: '12 min',
-    category: 'Inteligência Artificial',
+    category: 'IA',
     tags: ['IA', 'gestão de eventos', 'automação', 'ROI eventos'],
     image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop',
     featured: true,
@@ -84,7 +85,7 @@ export const blogPosts = [
     author: 'Carlos Oliveira',
     date: '2024-05-18',
     readTime: '15 min',
-    category: 'Internet',
+    category: 'Tecnologia',
     tags: ['IoT', 'PME', 'implementação', 'custos IoT'],
     image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=250&fit=crop',
     views: 1287,
@@ -110,7 +111,7 @@ export const blogPosts = [
     author: 'Roberto Silva',
     date: '2024-05-12',
     readTime: '14 min',
-    category: 'Empreendedorismo',
+    category: 'Inovação',
     tags: ['empreendedorismo', 'inovação', 'startups', 'eventos'],
     image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=250&fit=crop',
     views: 2903,
@@ -121,12 +122,12 @@ export const blogPosts = [
 export const categories = [
   'Todos',
   'Drones',
-  'Empreendedorismo', 
+  'Educação',
   'Eventos', 
   'Inovação', 
-  'Inteligência Artificial', 
-  'Internet', 
+  'IA', 
   'Tecnologia', 
+  'Telecom',
   'Trendings'
 ];
 

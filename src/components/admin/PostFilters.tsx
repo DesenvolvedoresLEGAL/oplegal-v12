@@ -37,12 +37,12 @@ const PostFilters = ({
         >
           <option value="all">Todas as categorias</option>
           <option value="Drones">Drones</option>
-          <option value="Empreendedorismo">Empreendedorismo</option>
+          <option value="Educação">Educação</option>
           <option value="Eventos">Eventos</option>
           <option value="Inovação">Inovação</option>
-          <option value="Inteligência Artificial">Inteligência Artificial</option>
-          <option value="Internet">Internet</option>
+          <option value="IA">IA</option>
           <option value="Tecnologia">Tecnologia</option>
+          <option value="Telecom">Telecom</option>
           <option value="Trendings">Trendings</option>
         </select>
       </div>
