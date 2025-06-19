@@ -36,12 +36,14 @@ const PostFilters = ({
           className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-legal"
         >
           <option value="all">Todas as categorias</option>
+          <option value="Drones">Drones</option>
+          <option value="Empreendedorismo">Empreendedorismo</option>
+          <option value="Eventos">Eventos</option>
+          <option value="Inovação">Inovação</option>
+          <option value="Inteligência Artificial">Inteligência Artificial</option>
+          <option value="Internet">Internet</option>
           <option value="Tecnologia">Tecnologia</option>
-          <option value="IA">IA</option>
-          <option value="Tendências">Tendências</option>
-          <option value="IoT">IoT</option>
-          <option value="Segurança">Segurança</option>
-          <option value="Automação">Automação</option>
+          <option value="Trendings">Trendings</option>
         </select>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 // Mock data otimizado com conteúdo mais rico e palavras-chave de cauda longa
 export const featuredPosts = [
   {
@@ -23,7 +22,7 @@ export const featuredPosts = [
     authorBio: 'Especialista em Conectividade 5G na LEGAL com mais de 8 anos de experiência',
     date: '2024-05-28',
     readTime: '8 min',
-    category: 'Conectividade 5G',
+    category: 'Tecnologia',
     tags: ['5G', 'eventos corporativos', 'tecnologia', 'conectividade empresarial'],
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop',
     featured: true,
@@ -72,7 +71,7 @@ export const blogPosts = [
     author: 'Ana Costa',
     date: '2024-05-20',
     readTime: '10 min',
-    category: 'Tendências',
+    category: 'Trendings',
     tags: ['tendências 2024', 'conectividade', 'WiFi 6E', 'edge computing'],
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop',
     views: 1845,
@@ -85,7 +84,7 @@ export const blogPosts = [
     author: 'Carlos Oliveira',
     date: '2024-05-18',
     readTime: '15 min',
-    category: 'Internet das Coisas',
+    category: 'Internet',
     tags: ['IoT', 'PME', 'implementação', 'custos IoT'],
     image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=250&fit=crop',
     views: 1287,
@@ -120,15 +119,15 @@ export const blogPosts = [
 ];
 
 export const categories = [
-  'Todos', 
-  'Conectividade 5G', 
-  'Drones', 
+  'Todos',
+  'Drones',
   'Empreendedorismo', 
   'Eventos', 
   'Inovação', 
   'Inteligência Artificial', 
-  'Internet das Coisas', 
-  'Tendências'
+  'Internet', 
+  'Tecnologia', 
+  'Trendings'
 ];
 
 // Schema estruturado para o blog
