@@ -9,7 +9,7 @@ const ManifestoSection = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="MANIFESTO LEGAL"
-          subtitle="A declaração que define quem somos e o que viemos fazer no mundo"
+          subtitle="A declaração que define quem somos e como vivemos"
           center
         />
         
