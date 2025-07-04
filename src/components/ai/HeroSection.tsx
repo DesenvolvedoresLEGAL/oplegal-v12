@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
             <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
               <Link to="/contato?solution=legal-ai" title="Conheça todas as soluções LEGAL AI">Conheça Todas as Soluções</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+            <Button asChild size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
               <Link to="/smart-events" title="Veja a plataforma SmartEvents">Ver SmartEvents</Link>
             </Button>
           </nav>

@@ -58,7 +58,7 @@ const Speedy5GDemo = () => {
                   <p className="text-sm opacity-90 mb-4">
                     Veja nosso dashboard de monitoramento em tempo real
                   </p>
-                  <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+                  <Button asChild variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
                     <Link to="/contato?produto=speedy5g&tipo=demo">Ver Demonstração</Link>
                   </Button>
                 </div>

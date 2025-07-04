@@ -91,7 +91,7 @@ const NuvyoDemo = () => {
                 Agendar Demonstração
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+            <Button asChild size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
               <Link to="/contato?subject=nuvyo-portfolio">
                 Ver Portfólio Completo
               </Link>

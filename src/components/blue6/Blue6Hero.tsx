@@ -34,7 +34,7 @@ const Blue6Hero = () => {
               <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
                 <Link to="/contato?produto=blue6">Solicitar Demonstração</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+              <Button asChild size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
                 <a href="https://blue6.operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-center">
                   Configurar Blue6™
                   <ExternalLink className="ml-2 h-4 w-4" />

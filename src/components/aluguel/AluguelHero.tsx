@@ -42,7 +42,7 @@ const AluguelHero = () => {
                 Solicitar Orçamento
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+            <Button asChild size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
               <Link to="#solucoes" title="Conheça nossas soluções de locação de internet e equipamentos">
                 Ver Soluções
               </Link>

@@ -169,7 +169,7 @@ const VagasPage = () => {
             <Button size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
               Ver Oportunidades
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+            <Button size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
               Cadastro de Talentos
             </Button>
           </div>

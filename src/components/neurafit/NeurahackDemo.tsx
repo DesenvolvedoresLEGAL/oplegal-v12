@@ -33,7 +33,7 @@ const NeurahackDemo = () => {
                   <Play className="mr-2 h-5 w-5" />
                   Assistir Demo
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+                <Button size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
                   <Calendar className="mr-2 h-4 w-4" />
                   Avaliação Gratuita
                 </Button>

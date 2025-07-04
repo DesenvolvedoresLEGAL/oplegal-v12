@@ -107,7 +107,7 @@ const NegociosPage = () => {
               <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
                 <Link to="#unidades">Conhecer Nossas Unidades</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+              <Button asChild size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
                 <Link to="/contato">Falar com Especialista</Link>
               </Button>
             </div>

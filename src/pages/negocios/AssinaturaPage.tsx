@@ -154,7 +154,7 @@ const AssinaturaPage = () => {
                 <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
                   <Link to="/contato?solution=assinatura-5g">Solicitar Proposta</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-legal">
+                <Button asChild size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
                   <Link to="#planos">Ver Planos</Link>
                 </Button>
               </nav>
