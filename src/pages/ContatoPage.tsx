@@ -38,7 +38,7 @@ const contactInfo = [
   {
     icon: <MapPin className="w-6 h-6" />,
     title: "Endereço",
-    content: "Rua Salvador Simões, 801 - 13º Andar - Cj. 1309/1310",
+    content: "Rua Salvador Simões, 801 - 12º Andar - Cj. 1201/1210",
     subcontent: "Alto do Ipiranga - São Paulo/SP - CEP: 04276-000"
   },
   {
@@ -326,7 +326,7 @@ const ContatoPage = () => {
                       <MapPin className="w-5 h-5 text-legal-cyan mt-1" />
                       <div>
                         <p className="font-medium">Rua Salvador Simões, 801</p>
-                        <p className="text-muted-foreground">13º Andar - Conjuntos 1309/1310</p>
+                        <p className="text-muted-foreground">12º Andar - Conjuntos 1201/1210</p>
                         <p className="text-muted-foreground">Alto do Ipiranga - São Paulo/SP</p>
                         <p className="text-muted-foreground">CEP: 04276-000</p>
                       </div>
