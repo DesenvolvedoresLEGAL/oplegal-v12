@@ -46,6 +46,7 @@ import SonixPage from "./pages/produtos/SonixPage";
 import Speedy5GPage from "./pages/produtos/Speedy5GPage";
 import NeuraFitPage from "./pages/produtos/NeuraFitPage";
 import SkipLink from "./components/SkipLink";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -59,6 +60,7 @@ const App = () => {
           <SkipLink />
           <Navbar />
           <main id="main-content" role="main" tabIndex={-1}>
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<HomePage />} />
               
