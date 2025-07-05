@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo e Descrição */}
           <div>
             <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
-            <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Vamos conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
+            <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Junte-se a nós na missão de conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
             <div className="flex space-x-4">
               <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Instagram">
                 <Instagram size={20} />
