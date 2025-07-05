@@ -60,73 +60,73 @@ const Navbar = () => {
                     <li>
                       <Link to="/produtos/blue6" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Blue6</div>
-                        <p className="text-sm text-muted-foreground pt-1">Hotspot wifi</p>
+                        <p className="text-sm text-muted-foreground pt-1">Hotspot com Gestão WiFi</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/brilix" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Brilix</div>
-                        <p className="text-sm text-muted-foreground pt-1">Limpeza em altura com drone</p>
+                        <p className="text-sm text-muted-foreground pt-1">Limpeza em Altura com Drone</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/eventrix" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Eventrix</div>
-                        <p className="text-sm text-muted-foreground pt-1">Plataforma de gestão de eventos</p>
+                        <p className="text-sm text-muted-foreground pt-1">Plataforma de Gestão de Eventos</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/facepass" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">FacePass</div>
-                        <p className="text-sm text-muted-foreground pt-1">Credenciamento rápido com biometria facial</p>
+                        <p className="text-sm text-muted-foreground pt-1">Credenciamento e Acesso Rápido</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/fitscore" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">FitScore</div>
-                        <p className="text-sm text-muted-foreground pt-1">Copiloto de contratação e people analytics</p>
+                        <p className="text-sm text-muted-foreground pt-1">Contratação e People Analytics</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/humanoid" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Humanoid</div>
-                        <p className="text-sm text-muted-foreground pt-1">LDR + SDR para geração de negócios com AI</p>
+                        <p className="text-sm text-muted-foreground pt-1">Robô para Geração de Negócios</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/linkai" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">LinkAI</div>
-                        <p className="text-sm text-muted-foreground pt-1">Matchmaking inteligente e com propósito</p>
+                        <p className="text-sm text-muted-foreground pt-1">Matchmaking Inteligente e Eficiente</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/neurafit" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">NeuraFit</div>
-                        <p className="text-sm text-muted-foreground pt-1">Musculação para o cérebro com gamificação</p>
+                        <p className="text-sm text-muted-foreground pt-1">Musculação para o Cérebro</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/nuvyo" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Nuvyo</div>
-                        <p className="text-sm text-muted-foreground pt-1">Filmagem e fotografia com drone</p>
+                        <p className="text-sm text-muted-foreground pt-1">Filmagem e Fotografia Aerea</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/ping" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Ping</div>
-                        <p className="text-sm text-muted-foreground pt-1">Plataforma omnichannel com AI</p>
+                        <p className="text-sm text-muted-foreground pt-1">Atendimento Omnichannel</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/sonix" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Sonix</div>
-                        <p className="text-sm text-muted-foreground pt-1">Delivery com drone</p>
+                        <p className="text-sm text-muted-foreground pt-1">Delivery de Tudo com Drone</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/produtos/speedy5g" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">Speedy 5G</div>
-                        <p className="text-sm text-muted-foreground pt-1">Conectividade 5G</p>
+                        <p className="text-sm text-muted-foreground pt-1">Internet Plug and Play</p>
                       </Link>
                     </li>
                   </ul>
@@ -298,40 +298,40 @@ const Navbar = () => {
             <p className="px-4 py-2 text-sm font-bold text-legal uppercase">Produtos</p>
             <div className="grid grid-cols-1 gap-1 ml-4">
               <Link to="/produtos/blue6" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Blue6 - Hotspot wifi
+                Blue6 - Hotspot com Gestão WiFi
               </Link>
               <Link to="/produtos/brilix" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Brilix - Limpeza em altura com drone
+                Brilix - Limpeza em Altura com Drone
               </Link>
               <Link to="/produtos/eventrix" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Eventrix - Plataforma de gestão de eventos
+                Eventrix - Plataforma de Gestão de Eventos
               </Link>
               <Link to="/produtos/facepass" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                FacePass - Credenciamento rápido com biometria facial
+                FacePass - Credenciamento e Acesso Rápido
               </Link>
               <Link to="/produtos/fitscore" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                FitScore - Copiloto de contratação e people analytics
+                FitScore - Contratação e People Analytics
               </Link>
               <Link to="/produtos/humanoid" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Humanoid - LDR + SDR para geração de negócios com AI
+                Humanoid - Robô para Geração de Negócios
               </Link>
               <Link to="/produtos/linkai" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                LinkAI - Matchmaking inteligente e com propósito
+                LinkAI - Matchmaking Inteligente e Eficiente
               </Link>
               <Link to="/produtos/neurafit" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                NeuraFit - Musculação para o cérebro com gamificação
+                NeuraFit - Musculação para o Cérebro
               </Link>
               <Link to="/produtos/nuvyo" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Nuvyo - Filmagem e fotografia com drone
+                Nuvyo - Filmagem e Fotografia Aerea
               </Link>
               <Link to="/produtos/ping" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Ping - Plataforma omnichannel com AI
+                Ping - Atendimento Omnichannel
               </Link>
               <Link to="/produtos/sonix" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Sonix - Delivery com drone
+                Sonix - Delivery de Tudo com Drone
               </Link>
               <Link to="/produtos/speedy5g" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Speedy 5G - Conectividade 5G
+                Speedy 5G - Internet Plug and Play
               </Link>
             </div>
           </div>
