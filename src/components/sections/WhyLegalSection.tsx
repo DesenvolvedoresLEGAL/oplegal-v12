@@ -24,7 +24,7 @@ const WhyLegalSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
             <CardContent className="p-8 text-center">
-              <h3 className="text-5xl font-bold text-legal mb-2">3.000+</h3>
+              <h3 className="text-5xl font-bold text-legal mb-2">1.000+</h3>
               <p className="text-gray-600">eventos atendidos</p>
             </CardContent>
           </Card>
