@@ -141,25 +141,25 @@ const Navbar = () => {
                     <li>
                       <Link to="/negocios/aero" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">AERO</div>
-                        <p className="text-sm text-muted-foreground pt-1">Soluções para eventos</p>
+                        <p className="text-sm text-muted-foreground pt-1">Serviços de Drone</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/negocios/ai" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">AI</div>
-                        <p className="text-sm text-muted-foreground pt-1">Inteligência artificial</p>
+                        <p className="text-sm text-muted-foreground pt-1">Soluções de IA</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/negocios/alugue" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">ALUGUE</div>
-                        <p className="text-sm text-muted-foreground pt-1">Equipamentos e soluções</p>
+                        <p className="text-sm text-muted-foreground pt-1">Aluguel de Internet/Tech</p>
                       </Link>
                     </li>
                     <li>
                       <Link to="/negocios/assinatura" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium leading-none">ASSINATURA</div>
-                        <p className="text-sm text-muted-foreground pt-1">Conectividade contínua</p>
+                        <p className="text-sm text-muted-foreground pt-1">Planos FWA 5G</p>
                       </Link>
                     </li>
                   </ul>
@@ -341,16 +341,16 @@ const Navbar = () => {
             <p className="px-4 py-2 text-sm font-bold text-legal uppercase">Negócios</p>
             <div className="grid grid-cols-1 gap-1 ml-4">
               <Link to="/negocios/aero" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                AERO - Soluções para eventos
+                AERO - Serviços de Drone
               </Link>
               <Link to="/negocios/ai" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                AI - Inteligência artificial
+                AI - Soluções de IA
               </Link>
               <Link to="/negocios/alugue" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                ALUGUE - Equipamentos e soluções
+                ALUGUE - Aluguel de Internet/Tech
               </Link>
               <Link to="/negocios/assinatura" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                ASSINATURA - Conectividade contínua
+                ASSINATURA - Planos FWA 5G
               </Link>
             </div>
           </div>
