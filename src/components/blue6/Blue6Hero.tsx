@@ -15,7 +15,7 @@ const Blue6Hero = () => {
           <header>
             <div className="flex items-center gap-3 mb-6">
               <Wifi className="w-12 h-12 text-legal-cyan" />
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider">BLUE7</h1>
+              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider">BLUE6</h1>
             </div>
             
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-legal-cyan">
