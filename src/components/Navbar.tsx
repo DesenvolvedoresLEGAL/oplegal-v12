@@ -288,29 +288,125 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`lg:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ${
+        className={`lg:hidden absolute w-full bg-white shadow-lg transition-all duration-300 z-40 ${
           isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
-        <div className="container mx-auto px-4 py-4 flex flex-col space-y-2">
-          <Link to="/produtos" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-            Produtos
-          </Link>
-          <Link to="/negocios" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-            Negócios
-          </Link>
-          <Link to="/smart-events" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+        <div className="container mx-auto px-4 py-4 flex flex-col space-y-2 max-h-[80vh] overflow-y-auto">
+          {/* Produtos */}
+          <div className="border-b border-gray-100 pb-2">
+            <p className="px-4 py-2 text-sm font-bold text-legal uppercase">Produtos</p>
+            <div className="grid grid-cols-1 gap-1 ml-4">
+              <Link to="/produtos/blue6" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Blue6 - Hotspot wifi
+              </Link>
+              <Link to="/produtos/brilix" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Brilix - Limpeza em altura com drone
+              </Link>
+              <Link to="/produtos/eventrix" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Eventrix - Plataforma de gestão de eventos
+              </Link>
+              <Link to="/produtos/facepass" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                FacePass - Credenciamento rápido com biometria facial
+              </Link>
+              <Link to="/produtos/fitscore" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                FitScore - Copiloto de contratação e people analytics
+              </Link>
+              <Link to="/produtos/humanoid" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Humanoid - LDR + SDR para geração de negócios com AI
+              </Link>
+              <Link to="/produtos/linkai" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                LinkAI - Matchmaking inteligente e com propósito
+              </Link>
+              <Link to="/produtos/neurafit" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                NeuraFit - Musculação para o cérebro com gamificação
+              </Link>
+              <Link to="/produtos/nuvyo" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Nuvyo - Filmagem e fotografia com drone
+              </Link>
+              <Link to="/produtos/ping" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Ping - Plataforma omnichannel com AI
+              </Link>
+              <Link to="/produtos/sonix" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Sonix - Delivery com drone
+              </Link>
+              <Link to="/produtos/speedy5g" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Speedy 5G - Conectividade 5G
+              </Link>
+            </div>
+          </div>
+
+          {/* Negócios */}
+          <div className="border-b border-gray-100 pb-2">
+            <p className="px-4 py-2 text-sm font-bold text-legal uppercase">Negócios</p>
+            <div className="grid grid-cols-1 gap-1 ml-4">
+              <Link to="/negocios/aero" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                AERO - Soluções para eventos
+              </Link>
+              <Link to="/negocios/ai" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                AI - Inteligência artificial
+              </Link>
+              <Link to="/negocios/alugue" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                ALUGUE - Equipamentos e soluções
+              </Link>
+              <Link to="/negocios/assinatura" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                ASSINATURA - Conectividade contínua
+              </Link>
+            </div>
+          </div>
+
+          {/* SmartEvents */}
+          <Link to="/smart-events" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             SmartEvents™
           </Link>
-          <Link to="/missao-visao-valores" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-            Somos LEGAL
-          </Link>
-          <Link to="/universo" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-            Universo
-          </Link>
-          <Link to="/contato" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+
+          {/* Somos LEGAL */}
+          <div className="border-b border-gray-100 pb-2">
+            <p className="px-4 py-2 text-sm font-bold text-legal uppercase">Somos LEGAL</p>
+            <div className="grid grid-cols-1 gap-1 ml-4">
+              <Link to="/missao-visao-valores" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Missão, Visão e Valores
+              </Link>
+              <Link to="/time" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Time
+              </Link>
+              <Link to="/vagas" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Vagas
+              </Link>
+            </div>
+          </div>
+
+          {/* Universo */}
+          <div className="border-b border-gray-100 pb-2">
+            <p className="px-4 py-2 text-sm font-bold text-legal uppercase">Universo</p>
+            <div className="grid grid-cols-1 gap-1 ml-4">
+              <Link to="/universo/tectec" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                TecTec (blog)
+              </Link>
+              <Link to="/universo/historias" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Histórias
+              </Link>
+              <Link to="/universo/bits" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                BITS
+              </Link>
+              <Link to="/universo/imprensa" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Imprensa
+              </Link>
+              <Link to="/universo/status" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Status
+              </Link>
+              <Link to="/universo/faq" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                FAQ
+              </Link>
+            </div>
+          </div>
+
+          {/* Contato */}
+          <Link to="/contato" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Contato
           </Link>
+
+          {/* Acesso Blue */}
           <a 
             href="https://blue.operadora.legal" 
             target="_blank" 
