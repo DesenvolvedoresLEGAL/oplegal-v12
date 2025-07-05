@@ -31,7 +31,7 @@ const WhyLegalSection = () => {
           
           <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
             <CardContent className="p-8 text-center">
-              <h3 className="text-5xl font-bold text-legal mb-2">90</h3>
+              <h3 className="text-5xl font-bold text-legal mb-2">94</h3>
               <p className="text-gray-600">NPS médio dos clientes</p>
             </CardContent>
           </Card>
