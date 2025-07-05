@@ -344,7 +344,7 @@ const ContatoPage = () => {
               </Card>
             </div>
             <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.097798291589!2d-46.61569072374822!3d-23.600825289136477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bbe35b8e57f%3A0x17c6d5f0afcc9044!2sCosmopolitan%20Ipiranga!5e0!3m2!1spt-BR!2sbr!4v1751658808071!5m2!1spt-BR!2sbr" className='h-full w-full rounded-sm border' allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.097798291589!2d-46.61569072374822!3d-23.600825289136477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bbe35b8e57f%3A0x17c6d5f0afcc9044!2sCosmopolitan%20Ipiranga!5e0!3m2!1spt-BR!2sbr!4v1751658808071!5m2!1spt-BR!2sbr" className='h-full w-full rounded-sm border' allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               {/* <div className="text-center text-gray-500">
                 <MapPin className="w-12 h-12 mx-auto mb-4" />
                 <p className="text-lg font-medium">Mapa Interativo</p>
