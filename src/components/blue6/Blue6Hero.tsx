@@ -42,15 +42,15 @@ const Blue6Hero = () => {
             <div className="flex items-center gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-legal-green rounded-full"></div>
-                <span>Instalação em 2h</span>
+                <span>Instalação em 1h</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-legal-green rounded-full"></div>
-                <span>Suporte 24/7</span>
+                <span>Suporte 24/7/365</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-legal-green rounded-full"></div>
-                <span>Até 500 usuários simultâneos</span>
+                <span>+100 usuários simultâneos</span>
               </div>
             </div>
           </header>

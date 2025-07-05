@@ -1,18 +1,11 @@
-
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import { Button } from '@/components/ui/button';
 import { Play, ExternalLink } from 'lucide-react';
-
 const Blue6Demo = () => {
-  return (
-    <section className="py-20 bg-white">
+  return <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <SectionTitle
-          title="Veja o Blue6 em Ação"
-          subtitle="Assista como é simples configurar e gerenciar uma rede WiFi inteligente e segura"
-          center
-        />
+        <SectionTitle title="Veja o Blue6 em Ação" subtitle="Assista como é simples configurar e gerenciar uma rede WiFi inteligente e segura" center />
         
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-gradient-to-br from-legal to-legal-purple rounded-2xl p-8 text-white text-center">
@@ -45,7 +38,7 @@ const Blue6Demo = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div className="text-center p-6 bg-gray-50 rounded-xl">
               <div className="text-2xl font-bold text-legal mb-2">Instalação</div>
-              <p className="text-gray-600">Configuração completa em 2 horas</p>
+              <p className="text-gray-600">Configuração completa em 1h</p>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-xl">
               <div className="text-2xl font-bold text-legal mb-2">Treinamento</div>
@@ -53,13 +46,11 @@ const Blue6Demo = () => {
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-xl">
               <div className="text-2xl font-bold text-legal mb-2">Suporte</div>
-              <p className="text-gray-600">Acompanhamento 24/7 sempre disponível</p>
+              <p className="text-gray-600">Acompanhamento 24/7/365</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Blue6Demo;
