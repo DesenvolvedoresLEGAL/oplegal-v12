@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Wifi, Shield, BarChart3, ExternalLink } from 'lucide-react';
-
 const Blue6Hero = () => {
-  return (
-    <section className="py-24 md:py-32 bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
+  return <section className="py-24 md:py-32 bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10" aria-hidden="true">
         <Wifi className="absolute top-10 left-10 w-32 h-32 text-white/10 animate-pulse" />
         <Shield className="absolute bottom-10 right-10 w-24 h-24 text-white/10 animate-pulse animation-delay-500" />
@@ -18,7 +15,7 @@ const Blue6Hero = () => {
           <header>
             <div className="flex items-center gap-3 mb-6">
               <Wifi className="w-12 h-12 text-legal-cyan" />
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider">Blue6</h1>
+              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider">BLUE7</h1>
             </div>
             
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-legal-cyan">
@@ -79,8 +76,6 @@ const Blue6Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Blue6Hero;
