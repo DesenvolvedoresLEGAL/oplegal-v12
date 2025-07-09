@@ -57,7 +57,7 @@ const Blue6Hero = () => {
           
           <div className="lg:text-right">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-xl font-bold mb-4">Por que escolher Blue6?</h3>
+              <h3 className="text-xl font-bold mb-4 text-left">Por que escolher o Blue6?</h3>
               <ul className="space-y-3 text-left">
                 <li className="flex items-center gap-3">
                   <Wifi className="w-5 h-5 text-legal-cyan" />
