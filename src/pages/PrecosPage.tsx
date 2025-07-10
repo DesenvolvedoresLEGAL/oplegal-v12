@@ -163,7 +163,7 @@ const PrecosPage = () => {
             </div>
 
             {/* Resultado */}
-            <div className="bg-legal-cyan/20 rounded-lg p-6 border border-legal-cyan/30">
+            <div className="bg-legal-cyan/20 rounded-lg p-6 border border-legal-cyan/30 mb-8">
               <div className="text-center">
                 <div className="text-white text-lg mb-2">Preço Final Estimado</div>
                 <div className="text-4xl font-bold text-legal-cyan mb-4">
@@ -177,6 +177,93 @@ const PrecosPage = () => {
                 <Button className="mt-4 bg-legal-cyan text-legal hover:bg-legal-cyan/90">
                   Solicitar Cotação
                 </Button>
+              </div>
+            </div>
+
+            {/* Como Funciona */}
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="p-6 bg-white/10 backdrop-blur-sm border-white/20 rounded-lg">
+                <div className="flex items-center gap-3 mb-6">
+                  <Clock className="w-6 h-6 text-legal-cyan" />
+                  <h3 className="text-lg font-bold text-white">Fator Antecedência</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">30+ dias antes</span>
+                    <Badge className="bg-green-500 text-white text-xs">-10%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">21-29 dias</span>
+                    <Badge className="bg-blue-500 text-white text-xs">Base</Badge>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">10-20 dias</span>
+                    <Badge className="bg-yellow-500 text-white text-xs">+10%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">4-9 dias</span>
+                    <Badge className="bg-orange-500 text-white text-xs">+20%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">0-3 dias</span>
+                    <Badge className="bg-red-500 text-white text-xs">+30%</Badge>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 bg-white/10 backdrop-blur-sm border-white/20 rounded-lg">
+                <div className="flex items-center gap-3 mb-6">
+                  <Users className="w-6 h-6 text-legal-cyan" />
+                  <h3 className="text-lg font-bold text-white">Fator Demanda</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">&lt; 50% ocupação</span>
+                    <Badge className="bg-blue-500 text-white text-xs">Base</Badge>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">50-75% ocupação</span>
+                    <Badge className="bg-yellow-500 text-white text-xs">+10%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">76-90% ocupação</span>
+                    <Badge className="bg-orange-500 text-white text-xs">+20%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                    <span className="text-white text-sm">&gt; 90% ocupação</span>
+                    <Badge className="bg-red-500 text-white text-xs">+30%</Badge>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Por que Preços Dinâmicos */}
+            <div className="p-6 bg-white/10 backdrop-blur-sm border-white/20 rounded-lg">
+              <h3 className="text-xl font-bold text-white mb-6 text-center">
+                Por que Preços Dinâmicos?
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <TrendingUp className="w-8 h-8 text-legal-cyan mx-auto mb-3" />
+                  <h4 className="text-lg font-semibold text-white mb-2">Previsibilidade</h4>
+                  <p className="text-white/80 text-sm">
+                    Planeje com antecedência e garanta os melhores preços para seu evento.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <CheckCircle className="w-8 h-8 text-legal-cyan mx-auto mb-3" />
+                  <h4 className="text-lg font-semibold text-white mb-2">Disponibilidade</h4>
+                  <p className="text-white/80 text-sm">
+                    Sistema inteligente que garante equipamentos mesmo em alta demanda.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <AlertTriangle className="w-8 h-8 text-legal-cyan mx-auto mb-3" />
+                  <h4 className="text-lg font-semibold text-white mb-2">Transparência</h4>
+                  <p className="text-white/80 text-sm">
+                    Você sabe exatamente como o preço é calculado, sem surpresas.
+                  </p>
+                </div>
               </div>
             </div>
           </Card>
@@ -296,92 +383,6 @@ const PrecosPage = () => {
             </div>
           </Card>
 
-          {/* Como Funciona */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
-              <div className="flex items-center gap-3 mb-6">
-                <Clock className="w-8 h-8 text-legal-cyan" />
-                <h3 className="text-xl font-bold text-white">Fator Antecedência</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">30+ dias antes</span>
-                  <Badge className="bg-green-500 text-white">-10%</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">21-29 dias</span>
-                  <Badge className="bg-blue-500 text-white">Base</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">10-20 dias</span>
-                  <Badge className="bg-yellow-500 text-white">+10%</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">4-9 dias</span>
-                  <Badge className="bg-orange-500 text-white">+20%</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">0-3 dias</span>
-                  <Badge className="bg-red-500 text-white">+30%</Badge>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
-              <div className="flex items-center gap-3 mb-6">
-                <Users className="w-8 h-8 text-legal-cyan" />
-                <h3 className="text-xl font-bold text-white">Fator Demanda</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">&lt; 50% ocupação</span>
-                  <Badge className="bg-blue-500 text-white">Base</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">50-75% ocupação</span>
-                  <Badge className="bg-yellow-500 text-white">+10%</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">76-90% ocupação</span>
-                  <Badge className="bg-orange-500 text-white">+20%</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white">&gt; 90% ocupação</span>
-                  <Badge className="bg-red-500 text-white">+30%</Badge>
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          {/* Vantagens */}
-          <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">
-              Por que Preços Dinâmicos?
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <TrendingUp className="w-12 h-12 text-legal-cyan mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Previsibilidade</h3>
-                <p className="text-white/80">
-                  Planeje com antecedência e garante os melhores preços para seu evento.
-                </p>
-              </div>
-              <div className="text-center">
-                <CheckCircle className="w-12 h-12 text-legal-cyan mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Disponibilidade</h3>
-                <p className="text-white/80">
-                  Sistema inteligente que garante equipamentos mesmo em alta demanda.
-                </p>
-              </div>
-              <div className="text-center">
-                <AlertTriangle className="w-12 h-12 text-legal-cyan mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Transparência</h3>
-                <p className="text-white/80">
-                  Você sabe exatamente como o preço é calculado, sem surpresas.
-                </p>
-              </div>
-            </div>
-          </Card>
         </div>
       </div>
     </>
