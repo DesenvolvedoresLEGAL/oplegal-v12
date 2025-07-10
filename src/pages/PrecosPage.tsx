@@ -339,7 +339,7 @@ const PrecosPage = () => {
                       <p className="text-gray-400 text-sm">Por evento</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-2xl font-bold text-green-400">A partir de R$ 800</div>
+                      <div className="text-2xl font-bold text-legal-cyan">A partir de R$ 800</div>
                     </div>
                   </div>
                 </div>
@@ -350,7 +350,7 @@ const PrecosPage = () => {
                       <p className="text-gray-400 text-sm">Por m²</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-2xl font-bold text-green-400">R$ 25/m²</div>
+                      <div className="text-2xl font-bold text-legal-cyan">R$ 25/m²</div>
                     </div>
                   </div>
                 </div>
@@ -363,7 +363,7 @@ const PrecosPage = () => {
                       <p className="text-gray-400 text-sm">Por entrega até 5km</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-2xl font-bold text-green-400">R$ 150</div>
+                      <div className="text-2xl font-bold text-legal-cyan">R$ 150</div>
                     </div>
                   </div>
                 </div>
@@ -374,7 +374,7 @@ const PrecosPage = () => {
                       <p className="text-gray-400 text-sm">Por hora</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-2xl font-bold text-green-400">R$ 300/h</div>
+                      <div className="text-2xl font-bold text-legal-cyan">R$ 300/h</div>
                     </div>
                   </div>
                 </div>
@@ -395,7 +395,7 @@ const PrecosPage = () => {
                       <p className="text-gray-400 text-xs">Por evento</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-2xl font-bold text-blue-400">R$ 1.200</div>
+                      <div className="text-2xl font-bold text-legal-purple">R$ 1.200</div>
                     </div>
                   </div>
                 </div>
@@ -407,7 +407,7 @@ const PrecosPage = () => {
                       <p className="text-gray-400 text-xs">Por evento</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-2xl font-bold text-blue-400">R$ 800</div>
+                      <div className="text-2xl font-bold text-legal-purple">R$ 800</div>
                     </div>
                   </div>
                 </div>
@@ -421,7 +421,7 @@ const PrecosPage = () => {
                       <p className="text-gray-400 text-xs">Mensalidade</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-xl font-bold text-blue-400">R$ 299<span className="text-base">/mês</span></div>
+                      <div className="text-xl font-bold text-legal-purple">R$ 299<span className="text-base">/mês</span></div>
                     </div>
                   </div>
                 </div>
@@ -433,7 +433,7 @@ const PrecosPage = () => {
                       <p className="text-gray-400 text-xs">Por evento</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-2xl font-bold text-blue-400">R$ 1.500</div>
+                      <div className="text-2xl font-bold text-legal-purple">R$ 1.500</div>
                     </div>
                   </div>
                 </div>
