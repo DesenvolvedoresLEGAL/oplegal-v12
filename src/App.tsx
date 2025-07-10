@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmartEventsPage from "./pages/SmartEventsPage";
+import PrecosPage from "./pages/PrecosPage";
 import BitsPage from "./pages/BitsPage";
 import MissaoVisaoValoresPage from "./pages/MissaoVisaoValoresPage";
 import NegociosPage from "./pages/NegociosPage";
@@ -66,6 +67,9 @@ const App = () => {
               
               {/* Smart Events */}
               <Route path="/smart-events" element={<SmartEventsPage />} />
+              
+              {/* Preços */}
+              <Route path="/precos" element={<PrecosPage />} />
               
               {/* Produtos section */}
               <Route path="/produtos/blue6" element={<Blue6Page />} />

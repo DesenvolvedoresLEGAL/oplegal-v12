@@ -173,6 +173,13 @@ const Navbar = () => {
                 </Link>
               </NavigationMenuItem>
 
+              {/* Preços */}
+              <NavigationMenuItem>
+                <Link to="/precos" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-purple px-2")}>
+                  Preços
+                </Link>
+              </NavigationMenuItem>
+
               {/* Somos LEGAL */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Somos LEGAL</NavigationMenuTrigger>
@@ -358,6 +365,11 @@ const Navbar = () => {
           {/* SmartEvents */}
           <Link to="/smart-events" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             SmartEvents™
+          </Link>
+
+          {/* Preços */}
+          <Link to="/precos" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+            Preços
           </Link>
 
           {/* Somos LEGAL */}
