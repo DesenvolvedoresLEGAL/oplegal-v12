@@ -10,6 +10,13 @@ const PrecosPage = () => {
   const [selectedDemand, setSelectedDemand] = useState(60);
   const [selectedPlan, setSelectedPlan] = useState("SPEEDY 5G PRO");
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const baseRates = {
     "SPEEDY 5G LITE": 150,
     "SPEEDY 5G PLUS": 300,
@@ -67,26 +74,38 @@ const PrecosPage = () => {
 
           {/* Categorias de Serviços */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all">
+            <Card 
+              className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all"
+              onClick={() => scrollToSection('locacao-fwa')}
+            >
               <h3 className="text-xl font-bold text-white mb-2">Locação FWA 5G</h3>
               <p className="text-white/80 text-sm">Preços dinâmicos por evento</p>
             </Card>
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all">
+            <Card 
+              className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all"
+              onClick={() => scrollToSection('assinatura-fwa')}
+            >
               <h3 className="text-xl font-bold text-white mb-2">Assinatura</h3>
               <p className="text-white/80 text-sm">Planos mensais e anuais</p>
             </Card>
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all">
+            <Card 
+              className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all"
+              onClick={() => scrollToSection('servicos-drone')}
+            >
               <h3 className="text-xl font-bold text-white mb-2">Serviços Drone</h3>
               <p className="text-white/80 text-sm">Foto, vídeo, limpeza, delivery</p>
             </Card>
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all">
+            <Card 
+              className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all"
+              onClick={() => scrollToSection('solucoes-ia')}
+            >
               <h3 className="text-xl font-bold text-white mb-2">Soluções IA</h3>
               <p className="text-white/80 text-sm">IA para eventos e negócios</p>
             </Card>
           </div>
 
           {/* Locação FWA 5G - Simulador Dinâmico */}
-          <Card className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
+          <Card id="locacao-fwa" className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
             <div className="flex items-center gap-3 mb-6">
               <Calculator className="w-8 h-8 text-legal-cyan" />
               <h2 className="text-2xl font-bold text-white">Locação FWA 5G - Simulador de Preços</h2>
@@ -269,7 +288,7 @@ const PrecosPage = () => {
           </Card>
 
           {/* Assinatura FWA 5G */}
-          <Card className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
+          <Card id="assinatura-fwa" className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
             <h2 className="text-2xl font-bold text-white mb-6">Assinatura FWA 5G</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white/10 rounded-lg p-6">
@@ -306,7 +325,7 @@ const PrecosPage = () => {
           </Card>
 
           {/* Serviços de Drone */}
-          <Card className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
+          <Card id="servicos-drone" className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
             <h2 className="text-2xl font-bold text-white mb-6">Serviços de Drone</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
@@ -345,7 +364,7 @@ const PrecosPage = () => {
           </Card>
 
           {/* Soluções de IA */}
-          <Card className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
+          <Card id="solucoes-ia" className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
             <h2 className="text-2xl font-bold text-white mb-6">Soluções de IA</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
