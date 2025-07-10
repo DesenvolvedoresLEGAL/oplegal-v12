@@ -47,9 +47,9 @@ const PrecosPage = () => {
   return (
     <>
       <Helmet>
-        <title>Preços | LEGAL - Internet FWA 5G para Eventos</title>
-        <meta name="description" content="Conheça nossa precificação dinâmica para locação de internet FWA 5G. Valores que variam conforme antecedência e demanda para maximizar seu planejamento." />
-        <meta name="keywords" content="preços internet FWA 5G, locação internet eventos, precificação dinâmica, tabela preços LEGAL" />
+        <title>Preços | LEGAL - Conectividade, Drones e IA para Eventos</title>
+        <meta name="description" content="Conheça os preços de todos nossos produtos e serviços: locação e assinatura de internet FWA 5G, drones, soluções de IA e muito mais." />
+        <meta name="keywords" content="preços LEGAL, locação internet FWA 5G, assinatura internet, drones preços, soluções IA preços" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-legal via-legal-purple to-legal-cyan pt-24">
@@ -57,21 +57,41 @@ const PrecosPage = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Preços <span className="text-legal-cyan">Dinâmicos</span>
+              Nossos <span className="text-legal-cyan">Preços</span>
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Nossa precificação inteligente recompensa o planejamento e otimiza disponibilidade. 
-              Quanto antes você reservar, melhor o preço.
+              Transparência total nos preços de conectividade, drones, IA e todos nossos serviços. 
+              Encontre a solução ideal para seu negócio.
             </p>
           </div>
 
-          {/* Calculadora Interativa */}
+          {/* Categorias de Serviços */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all">
+              <h3 className="text-xl font-bold text-white mb-2">Locação FWA 5G</h3>
+              <p className="text-white/80 text-sm">Preços dinâmicos por evento</p>
+            </Card>
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all">
+              <h3 className="text-xl font-bold text-white mb-2">Assinatura</h3>
+              <p className="text-white/80 text-sm">Planos mensais e anuais</p>
+            </Card>
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all">
+              <h3 className="text-xl font-bold text-white mb-2">Serviços Drone</h3>
+              <p className="text-white/80 text-sm">Foto, vídeo, limpeza, delivery</p>
+            </Card>
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all">
+              <h3 className="text-xl font-bold text-white mb-2">Soluções IA</h3>
+              <p className="text-white/80 text-sm">IA para eventos e negócios</p>
+            </Card>
+          </div>
+
+          {/* Locação FWA 5G - Simulador Dinâmico */}
           <Card className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
             <div className="flex items-center gap-3 mb-6">
               <Calculator className="w-8 h-8 text-legal-cyan" />
-              <h2 className="text-2xl font-bold text-white">Simulador de Preços</h2>
+              <h2 className="text-2xl font-bold text-white">Locação FWA 5G - Simulador de Preços</h2>
             </div>
-
+            
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {/* Seleção de Plano */}
               <div>
@@ -161,21 +181,118 @@ const PrecosPage = () => {
             </div>
           </Card>
 
-          {/* Tabela Base */}
+          {/* Assinatura FWA 5G */}
           <Card className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
-            <h2 className="text-2xl font-bold text-white mb-6">Tabela Base de Preços</h2>
-            <div className="grid gap-4">
-              {Object.entries(baseRates).map(([plan, price]) => (
-                <div key={plan} className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-6">Assinatura FWA 5G</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Plano Básico</h3>
+                <div className="text-3xl font-bold text-legal-cyan mb-4">R$ 299/mês</div>
+                <ul className="text-white/80 space-y-2 text-sm">
+                  <li>• 50GB de dados</li>
+                  <li>• Velocidade até 100Mbps</li>
+                  <li>• Suporte técnico</li>
+                  <li>• Instalação gratuita</li>
+                </ul>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6 border-2 border-legal-cyan">
+                <h3 className="text-xl font-bold text-white mb-4">Plano Professional</h3>
+                <div className="text-3xl font-bold text-legal-cyan mb-4">R$ 599/mês</div>
+                <ul className="text-white/80 space-y-2 text-sm">
+                  <li>• 200GB de dados</li>
+                  <li>• Velocidade até 300Mbps</li>
+                  <li>• Suporte prioritário</li>
+                  <li>• Backup redundante</li>
+                </ul>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Plano Enterprise</h3>
+                <div className="text-3xl font-bold text-legal-cyan mb-4">R$ 999/mês</div>
+                <ul className="text-white/80 space-y-2 text-sm">
+                  <li>• Dados ilimitados</li>
+                  <li>• Velocidade até 1Gbps</li>
+                  <li>• SLA 99.9%</li>
+                  <li>• Gerente dedicado</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+
+          {/* Serviços de Drone */}
+          <Card className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
+            <h2 className="text-2xl font-bold text-white mb-6">Serviços de Drone</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
                   <div>
-                    <div className="font-semibold text-white">{plan}</div>
-                    <div className="text-white/70 text-sm">Ideal para diferentes portes de evento</div>
+                    <div className="font-semibold text-white">Foto e Filmagem Aérea</div>
+                    <div className="text-white/70 text-sm">Por evento</div>
                   </div>
-                  <div className="text-legal-cyan font-bold text-xl">
-                    R$ {price.toLocaleString('pt-BR')}
-                  </div>
+                  <div className="text-legal-cyan font-bold">A partir de R$ 800</div>
                 </div>
-              ))}
+                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
+                  <div>
+                    <div className="font-semibold text-white">Limpeza de Fachadas</div>
+                    <div className="text-white/70 text-sm">Por m²</div>
+                  </div>
+                  <div className="text-legal-cyan font-bold">R$ 25/m²</div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
+                  <div>
+                    <div className="font-semibold text-white">Delivery Express</div>
+                    <div className="text-white/70 text-sm">Por entrega até 5km</div>
+                  </div>
+                  <div className="text-legal-cyan font-bold">R$ 150</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
+                  <div>
+                    <div className="font-semibold text-white">Inspeção Técnica</div>
+                    <div className="text-white/70 text-sm">Por hora</div>
+                  </div>
+                  <div className="text-legal-cyan font-bold">R$ 300/h</div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          {/* Soluções de IA */}
+          <Card className="p-8 mb-12 bg-white/10 backdrop-blur-sm border-white/20">
+            <h2 className="text-2xl font-bold text-white mb-6">Soluções de IA</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
+                  <div>
+                    <div className="font-semibold text-white">FacePass (Reconhecimento Facial)</div>
+                    <div className="text-white/70 text-sm">Por evento</div>
+                  </div>
+                  <div className="text-legal-cyan font-bold">R$ 1.200</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
+                  <div>
+                    <div className="font-semibold text-white">LinkAI (Networking Inteligente)</div>
+                    <div className="text-white/70 text-sm">Por evento</div>
+                  </div>
+                  <div className="text-legal-cyan font-bold">R$ 800</div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
+                  <div>
+                    <div className="font-semibold text-white">FitScore (IA para Fitness)</div>
+                    <div className="text-white/70 text-sm">Mensalidade</div>
+                  </div>
+                  <div className="text-legal-cyan font-bold">R$ 299/mês</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
+                  <div>
+                    <div className="font-semibold text-white">Eventrix (Gestão Inteligente)</div>
+                    <div className="text-white/70 text-sm">Por evento</div>
+                  </div>
+                  <div className="text-legal-cyan font-bold">R$ 1.500</div>
+                </div>
+              </div>
             </div>
           </Card>
 
