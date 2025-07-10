@@ -329,35 +329,59 @@ const PrecosPage = () => {
             <h2 className="text-2xl font-bold text-white mb-6">Serviços de Drone</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-white">Foto e Filmagem Aérea</div>
-                    <div className="text-white/70 text-sm">Por evento</div>
+                <div className="p-4 bg-gradient-to-r from-white/20 to-white/10 rounded-lg border border-white/30 backdrop-blur-sm">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-semibold text-white text-lg">Foto e Filmagem Aérea</div>
+                      <div className="text-white/70 text-sm">Por evento</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xl font-bold text-white bg-legal/80 px-3 py-1 rounded-lg">
+                        A partir de R$ 800
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-legal-cyan font-bold">A partir de R$ 800</div>
                 </div>
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-white">Limpeza de Fachadas</div>
-                    <div className="text-white/70 text-sm">Por m²</div>
+                <div className="p-4 bg-gradient-to-r from-white/20 to-white/10 rounded-lg border border-white/30 backdrop-blur-sm">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-semibold text-white text-lg">Limpeza de Fachadas</div>
+                      <div className="text-white/70 text-sm">Por m²</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xl font-bold text-white bg-legal/80 px-3 py-1 rounded-lg">
+                        R$ 25/m²
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-legal-cyan font-bold">R$ 25/m²</div>
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-white">Delivery Express</div>
-                    <div className="text-white/70 text-sm">Por entrega até 5km</div>
+                <div className="p-4 bg-gradient-to-r from-white/20 to-white/10 rounded-lg border border-white/30 backdrop-blur-sm">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-semibold text-white text-lg">Delivery Express</div>
+                      <div className="text-white/70 text-sm">Por entrega até 5km</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xl font-bold text-white bg-legal/80 px-3 py-1 rounded-lg">
+                        R$ 150
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-legal-cyan font-bold">R$ 150</div>
                 </div>
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-white">Inspeção Técnica</div>
-                    <div className="text-white/70 text-sm">Por hora</div>
+                <div className="p-4 bg-gradient-to-r from-white/20 to-white/10 rounded-lg border border-white/30 backdrop-blur-sm">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-semibold text-white text-lg">Inspeção Técnica</div>
+                      <div className="text-white/70 text-sm">Por hora</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xl font-bold text-white bg-legal/80 px-3 py-1 rounded-lg">
+                        R$ 300/h
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-legal-cyan font-bold">R$ 300/h</div>
                 </div>
               </div>
             </div>
@@ -368,35 +392,63 @@ const PrecosPage = () => {
             <h2 className="text-2xl font-bold text-white mb-6">Soluções de IA</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-white">FacePass (Reconhecimento Facial)</div>
-                    <div className="text-white/70 text-sm">Por evento</div>
+                <div className="p-4 bg-gradient-to-r from-white/20 to-white/10 rounded-lg border border-white/30 backdrop-blur-sm">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-semibold text-white text-lg">FacePass</div>
+                      <div className="text-white/90 text-sm mb-1">(Reconhecimento Facial)</div>
+                      <div className="text-white/70 text-sm">Por evento</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-white bg-legal/80 px-3 py-1 rounded-lg">
+                        R$ 1.200
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-legal-cyan font-bold">R$ 1.200</div>
                 </div>
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-white">LinkAI (Networking Inteligente)</div>
-                    <div className="text-white/70 text-sm">Por evento</div>
+                <div className="p-4 bg-gradient-to-r from-white/20 to-white/10 rounded-lg border border-white/30 backdrop-blur-sm">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-semibold text-white text-lg">LinkAI</div>
+                      <div className="text-white/90 text-sm mb-1">(Networking Inteligente)</div>
+                      <div className="text-white/70 text-sm">Por evento</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-white bg-legal/80 px-3 py-1 rounded-lg">
+                        R$ 800
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-legal-cyan font-bold">R$ 800</div>
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-white">FitScore (IA para Fitness)</div>
-                    <div className="text-white/70 text-sm">Mensalidade</div>
+                <div className="p-4 bg-gradient-to-r from-white/20 to-white/10 rounded-lg border border-white/30 backdrop-blur-sm">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-semibold text-white text-lg">FitScore</div>
+                      <div className="text-white/90 text-sm mb-1">(IA para Fitness)</div>
+                      <div className="text-white/70 text-sm">Mensalidade</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-white bg-legal/80 px-3 py-1 rounded-lg">
+                        R$ 299/mês
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-legal-cyan font-bold">R$ 299/mês</div>
                 </div>
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-white">Eventrix (Gestão Inteligente)</div>
-                    <div className="text-white/70 text-sm">Por evento</div>
+                <div className="p-4 bg-gradient-to-r from-white/20 to-white/10 rounded-lg border border-white/30 backdrop-blur-sm">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-semibold text-white text-lg">Eventrix</div>
+                      <div className="text-white/90 text-sm mb-1">(Gestão Inteligente)</div>
+                      <div className="text-white/70 text-sm">Por evento</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-white bg-legal/80 px-3 py-1 rounded-lg">
+                        R$ 1.500
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-legal-cyan font-bold">R$ 1.500</div>
                 </div>
               </div>
             </div>

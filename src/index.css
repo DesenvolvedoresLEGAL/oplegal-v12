@@ -35,6 +35,13 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* LEGAL Brand Colors in HSL */
+    --legal-primary: 238 97% 36%;    /* #020cbc */
+    --legal-secondary: 251 95% 56%;  /* #4d2bfb */
+    --legal-tertiary: 182 100% 51%;  /* #03f9ff */
+    --legal-black: 0 0% 4%;          /* #0a0a0a */
+    --legal-gray: 210 40% 98%;       /* #f8fafc */
   }
 
   .dark {

@@ -25,12 +25,12 @@ const config: Config = {
         'grotesk': ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
       colors: {
-        // LEGAL Brand Colors - cores oficiais
-        'legal': '#020cbc',           // Principal
-        'legal-purple': '#4d2bfb',    // Secundária
-        'legal-cyan': '#03f9ff',      // Terciária
-        'legal-black': '#0a0a0a',     // Preto para backgrounds
-        'legal-gray': '#f8fafc',      // Cinza claro para seções
+        // LEGAL Brand Colors - usando HSL para melhor compatibilidade
+        'legal': 'hsl(var(--legal-primary))',
+        'legal-purple': 'hsl(var(--legal-secondary))',
+        'legal-cyan': 'hsl(var(--legal-tertiary))',
+        'legal-black': 'hsl(var(--legal-black))',
+        'legal-gray': 'hsl(var(--legal-gray))',
         
         // shadcn/ui color system
         border: "hsl(var(--border))",
