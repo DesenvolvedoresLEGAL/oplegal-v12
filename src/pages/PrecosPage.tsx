@@ -107,8 +107,7 @@ const PrecosPage = () => {
 
           {/* Locação FWA 5G */}
           <Card id="locacao-fwa" className="p-8 mb-12 bg-white/5 backdrop-blur-sm border-white/10">
-            <div className="flex items-center gap-3 mb-6">
-              <Calculator className="w-8 h-8 text-legal-cyan" />
+            <div className="text-center mb-6">
               <h2 className="text-2xl font-bold text-white">Locação FWA 5G</h2>
             </div>
             
@@ -407,7 +406,9 @@ const PrecosPage = () => {
 
           {/* Assinatura FWA 5G */}
           <Card id="assinatura-fwa" className="p-8 mb-12 bg-white/5 backdrop-blur-sm border-white/10">
-            <h2 className="text-2xl font-bold text-white mb-8">Assinatura FWA 5G</h2>
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-white">Assinatura FWA 5G</h2>
+            </div>
             
             {/* Seletor de Fidelidade */}
             <div className="flex justify-center mb-8">
@@ -495,7 +496,9 @@ const PrecosPage = () => {
 
           {/* Serviços de Drone */}
           <Card id="servicos-drone" className="p-8 mb-12 bg-gray-900/95 backdrop-blur-sm border-gray-700">
-            <h2 className="text-2xl font-bold text-white mb-8">Serviços de Drone</h2>
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-white">Serviços de Drone</h2>
+            </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="group p-6 bg-gray-800/50 hover:bg-gray-800/70 rounded-xl border border-gray-600 hover:border-gray-500 transition-all duration-300">
@@ -550,7 +553,9 @@ const PrecosPage = () => {
 
           {/* Soluções de IA */}
           <Card id="solucoes-ia" className="p-8 mb-12 bg-gray-900/95 backdrop-blur-sm border-gray-700">
-            <h2 className="text-2xl font-bold text-white mb-8">Soluções de IA</h2>
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-white">Soluções de IA</h2>
+            </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="group p-6 bg-gray-800/50 hover:bg-gray-800/70 rounded-xl border border-gray-600 hover:border-gray-500 transition-all duration-300">
