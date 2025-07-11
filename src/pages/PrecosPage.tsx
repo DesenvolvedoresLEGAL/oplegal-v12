@@ -410,7 +410,6 @@ const PrecosPage = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">Delivery Express</h3>
                       <p className="text-gray-300 text-sm mb-1">Projetos sob medida</p>
-                      <p className="text-gray-400 text-sm">Plano sob consulta</p>
                     </div>
                     <div className="text-right ml-4">
                       <div className="text-xl font-bold text-legal-cyan">Consultar</div>
