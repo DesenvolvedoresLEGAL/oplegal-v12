@@ -105,98 +105,224 @@ const PrecosPage = () => {
             </Card>
           </div>
 
-          {/* Locação FWA 5G - Simulador Dinâmico */}
+          {/* Locação FWA 5G */}
           <Card id="locacao-fwa" className="p-8 mb-12 bg-white/5 backdrop-blur-sm border-white/10">
             <div className="flex items-center gap-3 mb-6">
               <Calculator className="w-8 h-8 text-legal-cyan" />
-              <h2 className="text-2xl font-bold text-white">Locação FWA 5G - Simulador de Preços</h2>
+              <h2 className="text-2xl font-bold text-white">Locação FWA 5G</h2>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {/* Seleção de Plano */}
-              <div>
-                <label className="block text-white font-medium mb-3">Plano Desejado</label>
-                <div className="space-y-2">
-                  {Object.entries(baseRates).map(([plan, price]) => (
-                    <button
-                      key={plan}
-                      onClick={() => setSelectedPlan(plan)}
-                      className={`w-full p-3 rounded-lg text-left transition-all ${
-                        selectedPlan === plan 
-                          ? "bg-legal-cyan text-legal font-semibold" 
-                          : "bg-white/10 text-white hover:bg-white/20"
-                      }`}
-                    >
-                      <div className="font-medium">{plan}</div>
-                      <div className="text-sm opacity-75">Base: R$ {price.toLocaleString('pt-BR')}</div>
-                    </button>
-                  ))}
-                </div>
-              </div>
+            <p className="text-white/90 text-lg mb-8 text-center">
+              Escolha a melhor opção de internet para seu evento e garanta mais velocidade, 
+              segurança e economia para o seu negócio.
+            </p>
 
-              {/* Antecedência */}
-              <div>
-                <label className="block text-white font-medium mb-3">
-                  Antecedência: {selectedDays} dias
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="60"
-                  value={selectedDays}
-                  onChange={(e) => setSelectedDays(Number(e.target.value))}
-                  className="w-full mb-4"
-                />
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-legal-cyan font-medium">
-                    {advanceFactor >= 0 ? "+" : ""}{(advanceFactor * 100).toFixed(0)}%
+            {/* Planos de Locação */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              {/* SPEEDY 5G LITE */}
+              <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G LITE</h3>
+                  <div className="space-y-3 mb-6">
+                    <div className="text-white">
+                      <div className="font-semibold">QUANTIDADE DE DADOS</div>
+                      <div className="text-lg">5GB/dia</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-semibold">CONEXÕES SIMULTÂNEAS</div>
+                      <div className="text-lg">Até 3</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-semibold">TAMANHO DO ESPAÇO</div>
+                      <div className="text-lg">Até 10m²</div>
+                    </div>
                   </div>
-                  <div className="text-white text-sm">
-                    {advanceFactor < 0 ? "Desconto por planejamento" : 
-                     advanceFactor === 0 ? "Preço base" : "Acréscimo por urgência"}
+                  <div className="text-3xl font-bold text-legal-cyan mb-4">
+                    R$ 150,00
                   </div>
+                  <div className="text-white/80 text-sm">Valor da diária</div>
                 </div>
-              </div>
+              </Card>
 
-              {/* Demanda */}
-              <div>
-                <label className="block text-white font-medium mb-3">
-                  Ocupação: {selectedDemand}%
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value={selectedDemand}
-                  onChange={(e) => setSelectedDemand(Number(e.target.value))}
-                  className="w-full mb-4"
-                />
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="text-legal-cyan font-medium">
-                    +{(demandFactor * 100).toFixed(0)}%
+              {/* SPEEDY 5G PLUS */}
+              <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G PLUS</h3>
+                  <div className="space-y-3 mb-6">
+                    <div className="text-white">
+                      <div className="font-semibold">QUANTIDADE DE DADOS</div>
+                      <div className="text-lg">10GB/dia</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-semibold">CONEXÕES SIMULTÂNEAS</div>
+                      <div className="text-lg">4 a 10</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-semibold">TAMANHO DO ESPAÇO</div>
+                      <div className="text-lg">Até 20m²</div>
+                    </div>
                   </div>
-                  <div className="text-white text-sm">
-                    {demandFactor === 0 ? "Disponibilidade alta" : "Acréscimo por demanda"}
+                  <div className="text-3xl font-bold text-legal-cyan mb-4">
+                    R$ 300,00
                   </div>
+                  <div className="text-white/80 text-sm">Valor da diária</div>
                 </div>
-              </div>
+              </Card>
+
+              {/* SPEEDY 5G PRO */}
+              <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G PRO</h3>
+                  <div className="space-y-3 mb-6">
+                    <div className="text-white">
+                      <div className="font-semibold">QUANTIDADE DE DADOS</div>
+                      <div className="text-lg">50GB/dia</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-semibold">CONEXÕES SIMULTÂNEAS</div>
+                      <div className="text-lg">11 a 50</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-semibold">TAMANHO DO ESPAÇO</div>
+                      <div className="text-lg">Até 50m²</div>
+                    </div>
+                  </div>
+                  <div className="text-3xl font-bold text-legal-cyan mb-4">
+                    R$ 600,00
+                  </div>
+                  <div className="text-white/80 text-sm">Valor da diária</div>
+                </div>
+              </Card>
+
+              {/* SPEEDY 5G ULTRA */}
+              <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G ULTRA</h3>
+                  <div className="space-y-3 mb-6">
+                    <div className="text-white">
+                      <div className="font-semibold">QUANTIDADE DE DADOS</div>
+                      <div className="text-lg">100GB/dia</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-semibold">CONEXÕES SIMULTÂNEAS</div>
+                      <div className="text-lg">51 a 100</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-semibold">TAMANHO DO ESPAÇO</div>
+                      <div className="text-lg">Até 100m²</div>
+                    </div>
+                  </div>
+                  <div className="text-3xl font-bold text-legal-cyan mb-4">
+                    R$ 900,00
+                  </div>
+                  <div className="text-white/80 text-sm">Valor da diária</div>
+                </div>
+              </Card>
             </div>
 
-            {/* Resultado */}
-            <div className="bg-legal-cyan/20 rounded-lg p-6 border border-legal-cyan/30 mb-8">
+            {/* SPEEDY 5G LIVE */}
+            <Card className="p-6 bg-gradient-to-r from-legal-cyan/20 to-legal-purple/20 backdrop-blur-sm border-legal-cyan/30 mb-8">
               <div className="text-center">
-                <div className="text-white text-lg mb-2">Preço Final Estimado</div>
-                <div className="text-4xl font-bold text-legal-cyan mb-4">
-                  R$ {finalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                <h3 className="text-2xl font-bold text-white mb-4">SPEEDY 5G LIVE</h3>
+                <p className="text-white/90 mb-4">QUANTIDADE DE DADOS ILIMITADA</p>
+                <p className="text-white/80 mb-6">Para transmissões ao vivo</p>
+                <div className="text-3xl font-bold text-legal-cyan mb-4">
+                  R$ 1.500,00
                 </div>
-                <div className="text-white/80 text-sm">
-                  Valor base: R$ {baseRates[selectedPlan as keyof typeof baseRates].toLocaleString('pt-BR')} • 
-                  Antecedência: {advanceFactor >= 0 ? "+" : ""}{(advanceFactor * 100).toFixed(0)}% • 
-                  Demanda: +{(demandFactor * 100).toFixed(0)}%
+                <div className="text-white/80 text-sm">Valor da diária</div>
+              </div>
+            </Card>
+
+            {/* Simulador de Preços */}
+            <div className="bg-white/10 rounded-lg p-6 mb-8">
+              <h3 className="text-xl font-bold text-white mb-6 text-center">Simulador de Preços</h3>
+              
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
+                {/* Seleção de Plano */}
+                <div>
+                  <label className="block text-white font-medium mb-3">Plano Desejado</label>
+                  <div className="space-y-2">
+                    {Object.entries(baseRates).map(([plan, price]) => (
+                      <button
+                        key={plan}
+                        onClick={() => setSelectedPlan(plan)}
+                        className={`w-full p-3 rounded-lg text-left transition-all ${
+                          selectedPlan === plan 
+                            ? "bg-legal-cyan text-legal font-semibold" 
+                            : "bg-white/10 text-white hover:bg-white/20"
+                        }`}
+                      >
+                        <div className="font-medium">{plan}</div>
+                        <div className="text-sm opacity-75">Base: R$ {price.toLocaleString('pt-BR')}</div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <Button className="mt-4 bg-legal-cyan text-legal hover:bg-legal-cyan/90">
-                  Solicitar Cotação
-                </Button>
+
+                {/* Antecedência */}
+                <div>
+                  <label className="block text-white font-medium mb-3">
+                    Antecedência: {selectedDays} dias
+                  </label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="60"
+                    value={selectedDays}
+                    onChange={(e) => setSelectedDays(Number(e.target.value))}
+                    className="w-full mb-4"
+                  />
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-legal-cyan font-medium">
+                      {advanceFactor >= 0 ? "+" : ""}{(advanceFactor * 100).toFixed(0)}%
+                    </div>
+                    <div className="text-white text-sm">
+                      {advanceFactor < 0 ? "Desconto por planejamento" : 
+                       advanceFactor === 0 ? "Preço base" : "Acréscimo por urgência"}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Demanda */}
+                <div>
+                  <label className="block text-white font-medium mb-3">
+                    Ocupação: {selectedDemand}%
+                  </label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={selectedDemand}
+                    onChange={(e) => setSelectedDemand(Number(e.target.value))}
+                    className="w-full mb-4"
+                  />
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-legal-cyan font-medium">
+                      +{(demandFactor * 100).toFixed(0)}%
+                    </div>
+                    <div className="text-white text-sm">
+                      {demandFactor === 0 ? "Disponibilidade alta" : "Acréscimo por demanda"}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Resultado */}
+              <div className="bg-legal-cyan/20 rounded-lg p-6 border border-legal-cyan/30">
+                <div className="text-center">
+                  <div className="text-white text-lg mb-2">Preço Final Estimado</div>
+                  <div className="text-4xl font-bold text-legal-cyan mb-4">
+                    R$ {finalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                  </div>
+                  <div className="text-white/80 text-sm">
+                    Valor base: R$ {baseRates[selectedPlan as keyof typeof baseRates].toLocaleString('pt-BR')} • 
+                    Antecedência: {advanceFactor >= 0 ? "+" : ""}{(advanceFactor * 100).toFixed(0)}% • 
+                    Demanda: +{(demandFactor * 100).toFixed(0)}%
+                  </div>
+                  <Button className="mt-4 bg-legal-cyan text-legal hover:bg-legal-cyan/90">
+                    Solicitar Cotação
+                  </Button>
+                </div>
               </div>
             </div>
 
