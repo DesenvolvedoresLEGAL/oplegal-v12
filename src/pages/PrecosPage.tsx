@@ -441,10 +441,9 @@ const PrecosPage = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">FacePass</h3>
                       <p className="text-gray-300 text-sm mb-1">Reconhecimento Facial</p>
-                      <p className="text-gray-400 text-xs">Plano sob consulta</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-xl font-bold text-legal-purple">Consultar</div>
+                      <div className="text-xl font-bold text-legal-purple">Sob Consulta</div>
                     </div>
                   </div>
                 </div>
@@ -453,10 +452,9 @@ const PrecosPage = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">LinkAI</h3>
                       <p className="text-gray-300 text-sm mb-1">Networking Inteligente</p>
-                      <p className="text-gray-400 text-xs">Plano sob consulta</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-xl font-bold text-legal-purple">Consultar</div>
+                      <div className="text-xl font-bold text-legal-purple">Sob Consulta</div>
                     </div>
                   </div>
                 </div>
@@ -467,10 +465,9 @@ const PrecosPage = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">FitScore</h3>
                       <p className="text-gray-300 text-sm mb-1">Co-Piloto de Contratação e People Analytics</p>
-                      <p className="text-gray-400 text-xs">Planos a partir de</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-xl font-bold text-legal-purple">R$ 50<span className="text-base">/mês</span></div>
+                      <div className="text-xl font-bold text-legal-purple">A partir de R$ 50/mês</div>
                     </div>
                   </div>
                 </div>
@@ -479,10 +476,9 @@ const PrecosPage = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">Eventrix</h3>
                       <p className="text-gray-300 text-sm mb-1">Plataforma de Gestão de Eventos</p>
-                      <p className="text-gray-400 text-xs">Planos a partir de</p>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-xl font-bold text-legal-purple">R$ 1.990<span className="text-base">/mês</span></div>
+                      <div className="text-xl font-bold text-legal-purple">A partir de R$ 1.990/mês</div>
                     </div>
                   </div>
                 </div>
