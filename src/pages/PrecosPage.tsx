@@ -23,7 +23,7 @@ const PrecosPage = () => {
     "SPEEDY 5G PLUS": 300,
     "SPEEDY 5G PRO": 600,
     "SPEEDY 5G ULTRA": 900,
-    "SPEEDY 5G LIVE": 1500,
+    "SPEEDY 5G LIVE": 500,
   };
 
   const getAdvanceFactor = (days: number) => {
@@ -221,15 +221,27 @@ const PrecosPage = () => {
             </div>
 
             {/* SPEEDY 5G LIVE */}
-            <Card className="p-6 bg-gradient-to-r from-legal-cyan/20 to-legal-purple/20 backdrop-blur-sm border-legal-cyan/30 mb-8">
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">SPEEDY 5G LIVE</h3>
-                <p className="text-white/90 mb-4">QUANTIDADE DE DADOS ILIMITADA</p>
-                <p className="text-white/80 mb-6">Para transmissões ao vivo</p>
-                <div className="text-3xl font-bold text-legal-cyan mb-4">
-                  R$ 1.500,00
+                <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G LIVE</h3>
+                <div className="space-y-3 mb-6">
+                  <div className="text-white">
+                    <div className="font-semibold">QUANTIDADE DE DADOS</div>
+                    <div className="text-lg">ILIMITADA</div>
+                  </div>
+                  <div className="text-white">
+                    <div className="font-semibold">PARA TRANSMISSÕES</div>
+                    <div className="text-lg">AO VIVO</div>
+                  </div>
+                  <div className="text-white">
+                    <div className="font-semibold">COBERTURA</div>
+                    <div className="text-lg">Personalizada</div>
+                  </div>
                 </div>
-                <div className="text-white/80 text-sm">Valor da diária</div>
+                <div className="text-3xl font-bold text-legal-cyan mb-4">
+                  R$ 500,00
+                </div>
+                <div className="text-white/80 text-sm">Valor por hora</div>
               </div>
             </Card>
 
@@ -237,28 +249,7 @@ const PrecosPage = () => {
             <div className="bg-white/10 rounded-lg p-6 mb-8">
               <h3 className="text-xl font-bold text-white mb-6 text-center">Simulador de Preços</h3>
               
-              <div className="grid md:grid-cols-3 gap-6 mb-6">
-                {/* Seleção de Plano */}
-                <div>
-                  <label className="block text-white font-medium mb-3">Plano Desejado</label>
-                  <div className="space-y-2">
-                    {Object.entries(baseRates).map(([plan, price]) => (
-                      <button
-                        key={plan}
-                        onClick={() => setSelectedPlan(plan)}
-                        className={`w-full p-3 rounded-lg text-left transition-all ${
-                          selectedPlan === plan 
-                            ? "bg-legal-cyan text-legal font-semibold" 
-                            : "bg-white/10 text-white hover:bg-white/20"
-                        }`}
-                      >
-                        <div className="font-medium">{plan}</div>
-                        <div className="text-sm opacity-75">Base: R$ {price.toLocaleString('pt-BR')}</div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
                 {/* Antecedência */}
                 <div>
                   <label className="block text-white font-medium mb-3">
@@ -310,12 +301,12 @@ const PrecosPage = () => {
               {/* Resultado */}
               <div className="bg-legal-cyan/20 rounded-lg p-6 border border-legal-cyan/30">
                 <div className="text-center">
-                  <div className="text-white text-lg mb-2">Preço Final Estimado</div>
+                  <div className="text-white text-lg mb-2">Preço Final Estimado (Plano Selecionado)</div>
                   <div className="text-4xl font-bold text-legal-cyan mb-4">
                     R$ {finalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                   </div>
                   <div className="text-white/80 text-sm">
-                    Valor base: R$ {baseRates[selectedPlan as keyof typeof baseRates].toLocaleString('pt-BR')} • 
+                    Baseado no {selectedPlan} • Valor base: R$ {baseRates[selectedPlan as keyof typeof baseRates].toLocaleString('pt-BR')} • 
                     Antecedência: {advanceFactor >= 0 ? "+" : ""}{(advanceFactor * 100).toFixed(0)}% • 
                     Demanda: +{(demandFactor * 100).toFixed(0)}%
                   </div>
