@@ -22,6 +22,8 @@ import {
   Headphones,
   Building
 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
 
 const formSchema = z.object({
   name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
@@ -103,13 +105,52 @@ const ContatoPage = () => {
     },
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     console.log('Form submitted:', data);
-    toast({
-      title: "Mensagem enviada!",
-      description: "Recebemos sua mensagem e entraremos em contato em breve.",
-    });
-    form.reset();
+
+    const CONTACT_EMAIL = 'sos@operadora.legal';
+    const EMAILJS_SERVICE_ID = 'service_wi3kvx7';
+    const EMAILJS_TEMPLATE_ID = 'template_5l2767r';
+    const EMAILJS_USER_ID = 'oLw9xvmdczE218mGh';
+
+    const name = data.name;
+    const email = data.email;
+    const company = data.company;
+    const phone = data.phone;
+    const subject = data.subject;
+    const message = data.message;
+
+    const templateParams = {
+      to_email: CONTACT_EMAIL,
+      from_name: name,
+      from_email: email,
+      company: company,
+      phone: phone,
+      subject: subject,
+      message: message,
+    };
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
+
+      toast({
+        title: "Mensagem enviada!",
+        description: "Recebemos sua mensagem e entraremos em contato em breve.",
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Mensagem não enviada!",
+        description: "Erro ao enviar o email, confira os dados e tente novamente.",
+      })
+    }
   };
 
   return (
