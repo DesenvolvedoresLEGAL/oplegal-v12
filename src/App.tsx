@@ -33,6 +33,7 @@ import HistoriasPage from "./pages/universo/HistoriasPage";
 import ImprensaPage from "./pages/universo/ImprensaPage";
 import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
+import RecursosPage from "./pages/universo/RecursosPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
 import Blue6Page from "./pages/produtos/Blue6Page";
 import BrilixPage from "./pages/produtos/BrilixPage";
@@ -111,6 +112,7 @@ const App = () => {
               <Route path="/universo/historias" element={<HistoriasPage />} />
               <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
               <Route path="/universo/bits" element={<BitsPage />} />
+              <Route path="/universo/recursos" element={<RecursosPage />} />
               <Route path="/universo/imprensa" element={<ImprensaPage />} />
               <Route path="/universo/status" element={<StatusPage />} />
               <Route path="/universo/faq" element={<FAQPage />} />

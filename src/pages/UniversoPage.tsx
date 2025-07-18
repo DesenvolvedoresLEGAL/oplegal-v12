@@ -28,11 +28,18 @@ const UniversoPage = () => {
     },
     {
       title: 'BITS',
-      description: 'Programa de fidelidade exclusivo. Acumule pontos, ganhe recompensas e faça parte da comunidade LEGAL.',
+      description: 'Programa de Fidelidade da LEGAL',
       icon: <Zap className="w-8 h-8 text-legal" />,
       link: '/universo/bits',
       color: 'from-legal-green to-legal',
       featured: true
+    },
+    {
+      title: 'Recursos',
+      description: 'Conteúdos, Dicas e Ferramentas',
+      icon: <BookOpen className="w-8 h-8 text-legal" />,
+      link: '/universo/recursos',
+      color: 'from-legal to-legal-purple'
     },
     {
       title: 'Imprensa',
