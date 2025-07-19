@@ -233,7 +233,13 @@ const Navbar = () => {
                     <li>
                       <Link to="/universo/bits" className="block p-3 hover:bg-accent rounded-md">
                         <div className="text-sm font-medium">BITS</div>
-                        <p className="text-sm text-muted-foreground">Conteúdos técnicos</p>
+                        <p className="text-sm text-muted-foreground">Programa de Fidelidade da LEGAL</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/universo/recursos" className="block p-3 hover:bg-accent rounded-md">
+                        <div className="text-sm font-medium">Recursos</div>
+                        <p className="text-sm text-muted-foreground">Conteúdos, Dicas e Ferramentas</p>
                       </Link>
                     </li>
                     <li>
@@ -400,6 +406,9 @@ const Navbar = () => {
               </Link>
               <Link to="/universo/bits" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 BITS
+              </Link>
+              <Link to="/universo/recursos" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Recursos
               </Link>
               <Link to="/universo/imprensa" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 Imprensa
