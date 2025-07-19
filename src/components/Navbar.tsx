@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -56,80 +56,123 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Produtos</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[500px] gap-3 p-4 md:grid-cols-2">
-                    <li>
-                      <Link to="/produtos/blue6" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Blue6</div>
-                        <p className="text-sm text-muted-foreground pt-1">Hotspot com Gestão WiFi</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/brilix" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Brilix</div>
-                        <p className="text-sm text-muted-foreground pt-1">Limpeza em Altura com Drone</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/eventrix" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Eventrix</div>
-                        <p className="text-sm text-muted-foreground pt-1">Plataforma de Gestão de Eventos</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/facepass" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">FacePass</div>
-                        <p className="text-sm text-muted-foreground pt-1">Credenciamento e Acesso Rápido</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/fitscore" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">FitScore</div>
-                        <p className="text-sm text-muted-foreground pt-1">Contratação e People Analytics</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/humanoid" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Humanoid</div>
-                        <p className="text-sm text-muted-foreground pt-1">Robô para Geração de Negócios</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/linkai" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">LinkAI</div>
-                        <p className="text-sm text-muted-foreground pt-1">Matchmaking Inteligente e Eficiente</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/neurafit" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">NeuraFit</div>
-                        <p className="text-sm text-muted-foreground pt-1">Musculação para o Cérebro</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/nuvyo" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Nuvyo</div>
-                        <p className="text-sm text-muted-foreground pt-1">Filmagem e Fotografia Aerea</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/ping" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Ping</div>
-                        <p className="text-sm text-muted-foreground pt-1">Atendimento Omnichannel</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/sonix" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Sonix</div>
-                        <p className="text-sm text-muted-foreground pt-1">Delivery de Tudo com Drone</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/produtos/speedy5g" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">Speedy 5G</div>
-                        <p className="text-sm text-muted-foreground pt-1">Internet Plug and Play</p>
-                      </Link>
-                    </li>
-                  </ul>
+                  <div className="w-[600px] p-6 bg-white border border-gray-100 shadow-lg rounded-lg">
+                    <div className="grid grid-cols-3 gap-6">
+                      
+                      {/* Conectividade & WiFi */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Conectividade & WiFi</h3>
+                        <div className="space-y-3">
+                          <Link to="/produtos/blue6" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Wifi className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Blue6</div>
+                              <p className="text-xs text-gray-500">Hotspot com Gestão WiFi</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/speedy5g" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Zap className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Speedy 5G</div>
+                              <p className="text-xs text-gray-500">Internet Plug and Play</p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Eventos & Gestão */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Eventos & Gestão</h3>
+                        <div className="space-y-3">
+                          <Link to="/produtos/eventrix" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Calendar className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Eventrix</div>
+                              <p className="text-xs text-gray-500">Plataforma de Gestão de Eventos</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/facepass" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <User className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">FacePass</div>
+                              <p className="text-xs text-gray-500">Credenciamento e Acesso Rápido</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/ping" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <MessageCircle className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Ping</div>
+                              <p className="text-xs text-gray-500">Atendimento Omnichannel</p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* IA & Inovação */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">IA & Inovação</h3>
+                        <div className="space-y-3">
+                          <Link to="/produtos/fitscore" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Target className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">FitScore</div>
+                              <p className="text-xs text-gray-500">Contratação e People Analytics</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/humanoid" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Bot className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Humanoid</div>
+                              <p className="text-xs text-gray-500">Robô para Geração de Negócios</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/linkai" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Heart className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">LinkAI</div>
+                              <p className="text-xs text-gray-500">Matchmaking Inteligente</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/neurafit" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Brain className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">NeuraFit</div>
+                              <p className="text-xs text-gray-500">Musculação para o Cérebro</p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Serviços com Drone */}
+                      <div className="col-span-3 border-t pt-4 mt-2">
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Serviços com Drone</h3>
+                        <div className="grid grid-cols-3 gap-3">
+                          <Link to="/produtos/brilix" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Settings className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Brilix</div>
+                              <p className="text-xs text-gray-500">Limpeza em Altura</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/nuvyo" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Camera className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Nuvyo</div>
+                              <p className="text-xs text-gray-500">Filmagem e Fotografia</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/sonix" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Plane className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Sonix</div>
+                              <p className="text-xs text-gray-500">Delivery de Tudo</p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
@@ -137,32 +180,53 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Negócios</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
-                    <li>
-                      <Link to="/negocios/aero" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">AERO</div>
-                        <p className="text-sm text-muted-foreground pt-1">Serviços de Drone</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/negocios/ai" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">AI</div>
-                        <p className="text-sm text-muted-foreground pt-1">Soluções de IA</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/negocios/alugue" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">ALUGUE</div>
-                        <p className="text-sm text-muted-foreground pt-1">Aluguel de Internet/Tech</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/negocios/assinatura" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium leading-none">ASSINATURA</div>
-                        <p className="text-sm text-muted-foreground pt-1">Planos FWA 5G</p>
-                      </Link>
-                    </li>
-                  </ul>
+                  <div className="w-[500px] p-6 bg-white border border-gray-100 shadow-lg rounded-lg">
+                    <div className="grid grid-cols-2 gap-6">
+                      
+                      {/* Soluções Principais */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Soluções Principais</h3>
+                        <div className="space-y-3">
+                          <Link to="/negocios/aero" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Plane className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">AERO</div>
+                              <p className="text-xs text-gray-500">Serviços completos de Drone</p>
+                            </div>
+                          </Link>
+                          <Link to="/negocios/ai" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Cpu className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">AI</div>
+                              <p className="text-xs text-gray-500">Soluções de Inteligência Artificial</p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Modelos de Negócio */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Modelos de Negócio</h3>
+                        <div className="space-y-3">
+                          <Link to="/negocios/alugue" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Wrench className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">ALUGUE</div>
+                              <p className="text-xs text-gray-500">Aluguel de Internet/Tech</p>
+                            </div>
+                          </Link>
+                          <Link to="/negocios/assinatura" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Globe className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">ASSINATURA</div>
+                              <p className="text-xs text-gray-500">Planos FWA 5G mensais</p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
@@ -217,50 +281,74 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Universo</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4">
-                    <li>
-                      <Link to="/universo/tectec" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">TecTec (blog)</div>
-                        <p className="text-sm text-muted-foreground">Novidades e tendências</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/universo/historias" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">Histórias</div>
-                        <p className="text-sm text-muted-foreground">Casos de sucesso</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/universo/bits" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">BITS</div>
-                        <p className="text-sm text-muted-foreground">Programa de Fidelidade da LEGAL</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/universo/recursos" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">Recursos</div>
-                        <p className="text-sm text-muted-foreground">Conteúdos, Dicas e Ferramentas</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/universo/imprensa" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">Imprensa</div>
-                        <p className="text-sm text-muted-foreground">Notícias e releases</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/universo/status" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">Status</div>
-                        <p className="text-sm text-muted-foreground">Servidores e serviços</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/universo/faq" className="block p-3 hover:bg-accent rounded-md">
-                        <div className="text-sm font-medium">FAQ</div>
-                        <p className="text-sm text-muted-foreground">Perguntas frequentes</p>
-                      </Link>
-                    </li>
-                  </ul>
+                  <div className="w-[520px] p-6 bg-white border border-gray-100 shadow-lg rounded-lg">
+                    <div className="grid grid-cols-2 gap-6">
+                      
+                      {/* Conteúdo & Comunidade */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Conteúdo & Comunidade</h3>
+                        <div className="space-y-3">
+                          <Link to="/universo/tectec" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <BookOpen className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">TecTec (blog)</div>
+                              <p className="text-xs text-gray-500">Novidades e tendências tecnológicas</p>
+                            </div>
+                          </Link>
+                          <Link to="/universo/historias" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Users className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Histórias</div>
+                              <p className="text-xs text-gray-500">Casos de sucesso reais</p>
+                            </div>
+                          </Link>
+                          <Link to="/universo/bits" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Star className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">BITS</div>
+                              <p className="text-xs text-gray-500">Programa de Fidelidade da LEGAL</p>
+                            </div>
+                          </Link>
+                          <Link to="/universo/recursos" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <FileText className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Recursos</div>
+                              <p className="text-xs text-gray-500">Conteúdos, Dicas e Ferramentas</p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Suporte & Transparência */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Suporte & Transparência</h3>
+                        <div className="space-y-3">
+                          <Link to="/universo/imprensa" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Newspaper className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Imprensa</div>
+                              <p className="text-xs text-gray-500">Notícias e releases oficiais</p>
+                            </div>
+                          </Link>
+                          <Link to="/universo/status" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Activity className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Status</div>
+                              <p className="text-xs text-gray-500">Monitoramento de serviços</p>
+                            </div>
+                          </Link>
+                          <Link to="/universo/faq" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <HelpCircle className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">FAQ</div>
+                              <p className="text-xs text-gray-500">Perguntas frequentes</p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
