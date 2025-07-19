@@ -15,84 +15,125 @@ const FAQPage = () => {
   };
   const categories = [{
     id: 'all',
-    label: 'Todas as Categorias'
+    label: 'Todas as Unidades'
   }, {
-    id: 'smart-events',
-    label: 'Smart Events'
+    id: 'ai',
+    label: 'AI - Inteligência Artificial'
   }, {
-    id: 'billing',
-    label: 'Faturamento'
+    id: 'aero',
+    label: 'AERO - Drones e Logística'
   }, {
-    id: 'technical',
-    label: 'Técnicas'
+    id: 'alugue',
+    label: 'ALUGUE - Equipamentos'
   }, {
-    id: 'api',
-    label: 'API e Integrações'
-  }, {
-    id: 'account',
-    label: 'Conta e Acesso'
+    id: 'assinatura',
+    label: 'ASSINATURA - Serviços'
   }];
-  const faqs = [{
-    id: 1,
-    category: 'smart-events',
-    question: 'O que é o Smart Events™ da LEGAL?',
-    answer: 'O Smart Events™ é nossa plataforma revolucionária que transforma eventos tradicionais em experiências inteligentes e conectadas. Utilizamos IoT, IA e análise de dados em tempo real para otimizar gestão, segurança e engajamento em eventos de todos os tipos e tamanhos.'
-  }, {
-    id: 2,
-    category: 'smart-events',
-    question: 'Quais tipos de eventos podem usar o Smart Events™?',
-    answer: 'Nossa plataforma é versátil e atende desde pequenas reuniões corporativas até grandes festivais e conferências. Funcionamos com eventos presenciais, híbridos e virtuais, incluindo: conferências, shows, feiras, casamentos, eventos corporativos, festivais e muito mais.'
-  }, {
-    id: 3,
-    category: 'billing',
-    question: 'Como funciona o modelo de cobrança da LEGAL?',
-    answer: 'Oferecemos diferentes planos flexíveis baseados no número de participantes e recursos utilizados. Temos opções de pagamento mensal, anual e por evento. Entre em contato com nossa equipe comercial para um plano personalizado às suas necessidades.'
-  }, {
-    id: 4,
-    category: 'billing',
-    question: 'Existe período de teste gratuito?',
-    answer: 'Sim! Oferecemos um trial de 30 dias com acesso completo à plataforma para até 100 participantes. Você pode testar todas as funcionalidades sem compromisso. Basta se cadastrar em nosso portal BLUE.'
-  }, {
-    id: 5,
-    category: 'technical',
-    question: 'Que tipos de dispositivos IoT são compatíveis?',
-    answer: 'Nossa plataforma é compatível com uma ampla gama de dispositivos IoT, incluindo: sensores de presença, câmeras inteligentes, dispositivos de áudio, sensores ambientais (temperatura, umidade), dispositivos de acesso (catracas, RFID), e muito mais. Também oferecemos nossos próprios dispositivos otimizados.'
-  }, {
-    id: 6,
-    category: 'technical',
-    question: 'Como funciona a segurança dos dados?',
-    answer: 'A segurança é nossa prioridade máxima. Utilizamos criptografia de ponta a ponta, compliance com LGPD, servidores seguros no Brasil, backups automáticos e monitoramento 24/7. Todos os dados são processados em território nacional seguindo as melhores práticas de segurança.'
-  }, {
-    id: 7,
-    category: 'api',
-    question: 'A LEGAL oferece APIs para integração?',
-    answer: 'Sim! Temos uma API robusta e bem documentada que permite integração com sistemas existentes como CRM, ERP, plataformas de pagamento e outras ferramentas. Nossa API REST é fácil de implementar e conta com suporte técnico dedicado.'
-  }, {
-    id: 8,
-    category: 'api',
-    question: 'Como posso acessar a documentação da API?',
-    answer: 'A documentação completa da API está disponível em nosso portal para desenvolvedores. Você encontrará exemplos de código, guias de integração, referência de endpoints e sandbox para testes. Acesse através do portal BLUE ou entre em contato com nosso suporte técnico.'
-  }, {
-    id: 9,
-    category: 'account',
-    question: 'Como criar uma conta no portal BLUE?',
-    answer: 'É simples! Acesse blue.operadora.legal, clique em "Criar Conta" e preencha seus dados. Você receberá um email de confirmação e poderá começar a usar nossa plataforma imediatamente. O processo leva menos de 5 minutos.'
-  }, {
-    id: 10,
-    category: 'account',
-    question: 'Esqueci minha senha, como recuperar?',
-    answer: 'Na tela de login do portal BLUE, clique em "Esqueci minha senha", digite seu email cadastrado e siga as instruções que serão enviadas. O processo é seguro e você receberá um link temporário para redefinir sua senha.'
-  }, {
-    id: 11,
-    category: 'smart-events',
-    question: 'Qual o tempo de implementação do Smart Events™?',
-    answer: 'O tempo varia conforme a complexidade do evento. Para eventos básicos, a implementação pode ser feita em 24-48 horas. Eventos mais complexos com múltiplos dispositivos IoT podem levar de 1-2 semanas. Nossa equipe faz um cronograma detalhado para cada projeto.'
-  }, {
-    id: 12,
-    category: 'technical',
-    question: 'O que acontece se a internet falhar durante o evento?',
-    answer: 'Nossa plataforma tem redundância e sistemas offline. Os dispositivos continuam coletando dados localmente e sincronizam quando a conexão é restabelecida. Temos também parcerias com provedores de internet para backup de conectividade em eventos críticos.'
-  }];
+  const faqs = [
+    // AI - Inteligência Artificial
+    {
+      id: 1,
+      category: 'ai',
+      question: 'O que são as soluções de IA da LEGAL?',
+      answer: 'Nossa unidade de negócios AI oferece soluções de inteligência artificial como LinkAI para networking inteligente, FacePass para reconhecimento facial, FitScore para análise de compatibilidade e muito mais. Todas baseadas em machine learning avançado.'
+    },
+    {
+      id: 2,
+      category: 'ai',
+      question: 'Como o LinkAI funciona em eventos?',
+      answer: 'O LinkAI analisa perfis de participantes e sugere conexões personalizadas com 95% de precisão. Utiliza algoritmos de machine learning que consideram objetivos profissionais, interesses e networking preferences para maximizar o valor das conexões.'
+    },
+    {
+      id: 3,
+      category: 'ai',
+      question: 'O FacePass é seguro e está em compliance?',
+      answer: 'Sim! O FacePass utiliza criptografia avançada, é 100% compatível com LGPD, processa dados apenas no Brasil e oferece controle total aos usuários sobre suas informações biométricas. A privacidade é nossa prioridade.'
+    },
+    {
+      id: 4,
+      category: 'ai',
+      question: 'Como implementar soluções de IA nos meus eventos?',
+      answer: 'Nossa equipe técnica faz toda a implementação. O processo inclui análise de necessidades, configuração personalizada, treinamento da equipe e suporte 24/7 durante o evento. Implementação padrão em 2-4 semanas.'
+    },
+
+    // AERO - Drones e Logística
+    {
+      id: 5,
+      category: 'aero',
+      question: 'Que tipos de serviços a AERO oferece?',
+      answer: 'A AERO é nossa divisão de drones e logística que oferece delivery aéreo, lavagem de edifícios com drones, inspeções industriais, mapeamento aéreo e soluções logísticas inovadoras para eventos e empresas.'
+    },
+    {
+      id: 6,
+      category: 'aero',
+      question: 'Como funciona o AeroDelivery para eventos?',
+      answer: 'Nossos drones fazem entregas rápidas e precisas dentro de eventos, transportando desde brindes até equipamentos. Operamos com total segurança, seguindo regulamentações da ANAC e com pilotos certificados.'
+    },
+    {
+      id: 7,
+      category: 'aero',
+      question: 'A AERO oferece serviços de limpeza predial?',
+      answer: 'Sim! O AeroWash revoluciona a limpeza de fachadas com drones especializados. Mais seguro, rápido e eficiente que métodos tradicionais. Ideal para edifícios altos e estruturas de difícil acesso.'
+    },
+    {
+      id: 8,
+      category: 'aero',
+      question: 'Quais são os requisitos para contratar serviços AERO?',
+      answer: 'Fazemos análise prévia do local, verificamos regulamentações locais, definimos zona de voo segura e obtemos autorizações necessárias. Nossa equipe cuida de toda a burocracia e compliance.'
+    },
+
+    // ALUGUE - Equipamentos
+    {
+      id: 9,
+      category: 'alugue',
+      question: 'Que tipos de equipamentos posso alugar?',
+      answer: 'Oferecemos amplo catálogo: equipamentos de som, iluminação, projeção, mobiliário para eventos, dispositivos IoT, câmeras, estruturas modulares, geradores e muito mais. Tudo para seu evento ser perfeito.'
+    },
+    {
+      id: 10,
+      category: 'alugue',
+      question: 'Como funciona o processo de aluguel?',
+      answer: 'Simples: escolha os equipamentos, defina período de locação, receba orçamento personalizado, confirmamos disponibilidade e fazemos entrega/montagem no local. Suporte técnico incluído durante todo o evento.'
+    },
+    {
+      id: 11,
+      category: 'alugue',
+      question: 'Vocês fazem entrega e montagem?',
+      answer: 'Sim! Temos equipe técnica especializada que cuida de toda logística: transporte, montagem, configuração, testes e suporte durante o evento. Também fazemos desmontagem e retirada pós-evento.'
+    },
+    {
+      id: 12,
+      category: 'alugue',
+      question: 'Qual o prazo mínimo de antecedência para aluguel?',
+      answer: 'Recomendamos 15 dias para garantir disponibilidade, mas atendemos demandas urgentes conforme estoque. Para eventos grandes ou equipamentos específicos, sugerimos 30 dias de antecedência.'
+    },
+
+    // ASSINATURA - Serviços
+    {
+      id: 13,
+      category: 'assinatura',
+      question: 'O que inclui o plano de assinatura LEGAL?',
+      answer: 'Nossos planos de assinatura incluem acesso ao portal BLUE, créditos mensais para usar produtos LEGAL, suporte prioritário, desconto em equipamentos, acesso antecipado a novos produtos e muito mais.'
+    },
+    {
+      id: 14,
+      category: 'assinatura',
+      question: 'Como funcionam os créditos mensais?',
+      answer: 'Cada plano inclui créditos que podem ser usados em qualquer produto LEGAL: IA, equipamentos, drones, analytics. Créditos não utilizados acumulam por até 12 meses. Flexibilidade total para suas necessidades.'
+    },
+    {
+      id: 15,
+      category: 'assinatura',
+      question: 'Posso cancelar minha assinatura a qualquer momento?',
+      answer: 'Sim! Não temos fidelidade. Pode cancelar quando quiser através do portal BLUE. Créditos restantes permanecem válidos por 90 dias após cancelamento para você usar.'
+    },
+    {
+      id: 16,
+      category: 'assinatura',
+      question: 'Existe desconto para assinatura anual?',
+      answer: 'Sim! Assinatura anual tem 20% de desconto, créditos extras de bônus e benefícios exclusivos como acesso beta a novos produtos e consultoria estratégica inclusa.'
+    }
+  ];
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) || faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
@@ -240,6 +281,62 @@ const FAQPage = () => {
                   </Button>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Tutorial Section with Wag */}
+        <section 
+          className="py-20 px-4 relative overflow-hidden"
+          style={{
+            background: 'linear-gradient(135deg, #4d2bfb 0%, #020cbc 100%)'
+          }}
+        >
+          <div className="container mx-auto relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+              <div className="flex-1 text-center lg:text-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-unica">
+                  Primeiros passos na LEGAL?
+                </h2>
+                <p className="text-xl text-white/90 mb-4 font-unica">
+                  Tutorial passo a passo de como funciona os serviços da LEGAL
+                </p>
+                <p className="text-lg text-white/80 mb-8 font-unica">
+                  Com: Wag Sansevero
+                </p>
+                <Button 
+                  size="lg" 
+                  className="bg-legal-green hover:bg-legal-green/90 text-white px-8 py-4 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                >
+                  ASSISTIR AGORA
+                </Button>
+              </div>
+              <div className="flex-1 max-w-md">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-legal-green/20 to-transparent rounded-full blur-3xl"></div>
+                  <img
+                    src="/lovable-uploads/3f2fca6f-dacf-423f-8d06-20257b27a74e.png"
+                    alt="Wag Sansevero - Fundador da LEGAL"
+                    className="relative z-10 w-full h-auto rounded-full shadow-2xl border-4 border-white/20"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Background Icons */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 left-10 w-16 h-16 opacity-10">
+              <MessageCircle className="w-full h-full text-white" />
+            </div>
+            <div className="absolute top-40 right-20 w-12 h-12 opacity-10">
+              <Phone className="w-full h-full text-white" />
+            </div>
+            <div className="absolute bottom-20 left-20 w-20 h-20 opacity-10">
+              <Mail className="w-full h-full text-white" />
+            </div>
+            <div className="absolute bottom-40 right-10 w-14 h-14 opacity-10">
+              <Search className="w-full h-full text-white" />
             </div>
           </div>
         </section>
