@@ -58,8 +58,8 @@ const contactInfo = [
   {
     icon: <Clock className="w-6 h-6" />,
     title: "Horário de Atendimento",
-    content: "Segunda a Sexta: 9h às 18h",
-    subcontent: "Sábado: 9h às 12h"
+    content: "Segunda a Sexta: 8h às 20h",
+    subcontent: "Sábado: 8h às 14h"
   }
 ];
 
@@ -361,7 +361,7 @@ const ContatoPage = () => {
             <div>
               <Card className="bg-card border-legal/20 shadow-xl">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-legal mb-6">Escritório Principal</h3>
+                  <h3 className="text-2xl font-bold text-legal mb-6">Monte Olimpo</h3>
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
                       <MapPin className="w-5 h-5 text-legal-cyan mt-1" />
@@ -376,8 +376,8 @@ const ContatoPage = () => {
                       <Clock className="w-5 h-5 text-legal-cyan" />
                       <div>
                         <p className="font-medium">Horário de Funcionamento</p>
-                        <p className="text-muted-foreground">Segunda a Sexta: 9h às 18h</p>
-                        <p className="text-muted-foreground">Sábado: 9h às 12h</p>
+                        <p className="text-muted-foreground">Segunda a Sexta: 8h às 20h</p>
+                        <p className="text-muted-foreground">Sábado: 8h às 14h</p>
                       </div>
                     </div>
                   </div>
