@@ -48,7 +48,7 @@ const openPositions = [
   {
     title: "Desenvolvedor(a) Full Stack",
     department: "Tecnologia",
-    location: "Remoto",
+    location: "Presencial",
     type: "CLT",
     level: "Pleno",
     description: "Desenvolvimento de soluções tecnológicas para eventos e negócios utilizando React, Node.js e tecnologias modernas.",
@@ -59,7 +59,7 @@ const openPositions = [
   {
     title: "Desenvolvedor(a) Full Stack",
     department: "Tecnologia",
-    location: "Remoto",
+    location: "Presencial",
     type: "CLT",
     level: "Sênior",
     description: "Desenvolvimento e arquitetura de soluções tecnológicas complexas, mentoria de desenvolvedores e liderança técnica.",
