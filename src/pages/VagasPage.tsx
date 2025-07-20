@@ -174,7 +174,11 @@ const VagasPage = () => {
             Faça parte da maior TechCo de eventos e negócios do Brasil. Aqui, transformar ideias em realidade é regra.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in animation-delay-600">
-            <Button size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
+            <Button 
+              size="lg" 
+              className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold"
+              onClick={() => document.getElementById('oportunidades')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Ver Oportunidades
             </Button>
             <Button size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
@@ -185,7 +189,7 @@ const VagasPage = () => {
       </section>
 
       {/* Open Positions Section */}
-      <section className="py-16 md:py-24">
+      <section id="oportunidades" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <SectionTitle
             title="OPORTUNIDADES ABERTAS"
