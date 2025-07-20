@@ -27,39 +27,39 @@ const leadership = [
 
 const teamMembers = [
   {
-    name: "Ana Silva",
-    role: "Tech Lead",
+    name: "Bruno Sabino",
+    role: "Analista de Suporte",
     department: "Tecnologia",
     avatar: "/placeholder.svg"
   },
   {
-    name: "Carlos Santos",
-    role: "Product Manager",
-    department: "Produto",
+    name: "João Parolini",
+    role: "Assistente de Suporte",
+    department: "Tecnologia",
     avatar: "/placeholder.svg"
   },
   {
-    name: "Marina Costa",
-    role: "UX/UI Designer",
-    department: "Design",
+    name: "Jessica Machado",
+    role: "Consultora de Tecnologia",
+    department: "Comercial",
     avatar: "/placeholder.svg"
   },
   {
-    name: "Rafael Oliveira",
-    role: "DevOps Engineer",
-    department: "Infraestrutura",
+    name: "Ionara Nobre",
+    role: "Consultora de Tecnologia",
+    department: "Comercial",
     avatar: "/placeholder.svg"
   },
   {
-    name: "Juliana Ferreira",
-    role: "Marketing Manager",
-    department: "Marketing",
+    name: "Paulla Emanuella",
+    role: "Consultora de Tecnologia",
+    department: "Comercial",
     avatar: "/placeholder.svg"
   },
   {
-    name: "Lucas Rodrigues",
-    role: "Sales Executive",
-    department: "Vendas",
+    name: "Gustavo Macedo",
+    role: "Dev Full Stack 1",
+    department: "Tecnologia",
     avatar: "/placeholder.svg"
   }
 ];
@@ -209,11 +209,11 @@ const TimePage = () => {
           />
           <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">15+</div>
+              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">11+</div>
               <p className="text-lg font-light">Anos de Experiência</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">50+</div>
+              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">8+</div>
               <p className="text-lg font-light">Colaboradores</p>
             </div>
             <div className="text-center">
@@ -221,7 +221,7 @@ const TimePage = () => {
               <p className="text-lg font-light">Clientes Atendidos</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">100K+</div>
+              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">170K+</div>
               <p className="text-lg font-light">Conexões Criadas</p>
             </div>
           </div>
