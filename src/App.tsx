@@ -27,6 +27,7 @@ import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
 import VagasPage from "./pages/VagasPage";
 import ContatoPage from "./pages/ContatoPage";
+import CandidaturaPage from "./pages/CandidaturaPage";
 import UniversoPage from "./pages/UniversoPage";
 import TecTecPage from "./pages/universo/TecTecPage";
 import HistoriasPage from "./pages/universo/HistoriasPage";
@@ -91,6 +92,7 @@ const App = () => {
               <Route path="/missao-visao-valores" element={<MissaoVisaoValoresPage />} />
               <Route path="/time" element={<TimePage />} />
               <Route path="/vagas" element={<VagasPage />} />
+              <Route path="/candidatura" element={<CandidaturaPage />} />
               
               {/* Negócios section */}
               <Route path="/negocios" element={<NegociosPage />} />
