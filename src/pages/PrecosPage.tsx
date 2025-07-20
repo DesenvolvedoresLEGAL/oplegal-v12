@@ -70,11 +70,11 @@ const PrecosPage = () => {
           {/* Categorias de Serviços */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('locacao-fwa')}>
-              <h3 className="text-xl font-bold text-white mb-2">Locação de Internet</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Aluguel de Internet para Eventos</h3>
               <p className="text-white/80 text-sm">Preços dinâmicos por evento</p>
             </Card>
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('assinatura-fwa')}>
-              <h3 className="text-xl font-bold text-white mb-2">Assinatura</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Planos de Assinatura de Internet</h3>
               <p className="text-white/80 text-sm">Planos mensais e anuais</p>
             </Card>
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('servicos-drone')}>
