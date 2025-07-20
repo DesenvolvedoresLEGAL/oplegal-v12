@@ -14,9 +14,10 @@ const CandidaturaPage = () => {
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
-    telefone: '',
+    whatsapp: '',
     vaga: '',
     experiencia: '',
+    linkedin: '',
     motivacao: '',
     curriculo: null as File | null,
     termos: false
@@ -53,9 +54,10 @@ const CandidaturaPage = () => {
     setFormData({
       nome: '',
       email: '',
-      telefone: '',
+      whatsapp: '',
       vaga: '',
       experiencia: '',
+      linkedin: '',
       motivacao: '',
       curriculo: null,
       termos: false
@@ -73,7 +75,7 @@ const CandidaturaPage = () => {
     <div className="bg-background text-foreground font-unica min-h-screen">
       {/* Header */}
       <section className="py-16 bg-gradient-to-br from-legal to-legal-purple text-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
           <Link 
             to="/vagas" 
             className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors"
@@ -85,7 +87,7 @@ const CandidaturaPage = () => {
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-wider mb-4">
             CANDIDATURA
           </h1>
-          <p className="text-lg md:text-xl font-light max-w-2xl">
+          <p className="text-lg md:text-xl font-light max-w-2xl mx-auto">
             Faça parte do time que está conectando 1 milhão de pessoas, negócios e coisas no Brasil até 2030.
           </p>
         </div>
@@ -130,11 +132,11 @@ const CandidaturaPage = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="telefone">Telefone *</Label>
+                      <Label htmlFor="whatsapp">WhatsApp *</Label>
                       <Input
-                        id="telefone"
-                        value={formData.telefone}
-                        onChange={(e) => setFormData(prev => ({ ...prev, telefone: e.target.value }))}
+                        id="whatsapp"
+                        value={formData.whatsapp}
+                        onChange={(e) => setFormData(prev => ({ ...prev, whatsapp: e.target.value }))}
                         required
                         className="mt-1"
                       />
@@ -182,6 +184,18 @@ const CandidaturaPage = () => {
                     placeholder="Conte sobre sua motivação para trabalhar na LEGAL..."
                     required
                     className="mt-1 min-h-[100px]"
+                  />
+                </div>
+
+                {/* LinkedIn */}
+                <div>
+                  <Label htmlFor="linkedin">Perfil do LinkedIn</Label>
+                  <Input
+                    id="linkedin"
+                    value={formData.linkedin}
+                    onChange={(e) => setFormData(prev => ({ ...prev, linkedin: e.target.value }))}
+                    placeholder="https://linkedin.com/in/seu-perfil"
+                    className="mt-1"
                   />
                 </div>
 
