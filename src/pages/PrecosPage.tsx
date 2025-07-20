@@ -90,7 +90,7 @@ const PrecosPage = () => {
           {/* Locação FWA 5G */}
           <Card id="locacao-fwa" className="p-8 mb-12 bg-white/5 backdrop-blur-sm border-white/10">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-white">Locação FWA 5G</h2>
+              <h2 className="text-2xl font-bold text-white">Aluguel de Internet</h2>
             </div>
             
             <p className="text-white/90 text-lg mb-8 text-center">
