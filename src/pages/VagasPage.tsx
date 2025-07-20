@@ -132,27 +132,27 @@ const processSteps = [
   },
   {
     step: "02",
-    title: "Triagem",
+    title: "Etapa 1: Triagem",
     description: "Nossa equipe de People analisa seu perfil e experiências."
   },
   {
     step: "03",
-    title: "Entrevista RH",
-    description: "Bate-papo sobre fit cultural e alinhamento com nossos valores."
-  },
-  {
-    step: "04",
-    title: "Entrevista Online",
+    title: "Etapa 2: Entrevista Online",
     description: "Conversa online para conhecer suas habilidades e experiências."
   },
   {
+    step: "04",
+    title: "Etapa 3: Entrevista Presencial",
+    description: "Bate-papo presencial sobre fit cultural e alinhamento com nossos valores."
+  },
+  {
     step: "05",
-    title: "Entrevista Final",
-    description: "Conversa com o time e liderança da área."
+    title: "Análise FitScore",
+    description: "Avaliação completa do seu perfil e compatibilidade com a vaga."
   },
   {
     step: "06",
-    title: "Proposta",
+    title: "Contratação",
     description: "Apresentação da proposta e boas-vindas ao time LEGAL!"
   }
 ];
