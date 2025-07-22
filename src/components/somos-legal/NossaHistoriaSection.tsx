@@ -81,20 +81,20 @@ const NossaHistoriaSection = () => {
               {historia.map((item, index) => (
                 <CarouselItem key={`${item.year}-${index}`} className="pl-4 basis-80 md:basis-96 flex-shrink-0">
                   <div className="relative">
-                    {/* Barra de progresso animada */}
-                    <div className="absolute -top-2 left-0 right-0 h-1 bg-gray-200 rounded-full overflow-hidden">
-                      <div 
-                        className={`h-full bg-gradient-to-r from-legal-purple to-legal-cyan transition-all duration-[4000ms] ease-linear ${
-                          currentSlide === index ? 'w-full' : 'w-0'
-                        }`}
-                      />
-                    </div>
                     <TimelineItem 
                       year={item.year} 
                       event={item.event} 
                       index={index}
                       hideTimeline
                     />
+                    {/* Barra de progresso animada */}
+                    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gray-200 rounded-full overflow-hidden">
+                      <div 
+                        className={`h-full bg-gradient-to-r from-legal-purple to-legal-cyan transition-all duration-[4000ms] ease-linear ${
+                          currentSlide === index ? 'w-full' : 'w-0'
+                        }`}
+                      />
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
