@@ -80,21 +80,41 @@ const NossaHistoriaSection = () => {
             <CarouselContent className="ml-4">
               {historia.map((item, index) => (
                 <CarouselItem key={`${item.year}-${index}`} className="pl-4 basis-80 md:basis-96 flex-shrink-0">
-                  <div className="relative">
+                  <div className="relative overflow-hidden">
                     <TimelineItem 
                       year={item.year} 
                       event={item.event} 
                       index={index}
                       hideTimeline
                     />
-                    {/* Barra de progresso animada */}
-                    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gray-200 rounded-full overflow-hidden">
-                      <div 
-                        className={`h-full bg-gradient-to-r from-legal-purple to-legal-cyan transition-all duration-[4000ms] ease-linear ${
-                          currentSlide === index ? 'w-full' : 'w-0'
-                        }`}
-                      />
-                    </div>
+                    {/* Efeito de scan holográfico futurista */}
+                    <div 
+                      className={`absolute inset-0 bg-gradient-to-r from-transparent via-legal-cyan/20 to-transparent transform -skew-x-12 transition-all duration-[4000ms] ease-linear ${
+                        currentSlide === index ? 'translate-x-full' : '-translate-x-full'
+                      }`}
+                      style={{
+                        background: currentSlide === index 
+                          ? 'linear-gradient(90deg, transparent 0%, rgba(3, 249, 255, 0.3) 30%, rgba(2, 12, 188, 0.4) 50%, rgba(77, 43, 251, 0.3) 70%, transparent 100%)'
+                          : 'transparent'
+                      }}
+                    />
+                    {/* Borda neon pulsante quando ativo */}
+                    <div 
+                      className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+                        currentSlide === index 
+                          ? 'shadow-[0_0_20px_rgba(3,249,255,0.5)] border border-legal-cyan/50' 
+                          : ''
+                      }`}
+                    />
+                    {/* Partículas de energia nos cantos */}
+                    {currentSlide === index && (
+                      <>
+                        <div className="absolute top-2 right-2 w-2 h-2 bg-legal-cyan rounded-full animate-pulse" />
+                        <div className="absolute top-4 right-6 w-1 h-1 bg-legal-purple rounded-full animate-ping" />
+                        <div className="absolute bottom-2 left-2 w-2 h-2 bg-legal rounded-full animate-pulse" />
+                        <div className="absolute bottom-4 left-6 w-1 h-1 bg-legal-cyan rounded-full animate-ping" />
+                      </>
+                    )}
                   </div>
                 </CarouselItem>
               ))}
