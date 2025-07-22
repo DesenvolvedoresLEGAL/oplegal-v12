@@ -88,31 +88,29 @@ const NossaHistoriaSection = () => {
                       hideTimeline
                     />
                     
-                    {/* Efeito Matrix - Chuva de código */}
-                    {currentSlide === index && (
-                      <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-xl">
-                        {/* Linhas de código descendo */}
-                        <div className="absolute top-0 left-4 w-0.5 h-full bg-gradient-to-b from-legal-cyan via-legal-purple to-transparent opacity-60 animate-pulse" />
-                        <div className="absolute top-0 right-8 w-0.5 h-full bg-gradient-to-b from-legal-purple via-legal-cyan to-transparent opacity-40 animate-pulse delay-1000" />
-                        <div className="absolute top-0 left-1/2 w-0.5 h-full bg-gradient-to-b from-legal via-legal-purple to-transparent opacity-50 animate-pulse delay-500" />
-                        
-                        {/* Pontos de energia flutuantes */}
-                        <div className="absolute top-4 left-4 w-1 h-1 bg-legal-cyan rounded-full animate-bounce" />
-                        <div className="absolute top-8 right-6 w-1 h-1 bg-legal-purple rounded-full animate-bounce delay-300" />
-                        <div className="absolute bottom-8 left-8 w-1 h-1 bg-legal rounded-full animate-bounce delay-700" />
-                        <div className="absolute bottom-4 right-4 w-1 h-1 bg-legal-cyan rounded-full animate-bounce delay-1000" />
-                        
-                        {/* Pulso de energia nas bordas */}
-                        <div className="absolute inset-0 rounded-xl border border-legal-cyan/30 animate-pulse" />
-                        <div className="absolute inset-1 rounded-xl border border-legal-purple/20 animate-pulse delay-500" />
-                      </div>
-                    )}
+                    {/* Efeito profissional: barra de progresso lateral elegante */}
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-200 rounded-r-full overflow-hidden">
+                      <div 
+                        className={`w-full bg-gradient-to-b from-legal-purple via-legal to-legal-cyan transition-all duration-[4000ms] ease-out ${
+                          currentSlide === index ? 'h-full' : 'h-0'
+                        }`}
+                      />
+                    </div>
                     
-                    {/* Glow effect quando ativo */}
+                    {/* Indicador de status ativo discreto */}
                     <div 
-                      className={`absolute inset-0 rounded-xl transition-all duration-1000 ${
+                      className={`absolute -left-2 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full border-2 border-white transition-all duration-300 ${
                         currentSlide === index 
-                          ? 'shadow-[0_0_30px_rgba(3,249,255,0.3),inset_0_0_30px_rgba(77,43,251,0.1)]' 
+                          ? 'bg-legal-purple shadow-lg scale-110' 
+                          : 'bg-gray-300 scale-100'
+                      }`}
+                    />
+                    
+                    {/* Subtle highlight quando ativo */}
+                    <div 
+                      className={`absolute inset-0 rounded-xl transition-all duration-500 ${
+                        currentSlide === index 
+                          ? 'bg-gradient-to-r from-legal-purple/5 to-legal-cyan/5 shadow-xl' 
                           : ''
                       }`}
                     />
