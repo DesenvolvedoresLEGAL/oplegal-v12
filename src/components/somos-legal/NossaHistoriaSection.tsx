@@ -80,41 +80,42 @@ const NossaHistoriaSection = () => {
             <CarouselContent className="ml-4">
               {historia.map((item, index) => (
                 <CarouselItem key={`${item.year}-${index}`} className="pl-4 basis-80 md:basis-96 flex-shrink-0">
-                  <div className="relative overflow-hidden">
+                  <div className="relative group">
                     <TimelineItem 
                       year={item.year} 
                       event={item.event} 
                       index={index}
                       hideTimeline
                     />
-                    {/* Efeito de scan holográfico futurista */}
+                    
+                    {/* Efeito Matrix - Chuva de código */}
+                    {currentSlide === index && (
+                      <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-xl">
+                        {/* Linhas de código descendo */}
+                        <div className="absolute top-0 left-4 w-0.5 h-full bg-gradient-to-b from-legal-cyan via-legal-purple to-transparent opacity-60 animate-pulse" />
+                        <div className="absolute top-0 right-8 w-0.5 h-full bg-gradient-to-b from-legal-purple via-legal-cyan to-transparent opacity-40 animate-pulse delay-1000" />
+                        <div className="absolute top-0 left-1/2 w-0.5 h-full bg-gradient-to-b from-legal via-legal-purple to-transparent opacity-50 animate-pulse delay-500" />
+                        
+                        {/* Pontos de energia flutuantes */}
+                        <div className="absolute top-4 left-4 w-1 h-1 bg-legal-cyan rounded-full animate-bounce" />
+                        <div className="absolute top-8 right-6 w-1 h-1 bg-legal-purple rounded-full animate-bounce delay-300" />
+                        <div className="absolute bottom-8 left-8 w-1 h-1 bg-legal rounded-full animate-bounce delay-700" />
+                        <div className="absolute bottom-4 right-4 w-1 h-1 bg-legal-cyan rounded-full animate-bounce delay-1000" />
+                        
+                        {/* Pulso de energia nas bordas */}
+                        <div className="absolute inset-0 rounded-xl border border-legal-cyan/30 animate-pulse" />
+                        <div className="absolute inset-1 rounded-xl border border-legal-purple/20 animate-pulse delay-500" />
+                      </div>
+                    )}
+                    
+                    {/* Glow effect quando ativo */}
                     <div 
-                      className={`absolute inset-0 bg-gradient-to-r from-transparent via-legal-cyan/20 to-transparent transform -skew-x-12 transition-all duration-[4000ms] ease-linear ${
-                        currentSlide === index ? 'translate-x-full' : '-translate-x-full'
-                      }`}
-                      style={{
-                        background: currentSlide === index 
-                          ? 'linear-gradient(90deg, transparent 0%, rgba(3, 249, 255, 0.3) 30%, rgba(2, 12, 188, 0.4) 50%, rgba(77, 43, 251, 0.3) 70%, transparent 100%)'
-                          : 'transparent'
-                      }}
-                    />
-                    {/* Borda neon pulsante quando ativo */}
-                    <div 
-                      className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+                      className={`absolute inset-0 rounded-xl transition-all duration-1000 ${
                         currentSlide === index 
-                          ? 'shadow-[0_0_20px_rgba(3,249,255,0.5)] border border-legal-cyan/50' 
+                          ? 'shadow-[0_0_30px_rgba(3,249,255,0.3),inset_0_0_30px_rgba(77,43,251,0.1)]' 
                           : ''
                       }`}
                     />
-                    {/* Partículas de energia nos cantos */}
-                    {currentSlide === index && (
-                      <>
-                        <div className="absolute top-2 right-2 w-2 h-2 bg-legal-cyan rounded-full animate-pulse" />
-                        <div className="absolute top-4 right-6 w-1 h-1 bg-legal-purple rounded-full animate-ping" />
-                        <div className="absolute bottom-2 left-2 w-2 h-2 bg-legal rounded-full animate-pulse" />
-                        <div className="absolute bottom-4 left-6 w-1 h-1 bg-legal-cyan rounded-full animate-ping" />
-                      </>
-                    )}
                   </div>
                 </CarouselItem>
               ))}
