@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import TimelineItem from './TimelineItem';
 import {
@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const historia = [
   { year: "2010", event: "Wagner tem a ideia de instalar WiFi em seu carro." },
@@ -37,6 +38,18 @@ const historia = [
 ];
 
 const NossaHistoriaSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [api, setApi] = useState<any>();
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!api) return;
+
+    api.on("select", () => {
+      setCurrentSlide(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -48,13 +61,18 @@ const NossaHistoriaSection = () => {
         
         {/* Timeline horizontal */}
         <div className="relative mt-16">
-          {/* Linha principal horizontal */}
-          <div className="absolute top-8 left-8 right-8 h-1 bg-legal-purple/20 hidden md:block"></div>
-          
           <Carousel
+            setApi={setApi}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+                stopOnMouseEnter: true,
+              }),
+            ]}
             opts={{
               align: "start",
-              loop: false,
+              loop: true,
               slidesToScroll: 1,
             }}
             className="w-full max-w-full"
@@ -62,18 +80,43 @@ const NossaHistoriaSection = () => {
             <CarouselContent className="ml-4">
               {historia.map((item, index) => (
                 <CarouselItem key={`${item.year}-${index}`} className="pl-4 basis-80 md:basis-96 flex-shrink-0">
-                  <TimelineItem 
-                    year={item.year} 
-                    event={item.event} 
-                    index={index}
-                  />
+                  <div className="relative">
+                    {/* Barra de progresso animada */}
+                    <div className="absolute -top-2 left-0 right-0 h-1 bg-gray-200 rounded-full overflow-hidden">
+                      <div 
+                        className={`h-full bg-gradient-to-r from-legal-purple to-legal-cyan transition-all duration-[4000ms] ease-linear ${
+                          currentSlide === index ? 'w-full' : 'w-0'
+                        }`}
+                      />
+                    </div>
+                    <TimelineItem 
+                      year={item.year} 
+                      event={item.event} 
+                      index={index}
+                      hideTimeline
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
             
             {/* Controles do carrossel */}
-            <div className="flex justify-center mt-8 gap-4">
+            <div className="flex justify-center items-center mt-8 gap-4">
               <CarouselPrevious className="relative transform-none bg-legal-purple hover:bg-legal-purple/90 text-white border-legal-purple" />
+              
+              {/* Indicadores de slide */}
+              <div className="flex gap-2">
+                {historia.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      currentSlide === index ? 'bg-legal-purple w-8' : 'bg-gray-300'
+                    }`}
+                    onClick={() => api?.scrollTo(index)}
+                  />
+                ))}
+              </div>
+              
               <CarouselNext className="relative transform-none bg-legal-purple hover:bg-legal-purple/90 text-white border-legal-purple" />
             </div>
           </Carousel>
@@ -81,7 +124,7 @@ const NossaHistoriaSection = () => {
           {/* Indicador de progresso */}
           <div className="flex justify-center mt-6">
             <p className="text-sm text-gray-600">
-              Deslize para ver toda nossa jornada → {historia.length} marcos importantes
+              {currentSlide + 1} de {historia.length} marcos importantes • Pausa automática ao passar o mouse
             </p>
           </div>
         </div>
