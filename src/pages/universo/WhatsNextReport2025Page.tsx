@@ -14,72 +14,75 @@ const WhatsNextReport2025Page: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-        {/* Hero Section */}
-        <section className="relative py-16 bg-gradient-to-r from-legal-purple via-legal to-legal-cyan overflow-hidden">
+        {/* Hero Banner - Only Image */}
+        <section className="relative h-96 overflow-hidden">
           <div className="absolute inset-0">
             <img 
               src="/lovable-uploads/498773ad-6c8f-4974-ae6b-8e2542cb81d1.png" 
-              alt="5G Future Report Background"
-              className="w-full h-full object-cover opacity-20"
+              alt="LEGAL WHATS NEXT REPORT 2025"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-legal-purple/80 via-legal/80 to-legal-cyan/80"></div>
           </div>
           
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="flex items-center gap-4 mb-6">
-              <Link 
-                to="/universo/pesquisas/whitepapers" 
-                className="text-white/80 hover:text-white transition-colors"
-              >
-                <ArrowLeft className="w-6 h-6" />
-              </Link>
-              <div className="flex-1">
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                  🔮 LEGAL WHATS NEXT REPORT 2025
-                </h1>
-                <p className="text-xl md:text-2xl text-white/90 max-w-4xl mb-6">
-                  O futuro da conectividade FWA 5G no Brasil — insights estratégicos para empresas e eventos que querem liderar a nova era da internet sem fio.
-                </p>
-                <p className="text-lg text-white/80 max-w-3xl mb-8">
-                  Descubra os principais dados, tendências, casos reais e recomendações que vão guiar sua empresa ou evento para um 2025 mais conectado, competitivo e inteligente.
-                </p>
-                
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center gap-2 text-white/80">
-                    <Calendar className="w-5 h-5" />
-                    <span>Publicado: 02/03/2025</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white/80">
-                    <Clock className="w-5 h-5" />
-                    <span>Leitura: 15 min</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white/80">
-                    <FileText className="w-5 h-5" />
-                    <span>9 páginas</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white/80">
-                    <Download className="w-5 h-5" />
-                    <span>166 downloads</span>
-                  </div>
-                </div>
+          <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
+            <Link 
+              to="/universo/pesquisas/whitepapers" 
+              className="text-white/80 hover:text-white transition-colors absolute top-8 left-4"
+            >
+              <ArrowLeft className="w-6 h-6" />
+            </Link>
+          </div>
+        </section>
 
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" className="bg-white text-legal hover:bg-white/90">
-                    <Download className="w-5 h-5 mr-2" />
-                    📥 Baixar versão em PDF
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                    <ExternalLink className="w-5 h-5 mr-2" />
-                    🚀 Quero receber atualizações da LEGAL
-                  </Button>
+        {/* Content Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                🔮 LEGAL WHATS NEXT REPORT 2025
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-6">
+                O futuro da conectividade FWA 5G no Brasil — insights estratégicos para empresas e eventos que querem liderar a nova era da internet sem fio.
+              </p>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                Descubra os principais dados, tendências, casos reais e recomendações que vão guiar sua empresa ou evento para um 2025 mais conectado, competitivo e inteligente.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-6 mb-8 text-gray-600">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-legal" />
+                  <span>Publicado: 02/03/2025</span>
                 </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-5 h-5 text-legal" />
+                  <span>Leitura: 15 min</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-legal" />
+                  <span>9 páginas</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Download className="w-5 h-5 text-legal" />
+                  <span>166 downloads</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button size="lg" className="bg-legal hover:bg-legal-purple">
+                  <Download className="w-5 h-5 mr-2" />
+                  📥 Baixar versão em PDF
+                </Button>
+                <Button size="lg" variant="outline" className="border-legal text-legal hover:bg-legal/10">
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  🚀 Quero receber atualizações da LEGAL
+                </Button>
               </div>
             </div>
           </div>
         </section>
 
         {/* Content Sections */}
-        <section className="py-16">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 max-w-4xl">
             
             {/* Section 1 */}
