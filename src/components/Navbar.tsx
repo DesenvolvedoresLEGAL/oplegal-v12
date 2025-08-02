@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench } from "lucide-react";
+import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -316,6 +316,13 @@ const Navbar = () => {
                               <p className="text-xs text-gray-500">Conteúdos, Dicas e Ferramentas</p>
                             </div>
                           </Link>
+                          <Link to="/universo/pesquisas" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <TrendingUp className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Pesquisas</div>
+                              <p className="text-xs text-gray-500">Whitepapers e pesquisas de mercado</p>
+                            </div>
+                          </Link>
                         </div>
                       </div>
 
@@ -495,9 +502,12 @@ const Navbar = () => {
               <Link to="/universo/bits" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 BITS
               </Link>
-              <Link to="/universo/recursos" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Recursos
-              </Link>
+               <Link to="/universo/recursos" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                 Recursos
+               </Link>
+               <Link to="/universo/pesquisas" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                 Pesquisas
+               </Link>
               <Link to="/universo/imprensa" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 Imprensa
               </Link>
