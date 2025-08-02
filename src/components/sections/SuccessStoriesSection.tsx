@@ -10,22 +10,40 @@ import OptimizedImage from "../OptimizedImage";
 const SuccessStoriesSection = () => {
   const stories = [
     {
-      title: "Hospital Sírio-Libanês",
-      description: "Implementação do Smart Events™ no congresso médico anual com mais de 5.000 participantes, resultando em 40% mais interações e redução de 30% nos custos operacionais.",
+      title: "MONKS",
+      description: "Participante do FORUM ECOMMERCE BRASIL 2025 destacou a excelência da conectividade LEGAL, que permitiu apresentações fluidas e networking eficiente durante todo o evento.",
       image: "https://images.unsplash.com/photo-1631549916768-4119b4220292",
-      link: "/universo/historias/sirio-libanes"
+      link: "/universo/historias/monks",
+      logo: "https://via.placeholder.com/120x60/020cbc/ffffff?text=MONKS",
+      testimonial: {
+        author: "Lincon",
+        role: "Marketing",
+        company: "MONKS"
+      }
     },
     {
-      title: "VTEX DAY",
-      description: "Maior evento de varejo e tecnologia da América Latina utilizou soluções AERO para conectar mais de 15.000 pessoas com zero falhas de rede mesmo em picos de uso.",
+      title: "ONFLY",
+      description: "No FORUM ECOMMERCE BRASIL 2025, a ONFLY experimentou conectividade de classe mundial que suportou todas as suas atividades digitais sem interrupções.",
       image: "https://images.unsplash.com/photo-1540304453527-62f979142a17",
-      link: "/universo/historias/vtex-day"
+      link: "/universo/historias/onfly",
+      logo: "https://via.placeholder.com/120x60/4d2bfb/ffffff?text=ONFLY",
+      testimonial: {
+        author: "Carol",
+        role: "Marketing",
+        company: "ONFLY"
+      }
     },
     {
-      title: "Campus Party Brasil",
-      description: "Implementação de FacePass™ reduziu o tempo de checkin em 80% e melhorou a experiência do visitante com IA para recomendações personalizadas.",
+      title: "CHINA LINK",
+      description: "Participação no FORUM ECOMMERCE BRASIL 2025 foi marcada pela infraestrutura tecnológica robusta da LEGAL, garantindo conexões estáveis para todas as operações.",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678",
-      link: "/universo/historias/campus-party"
+      link: "/universo/historias/china-link",
+      logo: "https://via.placeholder.com/120x60/03f9ff/000000?text=CHINA+LINK",
+      testimonial: {
+        author: "Jéssica",
+        role: "Marketing",
+        company: "CHINA LINK"
+      }
     }
   ];
 
@@ -51,12 +69,28 @@ const SuccessStoriesSection = () => {
                 />
               </div>
               <CardContent className="p-6 flex-grow">
-                <h3 className="text-xl font-bold mb-2 text-legal">{story.title}</h3>
-                <p className="text-gray-700">{story.description}</p>
+                {/* Logo da empresa */}
+                <div className="mb-4 flex justify-center">
+                  <img 
+                    src={story.logo} 
+                    alt={`Logo ${story.title}`}
+                    className="h-12 object-contain"
+                  />
+                </div>
+                
+                <h3 className="text-xl font-bold mb-2 text-legal text-center">{story.title}</h3>
+                <p className="text-gray-700 mb-4 text-center italic">"{story.description}"</p>
+                
+                {/* Depoimento */}
+                <div className="text-center border-t pt-4">
+                  <p className="font-semibold text-legal">{story.testimonial.author}</p>
+                  <p className="text-sm text-gray-600">{story.testimonial.role}</p>
+                  <p className="text-xs text-gray-500 mt-1">{story.testimonial.company}</p>
+                </div>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Link to={story.link}>
-                  <Button variant="ghost" className="text-legal hover:text-legal/90 p-0 flex items-center">
+                <Link to={story.link} className="w-full">
+                  <Button variant="ghost" className="text-legal hover:text-legal/90 p-0 flex items-center justify-center w-full">
                     Ler caso completo <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
