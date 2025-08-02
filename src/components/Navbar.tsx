@@ -309,13 +309,6 @@ const Navbar = () => {
                               <p className="text-xs text-gray-500">Programa de Fidelidade da LEGAL</p>
                             </div>
                           </Link>
-                          <Link to="/universo/recursos" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
-                            <FileText className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
-                            <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Recursos</div>
-                              <p className="text-xs text-gray-500">Conteúdos, Dicas e Ferramentas</p>
-                            </div>
-                          </Link>
                           <Link to="/universo/pesquisas" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
                             <TrendingUp className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
@@ -330,6 +323,13 @@ const Navbar = () => {
                       <div>
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Suporte & Transparência</h3>
                         <div className="space-y-3">
+                          <Link to="/universo/recursos" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <FileText className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Recursos</div>
+                              <p className="text-xs text-gray-500">Conteúdos, Dicas e Ferramentas</p>
+                            </div>
+                          </Link>
                           <Link to="/universo/imprensa" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
                             <Newspaper className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
