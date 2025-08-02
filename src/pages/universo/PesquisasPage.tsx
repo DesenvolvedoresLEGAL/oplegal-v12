@@ -55,15 +55,17 @@ const PesquisasPage: React.FC = () => {
                 </Card>
               </Link>
 
-              <Card className="text-center">
-                <CardHeader>
-                  <FileText className="w-12 h-12 text-legal mx-auto mb-4" />
-                  <CardTitle>Whitepapers Técnicos</CardTitle>
-                  <CardDescription>
-                    Guias detalhados sobre implementação de tecnologias em eventos
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              <Link to="/universo/pesquisas/whitepapers" className="block">
+                <Card className="text-center hover:shadow-lg transition-all duration-300 group cursor-pointer h-full">
+                  <CardHeader>
+                    <FileText className="w-12 h-12 text-legal mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <CardTitle className="group-hover:text-legal transition-colors">Whitepapers Técnicos</CardTitle>
+                    <CardDescription>
+                      Guias detalhados sobre implementação de tecnologias em eventos
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
 
               <Card className="text-center">
                 <CardHeader>
