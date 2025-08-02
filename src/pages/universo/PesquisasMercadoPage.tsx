@@ -30,11 +30,11 @@ const pesquisas: Pesquisa[] = [
     categoria: 'Inteligência Artificial',
     status: 'ativa',
     dataInicio: '2025-01-15',
-    dataFim: '2025-03-31',
-    tempoEstimado: '8-12 min',
-    participantes: 247,
+    dataFim: '2025-12-31',
+    tempoEstimado: '5 min',
+    participantes: 0,
     metaParticipantes: 1000,
-    linkPesquisa: '#',
+    linkPesquisa: '/universo/pesquisas/mercado/mapeamento-ia-2025',
     recompensa: 'Relatório executivo gratuito',
     tags: ['IA', 'Empresas', 'Brasil', 'Transformação Digital']
   }
@@ -225,10 +225,10 @@ const PesquisasMercadoPage: React.FC = () => {
                         className="bg-legal hover:bg-legal-purple flex-1 md:flex-none"
                         disabled={pesquisa.status !== 'ativa'}
                       >
-                        <a href={pesquisa.linkPesquisa} target="_blank" rel="noopener noreferrer">
+                        <Link to={pesquisa.linkPesquisa}>
                           {pesquisa.status === 'ativa' ? 'Participar Agora' : 'Indisponível'}
                           {pesquisa.status === 'ativa' && <ExternalLink className="w-4 h-4 ml-2" />}
-                        </a>
+                        </Link>
                       </Button>
                       
                       <Button variant="outline" size="lg">
