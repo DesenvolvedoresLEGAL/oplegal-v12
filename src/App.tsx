@@ -36,6 +36,7 @@ import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
 import RecursosPage from "./pages/universo/RecursosPage";
 import PesquisasPage from "./pages/universo/PesquisasPage";
+import PesquisasMercadoPage from "./pages/universo/PesquisasMercadoPage";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
 import Blue6Page from "./pages/produtos/Blue6Page";
 import BrilixPage from "./pages/produtos/BrilixPage";
@@ -117,6 +118,7 @@ const App = () => {
               <Route path="/universo/bits" element={<BitsPage />} />
                <Route path="/universo/recursos" element={<RecursosPage />} />
                <Route path="/universo/pesquisas" element={<PesquisasPage />} />
+               <Route path="/universo/pesquisas/mercado" element={<PesquisasMercadoPage />} />
                <Route path="/universo/imprensa" element={<ImprensaPage />} />
                <Route path="/universo/status" element={<StatusPage />} />
                <Route path="/universo/faq" element={<FAQPage />} />

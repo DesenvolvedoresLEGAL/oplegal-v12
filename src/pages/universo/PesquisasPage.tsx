@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Download, ExternalLink, FileText, TrendingUp, Users, Calendar, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -42,15 +43,17 @@ const PesquisasPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <Card className="text-center">
-                <CardHeader>
-                  <TrendingUp className="w-12 h-12 text-legal mx-auto mb-4" />
-                  <CardTitle>Pesquisas de Mercado</CardTitle>
-                  <CardDescription>
-                    Análises profundas sobre tendências e oportunidades no setor de eventos
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              <Link to="/universo/pesquisas/mercado" className="block">
+                <Card className="text-center hover:shadow-lg transition-all duration-300 group cursor-pointer h-full">
+                  <CardHeader>
+                    <TrendingUp className="w-12 h-12 text-legal mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <CardTitle className="group-hover:text-legal transition-colors">Pesquisas de Mercado</CardTitle>
+                    <CardDescription>
+                      Participe de pesquisas ativas e contribua com dados do setor de eventos
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
 
               <Card className="text-center">
                 <CardHeader>
