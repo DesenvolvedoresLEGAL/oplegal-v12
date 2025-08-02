@@ -15,7 +15,7 @@ const WhatsNextReport2025Page: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Banner - Only Image */}
-        <section className="relative h-96 overflow-hidden">
+        <section className="relative h-[600px] overflow-hidden">
           <div className="absolute inset-0">
             <img 
               src="/lovable-uploads/498773ad-6c8f-4974-ae6b-8e2542cb81d1.png" 
@@ -24,10 +24,10 @@ const WhatsNextReport2025Page: React.FC = () => {
             />
           </div>
           
-          <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
+          <div className="container mx-auto px-4 relative z-10 h-full flex items-start">
             <Link 
               to="/universo/pesquisas/whitepapers" 
-              className="text-white/80 hover:text-white transition-colors absolute top-8 left-4"
+              className="text-white hover:text-white/80 transition-colors absolute top-8 left-4"
             >
               <ArrowLeft className="w-6 h-6" />
             </Link>
