@@ -39,6 +39,7 @@ import PesquisasPage from "./pages/universo/PesquisasPage";
 import PesquisasMercadoPage from "./pages/universo/PesquisasMercadoPage";
 import MapeamentoIAPage from "./pages/universo/MapeamentoIAPage";
 import WhitepapersPage from "./pages/universo/WhitepapersPage";
+import WhatsNextReport2025Page from "./pages/universo/WhatsNextReport2025Page";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
 import Blue6Page from "./pages/produtos/Blue6Page";
 import BrilixPage from "./pages/produtos/BrilixPage";
@@ -122,8 +123,9 @@ const App = () => {
                <Route path="/universo/pesquisas" element={<PesquisasPage />} />
                <Route path="/universo/pesquisas/mercado" element={<PesquisasMercadoPage />} />
                <Route path="/universo/pesquisas/mercado/mapeamento-ia-2025" element={<MapeamentoIAPage />} />
-               <Route path="/universo/pesquisas/whitepapers" element={<WhitepapersPage />} />
-               <Route path="/universo/imprensa" element={<ImprensaPage />} />
+                <Route path="/universo/pesquisas/whitepapers" element={<WhitepapersPage />} />
+                <Route path="/universo/pesquisas/whitepapers/whats-next-report-2025" element={<WhatsNextReport2025Page />} />
+                <Route path="/universo/imprensa" element={<ImprensaPage />} />
                <Route path="/universo/status" element={<StatusPage />} />
                <Route path="/universo/faq" element={<FAQPage />} />
               

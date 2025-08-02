@@ -27,6 +27,23 @@ interface Whitepaper {
 const whitepapers: Whitepaper[] = [
   {
     id: '1',
+    title: 'LEGAL WHATS NEXT REPORT 2025',
+    description: 'O futuro da conectividade FWA 5G no Brasil — insights estratégicos para empresas e eventos que querem liderar a nova era da internet sem fio.',
+    category: 'Conectividade 5G',
+    publishDate: '2025-03-02',
+    readTime: '15 min',
+    downloads: 166,
+    views: 1234,
+    pages: 9,
+    thumbnail: '/lovable-uploads/498773ad-6c8f-4974-ae6b-8e2542cb81d1.png',
+    downloadUrl: '#',
+    previewUrl: '/universo/pesquisas/whitepapers/whats-next-report-2025',
+    tags: ['5G', 'FWA', 'Conectividade', 'Tendências'],
+    author: 'Equipe LEGAL',
+    featured: true
+  },
+  {
+    id: '2',
     title: 'O Futuro dos Smart Events: Guia Completo para Transformação Digital',
     description: 'Um guia abrangente sobre como implementar tecnologias inteligentes em eventos corporativos, incluindo IA, IoT, analytics e automação. Cases reais e métricas de ROI comprovado.',
     category: 'Smart Events',
@@ -39,24 +56,7 @@ const whitepapers: Whitepaper[] = [
     downloadUrl: '#',
     previewUrl: '#',
     tags: ['Smart Events', 'Transformação Digital', 'IA', 'ROI'],
-    author: 'Equipe LEGAL',
-    featured: true
-  },
-  {
-    id: '2',
-    title: 'Inteligência Artificial em Eventos: Da Teoria à Prática',
-    description: 'Whitepaper técnico detalhando implementação de IA em eventos: chatbots, análise preditiva, personalização e automação. Inclui framework de implementação e casos de uso.',
-    category: 'Inteligência Artificial',
-    publishDate: '2024-11-20',
-    readTime: '35 min',
-    downloads: 1234,
-    views: 3892,
-    pages: 58,
-    thumbnail: '/lovable-uploads/3f2fca6f-dacf-423f-8d06-20257b27a74e.png',
-    downloadUrl: '#',
-    previewUrl: '#',
-    tags: ['IA', 'Chatbots', 'Automação', 'Framework'],
-    author: 'Dr. Ana Silva, CTO LEGAL'
+    author: 'Equipe LEGAL'
   },
   {
     id: '3',
@@ -123,6 +123,7 @@ const WhitepapersPage: React.FC = () => {
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
+      'Conectividade 5G': 'bg-legal-cyan/10 text-legal-cyan',
       'Smart Events': 'bg-legal/10 text-legal',
       'Inteligência Artificial': 'bg-legal-purple/10 text-legal-purple',
       'ESG & Sustentabilidade': 'bg-green-100 text-green-800',
