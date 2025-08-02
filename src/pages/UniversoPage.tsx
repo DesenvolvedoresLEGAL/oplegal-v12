@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, Users, Zap, Newspaper, Activity, HelpCircle, ExternalLink } from 'lucide-react';
+import { Search, BookOpen, Users, Zap, Newspaper, Activity, HelpCircle, ExternalLink, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -40,6 +40,13 @@ const UniversoPage = () => {
       icon: <BookOpen className="w-8 h-8 text-legal" />,
       link: '/universo/recursos',
       color: 'from-legal to-legal-purple'
+    },
+    {
+      title: 'Pesquisas',
+      description: 'Whitepapers e pesquisas de mercado',
+      icon: <TrendingUp className="w-8 h-8 text-legal" />,
+      link: '/universo/pesquisas',
+      color: 'from-legal-purple to-legal-cyan'
     },
     {
       title: 'Imprensa',
