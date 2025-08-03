@@ -7,6 +7,8 @@ import { X, Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const NewsletterExitPopup = () => {
+  console.log('NewsletterExitPopup component rendered');
+  
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -16,16 +18,24 @@ const NewsletterExitPopup = () => {
 
   // Função para testar o popup
   const testPopup = () => {
+    console.log('Teste do popup acionado');
     setIsOpen(true);
   };
 
   useEffect(() => {
     console.log('NewsletterExitPopup useEffect inicializado');
     
+    // Para debug, vamos forçar o popup aparecer após 3 segundos
+    const debugTimer = setTimeout(() => {
+      console.log('Debug timer - forçando popup');
+      setIsOpen(true);
+    }, 3000);
+    
     // Check if popup was already shown in this session
     const popupShown = sessionStorage.getItem('newsletter-popup-shown');
     if (popupShown) {
       console.log('Popup já foi mostrado nesta sessão');
+      clearTimeout(debugTimer);
       setHasShown(true);
       return;
     }
@@ -76,6 +86,9 @@ const NewsletterExitPopup = () => {
       }
       if (fallbackTimer) {
         clearTimeout(fallbackTimer);
+      }
+      if (debugTimer) {
+        clearTimeout(debugTimer);
       }
     };
   }, [hasShown]);
