@@ -62,7 +62,7 @@ const Navbar = () => {
                       
                       {/* Conectividade & WiFi */}
                       <div>
-                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Conectividade & WiFi</h3>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Conectividade & WiFi & Gadgets</h3>
                         <div className="space-y-3">
                           <Link to="/produtos/blue6" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
                             <Wifi className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
@@ -76,6 +76,13 @@ const Navbar = () => {
                             <div>
                               <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Speedy 5G</div>
                               <p className="text-xs text-gray-500">Internet Plug and Play</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/plaud" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <MessageCircle className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Plaud</div>
+                              <p className="text-xs text-gray-500">Gravação de Voz com IA</p>
                             </div>
                           </Link>
                         </div>
@@ -378,7 +385,7 @@ const Navbar = () => {
             <Input
               type="text"
               placeholder="Buscar produtos, conteúdos..."
-              className="pl-10 pr-4 py-2 w-64 border-gray-300 focus:border-legal focus:ring-legal"
+              className="pl-10 pr-4 py-2 w-48 border-gray-300 focus:border-legal focus:ring-legal"
             />
           </div>
           
@@ -452,6 +459,9 @@ const Navbar = () => {
               </Link>
               <Link to="/produtos/speedy5g" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 Speedy 5G - Internet Plug and Play
+              </Link>
+              <Link to="/produtos/plaud" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                Plaud - Gravação de Voz com IA
               </Link>
             </div>
           </div>

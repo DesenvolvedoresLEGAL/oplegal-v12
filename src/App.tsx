@@ -52,6 +52,7 @@ import NuvyoPage from "./pages/produtos/NuvyoPage";
 import PingPage from "./pages/produtos/PingPage";
 import SonixPage from "./pages/produtos/SonixPage";
 import Speedy5GPage from "./pages/produtos/Speedy5GPage";
+import PlaudPage from "./pages/produtos/PlaudPage";
 import NeuraFitPage from "./pages/produtos/NeuraFitPage";
 import SkipLink from "./components/SkipLink";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -91,6 +92,7 @@ const App = () => {
               <Route path="/produtos/ping" element={<PingPage />} />
               <Route path="/produtos/sonix" element={<SonixPage />} />
               <Route path="/produtos/speedy5g" element={<Speedy5GPage />} />
+              <Route path="/produtos/plaud" element={<PlaudPage />} />
               
               {/* Somos LEGAL section - Redirect old route to new consolidated page */}
               <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
