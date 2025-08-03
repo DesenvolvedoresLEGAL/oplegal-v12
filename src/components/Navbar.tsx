@@ -141,13 +141,16 @@ const Navbar = () => {
                               <p className="text-xs text-gray-500">Robô para Geração de Negócios</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/vitai" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <a href="https://vitai.operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
                             <Heart className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
-                            <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">VitAI</div>
-                              <p className="text-xs text-gray-500">Hub de Gestão da Saúde</p>
+                            <div className="flex items-center">
+                              <div>
+                                <div className="text-sm font-medium text-gray-900 group-hover:text-legal">VitAI</div>
+                                <p className="text-xs text-gray-500">Hub de Gestão da Saúde</p>
+                              </div>
+                              <ExternalLink className="w-3 h-3 ml-2 text-gray-400" />
                             </div>
-                          </Link>
+                          </a>
                           <Link to="/produtos/neurafit" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
                             <Brain className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
