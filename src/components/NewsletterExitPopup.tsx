@@ -121,7 +121,7 @@ const NewsletterExitPopup = () => {
             <img 
               src="/lovable-uploads/e0a457bd-2c75-494f-bfb2-09582ac2b2a4.png" 
               alt="Senhora tricotando com cabos de rede" 
-              className="w-24 h-24 object-cover rounded-full mx-auto"
+              className="w-32 h-32 object-cover rounded-full mx-auto border-4 border-legal-blue/20"
             />
           </div>
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-legal-blue to-legal-purple bg-clip-text text-transparent">
