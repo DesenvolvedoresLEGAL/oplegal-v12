@@ -216,6 +216,34 @@ a:focus {
   100% { background-position: -200% 0; }
 }
 
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+.loading-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Reduce layout thrashing */
+.layout-stable {
+  contain: layout style paint;
+}
+
+/* Optimize reflows */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 /* Mobile-first responsive utilities */
 @media (max-width: 768px) {
   .text-responsive {
