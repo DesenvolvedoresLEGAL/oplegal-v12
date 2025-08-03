@@ -13,14 +13,14 @@ const leadership = [
     name: "Wagner",
     role: "CEO & Fundador",
     bio: "Visionário que transformou uma ideia de WiFi no carro na maior TechCo de eventos e negócios do Brasil.",
-    avatar: "/placeholder.svg",
+    avatar: "/lovable-uploads/220ece05-0c66-4a13-9776-2fc0ba324a1f.png",
     values: ["Visão Viva", "Execução Energizada"]
   },
   {
     name: "Glaucia",
     role: "CFO & Co-fundadora",
     bio: "Responsável pela reestruturação financeira e crescimento sustentável da LEGAL desde 2018.",
-    avatar: "/placeholder.svg",
+    avatar: "/lovable-uploads/fc9c1929-37eb-4943-b588-95dc78d59dc6.png",
     values: ["Resultados com Ressonância", "Alinhamento com Alma"]
   }
 ];
@@ -42,7 +42,7 @@ const teamMembers = [
     name: "Jessica Machado",
     role: "Consultora de Tecnologia",
     department: "Comercial",
-    avatar: "/placeholder.svg"
+    avatar: "/lovable-uploads/ab6e9137-1847-43f1-ba36-fe48fc86f960.png"
   },
   {
     name: "Ionara Nobre",
@@ -54,13 +54,13 @@ const teamMembers = [
     name: "Paulla Emanuella",
     role: "Consultora de Tecnologia",
     department: "Comercial",
-    avatar: "/placeholder.svg"
+    avatar: "/lovable-uploads/9147b3a6-7fde-4630-b72b-6de52176b2ae.png"
   },
   {
     name: "Gustavo Macedo",
     role: "Dev Full Stack 1",
     department: "Tecnologia",
-    avatar: "/placeholder.svg"
+    avatar: "/lovable-uploads/37354c92-0e52-4334-b1df-6e0df95df322.png"
   }
 ];
 
