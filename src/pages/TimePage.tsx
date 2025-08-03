@@ -12,7 +12,7 @@ const leadership = [
   {
     name: "Wagner",
     role: "CEO & Fundador",
-    bio: "Visionário que transformou uma ideia de WiFi no carro na maior TechCo de eventos e negócios do Brasil.",
+    bio: "Visionário que transformou uma ideia de WiFi veicular na maior e melhor TechCo do Brasil.",
     avatar: "/lovable-uploads/220ece05-0c66-4a13-9776-2fc0ba324a1f.png",
     values: ["Visão Viva", "Execução Energizada"]
   },
