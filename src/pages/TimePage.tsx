@@ -42,7 +42,7 @@ const teamMembers = [
     name: "Jessica Machado",
     role: "Consultora de Tecnologia",
     department: "Comercial",
-    avatar: "/lovable-uploads/ab6e9137-1847-43f1-ba36-fe48fc86f960.png"
+    avatar: "/lovable-uploads/9147b3a6-7fde-4630-b72b-6de52176b2ae.png"
   },
   {
     name: "Ionara Nobre",
@@ -54,7 +54,7 @@ const teamMembers = [
     name: "Paulla Emanuella",
     role: "Consultora de Tecnologia",
     department: "Comercial",
-    avatar: "/lovable-uploads/9147b3a6-7fde-4630-b72b-6de52176b2ae.png"
+    avatar: "/lovable-uploads/ab6e9137-1847-43f1-ba36-fe48fc86f960.png"
   },
   {
     name: "Gustavo Macedo",
