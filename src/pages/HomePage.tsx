@@ -8,6 +8,7 @@ import SuccessStoriesSection from "@/components/sections/SuccessStoriesSection";
 import FeaturedPosts from "@/components/tectec/FeaturedPosts";
 import CallToAction from "@/components/CallToAction";
 import ChatbotButton from "@/components/ChatbotButton";
+import NewsletterExitPopup from "@/components/NewsletterExitPopup";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
 
 const HomePage = () => {
@@ -45,6 +46,7 @@ const HomePage = () => {
         />
         
         <ChatbotButton />
+        <NewsletterExitPopup />
       </main>
     </>
   );
