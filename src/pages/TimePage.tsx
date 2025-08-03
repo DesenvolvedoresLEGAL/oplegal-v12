@@ -133,7 +133,7 @@ const TimePage = () => {
             {leadership.map((leader, index) => (
               <Card key={index} className="bg-card border-legal/30 shadow-xl hover:shadow-legal-cyan/30 transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
-                  <Avatar className="w-24 h-24 mx-auto mb-6">
+                  <Avatar className="w-32 h-32 mx-auto mb-6">
                     <AvatarImage 
                       src={leader.avatar} 
                       alt={leader.name} 
