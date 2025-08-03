@@ -7,8 +7,6 @@ import { X, Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const NewsletterExitPopup = () => {
-  console.log('NewsletterExitPopup component rendered');
-  
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -16,38 +14,20 @@ const NewsletterExitPopup = () => {
   const [hasShown, setHasShown] = useState(false);
   const { toast } = useToast();
 
-  // Função para testar o popup
-  const testPopup = () => {
-    console.log('Teste do popup acionado');
-    setIsOpen(true);
-  };
-
   useEffect(() => {
-    console.log('NewsletterExitPopup useEffect inicializado');
-    
-    // Para debug, vamos forçar o popup aparecer após 3 segundos
-    const debugTimer = setTimeout(() => {
-      console.log('Debug timer - forçando popup');
-      setIsOpen(true);
-    }, 3000);
-    
     // Check if popup was already shown in this session
     const popupShown = sessionStorage.getItem('newsletter-popup-shown');
     if (popupShown) {
-      console.log('Popup já foi mostrado nesta sessão');
-      clearTimeout(debugTimer);
       setHasShown(true);
       return;
     }
 
     let timeoutId: NodeJS.Timeout;
-    let fallbackTimer: NodeJS.Timeout;
 
     const handleMouseLeave = (e: MouseEvent) => {
-      console.log('Mouse leave detectado:', e.clientY, e.movementY);
-      // Detecção mais permissiva - mouse saindo pela parte superior ou movimento rápido para cima
-      if ((e.clientY <= 50 || (e.movementY && e.movementY < -5)) && !hasShown) {
-        console.log('Condições atendidas, mostrando popup');
+      // Only trigger if mouse is leaving from the top of the viewport
+      if (e.clientY <= 0 && !hasShown) {
+        // Add small delay to avoid accidental triggers
         timeoutId = setTimeout(() => {
           setIsOpen(true);
           setHasShown(true);
@@ -62,33 +42,14 @@ const NewsletterExitPopup = () => {
       }
     };
 
-    // Trigger alternativo: após 15 segundos se ainda estiver na página
-    fallbackTimer = setTimeout(() => {
-      console.log('Fallback timer acionado');
-      if (!hasShown) {
-        console.log('Mostrando popup via fallback');
-        setIsOpen(true);
-        setHasShown(true);
-        sessionStorage.setItem('newsletter-popup-shown', 'true');
-      }
-    }, 15000);
-
-    console.log('Adicionando event listeners');
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mouseenter', handleMouseEnter);
 
     return () => {
-      console.log('Removendo event listeners');
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseenter', handleMouseEnter);
       if (timeoutId) {
         clearTimeout(timeoutId);
-      }
-      if (fallbackTimer) {
-        clearTimeout(fallbackTimer);
-      }
-      if (debugTimer) {
-        clearTimeout(debugTimer);
       }
     };
   }, [hasShown]);
@@ -145,39 +106,28 @@ const NewsletterExitPopup = () => {
   };
 
   return (
-    <>
-      {/* Botão de teste temporário - remover em produção */}
-      <button 
-        onClick={testPopup}
-        className="fixed bottom-4 left-4 bg-red-500 text-white px-4 py-2 rounded-lg z-50 text-sm"
-      >
-        Testar Newsletter
-      </button>
-      
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-lg max-w-[95vw] max-h-[90vh] overflow-y-auto border-legal-blue relative"
-        style={{
-          backgroundImage: `url('/lovable-uploads/e0a457bd-2c75-494f-bfb2-09582ac2b2a4.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
-        <div className="relative z-10">
+      <DialogContent className="sm:max-w-md border-legal-blue">
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 z-20"
+          className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
         >
           <X className="h-4 w-4" />
           <span className="sr-only">Fechar</span>
         </button>
         
         <DialogHeader className="text-center pb-4">
-          <DialogTitle className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-legal-blue to-legal-purple bg-clip-text text-transparent">
+          <div className="mx-auto mb-4">
+            <img 
+              src="/lovable-uploads/e0a457bd-2c75-494f-bfb2-09582ac2b2a4.png" 
+              alt="Senhora tricotando com cabos de rede" 
+              className="w-36 h-36 object-cover rounded-full mx-auto border-4 border-legal-blue/20"
+            />
+          </div>
+          <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-legal-blue to-legal-purple bg-clip-text text-transparent">
             Fala comigo humanoide,
           </DialogTitle>
-          <DialogDescription className="text-gray-700 text-sm sm:text-base">
+          <DialogDescription className="text-gray-600">
             Cadastre-se em nossa newsletter e fique conectado com os mais variados temas de tecnologia e inovação.
           </DialogDescription>
         </DialogHeader>
@@ -232,14 +182,12 @@ const NewsletterExitPopup = () => {
         </form>
 
         <div className="text-center pt-2">
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-gray-500">
             Seus dados estão seguros. Não compartilhamos com terceiros.
           </p>
         </div>
-        </div>
       </DialogContent>
     </Dialog>
-    </>
   );
 };
 
