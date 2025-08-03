@@ -11,10 +11,10 @@ const SuccessStoriesSection = () => {
   const stories = [
     {
       title: "MONKS",
-      description: "Participante do FORUM ECOMMERCE BRASIL 2025 destacou a excelência da conectividade LEGAL, que permitiu apresentações fluidas e networking eficiente durante todo o evento.",
+      description: "A LEGAL foi nossa parceira pelo 2º ano no FORUM ECOMMERCE BRASIL em 2025. O atendimento com excelência e a conectividade super rápida nos permitiu conetar totem, realizar apresentações fluidas durante todo o evento.",
       image: "https://images.unsplash.com/photo-1631549916768-4119b4220292",
       link: "/universo/historias/monks",
-      logo: "https://via.placeholder.com/120x60/020cbc/ffffff?text=MONKS",
+      logo: "/lovable-uploads/99ea6d28-584d-43c5-9f73-e2ff2b1a6539.png",
       testimonial: {
         author: "Lincon",
         role: "Marketing",
@@ -23,10 +23,10 @@ const SuccessStoriesSection = () => {
     },
     {
       title: "ONFLY",
-      description: "No FORUM ECOMMERCE BRASIL 2025, a ONFLY experimentou conectividade de classe mundial que suportou todas as suas atividades digitais sem interrupções.",
+      description: "Tivemos a primeira experiência com a LEGAL no FORUM ECOMMERCE BRASIL 2025. Experimentamos o serviço de internet e não decepcionou. O evento foi um  sucesso e a parceria com a LEGAL se extenderá para outros eventos, obrigado time.",
       image: "https://images.unsplash.com/photo-1540304453527-62f979142a17",
       link: "/universo/historias/onfly",
-      logo: "https://via.placeholder.com/120x60/4d2bfb/ffffff?text=ONFLY",
+      logo: "/lovable-uploads/ea530ee5-86cf-42fb-994c-a41dbcaafa9f.png",
       testimonial: {
         author: "Carol",
         role: "Marketing",
@@ -35,10 +35,10 @@ const SuccessStoriesSection = () => {
     },
     {
       title: "CHINA LINK",
-      description: "Participação no FORUM ECOMMERCE BRASIL 2025 foi marcada pela infraestrutura tecnológica robusta da LEGAL, garantindo conexões estáveis para todas as operações.",
+      description: "Depois da decepção do ano passado com a internet do pavilhão, esse ano decidimos mudar para a LEGAL e o evento foi marcado por muitos negócios e a infraestrutura tecnológica robusta da LEGAL nos garantiu conexões estáveis para todas as operações.",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678",
       link: "/universo/historias/china-link",
-      logo: "https://via.placeholder.com/120x60/03f9ff/000000?text=CHINA+LINK",
+      logo: "/lovable-uploads/0f248c93-9f57-4742-9d91-2b001c6e6dad.png",
       testimonial: {
         author: "Jéssica",
         role: "Marketing",

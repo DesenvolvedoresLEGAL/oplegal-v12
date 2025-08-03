@@ -45,7 +45,7 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
       description: "Internet e tech sob demanda",
       icon: <Wifi className="w-8 h-8" strokeWidth={1.5} />,
       link: "/negocios/alugue",
-      features: ["Internet 5G", "Hardwares", "Suporte 24h"]
+      features: ["Internet 5G", "Rede & WiFi", "Gadgets"]
     },
     {
       title: "ASSINATURA",
@@ -58,7 +58,7 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
         <path d="M6 12h8"/>
       </svg>,
       link: "/negocios/assinatura",
-      features: ["Planos flexíveis", "Suporte dedicado", "Escalabilidade"]
+      features: ["Planos Sob Medida", "Links Backup", "SLA 99,9%"]
     }
   ];
 

@@ -106,6 +106,13 @@ const Navbar = () => {
                               <p className="text-xs text-gray-500">Credenciamento e Acesso Rápido</p>
                             </div>
                           </Link>
+                          <Link to="/produtos/linkai" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <Heart className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">LinkAI</div>
+                              <p className="text-xs text-gray-500">Matchmaking Inteligente</p>
+                            </div>
+                          </Link>
                           <Link to="/produtos/ping" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
                             <MessageCircle className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
@@ -134,11 +141,11 @@ const Navbar = () => {
                               <p className="text-xs text-gray-500">Robô para Geração de Negócios</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/linkai" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/vitai" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
                             <Heart className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">LinkAI</div>
-                              <p className="text-xs text-gray-500">Matchmaking Inteligente</p>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">VitAI</div>
+                              <p className="text-xs text-gray-500">Hub de Gestão da Saúde</p>
                             </div>
                           </Link>
                           <Link to="/produtos/neurafit" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
