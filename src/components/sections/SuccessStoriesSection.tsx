@@ -59,33 +59,24 @@ const SuccessStoriesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {stories.map((story, index) => (
             <Card key={index} className="overflow-hidden h-full flex flex-col hover:shadow-lg transition-all">
-              <div className="h-48 overflow-hidden">
-                <OptimizedImage
-                  src={story.image}
-                  alt={story.title}
-                  width={400}
-                  height={240}
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
-                />
-              </div>
-              <CardContent className="p-6 flex-grow">
-                {/* Logo da empresa */}
-                <div className="mb-4 flex justify-center">
+              <CardContent className="p-8 flex-grow text-center">
+                {/* Logo da empresa - MAIOR DESTAQUE */}
+                <div className="mb-8 flex justify-center">
                   <img 
                     src={story.logo} 
                     alt={`Logo ${story.title}`}
-                    className="h-12 object-contain"
+                    className="h-20 w-auto object-contain"
                   />
                 </div>
                 
-                <h3 className="text-xl font-bold mb-2 text-legal text-center">{story.title}</h3>
-                <p className="text-gray-700 mb-4 text-center italic">"{story.description}"</p>
+                <h3 className="text-2xl font-bold mb-6 text-legal">{story.title}</h3>
+                <p className="text-gray-700 mb-6 text-lg italic leading-relaxed">"{story.description}"</p>
                 
                 {/* Depoimento */}
-                <div className="text-center border-t pt-4">
-                  <p className="font-semibold text-legal">{story.testimonial.author}</p>
-                  <p className="text-sm text-gray-600">{story.testimonial.role}</p>
-                  <p className="text-xs text-gray-500 mt-1">{story.testimonial.company}</p>
+                <div className="border-t pt-6">
+                  <p className="font-semibold text-legal text-lg">{story.testimonial.author}</p>
+                  <p className="text-gray-600">{story.testimonial.role}</p>
+                  <p className="text-gray-500 mt-1">{story.testimonial.company}</p>
                 </div>
               </CardContent>
               <CardFooter className="p-6 pt-0">
