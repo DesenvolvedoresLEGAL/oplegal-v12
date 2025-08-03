@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { X, Mail, Gift } from 'lucide-react';
+import { X, Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const NewsletterExitPopup = () => {
@@ -117,24 +117,28 @@ const NewsletterExitPopup = () => {
         </button>
         
         <DialogHeader className="text-center pb-4">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-legal-blue to-legal-purple">
-            <Gift className="h-8 w-8 text-white" />
+          <div className="mx-auto mb-4">
+            <img 
+              src="/lovable-uploads/e0a457bd-2c75-494f-bfb2-09582ac2b2a4.png" 
+              alt="Senhora tricotando com cabos de rede" 
+              className="w-24 h-24 object-cover rounded-full mx-auto"
+            />
           </div>
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-legal-blue to-legal-purple bg-clip-text text-transparent">
-            Não perca nossos conteúdos exclusivos!
+            Fala comigo humanoide,
           </DialogTitle>
           <DialogDescription className="text-gray-600">
-            Cadastre-se na nossa newsletter e receba insights sobre Smart Events™, tendências de tecnologia e cases de sucesso.
+            se cadastre em nossa newsletter e fique conectado com os mais variados temas de tecnologia e inovação.
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Nome completo</Label>
+            <Label htmlFor="name">Seu primeiro nome</Label>
             <Input
               id="name"
               type="text"
-              placeholder="Seu nome"
+              placeholder="Seu primeiro nome"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="border-legal-blue/20 focus:border-legal-blue"
@@ -143,7 +147,7 @@ const NewsletterExitPopup = () => {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="email">E-mail</Label>
+            <Label htmlFor="email">Seu melhor e-mail</Label>
             <Input
               id="email"
               type="email"
@@ -159,7 +163,8 @@ const NewsletterExitPopup = () => {
             <Button
               type="submit"
               disabled={isLoading}
-              className="flex-1 bg-gradient-to-r from-legal-blue to-legal-purple hover:from-legal-blue/90 hover:to-legal-purple/90"
+              className="flex-1 hover:opacity-90"
+              style={{ backgroundColor: '#020CBC' }}
             >
               {isLoading ? (
                 <>
