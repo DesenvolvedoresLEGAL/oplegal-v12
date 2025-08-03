@@ -6,8 +6,15 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import SEOHead from '@/components/SEOHead';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { blogPosts, featuredPosts } from '@/data/TecTecData';
 
 // Dados dos produtos para busca
@@ -208,12 +215,17 @@ const SearchPage = () => {
       <div className="min-h-screen bg-background pt-20">
         <div className="container mx-auto px-4 py-8">
           {/* Breadcrumbs */}
-          <Breadcrumbs 
-            items={[
-              { label: 'Início', href: '/' },
-              { label: 'Buscar', href: '/busca' }
-            ]} 
-          />
+          <Breadcrumb className="mb-6">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Início</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Buscar</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
           {/* Header da Busca */}
           <div className="text-center mb-12">
