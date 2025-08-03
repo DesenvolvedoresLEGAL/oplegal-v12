@@ -30,13 +30,13 @@ const teamMembers = [
     name: "Bruno Sabino",
     role: "Analista de Suporte",
     department: "Tecnologia",
-    avatar: "/placeholder.svg"
+    avatar: "/lovable-uploads/4791a962-75ca-4df1-a2cf-06458c7a50f9.png"
   },
   {
     name: "João Parolini",
     role: "Assistente de Suporte",
     department: "Tecnologia",
-    avatar: "/placeholder.svg"
+    avatar: "/lovable-uploads/409a6cff-65e1-4ae6-afc3-41bc8ba21267.png"
   },
   {
     name: "Jessica Machado",
@@ -48,7 +48,7 @@ const teamMembers = [
     name: "Ionara Nobre",
     role: "Consultora de Tecnologia",
     department: "Comercial",
-    avatar: "/placeholder.svg"
+    avatar: "/lovable-uploads/ec8585f2-9fa4-4e5e-8828-2b478bc0fa8a.png"
   },
   {
     name: "Paulla Emanuella",
@@ -181,7 +181,7 @@ const TimePage = () => {
               <Card key={index} className="bg-card border-legal/20 shadow-lg hover:shadow-legal-cyan/20 transition-all duration-300 transform hover:-translate-y-1">
                 <CardContent className="p-6 text-center">
                   <Avatar className="w-16 h-16 mx-auto mb-4">
-                    <AvatarImage src={member.avatar} alt={member.name} />
+                    <AvatarImage src={member.avatar} alt={member.name} className="object-cover" />
                     <AvatarFallback className="bg-legal-purple text-white font-bold">
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </AvatarFallback>
