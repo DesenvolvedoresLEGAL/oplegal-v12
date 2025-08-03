@@ -14,20 +14,30 @@ const NewsletterExitPopup = () => {
   const [hasShown, setHasShown] = useState(false);
   const { toast } = useToast();
 
+  // Função para testar o popup
+  const testPopup = () => {
+    setIsOpen(true);
+  };
+
   useEffect(() => {
+    console.log('NewsletterExitPopup useEffect inicializado');
+    
     // Check if popup was already shown in this session
     const popupShown = sessionStorage.getItem('newsletter-popup-shown');
     if (popupShown) {
+      console.log('Popup já foi mostrado nesta sessão');
       setHasShown(true);
       return;
     }
 
     let timeoutId: NodeJS.Timeout;
+    let fallbackTimer: NodeJS.Timeout;
 
     const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse is leaving from the top of the viewport or moving fast towards top
-      if ((e.clientY <= 5 || e.movementY < -10) && !hasShown) {
-        // Add small delay to avoid accidental triggers
+      console.log('Mouse leave detectado:', e.clientY, e.movementY);
+      // Detecção mais permissiva - mouse saindo pela parte superior ou movimento rápido para cima
+      if ((e.clientY <= 50 || (e.movementY && e.movementY < -5)) && !hasShown) {
+        console.log('Condições atendidas, mostrando popup');
         timeoutId = setTimeout(() => {
           setIsOpen(true);
           setHasShown(true);
@@ -42,25 +52,31 @@ const NewsletterExitPopup = () => {
       }
     };
 
-    // Also add a fallback trigger after 30 seconds if user hasn't scrolled much
-    const fallbackTimer = setTimeout(() => {
-      if (!hasShown && window.scrollY < 1000) {
+    // Trigger alternativo: após 15 segundos se ainda estiver na página
+    fallbackTimer = setTimeout(() => {
+      console.log('Fallback timer acionado');
+      if (!hasShown) {
+        console.log('Mostrando popup via fallback');
         setIsOpen(true);
         setHasShown(true);
         sessionStorage.setItem('newsletter-popup-shown', 'true');
       }
-    }, 30000);
+    }, 15000);
 
+    console.log('Adicionando event listeners');
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mouseenter', handleMouseEnter);
 
     return () => {
+      console.log('Removendo event listeners');
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseenter', handleMouseEnter);
       if (timeoutId) {
         clearTimeout(timeoutId);
       }
-      clearTimeout(fallbackTimer);
+      if (fallbackTimer) {
+        clearTimeout(fallbackTimer);
+      }
     };
   }, [hasShown]);
 
@@ -116,6 +132,15 @@ const NewsletterExitPopup = () => {
   };
 
   return (
+    <>
+      {/* Botão de teste temporário - remover em produção */}
+      <button 
+        onClick={testPopup}
+        className="fixed bottom-4 left-4 bg-red-500 text-white px-4 py-2 rounded-lg z-50 text-sm"
+      >
+        Testar Newsletter
+      </button>
+      
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="sm:max-w-lg max-w-[95vw] max-h-[90vh] overflow-y-auto border-legal-blue relative"
         style={{
@@ -201,6 +226,7 @@ const NewsletterExitPopup = () => {
         </div>
       </DialogContent>
     </Dialog>
+    </>
   );
 };
 
