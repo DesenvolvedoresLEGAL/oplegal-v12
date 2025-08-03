@@ -7,39 +7,39 @@ const PlaudBenefits = () => {
   const benefits = [
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Aumento de 40% na Produtividade",
-      description: "Elimine a necessidade de tomar notas manuais e foque 100% na conversa. Tenha resumos automáticos em minutos.",
-      stats: "40% mais produtivo"
+      title: "Zero Investimento Inicial",
+      description: "Acesse tecnologia de ponta sem desembolso. Pague apenas pelo período de uso e tenha flexibilidade total para seus projetos.",
+      stats: "R$ 0 de entrada"
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Economia de 5h por Semana",
-      description: "Pare de perder tempo transcrevendo manualmente. O Plaud faz isso instantaneamente com precisão profissional.",
-      stats: "5h economizadas/semana"
+      title: "Locação Flexível",
+      description: "De 1 dia a 12 meses. Ideal para eventos pontuais, projetos temporários ou testes antes de uma aquisição futura.",
+      stats: "A partir de 1 dia"
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Precisão de 98% nas Transcrições",
-      description: "IA avançada garante transcrições precisas mesmo em ambientes ruidosos ou com múltiplos falantes.",
-      stats: "98% de precisão"
+      title: "Suporte Técnico Incluso",
+      description: "Configuração, treinamento e suporte durante todo período de locação. Nossa equipe garante que tudo funcione perfeitamente.",
+      stats: "Suporte 24/7"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Colaboração Aprimorada",
-      description: "Compartilhe resumos estruturados instantaneamente com sua equipe. Mantenha todos alinhados automaticamente.",
-      stats: "100% da equipe alinhada"
+      title: "Ideal para Eventos",
+      description: "Perfeito para conferências, workshops, reuniões importantes. Capture tudo e tenha documentação profissional instantânea.",
+      stats: "100% dos eventos cobertos"
     },
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      title: "Zero Perda de Informação",
-      description: "Nunca mais perca detalhes importantes. Capture tudo e acesse quando precisar com busca inteligente.",
-      stats: "0% de perda de dados"
+      title: "Sempre Atualizado",
+      description: "Equipamentos sempre com última versão de software e IA. Sem se preocupar com manutenção ou atualizações.",
+      stats: "Última versão garantida"
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Setup em 30 Segundos",
-      description: "Configuração ultra simples. Ligue, pareie e comece a gravar. Não precisa ser expert em tecnologia.",
-      stats: "30s para configurar"
+      title: "Entrega em 24h",
+      description: "Equipamentos entregues e configurados em até 24h na Grande São Paulo. Outras regiões em até 48h.",
+      stats: "Entrega em 24h"
     }
   ];
 
@@ -47,8 +47,8 @@ const PlaudBenefits = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Transforme sua Forma de Trabalhar"
-          subtitle="Descubra como o Plaud pode revolucionar sua produtividade e a qualidade das suas reuniões"
+          title="Vantagens da Locação Plaud"
+          subtitle="Acesse tecnologia de ponta sem investimento inicial. Flexibilidade e suporte completo para seus eventos e negócios"
           center={true}
         />
 
@@ -78,31 +78,31 @@ const PlaudBenefits = () => {
         {/* ROI Calculator Section */}
         <div className="bg-white rounded-2xl p-8 shadow-lg">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-legal mb-4">Calcule seu ROI com Plaud</h3>
-            <p className="text-gray-600">Veja quanto tempo e dinheiro você pode economizar</p>
+            <h3 className="text-2xl font-bold text-legal mb-4">Planos de Locação Flexíveis</h3>
+            <p className="text-gray-600">Escolha o plano ideal para seu evento ou projeto</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div className="bg-legal/5 rounded-xl p-6">
-              <div className="text-3xl font-bold text-legal mb-2">5h</div>
-              <div className="text-sm text-gray-600">Economizadas por semana</div>
+              <div className="text-3xl font-bold text-legal mb-2">R$ 150</div>
+              <div className="text-sm text-gray-600">Por dia (eventos)</div>
             </div>
             <div className="bg-legal-purple/5 rounded-xl p-6">
-              <div className="text-3xl font-bold text-legal-purple mb-2">20h</div>
-              <div className="text-sm text-gray-600">Economizadas por mês</div>
+              <div className="text-3xl font-bold text-legal-purple mb-2">R$ 800</div>
+              <div className="text-sm text-gray-600">Por semana (projetos)</div>
             </div>
             <div className="bg-legal-cyan/5 rounded-xl p-6">
-              <div className="text-3xl font-bold text-legal-cyan mb-2">R$ 2.400</div>
-              <div className="text-sm text-gray-600">Valor economizado/mês*</div>
+              <div className="text-3xl font-bold text-legal-cyan mb-2">R$ 2.500</div>
+              <div className="text-sm text-gray-600">Por mês (empresas)</div>
             </div>
             <div className="bg-legal-secondary/5 rounded-xl p-6">
-              <div className="text-3xl font-bold text-legal-secondary mb-2">300%</div>
-              <div className="text-sm text-gray-600">ROI em 6 meses</div>
+              <div className="text-3xl font-bold text-legal-secondary mb-2">Customizado</div>
+              <div className="text-sm text-gray-600">Projetos longos</div>
             </div>
           </div>
           
           <p className="text-xs text-gray-500 text-center mt-4">
-            *Cálculo baseado em salário médio de profissional sênior (R$ 120/hora)
+            *Valores incluem equipamento, suporte técnico e configuração. Descontos para locações acima de 30 dias.
           </p>
         </div>
       </div>

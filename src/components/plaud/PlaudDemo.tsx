@@ -94,15 +94,15 @@ const PlaudDemo = () => {
 
         {/* CTA Section */}
         <div className="mt-16 bg-white rounded-2xl p-8 text-center shadow-lg">
-          <h3 className="text-2xl font-bold text-legal mb-4">Teste Gratuitamente por 14 Dias</h3>
+          <h3 className="text-2xl font-bold text-legal mb-4">Solicite um Orçamento de Locação</h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Experimente todos os recursos do Plaud sem compromisso. Cancele quando quiser.
+            Receba uma proposta personalizada para seu evento ou projeto. Entrega rápida e suporte completo inclusos.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-legal text-white hover:bg-legal/90">
               <Download className="mr-2 h-5 w-5" />
-              Baixar App Gratuito
+              Solicitar Orçamento
             </Button>
             <Button size="lg" variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white">
               <Calendar className="mr-2 h-5 w-5" />
@@ -111,7 +111,7 @@ const PlaudDemo = () => {
           </div>
           
           <p className="text-xs text-gray-500 mt-4">
-            Não é necessário cartão de crédito • Cancelamento gratuito • Suporte em português
+            Entrega em 24h para Grande São Paulo • Suporte técnico incluso • Configuração gratuita
           </p>
         </div>
       </div>

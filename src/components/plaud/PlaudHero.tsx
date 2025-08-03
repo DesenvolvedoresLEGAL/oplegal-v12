@@ -24,14 +24,14 @@ const PlaudHero = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl mb-8 text-white/90 leading-relaxed">
-              Transforme suas conversas em insights valiosos. Grave, transcreva e resuma automaticamente 
-              em 112 idiomas para máxima produtividade.
+              Alugue o poder da IA para seus eventos e negócios. Grave, transcreva e resuma automaticamente 
+              em 112 idiomas sem investimento inicial. Flexibilidade total para suas necessidades.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button size="lg" className="bg-white text-legal hover:bg-white/90 font-semibold">
-                <Link to="/contato?produto=plaud" className="flex items-center">
-                  Solicitar Demonstração
+                <Link to="/contato?produto=plaud-locacao" className="flex items-center">
+                  Solicitar Orçamento de Locação
                   <PlayCircle className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -40,7 +40,7 @@ const PlaudHero = () => {
                 variant="outline" 
                 className="border-white text-white hover:bg-white hover:text-legal"
               >
-                Ver Especificações
+                Ver Planos de Locação
               </Button>
             </div>
             

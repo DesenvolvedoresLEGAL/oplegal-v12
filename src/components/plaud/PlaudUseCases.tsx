@@ -7,21 +7,21 @@ const PlaudUseCases = () => {
   const useCases = [
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Reuniões de Equipe",
-      description: "Capture decisões importantes, action items e insights sem perder o foco da discussão. Compartilhe resumos automáticos com todos os participantes.",
-      features: ["Identificação de speakers", "Extração de action items", "Resumos estruturados"]
+      title: "Eventos Corporativos",
+      description: "Perfeito para convenções, congressos e conferências. Capture todas as palestras e workshops principais sem perder nenhum insight importante.",
+      features: ["Locação por evento", "Suporte técnico no local", "Entrega e retirada inclusos"]
     },
     {
       icon: <Phone className="w-8 h-8" />,
-      title: "Chamadas Comerciais",
-      description: "Registre propostas, objeções e próximos passos em vendas. Analise padrões para melhorar sua taxa de conversão.",
-      features: ["Análise de sentimento", "Extração de objeções", "Follow-up automático"]
+      title: "Projetos Temporários",
+      description: "Ideal para consultorias, auditorias e projetos com prazo definido. Tenha documentação profissional sem investimento inicial.",
+      features: ["Locação flexível", "Configuração inclusa", "Suporte durante todo projeto"]
     },
     {
       icon: <GraduationCap className="w-8 h-8" />,
-      title: "Aulas e Treinamentos",
-      description: "Transforme palestras e workshops em material de estudo organizado. Crie resumos para revisão posterior.",
-      features: ["Divisão por tópicos", "Destacar conceitos-chave", "Criação de flashcards"]
+      title: "Treinamentos & Workshops",
+      description: "Transforme cursos e capacitações em material de estudo permanente. Ideal para empresas que promovem treinamentos regulares.",
+      features: ["Múltiplas sessões", "Material para revisão", "Distribuição automática"]
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
@@ -31,15 +31,15 @@ const PlaudUseCases = () => {
     },
     {
       icon: <FileText className="w-8 h-8" />,
-      title: "Brainstorming e Ideação",
-      description: "Capture todas as ideias criativas sem interromper o fluxo. Organize conceitos em categorias para desenvolvimento posterior.",
-      features: ["Categorização de ideias", "Priorização automática", "Mind maps gerados"]
+      title: "Startups & PMEs",
+      description: "Acesso à tecnologia avançada sem comprometer o capital de giro. Teste antes de decidir pela aquisição definitiva.",
+      features: ["Teste por período", "Sem investimento inicial", "Upgrade para compra"]
     },
     {
       icon: <Building className="w-8 h-8" />,
-      title: "Eventos Corporativos",
-      description: "Documente apresentações, workshops e networking. Crie atas profissionais e compartilhe conhecimento organizacional.",
-      features: ["Múltiplas sessões", "Integração com calendário", "Distribuição automática"]
+      title: "Grandes Corporações",
+      description: "Teste de tecnologia antes da implementação em escala. Avalie impacto e ROI antes de investimentos maiores.",
+      features: ["Pilot projects", "Múltiplas unidades", "Análise de performance"]
     }
   ];
 
@@ -47,8 +47,8 @@ const PlaudUseCases = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Casos de Uso do Plaud"
-          subtitle="Descubra como profissionais de diferentes áreas estão usando o Plaud para maximizar produtividade"
+          title="Casos de Uso da Locação Plaud"
+          subtitle="Descubra como diferentes tipos de empresas e eventos estão aproveitando a flexibilidade da locação"
           center={true}
         />
 

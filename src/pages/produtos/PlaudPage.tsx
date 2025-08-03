@@ -31,12 +31,12 @@ const PlaudPage = () => {
         <PlaudFAQ />
         
         <CallToAction
-          title="Revolucione sua produtividade com Plaud"
-          subtitle="Grave, transcreva e resuma automaticamente suas conversas mais importantes. Experimente o futuro da tomada de notas inteligente."
-          buttonText="Solicitar Demonstração"
-          buttonLink="/contato?produto=plaud"
-          secondaryButtonText="Ver Especificações"
-          secondaryButtonLink="#especificacoes"
+          title="Alugue o Plaud para seu próximo evento"
+          subtitle="Acesse tecnologia de ponta sem investimento inicial. Locação flexível, suporte completo e entrega rápida para toda sua necessidade."
+          buttonText="Solicitar Orçamento de Locação"
+          buttonLink="/contato?produto=plaud-locacao"
+          secondaryButtonText="Ver Planos de Locação"
+          secondaryButtonLink="#planos"
           background="gradient"
         />
         
