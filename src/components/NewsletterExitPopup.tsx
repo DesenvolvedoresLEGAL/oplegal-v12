@@ -25,8 +25,8 @@ const NewsletterExitPopup = () => {
     let timeoutId: NodeJS.Timeout;
 
     const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse is leaving from the top of the viewport
-      if (e.clientY <= 0 && !hasShown) {
+      // Only trigger if mouse is leaving from the top of the viewport or moving fast towards top
+      if ((e.clientY <= 5 || e.movementY < -10) && !hasShown) {
         // Add small delay to avoid accidental triggers
         timeoutId = setTimeout(() => {
           setIsOpen(true);
@@ -42,6 +42,15 @@ const NewsletterExitPopup = () => {
       }
     };
 
+    // Also add a fallback trigger after 30 seconds if user hasn't scrolled much
+    const fallbackTimer = setTimeout(() => {
+      if (!hasShown && window.scrollY < 1000) {
+        setIsOpen(true);
+        setHasShown(true);
+        sessionStorage.setItem('newsletter-popup-shown', 'true');
+      }
+    }, 30000);
+
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mouseenter', handleMouseEnter);
 
@@ -51,6 +60,7 @@ const NewsletterExitPopup = () => {
       if (timeoutId) {
         clearTimeout(timeoutId);
       }
+      clearTimeout(fallbackTimer);
     };
   }, [hasShown]);
 
