@@ -20,7 +20,7 @@ const leadership = [
     name: "Glaucia",
     role: "CFO & Co-fundadora",
     bio: "Responsável pela reestruturação financeira e crescimento sustentável da LEGAL desde 2018.",
-    avatar: "/lovable-uploads/fc9c1929-37eb-4943-b588-95dc78d59dc6.png",
+    avatar: "/lovable-uploads/f021f3b7-83a4-4684-b231-781e217a8261.png",
     values: ["Resultados com Ressonância", "Alinhamento com Alma"]
   }
 ];
@@ -61,6 +61,18 @@ const teamMembers = [
     role: "Dev Full Stack 1",
     department: "Tecnologia",
     avatar: "/lovable-uploads/37354c92-0e52-4334-b1df-6e0df95df322.png"
+  },
+  {
+    name: "Nathan Cortez",
+    role: "Assistente de Automação",
+    department: "Tecnologia",
+    avatar: "/lovable-uploads/08a7fc4f-babb-4592-bcfd-6c7e7a211bba.png"
+  },
+  {
+    name: "Daniele Tesser",
+    role: "Analista de CS",
+    department: "Relacionamento",
+    avatar: "/lovable-uploads/36102e60-647e-4517-ba26-a46508790bd2.png"
   }
 ];
 
@@ -213,7 +225,7 @@ const TimePage = () => {
               <p className="text-lg font-light">Anos de Experiência</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">8+</div>
+              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">10+</div>
               <p className="text-lg font-light">Colaboradores</p>
             </div>
             <div className="text-center">
