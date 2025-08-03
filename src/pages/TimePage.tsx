@@ -25,15 +25,15 @@ const teamMembers = [{
   department: "Tecnologia",
   avatar: "/lovable-uploads/4791a962-75ca-4df1-a2cf-06458c7a50f9.png"
 }, {
-  name: "João Parolini",
-  role: "Assistente de Suporte",
-  department: "Tecnologia",
-  avatar: "/lovable-uploads/409a6cff-65e1-4ae6-afc3-41bc8ba21267.png"
-}, {
   name: "Jessica Machado",
   role: "Consultora de Tecnologia",
   department: "Comercial",
   avatar: "/lovable-uploads/9147b3a6-7fde-4630-b72b-6de52176b2ae.png"
+}, {
+  name: "João Parolini",
+  role: "Assistente de Suporte",
+  department: "Tecnologia",
+  avatar: "/lovable-uploads/409a6cff-65e1-4ae6-afc3-41bc8ba21267.png"
 }, {
   name: "Ionara Nobre",
   role: "Consultora de Tecnologia",
