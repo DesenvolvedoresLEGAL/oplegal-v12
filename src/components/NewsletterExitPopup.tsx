@@ -107,27 +107,29 @@ const NewsletterExitPopup = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-md border-legal-blue">
+      <DialogContent className="sm:max-w-lg max-w-[95vw] max-h-[90vh] overflow-y-auto border-legal-blue relative"
+        style={{
+          backgroundImage: `url('/lovable-uploads/e0a457bd-2c75-494f-bfb2-09582ac2b2a4.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
+        <div className="relative z-10">
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 z-20"
         >
           <X className="h-4 w-4" />
           <span className="sr-only">Fechar</span>
         </button>
         
         <DialogHeader className="text-center pb-4">
-          <div className="mx-auto mb-2">
-            <img 
-              src="/lovable-uploads/e0a457bd-2c75-494f-bfb2-09582ac2b2a4.png" 
-              alt="Senhora tricotando com cabos de rede" 
-              className="w-100 h-100 object-cover mx-auto border-4 border-legal-blue/20"
-            />
-          </div>
-          <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-legal-blue to-legal-purple bg-clip-text text-transparent">
+          <DialogTitle className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-legal-blue to-legal-purple bg-clip-text text-transparent">
             Fala comigo humanoide,
           </DialogTitle>
-          <DialogDescription className="text-gray-600">
+          <DialogDescription className="text-gray-700 text-sm sm:text-base">
             Cadastre-se em nossa newsletter e fique conectado com os mais variados temas de tecnologia e inovação.
           </DialogDescription>
         </DialogHeader>
@@ -182,9 +184,10 @@ const NewsletterExitPopup = () => {
         </form>
 
         <div className="text-center pt-2">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-600">
             Seus dados estão seguros. Não compartilhamos com terceiros.
           </p>
+        </div>
         </div>
       </DialogContent>
     </Dialog>
