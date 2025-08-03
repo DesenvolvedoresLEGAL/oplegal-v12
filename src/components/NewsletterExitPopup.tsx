@@ -117,11 +117,11 @@ const NewsletterExitPopup = () => {
         </button>
         
         <DialogHeader className="text-center pb-4">
-          <div className="mx-auto mb-4">
+          <div className="mx-auto mb-2">
             <img 
               src="/lovable-uploads/e0a457bd-2c75-494f-bfb2-09582ac2b2a4.png" 
               alt="Senhora tricotando com cabos de rede" 
-              className="w-36 h-36 object-cover rounded-full mx-auto border-4 border-legal-blue/20"
+              className="w-100 h-100 object-cover mx-auto border-4 border-legal-blue/20"
             />
           </div>
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-legal-blue to-legal-purple bg-clip-text text-transparent">
