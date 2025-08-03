@@ -10,55 +10,40 @@ const Footer = () => {
             <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
             <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Junte-se a nós na missão de conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
             
-            {/* Redes Sociais e Badges - TUDO NA MESMA LINHA HORIZONTAL */}
-            <div className="flex items-center justify-center gap-4 flex-wrap">
+            {/* Redes Sociais e Badges - TUDO EM UMA LINHA SÓ */}
+            <div className="flex items-center gap-3">
               {/* Redes Sociais */}
-              <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110" aria-label="Siga a LEGAL no Instagram">
-                <Instagram size={20} />
+              <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300" aria-label="Instagram">
+                <Instagram size={18} />
               </a>
-              <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110" aria-label="Conecte-se com a LEGAL no LinkedIn">
-                <Linkedin size={20} />
+              <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300" aria-label="LinkedIn">
+                <Linkedin size={18} />
               </a>
-              <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110" aria-label="Siga a LEGAL no Twitter">
-                <Twitter size={20} />
+              <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300" aria-label="Twitter">
+                <Twitter size={18} />
               </a>
               
-              {/* SSL Badge */}
-              <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/30 px-3 py-1.5 rounded-full text-xs font-medium text-accent-foreground backdrop-blur-sm">
-                <span className="text-emerald-400">🔒</span>
+              {/* SSL */}
+              <div className="inline-flex items-center gap-1 bg-accent/20 px-2 py-1 rounded text-xs">
+                <span>🔒</span>
                 <span>SSL</span>
               </div>
               
-              {/* Google Reviews Badge */}
-              <a 
-                href="https://g.page/r/CXBwSjN486gbEAE/review" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 px-3 py-1.5 rounded-full text-xs font-medium text-yellow-100 hover:from-yellow-500/30 hover:to-orange-500/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-              >
-                <span className="text-yellow-400">⭐</span>
+              {/* Google */}
+              <a href="https://g.page/r/CXBwSjN486gbEAE/review" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 bg-yellow-500/20 px-2 py-1 rounded text-xs hover:bg-yellow-500/30 transition-all">
+                <span>⭐</span>
                 <span>Google 4.9</span>
               </a>
               
-              {/* TrustPilot Badge */}
-              <a 
-                href="https://br.trustpilot.com/review/operadora.legal" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 px-3 py-1.5 rounded-full text-xs font-medium text-green-100 hover:from-green-500/30 hover:to-emerald-500/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-              >
-                <span className="text-emerald-400">🛡️</span>
+              {/* TrustPilot */}
+              <a href="https://br.trustpilot.com/review/operadora.legal" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 bg-green-500/20 px-2 py-1 rounded text-xs hover:bg-green-500/30 transition-all">
+                <span>🛡️</span>
                 <span>TrustPilot</span>
               </a>
               
-              {/* Reclame Aqui Badge */}
-              <a 
-                href="https://www.reclameaqui.com.br/empresa/legal/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 px-3 py-1.5 rounded-full text-xs font-medium text-blue-100 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-              >
-                <span className="text-cyan-400">✓</span>
+              {/* Reclame Aqui */}
+              <a href="https://www.reclameaqui.com.br/empresa/legal/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 bg-blue-500/20 px-2 py-1 rounded text-xs hover:bg-blue-500/30 transition-all">
+                <span>✓</span>
                 <span>Reclame Aqui A</span>
               </a>
             </div>
