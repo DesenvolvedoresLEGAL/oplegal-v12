@@ -9,16 +9,41 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
             <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Junte-se a nós na missão de conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Instagram">
-                <Instagram size={20} />
-              </a>
-              <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Conecte-se com a LEGAL no LinkedIn">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Twitter">
-                <Twitter size={20} />
-              </a>
+            
+            {/* Redes Sociais e Selos de Segurança */}
+            <div className="flex flex-wrap items-center gap-4">
+              {/* Redes Sociais */}
+              <div className="flex space-x-3">
+                <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Instagram">
+                  <Instagram size={18} />
+                </a>
+                <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Conecte-se com a LEGAL no LinkedIn">
+                  <Linkedin size={18} />
+                </a>
+                <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Twitter">
+                  <Twitter size={18} />
+                </a>
+              </div>
+              
+              {/* Selos de Segurança */}
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="flex items-center space-x-1 bg-white/10 px-3 py-1 rounded text-xs">
+                  <span className="text-green-400">🔒</span>
+                  <span className="text-gray-300">SSL Seguro</span>
+                </div>
+                <a href="https://g.page/r/legal-brasil/review" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-3 py-1 rounded text-xs hover:bg-white/20 transition-colors">
+                  <span className="text-yellow-400">⭐</span>
+                  <span className="text-gray-300">Google Reviews 4.9</span>
+                </a>
+                <a href="https://br.trustpilot.com/review/operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-3 py-1 rounded text-xs hover:bg-white/20 transition-colors">
+                  <span className="text-blue-400">🛡️</span>
+                  <span className="text-gray-300">TrustPilot Verified</span>
+                </a>
+                <a href="https://www.reclameaqui.com.br/empresa/legal/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-3 py-1 rounded text-xs hover:bg-white/20 transition-colors">
+                  <span className="text-green-400">✓</span>
+                  <span className="text-gray-300">Reclame Aqui Nota A</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -67,28 +92,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Selos de Segurança */}
-        <div className="border-t border-gray-800 mt-12 pt-8 pb-6">
-          <div className="flex flex-wrap justify-center items-center gap-6 mb-8">
-            <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-lg">
-              <span className="text-green-400">🔒</span>
-              <span className="text-sm text-gray-300">SSL Seguro</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-lg">
-              <span className="text-yellow-400">⭐</span>
-              <span className="text-sm text-gray-300">Google Reviews 4.9</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-lg">
-              <span className="text-blue-400">🛡️</span>
-              <span className="text-sm text-gray-300">TrustPilot Verified</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-lg">
-              <span className="text-green-400">✓</span>
-              <span className="text-sm text-gray-300">Reclame Aqui Nota A</span>
-            </div>
-          </div>
-        </div>
-
+        {/* Copyright e Links Legais */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">© 2025 LEGAL. Todos os direitos reservados.</p>
