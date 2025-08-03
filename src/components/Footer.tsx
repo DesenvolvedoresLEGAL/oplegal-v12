@@ -10,40 +10,36 @@ const Footer = () => {
             <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
             <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Junte-se a nós na missão de conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
             
-            {/* Redes Sociais e Selos de Segurança */}
-            <div className="flex flex-wrap items-center gap-4">
+            {/* Redes Sociais e Selos de Segurança - Todos na mesma linha */}
+            <div className="flex items-center gap-6">
               {/* Redes Sociais */}
-              <div className="flex space-x-3">
-                <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Instagram">
-                  <Instagram size={18} />
-                </a>
-                <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Conecte-se com a LEGAL no LinkedIn">
-                  <Linkedin size={18} />
-                </a>
-                <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Twitter">
-                  <Twitter size={18} />
-                </a>
-              </div>
+              <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors" aria-label="Siga a LEGAL no Instagram">
+                <Instagram size={18} />
+              </a>
+              <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors" aria-label="Conecte-se com a LEGAL no LinkedIn">
+                <Linkedin size={18} />
+              </a>
+              <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors" aria-label="Siga a LEGAL no Twitter">
+                <Twitter size={18} />
+              </a>
               
               {/* Selos de Segurança */}
-              <div className="flex flex-wrap items-center gap-3">
-                <div className="flex items-center space-x-1 bg-white/10 px-3 py-1 rounded text-xs">
-                  <span className="text-green-400">🔒</span>
-                  <span className="text-gray-300">SSL Seguro</span>
-                </div>
-                <a href="https://g.page/r/legal-brasil/review" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-3 py-1 rounded text-xs hover:bg-white/20 transition-colors">
-                  <span className="text-yellow-400">⭐</span>
-                  <span className="text-gray-300">Google Reviews 4.9</span>
-                </a>
-                <a href="https://br.trustpilot.com/review/operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-3 py-1 rounded text-xs hover:bg-white/20 transition-colors">
-                  <span className="text-blue-400">🛡️</span>
-                  <span className="text-gray-300">TrustPilot Verified</span>
-                </a>
-                <a href="https://www.reclameaqui.com.br/empresa/legal/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-3 py-1 rounded text-xs hover:bg-white/20 transition-colors">
-                  <span className="text-green-400">✓</span>
-                  <span className="text-gray-300">Reclame Aqui Nota A</span>
-                </a>
+              <div className="flex items-center space-x-1 bg-white/10 px-2 py-1 rounded text-xs">
+                <span className="text-green-400">🔒</span>
+                <span className="text-gray-300">SSL Seguro</span>
               </div>
+              <a href="https://g.page/r/legal-brasil/review" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-2 py-1 rounded text-xs hover:bg-white/20 transition-colors">
+                <span className="text-yellow-400">⭐</span>
+                <span className="text-gray-300">Google Reviews 4.9</span>
+              </a>
+              <a href="https://br.trustpilot.com/review/operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-2 py-1 rounded text-xs hover:bg-white/20 transition-colors">
+                <span className="text-blue-400">🛡️</span>
+                <span className="text-gray-300">TrustPilot Verified</span>
+              </a>
+              <a href="https://www.reclameaqui.com.br/empresa/legal/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-2 py-1 rounded text-xs hover:bg-white/20 transition-colors">
+                <span className="text-green-400">✓</span>
+                <span className="text-gray-300">Reclame Aqui Nota A</span>
+              </a>
             </div>
           </div>
 
