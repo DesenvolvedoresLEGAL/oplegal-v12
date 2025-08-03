@@ -23,7 +23,11 @@ const PlaudDemo = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <Button size="lg" className="bg-white text-legal hover:bg-white/90 rounded-full h-16 w-16 p-0">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-legal hover:bg-white/90 rounded-full h-16 w-16 p-0"
+                  aria-label="Reproduzir vídeo de demonstração do Plaud"
+                >
                   <Play className="h-8 w-8 ml-1" />
                 </Button>
               </div>
@@ -100,14 +104,22 @@ const PlaudDemo = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-legal text-white hover:bg-legal/90">
+            <a 
+              href="/contato?produto=plaud-locacao" 
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-legal text-white hover:bg-legal/90 h-12 px-8 py-3 rounded-md min-h-[48px] min-w-[48px]"
+              aria-label="Solicitar orçamento de locação do Plaud"
+            >
               <Download className="mr-2 h-5 w-5" />
-              Solicitar Orçamento
-            </Button>
-            <Button size="lg" variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white">
+              Solicitar Orçamento de Locação
+            </a>
+            <a 
+              href="/contato?demo=plaud" 
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-legal text-legal hover:bg-legal hover:text-white h-12 px-8 py-3 rounded-md min-h-[48px] min-w-[48px]"
+              aria-label="Agendar demonstração do Plaud"
+            >
               <Calendar className="mr-2 h-5 w-5" />
               Agendar Demonstração
-            </Button>
+            </a>
           </div>
           
           <p className="text-xs text-gray-500 mt-4">

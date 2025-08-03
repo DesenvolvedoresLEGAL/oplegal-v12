@@ -8,6 +8,7 @@ import PlaudStats from "@/components/plaud/PlaudStats";
 import PlaudDemo from "@/components/plaud/PlaudDemo";
 import PlaudTestimonials from "@/components/plaud/PlaudTestimonials";
 import PlaudFAQ from "@/components/plaud/PlaudFAQ";
+import PlaudPricingSection from "@/components/plaud/PlaudPricingSection";
 import CallToAction from "@/components/CallToAction";
 import ChatbotButton from "@/components/ChatbotButton";
 
@@ -18,6 +19,8 @@ const PlaudPage = () => {
         title="Plaud - Gravação de Voz com IA | LEGAL"
         description="Transforme suas conversas em insights valiosos com Plaud. Gravação inteligente, transcrição automática e resumos em 112 idiomas para máxima produtividade."
         keywords="gravação de voz, IA, transcrição, resumos, produtividade, meetings, Plaud"
+        url="https://operadora.legal/produtos/plaud"
+        canonical="https://operadora.legal/produtos/plaud"
       />
       
       <main role="main">
@@ -28,6 +31,7 @@ const PlaudPage = () => {
         <PlaudStats />
         <PlaudDemo />
         <PlaudTestimonials />
+        <PlaudPricingSection />
         <PlaudFAQ />
         
         <CallToAction
@@ -36,7 +40,7 @@ const PlaudPage = () => {
           buttonText="Solicitar Orçamento de Locação"
           buttonLink="/contato?produto=plaud-locacao"
           secondaryButtonText="Ver Planos de Locação"
-          secondaryButtonLink="#planos"
+          secondaryButtonLink="#planos-locacao"
           background="gradient"
         />
         

@@ -91,9 +91,9 @@ const PlaudBenefits = () => {
               <div className="text-3xl font-bold text-legal-purple mb-2">R$ 800</div>
               <div className="text-sm text-gray-600">Por semana (projetos)</div>
             </div>
-            <div className="bg-legal-cyan/5 rounded-xl p-6">
-              <div className="text-3xl font-bold text-legal-cyan mb-2">R$ 2.500</div>
-              <div className="text-sm text-gray-600">Por mês (empresas)</div>
+            <div className="bg-primary/5 rounded-xl p-6">
+              <div className="text-3xl font-bold text-primary mb-2">R$ 2.500</div>
+              <div className="text-sm text-gray-700 font-medium">Por mês (empresas)</div>
             </div>
             <div className="bg-legal-secondary/5 rounded-xl p-6">
               <div className="text-3xl font-bold text-legal-secondary mb-2">Customizado</div>
