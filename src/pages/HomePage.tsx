@@ -5,6 +5,8 @@ import HeroSection from "@/components/sections/HeroSection";
 import WhyLegalSection from "@/components/sections/WhyLegalSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import SuccessStoriesSection from "@/components/sections/SuccessStoriesSection";
+import BhagSection from "@/components/missao-visao-valores/BhagSection";
+import FeaturedPosts from "@/components/tectec/FeaturedPosts";
 import CallToAction from "@/components/CallToAction";
 import ChatbotButton from "@/components/ChatbotButton";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
@@ -23,11 +25,17 @@ const HomePage = () => {
         {/* Por que LEGAL - Credibilidade e Números */}
         <WhyLegalSection />
         
-        {/* Nossos Produtos - H2 */}
-        <ProductsSection titleOverride="Soluções Completas para Eventos Inteligentes" />
+        {/* BHAG Section */}
+        <BhagSection />
         
         {/* Casos de Sucesso - H2 */}
         <SuccessStoriesSection />
+        
+        {/* Nossos Produtos - H2 */}
+        <ProductsSection titleOverride="Soluções Completas para Eventos Inteligentes" />
+        
+        {/* Latest Blog Posts */}
+        <FeaturedPosts />
         
         {/* CTA Final */}
         <CallToAction

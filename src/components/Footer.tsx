@@ -67,7 +67,29 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        {/* Selos de Segurança */}
+        <div className="border-t border-gray-800 mt-12 pt-8 pb-6">
+          <div className="flex flex-wrap justify-center items-center gap-6 mb-8">
+            <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-lg">
+              <span className="text-green-400">🔒</span>
+              <span className="text-sm text-gray-300">SSL Seguro</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-lg">
+              <span className="text-yellow-400">⭐</span>
+              <span className="text-sm text-gray-300">Google Reviews 4.9</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-lg">
+              <span className="text-blue-400">🛡️</span>
+              <span className="text-sm text-gray-300">TrustPilot Verified</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-lg">
+              <span className="text-green-400">✓</span>
+              <span className="text-sm text-gray-300">Reclame Aqui Nota A</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">© 2025 LEGAL. Todos os direitos reservados.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">

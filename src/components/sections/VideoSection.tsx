@@ -45,7 +45,7 @@ const VideoSection = () => {
                 {/* Background preview image */}
                 <img 
                   src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                  alt="Smart Events em ação"
+                  alt="Prévia do vídeo demonstrativo Smart Events - pessoas em evento corporativo usando tecnologia avançada"
                   className="absolute inset-0 w-full h-full object-cover -z-10 opacity-30"
                 />
               </div>

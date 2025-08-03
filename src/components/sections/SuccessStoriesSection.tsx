@@ -64,8 +64,8 @@ const SuccessStoriesSection = () => {
                 <div className="mb-8 flex justify-center">
                   <img 
                     src={story.logo} 
-                    alt={`Logo ${story.title}`}
-                    className="h-20 w-auto object-contain"
+                    alt={`Logo da empresa ${story.title}`}
+                    className="h-24 w-32 object-contain"
                   />
                 </div>
                 
