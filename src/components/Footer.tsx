@@ -10,36 +10,61 @@ const Footer = () => {
             <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
             <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Junte-se a nós na missão de conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
             
-            {/* Redes Sociais e Selos de Segurança - Todos na mesma linha */}
-            <div className="flex items-center gap-6">
+            {/* Redes Sociais e Badges de Avaliação */}
+            <div className="flex flex-wrap items-center gap-4">
               {/* Redes Sociais */}
-              <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors" aria-label="Siga a LEGAL no Instagram">
-                <Instagram size={18} />
-              </a>
-              <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors" aria-label="Conecte-se com a LEGAL no LinkedIn">
-                <Linkedin size={18} />
-              </a>
-              <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors" aria-label="Siga a LEGAL no Twitter">
-                <Twitter size={18} />
-              </a>
-              
-              {/* Selos de Segurança */}
-              <div className="flex items-center space-x-1 bg-white/10 px-2 py-1 rounded text-xs">
-                <span className="text-green-400">🔒</span>
-                <span className="text-gray-300">SSL Seguro</span>
+              <div className="flex items-center gap-3">
+                <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110" aria-label="Siga a LEGAL no Instagram">
+                  <Instagram size={20} />
+                </a>
+                <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110" aria-label="Conecte-se com a LEGAL no LinkedIn">
+                  <Linkedin size={20} />
+                </a>
+                <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110" aria-label="Siga a LEGAL no Twitter">
+                  <Twitter size={20} />
+                </a>
               </div>
-              <a href="https://g.page/r/legal-brasil/review" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-2 py-1 rounded text-xs hover:bg-white/20 transition-colors">
-                <span className="text-yellow-400">⭐</span>
-                <span className="text-gray-300">Google Reviews 4.9</span>
-              </a>
-              <a href="https://br.trustpilot.com/review/operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-2 py-1 rounded text-xs hover:bg-white/20 transition-colors">
-                <span className="text-blue-400">🛡️</span>
-                <span className="text-gray-300">TrustPilot Verified</span>
-              </a>
-              <a href="https://www.reclameaqui.com.br/empresa/legal/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 bg-white/10 px-2 py-1 rounded text-xs hover:bg-white/20 transition-colors">
-                <span className="text-green-400">✓</span>
-                <span className="text-gray-300">Reclame Aqui Nota A</span>
-              </a>
+              
+              {/* Divisor */}
+              <div className="w-px h-6 bg-border"></div>
+              
+              {/* Badges de Avaliação */}
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/30 px-3 py-1.5 rounded-full text-xs font-medium text-accent-foreground backdrop-blur-sm">
+                  <span className="text-emerald-400">🔒</span>
+                  <span>SSL Seguro</span>
+                </div>
+                
+                <a 
+                  href="https://g.page/r/CXBwSjN486gbEAE/review" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 px-3 py-1.5 rounded-full text-xs font-medium text-yellow-100 hover:from-yellow-500/30 hover:to-orange-500/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                >
+                  <span className="text-yellow-400">⭐</span>
+                  <span>Google 4.9</span>
+                </a>
+                
+                <a 
+                  href="https://br.trustpilot.com/review/operadora.legal" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 px-3 py-1.5 rounded-full text-xs font-medium text-green-100 hover:from-green-500/30 hover:to-emerald-500/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                >
+                  <span className="text-emerald-400">🛡️</span>
+                  <span>TrustPilot</span>
+                </a>
+                
+                <a 
+                  href="https://www.reclameaqui.com.br/empresa/legal/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 px-3 py-1.5 rounded-full text-xs font-medium text-blue-100 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                >
+                  <span className="text-cyan-400">✓</span>
+                  <span>Reclame Aqui A</span>
+                </a>
+              </div>
             </div>
           </div>
 
