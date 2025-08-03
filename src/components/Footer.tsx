@@ -10,7 +10,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
             <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Junte-se a nós na missão de conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
             
-            {/* Redes Sociais e Badges - TUDO EM UMA LINHA SÓ */}
+            {/* Redes Sociais e Google Reviews */}
             <div className="flex items-center gap-3">
               {/* Redes Sociais */}
               <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300" aria-label="Instagram">
@@ -23,28 +23,10 @@ const Footer = () => {
                 <Twitter size={18} />
               </a>
               
-              {/* SSL */}
-              <div className="inline-flex items-center gap-1 bg-accent/20 px-2 py-1 rounded text-xs">
-                <span>🔒</span>
-                <span>SSL</span>
-              </div>
-              
-              {/* Google */}
+              {/* Google Reviews */}
               <a href="https://g.page/r/CXBwSjN486gbEAE/review" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 bg-yellow-500/20 px-2 py-1 rounded text-xs hover:bg-yellow-500/30 transition-all">
                 <span>⭐</span>
                 <span>Google 4.9</span>
-              </a>
-              
-              {/* TrustPilot */}
-              <a href="https://br.trustpilot.com/review/operadora.legal" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 bg-green-500/20 px-2 py-1 rounded text-xs hover:bg-green-500/30 transition-all">
-                <span>🛡️</span>
-                <span>TrustPilot</span>
-              </a>
-              
-              {/* Reclame Aqui */}
-              <a href="https://www.reclameaqui.com.br/empresa/legal/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 bg-blue-500/20 px-2 py-1 rounded text-xs hover:bg-blue-500/30 transition-all">
-                <span>✓</span>
-                <span>Reclame Aqui A</span>
               </a>
             </div>
           </div>
