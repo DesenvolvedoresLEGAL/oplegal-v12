@@ -70,7 +70,7 @@ const NewsletterExitPopup = () => {
 
     try {
       // Call Mailchimp API through Supabase Edge Function
-      const response = await fetch('/api/newsletter-signup', {
+      const response = await fetch('https://mvkawsgrjnbdufdgzwwd.supabase.co/functions/v1/newsletter-signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
