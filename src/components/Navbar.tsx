@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench, TrendingUp, Search } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
   NavigationMenu,
@@ -17,8 +17,18 @@ import { cn } from "@/lib/utils";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/busca?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery("");
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -390,14 +400,16 @@ const Navbar = () => {
         {/* Right side - Search bar and BLUE access button */}
         <div className="hidden lg:flex items-center gap-4">
           {/* Search Bar */}
-          <div className="relative">
+          <form onSubmit={handleSearch} className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
             <Input
               type="text"
               placeholder="Buscar produtos, conteúdos..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10 pr-4 py-2 w-48 border-gray-300 focus:border-legal focus:ring-legal"
             />
-          </div>
+          </form>
           
           {/* BLUE Access Button */}
           <Button 

@@ -54,6 +54,7 @@ import SonixPage from "./pages/produtos/SonixPage";
 import Speedy5GPage from "./pages/produtos/Speedy5GPage";
 import PlaudPage from "./pages/produtos/PlaudPage";
 import NeuraFitPage from "./pages/produtos/NeuraFitPage";
+import SearchPage from "./pages/SearchPage";
 import SkipLink from "./components/SkipLink";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -78,6 +79,9 @@ const App = () => {
               
               {/* Preços */}
               <Route path="/precos" element={<PrecosPage />} />
+              
+              {/* Busca */}
+              <Route path="/busca" element={<SearchPage />} />
               
               {/* Produtos section */}
               <Route path="/produtos/blue6" element={<Blue6Page />} />
