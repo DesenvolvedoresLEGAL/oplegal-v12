@@ -25,24 +25,25 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
-  // Optimize Unsplash images with proper dimensions and format
+  // Optimize images with proper cache headers and compression
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.includes('unsplash.com')) {
       const baseUrl = originalSrc.split('?')[0];
       const params = new URLSearchParams();
       
-      // Use smaller, optimized dimensions
+      // More aggressive optimization for better performance
       if (width && height) {
-        params.set('w', Math.min(width, 800).toString());
-        params.set('h', Math.min(height, 600).toString());
+        params.set('w', Math.min(width, 600).toString());
+        params.set('h', Math.min(height, 400).toString());
       } else {
-        params.set('w', '800');
-        params.set('h', '600');
+        params.set('w', '600');
+        params.set('h', '400');
       }
       params.set('fit', 'crop');
       params.set('fm', 'webp');
-      params.set('q', '75'); // Reduced quality for better performance
-      params.set('auto', 'format');
+      params.set('q', '70'); // Further reduced quality for better performance
+      params.set('auto', 'format,compress');
+      params.set('cs', 'tinysrgb'); // Better compression
       
       return `${baseUrl}?${params.toString()}`;
     }
@@ -77,11 +78,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         width={width}
         height={height}
         sizes={sizes}
-        className={`transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
+        className={`will-change-auto transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
+        fetchPriority={priority ? 'high' : 'auto'}
         onLoad={handleLoad}
         onError={handleError}
+        style={{ 
+          contentVisibility: 'auto',
+          containIntrinsicSize: width && height ? `${width}px ${height}px` : 'auto'
+        }}
       />
     </div>
   );

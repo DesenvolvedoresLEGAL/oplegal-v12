@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, ChevronDown, ChevronUp, MessageCircle, Mail, Phone } from 'lucide-react';
@@ -7,113 +6,140 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import SectionTitle from '@/components/SectionTitle';
-
 const FAQPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [openItems, setOpenItems] = useState<number[]>([]);
-
   const toggleItem = (id: number) => {
-    setOpenItems(prev => 
-      prev.includes(id) 
-        ? prev.filter(item => item !== id)
-        : [...prev, id]
-    );
+    setOpenItems(prev => prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]);
   };
-
-  const categories = [
-    { id: 'all', label: 'Todas as Categorias' },
-    { id: 'smart-events', label: 'Smart Events' },
-    { id: 'billing', label: 'Faturamento' },
-    { id: 'technical', label: 'Técnicas' },
-    { id: 'api', label: 'API e Integrações' },
-    { id: 'account', label: 'Conta e Acesso' }
-  ];
-
+  const categories = [{
+    id: 'all',
+    label: 'Todas as Unidades'
+  }, {
+    id: 'ai',
+    label: 'AI - Inteligência Artificial'
+  }, {
+    id: 'aero',
+    label: 'AERO - Drones e Logística'
+  }, {
+    id: 'alugue',
+    label: 'ALUGUE - Equipamentos'
+  }, {
+    id: 'assinatura',
+    label: 'ASSINATURA - Serviços'
+  }];
   const faqs = [
+    // AI - Inteligência Artificial
     {
       id: 1,
-      category: 'smart-events',
-      question: 'O que é o Smart Events™ da LEGAL?',
-      answer: 'O Smart Events™ é nossa plataforma revolucionária que transforma eventos tradicionais em experiências inteligentes e conectadas. Utilizamos IoT, IA e análise de dados em tempo real para otimizar gestão, segurança e engajamento em eventos de todos os tipos e tamanhos.'
+      category: 'ai',
+      question: 'O que são as soluções de IA da LEGAL?',
+      answer: 'Nossa unidade de negócios AI oferece soluções de inteligência artificial como LinkAI para networking inteligente, FacePass para reconhecimento facial, FitScore para análise de compatibilidade e muito mais. Todas baseadas em machine learning avançado.'
     },
     {
       id: 2,
-      category: 'smart-events',
-      question: 'Quais tipos de eventos podem usar o Smart Events™?',
-      answer: 'Nossa plataforma é versátil e atende desde pequenas reuniões corporativas até grandes festivais e conferências. Funcionamos com eventos presenciais, híbridos e virtuais, incluindo: conferências, shows, feiras, casamentos, eventos corporativos, festivais e muito mais.'
+      category: 'ai',
+      question: 'Como o LinkAI funciona em eventos?',
+      answer: 'O LinkAI analisa perfis de participantes e sugere conexões personalizadas com 95% de precisão. Utiliza algoritmos de machine learning que consideram objetivos profissionais, interesses e networking preferences para maximizar o valor das conexões.'
     },
     {
       id: 3,
-      category: 'billing',
-      question: 'Como funciona o modelo de cobrança da LEGAL?',
-      answer: 'Oferecemos diferentes planos flexíveis baseados no número de participantes e recursos utilizados. Temos opções de pagamento mensal, anual e por evento. Entre em contato com nossa equipe comercial para um plano personalizado às suas necessidades.'
+      category: 'ai',
+      question: 'O FacePass é seguro e está em compliance?',
+      answer: 'Sim! O FacePass utiliza criptografia avançada, é 100% compatível com LGPD, processa dados apenas no Brasil e oferece controle total aos usuários sobre suas informações biométricas. A privacidade é nossa prioridade.'
     },
     {
       id: 4,
-      category: 'billing',
-      question: 'Existe período de teste gratuito?',
-      answer: 'Sim! Oferecemos um trial de 30 dias com acesso completo à plataforma para até 100 participantes. Você pode testar todas as funcionalidades sem compromisso. Basta se cadastrar em nosso portal BLUE.'
+      category: 'ai',
+      question: 'Como implementar soluções de IA nos meus eventos?',
+      answer: 'Nossa equipe técnica faz toda a implementação. O processo inclui análise de necessidades, configuração personalizada, treinamento da equipe e suporte 24/7 durante o evento. Implementação padrão em 2-4 semanas.'
     },
+
+    // AERO - Drones e Logística
     {
       id: 5,
-      category: 'technical',
-      question: 'Que tipos de dispositivos IoT são compatíveis?',
-      answer: 'Nossa plataforma é compatível com uma ampla gama de dispositivos IoT, incluindo: sensores de presença, câmeras inteligentes, dispositivos de áudio, sensores ambientais (temperatura, umidade), dispositivos de acesso (catracas, RFID), e muito mais. Também oferecemos nossos próprios dispositivos otimizados.'
+      category: 'aero',
+      question: 'Que tipos de serviços a AERO oferece?',
+      answer: 'A AERO é nossa divisão de drones e logística que oferece delivery aéreo, lavagem de edifícios com drones, inspeções industriais, mapeamento aéreo e soluções logísticas inovadoras para eventos e empresas.'
     },
     {
       id: 6,
-      category: 'technical',
-      question: 'Como funciona a segurança dos dados?',
-      answer: 'A segurança é nossa prioridade máxima. Utilizamos criptografia de ponta a ponta, compliance com LGPD, servidores seguros no Brasil, backups automáticos e monitoramento 24/7. Todos os dados são processados em território nacional seguindo as melhores práticas de segurança.'
+      category: 'aero',
+      question: 'Como funciona o AeroDelivery para eventos?',
+      answer: 'Nossos drones fazem entregas rápidas e precisas dentro de eventos, transportando desde brindes até equipamentos. Operamos com total segurança, seguindo regulamentações da ANAC e com pilotos certificados.'
     },
     {
       id: 7,
-      category: 'api',
-      question: 'A LEGAL oferece APIs para integração?',
-      answer: 'Sim! Temos uma API robusta e bem documentada que permite integração com sistemas existentes como CRM, ERP, plataformas de pagamento e outras ferramentas. Nossa API REST é fácil de implementar e conta com suporte técnico dedicado.'
+      category: 'aero',
+      question: 'A AERO oferece serviços de limpeza predial?',
+      answer: 'Sim! O AeroWash revoluciona a limpeza de fachadas com drones especializados. Mais seguro, rápido e eficiente que métodos tradicionais. Ideal para edifícios altos e estruturas de difícil acesso.'
     },
     {
       id: 8,
-      category: 'api',
-      question: 'Como posso acessar a documentação da API?',
-      answer: 'A documentação completa da API está disponível em nosso portal para desenvolvedores. Você encontrará exemplos de código, guias de integração, referência de endpoints e sandbox para testes. Acesse através do portal BLUE ou entre em contato com nosso suporte técnico.'
+      category: 'aero',
+      question: 'Quais são os requisitos para contratar serviços AERO?',
+      answer: 'Fazemos análise prévia do local, verificamos regulamentações locais, definimos zona de voo segura e obtemos autorizações necessárias. Nossa equipe cuida de toda a burocracia e compliance.'
     },
+
+    // ALUGUE - Equipamentos
     {
       id: 9,
-      category: 'account',
-      question: 'Como criar uma conta no portal BLUE?',
-      answer: 'É simples! Acesse blue.operadora.legal, clique em "Criar Conta" e preencha seus dados. Você receberá um email de confirmação e poderá começar a usar nossa plataforma imediatamente. O processo leva menos de 5 minutos.'
+      category: 'alugue',
+      question: 'Que tipos de equipamentos posso alugar?',
+      answer: 'Oferecemos amplo catálogo: equipamentos de som, iluminação, projeção, mobiliário para eventos, dispositivos IoT, câmeras, estruturas modulares, geradores e muito mais. Tudo para seu evento ser perfeito.'
     },
     {
       id: 10,
-      category: 'account',
-      question: 'Esqueci minha senha, como recuperar?',
-      answer: 'Na tela de login do portal BLUE, clique em "Esqueci minha senha", digite seu email cadastrado e siga as instruções que serão enviadas. O processo é seguro e você receberá um link temporário para redefinir sua senha.'
+      category: 'alugue',
+      question: 'Como funciona o processo de aluguel?',
+      answer: 'Simples: escolha os equipamentos, defina período de locação, receba orçamento personalizado, confirmamos disponibilidade e fazemos entrega/montagem no local. Suporte técnico incluído durante todo o evento.'
     },
     {
       id: 11,
-      category: 'smart-events',
-      question: 'Qual o tempo de implementação do Smart Events™?',
-      answer: 'O tempo varia conforme a complexidade do evento. Para eventos básicos, a implementação pode ser feita em 24-48 horas. Eventos mais complexos com múltiplos dispositivos IoT podem levar de 1-2 semanas. Nossa equipe faz um cronograma detalhado para cada projeto.'
+      category: 'alugue',
+      question: 'Vocês fazem entrega e montagem?',
+      answer: 'Sim! Temos equipe técnica especializada que cuida de toda logística: transporte, montagem, configuração, testes e suporte durante o evento. Também fazemos desmontagem e retirada pós-evento.'
     },
     {
       id: 12,
-      category: 'technical',
-      question: 'O que acontece se a internet falhar durante o evento?',
-      answer: 'Nossa plataforma tem redundância e sistemas offline. Os dispositivos continuam coletando dados localmente e sincronizam quando a conexão é restabelecida. Temos também parcerias com provedores de internet para backup de conectividade em eventos críticos.'
+      category: 'alugue',
+      question: 'Qual o prazo mínimo de antecedência para aluguel?',
+      answer: 'Recomendamos 15 dias para garantir disponibilidade, mas atendemos demandas urgentes conforme estoque. Para eventos grandes ou equipamentos específicos, sugerimos 30 dias de antecedência.'
+    },
+
+    // ASSINATURA - Serviços
+    {
+      id: 13,
+      category: 'assinatura',
+      question: 'O que inclui o plano de assinatura LEGAL?',
+      answer: 'Nossos planos de assinatura incluem acesso ao portal BLUE, créditos mensais para usar produtos LEGAL, suporte prioritário, desconto em equipamentos, acesso antecipado a novos produtos e muito mais.'
+    },
+    {
+      id: 14,
+      category: 'assinatura',
+      question: 'Como funcionam os créditos mensais?',
+      answer: 'Cada plano inclui créditos que podem ser usados em qualquer produto LEGAL: IA, equipamentos, drones, analytics. Créditos não utilizados acumulam por até 12 meses. Flexibilidade total para suas necessidades.'
+    },
+    {
+      id: 15,
+      category: 'assinatura',
+      question: 'Posso cancelar minha assinatura a qualquer momento?',
+      answer: 'Sim! Não temos fidelidade. Pode cancelar quando quiser através do portal BLUE. Créditos restantes permanecem válidos por 90 dias após cancelamento para você usar.'
+    },
+    {
+      id: 16,
+      category: 'assinatura',
+      question: 'Existe desconto para assinatura anual?',
+      answer: 'Sim! Assinatura anual tem 20% de desconto, créditos extras de bônus e benefícios exclusivos como acesso beta a novos produtos e consultoria estratégica inclusa.'
     }
   ];
-
   const filteredFAQs = faqs.filter(faq => {
-    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) || faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
-  return (
-    <>
+  return <>
       <Helmet>
         <title>FAQ LEGAL | Perguntas Frequentes e Suporte</title>
         <meta name="description" content="Encontre respostas para as principais dúvidas sobre Smart Events™, API, faturamento e serviços da LEGAL. Suporte completo e documentação." />
@@ -143,29 +169,15 @@ const FAQPage = () => {
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <Input
-                  type="text"
-                  placeholder="Buscar nas perguntas frequentes..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 h-12 text-lg border-legal focus:ring-legal"
-                />
+                <Input type="text" placeholder="Buscar nas perguntas frequentes..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="pl-12 h-12 text-lg border-legal focus:ring-legal" />
               </div>
             </div>
 
             {/* Category Filters */}
             <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
-                <Button
-                  key={category.id}
-                  variant={selectedCategory === category.id ? "default" : "outline"}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={selectedCategory === category.id ? "bg-legal hover:bg-legal-purple" : "border-legal text-legal hover:bg-legal hover:text-white"}
-                  size="sm"
-                >
+              {categories.map(category => <Button key={category.id} variant={selectedCategory === category.id ? "default" : "outline"} onClick={() => setSelectedCategory(category.id)} className={selectedCategory === category.id ? "bg-legal hover:bg-legal-purple" : "border-legal text-legal hover:bg-legal hover:text-white"} size="sm">
                   {category.label}
-                </Button>
-              ))}
+                </Button>)}
             </div>
           </div>
         </section>
@@ -173,25 +185,16 @@ const FAQPage = () => {
         {/* FAQ List */}
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
-            {filteredFAQs.length > 0 ? (
-              <div className="space-y-4">
-                {filteredFAQs.map((faq) => (
-                  <Card key={faq.id} className="overflow-hidden hover:shadow-md transition-shadow">
+            {filteredFAQs.length > 0 ? <div className="space-y-4">
+                {filteredFAQs.map(faq => <Card key={faq.id} className="overflow-hidden hover:shadow-md transition-shadow">
                     <Collapsible>
-                      <CollapsibleTrigger 
-                        className="w-full"
-                        onClick={() => toggleItem(faq.id)}
-                      >
+                      <CollapsibleTrigger className="w-full" onClick={() => toggleItem(faq.id)}>
                         <CardContent className="p-6">
                           <div className="flex items-center justify-between">
                             <h3 className="text-left text-lg font-semibold text-legal pr-4">
                               {faq.question}
                             </h3>
-                            {openItems.includes(faq.id) ? (
-                              <ChevronUp className="w-5 h-5 text-legal flex-shrink-0" />
-                            ) : (
-                              <ChevronDown className="w-5 h-5 text-legal flex-shrink-0" />
-                            )}
+                            {openItems.includes(faq.id) ? <ChevronUp className="w-5 h-5 text-legal flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-legal flex-shrink-0" />}
                           </div>
                         </CardContent>
                       </CollapsibleTrigger>
@@ -205,11 +208,8 @@ const FAQPage = () => {
                         </CardContent>
                       </CollapsibleContent>
                     </Collapsible>
-                  </Card>
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12">
+                  </Card>)}
+              </div> : <div className="text-center py-12">
                 <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-4">
                   <Search className="w-8 h-8 text-gray-400" />
                 </div>
@@ -219,29 +219,20 @@ const FAQPage = () => {
                 <p className="text-gray-500 mb-6">
                   Tente ajustar sua busca ou entre em contato conosco.
                 </p>
-                <Button 
-                  onClick={() => {
-                    setSearchQuery('');
-                    setSelectedCategory('all');
-                  }}
-                  variant="outline"
-                  className="border-legal text-legal hover:bg-legal hover:text-white"
-                >
+                <Button onClick={() => {
+              setSearchQuery('');
+              setSelectedCategory('all');
+            }} variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white">
                   Limpar Filtros
                 </Button>
-              </div>
-            )}
+              </div>}
           </div>
         </section>
 
         {/* Contact Support */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto text-center">
-            <SectionTitle
-              title="Não Encontrou Sua Resposta?"
-              subtitle="Nossa equipe está pronta para ajudar você"
-              center
-            />
+            <SectionTitle title="Não Encontrou Sua Resposta?" subtitle="Nossa equipe está pronta para ajudar você" center />
             
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <Card className="text-center hover:shadow-lg transition-shadow">
@@ -268,11 +259,7 @@ const FAQPage = () => {
                   <p className="text-gray-600 mb-4">
                     Envie sua dúvida por email e receba resposta em até 24h.
                   </p>
-                  <Button 
-                    variant="outline" 
-                    className="border-legal-purple text-legal-purple hover:bg-legal-purple hover:text-white"
-                    asChild
-                  >
+                  <Button variant="outline" className="border-legal-purple text-legal-purple hover:bg-legal-purple hover:text-white" asChild>
                     <a href="mailto:suporte@operadora.legal">
                       Enviar Email
                     </a>
@@ -289,23 +276,71 @@ const FAQPage = () => {
                   <p className="text-gray-600 mb-4">
                     Ligue para nossa central de atendimento.
                   </p>
-                  <Button 
-                    variant="outline" 
-                    className="border-legal-green text-legal-green hover:bg-legal-green hover:text-white"
-                    asChild
-                  >
-                    <a href="tel:+5511999999999">
-                      (11) 9999-9999
-                    </a>
+                  <Button variant="outline" className="border-legal-green text-legal-green hover:bg-legal-green hover:text-white" asChild>
+                    <a href="tel:+5511999999999">(11) 5194-2223</a>
                   </Button>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
-      </div>
-    </>
-  );
-};
 
+        {/* Tutorial Section with Wag */}
+        <section 
+          className="py-20 px-4 relative overflow-hidden"
+          style={{
+            background: 'linear-gradient(135deg, #4d2bfb 0%, #020cbc 100%)'
+          }}
+        >
+          <div className="container mx-auto relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+              <div className="flex-1 text-center lg:text-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-unica">
+                  Primeiros passos na LEGAL?
+                </h2>
+                <p className="text-xl text-white/90 mb-4 font-unica">
+                  Tutorial passo a passo de como funciona os serviços da LEGAL
+                </p>
+                <p className="text-lg text-white/80 mb-8 font-unica">
+                  Com: Wag Sansevero
+                </p>
+                <Button 
+                  size="lg" 
+                  className="bg-legal-green hover:bg-legal-green/90 text-white px-8 py-4 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                >
+                  ASSISTIR AGORA
+                </Button>
+              </div>
+              <div className="flex-1 max-w-md">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-legal-green/20 to-transparent rounded-full blur-3xl"></div>
+                  <img
+                    src="/lovable-uploads/3f2fca6f-dacf-423f-8d06-20257b27a74e.png"
+                    alt="Wag Sansevero - Fundador da LEGAL"
+                    className="relative z-10 w-full h-auto rounded-full shadow-2xl border-4 border-white/20"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Background Icons */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 left-10 w-16 h-16 opacity-10">
+              <MessageCircle className="w-full h-full text-white" />
+            </div>
+            <div className="absolute top-40 right-20 w-12 h-12 opacity-10">
+              <Phone className="w-full h-full text-white" />
+            </div>
+            <div className="absolute bottom-20 left-20 w-20 h-20 opacity-10">
+              <Mail className="w-full h-full text-white" />
+            </div>
+            <div className="absolute bottom-40 right-10 w-14 h-14 opacity-10">
+              <Search className="w-full h-full text-white" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </>;
+};
 export default FAQPage;

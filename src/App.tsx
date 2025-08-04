@@ -27,12 +27,19 @@ import AssinaturaPage from "./pages/negocios/AssinaturaPage";
 import TimePage from "./pages/TimePage";
 import VagasPage from "./pages/VagasPage";
 import ContatoPage from "./pages/ContatoPage";
+import CandidaturaPage from "./pages/CandidaturaPage";
 import UniversoPage from "./pages/UniversoPage";
 import TecTecPage from "./pages/universo/TecTecPage";
 import HistoriasPage from "./pages/universo/HistoriasPage";
 import ImprensaPage from "./pages/universo/ImprensaPage";
 import StatusPage from "./pages/universo/StatusPage";
 import FAQPage from "./pages/universo/FAQPage";
+import RecursosPage from "./pages/universo/RecursosPage";
+import PesquisasPage from "./pages/universo/PesquisasPage";
+import PesquisasMercadoPage from "./pages/universo/PesquisasMercadoPage";
+import MapeamentoIAPage from "./pages/universo/MapeamentoIAPage";
+import WhitepapersPage from "./pages/universo/WhitepapersPage";
+import WhatsNextReport2025Page from "./pages/universo/WhatsNextReport2025Page";
 import TecTecAdminPage from "./pages/admin/TecTecAdminPage";
 import Blue6Page from "./pages/produtos/Blue6Page";
 import BrilixPage from "./pages/produtos/BrilixPage";
@@ -45,7 +52,9 @@ import NuvyoPage from "./pages/produtos/NuvyoPage";
 import PingPage from "./pages/produtos/PingPage";
 import SonixPage from "./pages/produtos/SonixPage";
 import Speedy5GPage from "./pages/produtos/Speedy5GPage";
+import PlaudPage from "./pages/produtos/PlaudPage";
 import NeuraFitPage from "./pages/produtos/NeuraFitPage";
+import SearchPage from "./pages/SearchPage";
 import SkipLink from "./components/SkipLink";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -71,6 +80,9 @@ const App = () => {
               {/* Preços */}
               <Route path="/precos" element={<PrecosPage />} />
               
+              {/* Busca */}
+              <Route path="/busca" element={<SearchPage />} />
+              
               {/* Produtos section */}
               <Route path="/produtos/blue6" element={<Blue6Page />} />
               <Route path="/produtos/brilix" element={<BrilixPage />} />
@@ -84,12 +96,14 @@ const App = () => {
               <Route path="/produtos/ping" element={<PingPage />} />
               <Route path="/produtos/sonix" element={<SonixPage />} />
               <Route path="/produtos/speedy5g" element={<Speedy5GPage />} />
+              <Route path="/produtos/plaud" element={<PlaudPage />} />
               
               {/* Somos LEGAL section - Redirect old route to new consolidated page */}
               <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
               <Route path="/missao-visao-valores" element={<MissaoVisaoValoresPage />} />
               <Route path="/time" element={<TimePage />} />
               <Route path="/vagas" element={<VagasPage />} />
+              <Route path="/candidatura" element={<CandidaturaPage />} />
               
               {/* Negócios section */}
               <Route path="/negocios" element={<NegociosPage />} />
@@ -111,9 +125,15 @@ const App = () => {
               <Route path="/universo/historias" element={<HistoriasPage />} />
               <Route path="/universo/historias/:id" element={<PlaceholderPage />} />
               <Route path="/universo/bits" element={<BitsPage />} />
-              <Route path="/universo/imprensa" element={<ImprensaPage />} />
-              <Route path="/universo/status" element={<StatusPage />} />
-              <Route path="/universo/faq" element={<FAQPage />} />
+               <Route path="/universo/recursos" element={<RecursosPage />} />
+               <Route path="/universo/pesquisas" element={<PesquisasPage />} />
+               <Route path="/universo/pesquisas/mercado" element={<PesquisasMercadoPage />} />
+               <Route path="/universo/pesquisas/mercado/mapeamento-ia-2025" element={<MapeamentoIAPage />} />
+                <Route path="/universo/pesquisas/whitepapers" element={<WhitepapersPage />} />
+                <Route path="/universo/pesquisas/whitepapers/whats-next-report-2025" element={<WhatsNextReport2025Page />} />
+                <Route path="/universo/imprensa" element={<ImprensaPage />} />
+               <Route path="/universo/status" element={<StatusPage />} />
+               <Route path="/universo/faq" element={<FAQPage />} />
               
               {/* Admin section */}
               <Route path="/admin/tectec" element={<TecTecAdminPage />} />

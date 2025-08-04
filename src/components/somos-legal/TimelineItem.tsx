@@ -6,9 +6,10 @@ interface TimelineItemProps {
   year: string;
   event: string;
   index: number;
+  hideTimeline?: boolean;
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ year, event, index }) => {
+const TimelineItem: React.FC<TimelineItemProps> = ({ year, event, index, hideTimeline = false }) => {
   // Alternamos as cores baseado no índice para variedade visual
   const colorVariant = index % 3;
   const borderColor = colorVariant === 0 ? 'border-legal-purple' : 
@@ -18,11 +19,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ year, event, index }) => {
 
   return (
     <div className="relative w-full h-full">
-      {/* Ponto na linha do tempo */}
-      <div className={`absolute top-6 left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full ${dotColor} border-4 border-white shadow-lg z-10 hidden md:block`}></div>
-      
       {/* Card do evento */}
-      <div className={`mt-16 md:mt-20 p-6 rounded-xl shadow-lg bg-white border-l-4 ${borderColor} hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[200px] flex flex-col w-full`}>
+      <div className={`mt-4 p-6 rounded-xl shadow-lg bg-white border-l-4 ${borderColor} hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[200px] flex flex-col w-full`}>
         <div className="flex items-center mb-4">
           <Calendar className="text-legal mr-3 h-6 w-6 flex-shrink-0" />
           <h3 className="text-xl font-bold text-legal-purple">{year}</h3>

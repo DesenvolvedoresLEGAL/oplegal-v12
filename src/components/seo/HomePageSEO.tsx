@@ -17,6 +17,7 @@ const HomePageSEO = () => {
       schemaData={homePageSchema}
       preconnect={[
         "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
         "https://images.unsplash.com",
         "https://www.youtube.com"
       ]}

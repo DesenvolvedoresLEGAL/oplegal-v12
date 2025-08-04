@@ -1,12 +1,16 @@
 
 import React from "react";
 import HomePageSEO from "@/components/seo/HomePageSEO";
+import PreloadResources from "@/components/PreloadResources";
 import HeroSection from "@/components/sections/HeroSection";
 import WhyLegalSection from "@/components/sections/WhyLegalSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import SuccessStoriesSection from "@/components/sections/SuccessStoriesSection";
+import FeaturedPosts from "@/components/tectec/FeaturedPosts";
 import CallToAction from "@/components/CallToAction";
 import ChatbotButton from "@/components/ChatbotButton";
+import NewsletterExitPopup from "@/components/NewsletterExitPopup";
+import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
 
 const HomePage = () => {
@@ -15,19 +19,23 @@ const HomePage = () => {
   return (
     <>
       <HomePageSEO />
+      <PreloadResources />
       
-      <main role="main">
+      <main role="main" className="layout-stable">
         {/* Hero Section - H1 Principal */}
         <HeroSection />
         
         {/* Por que LEGAL - Credibilidade e Números */}
         <WhyLegalSection />
         
+        {/* Casos de Sucesso - H2 */}
+        <SuccessStoriesSection />
+        
         {/* Nossos Produtos - H2 */}
         <ProductsSection titleOverride="Soluções Completas para Eventos Inteligentes" />
         
-        {/* Casos de Sucesso - H2 */}
-        <SuccessStoriesSection />
+        {/* Latest Blog Posts */}
+        <FeaturedPosts />
         
         {/* CTA Final */}
         <CallToAction
@@ -41,6 +49,8 @@ const HomePage = () => {
         />
         
         <ChatbotButton />
+        <NewsletterExitPopup />
+        <PerformanceOptimizer />
       </main>
     </>
   );

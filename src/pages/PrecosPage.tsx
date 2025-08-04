@@ -4,28 +4,27 @@ import { Calculator, TrendingUp, Clock, Users, AlertTriangle, CheckCircle } from
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
 const PrecosPage = () => {
   const [selectedDays, setSelectedDays] = useState(15);
   const [selectedDemand, setSelectedDemand] = useState(60);
   const [selectedPlan, setSelectedPlan] = useState("SPEEDY 5G PRO");
   const [fidelidade, setFidelidade] = useState("sem");
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
-
   const baseRates = {
     "SPEEDY 5G LITE": 150,
     "SPEEDY 5G PLUS": 300,
     "SPEEDY 5G PRO": 600,
     "SPEEDY 5G ULTRA": 900,
-    "SPEEDY 5G LIVE": 500,
+    "SPEEDY 5G LIVE": 500
   };
-
   const getAdvanceFactor = (days: number) => {
     if (days >= 30) return -0.1;
     if (days >= 21) return 0;
@@ -33,27 +32,22 @@ const PrecosPage = () => {
     if (days >= 4) return 0.2;
     return 0.3;
   };
-
   const getDemandFactor = (demand: number) => {
     if (demand < 50) return 0;
     if (demand <= 75) return 0.1;
     if (demand <= 90) return 0.2;
     return 0.3;
   };
-
   const calculatePrice = (basePlan: string, days: number, demand: number) => {
     const basePrice = baseRates[basePlan as keyof typeof baseRates];
     const advanceFactor = getAdvanceFactor(days);
     const demandFactor = getDemandFactor(demand);
     return basePrice * (1 + advanceFactor + demandFactor);
   };
-
   const finalPrice = calculatePrice(selectedPlan, selectedDays, selectedDemand);
   const advanceFactor = getAdvanceFactor(selectedDays);
   const demandFactor = getDemandFactor(selectedDemand);
-
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Preços | LEGAL - Conectividade, Drones e IA para Eventos</title>
         <meta name="description" content="Conheça os preços de todos nossos produtos e serviços: locação e assinatura de internet FWA 5G, drones, soluções de IA e muito mais." />
@@ -75,31 +69,19 @@ const PrecosPage = () => {
 
           {/* Categorias de Serviços */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card 
-              className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all"
-              onClick={() => scrollToSection('locacao-fwa')}
-            >
-              <h3 className="text-xl font-bold text-white mb-2">Locação FWA 5G</h3>
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('locacao-fwa')}>
+              <h3 className="text-xl font-bold text-white mb-2">Aluguel de Internet para Eventos</h3>
               <p className="text-white/80 text-sm">Preços dinâmicos por evento</p>
             </Card>
-            <Card 
-              className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all"
-              onClick={() => scrollToSection('assinatura-fwa')}
-            >
-              <h3 className="text-xl font-bold text-white mb-2">Assinatura</h3>
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('assinatura-fwa')}>
+              <h3 className="text-xl font-bold text-white mb-2">Planos de Assinatura de Internet</h3>
               <p className="text-white/80 text-sm">Planos mensais e anuais</p>
             </Card>
-            <Card 
-              className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all"
-              onClick={() => scrollToSection('servicos-drone')}
-            >
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('servicos-drone')}>
               <h3 className="text-xl font-bold text-white mb-2">Serviços Drone</h3>
               <p className="text-white/80 text-sm">Foto, vídeo, limpeza, delivery</p>
             </Card>
-            <Card 
-              className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all"
-              onClick={() => scrollToSection('solucoes-ia')}
-            >
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('solucoes-ia')}>
               <h3 className="text-xl font-bold text-white mb-2">Soluções IA</h3>
               <p className="text-white/80 text-sm">IA para eventos e negócios</p>
             </Card>
@@ -108,7 +90,7 @@ const PrecosPage = () => {
           {/* Locação FWA 5G */}
           <Card id="locacao-fwa" className="p-8 mb-12 bg-white/5 backdrop-blur-sm border-white/10">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-white">Locação FWA 5G</h2>
+              <h2 className="text-2xl font-bold text-white">Aluguel de Internet</h2>
             </div>
             
             <p className="text-white/90 text-lg mb-8 text-center">
@@ -254,21 +236,13 @@ const PrecosPage = () => {
                   <label className="block text-white font-medium mb-3">
                     Antecedência: {selectedDays} dias
                   </label>
-                  <input
-                    type="range"
-                    min="0"
-                    max="60"
-                    value={selectedDays}
-                    onChange={(e) => setSelectedDays(Number(e.target.value))}
-                    className="w-full mb-4"
-                  />
+                  <input type="range" min="0" max="60" value={selectedDays} onChange={e => setSelectedDays(Number(e.target.value))} className="w-full mb-4" />
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-legal-cyan font-medium">
                       {advanceFactor >= 0 ? "+" : ""}{(advanceFactor * 100).toFixed(0)}%
                     </div>
                     <div className="text-white text-sm">
-                      {advanceFactor < 0 ? "Desconto por planejamento" : 
-                       advanceFactor === 0 ? "Preço base" : "Acréscimo por urgência"}
+                      {advanceFactor < 0 ? "Desconto por planejamento" : advanceFactor === 0 ? "Preço base" : "Acréscimo por urgência"}
                     </div>
                   </div>
                 </div>
@@ -278,14 +252,7 @@ const PrecosPage = () => {
                   <label className="block text-white font-medium mb-3">
                     Ocupação: {selectedDemand}%
                   </label>
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={selectedDemand}
-                    onChange={(e) => setSelectedDemand(Number(e.target.value))}
-                    className="w-full mb-4"
-                  />
+                  <input type="range" min="0" max="100" value={selectedDemand} onChange={e => setSelectedDemand(Number(e.target.value))} className="w-full mb-4" />
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-legal-cyan font-medium">
                       +{(demandFactor * 100).toFixed(0)}%
@@ -302,7 +269,9 @@ const PrecosPage = () => {
                 <div className="text-center">
                   <div className="text-white text-lg mb-2">Preço Final Estimado (Plano Selecionado)</div>
                   <div className="text-4xl font-bold text-legal-cyan mb-4">
-                    R$ {finalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                    R$ {finalPrice.toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2
+                  })}
                   </div>
                   <div className="text-white/80 text-sm">
                     Baseado no {selectedPlan} • Valor base: R$ {baseRates[selectedPlan as keyof typeof baseRates].toLocaleString('pt-BR')} • 
@@ -413,23 +382,18 @@ const PrecosPage = () => {
             {/* Seletor de Fidelidade */}
             <div className="flex justify-center mb-8">
               <div className="bg-white/10 rounded-lg p-1 flex">
-                {[
-                  { value: "sem", label: "Sem Fidelidade" },
-                  { value: "12", label: "12 meses" },
-                  { value: "24", label: "24 meses" }
-                ].map((option) => (
-                  <button
-                    key={option.value}
-                    onClick={() => setFidelidade(option.value)}
-                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
-                      fidelidade === option.value
-                        ? "bg-legal-cyan text-legal"
-                        : "text-white hover:text-legal-cyan"
-                    }`}
-                  >
+                {[{
+                value: "sem",
+                label: "Sem Fidelidade"
+              }, {
+                value: "12",
+                label: "12 meses"
+              }, {
+                value: "24",
+                label: "24 meses"
+              }].map(option => <button key={option.value} onClick={() => setFidelidade(option.value)} className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${fidelidade === option.value ? "bg-legal-cyan text-legal" : "text-white hover:text-legal-cyan"}`}>
                     {option.label}
-                  </button>
-                ))}
+                  </button>)}
               </div>
             </div>
 
@@ -437,10 +401,7 @@ const PrecosPage = () => {
               <div className="group p-6 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-legal-cyan/30 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-4">SPEEDY 5G LITE</h3>
                 <div className="text-3xl font-bold text-legal-cyan mb-6">
-                  R$ {
-                    fidelidade === "sem" ? "500" :
-                    fidelidade === "12" ? "300" : "200"
-                  }<span className="text-lg">/mês</span>
+                  R$ {fidelidade === "sem" ? "500" : fidelidade === "12" ? "300" : "200"}<span className="text-lg">/mês</span>
                 </div>
                 <ul className="text-white/80 space-y-3 text-sm">
                   <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>100GB de dados</li>
@@ -458,10 +419,7 @@ const PrecosPage = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">SPEEDY 5G PRO</h3>
                 <div className="text-3xl font-bold text-legal-cyan mb-6">
-                  R$ {
-                    fidelidade === "sem" ? "1.000" :
-                    fidelidade === "12" ? "600" : "400"
-                  }<span className="text-lg">/mês</span>
+                  R$ {fidelidade === "sem" ? "1.000" : fidelidade === "12" ? "600" : "400"}<span className="text-lg">/mês</span>
                 </div>
                 <ul className="text-white/80 space-y-3 text-sm">
                   <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>300GB de dados</li>
@@ -476,10 +434,7 @@ const PrecosPage = () => {
               <div className="group p-6 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-legal-cyan/30 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-4">SPEEDY 5G ULTRA</h3>
                 <div className="text-3xl font-bold text-legal-cyan mb-6">
-                  R$ {
-                    fidelidade === "sem" ? "2.000" :
-                    fidelidade === "12" ? "1.200" : "800"
-                  }<span className="text-lg">/mês</span>
+                  R$ {fidelidade === "sem" ? "2.000" : fidelidade === "12" ? "1.200" : "800"}<span className="text-lg">/mês</span>
                 </div>
                 <ul className="text-white/80 space-y-3 text-sm">
                   <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>600GB de dados</li>
@@ -610,8 +565,6 @@ const PrecosPage = () => {
 
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default PrecosPage;

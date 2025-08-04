@@ -9,15 +9,24 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold text-legal-green mb-4">LEGAL</h3>
             <p className="text-gray-300 mb-6">A maior TechCo do Brasil e criadora do Smart Events™. Junte-se a nós na missão de conectar 1 milhão de pessoas, negócios e coisas até 2030.</p>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Instagram">
-                <Instagram size={20} />
+            
+            {/* Redes Sociais e Google Reviews */}
+            <div className="flex items-center gap-3">
+              {/* Redes Sociais */}
+              <a href="https://instagram.com/legal_oficial" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300" aria-label="Instagram">
+                <Instagram size={18} />
               </a>
-              <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Conecte-se com a LEGAL no LinkedIn">
-                <Linkedin size={20} />
+              <a href="https://linkedin.com/company/legal-brasil" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300" aria-label="LinkedIn">
+                <Linkedin size={18} />
               </a>
-              <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-legal-green transition-colors p-2" aria-label="Siga a LEGAL no Twitter">
-                <Twitter size={20} />
+              <a href="https://twitter.com/legal_tech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300" aria-label="Twitter">
+                <Twitter size={18} />
+              </a>
+              
+              {/* Google Reviews */}
+              <a href="https://g.page/r/CXBwSjN486gbEAE/review" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 bg-yellow-500/20 px-2 py-1 rounded text-xs hover:bg-yellow-500/30 transition-all">
+                <span>⭐</span>
+                <span>Google 4.9</span>
               </a>
             </div>
           </div>
@@ -67,7 +76,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        {/* Copyright e Links Legais */}
+        <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">© 2025 LEGAL. Todos os direitos reservados.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">

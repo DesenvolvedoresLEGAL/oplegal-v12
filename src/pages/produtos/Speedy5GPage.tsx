@@ -21,8 +21,8 @@ const Speedy5GPage = () => {
         <meta property="og:title" content="Speedy5G - Conectividade 5G Ultra-Rápida | LEGAL" />
         <meta property="og:description" content="Transforme sua conectividade com Speedy5G: velocidade extrema, latência mínima e infraestrutura robusta." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://legal.com.br/produtos/speedy5g" />
-        <link rel="canonical" href="https://legal.com.br/produtos/speedy5g" />
+        <meta property="og:url" content="https://operadora.legal/produtos/speedy5g" />
+        <link rel="canonical" href="https://operadora.legal/produtos/speedy5g" />
       </Helmet>
       
       <main>

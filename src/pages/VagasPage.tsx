@@ -22,64 +22,72 @@ import {
 
 const openPositions = [
   {
+    title: "Consultor(a) de Tecnologia",
+    department: "Comercial",
+    location: "Presencial",
+    type: "PJ",
+    level: "Pleno",
+    salary: "A partir de R$ 7.000",
+    description: "Desenvolvimento de relacionamentos comerciais e apresentação de soluções tecnológicas para clientes no setor de eventos.",
+    requirements: ["Experiência em vendas B2B", "Conhecimento em tecnologia", "Relacionamento interpessoal", "Negociação"],
+    values: ["Execução Energizada", "Resultados com Ressonância"],
+    quantity: "3 vagas"
+  },
+  {
+    title: "Gerente de Customer Success",
+    department: "Customer Success",
+    location: "Presencial",
+    type: "CLT",
+    level: "Pleno",
+    salary: "A partir de R$ 8.000",
+    description: "Liderança do time de CS e garantia da satisfação e retenção de clientes, focando em resultados e crescimento.",
+    requirements: ["Experiência em CS", "Liderança de equipes", "Análise de dados", "Relacionamento com clientes"],
+    values: ["Resultados com Ressonância", "Alinhamento com Alma"],
+    quantity: "1 vaga"
+  },
+  {
     title: "Desenvolvedor(a) Full Stack",
     department: "Tecnologia",
-    location: "Remoto",
+    location: "Presencial",
     type: "CLT",
     level: "Pleno",
     description: "Desenvolvimento de soluções tecnológicas para eventos e negócios utilizando React, Node.js e tecnologias modernas.",
     requirements: ["React", "Node.js", "TypeScript", "PostgreSQL"],
-    values: ["Execução Energizada", "Visão Viva"]
+    values: ["Execução Energizada", "Visão Viva"],
+    quantity: "1 vaga"
   },
   {
-    title: "Product Manager",
-    department: "Produto",
-    location: "Híbrido - São Paulo",
+    title: "Desenvolvedor(a) Full Stack",
+    department: "Tecnologia",
+    location: "Presencial",
     type: "CLT",
     level: "Sênior",
-    description: "Liderança de produtos digitais que conectam pessoas, negócios e coisas em todo o Brasil.",
-    requirements: ["Product Management", "Analytics", "UX/UI", "Metodologias Ágeis"],
-    values: ["Resultados com Ressonância", "Alinhamento com Alma"]
+    description: "Desenvolvimento e arquitetura de soluções tecnológicas complexas, mentoria de desenvolvedores e liderança técnica.",
+    requirements: ["React", "Node.js", "TypeScript", "PostgreSQL", "Arquitetura de software", "Liderança técnica"],
+    values: ["Execução Energizada", "Visão Viva"],
+    quantity: "1 vaga"
   },
   {
-    title: "UX/UI Designer",
-    department: "Design",
-    location: "Remoto",
+    title: "Analista Financeiro",
+    department: "Financeiro",
+    location: "Presencial",
     type: "CLT",
     level: "Pleno",
-    description: "Criação de experiências digitais incríveis que transformam a forma como as pessoas se conectam.",
-    requirements: ["Figma", "Adobe Creative", "Design Systems", "Prototipagem"],
-    values: ["Visão Viva", "Alinhamento com Alma"]
+    description: "Análise financeira, controle de fluxo de caixa, relatórios gerenciais e apoio à tomada de decisões estratégicas.",
+    requirements: ["Graduação em Contabilidade/Administração", "Excel avançado", "Análise financeira", "Relatórios gerenciais"],
+    values: ["Resultados com Ressonância", "Execução Energizada"],
+    quantity: "1 vaga"
   },
   {
-    title: "DevOps Engineer",
-    department: "Infraestrutura",
-    location: "Remoto",
-    type: "CLT",
-    level: "Sênior",
-    description: "Construção e manutenção de infraestrutura robusta para suportar o crescimento exponencial da LEGAL.",
-    requirements: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-    values: ["Execução Energizada", "Resultados com Ressonância"]
-  },
-  {
-    title: "Sales Executive",
-    department: "Vendas",
-    location: "Híbrido - São Paulo",
-    type: "CLT",
-    level: "Pleno",
-    description: "Expansão da base de clientes e desenvolvimento de relacionamentos duradouros no mercado de eventos.",
-    requirements: ["Vendas B2B", "CRM", "Negociação", "Relacionamento"],
-    values: ["Execução Energizada", "Resultados com Ressonância"]
-  },
-  {
-    title: "Marketing Analyst",
-    department: "Marketing",
-    location: "Remoto",
+    title: "Assistente Administrativo",
+    department: "Administrativo",
+    location: "Presencial",
     type: "CLT",
     level: "Júnior",
-    description: "Análise de dados e criação de campanhas que amplificam o alcance da marca LEGAL.",
-    requirements: ["Google Analytics", "SQL", "Marketing Digital", "Data Analysis"],
-    values: ["Visão Viva", "Resultados com Ressonância"]
+    description: "Suporte administrativo geral, organização de documentos, atendimento e apoio às operações do dia a dia.",
+    requirements: ["Ensino médio completo", "Pacote Office", "Organização", "Comunicação"],
+    values: ["Alinhamento com Alma", "Execução Energizada"],
+    quantity: "1 vaga"
   }
 ];
 
@@ -97,7 +105,7 @@ const benefits = [
   {
     icon: <Heart className="w-6 h-6" />,
     title: "Plano de Saúde",
-    description: "Assistência médica e odontológica completa"
+    description: "Assistência médica e odontológica (após 6 meses)"
   },
   {
     icon: <Car className="w-6 h-6" />,
@@ -111,8 +119,8 @@ const benefits = [
   },
   {
     icon: <Users className="w-6 h-6" />,
-    title: "Cultura LEGAL",
-    description: "Ambiente colaborativo e de crescimento"
+    title: "Bônus Anual",
+    description: "Até 2 salários a mais no ano"
   }
 ];
 
@@ -124,27 +132,27 @@ const processSteps = [
   },
   {
     step: "02",
-    title: "Triagem",
+    title: "Etapa 1: Triagem",
     description: "Nossa equipe de People analisa seu perfil e experiências."
   },
   {
     step: "03",
-    title: "Entrevista RH",
-    description: "Bate-papo sobre fit cultural e alinhamento com nossos valores."
+    title: "Etapa 2: Entrevista Online",
+    description: "Conversa online para conhecer suas habilidades e experiências."
   },
   {
     step: "04",
-    title: "Teste Técnico",
-    description: "Desafio prático relacionado à vaga para conhecer suas habilidades."
+    title: "Etapa 3: Entrevista Presencial",
+    description: "Bate-papo presencial sobre fit cultural e alinhamento com nossos valores."
   },
   {
     step: "05",
-    title: "Entrevista Final",
-    description: "Conversa com o time e liderança da área."
+    title: "Análise FitScore",
+    description: "Avaliação completa do seu perfil e compatibilidade com a vaga."
   },
   {
     step: "06",
-    title: "Proposta",
+    title: "Contratação",
     description: "Apresentação da proposta e boas-vindas ao time LEGAL!"
   }
 ];
@@ -166,7 +174,11 @@ const VagasPage = () => {
             Faça parte da maior TechCo de eventos e negócios do Brasil. Aqui, transformar ideias em realidade é regra.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in animation-delay-600">
-            <Button size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
+            <Button 
+              size="lg" 
+              className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold"
+              onClick={() => document.getElementById('oportunidades')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Ver Oportunidades
             </Button>
             <Button size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
@@ -177,7 +189,7 @@ const VagasPage = () => {
       </section>
 
       {/* Open Positions Section */}
-      <section className="py-16 md:py-24">
+      <section id="oportunidades" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <SectionTitle
             title="OPORTUNIDADES ABERTAS"
@@ -198,7 +210,15 @@ const VagasPage = () => {
                         <Badge variant="outline" className="border-legal/30">
                           {position.level}
                         </Badge>
+                        {position.quantity && (
+                          <Badge variant="outline" className="border-legal-cyan/30 text-legal-cyan">
+                            {position.quantity}
+                          </Badge>
+                        )}
                       </div>
+                      {position.salary && (
+                        <p className="text-legal font-semibold">{position.salary}</p>
+                      )}
                     </div>
                   </div>
                   
@@ -239,7 +259,10 @@ const VagasPage = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full bg-legal hover:bg-legal/90 text-white">
+                  <Button 
+                    className="w-full bg-legal hover:bg-legal/90 text-white"
+                    onClick={() => window.location.href = '/candidatura'}
+                  >
                     <Send className="w-4 h-4 mr-2" />
                     Candidatar-se
                   </Button>
@@ -255,7 +278,7 @@ const VagasPage = () => {
         <div className="container mx-auto px-4">
           <SectionTitle
             title="BENEFÍCIOS LEGAIS"
-            subtitle="Cuidamos do nosso time com benefícios que fazem a diferença no dia a dia e no crescimento profissional."
+            subtitle="Cuidamos do nosso time CLT com benefícios que fazem a diferença no dia a dia e no crescimento profissional."
             center
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
