@@ -118,7 +118,13 @@ const ContatoPage = () => {
     const company = data.company;
     const phone = data.phone;
     const subject = data.subject;
-    const message = data.message;
+    const message = `
+      Nome: ${name},\n
+      Email: ${email},\n
+      Empresa: ${company},\n
+      Telefone: ${phone}\n
+      ------------------------------\n
+      ${data.message}\n`;
 
     const templateParams = {
       to_email: CONTACT_EMAIL,
