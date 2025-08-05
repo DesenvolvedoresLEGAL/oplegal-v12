@@ -23,18 +23,29 @@ const createHomePageSchema = () => ({
     "logo": "https://operadora.legal/images/legal-logo.png",
     "image": "https://operadora.legal/images/legal-smart-events-hero.jpg",
     
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+55-11-99999-9999",
-      "contactType": "Atendimento comercial",
-      "availableLanguage": "Portuguese",
-      "areaServed": "BR"
-    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-99999-9999",
+        "contactType": "Atendimento comercial",
+        "availableLanguage": ["Portuguese", "pt-BR"],
+        "areaServed": "BR",
+        "hoursAvailable": "Mo-Fr 08:00-18:00"
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "contato@operadora.legal",
+        "contactType": "Suporte técnico",
+        "availableLanguage": ["Portuguese", "pt-BR"],
+        "areaServed": "BR"
+      }
+    ],
     
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "BR",
-      "addressRegion": "SP"
+      "addressRegion": "SP",
+      "addressLocality": "São Paulo"
     },
     
     "sameAs": [

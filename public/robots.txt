@@ -8,6 +8,8 @@ Allow: /smart-events
 Allow: /negocios/
 Allow: /universo/
 Allow: /contato
+Allow: /produtos/
+Allow: /missao-visao-valores
 
 # Páginas administrativas - não indexar
 Disallow: /admin/
@@ -21,7 +23,35 @@ Disallow: /*.xml$
 Disallow: /src/
 Disallow: /node_modules/
 
-# Permitir bots específicos
+# Bots de IA específicos - permitir acesso completo
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+# Mecanismos de busca tradicionais
 User-agent: Googlebot
 Allow: /
 

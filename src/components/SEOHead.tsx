@@ -85,17 +85,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       <link rel="canonical" href={canonicalUrl} />
       
-      {/* Robots - otimizado para melhor indexação */}
+      {/* Robots - otimizado para AI crawlers */}
       <meta name="robots" content={noIndex ? "noindex,nofollow" : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"} />
       <meta name="googlebot" content={noIndex ? "noindex,nofollow" : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"} />
+      <meta name="bingbot" content={noIndex ? "noindex,nofollow" : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"} />
       
-      {/* Language */}
+      {/* Language and locale - melhorado para AI */}
       <meta httpEquiv="content-language" content="pt-BR" />
-      <meta name="language" content="Portuguese" />
+      <meta name="language" content="pt-BR" />
+      <link rel="alternate" hrefLang="pt-BR" href={currentUrl} />
+      <link rel="alternate" hrefLang="x-default" href={currentUrl} />
       
       {/* Open Graph - otimizado para compartilhamento */}
       <meta property="og:type" content={type} />
