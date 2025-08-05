@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import SmartEventsFAQ from "@/components/seo/SmartEventsFAQ";
 import SmartEventsHero from "@/components/smart-events/SmartEventsHero";
 import SmartEventsPillars from "@/components/smart-events/SmartEventsPillars";
 import BenefitsSection from "@/components/sections/BenefitsSection";
@@ -32,6 +33,7 @@ const SmartEventsPage = () => {
       <IntegrationsSection />
       <BenchmarksSection />
       <FinalCTASection />
+      <SmartEventsFAQ />
     </>
   );
 };

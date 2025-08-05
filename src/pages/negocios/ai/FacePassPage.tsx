@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import ProductSchema from '@/components/seo/ProductSchema';
 import CallToAction from '@/components/CallToAction';
 import FacePassHero from '@/components/facepass/FacePassHero';
 import FacePassFeatures from '@/components/facepass/FacePassFeatures';
