@@ -124,7 +124,7 @@ const NewsletterExitPopup = () => {
               className="w-36 h-36 object-cover rounded-full mx-auto border-4 border-legal-blue/20"
             />
           </div>
-          <DialogTitle className="text-2xl font-bold" style={{ color: '#020cbc' }}>
+          <DialogTitle className="text-2xl font-bold" style={{ color: '#020cbc !important' }}>
             Fala comigo humanoide,
           </DialogTitle>
           <DialogDescription className="text-gray-600">
