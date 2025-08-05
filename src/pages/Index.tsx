@@ -14,6 +14,8 @@ import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import TechnicalSEO from "@/components/seo/TechnicalSEO";
 import WebPageSchema from "@/components/seo/WebPageSchema";
 import AIKnowledgeProvider from "@/components/seo/AIKnowledgeProvider";
+import SEOCrawlerOptimization from "@/components/optimization/SEOCrawlerOptimization";
+import AIFeedbackSystem from "@/components/optimization/AIFeedbackSystem";
 
 const Index = () => {
   useScrollAnimations();
@@ -48,6 +50,8 @@ const Index = () => {
         }}
       />
       <AIKnowledgeProvider />
+      <SEOCrawlerOptimization />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
       <PreloadResources />
       <PerformanceOptimizer />
       
