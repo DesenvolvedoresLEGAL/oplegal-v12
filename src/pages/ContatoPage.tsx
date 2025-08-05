@@ -386,6 +386,14 @@ const ContatoPage = () => {
                         <p className="text-muted-foreground">Sábado: 8h às 14h</p>
                       </div>
                     </div>
+                    <div className="flex items-center space-x-3">
+                      <Building className="w-5 h-5 text-legal-cyan" />
+                      <div>
+                        <p className="font-medium">Dados da Empresa</p>
+                        <p className="text-muted-foreground">Operadora LEGAL X Ltda</p>
+                        <p className="text-muted-foreground">CNPJ: 54.753.156/0001-72</p>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

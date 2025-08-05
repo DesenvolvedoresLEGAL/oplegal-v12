@@ -79,7 +79,10 @@ const Footer = () => {
         {/* Copyright e Links Legais */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© 2025 LEGAL. Todos os direitos reservados.</p>
+            <div className="text-gray-400 text-sm text-center md:text-left">
+              <p>© 2025 LEGAL. Todos os direitos reservados.</p>
+              <p className="mt-1">Operadora LEGAL X Ltda - CNPJ: 54.753.156/0001-72</p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/universo/faq" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Política de Privacidade
