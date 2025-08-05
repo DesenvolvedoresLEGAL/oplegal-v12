@@ -66,40 +66,73 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
     return null; // Não mostrar breadcrumbs na homepage
   }
 
+  // Gerar schema estruturado para breadcrumbs
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.label,
+      ...(item.href && { "item": `https://operadora.legal${item.href}` })
+    }))
+  };
+
   return (
-    <nav 
-      aria-label="Breadcrumb" 
-      className={`py-4 px-4 bg-gray-50 border-b ${className}`}
-    >
-      <div className="container mx-auto">
-        <ol className="flex items-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (
-            <li key={index} className="flex items-center">
-              {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-              )}
-              
-              {index === 0 && (
-                <Home className="w-4 h-4 text-gray-500 mr-1" />
-              )}
-              
-              {item.href ? (
-                <Link 
-                  to={item.href}
-                  className="text-gray-600 hover:text-legal transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <span className="text-legal font-medium" aria-current="page">
-                  {item.label}
-                </span>
-              )}
-            </li>
-          ))}
-        </ol>
-      </div>
-    </nav>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <nav 
+        aria-label="Breadcrumb" 
+        className={`py-4 px-4 bg-gray-50 border-b ${className}`}
+        itemScope 
+        itemType="https://schema.org/BreadcrumbList"
+      >
+        <div className="container mx-auto">
+          <ol className="flex items-center space-x-2 text-sm">
+            {breadcrumbItems.map((item, index) => (
+              <li 
+                key={index} 
+                className="flex items-center"
+                itemProp="itemListElement" 
+                itemScope 
+                itemType="https://schema.org/ListItem"
+              >
+                <meta itemProp="position" content={(index + 1).toString()} />
+                
+                {index > 0 && (
+                  <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                )}
+                
+                {index === 0 && (
+                  <Home className="w-4 h-4 text-gray-500 mr-1" />
+                )}
+                
+                {item.href ? (
+                  <Link 
+                    to={item.href}
+                    className="text-gray-600 hover:text-legal transition-colors"
+                    itemProp="item"
+                  >
+                    <span itemProp="name">{item.label}</span>
+                  </Link>
+                ) : (
+                  <span 
+                    className="text-legal font-medium" 
+                    aria-current="page"
+                    itemProp="name"
+                  >
+                    {item.label}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </nav>
+    </>
   );
 };
 

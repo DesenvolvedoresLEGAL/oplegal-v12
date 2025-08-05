@@ -13,7 +13,11 @@ const HeroSection = () => {
   }, []);
   
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-legal-black text-white overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center justify-center bg-legal-black text-white overflow-hidden"
+      itemScope 
+      itemType="https://schema.org/Organization"
+    >
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-legal to-legal-black opacity-80"></div>
       
@@ -37,10 +41,13 @@ const HeroSection = () => {
             <span className="inline-block bg-legal-green bg-opacity-20 text-legal-green px-4 py-2 rounded-full text-sm font-medium mb-6">A maior e melhor TechCo do Brasil</span>
           </div>
           
-          <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}>
-            <span className="text-legal-green">Smart Events™</span> — o novo padrão para eventos{" "}
+          <h1 
+            className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0 transform translate-y-10"}`}
+            itemProp="headline"
+          >
+            <span className="text-legal-green" itemProp="brand">Smart Events™</span> — o novo padrão para eventos{" "}
             <span className="relative inline-block">
-              <span className="relative z-10">10× mais inteligentes,</span>
+              <span className="relative z-10" itemProp="description">10× mais inteligentes,</span>
               <span className="absolute bottom-1 left-0 w-full h-2 bg-legal-green opacity-30"></span>
             </span>{" "}
             <br className="hidden md:block" />
