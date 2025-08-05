@@ -13,6 +13,7 @@ import PreloadResources from "@/components/PreloadResources";
 import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import TechnicalSEO from "@/components/seo/TechnicalSEO";
 import WebPageSchema from "@/components/seo/WebPageSchema";
+import AIKnowledgeProvider from "@/components/seo/AIKnowledgeProvider";
 
 const Index = () => {
   useScrollAnimations();
@@ -46,6 +47,7 @@ const Index = () => {
           name: "Entre em Contato"
         }}
       />
+      <AIKnowledgeProvider />
       <PreloadResources />
       <PerformanceOptimizer />
       
