@@ -16,6 +16,10 @@ import WebPageSchema from "@/components/seo/WebPageSchema";
 import AIKnowledgeProvider from "@/components/seo/AIKnowledgeProvider";
 import SEOCrawlerOptimization from "@/components/optimization/SEOCrawlerOptimization";
 import AIFeedbackSystem from "@/components/optimization/AIFeedbackSystem";
+import VoiceSearchOptimization from "@/components/optimization/VoiceSearchOptimization";
+import ConversationalAIData from "@/components/optimization/ConversationalAIData";
+import FeaturedSnippetsOptimization from "@/components/optimization/FeaturedSnippetsOptimization";
+import NaturalLanguageOptimization from "@/components/optimization/NaturalLanguageOptimization";
 
 const Index = () => {
   useScrollAnimations();
@@ -52,6 +56,27 @@ const Index = () => {
       <AIKnowledgeProvider />
       <SEOCrawlerOptimization />
       <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <VoiceSearchOptimization 
+        businessName="LEGAL TechCo"
+        primaryKeywords={["Smart Events", "eventos inteligentes", "IA", "reconhecimento facial"]}
+        location="Brasil"
+        services={["Smart Events™", "FacePass™", "FitScore™", "AERO Services"]}
+      />
+      <ConversationalAIData 
+        domain="events"
+        intentClassification={["product_inquiry", "pricing_request", "demo_request", "company_info"]}
+        entityTypes={["product_name", "technology", "business_need", "location"]}
+      />
+      <FeaturedSnippetsOptimization 
+        pageType="homepage"
+        primaryTopic="Smart Events"
+        targetQuestions={["O que é Smart Events", "Como tornar eventos inteligentes", "Melhor empresa de tecnologia para eventos"]}
+      />
+      <NaturalLanguageOptimization 
+        pageContext="smart_events_homepage"
+        primaryEntities={["LEGAL TechCo", "Smart Events™", "FacePass™", "FitScore™"]}
+        semanticTopics={["eventos inteligentes", "tecnologia", "inteligência artificial", "inovação"]}
+      />
       <PreloadResources />
       <PerformanceOptimizer />
       
