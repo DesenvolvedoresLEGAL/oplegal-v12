@@ -168,6 +168,13 @@ const Navbar = () => {
                               <p className="text-xs text-gray-500">Musculação para o Cérebro</p>
                             </div>
                           </Link>
+                          <Link to="/solucoes/tagpulse" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                            <TrendingUp className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">TagPulse™</div>
+                              <p className="text-xs text-gray-500">Etiquetas Digitais Dinâmicas</p>
+                            </div>
+                          </Link>
                         </div>
                       </div>
 
@@ -484,6 +491,9 @@ const Navbar = () => {
               </Link>
               <Link to="/produtos/plaud" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 Plaud - Gravação de Voz com IA
+              </Link>
+              <Link to="/solucoes/tagpulse" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                TagPulse™ - Etiquetas Digitais Dinâmicas
               </Link>
             </div>
           </div>
