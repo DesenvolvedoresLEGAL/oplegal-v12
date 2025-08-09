@@ -54,6 +54,7 @@ import SonixPage from "./pages/produtos/SonixPage";
 import Speedy5GPage from "./pages/produtos/Speedy5GPage";
 import PlaudPage from "./pages/produtos/PlaudPage";
 import NeuraFitPage from "./pages/produtos/NeuraFitPage";
+import TagPulsePage from "./pages/produtos/TagPulsePage";
 import SearchPage from "./pages/SearchPage";
 import SkipLink from "./components/SkipLink";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -97,6 +98,9 @@ const App = () => {
               <Route path="/produtos/sonix" element={<SonixPage />} />
               <Route path="/produtos/speedy5g" element={<Speedy5GPage />} />
               <Route path="/produtos/plaud" element={<PlaudPage />} />
+              
+              {/* AI & Inovação - TagPulse */}
+              <Route path="/solucoes/tagpulse" element={<TagPulsePage />} />
               
               {/* Somos LEGAL section - Redirect old route to new consolidated page */}
               <Route path="/somos-legal" element={<Navigate to="/missao-visao-valores" replace />} />
