@@ -67,32 +67,31 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Produtos</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[600px] p-6 bg-white border border-gray-100 shadow-lg rounded-lg">
-                    <div className="grid grid-cols-3 gap-6">
-                      
+                  <div className="w-[980px] lg:w-[1040px] p-6 bg-popover text-popover-foreground border border-border shadow-lg rounded-2xl max-h-[70vh] overflow-y-auto backdrop-blur-md supports-[backdrop-filter]:bg-popover/90">
+                    <div className="grid grid-cols-3 gap-8">
                       {/* Conectividade & WiFi */}
                       <div>
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Conectividade & WiFi & Gadgets</h3>
                         <div className="space-y-3">
-                          <Link to="/produtos/blue6" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/blue6" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Wifi className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Blue6</div>
-                              <p className="text-xs text-gray-500">Hotspot com Gestão WiFi</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Blue6</div>
+                              <p className="text-xs text-muted-foreground">Hotspot com Gestão WiFi</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/speedy5g" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/speedy5g" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Zap className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Speedy 5G</div>
-                              <p className="text-xs text-gray-500">Internet Plug and Play</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Speedy 5G</div>
+                              <p className="text-xs text-muted-foreground">Internet Plug and Play</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/plaud" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/plaud" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <MessageCircle className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Plaud</div>
-                              <p className="text-xs text-gray-500">Gravação de Voz com IA</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Plaud</div>
+                              <p className="text-xs text-muted-foreground">Gravação de Voz com IA</p>
                             </div>
                           </Link>
                         </div>
@@ -102,32 +101,32 @@ const Navbar = () => {
                       <div>
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Eventos & Gestão</h3>
                         <div className="space-y-3">
-                          <Link to="/produtos/eventrix" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/eventrix" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Calendar className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Eventrix</div>
-                              <p className="text-xs text-gray-500">Plataforma de Gestão de Eventos</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Eventrix</div>
+                              <p className="text-xs text-muted-foreground">Plataforma de Gestão de Eventos</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/facepass" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/facepass" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <User className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">FacePass</div>
-                              <p className="text-xs text-gray-500">Credenciamento e Acesso Rápido</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">FacePass</div>
+                              <p className="text-xs text-muted-foreground">Credenciamento e Acesso Rápido</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/linkai" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/linkai" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Heart className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">LinkAI</div>
-                              <p className="text-xs text-gray-500">Matchmaking Inteligente</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">LinkAI</div>
+                              <p className="text-xs text-muted-foreground">Matchmaking Inteligente</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/ping" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/ping" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <MessageCircle className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Ping</div>
-                              <p className="text-xs text-gray-500">Atendimento Omnichannel</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Ping</div>
+                              <p className="text-xs text-muted-foreground">Atendimento Omnichannel</p>
                             </div>
                           </Link>
                         </div>
@@ -137,70 +136,70 @@ const Navbar = () => {
                       <div>
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">IA & Inovação</h3>
                         <div className="space-y-3">
-                          <Link to="/produtos/fitscore" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/fitscore" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Target className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">FitScore</div>
-                              <p className="text-xs text-gray-500">Contratação e People Analytics</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">FitScore</div>
+                              <p className="text-xs text-muted-foreground">Contratação e People Analytics</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/humanoid" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/humanoid" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Bot className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Humanoid</div>
-                              <p className="text-xs text-gray-500">Robô para Geração de Negócios</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Humanoid</div>
+                              <p className="text-xs text-muted-foreground">Robô para Geração de Negócios</p>
                             </div>
                           </Link>
-                          <a href="https://vitai.operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <a href="https://vitai.operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Heart className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div className="flex items-center">
                               <div>
-                                <div className="text-sm font-medium text-gray-900 group-hover:text-legal">VitAI</div>
-                                <p className="text-xs text-gray-500">Hub de Gestão da Saúde</p>
+                                <div className="text-sm font-medium text-foreground group-hover:text-legal">VitAI</div>
+                                <p className="text-xs text-muted-foreground">Hub de Gestão da Saúde</p>
                               </div>
-                              <ExternalLink className="w-3 h-3 ml-2 text-gray-400" />
+                              <ExternalLink className="w-3 h-3 ml-2 text-muted-foreground" />
                             </div>
                           </a>
-                          <Link to="/produtos/neurafit" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/neurafit" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Brain className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">NeuraFit</div>
-                              <p className="text-xs text-gray-500">Musculação para o Cérebro</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">NeuraFit</div>
+                              <p className="text-xs text-muted-foreground">Musculação para o Cérebro</p>
                             </div>
                           </Link>
-                          <Link to="/solucoes/tagpulse" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/solucoes/tagpulse" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <TrendingUp className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">TagPulse™</div>
-                              <p className="text-xs text-gray-500">Etiquetas Digitais Dinâmicas</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">TagPulse™</div>
+                              <p className="text-xs text-muted-foreground">Etiquetas Digitais Dinâmicas</p>
                             </div>
                           </Link>
                         </div>
                       </div>
 
                       {/* Serviços com Drone */}
-                      <div className="col-span-3 border-t pt-4 mt-2">
+                      <div className="col-span-3 border-t border-border pt-4 mt-2">
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Serviços com Drone</h3>
                         <div className="grid grid-cols-3 gap-3">
-                          <Link to="/produtos/brilix" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/brilix" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Settings className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Brilix</div>
-                              <p className="text-xs text-gray-500">Limpeza em Altura</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Brilix</div>
+                              <p className="text-xs text-muted-foreground">Limpeza em Altura</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/nuvyo" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/nuvyo" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Camera className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Nuvyo</div>
-                              <p className="text-xs text-gray-500">Filmagem e Fotografia</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Nuvyo</div>
+                              <p className="text-xs text-muted-foreground">Filmagem e Fotografia</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/sonix" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
+                          <Link to="/produtos/sonix" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Plane className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Sonix</div>
-                              <p className="text-xs text-gray-500">Delivery de Tudo</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Sonix</div>
+                              <p className="text-xs text-muted-foreground">Delivery de Tudo</p>
                             </div>
                           </Link>
                         </div>
