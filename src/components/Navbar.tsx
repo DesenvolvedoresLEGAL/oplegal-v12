@@ -68,7 +68,7 @@ const Navbar = () => {
                 <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Produtos</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="w-[1100px] xl:w-[1200px] p-6 bg-popover text-popover-foreground border border-border shadow-lg rounded-2xl backdrop-blur-md supports-[backdrop-filter]:bg-popover/90">
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-4 gap-8">
                       {/* Conectividade & WiFi */}
                       <div>
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Conectividade & WiFi & Gadgets</h3>
@@ -177,29 +177,15 @@ const Navbar = () => {
                         </div>
                       </div>
 
-                      {/* Serviços com Drone */}
-                      <div className="col-span-3 border-t border-border pt-4 mt-2">
-                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">Serviços com Drone</h3>
-                        <div className="grid grid-cols-3 gap-3">
-                          <Link to="/produtos/brilix" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
-                            <Settings className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
-                            <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Brilix</div>
-                              <p className="text-xs text-muted-foreground">Limpeza em Altura</p>
-                            </div>
-                          </Link>
-                          <Link to="/produtos/nuvyo" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
-                            <Camera className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
-                            <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Nuvyo</div>
-                              <p className="text-xs text-muted-foreground">Filmagem e Fotografia</p>
-                            </div>
-                          </Link>
-                          <Link to="/produtos/sonix" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
+                      {/* AERO */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">AERO</h3>
+                        <div className="space-y-3">
+                          <Link to="/negocios/aero" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Plane className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Sonix</div>
-                              <p className="text-xs text-muted-foreground">Delivery de Tudo</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">AERO</div>
+                              <p className="text-xs text-muted-foreground">Serviços com Drone</p>
                             </div>
                           </Link>
                         </div>
