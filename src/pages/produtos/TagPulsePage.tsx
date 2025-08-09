@@ -240,7 +240,7 @@ const TagPulsePage = () => {
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20">
+        <section className="relative overflow-hidden bg-gradient-legal py-20">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -248,11 +248,11 @@ const TagPulsePage = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
                   TagPulse™ — Etiquetas Digitais com Precificação Dinâmica para Varejo
                 </h1>
                 
-                <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+                <p className="text-xl text-white/90 mb-8 max-w-2xl">
                   Acelere a troca de preços, elimine retrabalho e aumente margem com inteligência em tempo real — sem burocracia.
                 </p>
                 
@@ -260,7 +260,7 @@ const TagPulsePage = () => {
                   <Button 
                     asChild 
                     size="lg" 
-                    className="bg-primary hover:bg-primary/90"
+                    className="bg-legal-purple hover:bg-legal text-white"
                     data-cta="demo"
                     onClick={() => trackCTA('demo')}
                   >
@@ -271,6 +271,7 @@ const TagPulsePage = () => {
                     asChild 
                     variant="outline" 
                     size="lg"
+                    className="border-legal text-legal hover:bg-legal hover:text-white"
                     data-cta="proposta"
                     onClick={() => trackCTA('proposta')}
                   >
@@ -285,6 +286,7 @@ const TagPulsePage = () => {
                       trackCTA('roi');
                     }}
                     data-cta="roi"
+                    className="text-white hover:text-legal-cyan"
                   >
                     Calcular ROI
                   </Button>
@@ -293,8 +295,8 @@ const TagPulsePage = () => {
                 <div className="space-y-3">
                   {['Instalação rápida', 'Integração ERP/POS', 'Salvaguardas éticas'].map((item) => (
                     <div key={item} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      <span className="text-muted-foreground">{item}</span>
+                      <CheckCircle2 className="w-5 h-5 text-legal-cyan" />
+                      <span className="text-white/90">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -306,7 +308,7 @@ const TagPulsePage = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <Card className="p-6">
+                <Card className="p-6 rounded-2xl shadow-xl">
                   <CardHeader>
                     <CardTitle>Simulação Rápida</CardTitle>
                     <CardDescription>Calcule o potencial de ganho mensal</CardDescription>
@@ -342,9 +344,9 @@ const TagPulsePage = () => {
                       />
                     </div>
                     
-                    <div className="bg-accent/10 p-4 rounded-xl">
+                    <div className="bg-legal-cyan/10 p-4 rounded-xl">
                       <p className="text-sm text-muted-foreground">Potencial de ganho mensal estimado</p>
-                      <p className="text-2xl font-bold text-primary">
+                      <p className="text-2xl font-bold text-legal">
                         R$ {monthlyGain.toLocaleString('pt-BR')}
                       </p>
                     </div>
@@ -382,7 +384,7 @@ const TagPulsePage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-legal mb-4">
                 Por que muda o jogo
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -398,9 +400,9 @@ const TagPulsePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card className="h-full hover:shadow-lg transition-shadow">
+                  <Card className="h-full rounded-2xl hover:shadow-xl transition-shadow">
                     <CardContent className="p-6">
-                      <div className="text-primary mb-4">{prop.icon}</div>
+                      <div className="text-legal mb-4">{prop.icon}</div>
                       <h3 className="font-bold mb-2">{prop.title}</h3>
                       <p className="text-muted-foreground">{prop.description}</p>
                     </CardContent>
@@ -420,7 +422,7 @@ const TagPulsePage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-legal mb-4">
                 Como Funciona
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -436,9 +438,9 @@ const TagPulsePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card className="text-center">
+                  <Card className="text-center rounded-2xl">
                     <CardContent className="p-6">
-                      <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                      <div className="w-12 h-12 bg-legal text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
                         {step.number}
                       </div>
                       <h3 className="font-bold mb-2">{step.title}</h3>
@@ -460,7 +462,7 @@ const TagPulsePage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-legal mb-4">
                 Calculadora de ROI
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -554,11 +556,11 @@ const TagPulsePage = () => {
                     <div className="border-t pt-4">
                       <div className="flex justify-between items-center">
                         <span className="font-semibold">Benefício total anual:</span>
-                        <span className="font-bold text-primary text-lg">R$ {totalBenefit.toLocaleString('pt-BR')}</span>
+                        <span className="font-bold text-legal text-lg">R$ {totalBenefit.toLocaleString('pt-BR')}</span>
                       </div>
                       <div className="flex justify-between items-center mt-2">
                         <span className="font-semibold">Payback estimado:</span>
-                        <span className="font-bold text-accent">{payback} meses</span>
+                        <span className="font-bold text-legal-cyan">{payback} meses</span>
                       </div>
                     </div>
                   </div>
@@ -568,10 +570,10 @@ const TagPulsePage = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Button asChild variant="outline" className="flex-1">
+                    <Button asChild variant="outline" className="flex-1 border-legal text-legal hover:bg-legal hover:text-white">
                       <Link to="/contato">Validar com meus dados</Link>
                     </Button>
-                    <Button asChild className="flex-1">
+                    <Button asChild className="flex-1 bg-legal-purple hover:bg-legal text-white">
                       <Link to="/proposta">Solicitar proposta</Link>
                     </Button>
                   </div>
@@ -590,7 +592,7 @@ const TagPulsePage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-legal mb-4">
                 Planos & Preços
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
@@ -607,7 +609,7 @@ const TagPulsePage = () => {
             
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Start Plan */}
-              <Card className="relative">
+              <Card className="relative rounded-2xl">
                 <CardHeader>
                   <CardTitle>Start</CardTitle>
                   <CardDescription>Ideal para primeiros passos</CardDescription>
@@ -619,23 +621,23 @@ const TagPulsePage = () => {
                 <CardContent>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Até 2 lojas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Até 5.000 etiquetas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Regras básicas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Relatórios essenciais</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Suporte comercial</span>
                     </li>
                   </ul>
@@ -646,9 +648,9 @@ const TagPulsePage = () => {
               </Card>
 
               {/* Scale Plan */}
-              <Card className="relative border-primary shadow-lg">
+              <Card className="relative border-legal shadow-lg rounded-2xl">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-primary">Mais Popular</Badge>
+                  <Badge className="bg-legal-purple">Mais Popular</Badge>
                 </div>
                 <CardHeader>
                   <CardTitle>Scale</CardTitle>
@@ -661,27 +663,27 @@ const TagPulsePage = () => {
                 <CardContent>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Até 6 lojas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Até 20.000 etiquetas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Regras avançadas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Clima/estoque</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Shadow A/B</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">SLA 8x5 + AM</span>
                     </li>
                   </ul>
@@ -703,23 +705,23 @@ const TagPulsePage = () => {
                 <CardContent>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Multilojas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Etiquetas ilimitadas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">API & SSO</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">Playbooks sazonais</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-legal-cyan" />
                       <span className="text-sm">SLA 24/7 e on‑site</span>
                     </li>
                   </ul>
@@ -745,7 +747,7 @@ const TagPulsePage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-legal mb-4">
                 Integrações & Infraestrutura
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -761,9 +763,9 @@ const TagPulsePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card className="text-center h-full">
+                  <Card className="text-center h-full rounded-2xl">
                     <CardContent className="p-6">
-                      <div className="text-primary mb-4 flex justify-center">{integration.icon}</div>
+                      <div className="text-legal mb-4 flex justify-center">{integration.icon}</div>
                       <h3 className="font-bold mb-2">{integration.title}</h3>
                       <p className="text-muted-foreground text-sm">{integration.description}</p>
                     </CardContent>
@@ -775,7 +777,7 @@ const TagPulsePage = () => {
         </section>
 
         {/* Política de Precificação Responsável */}
-        <section className="py-20 bg-muted/50">
+        <section id="safeguards" className="py-20 bg-muted/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -783,7 +785,7 @@ const TagPulsePage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-legal mb-4">
                 Política de Precificação Responsável
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -799,10 +801,10 @@ const TagPulsePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card className="h-full">
+                  <Card className="h-full rounded-2xl">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="text-primary">{safeguard.icon}</div>
+                        <div className="text-legal">{safeguard.icon}</div>
                         <h3 className="font-bold">{safeguard.title}</h3>
                       </div>
                       <p className="text-muted-foreground text-sm">{safeguard.description}</p>
@@ -823,7 +825,7 @@ const TagPulsePage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-legal mb-4">
                 Perguntas Frequentes
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -839,10 +841,10 @@ const TagPulsePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card>
+                  <Card className="rounded-2xl">
                     <CardContent className="p-6">
                       <div className="flex gap-4">
-                        <HelpCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <HelpCircle className="w-6 h-6 text-legal mt-1 flex-shrink-0" />
                         <div>
                           <h3 className="font-bold mb-2">{faq.question}</h3>
                           <p className="text-muted-foreground">{faq.answer}</p>
@@ -857,17 +859,17 @@ const TagPulsePage = () => {
         </section>
 
         {/* CTA Final */}
-        <section className="py-20 bg-gradient-to-r from-primary to-primary/80">
+        <section className="py-20 bg-gradient-legal">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Vamos fazer um piloto pago em uma loja?
               </h2>
-              <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
                 Mostramos resultado em semanas e escalamos com governança.
               </p>
               
@@ -889,7 +891,7 @@ const TagPulsePage = () => {
                   asChild 
                   size="lg" 
                   variant="outline"
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                  className="border-white text-white hover:bg-white hover:text-legal"
                   data-cta="proposta"
                   onClick={() => trackCTA('proposta')}
                 >
@@ -906,14 +908,14 @@ const TagPulsePage = () => {
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-center">
               <button 
                 onClick={() => document.getElementById('safeguards')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-legal transition-colors"
               >
                 Política de Precificação
               </button>
-              <Link to="/privacidade" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/privacidade" className="text-muted-foreground hover:text-legal transition-colors">
                 Privacidade
               </Link>
-              <Link to="/contato" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/contato" className="text-muted-foreground hover:text-legal transition-colors">
                 Contato
               </Link>
             </div>
