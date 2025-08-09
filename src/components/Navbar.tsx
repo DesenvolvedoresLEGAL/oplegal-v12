@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench, TrendingUp, Search } from "lucide-react";
+import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench, TrendingUp, Search, Handshake } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -67,7 +67,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-legal hover:text-legal-purple px-2">Produtos</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[980px] lg:w-[1040px] p-6 bg-popover text-popover-foreground border border-border shadow-lg rounded-2xl max-h-[70vh] overflow-y-auto backdrop-blur-md supports-[backdrop-filter]:bg-popover/90">
+                  <div className="w-[1100px] xl:w-[1200px] p-6 bg-popover text-popover-foreground border border-border shadow-lg rounded-2xl backdrop-blur-md supports-[backdrop-filter]:bg-popover/90">
                     <div className="grid grid-cols-3 gap-8">
                       {/* Conectividade & WiFi */}
                       <div>
@@ -116,7 +116,7 @@ const Navbar = () => {
                             </div>
                           </Link>
                           <Link to="/produtos/linkai" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
-                            <Heart className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <Handshake className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
                               <div className="text-sm font-medium text-foreground group-hover:text-legal">LinkAI</div>
                               <p className="text-xs text-muted-foreground">Matchmaking Inteligente</p>
