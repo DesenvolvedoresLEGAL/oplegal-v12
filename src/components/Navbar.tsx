@@ -181,13 +181,6 @@ const Navbar = () => {
                       <div>
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">AERO</h3>
                         <div className="space-y-3">
-                          <Link to="/negocios/aero" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
-                            <Plane className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
-                            <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">AERO</div>
-                              <p className="text-xs text-muted-foreground">Serviços com Drone</p>
-                            </div>
-                          </Link>
                           <Link to="/produtos/brilix" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Settings className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
