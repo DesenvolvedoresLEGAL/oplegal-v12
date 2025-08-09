@@ -188,6 +188,27 @@ const Navbar = () => {
                               <p className="text-xs text-muted-foreground">Serviços com Drone</p>
                             </div>
                           </Link>
+                          <Link to="/produtos/brilix" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
+                            <Settings className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Brilix</div>
+                              <p className="text-xs text-muted-foreground">Limpeza em Altura</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/nuvyo" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
+                            <Camera className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Nuvyo</div>
+                              <p className="text-xs text-muted-foreground">Filmagem e Fotografia</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/sonix" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
+                            <Plane className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Sonix</div>
+                              <p className="text-xs text-muted-foreground">Delivery de Tudo</p>
+                            </div>
+                          </Link>
                         </div>
                       </div>
 
