@@ -364,7 +364,7 @@ export default function SorteioPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <SorteioBanner
-          title="Sorteio LEGAL MVP"
+          title="Sorteio Ao Vivo"
           subtitle="Sistema de sorteio transparente e seguro"
           logoSrc={clientLogo}
           onLogoChange={(file) => handleLogoUpload(file)}

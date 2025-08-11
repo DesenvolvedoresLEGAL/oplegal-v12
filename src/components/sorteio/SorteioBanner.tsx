@@ -37,7 +37,7 @@ export default function SorteioBanner({ title, subtitle, logoSrc, onLogoChange }
         )}
 
         <div className="space-y-3">
-          <h1 className="text-4xl md:text-6xl font-haas font-bold bg-gradient-to-r from-legal via-legal-purple to-legal-cyan bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-haas font-bold uppercase tracking-widest animate-enter pulse bg-gradient-to-r from-legal via-legal-purple to-legal-cyan bg-clip-text text-transparent">
             {title}
           </h1>
           {subtitle && (
