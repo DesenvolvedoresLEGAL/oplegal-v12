@@ -56,6 +56,7 @@ import PlaudPage from "./pages/produtos/PlaudPage";
 import NeuraFitPage from "./pages/produtos/NeuraFitPage";
 import TagPulsePage from "./pages/produtos/TagPulsePage";
 import SearchPage from "./pages/SearchPage";
+import SorteioPage from "./pages/SorteioPage";
 import SkipLink from "./components/SkipLink";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -144,6 +145,9 @@ const App = () => {
               
               {/* Contact */}
               <Route path="/contato" element={<ContatoPage />} />
+              
+              {/* Sorteio */}
+              <Route path="/sorteio" element={<SorteioPage />} />
               
               {/* Old routes for backward compatibility */}
               <Route path="/produtos" element={<PlaceholderPage />} />
