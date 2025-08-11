@@ -10,6 +10,7 @@ import { Upload, Users, Trophy, Download, Shuffle, Trash2 } from "lucide-react";
 import confetti from "canvas-confetti";
 import * as XLSX from 'xlsx';
 import jsPDF from 'jspdf';
+import SorteioBanner from '@/components/sorteio/SorteioBanner';
 
 interface Participant {
   nome: string;
@@ -32,6 +33,7 @@ export default function SorteioPage() {
   const [sorteioResult, setSorteioResult] = useState<SorteioResult | null>(null);
   const [winnersHistory, setWinnersHistory] = useState<Participant[]>([]);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [clientLogo, setClientLogo] = useState<string | null>(null);
 
   const processFile = useCallback(async (file: File) => {
     setLoading(true);
@@ -64,6 +66,26 @@ export default function SorteioPage() {
       setLoading(false);
       setUploadProgress(0);
     }
+  }, [toast]);
+
+  const handleLogoUpload = useCallback((file: File) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const dataUrl = e.target?.result as string;
+      setClientLogo(dataUrl);
+      toast({
+        title: 'Logomarca aplicada',
+        description: 'A logomarca do cliente foi adicionada ao banner.'
+      });
+    };
+    reader.onerror = () => {
+      toast({
+        title: 'Falha ao carregar logomarca',
+        description: 'Tente novamente com um arquivo de imagem válido.',
+        variant: 'destructive',
+      });
+    };
+    reader.readAsDataURL(file);
   }, [toast]);
 
   const processCSV = async (file: File) => {
@@ -338,17 +360,15 @@ export default function SorteioPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-legal-gray via-background to-legal-gray py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-legal-gray via-background to-legal-gray px-4 pt-24 md:pt-28 pb-8">
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Header */}
-        <div className="text-center space-y-6">
-          <h1 className="text-4xl md:text-6xl font-haas font-bold bg-gradient-to-r from-legal via-legal-purple to-legal-cyan bg-clip-text text-transparent">
-            Sorteio LEGAL MVP
-          </h1>
-          <p className="text-legal-black/70 text-xl font-haas">
-            Sistema de sorteio transparente e seguro
-          </p>
-        </div>
+        <SorteioBanner
+          title="Sorteio LEGAL MVP"
+          subtitle="Sistema de sorteio transparente e seguro"
+          logoSrc={clientLogo}
+          onLogoChange={(file) => handleLogoUpload(file)}
+        />
 
         {/* Upload Section */}
         <Card className="w-full border-legal/20 shadow-lg">
