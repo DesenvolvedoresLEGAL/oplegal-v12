@@ -338,28 +338,28 @@ export default function SorteioPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-background/50 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-legal-gray via-background to-legal-gray py-8 px-4">
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Header */}
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+        <div className="text-center space-y-6">
+          <h1 className="text-4xl md:text-6xl font-haas font-bold bg-gradient-to-r from-legal via-legal-purple to-legal-cyan bg-clip-text text-transparent">
             Sorteio LEGAL MVP
           </h1>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-legal-black/70 text-xl font-haas">
             Sistema de sorteio transparente e seguro
           </p>
         </div>
 
         {/* Upload Section */}
-        <Card className="w-full">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Upload className="w-5 h-5" />
+        <Card className="w-full border-legal/20 shadow-lg">
+          <CardHeader className="bg-gradient-to-r from-legal/5 to-legal-purple/5">
+            <CardTitle className="flex items-center gap-3 text-legal-black font-haas text-xl">
+              <Upload className="w-6 h-6 text-legal" />
               Upload de Participantes
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-8 text-center hover:border-primary/50 transition-colors">
+          <CardContent className="space-y-6 p-6">
+            <div className="border-2 border-dashed border-legal/30 rounded-xl p-8 text-center hover:border-legal-purple/50 transition-all duration-300 bg-gradient-to-br from-legal-cyan/5 to-legal-purple/5">
               <Input
                 type="file"
                 accept=".csv,.xlsx,.xls,.pdf"
@@ -367,18 +367,18 @@ export default function SorteioPage() {
                   const file = e.target.files?.[0];
                   if (file) processFile(file);
                 }}
-                className="w-full"
+                className="w-full border-legal/20 focus:border-legal-purple font-haas"
                 disabled={loading}
               />
-              <p className="text-sm text-muted-foreground mt-2">
+              <p className="text-legal-black/60 font-haas mt-3">
                 Aceita arquivos CSV, XLSX ou PDF com coluna "Nome" obrigatória
               </p>
             </div>
             
             {loading && (
-              <div className="space-y-2">
-                <Progress value={uploadProgress} className="w-full" />
-                <p className="text-sm text-center text-muted-foreground">
+              <div className="space-y-3">
+                <Progress value={uploadProgress} className="w-full h-3" />
+                <p className="text-center text-legal-black/60 font-haas">
                   Processando arquivo...
                 </p>
               </div>
@@ -388,47 +388,47 @@ export default function SorteioPage() {
 
         {/* Participants List */}
         {participants.length > 0 && (
-          <Card className="w-full">
-            <CardHeader>
+          <Card className="w-full border-legal/20 shadow-lg">
+            <CardHeader className="bg-gradient-to-r from-legal-purple/5 to-legal-cyan/5">
               <CardTitle className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5" />
+                <div className="flex items-center gap-3 text-legal-black font-haas text-xl">
+                  <Users className="w-6 h-6 text-legal-purple" />
                   Lista de Participantes
                 </div>
-                <Badge variant="outline" className="text-lg px-3 py-1">
+                <Badge className="bg-legal-cyan text-legal-black text-lg px-4 py-2 font-haas font-bold">
                   {participants.length} participantes
                 </Badge>
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="max-h-60 overflow-y-auto border rounded-lg">
+            <CardContent className="p-6">
+              <div className="max-h-60 overflow-y-auto border border-legal/20 rounded-xl">
                 <Table>
                   <TableHeader>
-                    <TableRow>
-                      <TableHead>Nome</TableHead>
-                      <TableHead>E-mail</TableHead>
-                      <TableHead>WhatsApp</TableHead>
+                    <TableRow className="bg-legal/5">
+                      <TableHead className="font-haas font-bold text-legal">Nome</TableHead>
+                      <TableHead className="font-haas font-bold text-legal">E-mail</TableHead>
+                      <TableHead className="font-haas font-bold text-legal">WhatsApp</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {participants.map((participant, index) => (
-                      <TableRow key={index}>
-                        <TableCell className="font-medium">{participant.nome}</TableCell>
-                        <TableCell>{participant.email || '-'}</TableCell>
-                        <TableCell>{participant.whatsapp || '-'}</TableCell>
+                      <TableRow key={index} className="hover:bg-legal/5">
+                        <TableCell className="font-haas font-medium text-legal-black">{participant.nome}</TableCell>
+                        <TableCell className="font-haas text-legal-black/70">{participant.email || '-'}</TableCell>
+                        <TableCell className="font-haas text-legal-black/70">{participant.whatsapp || '-'}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
                 </Table>
               </div>
               
-              <div className="flex gap-2 mt-4">
-                <Button onClick={downloadCSV} variant="outline" size="sm">
+              <div className="flex gap-3 mt-6">
+                <Button onClick={downloadCSV} className="bg-legal hover:bg-legal-purple text-white font-haas font-bold">
                   <Download className="w-4 h-4 mr-2" />
                   Baixar Lista (CSV)
                 </Button>
                 {winnersHistory.length > 0 && (
-                  <Button onClick={clearHistory} variant="outline" size="sm">
+                  <Button onClick={clearHistory} variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white font-haas font-bold">
                     <Trash2 className="w-4 h-4 mr-2" />
                     Limpar Histórico
                   </Button>
@@ -440,56 +440,58 @@ export default function SorteioPage() {
 
         {/* Sorteio Section */}
         {participants.length >= 2 && (
-          <Card className="w-full">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Trophy className="w-5 h-5" />
+          <Card className="w-full border-legal/20 shadow-lg">
+            <CardHeader className="bg-gradient-to-r from-legal-cyan/5 to-legal/5">
+              <CardTitle className="flex items-center gap-3 text-legal-black font-haas text-xl">
+                <Trophy className="w-6 h-6 text-legal-cyan" />
                 Sorteio
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-8 p-8">
               <div className="text-center">
                 <Button
                   onClick={drawWinner}
                   size="lg"
-                  className="text-xl px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+                  className="text-2xl px-12 py-8 bg-gradient-to-r from-legal via-legal-purple to-legal-cyan hover:from-legal/90 hover:via-legal-purple/90 hover:to-legal-cyan/90 text-white font-haas font-bold rounded-xl shadow-xl transform hover:scale-105 transition-all duration-300"
                   disabled={isDrawing}
                 >
-                  <Shuffle className="w-6 h-6 mr-2" />
+                  <Shuffle className="w-8 h-8 mr-3" />
                   {isDrawing ? "Sorteando..." : "Sortear Vencedor"}
                 </Button>
               </div>
 
               {sorteioResult && (
-                <div className="text-center space-y-4 p-6 bg-gradient-to-r from-accent/10 to-primary/10 rounded-lg border">
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-primary">🏆 VENCEDOR(A)!</h3>
-                    <p className="text-3xl font-bold">{sorteioResult.winner.nome}</p>
+                <div className="text-center space-y-6 p-8 bg-gradient-to-br from-legal-cyan/10 via-legal-purple/10 to-legal/10 rounded-2xl border-2 border-legal-cyan/30 shadow-xl">
+                  <div className="space-y-4">
+                    <h3 className="text-4xl font-haas font-bold bg-gradient-to-r from-legal via-legal-purple to-legal-cyan bg-clip-text text-transparent">
+                      🏆 VENCEDOR(A)!
+                    </h3>
+                    <p className="text-5xl font-haas font-bold text-legal-black">{sorteioResult.winner.nome}</p>
                     
                     {sorteioResult.winner.email && (
-                      <p className="text-muted-foreground">
+                      <p className="text-legal-black/70 font-haas text-lg">
                         📧 {maskContact(sorteioResult.winner.email, 'email')}
                       </p>
                     )}
                     
                     {sorteioResult.winner.whatsapp && (
-                      <p className="text-muted-foreground">
+                      <p className="text-legal-black/70 font-haas text-lg">
                         📱 {maskContact(sorteioResult.winner.whatsapp, 'whatsapp')}
                       </p>
                     )}
                     
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-legal-black/60 font-haas">
                       Sorteado em: {new Date(sorteioResult.timestamp).toLocaleString('pt-BR')}
                     </p>
                   </div>
 
-                  <div className="flex gap-2 justify-center flex-wrap">
-                    <Button onClick={drawWinner} variant="outline">
-                      <Shuffle className="w-4 h-4 mr-2" />
+                  <div className="flex gap-4 justify-center flex-wrap">
+                    <Button onClick={drawWinner} className="bg-legal-purple hover:bg-legal text-white font-haas font-bold px-6 py-3">
+                      <Shuffle className="w-5 h-5 mr-2" />
                       Sortear Novamente
                     </Button>
-                    <Button onClick={downloadPDF} variant="outline">
-                      <Download className="w-4 h-4 mr-2" />
+                    <Button onClick={downloadPDF} className="bg-legal-cyan hover:bg-legal text-legal-black font-haas font-bold px-6 py-3">
+                      <Download className="w-5 h-5 mr-2" />
                       Baixar Comprovante (PDF)
                     </Button>
                   </div>
@@ -497,11 +499,11 @@ export default function SorteioPage() {
               )}
 
               {winnersHistory.length > 0 && (
-                <div className="mt-6">
-                  <h4 className="font-semibold mb-2">Histórico de Vencedores:</h4>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mt-8">
+                  <h4 className="font-haas font-bold text-legal-black text-lg mb-4">Histórico de Vencedores:</h4>
+                  <div className="flex flex-wrap gap-3">
                     {winnersHistory.map((winner, index) => (
-                      <Badge key={index} variant="secondary">
+                      <Badge key={index} className="bg-legal-purple/20 text-legal-purple border border-legal-purple/30 font-haas font-medium px-3 py-1">
                         {winner.nome}
                       </Badge>
                     ))}
