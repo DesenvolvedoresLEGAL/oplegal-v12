@@ -8,6 +8,14 @@ const config: Config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./index.html",
+  ],
+  safelist: [
+    // Critical classes used in index.html and core components
+    'hero-instant', 'hero-title', 'text-legal-green',
+    'bg-gradient-legal', 'btn-primary', 'btn-outline',
+    // Animation classes
+    'fade-in', 'slide-in', 'card-hover'
   ],
   prefix: "",
   theme: {

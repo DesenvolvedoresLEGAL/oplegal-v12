@@ -44,5 +44,6 @@ export default defineConfig(({ mode }) => ({
     modulePreload: {
       polyfill: false // Reduce bundle size for modern browsers
     },
+    reportCompressedSize: false, // Disable size reporting for faster builds
   },
 }));
