@@ -2,49 +2,38 @@ import { useEffect } from 'react';
 
 const PerformanceOptimizer = () => {
   useEffect(() => {
-    // Optimize scroll performance
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          // Batch DOM reads and writes
-          const scrollTop = window.pageYOffset;
-          const elements = document.querySelectorAll('.reveal-on-scroll');
-          
-          elements.forEach((element) => {
-            const rect = element.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            
-            if (isVisible && !element.classList.contains('visible')) {
-              element.classList.add('visible');
-            }
-          });
-          
-          ticking = false;
+    // Use Intersection Observer to avoid forced reflows
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+            entry.target.classList.add('visible');
+          }
         });
-        ticking = true;
+      },
+      {
+        rootMargin: '50px 0px',
+        threshold: 0.1
       }
-    };
+    );
+
+    // Observe all reveal-on-scroll elements
+    const elements = document.querySelectorAll('.reveal-on-scroll');
+    elements.forEach((element) => observer.observe(element));
 
     // Debounced resize handler
     let resizeTimeout: NodeJS.Timeout;
     const handleResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        // Handle resize optimizations
         window.dispatchEvent(new CustomEvent('optimizedResize'));
       }, 100);
     };
 
-    // Add passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleResize, { passive: true });
 
-    // Initial check
-    handleScroll();
-
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
       window.removeEventListener('resize', handleResize);
       clearTimeout(resizeTimeout);
     };

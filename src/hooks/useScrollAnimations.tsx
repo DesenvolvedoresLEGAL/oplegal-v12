@@ -3,24 +3,26 @@ import { useEffect } from "react";
 
 const useScrollAnimations = () => {
   useEffect(() => {
-    // Scroll animations handler
-    const handleScroll = () => {
-      const elements = document.querySelectorAll(".reveal-on-scroll");
-      elements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementBottom = element.getBoundingClientRect().bottom;
-        const isVisible = elementTop < window.innerHeight && elementBottom > 0;
-        
-        if (isVisible) {
-          element.classList.add("visible");
-        }
-      });
-    };
+    // Use Intersection Observer to avoid forced reflows
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+      }
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    // Observe all reveal-on-scroll elements
+    const elements = document.querySelectorAll(".reveal-on-scroll");
+    elements.forEach((element) => observer.observe(element));
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => observer.disconnect();
   }, []);
 };
 
