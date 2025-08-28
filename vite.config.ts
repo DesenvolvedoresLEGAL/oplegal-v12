@@ -29,11 +29,18 @@ export default defineConfig(({ mode }) => ({
           animations: ['framer-motion'],
           utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
         },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+            return 'assets/[name]-[hash][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
       },
     },
     target: 'esnext',
     minify: 'esbuild',
     cssMinify: true,
+    cssCodeSplit: true, // Enable CSS code splitting
     modulePreload: {
       polyfill: false // Reduce bundle size for modern browsers
     },
