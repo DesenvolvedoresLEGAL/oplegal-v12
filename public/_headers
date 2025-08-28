@@ -4,35 +4,61 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
-/*.js
+# Static assets - long cache with immutable
+/assets/*.js
   Cache-Control: public, max-age=31536000, immutable
 
-/*.css
+/assets/*.css
   Cache-Control: public, max-age=31536000, immutable
 
+# Images - long cache
+/lovable-uploads/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/lovable-uploads/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/lovable-uploads/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/lovable-uploads/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+# Font files
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
 /*.woff
   Cache-Control: public, max-age=31536000, immutable
 
-/*.jpg
+# Generic file types (fallback)
+*.js
   Cache-Control: public, max-age=31536000, immutable
 
-/*.jpeg
+*.css
   Cache-Control: public, max-age=31536000, immutable
 
-/*.png
+*.png
   Cache-Control: public, max-age=31536000, immutable
 
-/*.webp
+*.jpg
   Cache-Control: public, max-age=31536000, immutable
 
-/*.svg
+*.jpeg
   Cache-Control: public, max-age=31536000, immutable
 
-/*.ico
+*.webp
   Cache-Control: public, max-age=31536000, immutable
 
+*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages - short cache for dynamic content
 /
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=300, s-maxage=300
+
+/*.html
+  Cache-Control: public, max-age=300, s-maxage=300
