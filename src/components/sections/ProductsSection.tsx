@@ -87,12 +87,12 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
             >
               <meta itemProp="position" content={(index + 1).toString()} />
               <div itemProp="item" itemScope itemType="https://schema.org/Service">
+                <meta itemProp="serviceType" content="TechnologyService" />
+                <meta itemProp="provider" content="LEGAL" />
                 <CardContent className="p-8 text-center h-full flex flex-col">
                   <div className="mb-6 text-legal group-hover:text-legal-green transition-colors duration-300 flex justify-center">
                     {product.icon}
                   </div>
-                  
-                  <meta itemProp="serviceType" content={product.title} />
                   
                   <h3 
                     className="text-2xl font-bold text-legal mb-3 group-hover:text-legal-green transition-colors duration-300"
