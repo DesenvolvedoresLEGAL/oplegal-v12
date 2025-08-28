@@ -29,7 +29,7 @@ const ProductSchema: React.FC<ProductSchemaProps> = ({
 }) => {
   const baseSchema = {
     "@context": "https://schema.org",
-    "@type": applicationCategory ? "SoftwareApplication" : "Service",
+    "@type": "Service",
     "name": productName,
     "description": description,
     "url": url,

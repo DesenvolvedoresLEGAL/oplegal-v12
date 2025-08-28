@@ -116,7 +116,7 @@ const AIFeedbackSystem: React.FC<AIFeedbackSystemProps> = ({
         if (errors.some(e => e.includes('product'))) {
           const productSchema = {
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             "name": "Smart Events™",
             "description": "Plataforma completa para eventos inteligentes",
             "brand": {

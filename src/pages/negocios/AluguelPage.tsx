@@ -101,7 +101,7 @@ const AluguelPage = () => {
 
   const productSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Locação de Internet para Eventos",
     "description": "Soluções completas de conectividade temporária para eventos corporativos, congressos, feiras e festivais",
     "brand": {
