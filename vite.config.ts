@@ -28,6 +28,10 @@ export default defineConfig(({ mode }) => ({
           ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-navigation-menu'],
           animations: ['framer-motion'],
           utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
+          query: ['@tanstack/react-query'],
+          helmet: ['react-helmet-async'],
+          charts: ['recharts'],
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && assetInfo.name.endsWith('.css')) {
