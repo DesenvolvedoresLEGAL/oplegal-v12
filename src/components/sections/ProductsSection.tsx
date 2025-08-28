@@ -82,51 +82,55 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
               key={index} 
               className="group overflow-hidden border-none shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white"
               itemScope 
-              itemType="https://schema.org/Product"
+              itemType="https://schema.org/ListItem"
               itemProp="itemListElement"
             >
               <meta itemProp="position" content={(index + 1).toString()} />
-              <CardContent className="p-8 text-center h-full flex flex-col">
-                <div className="mb-6 text-legal group-hover:text-legal-green transition-colors duration-300 flex justify-center">
-                  {product.icon}
-                </div>
-                
-                <h3 
-                  className="text-2xl font-bold text-legal mb-3 group-hover:text-legal-green transition-colors duration-300"
-                  itemProp="name"
-                >
-                  {product.title}
-                </h3>
-                
-                <p 
-                  className="text-gray-600 mb-6 flex-grow"
-                  itemProp="description"
-                >
-                  {product.description}
-                </p>
-                
-                <div className="mb-6" itemProp="additionalProperty" itemScope itemType="https://schema.org/PropertyValue">
-                  <meta itemProp="name" content="features" />
-                  <ul className="space-y-2">
-                    {product.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-500 flex items-center justify-center">
-                        <span className="w-1.5 h-1.5 bg-legal-cyan rounded-full mr-2"></span>
-                        <span itemProp="value">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  className="border-legal text-legal hover:bg-legal hover:text-white transition-all duration-300 w-full group-hover:border-legal-green group-hover:text-legal-green group-hover:hover:bg-legal-green group-hover:hover:text-white"
-                >
-                  <Link to={product.link} itemProp="url">
-                    Saiba mais
-                  </Link>
-                </Button>
-              </CardContent>
+              <div itemProp="item" itemScope itemType="https://schema.org/Service">
+                <CardContent className="p-8 text-center h-full flex flex-col">
+                  <div className="mb-6 text-legal group-hover:text-legal-green transition-colors duration-300 flex justify-center">
+                    {product.icon}
+                  </div>
+                  
+                  <meta itemProp="serviceType" content={product.title} />
+                  
+                  <h3 
+                    className="text-2xl font-bold text-legal mb-3 group-hover:text-legal-green transition-colors duration-300"
+                    itemProp="name"
+                  >
+                    {product.title}
+                  </h3>
+                  
+                  <p 
+                    className="text-gray-600 mb-6 flex-grow"
+                    itemProp="description"
+                  >
+                    {product.description}
+                  </p>
+                  
+                  <div className="mb-6" itemProp="additionalProperty" itemScope itemType="https://schema.org/PropertyValue">
+                    <meta itemProp="name" content="features" />
+                    <ul className="space-y-2">
+                      {product.features.map((feature, idx) => (
+                        <li key={idx} className="text-sm text-gray-500 flex items-center justify-center">
+                          <span className="w-1.5 h-1.5 bg-legal-cyan rounded-full mr-2"></span>
+                          <span itemProp="value">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Button 
+                    asChild 
+                    variant="outline" 
+                    className="border-legal text-legal hover:bg-legal hover:text-white transition-all duration-300 w-full group-hover:border-legal-green group-hover:text-legal-green group-hover:hover:bg-legal-green group-hover:hover:text-white"
+                  >
+                    <Link to={product.link} itemProp="url">
+                      Saiba mais
+                    </Link>
+                  </Button>
+                </CardContent>
+              </div>
             </Card>
           ))}
         </div>
