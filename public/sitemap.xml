@@ -2,291 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <!-- Página principal -->
+  <!-- Base domain: operadora.legal -->
+  <!-- Generated: 2025-08-28 -->
+
+  <!-- Home -->
   <url>
     <loc>https://operadora.legal/</loc>
-    <lastmod>2024-08-05</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Smart Events -->
+  <!-- Principais seções -->
   <url>
     <loc>https://operadora.legal/smart-events</loc>
-    <lastmod>2024-08-05</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Seções principais -->
-  <url>
-    <loc>https://operadora.legal/somos-legal</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/missao-visao-valores</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/contato</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Produtos principais -->
-  <url>
-    <loc>https://operadora.legal/produtos/facepass</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/eventrix</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/linkai</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/blue6</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/brilix</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/humanoid</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/neurafit</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/nuvyo</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/ping</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/plaud</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/sonix</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/speedy5g</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/produtos/fitscore</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Negócios -->
-  <url>
-    <loc>https://operadora.legal/negocios/ai</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/negocios/aluguel</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/negocios/aero</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/negocios/aero-delivery</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/negocios/aero-wash</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/negocios/assinatura</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Universo -->
-  <url>
-    <loc>https://operadora.legal/universo/tectec</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/faq</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/historias</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/imprensa</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/mapeamento-ia</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/pesquisas</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/pesquisas-mercado</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/recursos</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/status</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/whatsnext-report-2025</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/universo/whitepapers</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Outras páginas importantes -->
-  <url>
-    <loc>https://operadora.legal/bits</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/candidatura</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <url>
     <loc>https://operadora.legal/precos</loc>
-    <lastmod>2024-08-05</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://operadora.legal/time</loc>
-    <lastmod>2024-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://operadora.legal/vagas</loc>
-    <lastmod>2024-08-05</lastmod>
+    <loc>https://operadora.legal/busca</loc>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://operadora.legal/missao-visao-valores</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://operadora.legal/contato</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://operadora.legal/negocios</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://operadora.legal/universo</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://operadora.legal/sorteio</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Produtos -->
+  <url><loc>https://operadora.legal/produtos/blue6</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/brilix</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/eventrix</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://operadora.legal/produtos/facepass</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://operadora.legal/produtos/fitscore</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/humanoid</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/linkai</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://operadora.legal/produtos/neurafit</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/nuvyo</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/ping</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/sonix</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/speedy5g</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/produtos/plaud</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/solucoes/tagpulse</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Negócios -->
+  <url><loc>https://operadora.legal/negocios/aero</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/negocios/aero/wash</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/negocios/aero/delivery</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/negocios/ai</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://operadora.legal/negocios/ai/eventrix</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/negocios/ai/facepass</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/negocios/ai/linkai</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/negocios/ai/fitscore</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/negocios/alugue</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/negocios/assinatura</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Universo -->
+  <url><loc>https://operadora.legal/universo/tectec</loc><lastmod>2025-08-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://operadora.legal/universo/historias</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/universo/bits</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/universo/recursos</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/universo/pesquisas</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/universo/pesquisas/mercado</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/universo/pesquisas/mercado/mapeamento-ia-2025</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://operadora.legal/universo/pesquisas/whitepapers</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/universo/pesquisas/whitepapers/whats-next-report-2025</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://operadora.legal/universo/imprensa</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://operadora.legal/universo/status</loc><lastmod>2025-08-28</lastmod><changefreq>daily</changefreq><priority>0.4</priority></url>
+  <url><loc>https://operadora.legal/universo/faq</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Institucional -->
+  <url><loc>https://operadora.legal/time</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://operadora.legal/vagas</loc><lastmod>2025-08-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://operadora.legal/candidatura</loc><lastmod>2025-08-28</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 
 </urlset>
