@@ -38,11 +38,7 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
       description: "Ganhe eficiência e escalabilidade",
       icon: <Brain className="w-8 h-8" strokeWidth={1.5} />,
       link: "/negocios/ai",
-      features: [
-        { name: "Eventrix", link: "/produtos/eventrix" },
-        { name: "Humanoid", link: "/produtos/humanoid" },
-        { name: "LinkAI", link: "/produtos/linkai" }
-      ]
+      features: ["Eventrix", "Humanoid", "LinkAI"]
     },
     {
       title: "ALUGUE",
@@ -115,13 +111,7 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
                     {product.features.map((feature, idx) => (
                       <li key={idx} className="text-sm text-gray-500 flex items-center justify-center">
                         <span className="w-1.5 h-1.5 bg-legal-cyan rounded-full mr-2"></span>
-                        {typeof feature === 'object' && feature.link ? (
-                          <Link to={feature.link} className="hover:text-legal transition-colors" itemProp="value">
-                            {feature.name}
-                          </Link>
-                        ) : (
-                          <span itemProp="value">{typeof feature === 'string' ? feature : feature.name}</span>
-                        )}
+                        <span itemProp="value">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -141,15 +131,10 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
           ))}
         </div>
 
-        <div className="text-center mt-12 space-y-4">
-          <Button asChild className="bg-legal hover:bg-legal/90 text-white px-8 py-6 text-lg h-auto mr-4">
+        <div className="text-center mt-12">
+          <Button asChild className="bg-legal hover:bg-legal/90 text-white px-8 py-6 text-lg h-auto">
             <Link to="/smart-events">
               Ver Smart Events™ completo
-            </Link>
-          </Button>
-          <Button asChild variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white px-8 py-6 text-lg h-auto">
-            <Link to="/precos">
-              Ver preços e planos
             </Link>
           </Button>
         </div>

@@ -23,30 +23,24 @@ const FeaturedPosts: React.FC = () => {
               <BlogArticleSchema article={post} />
               <article className="group hover:shadow-xl transition-all duration-300 overflow-hidden border-0">
                 <Card className="h-full">
-                  <Link to={`/universo/tectec/${post.id}`} className="block">
-                    <div className="relative">
-                      <OptimizedImage
-                        src={post.image}
-                        alt={`Imagem ilustrativa do artigo: ${post.title}`}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                        width={800}
-                        height={400}
-                        priority={true}
-                      />
-                      <Badge className="absolute top-4 left-4 bg-legal text-white">
-                        <Link to={`/universo/tectec?categoria=${post.category.toLowerCase()}`} className="hover:text-legal-cyan">
-                          {post.category}
-                        </Link>
-                      </Badge>
-                    </div>
-                  </Link>
+                  <div className="relative">
+                    <OptimizedImage
+                      src={post.image}
+                      alt={`Imagem ilustrativa do artigo: ${post.title}`}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={800}
+                      height={400}
+                      priority={true}
+                    />
+                    <Badge className="absolute top-4 left-4 bg-legal text-white">
+                      {post.category}
+                    </Badge>
+                  </div>
                   <CardContent className="p-6">
                     <header className="mb-4">
-                      <Link to={`/universo/tectec/${post.id}`}>
-                        <h3 className="text-2xl font-bold text-legal mb-3 group-hover:text-legal-purple transition-colors leading-tight">
-                          {post.title}
-                        </h3>
-                      </Link>
+                      <h3 className="text-2xl font-bold text-legal mb-3 group-hover:text-legal-purple transition-colors leading-tight">
+                        {post.title}
+                      </h3>
                       <p className="text-gray-600 leading-relaxed">
                         {post.excerpt}
                       </p>
@@ -54,11 +48,9 @@ const FeaturedPosts: React.FC = () => {
                     
                     <div className="flex flex-wrap gap-2 mb-4">
                       {post.tags?.map((tag) => (
-                        <Link key={tag} to={`/universo/tectec?tag=${tag.toLowerCase()}`}>
-                          <Badge variant="outline" className="text-xs hover:bg-legal hover:text-white transition-colors">
-                            {tag}
-                          </Badge>
-                        </Link>
+                        <Badge key={tag} variant="outline" className="text-xs">
+                          {tag}
+                        </Badge>
                       ))}
                     </div>
                     
@@ -66,9 +58,7 @@ const FeaturedPosts: React.FC = () => {
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center">
                           <User className="w-4 h-4 mr-1" />
-                          <Link to={`/universo/tectec?autor=${post.author.toLowerCase()}`} className="hover:text-legal transition-colors">
-                            {post.author}
-                          </Link>
+                          {post.author}
                         </div>
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-1" />
@@ -97,19 +87,6 @@ const FeaturedPosts: React.FC = () => {
               </article>
             </React.Fragment>
           ))}
-        </div>
-        
-        <div className="text-center mt-12 space-x-4">
-          <Button asChild className="bg-legal text-white hover:bg-legal-purple">
-            <Link to="/universo/tectec">
-              Ver todos os artigos <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white">
-            <Link to="/universo/whitepapers">
-              Ler whitepapers técnicos <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

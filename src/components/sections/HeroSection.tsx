@@ -47,9 +47,7 @@ const HeroSection = () => {
             className="hero-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 opacity-100"
             itemProp="headline"
           >
-            <Link to="/smart-events" className="text-legal-green hover:text-legal-cyan transition-colors" itemProp="brand">
-              Smart Events™
-            </Link> — o novo padrão para eventos{" "}
+            <span className="text-legal-green" itemProp="brand">Smart Events™</span> — o novo padrão para eventos{" "}
             <span className="relative inline-block">
               <span className="relative z-10" itemProp="description">10× mais inteligentes,</span>
               <span className="absolute bottom-1 left-0 w-full h-2 bg-legal-green opacity-30"></span>
@@ -59,8 +57,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto opacity-100">
-            Da gestão inteligente com <Link to="/negocios/ai" className="text-legal-green hover:text-legal-cyan transition-colors underline underline-offset-4">Inteligência Artificial</Link> até{" "}
-            <Link to="/produtos/facepass" className="text-legal-green hover:text-legal-cyan transition-colors underline underline-offset-4">credenciamento facial</Link>: 
+            Da gestão inteligente até a conectividade super rápida: 
             a LEGAL ajuda a criar eventos surpreendentes e com experiência superior.
           </p>
           

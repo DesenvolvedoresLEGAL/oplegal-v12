@@ -90,15 +90,10 @@ const SuccessStoriesSection = () => {
           ))}
         </div>
 
-        <div className="text-center space-x-4">
+        <div className="text-center">
           <Button asChild variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white">
             <Link to="/universo/historias">
               Ver todas as histórias <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-          <Button asChild variant="ghost" className="text-legal hover:text-legal-green">
-            <Link to="/universo/pesquisas">
-              Ver relatórios de mercado <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
