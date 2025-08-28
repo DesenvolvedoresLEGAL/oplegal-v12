@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import SectionTitle from "../SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 const WhyLegalSection = () => {
@@ -24,29 +25,37 @@ const WhyLegalSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
             <CardContent className="p-8 text-center">
-              <h3 className="text-5xl font-bold text-legal mb-2">1.000+</h3>
-              <p className="text-gray-600">eventos atendidos</p>
+              <Link to="/universo/historias" className="block hover:text-legal-green transition-colors">
+                <h3 className="text-5xl font-bold text-legal mb-2">1.000+</h3>
+                <p className="text-gray-600">eventos atendidos</p>
+              </Link>
             </CardContent>
           </Card>
           
           <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
             <CardContent className="p-8 text-center">
-              <h3 className="text-5xl font-bold text-legal mb-2">94</h3>
-              <p className="text-gray-600">NPS médio dos clientes</p>
+              <Link to="/universo/pesquisas" className="block hover:text-legal-green transition-colors">
+                <h3 className="text-5xl font-bold text-legal mb-2">94</h3>
+                <p className="text-gray-600">NPS médio dos clientes</p>
+              </Link>
             </CardContent>
           </Card>
           
           <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
             <CardContent className="p-8 text-center">
-              <h3 className="text-5xl font-bold text-legal mb-2">7.000+</h3>
-              <p className="text-gray-600">assinaturas FWA</p>
+              <Link to="/produtos/eventrix" className="block hover:text-legal-green transition-colors">
+                <h3 className="text-5xl font-bold text-legal mb-2">7.000+</h3>
+                <p className="text-gray-600">assinaturas FWA</p>
+              </Link>
             </CardContent>
           </Card>
         </div>
 
         <div className="bg-legal rounded-xl p-8 text-white text-center max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-4">Nossa BHAG (Big Hairy Audacious Goal)</h3>
-          <p className="text-xl mb-6">Conectar 1 milhão de pessoas, negócios e coisas até 2030</p>
+          <Link to="/missao-visao-valores" className="block hover:bg-legal-cyan/10 rounded-lg p-2 -m-2 transition-colors">
+            <h3 className="text-2xl font-bold mb-4">Nossa BHAG (Big Hairy Audacious Goal)</h3>
+            <p className="text-xl mb-6">Conectar 1 milhão de pessoas, negócios e coisas até 2030</p>
+          </Link>
           
           <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
             <p className="text-sm mb-2">Até hoje já realizamos</p>
