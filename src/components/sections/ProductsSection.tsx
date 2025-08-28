@@ -63,11 +63,7 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
   ];
 
   return (
-    <section 
-      className="py-20 bg-gray-50"
-      itemScope 
-      itemType="https://schema.org/ItemList"
-    >
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle
           title={titleOverride || "Nossos Produtos"}
@@ -75,62 +71,46 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
           center={true}
         />
 
-        <meta itemProp="numberOfItems" content={products.length.toString()} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product, index) => (
             <Card 
               key={index} 
               className="group overflow-hidden border-none shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white"
-              itemScope 
-              itemType="https://schema.org/ListItem"
-              itemProp="itemListElement"
             >
-              <meta itemProp="position" content={(index + 1).toString()} />
-              <div itemProp="item" itemScope itemType="https://schema.org/Service">
-                <meta itemProp="serviceType" content="TechnologyService" />
-                <meta itemProp="provider" content="LEGAL" />
-                <CardContent className="p-8 text-center h-full flex flex-col">
-                  <div className="mb-6 text-legal group-hover:text-legal-green transition-colors duration-300 flex justify-center">
-                    {product.icon}
-                  </div>
-                  
-                  <h3 
-                    className="text-2xl font-bold text-legal mb-3 group-hover:text-legal-green transition-colors duration-300"
-                    itemProp="name"
-                  >
-                    {product.title}
-                  </h3>
-                  
-                  <p 
-                    className="text-gray-600 mb-6 flex-grow"
-                    itemProp="description"
-                  >
-                    {product.description}
-                  </p>
-                  
-                  <div className="mb-6" itemProp="additionalProperty" itemScope itemType="https://schema.org/PropertyValue">
-                    <meta itemProp="name" content="features" />
-                    <ul className="space-y-2">
-                      {product.features.map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-500 flex items-center justify-center">
-                          <span className="w-1.5 h-1.5 bg-legal-cyan rounded-full mr-2"></span>
-                          <span itemProp="value">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Button 
-                    asChild 
-                    variant="outline" 
-                    className="border-legal text-legal hover:bg-legal hover:text-white transition-all duration-300 w-full group-hover:border-legal-green group-hover:text-legal-green group-hover:hover:bg-legal-green group-hover:hover:text-white"
-                  >
-                    <Link to={product.link} itemProp="url">
-                      Saiba mais
-                    </Link>
-                  </Button>
-                </CardContent>
-              </div>
+              <CardContent className="p-8 text-center h-full flex flex-col">
+                <div className="mb-6 text-legal group-hover:text-legal-green transition-colors duration-300 flex justify-center">
+                  {product.icon}
+                </div>
+                
+                <h3 className="text-2xl font-bold text-legal mb-3 group-hover:text-legal-green transition-colors duration-300">
+                  {product.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-6 flex-grow">
+                  {product.description}
+                </p>
+                
+                <div className="mb-6">
+                  <ul className="space-y-2">
+                    {product.features.map((feature, idx) => (
+                      <li key={idx} className="text-sm text-gray-500 flex items-center justify-center">
+                        <span className="w-1.5 h-1.5 bg-legal-cyan rounded-full mr-2"></span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  className="border-legal text-legal hover:bg-legal hover:text-white transition-all duration-300 w-full group-hover:border-legal-green group-hover:text-legal-green group-hover:hover:bg-legal-green group-hover:hover:text-white"
+                >
+                  <Link to={product.link}>
+                    Saiba mais
+                  </Link>
+                </Button>
+              </CardContent>
             </Card>
           ))}
         </div>
