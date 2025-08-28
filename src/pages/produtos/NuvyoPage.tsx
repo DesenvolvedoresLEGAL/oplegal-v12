@@ -15,11 +15,12 @@ import CallToAction from '@/components/CallToAction';
 const NuvyoPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Nuvyo - Filmagem e Fotografia com Drones",
     "description": "Serviços profissionais de filmagem e fotografia aérea com drones para eventos, marketing e produções audiovisuais",
-    "brand": {
-      "@type": "Brand",
+    "serviceType": ["Filmagem com drones", "Fotografia aérea"],
+    "provider": {
+      "@type": "Organization",
       "name": "LEGAL"
     },
     "offers": {

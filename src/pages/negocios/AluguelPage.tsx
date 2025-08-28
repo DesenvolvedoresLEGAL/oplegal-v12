@@ -68,7 +68,7 @@ const AluguelPage = () => {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "Product",
+            "@type": "Service",
             "name": "Roteadores 5G",
             "description": "Conectividade móvel de alta velocidade para eventos"
           }
@@ -76,7 +76,7 @@ const AluguelPage = () => {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "Product",
+            "@type": "Service",
             "name": "Access Points Wi-Fi 6",
             "description": "Pontos de acesso sem fio de última geração"
           }
@@ -84,7 +84,7 @@ const AluguelPage = () => {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "Product",
+            "@type": "Service",
             "name": "Switches Gerenciáveis",
             "description": "Equipamentos de rede empresariais"
           }

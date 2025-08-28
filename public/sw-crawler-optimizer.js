@@ -238,7 +238,7 @@ async function optimizeJSON(data, url) {
   if (data.products || data.name) {
     optimizedData._semanticContext = {
       "@context": "https://schema.org",
-      "@type": data.products ? "ItemList" : "Product",
+      "@type": data.products ? "ItemList" : "Service",
       "provider": {
         "@type": "Organization", 
         "name": "LEGAL TechCo",
