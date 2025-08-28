@@ -47,13 +47,31 @@
     <link rel="modulepreload" href="/src/main.tsx" />
     <link rel="preload" href="/src/index.css" as="style" />
     
-    <!-- Preload critical font subset for instant text rendering -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap&subset=latin" as="style" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap&subset=latin" />
+    <!-- Optimized font loading to prevent render blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- Load critical fonts immediately -->
+    <style>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2') format('woff2');
+      }
+    </style>
     
     <!-- Load remaining fonts asynchronously -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..600;800&family=Space+Grotesk:wght@300..700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..600;800&family=Space+Grotesk:wght@300..700&display=swap" /></noscript>
+    <script>
+      // Async font loading to prevent render blocking
+      const fontCSS = document.createElement('link');
+      fontCSS.rel = 'stylesheet';
+      fontCSS.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@100..600;800&family=Space+Grotesk:wght@300..700&display=swap';
+      fontCSS.media = 'print';
+      fontCSS.onload = function() { this.media = 'all'; };
+      document.head.appendChild(fontCSS);
+    </script>
     
     <!-- Critical above-the-fold styles -->
     <style>
@@ -161,17 +179,19 @@
   <body>
     <div id="root"></div>
     
-    <!-- Non-blocking CSS loading script -->
+    <!-- Optimized CSS loading to prevent render blocking -->
     <script>
-      // Load CSS asynchronously to prevent render blocking
-      function loadCSS(href) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = href;
-        link.media = 'print';
-        link.onload = function() { this.media = 'all'; };
-        document.head.appendChild(link);
-      }
+      // Load main CSS asynchronously after critical resources
+      const cssLink = document.createElement('link');
+      cssLink.rel = 'stylesheet';
+      cssLink.href = '/src/index.css';
+      cssLink.media = 'print';
+      cssLink.onload = function() { this.media = 'all'; };
+      
+      // Defer CSS loading slightly to let critical content render first
+      setTimeout(() => {
+        document.head.appendChild(cssLink);
+      }, 10);
     </script>
     
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
