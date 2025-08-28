@@ -25,11 +25,17 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-navigation-menu'],
+          animations: ['framer-motion'],
+          utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
         },
       },
     },
     target: 'esnext',
-    minify: 'esbuild', // Usar esbuild em vez de terser para melhor compatibilidade
+    minify: 'esbuild',
     cssMinify: true,
+    modulePreload: {
+      polyfill: false // Reduce bundle size for modern browsers
+    },
   },
 }));

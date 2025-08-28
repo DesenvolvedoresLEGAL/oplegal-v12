@@ -43,6 +43,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
     
+    <!-- Preload critical resources to break dependency chains -->
+    <link rel="modulepreload" href="/src/main.tsx" />
+    <link rel="preload" href="/src/index.css" as="style" />
+    
     <!-- Preload critical font subset for instant text rendering -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap&subset=latin" as="style" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap&subset=latin" />
