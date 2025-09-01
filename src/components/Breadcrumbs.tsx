@@ -37,7 +37,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
         'aero': 'AERO',
         'alugue': 'LEGAL Alugue',
         'assinatura': 'LEGAL Assinatura',
-        'facepass': 'FacePass™',
+        'magicpass': 'MagicPass™',
         'linkai': 'LinkAI',
         'fitscore': 'FitScore™',
         'eventrix': 'Eventrix',

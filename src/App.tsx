@@ -23,7 +23,7 @@ const AeroPage = lazy(() => import("./pages/negocios/AeroPage"));
 const AeroWashPage = lazy(() => import("./pages/negocios/AeroWashPage"));
 const AeroDeliveryPage = lazy(() => import("./pages/negocios/AeroDeliveryPage"));
 const EventrixPage = lazy(() => import("./pages/negocios/ai/EventrixPage"));
-const FacePassPage = lazy(() => import("./pages/negocios/ai/FacePassPage"));
+const MagicPassPage = lazy(() => import("./pages/negocios/ai/MagicPassPage"));
 const LinkAIPage = lazy(() => import("./pages/negocios/ai/LinkAIPage"));
 const FitScorePage = lazy(() => import("./pages/negocios/ai/FitScorePage"));
 const AluguelPage = lazy(() => import("./pages/negocios/AluguelPage"));
@@ -48,7 +48,7 @@ const TecTecAdminPage = lazy(() => import("./pages/admin/TecTecAdminPage"));
 const Blue6Page = lazy(() => import("./pages/produtos/Blue6Page"));
 const BrilixPage = lazy(() => import("./pages/produtos/BrilixPage"));
 const EventrixProdutoPage = lazy(() => import("./pages/produtos/EventrixPage"));
-const FacePassProdutoPage = lazy(() => import("./pages/produtos/FacePassPage"));
+const MagicPassProdutoPage = lazy(() => import("./pages/produtos/MagicPassPage"));
 const FitScoreProdutoPage = lazy(() => import("./pages/produtos/FitScorePage"));
 const HumanoidPage = lazy(() => import("./pages/produtos/HumanoidPage"));
 const LinkAIProdutoPage = lazy(() => import("./pages/produtos/LinkAIPage"));
@@ -99,7 +99,7 @@ const App = () => {
                 <Route path="/produtos/blue6" element={<Blue6Page />} />
                 <Route path="/produtos/brilix" element={<BrilixPage />} />
                 <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
-                <Route path="/produtos/facepass" element={<FacePassProdutoPage />} />
+                <Route path="/produtos/magicpass" element={<MagicPassProdutoPage />} />
                 <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
                 <Route path="/produtos/humanoid" element={<HumanoidPage />} />
                 <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
@@ -127,7 +127,7 @@ const App = () => {
                 <Route path="/negocios/aero/delivery" element={<AeroDeliveryPage />} />
                 <Route path="/negocios/ai" element={<AIPage />} />
                 <Route path="/negocios/ai/eventrix" element={<EventrixPage />} />
-                <Route path="/negocios/ai/facepass" element={<FacePassPage />} />
+                <Route path="/negocios/ai/magicpass" element={<MagicPassPage />} />
                 <Route path="/negocios/ai/linkai" element={<LinkAIPage />} />
                 <Route path="/negocios/ai/fitscore" element={<FitScorePage />} />
                 <Route path="/negocios/alugue" element={<AluguelPage />} />

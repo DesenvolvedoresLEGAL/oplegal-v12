@@ -22,7 +22,7 @@ interface SEOHeadProps {
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description = "LEGAL - A maior TECHCO do Brasil e inventora do conceito Smart Events™. Entregamos o novo padrão para eventos inteligentes, conectados e lucrativos.",
-  keywords = "LEGAL, Smart Events, eventos inteligentes, credenciamento facial, FacePass, IA eventos, conectividade 5G, AERO drones, TechCo Brasil",
+  keywords = "LEGAL, Smart Events, eventos inteligentes, credenciamento facial, MagicPass, IA eventos, conectividade 5G, AERO drones, TechCo Brasil",
   image = "https://operadora.legal/images/legal-og-default.jpg",
   url,
   type = 'website',

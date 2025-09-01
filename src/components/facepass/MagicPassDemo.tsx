@@ -4,12 +4,12 @@ import SectionTitle from '@/components/SectionTitle';
 import { Button } from '@/components/ui/button';
 import { Play, Calendar, Eye } from 'lucide-react';
 
-const FacePassDemo = () => {
+const MagicPassDemo = () => {
   return (
     <section className="py-20 bg-gray-50" id="demo">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Veja o FacePass em Ação"
+          title="Veja o MagicPass em Ação"
           subtitle="Assista uma demonstração completa de como nosso sistema de reconhecimento facial funciona na prática"
           center
         />
@@ -24,7 +24,7 @@ const FacePassDemo = () => {
               
               <h3 className="text-2xl font-bold mb-4">Demo Interativa - 8 minutos</h3>
               <p className="text-lg mb-6 text-white/90">
-                Veja como o FacePass funciona desde o cadastro até o acesso: reconhecimento em tempo real, 
+                Veja como o MagicPass funciona desde o cadastro até o acesso: reconhecimento em tempo real, 
                 relatórios detalhados e integração completa com sistemas de evento
               </p>
               
@@ -61,4 +61,4 @@ const FacePassDemo = () => {
   );
 };
 
-export default FacePassDemo;
+export default MagicPassDemo;

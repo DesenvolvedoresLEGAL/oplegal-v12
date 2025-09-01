@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const FacePassStats = () => {
+const MagicPassStats = () => {
   const stats = [
     { number: "99.9%", label: "Precisão", description: "Taxa de reconhecimento" },
     { number: "2s", label: "Velocidade", description: "Tempo médio de acesso" },
@@ -26,4 +26,4 @@ const FacePassStats = () => {
   );
 };
 
-export default FacePassStats;
+export default MagicPassStats;

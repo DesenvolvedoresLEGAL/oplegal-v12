@@ -22,7 +22,7 @@ const FitScoreIntegration = () => {
           </article>
           <article className="bg-white rounded-xl p-6 shadow-lg">
             <Eye className="w-12 h-12 text-legal-purple mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-legal-purple mb-3">FacePass Check-in</h3>
+            <h3 className="text-xl font-bold text-legal-purple mb-3">MagicPass Check-in</h3>
             <p className="text-gray-600">Identificação automática de candidatos em entrevistas e processos seletivos presenciais.</p>
           </article>
           <article className="bg-white rounded-xl p-6 shadow-lg">

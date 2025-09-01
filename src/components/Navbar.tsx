@@ -108,10 +108,10 @@ const Navbar = () => {
                               <p className="text-xs text-muted-foreground">Plataforma de Gestão de Eventos</p>
                             </div>
                           </Link>
-                          <Link to="/produtos/facepass" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
+                          <Link to="/produtos/magicpass" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <User className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">FacePass</div>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">MagicPass</div>
                               <p className="text-xs text-muted-foreground">Credenciamento e Acesso Rápido</p>
                             </div>
                           </Link>
@@ -461,8 +461,8 @@ const Navbar = () => {
               <Link to="/produtos/eventrix" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 Eventrix - Plataforma de Gestão de Eventos
               </Link>
-              <Link to="/produtos/facepass" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                FacePass - Credenciamento e Acesso Rápido
+              <Link to="/produtos/magicpass" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
+                MagicPass - Credenciamento e Acesso Rápido
               </Link>
               <Link to="/produtos/fitscore" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 FitScore - Contratação e People Analytics

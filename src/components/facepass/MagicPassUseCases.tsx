@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import SectionTitle from '@/components/SectionTitle';
 import { Users, Camera, BarChart3, Zap } from 'lucide-react';
 
-const FacePassUseCases = () => {
+const MagicPassUseCases = () => {
   const useCases = [
     {
       title: "Conferências Corporativas",
@@ -33,7 +33,7 @@ const FacePassUseCases = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Casos de Uso"
-          subtitle="FacePass se adapta a diferentes tipos de eventos e necessidades"
+          subtitle="MagicPass se adapta a diferentes tipos de eventos e necessidades"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -54,4 +54,4 @@ const FacePassUseCases = () => {
   );
 };
 
-export default FacePassUseCases;
+export default MagicPassUseCases;

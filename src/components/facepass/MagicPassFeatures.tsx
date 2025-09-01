@@ -11,7 +11,7 @@ import {
   Settings
 } from 'lucide-react';
 
-const FacePassFeatures = () => {
+const MagicPassFeatures = () => {
   const features = [
     {
       icon: <Eye className="w-8 h-8" />,
@@ -71,4 +71,4 @@ const FacePassFeatures = () => {
   );
 };
 
-export default FacePassFeatures;
+export default MagicPassFeatures;

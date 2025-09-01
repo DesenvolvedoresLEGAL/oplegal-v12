@@ -5,13 +5,13 @@ import { Button } from '@/components/ui/button';
 import SectionTitle from '@/components/SectionTitle';
 import { Brain, Users, BarChart3 } from 'lucide-react';
 
-const FacePassIntegration = () => {
+const MagicPassIntegration = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-legal/10 to-legal-purple/10">
       <div className="container mx-auto px-4 text-center">
         <SectionTitle 
           title="Integração Total com LEGAL AI"
-          subtitle="FacePass faz parte do ecossistema LEGAL AI, potencializando seus resultados com outras soluções inteligentes"
+          subtitle="MagicPass faz parte do ecossistema LEGAL AI, potencializando seus resultados com outras soluções inteligentes"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -39,4 +39,4 @@ const FacePassIntegration = () => {
   );
 };
 
-export default FacePassIntegration;
+export default MagicPassIntegration;

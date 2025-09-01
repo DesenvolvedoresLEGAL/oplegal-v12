@@ -2,7 +2,7 @@
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 
-const FacePassProcess = () => {
+const MagicPassProcess = () => {
   const processSteps = [
     {
       number: "01",
@@ -31,7 +31,7 @@ const FacePassProcess = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Como Funciona"
-          subtitle="Processo simples e seguro em 4 etapas para implementação do FacePass"
+          subtitle="Processo simples e seguro em 4 etapas para implementação do MagicPass"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -50,4 +50,4 @@ const FacePassProcess = () => {
   );
 };
 
-export default FacePassProcess;
+export default MagicPassProcess;

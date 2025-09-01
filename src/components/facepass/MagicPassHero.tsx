@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Eye, Camera, Lock } from 'lucide-react';
 
-const FacePassHero = () => {
+const MagicPassHero = () => {
   return (
     <section className="py-24 md:py-32 text-center bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10" aria-hidden="true">
@@ -17,7 +17,7 @@ const FacePassHero = () => {
           <div className="flex items-center justify-center gap-3 mb-6">
             <Eye className="w-12 h-12 text-legal-cyan" />
             <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider" style={{ letterSpacing: '0.05em' }}>
-              FacePass
+              MagicPass
             </h1>
           </div>
           <p className="text-lg md:text-xl font-light max-w-4xl mx-auto mb-8">
@@ -27,7 +27,7 @@ const FacePassHero = () => {
         </header>
         <nav className="flex flex-col sm:flex-row justify-center gap-4" role="navigation">
           <Button asChild size="lg" className="bg-legal-cyan hover:bg-legal-cyan/90 text-legal font-bold">
-            <Link to="/contato?produto=facepass">Solicitar Demonstração</Link>
+            <Link to="/contato?produto=magicpass">Solicitar Demonstração</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="border-white text-legal hover:bg-white hover:text-legal/80">
             <Link to="/negocios/ai">Ver Todos os Produtos AI</Link>
@@ -38,4 +38,4 @@ const FacePassHero = () => {
   );
 };
 
-export default FacePassHero;
+export default MagicPassHero;

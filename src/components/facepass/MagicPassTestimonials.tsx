@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
 
-const FacePassTestimonials = () => {
+const MagicPassTestimonials = () => {
   const testimonials = [
     {
       name: "Carlos Mendes",
@@ -13,7 +13,7 @@ const FacePassTestimonials = () => {
       company: "TechCorp",
       image: "/placeholder.svg",
       rating: 5,
-      quote: "O FacePass eliminou completamente as filas no nosso evento. Credenciamento instantâneo para 5.000 participantes sem nenhum problema."
+      quote: "O MagicPass eliminou completamente as filas no nosso evento. Credenciamento instantâneo para 5.000 participantes sem nenhum problema."
     },
     {
       name: "Ana Silva",
@@ -38,7 +38,7 @@ const FacePassTestimonials = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Casos de Sucesso"
-          subtitle="Empresas que já transformaram seus eventos com FacePass"
+          subtitle="Empresas que já transformaram seus eventos com MagicPass"
           center
         />
         
@@ -76,4 +76,4 @@ const FacePassTestimonials = () => {
   );
 };
 
-export default FacePassTestimonials;
+export default MagicPassTestimonials;

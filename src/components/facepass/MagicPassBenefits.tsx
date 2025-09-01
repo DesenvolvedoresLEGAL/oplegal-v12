@@ -3,7 +3,7 @@ import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import { Clock, Users, Shield, BarChart3 } from 'lucide-react';
 
-const FacePassBenefits = () => {
+const MagicPassBenefits = () => {
   const benefits = [
     {
       icon: <Clock className="w-6 h-6" />,
@@ -55,4 +55,4 @@ const FacePassBenefits = () => {
   );
 };
 
-export default FacePassBenefits;
+export default MagicPassBenefits;
