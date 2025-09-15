@@ -15,22 +15,22 @@ const GalaxiaFeatures = () => {
     {
       icon: <Cloud className="w-8 h-8" />,
       title: "Infraestrutura Cloud Dedicada",
-      description: "Ambiente cloud exclusivo e escalável para hospedar seus modelos de IA com alta performance."
+      description: "Clusters de GPUs NVIDIA A100/H100 de última geração com nuvens dedicadas de alta performance, redundância geográfica multi-região e escalabilidade automática baseada em ML."
     },
     {
       icon: <Cpu className="w-8 h-8" />,
       title: "APIs Personalizadas",
-      description: "Desenvolvimento de APIs sob medida integradas aos seus sistemas existentes."
+      description: "APIs REST/GraphQL padronizadas com conectores nativos para SAP, Salesforce, Oracle e sistemas legados. SDKs disponíveis em Python, Java, JavaScript e .NET."
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Modelos de IA Sob Demanda",
-      description: "Treinamento e implementação de modelos específicos para suas necessidades de negócio."
+      description: "LLMs (GPT, BERT), Computer Vision (YOLO, ResNet), Modelos Generativos (Stable Diffusion). Fine-tuning e treinamento de modelos proprietários personalizados."
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Segurança Empresarial",
-      description: "Criptografia avançada, conformidade LGPD e controles de acesso granulares."
+      description: "Certificações ISO 27001, SOC 2 Type II. Conformidade LGPD/GDPR/HIPAA. Isolamento total de dados por cliente (tenant isolation) e zero-trust architecture."
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,

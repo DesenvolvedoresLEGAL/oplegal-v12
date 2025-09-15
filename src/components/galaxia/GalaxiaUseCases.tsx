@@ -7,22 +7,22 @@ const GalaxiaUseCases = () => {
   const useCases = [
     {
       title: "Grandes Corporações",
-      description: "Infraestrutura de IA para processos complexos e alta demanda",
+      description: "Otimização de supply chain, automação de processos financeiros e análise preditiva de riscos empresariais",
       icon: <Building className="w-6 h-6" />
     },
     {
       title: "E-commerce",
-      description: "Recomendações personalizadas e otimização de conversão",
+      description: "Sistemas de recomendação em tempo real, otimização de preços dinâmicos e prevenção inteligente de fraudes",
       icon: <ShoppingCart className="w-6 h-6" />
     },
     {
       title: "Saúde e Medicina", 
-      description: "Análise de dados médicos e diagnósticos assistidos por IA",
+      description: "Diagnósticos assistidos por IA, análise avançada de imagens médicas e drug discovery acelerado",
       icon: <Heart className="w-6 h-6" />
     },
     {
       title: "Indústria 4.0",
-      description: "Automação inteligente e manutenção preditiva",
+      description: "Manutenção preditiva de equipamentos, controle de qualidade automatizado e otimização energética inteligente",
       icon: <Factory className="w-6 h-6" />
     }
   ];
