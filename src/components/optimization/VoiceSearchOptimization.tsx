@@ -11,7 +11,7 @@ const VoiceSearchOptimization: React.FC<VoiceSearchOptimizationProps> = ({
   businessName = "LEGAL TechCo",
   primaryKeywords = ["Smart Events", "IA", "eventos inteligentes", "tecnologia"],
   location = "Brasil",
-  services = ["Smart Events™", "MAGICPASS™", "FitScore™", "AERO Services"]
+  services = ["Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™", "AERO Services"]
 }) => {
   
   // Dados estruturados para busca por voz

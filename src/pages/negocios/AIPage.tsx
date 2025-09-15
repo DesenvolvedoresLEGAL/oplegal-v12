@@ -8,9 +8,18 @@ import StatsSection from '@/components/ai/StatsSection';
 import AdvancedModulesSection from '@/components/ai/AdvancedModulesSection';
 import IntegrationSection from '@/components/ai/IntegrationSection';
 import CallToAction from '@/components/CallToAction';
-import { Brain, Users, BarChart3, Eye, Zap, MessageSquare, Target, Gamepad2 } from 'lucide-react';
+import { Brain, Users, BarChart3, Eye, Zap, MessageSquare, Target, Gamepad2, Cloud } from 'lucide-react';
 
 const aiProducts = [
+  {
+    id: 'galaxia',
+    name: 'GALAXIA',
+    description: 'Infraestrutura de IA personalizada para empresas com soluções escaláveis.',
+    icon: <Cloud className="w-6 h-6" />,
+    features: ['Infraestrutura cloud dedicada', 'APIs personalizadas', 'Modelos de IA sob demanda'],
+    benefits: ['Redução de 50% nos custos de infraestrutura', 'Escalabilidade automática', 'Integração empresarial completa'],
+    ctaLink: '/contato?produto=galaxia'
+  },
   {
     id: 'magicpass',
     name: 'MAGICPASS',
@@ -77,7 +86,7 @@ const aiProducts = [
 ];
 
 const aiStats = [
-  { number: '7', label: 'Produtos', description: 'Ecossistema completo de IA' },
+  { number: '8', label: 'Produtos', description: 'Ecossistema completo de IA' },
   { number: '10x', label: 'Resultados', description: 'Aumento da eficiência e performance' },
   { number: '95%', label: 'Satisfação', description: 'Clientes satisfeitos com as soluções' },
   { number: '100%', label: 'Integrado', description: 'Soluções totalmente integradas' },
@@ -111,7 +120,7 @@ const AIPage = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "LEGAL AI",
-    "description": "Ecossistema completo de inteligência artificial para eventos e negócios com 7 produtos transversais integrados",
+    "description": "Ecossistema completo de inteligência artificial para eventos e negócios com 8 produtos transversais integrados",
     "provider": {
       "@type": "Organization",
       "name": "LEGAL"
@@ -141,8 +150,8 @@ const AIPage = () => {
     <>
       <SEOHead
         title="LEGAL AI | Inteligência Artificial para Eventos e Negócios"
-        description="Descubra o ecossistema completo LEGAL AI com 7 produtos de IA: MAGICPASS, LinkAI, FitScore, Eventrix, Humanoid, Ping e NeuraFit. Transforme eventos e negócios com inteligência artificial."
-        keywords="LEGAL AI, inteligência artificial eventos, MAGICPASS credenciamento facial, LinkAI networking, FitScore RH, Eventrix gestão eventos, Humanoid captação leads, Ping chatbot, NeuraFit gamificação"
+        description="Descubra o ecossistema completo LEGAL AI com 8 produtos de IA: GALAXIA, MAGICPASS, LinkAI, FitScore, Eventrix, Humanoid, Ping e NeuraFit. Transforme eventos e negócios com inteligência artificial."
+        keywords="LEGAL AI, inteligência artificial eventos, GALAXIA infraestrutura IA, MAGICPASS credenciamento facial, LinkAI networking, FitScore RH, Eventrix gestão eventos, Humanoid captação leads, Ping chatbot, NeuraFit gamificação"
         url="https://operadora.legal/negocios/ai"
         type="service"
         schemaData={aiPageSchema}
@@ -157,7 +166,7 @@ const AIPage = () => {
           <div className="container mx-auto px-4">
             <header className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-legal mb-4">
-                7 Produtos Transversais LEGAL AI
+                8 Produtos Transversais LEGAL AI
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Soluções integradas de inteligência artificial que trabalham em sinergia para maximizar resultados em eventos e negócios.

@@ -60,7 +60,7 @@ const Index = () => {
         businessName="LEGAL TechCo"
         primaryKeywords={["Smart Events", "eventos inteligentes", "IA", "reconhecimento facial"]}
         location="Brasil"
-        services={["Smart Events™", "MAGICPASS™", "FitScore™", "AERO Services"]}
+        services={["Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™", "AERO Services"]}
       />
       <ConversationalAIData 
         domain="events"
@@ -74,7 +74,7 @@ const Index = () => {
       />
       <NaturalLanguageOptimization 
         pageContext="smart_events_homepage"
-        primaryEntities={["LEGAL TechCo", "Smart Events™", "MAGICPASS™", "FitScore™"]}
+        primaryEntities={["LEGAL TechCo", "Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™"]}
         semanticTopics={["eventos inteligentes", "tecnologia", "inteligência artificial", "inovação"]}
       />
       <PreloadResources />
