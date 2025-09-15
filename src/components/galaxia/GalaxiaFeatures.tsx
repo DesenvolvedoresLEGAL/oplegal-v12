@@ -1,68 +1,79 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import SectionTitle from '@/components/SectionTitle';
 import { 
-  Cloud, 
-  Cpu, 
-  Shield, 
-  BarChart3, 
-  Zap,
-  Settings
+  TrendingDown, 
+  Users, 
+  Zap
 } from 'lucide-react';
 
 const GalaxiaFeatures = () => {
-  const features = [
+  const painPoints = [
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Infraestrutura Cloud Dedicada",
-      description: "Clusters de GPUs NVIDIA A100/H100 de última geração com nuvens dedicadas de alta performance, redundância geográfica multi-região e escalabilidade automática baseada em ML."
+      icon: <TrendingDown className="w-12 h-12" />,
+      title: "Ineficiência operacional",
+      description: "Transformamos processos lentos em fluxos ágeis e automáticos.",
+      details: [
+        "Automação de workflows repetitivos",
+        "Otimização de recursos existentes", 
+        "Redução de tempo de execução",
+        "Integração com sistemas atuais"
+      ]
     },
     {
-      icon: <Cpu className="w-8 h-8" />,
-      title: "APIs Personalizadas",
-      description: "APIs REST/GraphQL padronizadas com conectores nativos para SAP, Salesforce, Oracle e sistemas legados. SDKs disponíveis em Python, Java, JavaScript e .NET."
+      icon: <Users className="w-12 h-12" />,
+      title: "Times inflados",
+      description: "Automatizamos tarefas repetitivas para liberar pessoas para o que importa.",
+      details: [
+        "IA conversacional para atendimento",
+        "Automação de documentação",
+        "Processamento inteligente de dados",
+        "Copilotos para produtividade"
+      ]
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Modelos de IA Sob Demanda",
-      description: "LLMs (GPT, BERT), Computer Vision (YOLO, ResNet), Modelos Generativos (Stable Diffusion). Fine-tuning e treinamento de modelos proprietários personalizados."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Segurança Empresarial",
-      description: "Certificações ISO 27001, SOC 2 Type II. Conformidade LGPD/GDPR/HIPAA. Isolamento total de dados por cliente (tenant isolation) e zero-trust architecture."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Monitoramento Avançado",
-      description: "Dashboard completo com métricas de performance, uso e custos em tempo real."
-    },
-    {
-      icon: <Settings className="w-8 h-8" />,
-      title: "Integração Empresarial",
-      description: "Conectividade nativa com ERP, CRM e outros sistemas corporativos existentes."
+      icon: <Zap className="w-12 h-12" />,
+      title: "Dificuldade em adotar novas tecnologias",
+      description: "Implementamos IA sem burocracia, integrada ao que você já usa.",
+      details: [
+        "Integração nativa com sistemas existentes",
+        "Setup rápido e sem complicações",
+        "Treinamento da equipe incluído",
+        "Suporte contínuo especializado"
+      ]
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="principais-dores" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Recursos Avançados"
-          subtitle="Infraestrutura completa de IA com tecnologia de ponta para maximizar resultados empresariais"
+          title="Principais Dores que Resolvemos"
+          subtitle="Identificamos e eliminamos os gargalos que impedem sua empresa de crescer"
           center
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-none">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6 text-legal group-hover:text-legal-purple transition-colors duration-300 flex justify-center">
-                  {feature.icon}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {painPoints.map((pain, index) => (
+            <div key={index} className="text-center group">
+              <div className="bg-gradient-to-br from-legal-primary/10 to-legal-secondary/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="text-legal-primary">
+                  {pain.icon}
                 </div>
-                <h3 className="text-xl font-bold text-legal mb-4">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </CardContent>
-            </Card>
+              </div>
+              <h3 className="text-xl font-bold text-legal-primary mb-3 font-haas">
+                {pain.title}
+              </h3>
+              <p className="text-gray-600 mb-4 font-haas">
+                {pain.description}
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                {pain.details.map((detail, idx) => (
+                  <li key={idx} className="flex items-center justify-center">
+                    <div className="w-2 h-2 bg-legal-tertiary rounded-full mr-2"></div>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </div>

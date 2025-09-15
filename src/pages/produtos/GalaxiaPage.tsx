@@ -1,97 +1,87 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import GalaxiaHero from '@/components/galaxia/GalaxiaHero';
+import GalaxiaAbout from '@/components/galaxia/GalaxiaAbout';
 import GalaxiaFeatures from '@/components/galaxia/GalaxiaFeatures';
-import GalaxiaStats from '@/components/galaxia/GalaxiaStats';
 import GalaxiaBenefits from '@/components/galaxia/GalaxiaBenefits';
-import GalaxiaProcess from '@/components/galaxia/GalaxiaProcess';
-import GalaxiaUseCases from '@/components/galaxia/GalaxiaUseCases';
-import GalaxiaPricing from '@/components/galaxia/GalaxiaPricing';
+import GalaxiaDifferentials from '@/components/galaxia/GalaxiaDifferentials';
 import GalaxiaTestimonialsEnhanced from '@/components/galaxia/GalaxiaTestimonialsEnhanced';
-import GalaxiaDemo from '@/components/galaxia/GalaxiaDemo';
-import GalaxiaFAQ from '@/components/galaxia/GalaxiaFAQ';
 import CallToAction from '@/components/CallToAction';
 
 const GalaxiaPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "GalaxIA - Infraestrutura de IA Personalizada",
-    "serviceType": "Cloud Infrastructure Service",
+    "name": "GalaxIA™ - Inteligência Artificial sob medida para empresas",
+    "serviceType": "AI Consulting and Development Service",
     "provider": {
       "@type": "Organization",
       "name": "LEGAL"
     },
-    "description": "GalaxIA: Infraestrutura de IA personalizada com nuvens dedicadas, modelos de IA sob demanda e integração corporativa. Clusters GPU NVIDIA A100/H100 com 99.9% uptime.",
+    "description": "GalaxIA™: Infraestrutura artesanal de IA sob medida que cria agentes conversacionais, automações e copilotos para eliminar gargalos e reduzir custos operacionais.",
     "areaServed": "Brasil",
     "offers": {
       "@type": "Offer",
-      "category": "Enterprise AI Infrastructure"
+      "category": "Enterprise AI Solutions"
     },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Serviços GalaxIA",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Infraestrutura Cloud Dedicada",
-              "description": "Clusters GPU NVIDIA A100/H100 com redundância geográfica"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "priceCurrency": "BRL",
-              "price": "0.50",
-              "billingIncrement": "P1H"
-            }
-          },
-          {
-            "@type": "Offer", 
-            "itemOffered": {
-              "@type": "Service",
-              "name": "APIs Personalizadas",
-              "description": "REST/GraphQL com conectores SAP, Salesforce, Oracle"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Modelos de IA Sob Demanda",
-              "description": "LLMs, Computer Vision, Modelos Generativos com fine-tuning"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Segurança Empresarial", 
-              "description": "ISO 27001, SOC 2, LGPD/GDPR compliance"
-            }
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Soluções GalaxIA™",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Agentes Conversacionais e Operacionais",
+            "description": "Bots inteligentes que conversam e agem automaticamente"
           }
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150",
-        "bestRating": "5"
-      },
-      "serviceOutput": [
-        "Redução de 50% nos custos operacionais",
-        "99.9% de uptime garantido", 
-        "Escalabilidade automática 10x",
-        "Suporte 24/7 especializado"
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Automações Empresariais",
+            "description": "Fluxos de trabalho 100% automatizados integrados aos sistemas atuais"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "Copilotos Internos",
+            "description": "Assistentes de IA que aumentam produtividade das equipes"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Machine Learning Personalizado", 
+            "description": "Modelos preditivos e analíticos desenvolvidos para necessidades específicas"
+          }
+        }
       ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "87",
+      "bestRating": "5"
+    },
+    "serviceOutput": [
+      "83% de redução em tarefas repetitivas",
+      "Integração nativa com sistemas existentes", 
+      "Setup rápido e suporte contínuo",
+      "ROI comprovado em 90 dias"
+    ]
   };
 
   return (
     <>
       <Helmet>
-        <title>GalaxIA - Infraestrutura de IA Personalizada | Nuvens Dedicadas LEGAL</title>
-        <meta name="description" content="GalaxIA: Infraestrutura de IA personalizada com nuvens dedicadas, modelos de IA sob demanda e integração corporativa. Clusters GPU de última geração com 99.9% uptime garantido." />
-        <meta name="keywords" content="GalaxIA, infraestrutura de IA personalizada, nuvens dedicadas, modelos de IA sob demanda, integração corporativa, clusters GPU, LEGAL, inteligência artificial empresarial" />
+        <title>GalaxIA™ - Inteligência Artificial sob medida para empresas | LEGAL</title>
+        <meta name="description" content="GalaxIA™: Infraestrutura artesanal de IA sob medida que cria agentes conversacionais, automações e copilotos para eliminar gargalos operacionais e reduzir custos em até 83%." />
+        <meta name="keywords" content="GalaxIA, IA sob medida, agentes conversacionais, automações empresariais, copilotos IA, machine learning personalizado, LEGAL, inteligência artificial empresarial" />
         <link rel="canonical" href="https://operadora.legal/produtos/galaxia" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -100,24 +90,18 @@ const GalaxiaPage = () => {
       
       <main>
         <GalaxiaHero />
+        <GalaxiaAbout />
         <GalaxiaFeatures />
-        <GalaxiaStats />
         <GalaxiaBenefits />
-        <GalaxiaProcess />
-        <GalaxiaUseCases />
-        <GalaxiaPricing />
+        <GalaxiaDifferentials />
         <GalaxiaTestimonialsEnhanced />
-        <GalaxiaDemo />
-        <GalaxiaFAQ />
-          <CallToAction
-            title="Transforme Sua Empresa com GalaxIA"
-            subtitle="Fale com um Arquiteto de Soluções para esclarecer dúvidas técnicas complexas e descobrir como nossa infraestrutura de IA personalizada pode gerar resultados mensuráveis."
-            buttonText="Falar com Arquiteto"
-            buttonLink="/contato?produto=galaxia&especialista=arquiteto"
-            secondaryButtonText="Agendar Demo Técnica"
-            secondaryButtonLink="/contato?tipo=demo&produto=galaxia"
-            background="gradient"
-          />
+        <CallToAction
+          title="Pronto para criar sua GalaxIA™?"
+          subtitle="Vamos entender suas dores e construir juntos a IA que vai transformar o seu negócio."
+          buttonText="Agendar uma conversa agora"
+          buttonLink="/contato?produto=galaxia&tipo=conversa"
+          background="gradient"
+        />
       </main>
     </>
   );

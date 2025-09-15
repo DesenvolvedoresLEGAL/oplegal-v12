@@ -1,49 +1,87 @@
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle';
-import { TrendingDown, Zap, Shield, BarChart3 } from 'lucide-react';
+import { Bot, Zap, Users, Brain } from 'lucide-react';
 
 const GalaxiaBenefits = () => {
-  const benefits = [
+  const deliverables = [
     {
-      icon: <TrendingDown className="w-6 h-6" />,
-      title: "Redução de 50% nos custos operacionais",
-      description: "Otimização de recursos e infraestrutura compartilhada"
+      icon: <Bot className="w-8 h-8" />,
+      title: "Agentes Conversacionais e Operacionais",
+      description: "Bots inteligentes que conversam e agem",
+      features: [
+        "Atendimento ao cliente 24/7",
+        "Processamento de linguagem natural",
+        "Integração com sistemas internos",
+        "Aprendizado contínuo"
+      ]
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Escalabilidade automática",
-      description: "Recursos ajustados conforme demanda em tempo real"
+      icon: <Zap className="w-8 h-8" />,
+      title: "Automações",
+      description: "Fluxos de trabalho 100% automatizados",
+      features: [
+        "Processos sem intervenção humana",
+        "Workflows inteligentes",
+        "Integração entre sistemas",
+        "Monitoramento em tempo real"
+      ]
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Segurança empresarial garantida",
-      description: "Conformidade total com regulamentações e padrões de segurança"
+      icon: <Users className="w-8 h-8" />,
+      title: "Copilotos Internos",
+      description: "Assistentes que aumentam a produtividade da sua equipe",
+      features: [
+        "Assistentes personalizados",
+        "Análise de documentos",
+        "Sugestões inteligentes", 
+        "Aumento da produtividade"
+      ]
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "ROI mensurável e transparente",
-      description: "Métricas claras de performance e retorno sobre investimento"
+      icon: <Brain className="w-8 h-8" />,
+      title: "Machine Learning sob medida",
+      description: "Modelos preditivos e analíticos para o seu negócio",
+      features: [
+        "Previsões personalizadas",
+        "Análise preditiva avançada",
+        "Insights acionáveis",
+        "Otimização contínua"
+      ]
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-legal-purple/10 to-legal-cyan/10">
+    <section className="py-20 bg-gradient-to-br from-legal-primary/5 to-legal-secondary/5">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Vantagens Competitivas"
-          subtitle="Transforme sua operação com infraestrutura de IA de classe mundial"
+          title="O que Entregamos"
+          subtitle="Soluções sob medida que transformam processos e geram resultados reais"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="text-legal-purple mt-1">
-                  {benefit.icon}
+          {deliverables.map((item, index) => (
+            <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-start gap-6">
+                <div className="bg-gradient-to-br from-legal-primary/10 to-legal-secondary/10 rounded-full p-4 flex-shrink-0">
+                  <div className="text-legal-primary">
+                    {item.icon}
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-legal mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-legal-primary mb-2 font-haas">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 font-haas">
+                    {item.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {item.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-legal-tertiary rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
