@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench, TrendingUp, Search, Handshake } from "lucide-react";
+import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench, TrendingUp, Search, Handshake, Cloud } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -129,6 +129,13 @@ const Navbar = () => {
                               <p className="text-xs text-muted-foreground">Atendimento Omnichannel</p>
                             </div>
                           </Link>
+                          <Link to="/produtos/fitscore" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
+                            <Target className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">FitScore</div>
+                              <p className="text-xs text-muted-foreground">Contratação e People Analytics</p>
+                            </div>
+                          </Link>
                         </div>
                       </div>
 
@@ -136,11 +143,11 @@ const Navbar = () => {
                       <div>
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">IA & Inovação</h3>
                         <div className="space-y-3">
-                          <Link to="/produtos/fitscore" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
-                            <Target className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                          <Link to="/contato?produto=galaxia" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
+                            <Cloud className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">FitScore</div>
-                              <p className="text-xs text-muted-foreground">Contratação e People Analytics</p>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">GALAXIA</div>
+                              <p className="text-xs text-muted-foreground">Infraestrutura de IA Personalizada</p>
                             </div>
                           </Link>
                           <Link to="/produtos/humanoid" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
