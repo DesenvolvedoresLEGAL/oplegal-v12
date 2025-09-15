@@ -23,7 +23,7 @@ const products = [
   { id: 'speedy5g', name: 'Speedy 5G', description: 'Internet Plug and Play', category: 'Conectividade', url: '/produtos/speedy5g', keywords: ['5g', 'internet', 'plug and play', 'velocidade'] },
   { id: 'plaud', name: 'Plaud', description: 'Gravação de Voz com IA', category: 'IA', url: '/produtos/plaud', keywords: ['gravação', 'voz', 'ia', 'áudio', 'transcrição'] },
   { id: 'eventrix', name: 'Eventrix', description: 'Plataforma de Gestão de Eventos', category: 'Eventos', url: '/produtos/eventrix', keywords: ['eventos', 'gestão', 'plataforma', 'organização'] },
-  { id: 'facepass', name: 'FacePass', description: 'Credenciamento e Acesso Rápido', category: 'Eventos', url: '/produtos/facepass', keywords: ['credenciamento', 'acesso', 'reconhecimento facial', 'segurança'] },
+  { id: 'magicpass', name: 'MAGICPASS', description: 'Credenciamento e Acesso Rápido', category: 'Eventos', url: '/produtos/magicpass', keywords: ['credenciamento', 'acesso', 'reconhecimento facial', 'segurança'] },
   { id: 'linkai', name: 'LinkAI', description: 'Matchmaking Inteligente', category: 'IA', url: '/produtos/linkai', keywords: ['matchmaking', 'networking', 'ia', 'conexões'] },
   { id: 'fitscore', name: 'FitScore', description: 'Contratação e People Analytics', category: 'IA', url: '/produtos/fitscore', keywords: ['rh', 'contratação', 'analytics', 'pessoas'] },
   { id: 'humanoid', name: 'Humanoid', description: 'Robô para Geração de Negócios', category: 'IA', url: '/produtos/humanoid', keywords: ['robô', 'automação', 'negócios', 'vendas'] },

@@ -11,7 +11,7 @@ const VoiceSearchOptimization: React.FC<VoiceSearchOptimizationProps> = ({
   businessName = "LEGAL TechCo",
   primaryKeywords = ["Smart Events", "IA", "eventos inteligentes", "tecnologia"],
   location = "Brasil",
-  services = ["Smart Events™", "FacePass™", "FitScore™", "AERO Services"]
+  services = ["Smart Events™", "MAGICPASS™", "FitScore™", "AERO Services"]
 }) => {
   
   // Dados estruturados para busca por voz
@@ -120,7 +120,7 @@ const VoiceSearchOptimization: React.FC<VoiceSearchOptimizationProps> = ({
   function getServiceDescription(service: string): string {
     const descriptions = {
       "Smart Events™": "Plataforma completa para eventos dez vezes mais inteligentes com inteligência artificial",
-      "FacePass™": "Controle de acesso biométrico com reconhecimento facial avançado",
+      "MAGICPASS™": "Controle de acesso biométrico com reconhecimento facial avançado",
       "FitScore™": "Copiloto de contratação com inteligência artificial para People Analytics",
       "AERO Services": "Soluções aéreas completas com drones e tecnologia avançada"
     };
@@ -163,7 +163,7 @@ const VoiceSearchOptimization: React.FC<VoiceSearchOptimizationProps> = ({
       "maior TechCo do Brasil",
       "inteligência artificial para eventos",
       "conectividade cinco G",
-      "reconhecimento facial FacePass",
+      "reconhecimento facial MAGICPASS",
       "People Analytics FitScore",
       "drones AERO da LEGAL"
     ]

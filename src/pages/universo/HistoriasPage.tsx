@@ -48,7 +48,7 @@ const HistoriasPage = () => {
       ],
       publishedDate: '2024-03-15',
       readTime: '8 min',
-      tags: ['Smart Events', 'FacePass', 'Saúde', 'Congresso']
+      tags: ['Smart Events', 'MAGICPASS', 'Saúde', 'Congresso']
     },
     {
       id: 'vtex-day',
@@ -69,10 +69,10 @@ const HistoriasPage = () => {
     },
     {
       id: 'campus-party',
-      title: 'Campus Party Brasil acelera check-in em 80% com FacePass™',
+      title: 'Campus Party Brasil acelera check-in em 80% com MAGICPASS™',
       company: 'Campus Party Brasil',
       industry: 'Educação',
-      description: 'Implementação de FacePass™ reduziu o tempo de check-in em 80% e melhorou a experiência do visitante com IA para recomendações personalizadas.',
+      description: 'Implementação de MAGICPASS™ reduziu o tempo de check-in em 80% e melhorou a experiência do visitante com IA para recomendações personalizadas.',
       image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60',
       featured: false,
       metrics: [
@@ -82,7 +82,7 @@ const HistoriasPage = () => {
       ],
       publishedDate: '2024-01-10',
       readTime: '5 min',
-      tags: ['FacePass', 'IA', 'Educação', 'Campus Party']
+      tags: ['MAGICPASS', 'IA', 'Educação', 'Campus Party']
     },
     {
       id: 'rock-in-rio',
@@ -206,7 +206,7 @@ const HistoriasPage = () => {
       <SEOHead
         title="Histórias de Sucesso | Casos Reais de Transformação Digital"
         description="Descubra como empresas líderes como Hospital Sírio-Libanês, VTEX e Campus Party transformaram seus eventos com Smart Events™ e soluções LEGAL. Casos reais com resultados comprovados."
-        keywords="casos de sucesso LEGAL, Smart Events casos, transformação digital eventos, FacePass resultados, AERO conectividade, histórias clientes LEGAL"
+        keywords="casos de sucesso LEGAL, Smart Events casos, transformação digital eventos, MAGICPASS resultados, AERO conectividade, histórias clientes LEGAL"
         url="https://operadora.legal/universo/historias"
         type="website"
         schemaData={schemaData}

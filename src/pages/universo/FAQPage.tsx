@@ -35,7 +35,7 @@ const FAQPage = () => {
       id: 1,
       category: 'ai',
       question: 'O que são as soluções de IA da LEGAL?',
-      answer: 'Nossa unidade de negócios AI oferece soluções de inteligência artificial como LinkAI para networking inteligente, FacePass para reconhecimento facial, FitScore para análise de compatibilidade e muito mais. Todas baseadas em machine learning avançado.'
+      answer: 'Nossa unidade de negócios AI oferece soluções de inteligência artificial como LinkAI para networking inteligente, MAGICPASS para reconhecimento facial, FitScore para análise de compatibilidade e muito mais. Todas baseadas em machine learning avançado.'
     },
     {
       id: 2,
@@ -46,8 +46,8 @@ const FAQPage = () => {
     {
       id: 3,
       category: 'ai',
-      question: 'O FacePass é seguro e está em compliance?',
-      answer: 'Sim! O FacePass utiliza criptografia avançada, é 100% compatível com LGPD, processa dados apenas no Brasil e oferece controle total aos usuários sobre suas informações biométricas. A privacidade é nossa prioridade.'
+      question: 'O MAGICPASS é seguro e está em compliance?',
+      answer: 'Sim! O MAGICPASS utiliza criptografia avançada, é 100% compatível com LGPD, processa dados apenas no Brasil e oferece controle total aos usuários sobre suas informações biométricas. A privacidade é nossa prioridade.'
     },
     {
       id: 4,

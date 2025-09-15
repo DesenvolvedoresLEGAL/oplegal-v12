@@ -156,7 +156,7 @@ const OrganizationSchema: React.FC = () => {
           "@type": "Offer",
           "itemOffered": {
             "@type": "SoftwareApplication",
-            "name": "FacePass™ - Credenciamento Facial",
+            "name": "MAGICPASS™ - Credenciamento Facial",
             "description": "Sistema de credenciamento com reconhecimento facial biométrico que elimina filas, reduz fraudes e melhora 300% a velocidade de entrada em eventos.",
             "category": "Biometria e Segurança",
             "applicationCategory": "SecurityApplication",
@@ -241,7 +241,7 @@ const OrganizationSchema: React.FC = () => {
           "@type": "Organization",
           "name": "Hospital Sírio-Libanês"
         },
-        "reviewBody": "A implementação do Smart Events™ transformou nosso congresso médico anual. Aumento de 40% no engajamento dos participantes e redução de 30% nos custos operacionais. O credenciamento facial FacePass™ eliminou completamente as filas de entrada.",
+        "reviewBody": "A implementação do Smart Events™ transformou nosso congresso médico anual. Aumento de 40% no engajamento dos participantes e redução de 30% nos custos operacionais. O credenciamento facial MAGICPASS™ eliminou completamente as filas de entrada.",
         "datePublished": "2024-03-15"
       },
       {

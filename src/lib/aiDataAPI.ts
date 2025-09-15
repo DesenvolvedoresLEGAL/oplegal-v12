@@ -58,7 +58,7 @@ export const aiDataEndpoints = {
           {
             intent: 'product_inquiry',
             examples: [
-              'Me fale sobre FacePass',
+              'Me fale sobre MAGICPASS',
               'Como funciona o FitScore?',
               'Quais são as funcionalidades do Smart Events?',
               'Preciso de informações sobre seus produtos'
@@ -75,7 +75,7 @@ export const aiDataEndpoints = {
             intent: 'pricing_inquiry',
             examples: [
               'Quanto custa?',
-              'Qual o preço do FacePass?',
+              'Qual o preço do MAGICPASS?',
               'Como é o modelo de cobrança?',
               'Preciso de uma cotação'
             ],

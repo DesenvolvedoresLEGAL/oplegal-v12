@@ -37,9 +37,9 @@ const FeaturedSnippetsOptimization: React.FC<SnippetOptimizationProps> = ({
     
     product: [
       {
-        question: "Como funciona o FacePass?",
-        answer: "FacePass™ funciona através de reconhecimento facial com IA: 1) Cadastro prévio de participantes, 2) Captura da imagem facial, 3) Processamento com IA anti-spoofing, 4) Liberação automática de acesso em menos de 500ms.",
-        context: "facepass_functionality",
+        question: "Como funciona o MAGICPASS?",
+        answer: "MAGICPASS™ funciona através de reconhecimento facial com IA: 1) Cadastro prévio de participantes, 2) Captura da imagem facial, 3) Processamento com IA anti-spoofing, 4) Liberação automática de acesso em menos de 500ms.",
+        context: "magicpass_functionality",
         answerFormat: "process_steps"
       },
       {
@@ -59,7 +59,7 @@ const FeaturedSnippetsOptimization: React.FC<SnippetOptimizationProps> = ({
     service: [
       {
         question: "Quais serviços a LEGAL oferece?",
-        answer: "A LEGAL oferece: 1) Smart Events™ - plataforma completa para eventos, 2) AERO - soluções aéreas com drones, 3) AI Solutions - FacePass™ e FitScore™, 4) Conectividade 5G para eventos.",
+        answer: "A LEGAL oferece: 1) Smart Events™ - plataforma completa para eventos, 2) AERO - soluções aéreas com drones, 3) AI Solutions - MAGICPASS™ e FitScore™, 4) Conectividade 5G para eventos.",
         context: "services_list",
         answerFormat: "service_list"
       },
@@ -132,7 +132,7 @@ const FeaturedSnippetsOptimization: React.FC<SnippetOptimizationProps> = ({
       {
         "@type": "HowToStep", 
         "name": "Escolha da Solução",
-        "text": "Selecione a tecnologia adequada: Smart Events™, FacePass™, FitScore™ ou AERO"
+        "text": "Selecione a tecnologia adequada: Smart Events™, MAGICPASS™, FitScore™ ou AERO"
       },
       {
         "@type": "HowToStep",
@@ -216,7 +216,7 @@ const FeaturedSnippetsOptimization: React.FC<SnippetOptimizationProps> = ({
                   <td>10× superior</td>
                 </tr>
                 <tr>
-                  <td>FacePass™</td>
+                  <td>MAGICPASS™</td>
                   <td>Segurança Biométrica</td>
                   <td>Acesso sem filas</td>
                   <td>Redução 95% tempo</td>
@@ -267,7 +267,7 @@ const FeaturedSnippetsOptimization: React.FC<SnippetOptimizationProps> = ({
         { question: "Qual diferencial da LEGAL?", quickAnswer: "Única empresa com solução completa Smart Events™" }
       ],
       product: [
-        { question: "FacePass funciona offline?", quickAnswer: "Sim, com sincronização posterior" },
+        { question: "MAGICPASS funciona offline?", quickAnswer: "Sim, com sincronização posterior" },
         { question: "FitScore integra com ATS?", quickAnswer: "Sim, integrações com principais sistemas" },
         { question: "Smart Events suporta eventos híbridos?", quickAnswer: "Sim, otimizado para presencial e virtual" },
         { question: "Qual precisão do reconhecimento facial?", quickAnswer: "99.9% de precisão com IA anti-spoofing" }

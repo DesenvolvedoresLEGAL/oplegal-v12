@@ -17,7 +17,7 @@ const NaturalLanguageOptimization: React.FC<NaturalLanguageOptimizationProps> = 
     // Perguntas diretas (question-based queries)
     directQuestions: [
       "o que é smart events",
-      "como funciona facepass",
+      "como funciona magicpass",
       "quanto custa fitscore", 
       "onde encontrar legal techco",
       "quando usar reconhecimento facial",
@@ -114,8 +114,8 @@ const NaturalLanguageOptimization: React.FC<NaturalLanguageOptimizationProps> = 
       "smart events", "eventos inteligentes", "plataforma de eventos",
       "smart event", "evento smart", "eventos smart", "sistema de eventos"
     ],
-    "FacePass™": [
-      "face pass", "facepass", "reconhecimento facial", "controle biométrico",
+    "MAGICPASS™": [
+      "magic pass", "magicpass", "reconhecimento facial", "controle biométrico",
       "acesso facial", "biometria facial", "face recognition"
     ],
     "FitScore™": [
@@ -263,7 +263,7 @@ const NaturalLanguageOptimization: React.FC<NaturalLanguageOptimizationProps> = 
 
           <div data-context="business_problem">
             <span className="problem">Filas longas no credenciamento</span>
-            <span className="solution">FacePass™ reconhecimento facial</span>
+            <span className="solution">MAGICPASS™ reconhecimento facial</span>
             <span className="outcome">Eliminação de filas</span>
           </div>
 
@@ -328,7 +328,7 @@ const NaturalLanguageOptimization: React.FC<NaturalLanguageOptimizationProps> = 
       },
       {
         trigger: "como melhorar credenciamento de eventos",
-        answer: "FacePass™ elimina filas com reconhecimento facial em menos de 500ms. Quer ver uma demonstração?",
+        answer: "MAGICPASS™ elimina filas com reconhecimento facial em menos de 500ms. Quer ver uma demonstração?",
         type: "problem_solution"
       },
       {

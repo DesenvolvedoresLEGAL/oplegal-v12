@@ -95,7 +95,7 @@ const ConversationalAIData: React.FC<ConversationalAIDataProps> = ({
           description: "Plataforma completa para eventos 10× mais inteligentes"
         },
         {
-          name: "FacePass™", 
+          name: "MAGICPASS™", 
           aliases: ["face pass", "reconhecimento facial", "controle de acesso"],
           category: "security",
           description: "Controle de acesso biométrico com IA"
@@ -173,12 +173,12 @@ const ConversationalAIData: React.FC<ConversationalAIDataProps> = ({
       },
       
       {
-        id: "facepass_integration",
-        trigger: "como integrar o facepass",
+        id: "magicpass_integration",
+        trigger: "como integrar o magicpass",
         flow: [
           {
             step: 1,
-            message: "FacePass™ se integra facilmente com sistemas existentes. Que tipo de sistema você já usa?",
+            message: "MAGICPASS™ se integra facilmente com sistemas existentes. Que tipo de sistema você já usa?",
             expectedInputs: ["CRM", "ERP", "sistema próprio", "planilhas"],
             nextStep: "integration_details"
           },

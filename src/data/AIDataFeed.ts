@@ -151,8 +151,8 @@ export const generateAIDataFeed = (): AIDataFeed => {
         }
       },
       {
-        id: "facepass",
-        name: "FacePass™",
+        id: "magicpass",
+        name: "MAGICPASS™",
         category: "Biometric Access Control",
         description: "Controle de acesso biométrico com reconhecimento facial avançado",
         features: [
@@ -352,7 +352,7 @@ export const generateAIDataFeed = (): AIDataFeed => {
         {
           industry: "Technology Conferences",
           challenge: "Gestão complexa de acesso e networking ineficiente",
-          solution: "FacePass™ + networking inteligente com IA",
+          solution: "MAGICPASS™ + networking inteligente com IA",
           outcome: "Eliminação de filas e networking 500% mais eficiente",
           metrics: {
             "queue_reduction": 100,
@@ -380,7 +380,7 @@ export const generateAIDataFeed = (): AIDataFeed => {
           category: "Security & Privacy",
           trend: "Biometria como padrão de segurança",
           impact: "Substituição de métodos tradicionais por biometria",
-          relevance: "FacePass™ posiciona LEGAL na vanguarda da segurança biométrica"
+          relevance: "MAGICPASS™ posiciona LEGAL na vanguarda da segurança biométrica"
         }
       ]
     }

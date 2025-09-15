@@ -24,8 +24,8 @@ const FAQSection = () => {
       answer: "Nossos clientes reportam aumento médio de 22% na receita por m², redução de 30% nos custos operacionais, aumento de 35% em leads qualificados para expositores e CSAT acima de 95% para participantes. O ROI típico é percebido já no primeiro evento implementado."
     },
     {
-      question: "O FacePass™ funciona com todos os tipos de eventos?",
-      answer: "Sim, o FacePass™ é adaptável para eventos corporativos, congressos médicos, feiras, festivais e convenções. Suporta desde 100 até 50.000+ participantes, com reconhecimento facial em menos de 1 segundo e precisão de 99.7%. É totalmente LGPD compliant."
+      question: "O MAGICPASS™ funciona com todos os tipos de eventos?",
+      answer: "Sim, o MAGICPASS™ é adaptável para eventos corporativos, congressos médicos, feiras, festivais e convenções. Suporta desde 100 até 50.000+ participantes, com reconhecimento facial em menos de 1 segundo e precisão de 99.7%. É totalmente LGPD compliant."
     },
     {
       question: "Como funciona a conectividade AERO em eventos grandes?",

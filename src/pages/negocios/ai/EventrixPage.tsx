@@ -251,7 +251,7 @@ const EventrixPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <article className="bg-white rounded-xl p-6 shadow-lg">
                 <Brain className="w-12 h-12 text-legal mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-legal mb-3">FacePass Integrado</h3>
+                <h3 className="text-xl font-bold text-legal mb-3">MAGICPASS Integrado</h3>
                 <p className="text-gray-600">Credenciamento facial automatizado para entrada rápida e segura nos eventos.</p>
               </article>
               <article className="bg-white rounded-xl p-6 shadow-lg">

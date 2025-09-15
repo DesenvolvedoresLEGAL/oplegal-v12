@@ -8,8 +8,8 @@ const SmartEventsFAQ: React.FC = () => {
       answer: "Smart Events™ são eventos com infraestrutura tecnológica 100% integrada, combinando Inteligência Artificial, conectividade 5G, drones, IoT e análise de dados em tempo real. Eles transformam eventos tradicionais em experiências 10x mais conectadas, imersivas e lucrativas."
     },
     {
-      question: "Como funciona o credenciamento facial FacePass™?",
-      answer: "O FacePass™ utiliza tecnologia de reconhecimento facial biométrico para eliminar filas de entrada. Os participantes se cadastram previamente, e na chegada ao evento, basta olhar para a câmera para ter acesso liberado instantaneamente. O sistema reduz fraudes em 99% e acelera o processo de entrada em até 300%."
+      question: "Como funciona o credenciamento facial MAGICPASS™?",
+      answer: "O MAGICPASS™ utiliza tecnologia de reconhecimento facial biométrico para eliminar filas de entrada. Os participantes se cadastram previamente, e na chegada ao evento, basta olhar para a câmera para ter acesso liberado instantaneamente. O sistema reduz fraudes em 99% e acelera o processo de entrada em até 300%."
     },
     {
       question: "Qual é o ROI dos Smart Events™?",
@@ -25,7 +25,7 @@ const SmartEventsFAQ: React.FC = () => {
     },
     {
       question: "Os Smart Events™ são seguros em termos de dados?",
-      answer: "Absolutamente. Todos os nossos sistemas são certificados ISO 27001 e seguem rigorosamente a LGPD. Os dados biométricos do FacePass™ são criptografados e armazenados com as mais altas medidas de segurança. Temos conformidade total com regulamentações brasileiras e internacionais."
+      answer: "Absolutamente. Todos os nossos sistemas são certificados ISO 27001 e seguem rigorosamente a LGPD. Os dados biométricos do MAGICPASS™ são criptografados e armazenados com as mais altas medidas de segurança. Temos conformidade total com regulamentações brasileiras e internacionais."
     },
     {
       question: "Qual o tempo de implementação de um Smart Event™?",

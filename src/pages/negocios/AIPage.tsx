@@ -12,13 +12,13 @@ import { Brain, Users, BarChart3, Eye, Zap, MessageSquare, Target, Gamepad2 } fr
 
 const aiProducts = [
   {
-    id: 'facepass',
-    name: 'FacePass',
+    id: 'magicpass',
+    name: 'MAGICPASS',
     description: 'Credenciamento facial de alta precisão para eventos e controle de acesso.',
     icon: <Eye className="w-6 h-6" />,
     features: ['Reconhecimento facial avançado', 'Check-in automatizado', 'Relatórios de acesso em tempo real'],
     benefits: ['Redução de 90% no tempo de credenciamento', 'Eliminação de filas', 'Segurança aprimorada'],
-    ctaLink: '/contato?produto=facepass'
+    ctaLink: '/contato?produto=magicpass'
   },
   {
     id: 'linkai',
@@ -141,8 +141,8 @@ const AIPage = () => {
     <>
       <SEOHead
         title="LEGAL AI | Inteligência Artificial para Eventos e Negócios"
-        description="Descubra o ecossistema completo LEGAL AI com 7 produtos de IA: FacePass, LinkAI, FitScore, Eventrix, Humanoid, Ping e NeuraFit. Transforme eventos e negócios com inteligência artificial."
-        keywords="LEGAL AI, inteligência artificial eventos, FacePass credenciamento facial, LinkAI networking, FitScore RH, Eventrix gestão eventos, Humanoid captação leads, Ping chatbot, NeuraFit gamificação"
+        description="Descubra o ecossistema completo LEGAL AI com 7 produtos de IA: MAGICPASS, LinkAI, FitScore, Eventrix, Humanoid, Ping e NeuraFit. Transforme eventos e negócios com inteligência artificial."
+        keywords="LEGAL AI, inteligência artificial eventos, MAGICPASS credenciamento facial, LinkAI networking, FitScore RH, Eventrix gestão eventos, Humanoid captação leads, Ping chatbot, NeuraFit gamificação"
         url="https://operadora.legal/negocios/ai"
         type="service"
         schemaData={aiPageSchema}

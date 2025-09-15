@@ -13,7 +13,7 @@ const RoadmapSection = () => {
       tasks: [
         "Instalação da infraestrutura FWA 5G",
         "Configuração do WiFi de alta densidade",
-        "Implementação do FacePass para credenciamento",
+        "Implementação do MAGICPASS para credenciamento",
         "Treinamento da equipe operacional",
         "Setup dos dashboards básicos"
       ]

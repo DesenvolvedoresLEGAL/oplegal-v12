@@ -516,7 +516,7 @@ const PrecosPage = () => {
                 <div className="group p-6 bg-gray-800/50 hover:bg-gray-800/70 rounded-xl border border-gray-600 hover:border-gray-500 transition-all duration-300">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">FacePass</h3>
+                      <h3 className="text-xl font-semibold text-white mb-2">MAGICPASS</h3>
                       <p className="text-gray-300 text-sm mb-1">Reconhecimento Facial</p>
                     </div>
                     <div className="text-right ml-4">

@@ -19,9 +19,9 @@ const businessUnits = [{
   id: 'ai',
   name: 'LEGAL AI',
   tagline: 'Inteligência que Conecta',
-  description: 'Plataforma de IA integrada ao SmartEvents com HubX, LinkAI, FacePass e FitScore™. Transforme dados em insights estratégicos.',
+  description: 'Plataforma de IA integrada ao SmartEvents com HubX, LinkAI, MAGICPASS e FitScore™. Transforme dados em insights estratégicos.',
   icon: <Cpu className="w-8 h-8" />,
-  features: ['HubX Analytics', 'LinkAI Networking', 'FacePass Biométrico', 'FitScore™ RH'],
+  features: ['HubX Analytics', 'LinkAI Networking', 'MAGICPASS Biométrico', 'FitScore™ RH'],
   link: '/negocios/ai',
   color: 'from-purple-500 to-pink-600'
 }, {

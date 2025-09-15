@@ -346,7 +346,7 @@ const LinkAIPage = () => {
               </article>
               <article className="bg-white rounded-xl p-6 shadow-lg">
                 <Shield className="w-12 h-12 text-legal-purple mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-legal-purple mb-3">FacePass + LinkAI</h3>
+                <h3 className="text-xl font-bold text-legal-purple mb-3">MAGICPASS + LinkAI</h3>
                 <p className="text-gray-600">Identificação facial combinada com sugestões automáticas de networking baseadas na localização.</p>
               </article>
               <article className="bg-white rounded-xl p-6 shadow-lg">

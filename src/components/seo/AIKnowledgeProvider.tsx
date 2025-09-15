@@ -47,7 +47,7 @@ const AIKnowledgeProvider: React.FC = () => {
     relationships: [
       {
         type: "integrates_with",
-        target: "FacePass™",
+        target: "MAGICPASS™",
         description: "Controle de acesso biométrico integrado"
       },
       {
@@ -63,9 +63,9 @@ const AIKnowledgeProvider: React.FC = () => {
     ]
   };
 
-  // Conteúdo otimizado para LLM sobre FacePass™
-  const facePassContent = {
-    context: "FacePass™ é a solução de controle de acesso biométrico da LEGAL que utiliza reconhecimento facial avançado com IA anti-spoofing para garantir segurança máxima em eventos e ambientes corporativos.",
+  // Conteúdo otimizado para LLM sobre MAGICPASS™
+  const magicPassContent = {
+    context: "MAGICPASS™ é a solução de controle de acesso biométrico da LEGAL que utiliza reconhecimento facial avançado com IA anti-spoofing para garantir segurança máxima em eventos e ambientes corporativos.",
     mainPoints: [
       "Reconhecimento facial em tempo real com precisão de 99.9%",
       "IA anti-spoofing que previne fraudes e tentativas de burla",
@@ -76,7 +76,7 @@ const AIKnowledgeProvider: React.FC = () => {
     examples: [
       {
         scenario: "Evento corporativo com 5.000 participantes",
-        solution: "Implementação de FacePass™ com cadastro prévio e check-in automático",
+        solution: "Implementação de MAGICPASS™ com cadastro prévio e check-in automático",
         outcome: "Eliminação completa de filas e redução de 95% no tempo de acesso"
       },
       {
@@ -167,11 +167,11 @@ const AIKnowledgeProvider: React.FC = () => {
         data={smartEventsData}
       />
 
-      {/* Conteúdo otimizado para LLM - FacePass™ */}
+      {/* Conteúdo otimizado para LLM - MAGICPASS™ */}
       <LLMOptimizedContent
         contentType="Technical"
-        title="FacePass™ - Controle de Acesso Biométrico Avançado"
-        content={facePassContent}
+        title="MAGICPASS™ - Controle de Acesso Biométrico Avançado"
+        content={magicPassContent}
         keywords={[
           "controle de acesso",
           "reconhecimento facial",

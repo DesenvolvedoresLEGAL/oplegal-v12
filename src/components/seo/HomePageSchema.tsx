@@ -5,7 +5,7 @@ const createHomePageSchema = () => ({
   "name": "LEGAL - Smart Events™",
   "url": "https://operadora.legal",
   "description": "A maior TECHCO do Brasil criadora do Smart Events™. Transforme eventos com IA, credenciamento facial, conectividade 5G e ROI comprovado.",
-  "keywords": "Smart Events, eventos inteligentes, credenciamento facial, FacePass, conectividade 5G, IA eventos, ROI eventos, AERO drones, networking inteligente",
+  "keywords": "Smart Events, eventos inteligentes, credenciamento facial, MAGICPASS, conectividade 5G, IA eventos, ROI eventos, AERO drones, networking inteligente",
   
   "potentialAction": {
     "@type": "SearchAction",
@@ -75,7 +75,7 @@ const createHomePageSchema = () => ({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service", 
-            "name": "FacePass™ - Credenciamento Facial",
+            "name": "MAGICPASS™ - Credenciamento Facial",
             "description": "Sistema de credenciamento com reconhecimento facial que elimina filas e melhora a experiência do participante",
             "category": "Biometria e Segurança"
           }
