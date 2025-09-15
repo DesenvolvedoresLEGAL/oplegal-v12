@@ -13,11 +13,11 @@ import { Brain, Users, BarChart3, Eye, Zap, MessageSquare, Target, Gamepad2, Clo
 const aiProducts = [
   {
     id: 'galaxia',
-    name: 'GALAXIA',
-    description: 'Infraestrutura de IA personalizada para empresas com soluções escaláveis.',
+    name: 'GalaxIA™',
+    description: 'Infraestrutura de IA sob medida para empresas.',
     icon: <Cloud className="w-6 h-6" />,
-    features: ['Infraestrutura cloud dedicada', 'APIs personalizadas', 'Modelos de IA sob demanda'],
-    benefits: ['Redução de 50% nos custos de infraestrutura', 'Escalabilidade automática', 'Integração empresarial completa'],
+    features: ['Agentes conversacionais e operacionais', 'Automações de processos', 'Copilotos internos de IA', 'Modelos de machine learning sob demanda'],
+    benefits: ['Redução de custos operacionais em até 50%', 'Aumento de eficiência e produtividade', 'Times mais enxutos e estratégicos', 'Adoção rápida de novas tecnologias'],
     ctaLink: '/contato?produto=galaxia'
   },
   {
