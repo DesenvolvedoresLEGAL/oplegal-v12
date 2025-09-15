@@ -59,6 +59,7 @@ const Speedy5GPage = lazy(() => import("./pages/produtos/Speedy5GPage"));
 const PlaudPage = lazy(() => import("./pages/produtos/PlaudPage"));
 const NeuraFitPage = lazy(() => import("./pages/produtos/NeuraFitPage"));
 const TagPulsePage = lazy(() => import("./pages/produtos/TagPulsePage"));
+const GalaxiaPage = lazy(() => import("./pages/produtos/GalaxiaPage"));
 const SearchPage = lazy(() => import("./pages/SearchPage"));
 const SorteioPage = lazy(() => import("./pages/SorteioPage"));
 
@@ -97,6 +98,7 @@ const App = () => {
                 
                 {/* Produtos section */}
                 <Route path="/produtos/blue6" element={<Blue6Page />} />
+                <Route path="/produtos/galaxia" element={<GalaxiaPage />} />
                 <Route path="/produtos/brilix" element={<BrilixPage />} />
                 <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
                 <Route path="/produtos/magicpass" element={<MagicPassProdutoPage />} />
