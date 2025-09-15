@@ -146,7 +146,7 @@ const Navbar = () => {
                           <Link to="/contato?produto=galaxia" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Cloud className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">GALAXIA</div>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">GalaxIA</div>
                               <p className="text-xs text-muted-foreground">Infraestrutura de IA Personalizada</p>
                             </div>
                           </Link>
