@@ -66,38 +66,6 @@ const MagicPassPage = () => {
     }
   ];
 
-  const conversationalFlows = [
-    {
-      intent: "magicpass_implementation",
-      patterns: ["como implementar magicpass", "instalar reconhecimento facial", "setup magicpass"],
-      responses: ["MAGICPASS™ é implementado em 4 etapas: cadastro, instalação, calibração e ativação com monitoramento em tempo real"],
-      context: "implementation_guide"
-    },
-    {
-      intent: "security_privacy",
-      patterns: ["magicpass segurança", "dados pessoais protegidos", "lgpd reconhecimento facial"],
-      responses: ["MAGICPASS™ garante máxima segurança com criptografia avançada e total conformidade com LGPD"],
-      context: "security_compliance"
-    }
-  ];
-
-  const knowledgeBase = [
-    {
-      topic: "Facial Recognition Technology",
-      concepts: ["Biometric Authentication", "Real-time Processing", "AI Algorithms", "Privacy Protection"],
-      relationships: ["Technology enables Security", "AI drives Accuracy", "Privacy ensures Trust"]
-    }
-  ];
-
-  const naturalLanguagePatterns = [
-    {
-      question: "O que é MAGICPASS?",
-      answer: "MAGICPASS™ é um sistema avançado de reconhecimento facial para controle de acesso em eventos, com 99,8% de precisão",
-      keywords: ["magicpass", "reconhecimento facial", "controle acesso", "eventos"],
-      intent: "product_definition"
-    }
-  ];
-
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -156,64 +124,20 @@ const MagicPassPage = () => {
 
       {/* Phase 2 SEO Components */}
       <AIKnowledgeProvider />
-      <VoiceSearchOptimization 
-        targetKeywords={["magicpass", "reconhecimento facial eventos", "controle acesso inteligente"]}
-        conversationalQueries={["como funciona reconhecimento facial", "sistema acesso eventos seguro"]}
-        pageContext="magicpass_product"
-      />
-      <ConversationalAIData 
-        productName="MAGICPASS™"
-        flows={conversationalFlows}
-        knowledgeBase={knowledgeBase}
-        naturalLanguagePatterns={naturalLanguagePatterns}
-      />
-      <NaturalLanguageOptimization 
-        primaryEntities={["MAGICPASS", "Reconhecimento Facial", "LEGAL TechCo"]}
-        semanticKeywords={["controle acesso", "segurança eventos", "inteligência artificial"]}
-        contextualRelationships={["MAGICPASS utiliza IA", "Reconhecimento Facial garante Segurança", "LEGAL desenvolve MAGICPASS"]}
-      />
-      <FeaturedSnippetsOptimization 
-        targetSnippets={[
-          { type: "definition", content: "MAGICPASS™ é um sistema de reconhecimento facial para eventos com 99,8% de precisão e total conformidade LGPD" },
-          { type: "howto", content: "Para implementar MAGICPASS™: 1) Cadastrar participantes, 2) Instalar câmeras, 3) Calibrar sistema, 4) Ativar monitoramento" }
-        ]}
-      />
-      <GEOAdvancedOptimization 
-        contentDomain="facial_recognition"
-        entityType="product"
-        optimizationLevel="advanced"
-      />
-      <TechnicalDocumentationAI 
-        documentationType="product_guide"
-        technicalLevel="intermediate"
-        targetAudience="event_organizers"
-      />
-      <MetricsAndBenchmarksAI 
-        industryBenchmarks={["99.8% accuracy", "2 second access time", "LGPD compliant"]}
-        performanceMetrics={["real-time recognition", "biometric security", "seamless integration"]}
-      />
-      <RealUserMonitoring 
-        trackingLevel="advanced"
-        performanceTargets={{ lcp: 2.5, fid: 100, cls: 0.1 }}
-      />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
       <CoreWebVitalsMonitor 
-        onMetricUpdate={(metric) => console.log('MagicPass metric:', metric)}
+        onMetricsUpdate={(metric) => console.log('MagicPass metric:', metric)}
         enableReporting={true}
       />
-      <AIFeedbackSystem 
-        feedbackTypes={["product_interest", "implementation_questions", "security_concerns"]}
-        optimizationTargets={["lead_generation", "technical_clarity", "trust_building"]}
-      />
+      <AIFeedbackSystem />
       <AdvancedFeaturedSnippets 
         pageType="product"
         focusKeyword="magicpass reconhecimento facial"
         location="brasil"
       />
-      <SEOCrawlerOptimization 
-        optimizationLevel="advanced"
-        contentType="product_page"
-        targetBots={["googlebot", "bingbot", "gpt-bot"]}
-      />
+      <SEOCrawlerOptimization />
       
       <ProductFAQSchema
         productName="MagicPass - Credenciamento Facial com IA"

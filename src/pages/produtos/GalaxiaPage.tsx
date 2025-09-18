@@ -176,64 +176,20 @@ const GalaxiaPage = () => {
 
       {/* Phase 2 SEO Components */}
       <AIKnowledgeProvider />
-      <VoiceSearchOptimization 
-        targetKeywords={["galaxia plataforma", "gestão eventos ia", "automação inteligente eventos"]}
-        conversationalQueries={["como galaxia ajuda eventos", "plataforma inteligente gestão"]}
-        pageContext="galaxia_product"
-      />
-      <ConversationalAIData 
-        productName="GALAXIA™"
-        flows={conversationalFlows}
-        knowledgeBase={knowledgeBase}
-        naturalLanguagePatterns={naturalLanguagePatterns}
-      />
-      <NaturalLanguageOptimization 
-        primaryEntities={["GALAXIA", "Inteligência Artificial", "Gestão de Eventos", "LEGAL TechCo"]}
-        semanticKeywords={["automação eventos", "plataforma inteligente", "otimização recursos"]}
-        contextualRelationships={["GALAXIA utiliza IA", "IA otimiza Eventos", "LEGAL desenvolve GALAXIA"]}
-      />
-      <FeaturedSnippetsOptimization 
-        targetSnippets={[
-          { type: "definition", content: "GALAXIA™ é uma plataforma de gestão de eventos com IA que automatiza processos e aumenta ROI em até 400%" },
-          { type: "howto", content: "Para implementar GALAXIA™: 1) Análise de necessidades, 2) Configuração da plataforma, 3) Migração de dados, 4) Treinamento da equipe" }
-        ]}
-      />
-      <GEOAdvancedOptimization 
-        contentDomain="event_management_ai"
-        entityType="software"
-        optimizationLevel="advanced"
-      />
-      <TechnicalDocumentationAI 
-        documentationType="platform_guide"
-        technicalLevel="intermediate"
-        targetAudience="event_managers"
-      />
-      <MetricsAndBenchmarksAI 
-        industryBenchmarks={["400% ROI increase", "70% process automation", "95% user satisfaction"]}
-        performanceMetrics={["predictive analytics", "real-time optimization", "seamless integration"]}
-      />
-      <RealUserMonitoring 
-        trackingLevel="advanced"
-        performanceTargets={{ lcp: 2.5, fid: 100, cls: 0.1 }}
-      />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
       <CoreWebVitalsMonitor 
-        onMetricUpdate={(metric) => console.log('Galaxia metric:', metric)}
+        onMetricsUpdate={(metric) => console.log('Galaxia metric:', metric)}
         enableReporting={true}
       />
-      <AIFeedbackSystem 
-        feedbackTypes={["platform_interest", "feature_requests", "integration_needs"]}
-        optimizationTargets={["demo_requests", "technical_education", "business_value"]}
-      />
+      <AIFeedbackSystem />
       <AdvancedFeaturedSnippets 
         pageType="product"
         focusKeyword="galaxia plataforma eventos ia"
         location="brasil"
       />
-      <SEOCrawlerOptimization 
-        optimizationLevel="advanced"
-        contentType="product_page"
-        targetBots={["googlebot", "bingbot", "gpt-bot"]}
-      />
+      <SEOCrawlerOptimization />
       
       <ProductFAQSchema
         productName="GalaxIA™ - Inteligência Artificial sob medida"

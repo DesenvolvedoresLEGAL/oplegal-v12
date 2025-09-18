@@ -157,64 +157,20 @@ const FitScorePage = () => {
 
       {/* Phase 2 SEO Components */}
       <AIKnowledgeProvider />
-      <VoiceSearchOptimization 
-        targetKeywords={["fitscore matchmaking", "networking inteligente eventos", "ia personalização"]}
-        conversationalQueries={["como conectar pessoas eventos", "matchmaking automatico networking"]}
-        pageContext="fitscore_product"
-      />
-      <ConversationalAIData 
-        productName="FitScore™"
-        flows={conversationalFlows}
-        knowledgeBase={knowledgeBase}
-        naturalLanguagePatterns={naturalLanguagePatterns}
-      />
-      <NaturalLanguageOptimization 
-        primaryEntities={["FitScore", "Matchmaking", "Networking Inteligente", "LEGAL TechCo"]}
-        semanticKeywords={["conexões eventos", "personalização ia", "algoritmos compatibilidade"]}
-        contextualRelationships={["FitScore usa IA", "IA conecta Pessoas", "LEGAL desenvolve FitScore"]}
-      />
-      <FeaturedSnippetsOptimization 
-        targetSnippets={[
-          { type: "definition", content: "FitScore™ é uma tecnologia de IA que analisa perfis e conecta participantes com alta compatibilidade em eventos" },
-          { type: "howto", content: "Para usar FitScore™: 1) Cadastrar participantes, 2) Configurar algoritmos, 3) Ativar matching, 4) Facilitar conexões" }
-        ]}
-      />
-      <GEOAdvancedOptimization 
-        contentDomain="ai_matchmaking"
-        entityType="software"
-        optimizationLevel="advanced"
-      />
-      <TechnicalDocumentationAI 
-        documentationType="ai_technology_guide"
-        technicalLevel="intermediate"
-        targetAudience="event_organizers"
-      />
-      <MetricsAndBenchmarksAI 
-        industryBenchmarks={["85% engagement increase", "92% matching accuracy", "67% networking improvement"]}
-        performanceMetrics={["real-time matching", "behavioral analysis", "connection optimization"]}
-      />
-      <RealUserMonitoring 
-        trackingLevel="advanced"
-        performanceTargets={{ lcp: 2.5, fid: 100, cls: 0.1 }}
-      />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
       <CoreWebVitalsMonitor 
-        onMetricUpdate={(metric) => console.log('FitScore metric:', metric)}
+        onMetricsUpdate={(metric) => console.log('FitScore metric:', metric)}
         enableReporting={true}
       />
-      <AIFeedbackSystem 
-        feedbackTypes={["matching_quality", "user_satisfaction", "connection_success"]}
-        optimizationTargets={["matching_accuracy", "user_engagement", "networking_value"]}
-      />
+      <AIFeedbackSystem />
       <AdvancedFeaturedSnippets 
         pageType="product"
         focusKeyword="fitscore matchmaking eventos"
         location="brasil"
       />
-      <SEOCrawlerOptimization 
-        optimizationLevel="advanced"
-        contentType="product_page"
-        targetBots={["googlebot", "bingbot", "gpt-bot"]}
-      />
+      <SEOCrawlerOptimization />
       
       <ProductFAQSchema
         productName="FitScore - Copiloto de Contratação com IA"

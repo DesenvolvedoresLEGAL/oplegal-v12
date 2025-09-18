@@ -94,64 +94,20 @@ const SmartEventsPage = () => {
 
       {/* Phase 2 SEO Components */}
       <AIKnowledgeProvider />
-      <VoiceSearchOptimization 
-        targetKeywords={["smart events", "eventos inteligentes", "iot eventos", "transformação digital eventos"]}
-        conversationalQueries={["como implementar smart events", "o que são eventos inteligentes"]}
-        pageContext="smart_events_main"
-      />
-      <ConversationalAIData 
-        productName="Smart Events™"
-        flows={conversationalFlows}
-        knowledgeBase={knowledgeBase}
-        naturalLanguagePatterns={naturalLanguagePatterns}
-      />
-      <NaturalLanguageOptimization 
-        primaryEntities={["Smart Events", "LEGAL TechCo", "IoT", "IA"]}
-        semanticKeywords={["eventos inteligentes", "transformação digital", "experiência personalizada"]}
-        contextualRelationships={["Smart Events utiliza IA", "IoT monitora participantes", "Analytics otimiza experiência"]}
-      />
-      <FeaturedSnippetsOptimization 
-        targetSnippets={[
-          { type: "definition", content: "Smart Events™ são eventos que integram IoT, IA e analytics para criar experiências personalizadas e sustentáveis" },
-          { type: "howto", content: "Para implementar Smart Events™: 1) Definir objetivos, 2) Instalar IoT, 3) Integrar analytics, 4) Otimizar continuamente" }
-        ]}
-      />
-      <GEOAdvancedOptimization 
-        contentDomain="smart_events"
-        entityType="service"
-        optimizationLevel="advanced"
-      />
-      <TechnicalDocumentationAI 
-        documentationType="implementation_guide"
-        technicalLevel="advanced"
-        targetAudience="event_professionals"
-      />
-      <MetricsAndBenchmarksAI 
-        industryBenchmarks={["300% ROI increase", "40% sustainability improvement", "85% participant satisfaction"]}
-        performanceMetrics={["real-time analytics", "predictive insights", "automated optimization"]}
-      />
-      <RealUserMonitoring 
-        trackingLevel="advanced"
-        performanceTargets={{ lcp: 2.5, fid: 100, cls: 0.1 }}
-      />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
       <CoreWebVitalsMonitor 
-        onMetricUpdate={(metric) => console.log('Smart Events metric:', metric)}
+        onMetricsUpdate={(metric) => console.log('Smart Events metric:', metric)}
         enableReporting={true}
       />
-      <AIFeedbackSystem 
-        feedbackTypes={["user_experience", "content_relevance", "technical_performance"]}
-        optimizationTargets={["search_visibility", "user_engagement", "conversion_rate"]}
-      />
+      <AIFeedbackSystem />
       <AdvancedFeaturedSnippets 
-        pageType="service"
+        pageType="product"
         focusKeyword="smart events"
         location="brasil"
       />
-      <SEOCrawlerOptimization 
-        optimizationLevel="advanced"
-        contentType="service_page"
-        targetBots={["googlebot", "bingbot", "gpt-bot"]}
-      />
+      <SEOCrawlerOptimization />
 
       <HowToSchema
         name="Como Transformar Seu Evento em Smart Events™"
