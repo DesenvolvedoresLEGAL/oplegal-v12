@@ -1,4 +1,5 @@
 
+// SEO Phase 2 - Universal Implementation Complete
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -23,6 +24,14 @@ import {
   Shield,
   Lightbulb
 } from 'lucide-react';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const LinkAIPage = () => {
   const features = [
@@ -164,6 +173,20 @@ const LinkAIPage = () => {
         <meta property="og:url" content="https://legal.com.br/negocios/ai/linkai" />
         <link rel="canonical" href="https://legal.com.br/negocios/ai/linkai" />
       </Helmet>
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization
+        businessName="LEGAL TechCo"
+        primaryKeywords={["LinkAI matchmaking inteligente", "networking IA eventos", "conexões empresariais artificial"]}
+        location="Brasil"
+        services={["LinkAI", "Matchmaking Inteligente", "Networking IA"]}
+      />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor />
+      <AIFeedbackSystem />
+      <AdvancedFeaturedSnippets pageType="product" />
+      <SEOCrawlerOptimization />
 
       <div className="bg-background text-foreground font-unica">
         {/* Hero Section */}

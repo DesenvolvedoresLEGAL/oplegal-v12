@@ -1,4 +1,5 @@
 
+// SEO Phase 2 - Universal Implementation Complete
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -20,6 +21,14 @@ import {
   Smartphone,
   Globe
 } from 'lucide-react';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const EventrixPage = () => {
   const features = [
@@ -120,6 +129,20 @@ const EventrixPage = () => {
         <meta property="og:url" content="https://legal.com.br/negocios/ai/eventrix" />
         <link rel="canonical" href="https://legal.com.br/negocios/ai/eventrix" />
       </Helmet>
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization
+        businessName="LEGAL TechCo"
+        primaryKeywords={["EVENTRIX gestão eventos IA", "plataforma eventos inteligente", "gestão eventos artificial"]}
+        location="Brasil"
+        services={["EVENTRIX", "Gestão Eventos", "Plataforma Eventos IA"]}
+      />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor />
+      <AIFeedbackSystem />
+      <AdvancedFeaturedSnippets pageType="product" />
+      <SEOCrawlerOptimization />
 
       <div className="bg-background text-foreground font-unica">
         {/* Hero Section */}

@@ -1,4 +1,5 @@
 
+// SEO Phase 2 - Universal Implementation Complete
 import React from 'react';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -9,6 +10,14 @@ import AdvancedModulesSection from '@/components/ai/AdvancedModulesSection';
 import IntegrationSection from '@/components/ai/IntegrationSection';
 import CallToAction from '@/components/CallToAction';
 import { Brain, Users, BarChart3, Eye, Zap, MessageSquare, Target, Gamepad2, Cloud } from 'lucide-react';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const aiProducts = [
   {
@@ -156,6 +165,20 @@ const AIPage = () => {
         type="service"
         schemaData={aiPageSchema}
       />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization
+        businessName="LEGAL TechCo"
+        primaryKeywords={["inteligência artificial eventos", "LEGAL AI produtos", "IA para negócios", "ecossistema AI Brasil"]}
+        location="Brasil"
+        services={["GALAXIA", "MAGICPASS", "LinkAI", "FitScore", "Eventrix", "Humanoid", "Ping", "NeuraFit"]}
+      />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor />
+      <AIFeedbackSystem />
+      <AdvancedFeaturedSnippets pageType="product" />
+      <SEOCrawlerOptimization />
 
       <div className="bg-background text-foreground font-unica">
         <Breadcrumbs />

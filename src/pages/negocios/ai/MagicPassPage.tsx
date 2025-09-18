@@ -1,4 +1,5 @@
 
+// SEO Phase 2 - Universal Implementation Complete
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ProductSchema from '@/components/seo/ProductSchema';
@@ -10,6 +11,14 @@ import MagicPassBenefits from '@/components/facepass/MagicPassBenefits';
 import MagicPassProcess from '@/components/facepass/MagicPassProcess';
 import MagicPassUseCases from '@/components/facepass/MagicPassUseCases';
 import MagicPassIntegration from '@/components/facepass/MagicPassIntegration';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const MagicPassPage = () => {
   return (
@@ -24,6 +33,20 @@ const MagicPassPage = () => {
         <meta property="og:url" content="https://legal.com.br/negocios/ai/magicpass" />
         <link rel="canonical" href="https://legal.com.br/negocios/ai/magicpass" />
       </Helmet>
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization
+        businessName="LEGAL TechCo"
+        primaryKeywords={["MagicPass credenciamento facial", "reconhecimento facial eventos", "biometria credenciamento IA"]}
+        location="Brasil"
+        services={["MagicPass", "Credenciamento Facial", "Biometria Eventos"]}
+      />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor />
+      <AIFeedbackSystem />
+      <AdvancedFeaturedSnippets pageType="product" />
+      <SEOCrawlerOptimization />
 
       <div className="bg-background text-foreground font-unica">
         <MagicPassHero />

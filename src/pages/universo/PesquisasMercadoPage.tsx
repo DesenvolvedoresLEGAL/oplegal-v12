@@ -1,3 +1,4 @@
+// SEO Phase 2 - Universal Implementation Complete
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Users, Target, ExternalLink, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,6 +8,14 @@ import { Link } from 'react-router-dom';
 import SEOHead from '@/components/SEOHead';
 import WebPageSchema from '@/components/seo/WebPageSchema';
 import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 interface Pesquisa {
   id: string;
@@ -101,6 +110,20 @@ const PesquisasMercadoPage: React.FC = () => {
         ]}
       />
       <BreadcrumbsSchema />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization
+        businessName="LEGAL TechCo"
+        primaryKeywords={["pesquisas de mercado IA", "mapeamento inteligência artificial Brasil", "participar pesquisa eventos"]}
+        location="Brasil"
+        services={["Pesquisas de Mercado", "Mapeamento IA", "Análise Tendências"]}
+      />
+      <GEOAdvancedOptimization />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor />
+      <AIFeedbackSystem />
+      <AdvancedFeaturedSnippets pageType="about" />
+      <SEOCrawlerOptimization />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Breadcrumb */}
