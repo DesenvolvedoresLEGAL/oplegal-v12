@@ -5,7 +5,7 @@ import WebPageSchema from '@/components/seo/WebPageSchema';
 import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 import CollectionPageSchema from '@/components/seo/CollectionPageSchema';
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, Users, Zap, Newspaper, Activity, HelpCircle, ExternalLink, TrendingUp } from 'lucide-react';
+import { Search, BookOpen, Users, Zap, Newspaper, Activity, HelpCircle, ExternalLink, TrendingUp, TestTube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -79,6 +79,15 @@ const UniversoPage = () => {
       icon: <HelpCircle className="w-8 h-8 text-legal" />,
       link: '/universo/faq',
       color: 'from-legal-green to-legal'
+    },
+    {
+      title: 'Labs 🧪',
+      description: 'Ferramentas experimentais e analytics avançados para equipe interna (ACESSO RESTRITO)',
+      icon: <TestTube className="w-8 h-8 text-legal" />,
+      link: '/universo/labs',
+      color: 'from-legal to-legal-purple',
+      restricted: true,
+      beta: true
     }
   ];
 
@@ -182,7 +191,7 @@ const UniversoPage = () => {
                   key={section.title}
                   className={`group hover:shadow-xl transition-all duration-300 border-0 overflow-hidden ${
                     section.featured ? 'md:col-span-2 lg:col-span-1' : ''
-                  }`}
+                  } ${section.restricted ? 'ring-2 ring-legal-purple ring-opacity-30' : ''}`}
                 >
                   <div className={`h-2 bg-gradient-to-r ${section.color}`} />
                   <CardHeader className="pb-4">
@@ -191,6 +200,16 @@ const UniversoPage = () => {
                       {section.featured && (
                         <span className="bg-legal-green text-white text-xs px-2 py-1 rounded-full">
                           Destaque
+                        </span>
+                      )}
+                      {section.restricted && (
+                        <span className="bg-legal-purple text-white text-xs px-2 py-1 rounded-full">
+                          Restrito
+                        </span>
+                      )}
+                      {section.beta && (
+                        <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full ml-1">
+                          Beta
                         </span>
                       )}
                     </div>
