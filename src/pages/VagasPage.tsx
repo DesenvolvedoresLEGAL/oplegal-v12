@@ -19,6 +19,10 @@ import {
   Briefcase,
   Send
 } from 'lucide-react';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import JobPostingSchema from '@/components/seo/JobPostingSchema';
 
 const openPositions = [
   {
@@ -158,6 +162,36 @@ const processSteps = [
 ];
 
 const VagasPage = () => {
+  return (
+    <>
+      <SEOHead
+        title="Trabalhe na LEGAL | Vagas em Aberto"
+        description="Faça parte da maior TechCo do Brasil e da equipe que está construindo o futuro dos eventos inteligentes. Confira nossas vagas em aberto."
+        keywords="vagas LEGAL, trabalhe conosco, carreiras LEGAL, TechCo, eventos inteligentes"
+        url="https://operadora.legal/vagas"
+        type="website"
+      />
+      <WebPageSchema
+        name="Trabalhe na LEGAL | Vagas em Aberto"
+        description="Faça parte da maior TechCo do Brasil e da equipe que está construindo o futuro dos eventos inteligentes."
+        url="https://operadora.legal/vagas"
+        breadcrumb={[
+          { name: "Vagas", url: "https://operadora.legal/vagas" }
+        ]}
+      />
+      <JobPostingSchema
+        jobs={openPositions.map(position => ({
+          title: position.title,
+          description: position.responsibilities.join('. '),
+          department: position.department,
+          location: position.location,
+          type: position.type,
+          level: position.level,
+          salary: position.salary,
+          datePosted: "2025-01-01"
+        }))}
+      />
+      <BreadcrumbsSchema />
   return (
     <div className="bg-background text-foreground font-unica">
       {/* Hero Section */}

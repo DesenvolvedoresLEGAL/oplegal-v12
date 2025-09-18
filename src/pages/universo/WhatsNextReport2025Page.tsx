@@ -1,17 +1,41 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Download, ExternalLink, Calendar, Clock, FileText, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import ArticleSchema from '@/components/seo/ArticleSchema';
 
 const WhatsNextReport2025Page: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>🔮 LEGAL WHATS NEXT REPORT 2025 | LEGAL</title>
-        <meta name="description" content="O futuro da conectividade FWA 5G no Brasil — insights estratégicos para empresas e eventos que querem liderar a nova era da internet sem fio." />
-        <meta name="keywords" content="5G, FWA, conectividade, eventos, empresas, relatório, tendências, LEGAL" />
-      </Helmet>
+      <SEOHead
+        title="🔮 LEGAL WHATS NEXT REPORT 2025"
+        description="O futuro da conectividade FWA 5G no Brasil — insights estratégicos para empresas e eventos que querem liderar a nova era da internet sem fio."
+        keywords="5G, FWA, conectividade, eventos, empresas, relatório, tendências, LEGAL"
+        url="https://operadora.legal/universo/pesquisas/whitepapers/whats-next-report-2025"
+        type="article"
+      />
+      <WebPageSchema
+        name="🔮 LEGAL WHATS NEXT REPORT 2025"
+        description="O futuro da conectividade FWA 5G no Brasil — insights estratégicos para empresas e eventos."
+        url="https://operadora.legal/universo/pesquisas/whitepapers/whats-next-report-2025"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "Pesquisas", url: "https://operadora.legal/universo/pesquisas" },
+          { name: "Whitepapers", url: "https://operadora.legal/universo/pesquisas/whitepapers" },
+          { name: "Whats Next Report 2025", url: "https://operadora.legal/universo/pesquisas/whitepapers/whats-next-report-2025" }
+        ]}
+      />
+      <ArticleSchema
+        headline="🔮 LEGAL WHATS NEXT REPORT 2025"
+        description="O futuro da conectividade FWA 5G no Brasil — insights estratégicos para empresas e eventos que querem liderar a nova era da internet sem fio."
+        url="https://operadora.legal/universo/pesquisas/whitepapers/whats-next-report-2025"
+        datePublished="2025-03-02T00:00:00Z"
+        keywords={["5G", "FWA", "conectividade", "eventos", "empresas", "tendências"]}
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Banner - Only Image */}

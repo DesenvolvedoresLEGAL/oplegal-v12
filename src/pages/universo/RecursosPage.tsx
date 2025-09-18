@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   BookOpen, 
@@ -16,6 +15,9 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import SectionTitle from '@/components/SectionTitle';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 
 const RecursosPage = () => {
   const quickStartCards = [
@@ -104,14 +106,23 @@ const RecursosPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Recursos LEGAL | Conteúdos, Dicas e Ferramentas</title>
-        <meta name="description" content="Centro de recursos da LEGAL: documentação, tutoriais, ferramentas e conteúdos para maximizar seu uso da plataforma." />
-        <meta property="og:title" content="Recursos LEGAL | Central de Conhecimento" />
-        <meta property="og:description" content="Acesse conteúdos exclusivos, tutoriais e ferramentas da plataforma LEGAL." />
-        <meta property="og:url" content="https://operadora.legal/universo/recursos" />
-        <meta name="keywords" content="LEGAL recursos, documentação, tutoriais, ferramentas, suporte" />
-      </Helmet>
+      <SEOHead
+        title="Recursos LEGAL | Central de Conhecimento"
+        description="Centro de recursos da LEGAL: documentação, tutoriais, ferramentas e conteúdos para maximizar seu uso da plataforma."
+        keywords="LEGAL recursos, documentação, tutoriais, ferramentas, suporte, central conhecimento"
+        url="https://operadora.legal/universo/recursos"
+        type="website"
+      />
+      <WebPageSchema
+        name="Recursos LEGAL | Central de Conhecimento"
+        description="Centro de recursos da LEGAL: documentação, tutoriais, ferramentas e conteúdos para maximizar seu uso da plataforma."
+        url="https://operadora.legal/universo/recursos"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "Recursos", url: "https://operadora.legal/universo/recursos" }
+        ]}
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Section */}

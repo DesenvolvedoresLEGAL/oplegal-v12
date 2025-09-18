@@ -1,18 +1,33 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Download, ExternalLink, FileText, TrendingUp, Users, Calendar, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 
 const PesquisasPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Pesquisas de Mercado e Whitepapers | LEGAL</title>
-        <meta name="description" content="Acesse as principais pesquisas de mercado, whitepapers e relatórios setoriais da LEGAL sobre eventos inteligentes, tecnologia e inovação." />
-      </Helmet>
+      <SEOHead
+        title="Pesquisas e Whitepapers | LEGAL"
+        description="Acesse as principais pesquisas de mercado, whitepapers e relatórios setoriais da LEGAL sobre eventos inteligentes, tecnologia e inovação."
+        keywords="pesquisas mercado, whitepapers, relatórios setoriais, eventos inteligentes, tecnologia, inovação"
+        url="https://operadora.legal/universo/pesquisas"
+        type="website"
+      />
+      <WebPageSchema
+        name="Pesquisas e Whitepapers | LEGAL"
+        description="Acesse as principais pesquisas de mercado, whitepapers e relatórios setoriais da LEGAL."
+        url="https://operadora.legal/universo/pesquisas"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "Pesquisas", url: "https://operadora.legal/universo/pesquisas" }
+        ]}
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Section */}

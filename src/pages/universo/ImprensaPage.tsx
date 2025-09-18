@@ -1,12 +1,15 @@
 
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Search, Download, ExternalLink, Calendar, Tag, FileText, Image, Video } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import SectionTitle from '@/components/SectionTitle';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import ArticleSchema from '@/components/seo/ArticleSchema';
 
 const ImprensaPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -108,15 +111,23 @@ const ImprensaPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Imprensa LEGAL | Releases, Notícias e Kit de Mídia</title>
-        <meta name="description" content="Centro de imprensa da LEGAL com releases, notícias, kit de mídia e materiais para jornalistas. Acompanhe os principais marcos da maior TechCo do Brasil." />
-        <meta property="og:title" content="Imprensa LEGAL | Releases e Kit de Mídia" />
-        <meta property="og:description" content="Materiais de imprensa, releases e notícias da LEGAL. Informações oficiais para jornalistas e mídia." />
-        <meta property="og:url" content="https://operadora.legal/universo/imprensa" />
-        <meta name="keywords" content="LEGAL imprensa, press release, kit mídia, notícias LEGAL, jornalistas" />
-        <link rel="canonical" href="https://operadora.legal/universo/imprensa" />
-      </Helmet>
+      <SEOHead
+        title="Imprensa LEGAL | Press Releases e Kit de Mídia"
+        description="Centro de imprensa da LEGAL com releases, notícias, kit de mídia e materiais para jornalistas. Acompanhe os principais marcos da maior TechCo do Brasil."
+        keywords="LEGAL imprensa, press release, kit mídia, notícias LEGAL, jornalistas, assessoria imprensa"
+        url="https://operadora.legal/universo/imprensa"
+        type="website"
+      />
+      <WebPageSchema
+        name="Imprensa LEGAL | Press Releases e Kit de Mídia"
+        description="Centro de imprensa da LEGAL com releases, notícias, kit de mídia e materiais para jornalistas."
+        url="https://operadora.legal/universo/imprensa"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "Imprensa", url: "https://operadora.legal/universo/imprensa" }
+        ]}
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Section */}

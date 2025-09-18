@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Search, ChevronDown, ChevronUp, MessageCircle, Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import SectionTitle from '@/components/SectionTitle';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import FAQPageSchema from '@/components/seo/FAQPageSchema';
 const FAQPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -140,15 +143,30 @@ const FAQPage = () => {
     return matchesSearch && matchesCategory;
   });
   return <>
-      <Helmet>
-        <title>FAQ LEGAL | Perguntas Frequentes e Suporte</title>
-        <meta name="description" content="Encontre respostas para as principais dúvidas sobre Smart Events™, API, faturamento e serviços da LEGAL. Suporte completo e documentação." />
-        <meta property="og:title" content="FAQ LEGAL | Perguntas e Respostas" />
-        <meta property="og:description" content="Central de ajuda com respostas detalhadas sobre produtos e serviços LEGAL. Suporte técnico e comercial." />
-        <meta property="og:url" content="https://operadora.legal/universo/faq" />
-        <meta name="keywords" content="LEGAL FAQ, perguntas frequentes, suporte LEGAL, ajuda Smart Events, documentação API" />
-        <link rel="canonical" href="https://operadora.legal/universo/faq" />
-      </Helmet>
+      <SEOHead
+        title="Perguntas Frequentes | LEGAL"
+        description="Encontre respostas para as principais dúvidas sobre a LEGAL e seus produtos. Central de ajuda completa com informações detalhadas."
+        keywords="FAQ LEGAL, perguntas frequentes, ajuda LEGAL, suporte, dúvidas"
+        url="https://operadora.legal/universo/faq"
+        type="website"
+      />
+      <WebPageSchema
+        name="Perguntas Frequentes | LEGAL"
+        description="Encontre respostas para as principais dúvidas sobre a LEGAL e seus produtos."
+        url="https://operadora.legal/universo/faq"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "FAQ", url: "https://operadora.legal/universo/faq" }
+        ]}
+      />
+      <FAQPageSchema
+        faqs={filteredFAQs.map(faq => ({
+          question: faq.question,
+          answer: faq.answer
+        }))}
+        pageUrl="https://operadora.legal/universo/faq"
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Section */}

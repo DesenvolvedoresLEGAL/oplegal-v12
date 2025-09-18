@@ -1,10 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Wifi, Shield } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import SectionTitle from '@/components/SectionTitle';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 
 const StatusPage = () => {
   const [lastUpdate, setLastUpdate] = useState(new Date());
@@ -159,15 +161,23 @@ const StatusPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Status dos Serviços LEGAL | Monitoramento em Tempo Real</title>
-        <meta name="description" content="Monitore em tempo real o status de todos os serviços e sistemas da LEGAL. Transparência total sobre disponibilidade e performance." />
-        <meta property="og:title" content="Status LEGAL | Monitoramento de Serviços" />
-        <meta property="og:description" content="Status em tempo real dos serviços LEGAL com informações de uptime, tempo de resposta e incidentes." />
-        <meta property="og:url" content="https://operadora.legal/universo/status" />
-        <meta name="keywords" content="LEGAL status, monitoramento serviços, uptime, disponibilidade sistema" />
-        <link rel="canonical" href="https://operadora.legal/universo/status" />
-      </Helmet>
+      <SEOHead
+        title="Status dos Serviços | LEGAL"
+        description="Monitore em tempo real o status de todos os serviços e produtos LEGAL. Informações sobre disponibilidade e manutenções."
+        keywords="status LEGAL, monitoramento serviços, disponibilidade LEGAL, tempo real"
+        url="https://operadora.legal/universo/status"
+        type="website"
+      />
+      <WebPageSchema
+        name="Status dos Serviços | LEGAL"
+        description="Monitore em tempo real o status de todos os serviços e produtos LEGAL."
+        url="https://operadora.legal/universo/status"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "Status", url: "https://operadora.legal/universo/status" }
+        ]}
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Section */}

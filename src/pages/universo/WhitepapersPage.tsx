@@ -1,10 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Download, ExternalLink, FileText, Calendar, Clock, Eye, Users, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 
 interface Whitepaper {
   id: string;
@@ -135,11 +137,24 @@ const WhitepapersPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Whitepapers Técnicos | LEGAL</title>
-        <meta name="description" content="Acesse whitepapers técnicos exclusivos da LEGAL sobre eventos inteligentes, IA, transformação digital e inovação." />
-        <meta name="keywords" content="whitepapers, eventos inteligentes, IA, transformação digital, ROI, ESG, LEGAL" />
-      </Helmet>
+      <SEOHead
+        title="Whitepapers Técnicos | LEGAL"
+        description="Acesse whitepapers técnicos exclusivos da LEGAL sobre eventos inteligentes, IA, transformação digital e inovação."
+        keywords="whitepapers, eventos inteligentes, IA, transformação digital, ROI, ESG, LEGAL"
+        url="https://operadora.legal/universo/pesquisas/whitepapers"
+        type="website"
+      />
+      <WebPageSchema
+        name="Whitepapers Técnicos | LEGAL"
+        description="Acesse whitepapers técnicos exclusivos da LEGAL sobre eventos inteligentes, IA e transformação digital."
+        url="https://operadora.legal/universo/pesquisas/whitepapers"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "Pesquisas", url: "https://operadora.legal/universo/pesquisas" },
+          { name: "Whitepapers", url: "https://operadora.legal/universo/pesquisas/whitepapers" }
+        ]}
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Breadcrumb */}

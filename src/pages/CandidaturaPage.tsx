@@ -9,6 +9,9 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from '@/hooks/use-toast';
 import { ArrowLeft, Upload, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 
 const CandidaturaPage = () => {
   const [formData, setFormData] = useState({
@@ -72,7 +75,26 @@ const CandidaturaPage = () => {
   };
 
   return (
-    <div className="bg-background text-foreground font-unica min-h-screen">
+    <>
+      <SEOHead
+        title="Candidatar-se | LEGAL"
+        description="Envie sua candidatura para trabalhar na LEGAL. Faça parte da equipe que está transformando o futuro dos eventos inteligentes."
+        keywords="candidatura LEGAL, enviar currículo, aplicar vaga, trabalhar LEGAL"
+        url="https://operadora.legal/candidatura"
+        type="website"
+      />
+      <WebPageSchema
+        name="Candidatar-se | LEGAL"
+        description="Envie sua candidatura para trabalhar na LEGAL. Faça parte da equipe que está transformando o futuro dos eventos inteligentes."
+        url="https://operadora.legal/candidatura"
+        breadcrumb={[
+          { name: "Vagas", url: "https://operadora.legal/vagas" },
+          { name: "Candidatura", url: "https://operadora.legal/candidatura" }
+        ]}
+      />
+      <BreadcrumbsSchema />
+
+      <div className="bg-background text-foreground font-unica min-h-screen">
       {/* Header */}
       <section className="py-16 bg-gradient-to-br from-legal to-legal-purple text-white">
         <div className="container mx-auto px-4 text-center">

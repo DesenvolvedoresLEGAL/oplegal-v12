@@ -1,10 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Calendar, Clock, Users, Target, ExternalLink, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 
 interface Pesquisa {
   id: string;
@@ -81,11 +83,24 @@ const PesquisasMercadoPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Pesquisas de Mercado | LEGAL</title>
-        <meta name="description" content="Participe das pesquisas de mercado da LEGAL e contribua para o futuro dos eventos inteligentes no Brasil." />
-        <meta name="keywords" content="pesquisas de mercado, IA, eventos inteligentes, transformação digital, LEGAL" />
-      </Helmet>
+      <SEOHead
+        title="Pesquisas de Mercado | LEGAL"
+        description="Participe das pesquisas de mercado da LEGAL e contribua para o futuro dos eventos inteligentes no Brasil."
+        keywords="pesquisas de mercado, IA, eventos inteligentes, transformação digital, LEGAL"
+        url="https://operadora.legal/universo/pesquisas/mercado"
+        type="website"
+      />
+      <WebPageSchema
+        name="Pesquisas de Mercado | LEGAL"
+        description="Participe das pesquisas de mercado da LEGAL e contribua para o futuro dos eventos inteligentes no Brasil."
+        url="https://operadora.legal/universo/pesquisas/mercado"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "Pesquisas", url: "https://operadora.legal/universo/pesquisas" },
+          { name: "Mercado", url: "https://operadora.legal/universo/pesquisas/mercado" }
+        ]}
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Breadcrumb */}

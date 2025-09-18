@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, ChevronRight, CheckCircle, Building, Users, Target, TrendingUp, Zap, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,6 +9,9 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 
 interface FormData {
   // Sobre a empresa
@@ -549,9 +551,13 @@ const MapeamentoIAPage: React.FC = () => {
   if (isSubmitted) {
     return (
       <>
-        <Helmet>
-          <title>Obrigado! | Jornada de IA Brasil | LEGAL</title>
-        </Helmet>
+        <SEOHead
+          title="Obrigado! | Mapeamento IA 2025"
+          description="Obrigado por participar do mapeamento nacional sobre uso de IA nas empresas brasileiras."
+          keywords="IA, pesquisa, agradecimento, mapeamento, empresas"
+          url="https://operadora.legal/universo/pesquisas/mercado/mapeamento-ia-2025"
+          type="website"
+        />
         
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center">
           <div className="container mx-auto px-4">
@@ -585,10 +591,25 @@ const MapeamentoIAPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Jornada de IA Brasil | Mapeamento Nacional 2025 | LEGAL</title>
-        <meta name="description" content="Descubra como as empresas brasileiras estão usando Inteligência Artificial para transformar seus negócios." />
-      </Helmet>
+      <SEOHead
+        title="🤖 Mapeamento Nacional de IA nas Empresas 2025"
+        description="Participe da maior pesquisa sobre adoção de Inteligência Artificial no Brasil. Contribua para mapear o uso de IA nas empresas brasileiras."
+        keywords="IA, inteligência artificial, pesquisa, empresas, Brasil, mapeamento, transformação digital"
+        url="https://operadora.legal/universo/pesquisas/mercado/mapeamento-ia-2025"
+        type="website"
+      />
+      <WebPageSchema
+        name="🤖 Mapeamento Nacional de IA nas Empresas 2025"
+        description="Participe da maior pesquisa sobre adoção de Inteligência Artificial no Brasil."
+        url="https://operadora.legal/universo/pesquisas/mercado/mapeamento-ia-2025"
+        breadcrumb={[
+          { name: "Universo", url: "https://operadora.legal/universo" },
+          { name: "Pesquisas", url: "https://operadora.legal/universo/pesquisas" },
+          { name: "Mercado", url: "https://operadora.legal/universo/pesquisas/mercado" },
+          { name: "Mapeamento IA 2025", url: "https://operadora.legal/universo/pesquisas/mercado/mapeamento-ia-2025" }
+        ]}
+      />
+      <BreadcrumbsSchema />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Breadcrumb */}
