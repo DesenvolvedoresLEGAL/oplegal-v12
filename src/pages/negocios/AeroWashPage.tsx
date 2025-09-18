@@ -1,6 +1,9 @@
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
 import SectionTitle from '@/components/SectionTitle';
 import CallToAction from '@/components/CallToAction';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -165,29 +168,28 @@ const AeroWashPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Limpeza em Altura com Drones | LEGAL AERO - Seguro, Rápido e Ecológico</title>
-        <meta name="description" content="Serviço especializado de limpeza de fachadas e estruturas verticais com drones. 100% seguro, 60% mais rápido e 40% mais econômico. Pilotos certificados ANAC." />
-        <meta name="keywords" content="limpeza fachadas drone, limpeza altura drone, limpeza industrial drone, painéis solares drone, conservação monumentos, ANAC, ecológico, seguro" />
-        
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Limpeza em Altura com Drones | LEGAL AERO" />
-        <meta property="og:description" content="Revolucione a limpeza de estruturas verticais com nossa tecnologia de drones. Mais seguro, rápido e econômico." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=1200&h=630" />
-        
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Limpeza em Altura com Drones | LEGAL AERO" />
-        <meta property="twitter:description" content="Tecnologia de drones para limpeza segura e eficiente de fachadas e estruturas verticais." />
-        <meta property="twitter:image" content="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=1200&h=630" />
-        
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="LEGAL" />
-        <link rel="canonical" href="https://legal.com.br/negocios/aero/wash" />
-        
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Limpeza em Altura com Drones | LEGAL AERO - Seguro, Rápido e Ecológico"
+        description="Serviço especializado de limpeza de fachadas e estruturas verticais com drones. 100% seguro, 60% mais rápido e 40% mais econômico. Pilotos certificados ANAC."
+        keywords="limpeza fachadas drone, limpeza altura drone, limpeza industrial drone, painéis solares drone, conservação monumentos, ANAC, ecológico, seguro"
+        url="https://operadora.legal/negocios/aero/wash"
+        image="https://operadora.legal/images/aero-wash-og.jpg"
+        type="website"
+      />
+      <WebPageSchema
+        name="Limpeza em Altura com Drones"
+        description="Serviço especializado de limpeza de estruturas verticais utilizando drones. Seguro, rápido e ecológico"
+        url="https://operadora.legal/negocios/aero/wash"
+      />
+      <BreadcrumbsSchema />
+      <ServiceSchema
+        serviceName="LEGAL AERO - Limpeza em Altura com Drones"
+        description="Serviço especializado de limpeza de estruturas verticais utilizando drones. Seguro, rápido e ecológico"
+        serviceType="CleaningService"
+        areaServed={["Brasil"]}
+        priceRange="A partir de R$ 12/m²"
+        url="https://operadora.legal/negocios/aero/wash"
+      />
 
       <div className="bg-background text-foreground font-unica">
         {/* Breadcrumb Navigation */}

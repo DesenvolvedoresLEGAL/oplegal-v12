@@ -151,15 +151,16 @@ const AluguelPage = () => {
       />
       <BreadcrumbsSchema />
       <ServiceSchema
-        name="LEGAL ALUGUE - Locação de Equipamentos para Eventos"
+        serviceName="LEGAL ALUGUE - Locação de Equipamentos para Eventos"
         description="Aluguel de conectividade e tecnologia premium para eventos corporativos com equipamentos de ponta, instalação rápida e suporte 24/7"
         provider={{
           name: "LEGAL",
           url: "https://operadora.legal"
         }}
-        serviceType="Aluguel de Internet para Eventos"
+        serviceType="TechnologyService"
         areaServed={["Brasil"]}
         priceRange="R$ 2500-50000"
+        url="https://operadora.legal/negocios/aluguel"
       />
 
       <div className="bg-background text-foreground font-unica">

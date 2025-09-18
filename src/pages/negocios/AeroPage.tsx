@@ -1,5 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
+import FAQPageSchema from '@/components/seo/SmartEventsFAQ';
 import SectionTitle from '@/components/SectionTitle';
 import CallToAction from '@/components/CallToAction';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -144,33 +148,28 @@ const AeroPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>LEGAL AERO - Serviços Profissionais com Drones | Foto, Filmagem, Delivery e Limpeza</title>
-        <meta name="description" content="Serviços profissionais com drones no Brasil: fotografia e filmagem aérea 4K/8K, delivery inteligente e limpeza de estruturas verticais. Pilotos certificados ANAC." />
-        <meta name="keywords" content="drone profissional, fotografia aérea, filmagem drone, delivery drone, limpeza fachadas drone, inspeção aérea, ANAC, 4K, 8K, Brasil" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="LEGAL AERO - Serviços Profissionais com Drones" />
-        <meta property="og:description" content="Transforme sua perspectiva com nossos serviços de drone: foto/filmagem aérea, delivery inteligente e limpeza de estruturas. Qualidade 4K/8K garantida." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=1200&h=630" />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="LEGAL AERO - Serviços Profissionais com Drones" />
-        <meta property="twitter:description" content="Fotografia aérea, delivery inteligente e limpeza de estruturas com drones profissionais. Pilotos certificados ANAC." />
-        <meta property="twitter:image" content="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=1200&h=630" />
-        
-        {/* Additional SEO */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="LEGAL" />
-        <link rel="canonical" href="https://legal.com.br/negocios/aero" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="LEGAL AERO - Serviços Profissionais com Drones | Foto, Filmagem, Delivery e Limpeza"
+        description="Serviços profissionais com drones no Brasil: fotografia e filmagem aérea 4K/8K, delivery inteligente e limpeza de estruturas verticais. Pilotos certificados ANAC."
+        keywords="drone profissional, fotografia aérea, filmagem drone, delivery drone, limpeza fachadas drone, inspeção aérea, ANAC, 4K, 8K, Brasil"
+        url="https://operadora.legal/negocios/aero"
+        image="https://operadora.legal/images/aero-og.jpg"
+        type="website"
+      />
+      <WebPageSchema
+        name="LEGAL AERO - Soluções com Drones"
+        description="Serviços profissionais com drones: foto e filmagem aérea, delivery inteligente e limpeza de estruturas verticais no Brasil"
+        url="https://operadora.legal/negocios/aero"
+      />
+      <BreadcrumbsSchema />
+      <ServiceSchema
+        serviceName="LEGAL AERO - Soluções com Drones"
+        description="Serviços profissionais com drones: fotografia e filmagem aérea, delivery inteligente e limpeza de estruturas verticais no Brasil"
+        serviceType="ProfessionalService"
+        areaServed={["Brasil"]}
+        priceRange="A partir de R$ 850/hora"
+        url="https://operadora.legal/negocios/aero"
+      />
 
       <div className="bg-background text-foreground font-unica">
         {/* Hero Section - Igual ao LEGAL AI */}

@@ -1,5 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
+import OfferSchema from '@/components/seo/OfferSchema';
 import { Link } from 'react-router-dom';
 import { Wifi, Shield, Clock, Users, Headphones, Settings, Building2, Stethoscope } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
@@ -96,43 +100,48 @@ const AssinaturaPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>LEGAL Assinatura | Internet 5G Empresarial Recorrente</title>
-        <meta name="description" content="Conectividade empresarial recorrente com SPEEDY 5G. Planos mensais de internet 5G para empresas, lojas, escritórios, clínicas e indústrias. Instalação ágil e suporte 24/7." />
-        <meta name="keywords" content="internet 5G empresarial, conectividade empresarial, SPEEDY 5G assinatura, internet para empresas, conectividade recorrente, internet corporativa 5G, LEGAL assinatura" />
-        <meta property="og:title" content="LEGAL Assinatura | Internet 5G Empresarial Recorrente" />
-        <meta property="og:description" content="Conectividade empresarial recorrente com tecnologia 5G. Planos flexíveis, instalação ágil e suporte 24/7 para empresas de todos os portes." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://legal.com.br/negocios/assinatura" />
-        <meta property="og:image" content="https://legal.com.br/images/legal-assinatura-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="LEGAL Assinatura | Internet 5G Empresarial" />
-        <meta name="twitter:description" content="Conectividade empresarial 5G com planos flexíveis e suporte especializado." />
-        <meta name="twitter:image" content="https://legal.com.br/images/legal-assinatura-twitter.jpg" />
-        <link rel="canonical" href="https://legal.com.br/negocios/assinatura" />
-        <link rel="alternate" hrefLang="pt-BR" href="https://legal.com.br/negocios/assinatura" />
-        <link rel="alternate" hrefLang="x-default" href="https://legal.com.br/negocios/assinatura" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "LEGAL Assinatura - Internet 5G Empresarial",
-            "description": "Conectividade empresarial recorrente com tecnologia 5G, instalação ágil e suporte 24/7",
-            "provider": {
-              "@type": "Organization",
-              "name": "LEGAL"
-            },
-            "serviceType": "Internet 5G Empresarial",
-            "areaServed": "Brasil",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "priceCurrency": "BRL",
-              "priceRange": "R$ 299 - R$ 999+"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="LEGAL Assinatura | Internet 5G Empresarial Recorrente"
+        description="Conectividade empresarial recorrente com SPEEDY 5G. Planos mensais de internet 5G para empresas, lojas, escritórios, clínicas e indústrias. Instalação ágil e suporte 24/7."
+        keywords="internet 5G empresarial, conectividade empresarial, SPEEDY 5G assinatura, internet para empresas, conectividade recorrente, internet corporativa 5G, LEGAL assinatura"
+        url="https://operadora.legal/negocios/assinatura"
+        image="https://operadora.legal/images/legal-assinatura-og.jpg"
+        type="website"
+      />
+      <WebPageSchema
+        name="LEGAL Assinatura - Internet 5G Empresarial"
+        description="Conectividade empresarial recorrente com tecnologia 5G, instalação ágil e suporte 24/7"
+        url="https://operadora.legal/negocios/assinatura"
+      />
+      <BreadcrumbsSchema />
+      <ServiceSchema
+        serviceName="LEGAL Assinatura - Internet 5G Empresarial"
+        description="Conectividade empresarial recorrente com tecnologia 5G, instalação ágil e suporte 24/7"
+        serviceType="TelecommunicationsService"
+        areaServed={["Brasil"]}
+        priceRange="R$ 299 - R$ 999+"
+        url="https://operadora.legal/negocios/assinatura"
+      />
+      <OfferSchema
+        name="Planos SPEEDY 5G"
+        description="Planos mensais de internet 5G empresarial com instalação ágil e suporte 24/7"
+        itemOffered={{
+          type: "Service",
+          name: "SPEEDY 5G",
+          description: "Internet 5G empresarial",
+          category: "Conectividade"
+        }}
+        seller={{
+          name: "LEGAL",
+          type: "Organization",
+          url: "https://operadora.legal"
+        }}
+        priceSpecification={{
+          price: 299,
+          priceCurrency: "BRL"
+        }}
+        availability="InStock"
+      />
 
       <div className="bg-background text-foreground font-unica">
         {/* Hero Section - Igual ao LEGAL AI */}
