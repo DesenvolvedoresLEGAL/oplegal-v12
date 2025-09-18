@@ -1,6 +1,9 @@
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import ProductSchema from '@/components/seo/ProductSchema';
+import FAQPageSchema from '@/components/seo/FAQPageSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import NeuraFitHero from '@/components/neurafit/NeuraFitHero';
 import NeuraFitFeatures from '@/components/neurafit/NeuraFitFeatures';
 import NeuraFitStats from '@/components/neurafit/NeuraFitStats';
@@ -37,17 +40,57 @@ const NeuraFitPage = () => {
     ]
   };
 
+  const faqData = [
+    {
+      question: "Como funciona a gamificação no NeuraFit?",
+      answer: "O NeuraFit utiliza elementos de gamificação similares ao Duolingo, com níveis, conquistas, streaks diárias, rankings e recompensas virtuais que mantêm a motivação constante no desenvolvimento cognitivo."
+    },
+    {
+      question: "Quais áreas do desenvolvimento o NeuraFit abrange?",
+      answer: "A plataforma abrange desenvolvimento cognitivo (memória, atenção, raciocínio), emocional (inteligência emocional, autoconhecimento) e espiritual (práticas contemplativas, mindfulness, conceitos quânticos)."
+    },
+    {
+      question: "Preciso ter conhecimento prévio em neurociência?",
+      answer: "Não! O NeuraFit é projetado para todos os níveis. Começamos com exercícios básicos e gradualmente introduzimos conceitos mais avançados, sempre de forma didática e aplicável."
+    },
+    {
+      question: "Quanto tempo devo dedicar diariamente?",
+      answer: "Recomendamos de 15 a 30 minutos diários. A plataforma foi desenvolvida para sessões curtas e eficazes, respeitando a plasticidade cerebral e evitando sobrecarga cognitiva."
+    },
+    {
+      question: "Como são os exercícios de PNL na plataforma?",
+      answer: "Os exercícios de PNL incluem técnicas de ancoragem, reestruturação de crenças, visualizações guiadas e padrões de linguagem, todos adaptados para formato interativo e gamificado."
+    }
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>NeuraFit - Musculação para o Cérebro | Desenvolvimento Cognitivo e Espiritual | LEGAL</title>
-        <meta name="description" content="NeuraFit: Plataforma gamificada de desenvolvimento cognitivo, emocional e espiritual. Integra neurociência, PNL e práticas contemplativas com gamificação estilo Duolingo." />
-        <meta name="keywords" content="desenvolvimento cognitivo, neurociência, gamificação, PNL, espiritualidade, física quântica, musculação cerebral, LEGAL NeuraFit" />
-        <link rel="canonical" href="https://operadora.legal/produtos/neurafit" />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="NeuraFit™ - Musculação para o Cérebro | Desenvolvimento Cognitivo | LEGAL"
+        description="NeuraFit: Plataforma gamificada de desenvolvimento cognitivo, emocional e espiritual. Integra neurociência, PNL e práticas contemplativas com gamificação estilo Duolingo."
+        keywords="desenvolvimento cognitivo, neurociência, gamificação, PNL, espiritualidade, física quântica, musculação cerebral, LEGAL NeuraFit"
+        canonical="https://operadora.legal/produtos/neurafit"
+        image="https://operadora.legal/images/neurafit-hero-2024.jpg"
+        type="product"
+      />
+      
+      <ProductSchema
+        productName="NeuraFit™"
+        description="Plataforma gamificada de desenvolvimento cognitivo, emocional e espiritual"
+        category="Aplicativo Educacional"
+        features={["Jogos de Neurociência", "Exercícios de PNL", "Práticas Contemplativas", "Gamificação Avançada", "Mentoria Especializada"]}
+        url="https://operadora.legal/produtos/neurafit"
+        applicationCategory="EducationalApplication"
+        pricing={{
+          type: "subscription",
+          currency: "BRL",
+          price: "99"
+        }}
+      />
+      
+      <FAQPageSchema faqs={faqData} pageUrl="https://operadora.legal/produtos/neurafit" />
+      
+      <Breadcrumbs />
       
       <main>
         <NeuraFitHero />

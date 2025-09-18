@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import SEOHead from '@/components/SEOHead';
+import OfferSchema from '@/components/seo/OfferSchema';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Helmet } from "react-helmet-async";
 import { Calculator, TrendingUp, Clock, Users, AlertTriangle, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -47,7 +51,76 @@ const PrecosPage = () => {
   const finalPrice = calculatePrice(selectedPlan, selectedDays, selectedDemand);
   const advanceFactor = getAdvanceFactor(selectedDays);
   const demandFactor = getDemandFactor(selectedDemand);
+  const offerData = [
+    {
+      name: "Internet FWA 5G - Plano Lite",
+      description: "Internet ultra-rápida FWA 5G para pequenos eventos e escritórios",
+      price: "150",
+      currency: "BRL",
+      availability: "Em estoque"
+    },
+    {
+      name: "Internet FWA 5G - Plano Pro",
+      description: "Internet de alta performance para eventos médios e empresas",
+      price: "600",
+      currency: "BRL", 
+      availability: "Em estoque"
+    },
+    {
+      name: "Drones AERO - Serviços",
+      description: "Serviços completos com drones: foto, vídeo, delivery e limpeza",
+      price: "800",
+      currency: "BRL",
+      availability: "Sob demanda"
+    }
+  ];
+
   return <>
+      <SEOHead
+        title="Preços e Planos | Internet 5G, Drones e IA para Eventos | LEGAL"
+        description="Conheça os preços transparentes da LEGAL: locação e assinatura de internet FWA 5G, serviços com drones, soluções de IA e mais. Planos a partir de R$ 150/dia."
+        keywords="preços LEGAL, internet 5G preços, drones preços, IA eventos preços, locação internet, planos conectividade"
+        canonical="https://operadora.legal/precos"
+        image="https://operadora.legal/images/precos-legal-2024.jpg"
+        type="website"
+      />
+      
+      <OfferSchema 
+        name="Soluções Tecnológicas LEGAL"
+        description="Internet FWA 5G, drones, IA e equipamentos para eventos e empresas"
+        itemOffered={{
+          type: "Service",
+          name: "Conectividade e Tecnologia para Eventos",
+          description: "Soluções completas de internet, drones e IA",
+          category: "Tecnologia para Eventos"
+        }}
+        seller={{
+          name: "LEGAL",
+          type: "Organization",
+          url: "https://operadora.legal",
+          telephone: "(11) 5194-2223",
+          email: "sos@operadora.legal"
+        }}
+        priceSpecification={{
+          price: 150,
+          priceCurrency: "BRL"
+        }}
+        availability="InStock"
+        areaServed={["São Paulo", "Brasil"]}
+      />
+      
+      <WebPageSchema
+        name="Preços e Planos - LEGAL"
+        description="Preços transparentes para conectividade, drones e soluções de IA para eventos"
+        url="https://operadora.legal/precos"
+        breadcrumb={[
+          { name: "Home", url: "https://operadora.legal" },
+          { name: "Preços", url: "https://operadora.legal/precos" }
+        ]}
+      />
+      
+      <Breadcrumbs />
+
       <Helmet>
         <title>Preços | LEGAL - Conectividade, Drones e IA para Eventos</title>
         <meta name="description" content="Conheça os preços de todos nossos produtos e serviços: locação e assinatura de internet FWA 5G, drones, soluções de IA e muito mais." />

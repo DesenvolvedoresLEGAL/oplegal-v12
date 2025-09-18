@@ -1,4 +1,8 @@
 import React from 'react';
+import SEOHead from '@/components/SEOHead';
+import ServiceSchema from '@/components/seo/ServiceSchema';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Helmet } from 'react-helmet-async';
 import SectionTitle from '@/components/SectionTitle';
 import CallToAction from '@/components/CallToAction';
@@ -62,6 +66,38 @@ const whyChooseLegal = [{
 }];
 const NegociosPage = () => {
   return <>
+      <SEOHead
+        title="Negócios LEGAL | 4 Unidades Tecnológicas para Empresas"
+        description="Descubra as unidades de negócio da LEGAL: AERO (drones), AI (inteligência artificial), ALUGUE (equipamentos) e ASSINATURA (conectividade FWA). Tecnologia que transforma empresas brasileiras."
+        keywords="LEGAL negócios, soluções empresariais, drones, inteligência artificial, aluguel equipamentos, conectividade FWA, tecnologia empresarial"
+        canonical="https://operadora.legal/negocios"
+        image="https://operadora.legal/images/negocios-legal-2024.jpg"
+        type="website"
+      />
+      
+      <ServiceSchema
+        serviceName="LEGAL Negócios"
+        description="4 unidades tecnológicas especializadas: AERO, AI, ALUGUE e ASSINATURA"
+        provider={{
+          name: "LEGAL",
+          url: "https://operadora.legal"
+        }}
+        serviceType="Soluções Tecnológicas Empresariais"
+        areaServed={["Brasil"]}
+      />
+      
+      <WebPageSchema
+        name="Negócios LEGAL - Unidades Tecnológicas"
+        description="Conheça as 4 unidades de negócio da LEGAL que transformam empresas com tecnologia"
+        url="https://operadora.legal/negocios"
+        breadcrumb={[
+          { name: "Home", url: "https://operadora.legal" },
+          { name: "Negócios", url: "https://operadora.legal/negocios" }
+        ]}
+      />
+      
+      <Breadcrumbs />
+
       <Helmet>
         <title>Negócios LEGAL | Soluções Tecnológicas para Empresas</title>
         <meta name="description" content="Descubra as unidades de negócio da LEGAL: AERO (drones), AI (inteligência artificial), ALUGUE (equipamentos) e ASSINATURA (conectividade FWA). Tecnologia que transforma empresas." />

@@ -1,5 +1,9 @@
 
 import React from 'react';
+import SEOHead from '@/components/SEOHead';
+import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -160,6 +164,30 @@ const ContatoPage = () => {
   };
 
   return (
+    <>
+      <SEOHead
+        title="Contato | Fale com a LEGAL - Especialistas em Smart Events™"
+        description="Entre em contato com a LEGAL: telefone (11) 5194-2223, email sos@operadora.legal. Escritório no Alto do Ipiranga - São Paulo. Transforme seus eventos com nossa tecnologia."
+        keywords="contato LEGAL, telefone LEGAL, email LEGAL, escritório São Paulo, suporte técnico, vendas LEGAL"
+        canonical="https://operadora.legal/contato"
+        image="https://operadora.legal/images/contato-legal-2024.jpg"
+        type="website"
+      />
+      
+      <LocalBusinessSchema />
+      
+      <WebPageSchema
+        name="Contato - LEGAL"
+        description="Entre em contato com a LEGAL e transforme seus eventos com nossa tecnologia"
+        url="https://operadora.legal/contato"
+        breadcrumb={[
+          { name: "Home", url: "https://operadora.legal" },
+          { name: "Contato", url: "https://operadora.legal/contato" }
+        ]}
+      />
+      
+      <Breadcrumbs />
+
     <div className="bg-background text-foreground font-unica">
       {/* Hero Section */}
       <section className="py-24 md:py-32 text-center bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
@@ -429,6 +457,7 @@ const ContatoPage = () => {
         background="gradient"
       />
     </div>
+    </>
   );
 };
 

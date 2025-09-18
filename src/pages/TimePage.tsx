@@ -1,4 +1,8 @@
 import React from 'react';
+import SEOHead from '@/components/SEOHead';
+import OrganizationSchema from '@/components/seo/OrganizationSchema';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import SectionTitle from '@/components/SectionTitle';
 import CallToAction from '@/components/CallToAction';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,6 +10,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Users, Heart, Target, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+
 const leadership = [{
   name: "Wagner",
   role: "CEO & Fundador",
@@ -78,7 +83,32 @@ const values = [{
   description: "Cultura viva, gente de verdade, conexão e propósito."
 }];
 const TimePage = () => {
-  return <div className="bg-background text-foreground font-unica">
+  return (
+    <>
+      <SEOHead
+        title="Nosso Time | Equipe LEGAL - Visionários em Tecnologia"
+        description="Conheça o time LEGAL: lideranças visionárias e colaboradores talentosos que transformam ideias em realidade. Framework V.E.R.A.™ - Visão Viva, Execução Energizada, Resultados com Ressonância e Alinhamento com Alma."
+        keywords="time LEGAL, equipe LEGAL, liderança, cultura empresarial, framework VERA, visionários tecnologia"
+        canonical="https://operadora.legal/time"
+        image="https://operadora.legal/images/time-legal-2024.jpg"
+        type="website"
+      />
+      
+      <OrganizationSchema />
+      
+      <WebPageSchema
+        name="Nosso Time - LEGAL"
+        description="Conheça o time LEGAL: lideranças visionárias e colaboradores que transformam ideias em realidade"
+        url="https://operadora.legal/time"
+        breadcrumb={[
+          { name: "Home", url: "https://operadora.legal" },
+          { name: "Nosso Time", url: "https://operadora.legal/time" }
+        ]}
+      />
+      
+      <Breadcrumbs />
+
+    <div className="bg-background text-foreground font-unica">
       {/* Hero Section */}
       <section className="py-24 md:py-32 text-center bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -199,6 +229,8 @@ const TimePage = () => {
 
       {/* Call to Action Section */}
       <CallToAction title="Pronto para Fazer Parte do Time LEGAL?" subtitle="Estamos sempre em busca de pessoas talentosas que compartilhem nossos valores e queiram transformar o futuro da tecnologia no Brasil." buttonText="Ver Vagas Abertas" buttonLink="/vagas" background="gradient" />
-    </div>;
+    </div>
+    </>
+  );
 };
 export default TimePage;

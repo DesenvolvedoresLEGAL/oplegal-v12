@@ -33,6 +33,7 @@ import {
 import SEOHead from '@/components/SEOHead';
 import ProductSchema from '@/components/seo/ProductSchema';
 import WebPageSchema from '@/components/seo/WebPageSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const TagPulsePage = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -238,6 +239,8 @@ const TagPulsePage = () => {
         ]}
       />
 
+      <Breadcrumbs />
+      
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-legal py-20">
