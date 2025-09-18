@@ -17,7 +17,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import HowToSchema from "@/components/seo/HowToSchema";
 import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
 import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
-import ConversationalAIData from '@/components/seo/ConversationalAIData';
+
 import NaturalLanguageOptimization from '@/components/optimization/NaturalLanguageOptimization';
 import FeaturedSnippetsOptimization from '@/components/optimization/FeaturedSnippetsOptimization';
 import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
