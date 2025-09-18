@@ -11,6 +11,14 @@ import PingTestimonials from '@/components/ping/PingTestimonials';
 import PingDemo from '@/components/ping/PingDemo';
 import PingFAQ from '@/components/ping/PingFAQ';
 import CallToAction from '@/components/CallToAction';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
+import HowToSchema from '@/components/seo/HowToSchema';
+import CaseStudyStructuredData from '@/components/seo/CaseStudyStructuredData';
+import TechnicalDocumentationAI from '@/components/seo/TechnicalDocumentationAI';
+import MetricsAndBenchmarksAI from '@/components/seo/MetricsAndBenchmarksAI';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import ConversationalAIData from '@/components/seo/ConversationalAIData';
 
 const PingPage = () => {
   const structuredData = {

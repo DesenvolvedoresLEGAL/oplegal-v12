@@ -96,7 +96,6 @@ const HumanoidPage = () => {
     { method: "GET", endpoint: "/api/qualified-leads", description: "Obter leads qualificados", parameters: ["date_range", "score_min"], response: "Lista de leads com dados enriquecidos" }
   ];
 
-const HumanoidPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",

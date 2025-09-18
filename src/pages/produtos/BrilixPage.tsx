@@ -77,10 +77,33 @@ const BrilixPage = () => {
   ];
 
   const brilixBenchmarks = [
-    { metric: "Redução de Custos", value: 70, unit: "%", industry: "Limpeza Predial", comparison: "vs limpeza tradicional" },
-    { metric: "Redução de Tempo", value: 60, unit: "%", industry: "Manutenção", comparison: "vs métodos convencionais" },
-    { metric: "Eliminação de Riscos", value: 100, unit: "%", industry: "Segurança do Trabalho", comparison: "vs trabalho em altura" },
-    { metric: "Eficiência de Limpeza", value: 95, unit: "%", industry: "Serviços", comparison: "qualidade superior" }
+    { 
+      metric: "Redução de Custos", 
+      industry: "Limpeza Predial", 
+      average: 30, 
+      ourProduct: 70, 
+      improvement: 40, 
+      unit: "%", 
+      description: "Economia comparada à limpeza tradicional com andaimes"
+    },
+    { 
+      metric: "Redução de Tempo", 
+      industry: "Manutenção", 
+      average: 25, 
+      ourProduct: 60, 
+      improvement: 35, 
+      unit: "%", 
+      description: "Tempo de execução vs métodos convencionais"
+    },
+    { 
+      metric: "Eliminação de Riscos", 
+      industry: "Segurança do Trabalho", 
+      average: 50, 
+      ourProduct: 100, 
+      improvement: 50, 
+      unit: "%", 
+      description: "Eliminação total de riscos de trabalho em altura"
+    }
   ];
 
   const brilixSpecs = [
@@ -90,7 +113,6 @@ const BrilixPage = () => {
     { name: "Certificação", value: "ANAC", description: "Homologado para uso comercial", unit: "certificação" }
   ];
 
-const BrilixPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -171,27 +193,34 @@ const BrilixPage = () => {
       
       <TechnicalDocumentationAI
         productName="Brilix"
-        category="Drone Cleaning Service"
-        description="Serviço de limpeza em altura com drones autônomos certificados"
+        version="2.0"
         specifications={brilixSpecs}
         apiEndpoints={[]}
         integrations={["Sistemas de Facilities", "ERPs de Manutenção", "Plataformas de Agendamento"]}
         systemRequirements={["Espaço para decolagem", "Condições climáticas favoráveis", "Autorização ANAC"]}
         securityFeatures={["Operadores certificados", "Sistemas redundantes", "Sensores de obstáculo", "Seguro total"]}
-        performanceMetrics={[
-          { metric: "Altura máxima", value: "120m" },
-          { metric: "Autonomia", value: "45min" },
-          { metric: "Eficiência", value: "95%" }
-        ]}
-        deploymentOptions={["Serviço sob demanda", "Contratos mensais", "Manutenção programada"]}
-        supportOptions={["Suporte técnico 24/7", "Manutenção preventiva", "Treinamento", "Seguro incluído"]}
+        performance={{
+          "Altura máxima": "120m",
+          "Autonomia": "45min",
+          "Eficiência": "95%"
+        }}
+        deployment={["Serviço sob demanda", "Contratos mensais", "Manutenção programada"]}
+        support={{
+          sla: "99.9% disponibilidade",
+          channels: ["Suporte técnico 24/7", "WhatsApp", "Email"],
+          documentation: "Manual completo e treinamento incluído"
+        }}
       />
       
       <MetricsAndBenchmarksAI
         productName="Brilix"
         benchmarks={brilixBenchmarks}
-        industries={["Varejo", "Corporativo", "Industrial", "Residencial"]}
-        enableROICalculator={true}
+        industries={["Limpeza Predial", "Manutenção", "Segurança do Trabalho"]}
+        roiCalculator={{
+          enabled: true,
+          defaultInvestment: 50000,
+          benefitCategories: ["Redução de custos", "Eliminação de riscos", "Aumento de eficiência"]
+        }}
       />
       
       <RealUserMonitoring
@@ -202,35 +231,54 @@ const BrilixPage = () => {
       
       <ConversationalAIData
         productName="Brilix"
-        category="Limpeza com Drones"
-        primaryKeywords={["limpeza com drone", "limpeza em altura", "drone limpeza"]}
-        conversationalFlows={[
+        flows={[
           {
             intent: "cleaning_safety",
-            keywords: ["segurança limpeza", "risco altura", "acidente trabalho"],
-            response: "Brilix elimina 100% dos riscos de trabalho em altura usando drones autônomos certificados."
+            patterns: ["segurança limpeza", "risco altura", "acidente trabalho", "drone seguro"],
+            responses: [
+              {
+                text: "Brilix elimina 100% dos riscos de trabalho em altura usando drones autônomos certificados ANAC.",
+                context: "Segurança é nossa prioridade. Operadores certificados e sistemas redundantes garantem operação segura.",
+                followUp: ["Como funciona certificação?", "Quais seguros inclusos?"]
+              }
+            ]
           },
           {
-            intent: "cost_reduction",
-            keywords: ["economia limpeza", "reduzir custos", "custo andaime"],
-            response: "Oferecemos até 70% de economia comparado à limpeza tradicional, eliminando andaimes e reduzindo tempo."
+            intent: "cost_reduction", 
+            patterns: ["economia limpeza", "reduzir custos", "custo andaime", "preço limpeza"],
+            responses: [
+              {
+                text: "Oferecemos até 70% de economia comparado à limpeza tradicional, eliminando andaimes e reduzindo tempo.",
+                context: "Eficiência operacional traduzida em economia real para sua empresa.",
+                followUp: ["Calcular ROI", "Solicitar orçamento"]
+              }
+            ]
           }
         ]}
-        useCases={[
-          "Limpeza de fachadas de edifícios comerciais",
-          "Manutenção de painéis solares",
-          "Limpeza industrial em estruturas altas"
-        ]}
-        benefits={[
-          "70% de redução de custos",
-          "100% de eliminação de riscos",
-          "60% menos tempo de execução"
-        ]}
-        pricing={{
-          plans: [
-            { name: "Serviço Avulso", price: "R$ 250/hora", features: ["Limpeza sob demanda", "Operador certificado", "Seguro incluído"] },
-            { name: "Contrato Mensal", price: "R$ 1.500/mês", features: ["2 limpezas/mês", "Manutenção preventiva", "Desconto 30%"] },
-            { name: "Contrato Anual", price: "R$ 15.000/ano", features: ["Limpezas ilimitadas", "Prioridade", "Desconto 50%"] }
+        knowledgeBase={{
+          concepts: [
+            {
+              term: "Limpeza com Drone",
+              definition: "Uso de aeronaves não tripuladas para limpeza em altura",
+              synonyms: ["Drone limpeza", "Limpeza aérea", "Limpeza automatizada"],
+              relatedTerms: ["Segurança do trabalho", "Manutenção predial", "Eficiência operacional"]
+            }
+          ],
+          processes: [
+            {
+              name: "Processo de Limpeza Brilix",
+              steps: ["Avaliação do local", "Planejamento de voo", "Execução da limpeza", "Relatório final"],
+              duration: "2-4 horas",
+              requirements: ["Espaço para decolagem", "Condições climáticas favoráveis", "Autorização ANAC"]
+            }
+          ],
+          troubleshooting: [
+            {
+              issue: "Condições climáticas desfavoráveis",
+              symptoms: ["Vento forte", "Chuva", "Baixa visibilidade"],
+              solutions: ["Reagendamento automático", "Monitoramento meteorológico", "Backup de equipamentos"],
+              priority: "high" as const
+            }
           ]
         }}
       />

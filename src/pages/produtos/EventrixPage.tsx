@@ -78,10 +78,33 @@ const EventrixPage = () => {
   ];
 
   const eventrixBenchmarks = [
-    { metric: "Engajamento de Participantes", value: 85, unit: "%", industry: "Eventos Corporativos", comparison: "+65% vs tradicional" },
-    { metric: "Satisfação (NPS)", value: 89, unit: "pontos", industry: "Eventos", comparison: "+45 pontos vs média" },
-    { metric: "ROI do Evento", value: 340, unit: "%", industry: "Marketing de Eventos", comparison: "+200% vs eventos tradicionais" },
-    { metric: "Conexões de Networking", value: 300, unit: "%", industry: "Networking B2B", comparison: "+250% mais conexões qualificadas" }
+    { 
+      metric: "Engajamento de Participantes", 
+      industry: "Eventos Corporativos", 
+      average: 45, 
+      ourProduct: 85, 
+      improvement: 40, 
+      unit: "%", 
+      description: "Participação ativa vs eventos tradicionais"
+    },
+    { 
+      metric: "Satisfação (NPS)", 
+      industry: "Eventos", 
+      average: 45, 
+      ourProduct: 89, 
+      improvement: 44, 
+      unit: "pontos", 
+      description: "Net Promoter Score superior"
+    },
+    { 
+      metric: "ROI do Evento", 
+      industry: "Marketing de Eventos", 
+      average: 120, 
+      ourProduct: 340, 
+      improvement: 220, 
+      unit: "%", 
+      description: "Retorno sobre investimento"
+    }
   ];
 
   const eventrixSpecs = [
@@ -92,11 +115,22 @@ const EventrixPage = () => {
   ];
 
   const eventrixAPIs = [
-    { method: "POST", endpoint: "/api/events", description: "Criar novo evento", parameters: ["name", "date", "type"], response: "Event ID e configurações" },
-    { method: "GET", endpoint: "/api/analytics", description: "Obter métricas em tempo real", parameters: ["event_id", "metric_type"], response: "Dados de engajamento e participação" }
+    { 
+      method: "POST", 
+      endpoint: "/api/events", 
+      description: "Criar novo evento", 
+      parameters: { "name": "string", "date": "ISO date", "type": "string" }, 
+      response: "Event ID e configurações" 
+    },
+    { 
+      method: "GET", 
+      endpoint: "/api/analytics", 
+      description: "Obter métricas em tempo real", 
+      parameters: { "event_id": "string", "metric_type": "string" }, 
+      response: "Dados de engajamento e participação" 
+    }
   ];
 
-const EventrixPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -177,27 +211,34 @@ const EventrixPage = () => {
       
       <TechnicalDocumentationAI
         productName="Eventrix"
-        category="Event Management Platform"
-        description="Plataforma de gestão de eventos com IA para personalização e análise preditiva"
+        version="3.0"
         specifications={eventrixSpecs}
         apiEndpoints={eventrixAPIs}
         integrations={["Salesforce CRM", "HubSpot", "Mailchimp", "Zoom", "Teams", "Slack"]}
         systemRequirements={["Browser moderno", "Conexão estável", "JavaScript habilitado"]}
         securityFeatures={["Criptografia end-to-end", "LGPD compliance", "SSO integrado", "Backup automático"]}
-        performanceMetrics={[
-          { metric: "Latência API", value: "<200ms" },
-          { metric: "Disponibilidade", value: "99.9%" },
-          { metric: "Capacidade", value: "Ilimitada" }
-        ]}
-        deploymentOptions={["Cloud", "Híbrido", "On-premise"]}
-        supportOptions={["24/7 Support", "Onboarding dedicado", "Training", "Documentação"]}
+        performance={{
+          "Latência API": "<200ms",
+          "Disponibilidade": "99.9%",
+          "Capacidade": "Ilimitada"
+        }}
+        deployment={["Cloud", "Híbrido", "On-premise"]}
+        support={{
+          sla: "99.9% uptime garantido",
+          channels: ["24/7 Support", "Chat", "Email", "Phone"],
+          documentation: "API docs completa + onboarding dedicado"
+        }}
       />
       
       <MetricsAndBenchmarksAI
         productName="Eventrix"
         benchmarks={eventrixBenchmarks}
-        industries={["Tecnologia", "Saúde", "Educação", "Varejo"]}
-        enableROICalculator={true}
+        industries={["Eventos Corporativos", "Eventos", "Marketing de Eventos"]}
+        roiCalculator={{
+          enabled: true,
+          defaultInvestment: 75000,
+          benefitCategories: ["Aumento de engajamento", "Melhoria de ROI", "Redução de custos"]
+        }}
       />
       
       <RealUserMonitoring
@@ -208,48 +249,73 @@ const EventrixPage = () => {
       
       <ConversationalAIData
         productName="Eventrix"
-        category="Gestão de Eventos"
-        primaryKeywords={["gestão de eventos", "eventos com IA", "plataforma de eventos"]}
-        conversationalFlows={[
+        flows={[
           {
             intent: "event_planning",
-            keywords: ["planejamento de evento", "organizar evento", "gestão evento"],
-            response: "Eventrix automatiza todo o planejamento de eventos com IA, desde análise de público até execução personalizada."
+            patterns: ["planejamento de evento", "organizar evento", "gestão evento", "criar evento"],
+            responses: [
+              {
+                text: "Eventrix automatiza todo o planejamento de eventos com IA, desde análise de público até execução personalizada.",
+                context: "Nossa plataforma revoluciona a gestão de eventos com inteligência artificial avançada.",
+                followUp: ["Ver demonstração", "Agendar consultoria"]
+              }
+            ]
           },
           {
             intent: "engagement_boost",
-            keywords: ["aumentar engajamento", "participação evento", "networking"],
-            response: "Nossa IA personaliza experiências e conecta participantes relevantes, aumentando engajamento em até 75%."
+            patterns: ["aumentar engajamento", "participação evento", "networking", "experiência participante"],
+            responses: [
+              {
+                text: "Nossa IA personaliza experiências e conecta participantes relevantes, aumentando engajamento em até 75%.",
+                context: "Transformamos eventos em experiências memoráveis através da personalização inteligente.",
+                followUp: ["Como funciona personalização?", "Casos de sucesso"]
+              }
+            ]
           }
         ]}
-        useCases={[
-          "Eventos corporativos com alta participação",
-          "Conferências com networking qualificado",
-          "Webinars com engajamento personalizado"
-        ]}
-        benefits={[
-          "75% mais engajamento dos participantes",
-          "Análise preditiva com 95% de precisão",
-          "ROI 340% superior a eventos tradicionais"
-        ]}
-        pricing={{
-          plans: [
-            { name: "Starter", price: "R$ 2.500/mês", features: ["Até 500 participantes", "IA básica", "Suporte email"] },
-            { name: "Professional", price: "R$ 8.500/mês", features: ["Até 5.000 participantes", "IA avançada", "Suporte 24/7"] },
-            { name: "Enterprise", price: "Sob consulta", features: ["Participantes ilimitados", "IA personalizada", "Success Manager"] }
+        knowledgeBase={{
+          concepts: [
+            {
+              term: "Eventos com IA",
+              definition: "Gestão de eventos potencializada por inteligência artificial",
+              synonyms: ["Smart Events", "Eventos inteligentes", "AI Events"],
+              relatedTerms: ["Personalização", "Análise preditiva", "Experiência do participante"]
+            }
+          ],
+          processes: [
+            {
+              name: "Implementação Eventrix",
+              steps: ["Configuração da plataforma", "Integração de dados", "Personalização da IA", "Lançamento e monitoramento"],
+              duration: "3 meses",
+              requirements: ["Dados dos participantes", "Objetivos do evento", "Sistemas existentes"]
+            }
+          ],
+          troubleshooting: [
+            {
+              issue: "Baixo engajamento inicial",
+              symptoms: ["Pouca participação", "Feedback negativo", "Abandono precoce"],
+              solutions: ["Ajuste de algoritmos", "Personalização avançada", "Suporte proativo"],
+              priority: "medium" as const
+            }
           ]
         }}
       />
       
       <EventSchema
-        eventName="Demonstração Eventrix"
-        eventDescription="Conheça como a IA pode transformar seus eventos"
+        name="Demonstração Eventrix"
+        description="Conheça como a IA pode transformar seus eventos"
         startDate="2024-12-01T14:00:00-03:00"
         endDate="2024-12-01T15:00:00-03:00"
-        eventMode="online"
+        eventAttendanceMode="OnlineEventAttendanceMode"
         location={{
-          type: "virtual",
-          url: "https://eventrix.operadora.legal/demo"
+          name: "Online - Plataforma Eventrix",
+          address: {
+            streetAddress: "Virtual",
+            addressLocality: "São Paulo", 
+            addressRegion: "SP",
+            postalCode: "01000-000",
+            addressCountry: "BR"
+          }
         }}
         organizer={{
           name: "LEGAL TechCo",
@@ -261,7 +327,9 @@ const EventrixPage = () => {
             price: 0,
             currency: "BRL",
             availability: "InStock",
-            url: "https://operadora.legal/contato?produto=eventrix"
+            url: "https://operadora.legal/contato?produto=eventrix",
+            validFrom: "2024-11-01",
+            validThrough: "2024-12-31"
           }
         ]}
       />
