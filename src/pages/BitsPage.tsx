@@ -1,5 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import OfferSchema from '@/components/seo/OfferSchema';
 import BitsHeroSection from '@/components/bits/BitsHeroSection';
 import WhatIsBitsSection from '@/components/bits/WhatIsBitsSection';
 import HowToEarnPointsSection from '@/components/bits/HowToEarnPointsSection';
@@ -17,15 +20,45 @@ const BitsPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>BITS™ - Programa de Fidelidade LEGAL | Recompensas Futuristas</title>
-        <meta name="description" content="Descubra o BITS™, o programa de fidelidade da LEGAL. Acumule pontos, suba de nível e ganhe recompensas exclusivas. Ative sua conta!" />
-        <meta property="og:title" content="BITS™ - Programa de Fidelidade LEGAL" />
-        <meta property="og:description" content="Sua conexão agora vale pontos, upgrades e um lugar entre os melhores do Brasil com o BITS™." />
-        <meta property="og:image" content="https://operadora.legal/og-image-bits.png" /> {/* Placeholder OG Image */}
-        <meta property="og:url" content="https://operadora.legal/universo/bits" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+      <SEOHead
+        title="BITS™ - Programa de Fidelidade LEGAL | Recompensas Futuristas"
+        description="Descubra o BITS™, o programa de fidelidade da LEGAL. Acumule pontos, suba de nível e ganhe recompensas exclusivas. Ative sua conta!"
+        keywords="BITS, programa fidelidade, recompensas, pontos, LEGAL, benefícios, gamificação, níveis"
+        url="https://operadora.legal/bits"
+        image="https://operadora.legal/images/bits-og.jpg"
+        type="website"
+      />
+      <WebPageSchema
+        name="BITS™ - Programa de Fidelidade LEGAL"
+        description="Programa de fidelidade inovador da LEGAL com sistema gamificado de pontos e recompensas exclusivas"
+        url="https://operadora.legal/bits"
+        mainEntity={{
+          type: "LoyaltyProgram",
+          name: "BITS™",
+          description: "Programa de fidelidade gamificado com pontos e recompensas"
+        }}
+      />
+      <BreadcrumbsSchema />
+      <OfferSchema
+        name="Programa BITS™"
+        description="Programa de fidelidade com pontos e recompensas exclusivas"
+        itemOffered={{
+          type: "Service",
+          name: "BITS™",
+          description: "Programa de fidelidade gamificado",
+          category: "Programa de Fidelidade"
+        }}
+        seller={{
+          name: "LEGAL",
+          type: "Organization",
+          url: "https://operadora.legal"
+        }}
+        priceSpecification={{
+          price: 0,
+          priceCurrency: "BRL"
+        }}
+        availability="InStock"
+      />
       <div className="bg-bits-darkGray">
         <BitsHeroSection />
         <WhatIsBitsSection />

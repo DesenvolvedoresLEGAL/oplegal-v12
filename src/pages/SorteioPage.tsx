@@ -1,4 +1,8 @@
 import React, { useState, useCallback } from "react";
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import SoftwareApplicationSchema from '@/components/seo/SoftwareApplicationSchema';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -360,6 +364,45 @@ export default function SorteioPage() {
   };
 
   return (
+    <>
+      <SEOHead
+        title="Sorteio Online Gratuito | Ferramenta LEGAL para Sorteios Justos"
+        description="Ferramenta gratuita de sorteio online da LEGAL. Realize sorteios justos e transparentes com histórico completo. Ideal para eventos, promoções e campanhas."
+        keywords="sorteio online, sorteio gratuito, ferramenta sorteio, sorteio justo, random, sorteio transparente, LEGAL"
+        url="https://operadora.legal/sorteio"
+        image="https://operadora.legal/images/sorteio-og.jpg"
+        type="website"
+      />
+      <WebPageSchema
+        name="Sorteio Online LEGAL"
+        description="Ferramenta gratuita para realizar sorteios online de forma justa e transparente"
+        url="https://operadora.legal/sorteio"
+        mainEntity={{
+          type: "WebApplication",
+          name: "Sorteio Online",
+          description: "Aplicação web para sorteios justos e transparentes"
+        }}
+      />
+      <BreadcrumbsSchema />
+      <SoftwareApplicationSchema
+        name="Sorteio Online LEGAL"
+        description="Ferramenta web gratuita para realizar sorteios de forma justa e transparente com histórico completo"
+        url="https://operadora.legal/sorteio"
+        applicationCategory="Utility"
+        operatingSystem="Web"
+        offers={{
+          price: "0",
+          priceCurrency: "BRL",
+          availability: "https://schema.org/InStock"
+        }}
+        features={[
+          "Sorteios justos e aleatórios",
+          "Histórico completo de sorteios",
+          "Interface intuitiva",
+          "Gratuito para uso",
+          "Sem limite de participantes"
+        ]}
+      />
     <div className="min-h-screen bg-gradient-to-br from-legal-gray via-background to-legal-gray px-4 pt-24 md:pt-28 pb-8">
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Header */}
@@ -535,5 +578,6 @@ export default function SorteioPage() {
         )}
       </div>
     </div>
+    </>
   );
-}
+};

@@ -1,6 +1,9 @@
 
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import CollectionPageSchema from '@/components/seo/CollectionPageSchema';
 import { Link } from 'react-router-dom';
 import { Search, BookOpen, Users, Zap, Newspaper, Activity, HelpCircle, ExternalLink, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -78,14 +81,40 @@ const UniversoPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Universo LEGAL | Blog, Histórias, BITS e Muito Mais</title>
-        <meta name="description" content="Explore o Universo LEGAL: blog TecTec, histórias de sucesso, programa BITS, notícias da imprensa, status dos serviços e FAQ." />
-        <meta property="og:title" content="Universo LEGAL | Conteúdos e Comunidade" />
-        <meta property="og:description" content="Descubra tudo sobre tecnologia, casos de sucesso e faça parte da comunidade LEGAL." />
-        <meta property="og:url" content="https://operadora.legal/universo" />
-        <meta name="keywords" content="LEGAL blog, casos de sucesso, programa fidelidade, tecnologia, conectividade" />
-      </Helmet>
+      <SEOHead
+        title="Universo LEGAL | Blog, Histórias, BITS e Muito Mais"
+        description="Explore o Universo LEGAL: blog TecTec, histórias de sucesso, programa BITS, notícias da imprensa, status dos serviços e FAQ."
+        keywords="LEGAL blog, casos de sucesso, programa fidelidade, tecnologia, conectividade, TecTec, recursos, pesquisas, imprensa"
+        url="https://operadora.legal/universo"
+        image="https://operadora.legal/images/universo-og.jpg"
+        type="website"
+      />
+      <WebPageSchema
+        name="Universo LEGAL"
+        description="Hub central de conteúdos, recursos e comunidade da LEGAL com blog, histórias de sucesso, programa BITS e muito mais"
+        url="https://operadora.legal/universo"
+        mainEntity={{
+          type: "CollectionPage",
+          name: "Universo LEGAL",
+          description: "Coleção de recursos, conteúdos e ferramentas da LEGAL"
+        }}
+      />
+      <BreadcrumbsSchema />
+      <CollectionPageSchema
+        name="Universo LEGAL"
+        description="Coleção completa de recursos, conteúdos e ferramentas da LEGAL"
+        url="https://operadora.legal/universo"
+        numberOfItems={universoSections.length}
+        mainEntity={universoSections.map(section => ({
+          name: section.title,
+          description: section.description,
+          url: `https://operadora.legal${section.link}`
+        }))}
+        about={{
+          name: "LEGAL TechCo",
+          description: "Maior TechCo do Brasil especializada em conectividade e eventos inteligentes"
+        }}
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Section */}

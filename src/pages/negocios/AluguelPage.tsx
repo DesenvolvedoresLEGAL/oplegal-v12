@@ -1,5 +1,9 @@
 import React, { Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
+import OfferSchema from '@/components/seo/OfferSchema';
 import AluguelHero from '@/components/aluguel/AluguelHero';
 import MainSolutions from '@/components/aluguel/MainSolutions';
 
@@ -132,32 +136,31 @@ const AluguelPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>LEGAL ALUGUE | Locação de Conectividade e Tecnologia para Eventos e Negócios</title>
-        <meta
-          name="description"
-          content="Alugue conectividade e tecnologia premium para eventos corporativos com a LEGAL. Equipamentos de ponta, instalação rápida e suporte 24/7 para o sucesso do seu evento."
-        />
-        <meta name="keywords" content="aluguel de internet para eventos, locação de internet temporária, soluções de rede para eventos, infraestrutura de TI para feiras, Wi-Fi para congressos, equipamentos de TI para aluguel, locação conectividade, aluguel roteador 5G, WiFi 6 eventos" />
-        <meta property="og:title" content="LEGAL ALUGUE | Locação de Conectividade e Tecnologia para Eventos" />
-        <meta property="og:description" content="Aluguel de equipamentos premium para eventos: 5G, WiFi 6, notebooks, switches e mais. Instalação em 24h e suporte técnico especializado." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://legal.com.br/negocios/alugue" />
-        <meta property="og:image" content="https://legal.com.br/images/legal-alugue-og.webp" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="LEGAL ALUGUE - Locação de equipamentos para eventos corporativos" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="LEGAL ALUGUE | Locação de Conectividade para Eventos" />
-        <meta name="twitter:description" content="Equipamentos premium para eventos: 5G, WiFi 6, infraestrutura completa com suporte 24/7." />
-        <meta name="twitter:image" content="https://legal.com.br/images/legal-alugue-twitter.webp" />
-        <link rel="canonical" href="https://legal.com.br/negocios/alugue" />
-        <link rel="preload" href="/fonts/neue-haas-unica.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        <script type="application/ld+json">
-          {JSON.stringify(combinedSchema)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="LEGAL ALUGUE | Locação de Conectividade e Tecnologia para Eventos e Negócios"
+        description="Alugue conectividade e tecnologia premium para eventos corporativos com a LEGAL. Equipamentos de ponta, instalação rápida e suporte 24/7 para o sucesso do seu evento."
+        keywords="aluguel de internet para eventos, locação de internet temporária, soluções de rede para eventos, infraestrutura de TI para feiras, Wi-Fi para congressos, equipamentos de TI para aluguel, locação conectividade, aluguel roteador 5G, WiFi 6 eventos"
+        url="https://operadora.legal/negocios/aluguel"
+        image="https://operadora.legal/images/legal-alugue-og.webp"
+        type="website"
+      />
+      <WebPageSchema
+        name="LEGAL ALUGUE - Locação de Equipamentos para Eventos"
+        description="Aluguel de conectividade e tecnologia premium para eventos corporativos com equipamentos de ponta"
+        url="https://operadora.legal/negocios/aluguel"
+      />
+      <BreadcrumbsSchema />
+      <ServiceSchema
+        name="LEGAL ALUGUE - Locação de Equipamentos para Eventos"
+        description="Aluguel de conectividade e tecnologia premium para eventos corporativos com equipamentos de ponta, instalação rápida e suporte 24/7"
+        provider={{
+          name: "LEGAL",
+          url: "https://operadora.legal"
+        }}
+        serviceType="Aluguel de Internet para Eventos"
+        areaServed={["Brasil"]}
+        priceRange="R$ 2500-50000"
+      />
 
       <div className="bg-background text-foreground font-unica">
         {/* Above-the-fold content loads immediately */}

@@ -15,6 +15,9 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import SEOHead from '@/components/SEOHead';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import SearchResultsPageSchema from '@/components/seo/SearchResultsPageSchema';
 import { blogPosts, featuredPosts } from '@/data/TecTecData';
 
 // Dados dos produtos para busca
@@ -210,6 +213,22 @@ const SearchPage = () => {
         keywords="busca LEGAL, produtos tecnologia, artigos inovação, recursos conectividade"
         url={`https://operadora.legal/busca${searchQuery ? `?q=${encodeURIComponent(searchQuery)}` : ''}`}
         type="website"
+      />
+      <WebPageSchema
+        name={searchQuery ? `Busca: ${searchQuery}` : 'Buscar LEGAL'}
+        description={searchQuery ? `Resultados de busca para "${searchQuery}" no site da LEGAL` : 'Página de busca do site da LEGAL'}
+        url={`https://operadora.legal/busca${searchQuery ? `?q=${encodeURIComponent(searchQuery)}` : ''}`}
+      />
+      <BreadcrumbsSchema />
+      <SearchResultsPageSchema
+        searchQuery={searchQuery}
+        numberOfResults={results.length}
+        results={results.map(result => ({
+          name: result.title,
+          url: `https://operadora.legal${result.url}`,
+          description: result.description
+        }))}
+        url={`https://operadora.legal/busca${searchQuery ? `?q=${encodeURIComponent(searchQuery)}` : ''}`}
       />
 
       <div className="min-h-screen bg-background pt-20">
