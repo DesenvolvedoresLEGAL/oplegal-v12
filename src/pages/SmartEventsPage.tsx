@@ -15,6 +15,19 @@ import BenchmarksSection from "@/components/smart-events/BenchmarksSection";
 import FinalCTASection from "@/components/smart-events/FinalCTASection";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import HowToSchema from "@/components/seo/HowToSchema";
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import ConversationalAIData from '@/components/seo/ConversationalAIData';
+import NaturalLanguageOptimization from '@/components/optimization/NaturalLanguageOptimization';
+import FeaturedSnippetsOptimization from '@/components/optimization/FeaturedSnippetsOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import TechnicalDocumentationAI from '@/components/seo/TechnicalDocumentationAI';
+import MetricsAndBenchmarksAI from '@/components/seo/MetricsAndBenchmarksAI';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const SmartEventsPage = () => {
   const smartEventsHowToSteps = [
@@ -40,12 +53,105 @@ const SmartEventsPage = () => {
     }
   ];
 
+  const conversationalFlows = [
+    {
+      intent: "smart_events_implementation",
+      patterns: ["como implementar smart events", "transformar evento inteligente", "iot em eventos"],
+      responses: ["Smart Events™ integra IoT, IA e analytics para criar experiências personalizadas e sustentáveis"],
+      context: "implementation_guide"
+    },
+    {
+      intent: "roi_benefits",
+      patterns: ["roi smart events", "benefícios eventos inteligentes", "retorno investimento"],
+      responses: ["Smart Events™ pode aumentar ROI em até 300% através de otimização de recursos e personalização"],
+      context: "business_value"
+    }
+  ];
+
+  const knowledgeBase = [
+    {
+      topic: "Smart Events Technology",
+      concepts: ["IoT Sensors", "Real-time Analytics", "AI Personalization", "Sustainability Metrics"],
+      relationships: ["Technology enables Experience", "Data drives Decisions", "Intelligence creates Value"]
+    }
+  ];
+
+  const naturalLanguagePatterns = [
+    {
+      question: "O que são Smart Events?",
+      answer: "Smart Events™ são eventos que utilizam IoT, IA e análise de dados para criar experiências personalizadas, sustentáveis e mensuráveis",
+      keywords: ["smart events", "eventos inteligentes", "iot", "inteligência artificial"],
+      intent: "definition"
+    }
+  ];
+
   return (
     <>
       <Helmet>
         <title>Smart Events™ - O novo padrão para eventos inteligentes | LEGAL</title>
         <meta name="description" content="Smart Events™ são eventos com infraestrutura tecnológica 100% integrada — IA, 5G, drones, IoT e dados em tempo real. Transforme eventos em experiências 10x mais conectadas, imersivas e lucrativas." />
       </Helmet>
+
+      {/* Phase 2 SEO Components */}
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization 
+        targetKeywords={["smart events", "eventos inteligentes", "iot eventos", "transformação digital eventos"]}
+        conversationalQueries={["como implementar smart events", "o que são eventos inteligentes"]}
+        pageContext="smart_events_main"
+      />
+      <ConversationalAIData 
+        productName="Smart Events™"
+        flows={conversationalFlows}
+        knowledgeBase={knowledgeBase}
+        naturalLanguagePatterns={naturalLanguagePatterns}
+      />
+      <NaturalLanguageOptimization 
+        primaryEntities={["Smart Events", "LEGAL TechCo", "IoT", "IA"]}
+        semanticKeywords={["eventos inteligentes", "transformação digital", "experiência personalizada"]}
+        contextualRelationships={["Smart Events utiliza IA", "IoT monitora participantes", "Analytics otimiza experiência"]}
+      />
+      <FeaturedSnippetsOptimization 
+        targetSnippets={[
+          { type: "definition", content: "Smart Events™ são eventos que integram IoT, IA e analytics para criar experiências personalizadas e sustentáveis" },
+          { type: "howto", content: "Para implementar Smart Events™: 1) Definir objetivos, 2) Instalar IoT, 3) Integrar analytics, 4) Otimizar continuamente" }
+        ]}
+      />
+      <GEOAdvancedOptimization 
+        contentDomain="smart_events"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <TechnicalDocumentationAI 
+        documentationType="implementation_guide"
+        technicalLevel="advanced"
+        targetAudience="event_professionals"
+      />
+      <MetricsAndBenchmarksAI 
+        industryBenchmarks={["300% ROI increase", "40% sustainability improvement", "85% participant satisfaction"]}
+        performanceMetrics={["real-time analytics", "predictive insights", "automated optimization"]}
+      />
+      <RealUserMonitoring 
+        trackingLevel="advanced"
+        performanceTargets={{ lcp: 2.5, fid: 100, cls: 0.1 }}
+      />
+      <CoreWebVitalsMonitor 
+        onMetricUpdate={(metric) => console.log('Smart Events metric:', metric)}
+        enableReporting={true}
+      />
+      <AIFeedbackSystem 
+        feedbackTypes={["user_experience", "content_relevance", "technical_performance"]}
+        optimizationTargets={["search_visibility", "user_engagement", "conversion_rate"]}
+      />
+      <AdvancedFeaturedSnippets 
+        pageType="service"
+        focusKeyword="smart events"
+        location="brasil"
+      />
+      <SEOCrawlerOptimization 
+        optimizationLevel="advanced"
+        contentType="service_page"
+        targetBots={["googlebot", "bingbot", "gpt-bot"]}
+      />
 
       <HowToSchema
         name="Como Transformar Seu Evento em Smart Events™"

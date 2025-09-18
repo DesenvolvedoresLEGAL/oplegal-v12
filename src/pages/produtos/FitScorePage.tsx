@@ -14,6 +14,19 @@ import CallToAction from '@/components/CallToAction';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
 import HowToSchema from '@/components/seo/HowToSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import ConversationalAIData from '@/components/seo/ConversationalAIData';
+import NaturalLanguageOptimization from '@/components/optimization/NaturalLanguageOptimization';
+import FeaturedSnippetsOptimization from '@/components/optimization/FeaturedSnippetsOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import TechnicalDocumentationAI from '@/components/seo/TechnicalDocumentationAI';
+import MetricsAndBenchmarksAI from '@/components/seo/MetricsAndBenchmarksAI';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const FitScorePage = () => {
   const fitScoreFAQs = [
@@ -51,6 +64,38 @@ const FitScorePage = () => {
       name: "Monitoring e Otimização",
       text: "Monitore métricas de contratação através de dashboards em tempo real e otimize continuamente os critérios baseado no feedback dos resultados.",
       image: "https://operadora.legal/images/fitscore-monitoring.jpg"
+    }
+  ];
+
+  const conversationalFlows = [
+    {
+      intent: "fitscore_matchmaking",
+      patterns: ["como fitscore conecta pessoas", "matchmaking inteligente eventos", "networking automatico"],
+      responses: ["FitScore™ usa IA para analisar perfis e conectar pessoas com maior potencial de networking, aumentando engajamento em 85%"],
+      context: "matchmaking_technology"
+    },
+    {
+      intent: "privacy_security",
+      patterns: ["fitscore privacidade", "dados seguros matchmaking", "lgpd networking"],
+      responses: ["FitScore™ garante máxima privacidade com criptografia avançada e total conformidade com LGPD"],
+      context: "privacy_compliance"
+    }
+  ];
+
+  const knowledgeBase = [
+    {
+      topic: "AI Matchmaking Technology",
+      concepts: ["Machine Learning", "Behavioral Analysis", "Profile Matching", "Network Effects"],
+      relationships: ["AI enables Connections", "Data drives Matching", "Intelligence creates Value"]
+    }
+  ];
+
+  const naturalLanguagePatterns = [
+    {
+      question: "O que é FitScore?",
+      answer: "FitScore™ é uma tecnologia de IA que analisa perfis e conecta participantes com alta compatibilidade em eventos",
+      keywords: ["fitscore", "matchmaking eventos", "networking inteligente", "ia conexões"],
+      intent: "product_definition"
     }
   ];
 
@@ -109,6 +154,67 @@ const FitScorePage = () => {
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
+
+      {/* Phase 2 SEO Components */}
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization 
+        targetKeywords={["fitscore matchmaking", "networking inteligente eventos", "ia personalização"]}
+        conversationalQueries={["como conectar pessoas eventos", "matchmaking automatico networking"]}
+        pageContext="fitscore_product"
+      />
+      <ConversationalAIData 
+        productName="FitScore™"
+        flows={conversationalFlows}
+        knowledgeBase={knowledgeBase}
+        naturalLanguagePatterns={naturalLanguagePatterns}
+      />
+      <NaturalLanguageOptimization 
+        primaryEntities={["FitScore", "Matchmaking", "Networking Inteligente", "LEGAL TechCo"]}
+        semanticKeywords={["conexões eventos", "personalização ia", "algoritmos compatibilidade"]}
+        contextualRelationships={["FitScore usa IA", "IA conecta Pessoas", "LEGAL desenvolve FitScore"]}
+      />
+      <FeaturedSnippetsOptimization 
+        targetSnippets={[
+          { type: "definition", content: "FitScore™ é uma tecnologia de IA que analisa perfis e conecta participantes com alta compatibilidade em eventos" },
+          { type: "howto", content: "Para usar FitScore™: 1) Cadastrar participantes, 2) Configurar algoritmos, 3) Ativar matching, 4) Facilitar conexões" }
+        ]}
+      />
+      <GEOAdvancedOptimization 
+        contentDomain="ai_matchmaking"
+        entityType="software"
+        optimizationLevel="advanced"
+      />
+      <TechnicalDocumentationAI 
+        documentationType="ai_technology_guide"
+        technicalLevel="intermediate"
+        targetAudience="event_organizers"
+      />
+      <MetricsAndBenchmarksAI 
+        industryBenchmarks={["85% engagement increase", "92% matching accuracy", "67% networking improvement"]}
+        performanceMetrics={["real-time matching", "behavioral analysis", "connection optimization"]}
+      />
+      <RealUserMonitoring 
+        trackingLevel="advanced"
+        performanceTargets={{ lcp: 2.5, fid: 100, cls: 0.1 }}
+      />
+      <CoreWebVitalsMonitor 
+        onMetricUpdate={(metric) => console.log('FitScore metric:', metric)}
+        enableReporting={true}
+      />
+      <AIFeedbackSystem 
+        feedbackTypes={["matching_quality", "user_satisfaction", "connection_success"]}
+        optimizationTargets={["matching_accuracy", "user_engagement", "networking_value"]}
+      />
+      <AdvancedFeaturedSnippets 
+        pageType="product"
+        focusKeyword="fitscore matchmaking eventos"
+        location="brasil"
+      />
+      <SEOCrawlerOptimization 
+        optimizationLevel="advanced"
+        contentType="product_page"
+        targetBots={["googlebot", "bingbot", "gpt-bot"]}
+      />
       
       <ProductFAQSchema
         productName="FitScore - Copiloto de Contratação com IA"

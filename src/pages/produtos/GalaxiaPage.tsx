@@ -10,6 +10,19 @@ import CallToAction from '@/components/CallToAction';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
 import HowToSchema from '@/components/seo/HowToSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import ConversationalAIData from '@/components/seo/ConversationalAIData';
+import NaturalLanguageOptimization from '@/components/optimization/NaturalLanguageOptimization';
+import FeaturedSnippetsOptimization from '@/components/optimization/FeaturedSnippetsOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import TechnicalDocumentationAI from '@/components/seo/TechnicalDocumentationAI';
+import MetricsAndBenchmarksAI from '@/components/seo/MetricsAndBenchmarksAI';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const GalaxiaPage = () => {
   const galaxiaFAQs = [
@@ -47,6 +60,38 @@ const GalaxiaPage = () => {
       name: "Monitoramento e Otimização",
       text: "Ativamos o monitoramento 24/7 e realizamos otimizações contínuas baseadas em performance e feedback dos usuários finais.",
       image: "https://operadora.legal/images/galaxia-monitoring.jpg"
+    }
+  ];
+
+  const conversationalFlows = [
+    {
+      intent: "galaxia_capabilities",
+      patterns: ["o que galaxia faz", "recursos plataforma galaxia", "funcionalidades ia eventos"],
+      responses: ["GALAXIA™ automatiza gestão de eventos com IA, otimiza recursos, personaliza experiências e aumenta ROI em até 400%"],
+      context: "product_capabilities"
+    },
+    {
+      intent: "implementation_timeline",
+      patterns: ["prazo implementação galaxia", "tempo setup plataforma", "quando posso usar galaxia"],
+      responses: ["GALAXIA™ é implementado em 15-30 dias com migração completa, treinamento e suporte dedicado"],
+      context: "implementation_process"
+    }
+  ];
+
+  const knowledgeBase = [
+    {
+      topic: "AI Event Management",
+      concepts: ["Machine Learning", "Predictive Analytics", "Process Automation", "Resource Optimization"],
+      relationships: ["AI enables Automation", "Data drives Predictions", "Intelligence optimizes Resources"]
+    }
+  ];
+
+  const naturalLanguagePatterns = [
+    {
+      question: "O que é GALAXIA?",
+      answer: "GALAXIA™ é uma plataforma de gestão de eventos alimentada por IA que automatiza processos e otimiza resultados",
+      keywords: ["galaxia", "plataforma eventos", "inteligência artificial", "gestão automatizada"],
+      intent: "product_overview"
     }
   ];
 
@@ -128,6 +173,67 @@ const GalaxiaPage = () => {
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
+
+      {/* Phase 2 SEO Components */}
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization 
+        targetKeywords={["galaxia plataforma", "gestão eventos ia", "automação inteligente eventos"]}
+        conversationalQueries={["como galaxia ajuda eventos", "plataforma inteligente gestão"]}
+        pageContext="galaxia_product"
+      />
+      <ConversationalAIData 
+        productName="GALAXIA™"
+        flows={conversationalFlows}
+        knowledgeBase={knowledgeBase}
+        naturalLanguagePatterns={naturalLanguagePatterns}
+      />
+      <NaturalLanguageOptimization 
+        primaryEntities={["GALAXIA", "Inteligência Artificial", "Gestão de Eventos", "LEGAL TechCo"]}
+        semanticKeywords={["automação eventos", "plataforma inteligente", "otimização recursos"]}
+        contextualRelationships={["GALAXIA utiliza IA", "IA otimiza Eventos", "LEGAL desenvolve GALAXIA"]}
+      />
+      <FeaturedSnippetsOptimization 
+        targetSnippets={[
+          { type: "definition", content: "GALAXIA™ é uma plataforma de gestão de eventos com IA que automatiza processos e aumenta ROI em até 400%" },
+          { type: "howto", content: "Para implementar GALAXIA™: 1) Análise de necessidades, 2) Configuração da plataforma, 3) Migração de dados, 4) Treinamento da equipe" }
+        ]}
+      />
+      <GEOAdvancedOptimization 
+        contentDomain="event_management_ai"
+        entityType="software"
+        optimizationLevel="advanced"
+      />
+      <TechnicalDocumentationAI 
+        documentationType="platform_guide"
+        technicalLevel="intermediate"
+        targetAudience="event_managers"
+      />
+      <MetricsAndBenchmarksAI 
+        industryBenchmarks={["400% ROI increase", "70% process automation", "95% user satisfaction"]}
+        performanceMetrics={["predictive analytics", "real-time optimization", "seamless integration"]}
+      />
+      <RealUserMonitoring 
+        trackingLevel="advanced"
+        performanceTargets={{ lcp: 2.5, fid: 100, cls: 0.1 }}
+      />
+      <CoreWebVitalsMonitor 
+        onMetricUpdate={(metric) => console.log('Galaxia metric:', metric)}
+        enableReporting={true}
+      />
+      <AIFeedbackSystem 
+        feedbackTypes={["platform_interest", "feature_requests", "integration_needs"]}
+        optimizationTargets={["demo_requests", "technical_education", "business_value"]}
+      />
+      <AdvancedFeaturedSnippets 
+        pageType="product"
+        focusKeyword="galaxia plataforma eventos ia"
+        location="brasil"
+      />
+      <SEOCrawlerOptimization 
+        optimizationLevel="advanced"
+        contentType="product_page"
+        targetBots={["googlebot", "bingbot", "gpt-bot"]}
+      />
       
       <ProductFAQSchema
         productName="GalaxIA™ - Inteligência Artificial sob medida"
