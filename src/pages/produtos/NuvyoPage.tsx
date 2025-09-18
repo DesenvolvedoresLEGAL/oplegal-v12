@@ -78,10 +78,9 @@ const NuvyoPage = () => {
   ];
 
   const nuvyoBenchmarks = [
-    { metric: "Qualidade de Imagem", value: 8, unit: "K", industry: "Produção Audiovisual", comparison: "vs 4K padrão mercado" },
-    { metric: "Satisfação do Cliente", value: 98, unit: "%", industry: "Serviços", comparison: "NPS superior" },
-    { metric: "Prazo de Entrega", value: 48, unit: "horas", industry: "Produção", comparison: "vs 7 dias mercado" },
-    { metric: "Custo vs Tradicional", value: 60, unit: "%", industry: "Audiovisual", comparison: "economia vs helicóptero" }
+    { metric: "Qualidade de Imagem", industry: "Produção Audiovisual", average: 4, ourProduct: 8, improvement: 4, unit: "K", description: "Resolução comparada ao padrão de mercado" },
+    { metric: "Satisfação do Cliente", industry: "Serviços", average: 75, ourProduct: 98, improvement: 23, unit: "%", description: "NPS de clientes atendidos" },
+    { metric: "Prazo de Entrega", industry: "Produção", average: 168, ourProduct: 48, improvement: 120, unit: "horas", description: "Tempo de entrega reduzido" }
   ];
 
   const nuvyoSpecs = [
@@ -154,27 +153,22 @@ const NuvyoPage = () => {
       
       <TechnicalDocumentationAI
         productName="Nuvyo"
-        category="Drone Photography Service"
-        description="Serviços profissionais de filmagem e fotografia aérea com drones certificados"
+        version="1.4"
         specifications={nuvyoSpecs}
         apiEndpoints={[]}
         integrations={["Adobe Premiere", "DaVinci Resolve", "Final Cut Pro", "Plataformas de entrega"]}
         systemRequirements={["Condições climáticas favoráveis", "Autorização ANAC quando necessário", "Acesso ao local"]}
         securityFeatures={["Pilotos certificados", "Seguro de equipamentos", "Backup de dados", "Entrega segura"]}
-        performanceMetrics={[
-          { metric: "Qualidade máxima", value: "8K" },
-          { metric: "Autonomia", value: "40min" },
-          { metric: "Satisfação", value: "98%" }
-        ]}
-        deploymentOptions={["Serviço sob demanda", "Contratos mensais", "Pacotes de eventos"]}
-        supportOptions={["Suporte técnico", "Edição profissional", "Entrega rápida", "Revisões ilimitadas"]}
+        performance={{ "Qualidade máxima": "8K", "Autonomia": "40min", "Satisfação": "98%" }}
+        deployment={["Serviço sob demanda", "Contratos mensais", "Pacotes de eventos"]}
+        support={{ sla: "Atendimento em 24h", channels: ["Suporte técnico", "WhatsApp", "Email"], documentation: "Guia de filmagem e checklist de pré-produção" }}
       />
       
       <MetricsAndBenchmarksAI
         productName="Nuvyo"
         benchmarks={nuvyoBenchmarks}
         industries={["Eventos", "Marketing", "Imobiliário", "Turismo"]}
-        enableROICalculator={true}
+        roiCalculator={{ enabled: true, defaultInvestment: 20000, benefitCategories: ["Economia de produção", "Agilidade de entrega", "Qualidade de imagem"] }}
       />
       
       <RealUserMonitoring
@@ -185,36 +179,20 @@ const NuvyoPage = () => {
       
       <ConversationalAIData
         productName="Nuvyo"
-        category="Filmagem com Drones"
-        primaryKeywords={["filmagem drone", "fotografia aérea", "vídeo drone"]}
-        conversationalFlows={[
-          {
-            intent: "drone_filming",
-            keywords: ["filmagem drone", "vídeo aéreo", "drone profissional"],
-            response: "Nuvyo oferece filmagem profissional 8K com drones certificados, qualidade cinematográfica para eventos e marketing."
-          },
-          {
-            intent: "cost_comparison",
-            keywords: ["preço filmagem", "custo drone", "orçamento"],
-            response: "60% mais econômico que helicóptero tradicional, com qualidade superior e flexibilidade total de ângulos."
-          }
+        flows={[
+          { intent: "drone_filming", patterns: ["filmagem drone", "vídeo aéreo", "drone profissional"], responses: [{ text: "Nuvyo oferece filmagem profissional 8K com drones certificados, qualidade cinematográfica para eventos e marketing.", context: "Equipe certificada e equipamentos premium", followUp: ["Ver portfólio", "Solicitar orçamento"] }] },
+          { intent: "cost_comparison", patterns: ["preço filmagem", "custo drone", "orçamento"], responses: [{ text: "60% mais econômico que helicóptero tradicional, com qualidade superior e flexibilidade total de ângulos.", context: "Economia sem comprometer qualidade", followUp: ["Comparar pacotes", "Calcular orçamento"] }] }
         ]}
-        useCases={[
-          "Filmagem de casamentos e eventos especiais",
-          "Conteúdo para marketing e redes sociais",
-          "Documentários e produções cinematográficas"
-        ]}
-        benefits={[
-          "Qualidade cinematográfica 8K",
-          "60% economia vs métodos tradicionais",
-          "Entrega em 48-72h"
-        ]}
-        pricing={{
-          plans: [
-            { name: "Básico", price: "R$ 850", features: ["2h filmagem", "Edição simples", "Entrega 72h"] },
-            { name: "Premium", price: "R$ 2.500", features: ["Dia completo", "Edição avançada", "Entrega 48h"] },
-            { name: "Cinematográfico", price: "R$ 8.500", features: ["Múltiplos dias", "Pós-produção completa", "Equipe dedicada"] }
-          ]
+        knowledgeBase={{
+          concepts: [{ term: "Filmagem Aérea", definition: "Captação de imagens com drones", synonyms: ["Vídeo drone", "Aéreo"], relatedTerms: ["Pós-produção", "Estabilização"] }],
+          processes: [{ name: "Fluxo de Produção", steps: ["Briefing", "Planejamento", "Captação", "Pós-produção"], duration: "1-2 semanas", requirements: ["Local", "Autorizações", "Briefing"] }],
+          troubleshooting: [{ issue: "Clima instável", symptoms: ["Vento", "Chuva"], solutions: ["Reagendar", "Plano B indoor"], priority: "high" }]
+        }}
+        naturalLanguagePatterns={{
+          questions: ["Qual o prazo de entrega?", "Qual a qualidade das imagens?"],
+          commands: ["Enviar orçamento", "Agendar captação"],
+          comparisons: ["Drone vs helicóptero", "8K vs 4K"],
+          benefits: ["Qualidade cinematográfica", "Entrega rápida", "Economia"]
         }}
       />
       

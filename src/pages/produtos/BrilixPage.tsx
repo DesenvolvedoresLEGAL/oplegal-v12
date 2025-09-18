@@ -277,8 +277,27 @@ const BrilixPage = () => {
               issue: "Condições climáticas desfavoráveis",
               symptoms: ["Vento forte", "Chuva", "Baixa visibilidade"],
               solutions: ["Reagendamento automático", "Monitoramento meteorológico", "Backup de equipamentos"],
-              priority: "high" as const
+              priority: "high"
             }
+          ]
+        }}
+        naturalLanguagePatterns={{
+          questions: [
+            "Como funciona a limpeza com drone?",
+            "É seguro usar drones para limpeza em altura?"
+          ],
+          commands: [
+            "Quero um orçamento Brilix",
+            "Agendar avaliação técnica"
+          ],
+          comparisons: [
+            "Brilix vs limpeza tradicional",
+            "Drone vs andaime"
+          ],
+          benefits: [
+            "Redução de custos",
+            "Eliminação de riscos",
+            "Execução mais rápida"
           ]
         }}
       />

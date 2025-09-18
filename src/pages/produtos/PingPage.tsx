@@ -131,8 +131,7 @@ const PingPage = () => {
       
       <TechnicalDocumentationAI
         productName="Ping"
-        category="Omnichannel Customer Service Platform"
-        description="Plataforma omnichannel de atendimento com IA e integração WhatsApp META"
+        version="3.2"
         specifications={[
           { name: "Canais Suportados", value: "10+", description: "WhatsApp, Instagram, Facebook, etc", unit: "canais" },
           { name: "Tempo de Resposta IA", value: "<3s", description: "Respostas automáticas", unit: "segundos" },
@@ -140,31 +139,27 @@ const PingPage = () => {
           { name: "Integrações", value: "20+", description: "CRMs e ERPs", unit: "sistemas" }
         ]}
         apiEndpoints={[
-          { method: "POST", endpoint: "/api/messages", description: "Enviar mensagem omnichannel", parameters: ["channel", "recipient", "message"], response: "Message ID e status" },
-          { method: "GET", endpoint: "/api/conversations", description: "Listar conversas", parameters: ["channel", "status", "agent"], response: "Lista de conversas ativas" }
+          { method: "POST", endpoint: "/api/messages", description: "Enviar mensagem omnichannel", parameters: { channel: "string", recipient: "string", message: "string" }, response: "Message ID e status" },
+          { method: "GET", endpoint: "/api/conversations", description: "Listar conversas", parameters: { channel: "string", status: "string", agent: "string" }, response: "Lista de conversas ativas" }
         ]}
         integrations={["WhatsApp Business API", "Instagram Graph API", "Facebook Messenger", "Telegram Bot", "Zendesk", "Freshdesk"]}
         systemRequirements={["Browser moderno", "Conexão estável", "Contas das redes sociais", "Permissões de administrador"]}
         securityFeatures={["Criptografia end-to-end", "LGPD compliance", "Backup automático", "Logs de auditoria"]}
-        performanceMetrics={[
-          { metric: "Tempo resposta", value: "<3s" },
-          { metric: "Disponibilidade", value: "99.9%" },
-          { metric: "Canais", value: "10+" }
-        ]}
-        deploymentOptions={["Cloud SaaS", "Integração API", "White Label"]}
-        supportOptions={["Suporte 24/7", "Onboarding dedicado", "Treinamento equipe", "Success Manager"]}
+        performance={{ "Tempo resposta": "<3s", "Disponibilidade": "99.9%", "Canais": "10+" }}
+        deployment={["Cloud SaaS", "Integração API", "White Label"]}
+        support={{ sla: "99.9% uptime", channels: ["Suporte 24/7", "Onboarding dedicado", "Treinamento equipe"], documentation: "API docs e guias de integração META" }}
       />
       
       <MetricsAndBenchmarksAI
         productName="Ping"
         benchmarks={[
-          { metric: "Redução Tempo Resposta", value: 90, unit: "%", industry: "Atendimento", comparison: "vs atendimento fragmentado" },
-          { metric: "Satisfação do Cliente", value: 85, unit: "%", industry: "Customer Service", comparison: "NPS superior" },
-          { metric: "Aumento Conversões", value: 300, unit: "%", industry: "E-commerce", comparison: "vs atendimento tradicional" },
-          { metric: "Produtividade Equipe", value: 200, unit: "%", industry: "Operações", comparison: "vs múltiplas plataformas" }
+          { metric: "Redução Tempo Resposta", industry: "Atendimento", average: 30, ourProduct: 90, improvement: 60, unit: "%", description: "Tempo de resposta reduzido vs fragmentado" },
+          { metric: "Satisfação do Cliente", industry: "Customer Service", average: 70, ourProduct: 85, improvement: 15, unit: "%", description: "NPS melhorado" },
+          { metric: "Aumento Conversões", industry: "E-commerce", average: 80, ourProduct: 300, improvement: 220, unit: "%", description: "Conversões após unificação" },
+          { metric: "Produtividade Equipe", industry: "Operações", average: 50, ourProduct: 200, improvement: 150, unit: "%", description: "Atendimentos por agente" }
         ]}
         industries={["E-commerce", "Serviços", "Saúde", "Educação"]}
-        enableROICalculator={true}
+        roiCalculator={{ enabled: true, defaultInvestment: 30000, benefitCategories: ["Automação de respostas", "Unificação de canais", "Produtividade"] }}
       />
       
       <RealUserMonitoring
@@ -175,36 +170,20 @@ const PingPage = () => {
       
       <ConversationalAIData
         productName="Ping"
-        category="Atendimento Omnichannel"
-        primaryKeywords={["atendimento omnichannel", "WhatsApp Business", "IA atendimento"]}
-        conversationalFlows={[
-          {
-            intent: "whatsapp_integration",
-            keywords: ["WhatsApp Business", "META integração", "WhatsApp atendimento"],
-            response: "Ping possui integração oficial META para WhatsApp Business, permitindo automação completa e gestão centralizada."
-          },
-          {
-            intent: "ai_automation",
-            keywords: ["IA atendimento", "chatbot inteligente", "automação resposta"],
-            response: "Nossa IA resolve questões simples automaticamente e transfere casos complexos para humanos, otimizando o atendimento."
-          }
+        flows={[
+          { intent: "whatsapp_integration", patterns: ["WhatsApp Business", "META integração", "WhatsApp atendimento"], responses: [{ text: "Integração oficial META para WhatsApp Business com automação completa e gestão centralizada.", context: "Conformidade META e templates aprovados", followUp: ["Ver integrações", "Iniciar onboarding"] }] },
+          { intent: "ai_automation", patterns: ["IA atendimento", "chatbot inteligente", "automação resposta"], responses: [{ text: "IA resolve questões simples e transfere casos complexos para humanos, otimizando o atendimento.", context: "Assistente híbrido humano+IA", followUp: ["Criar chatbot", "Medir KPIs"] }] }
         ]}
-        useCases={[
-          "Unificação de atendimento em redes sociais",
-          "Automação de respostas frequentes",
-          "Gestão centralizada de conversas"
-        ]}
-        benefits={[
-          "90% redução no tempo de resposta",
-          "85% de satisfação do cliente",
-          "300% aumento em conversões"
-        ]}
-        pricing={{
-          plans: [
-            { name: "Starter", price: "R$ 299/mês", features: ["3 canais", "IA básica", "5 usuários", "Suporte email"] },
-            { name: "Business", price: "R$ 899/mês", features: ["Canais ilimitados", "IA avançada", "20 usuários", "Suporte priority"] },
-            { name: "Enterprise", price: "Sob consulta", features: ["Customização completa", "IA proprietária", "Usuários ilimitados", "Success Manager"] }
-          ]
+        knowledgeBase={{
+          concepts: [{ term: "Omnichannel", definition: "Unificação de canais de atendimento", synonyms: ["Multicanal integrado"], relatedTerms: ["SLA", "CSAT"] }],
+          processes: [{ name: "Setup Ping", steps: ["Conectar canais", "Treinar IA", "Integrar CRM", "Configurar KPIs"], duration: "4 semanas", requirements: ["Contas sociais", "Acesso admin", "Base de conhecimento"] }],
+          troubleshooting: [{ issue: "Queda de CSAT", symptoms: ["Demora", "Respostas genéricas"], solutions: ["Ajustar bot", "Rever fluxos", "Treinar equipe"], priority: "medium" }]
+        }}
+        naturalLanguagePatterns={{
+          questions: ["O Ping integra com WhatsApp?", "Quais canais são suportados?"],
+          commands: ["Criar bot", "Unificar canais"],
+          comparisons: ["Ping vs plataformas tradicionais", "Omnichannel vs multicanal"],
+          benefits: ["Resposta mais rápida", "Maior satisfação", "Melhor conversão"]
         }}
       />
       

@@ -78,10 +78,9 @@ const HumanoidPage = () => {
   ];
 
   const humanoidBenchmarks = [
-    { metric: "Qualificação de Leads", value: 92, unit: "%", industry: "Vendas B2B", comparison: "vs 65% SDR tradicional" },
-    { metric: "Redução de CAC", value: 80, unit: "%", industry: "Marketing", comparison: "vs captação manual" },
-    { metric: "Aumento de Pipeline", value: 300, unit: "%", industry: "Vendas", comparison: "vs métodos tradicionais" },
-    { metric: "Disponibilidade", value: 24, unit: "horas/dia", industry: "Automação", comparison: "vs 8h SDR humano" }
+    { metric: "Qualificação de Leads", industry: "Vendas B2B", average: 65, ourProduct: 92, improvement: 27, unit: "%", description: "Precisão de qualificação vs SDR tradicional" },
+    { metric: "Redução de CAC", industry: "Marketing", average: 20, ourProduct: 80, improvement: 60, unit: "%", description: "Queda no custo de aquisição" },
+    { metric: "Aumento de Pipeline", industry: "Vendas", average: 90, ourProduct: 300, improvement: 210, unit: "%", description: "Crescimento do pipeline gerado" }
   ];
 
   const humanoidSpecs = [
@@ -92,8 +91,8 @@ const HumanoidPage = () => {
   ];
 
   const humanoidAPIs = [
-    { method: "POST", endpoint: "/api/leads", description: "Adicionar novo lead para qualificação", parameters: ["email", "company", "profile"], response: "Lead ID e score de qualificação" },
-    { method: "GET", endpoint: "/api/qualified-leads", description: "Obter leads qualificados", parameters: ["date_range", "score_min"], response: "Lista de leads com dados enriquecidos" }
+    { method: "POST", endpoint: "/api/leads", description: "Adicionar novo lead para qualificação", parameters: { email: "string", company: "string", profile: "string" }, response: "Lead ID e score de qualificação" },
+    { method: "GET", endpoint: "/api/qualified-leads", description: "Obter leads qualificados", parameters: { date_range: "string", score_min: "number" }, response: "Lista de leads com dados enriquecidos" }
   ];
 
   const structuredData = {
@@ -176,27 +175,30 @@ const HumanoidPage = () => {
       
       <TechnicalDocumentationAI
         productName="Humanoid"
-        category="AI Lead Generation Platform"
-        description="Agente de IA para captação e qualificação automática de leads B2B"
+        version="2.1"
         specifications={humanoidSpecs}
         apiEndpoints={humanoidAPIs}
         integrations={["Salesforce", "HubSpot", "Pipedrive", "RD Station", "ActiveCampaign", "Zendesk"]}
         systemRequirements={["Browser moderno", "CRM configurado", "API keys de integração", "Conexão estável"]}
         securityFeatures={["Criptografia de dados", "LGPD compliance", "OAuth 2.0", "Audit trail completo"]}
-        performanceMetrics={[
-          { metric: "Precisão qualificação", value: "92%" },
-          { metric: "Leads/dia", value: "10.000+" },
-          { metric: "Tempo resposta", value: "<30s" }
-        ]}
-        deploymentOptions={["SaaS Cloud", "API Integration", "White Label"]}
-        supportOptions={["Suporte 24/7", "Onboarding dedicado", "Training personalizado", "Success Manager"]}
+        performance={{
+          "Precisão de qualificação": "92%",
+          "Leads por dia": "10.000+",
+          "Tempo de resposta": "<30s"
+        }}
+        deployment={["SaaS Cloud", "API Integration", "White Label"]}
+        support={{
+          sla: "99.9% uptime",
+          channels: ["Suporte 24/7", "Onboarding dedicado", "Training personalizado"],
+          documentation: "Manual, API docs e playbooks de vendas"
+        }}
       />
       
       <MetricsAndBenchmarksAI
         productName="Humanoid"
         benchmarks={humanoidBenchmarks}
         industries={["Software B2B", "Consultoria", "E-commerce", "Serviços Financeiros"]}
-        enableROICalculator={true}
+        roiCalculator={{ enabled: true, defaultInvestment: 60000, benefitCategories: ["Automação de SDR", "Aumento de pipeline", "Economia de CAC"] }}
       />
       
       <RealUserMonitoring
@@ -206,37 +208,35 @@ const HumanoidPage = () => {
       />
       
       <ConversationalAIData
-        productName="Humanoid" 
-        category="Captação de Leads"
-        primaryKeywords={["captação de leads", "IA vendas", "SDR automático"]}
-        conversationalFlows={[
+        productName="Humanoid"
+        flows={[
           {
             intent: "lead_qualification",
-            keywords: ["qualificar leads", "leads qualificados", "SDR automático"],
-            response: "Humanoid qualifica leads automaticamente com 92% de precisão, trabalhando 24/7 para sua equipe de vendas."
+            patterns: ["qualificar leads", "leads qualificados", "SDR automático", "scoring"],
+            responses: [{ text: "Humanoid qualifica leads automaticamente com 92% de precisão, trabalhando 24/7 para sua equipe de vendas.", context: "IA proprietária treinada em sinais de intenção", followUp: ["Ver integrações", "Agendar demo"] }]
           },
           {
             intent: "crm_integration",
-            keywords: ["integração CRM", "Salesforce", "HubSpot", "Pipedrive"],
-            response: "Integração nativa com 50+ CRMs, transferindo leads enriquecidos automaticamente para seu funil de vendas."
+            patterns: ["integração CRM", "Salesforce", "HubSpot", "Pipedrive"],
+            responses: [{ text: "Integração nativa com 50+ CRMs, transferindo leads enriquecidos automaticamente para seu funil de vendas.", context: "APIs seguras com OAuth 2.0", followUp: ["Ver documentação", "Testar sandbox"] }]
           }
         ]}
-        useCases={[
-          "Captação automática de leads B2B",
-          "Qualificação de prospects em escala",
-          "Automação de SDR para empresas SaaS"
-        ]}
-        benefits={[
-          "500% mais leads qualificados",
-          "80% redução do CAC",
-          "Trabalha 24/7 sem parar"
-        ]}
-        pricing={{
-          plans: [
-            { name: "Starter", price: "R$ 2.500/mês", features: ["Até 1.000 leads/mês", "1 integração CRM", "Suporte email"] },
-            { name: "Growth", price: "R$ 8.500/mês", features: ["Até 10.000 leads/mês", "Integrações ilimitadas", "Suporte priority"] },
-            { name: "Enterprise", price: "Sob consulta", features: ["Leads ilimitados", "IA customizada", "Success Manager dedicado"] }
+        knowledgeBase={{
+          concepts: [
+            { term: "Lead Scoring", definition: "Pontuação de leads por probabilidade de compra", synonyms: ["Score de lead", "Qualificação"], relatedTerms: ["ICP", "Funil de vendas"] }
+          ],
+          processes: [
+            { name: "Onboarding Humanoid", steps: ["Configurar avatar", "Conectar CRM", "Treinar IA", "Ativar captação"], duration: "2 semanas", requirements: ["API do CRM", "Dados históricos", "Acesso de admin"] }
+          ],
+          troubleshooting: [
+            { issue: "Baixa taxa de resposta", symptoms: ["Poucos retornos", "Conversas travadas"], solutions: ["Ajustar copy", "Rever ICP", "Otimizar horários"], priority: "medium" }
           ]
+        }}
+        naturalLanguagePatterns={{
+          questions: ["Como qualificar leads?", "Integra com meu CRM?"],
+          commands: ["Criar pipeline", "Iniciar captação"],
+          comparisons: ["Humanoid vs SDR", "IA vs captura manual"],
+          benefits: ["Mais leads qualificados", "Menor CAC", "Operação 24/7"]
         }}
       />
       

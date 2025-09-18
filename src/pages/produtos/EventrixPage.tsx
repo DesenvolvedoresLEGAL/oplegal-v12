@@ -299,6 +299,25 @@ const EventrixPage = () => {
             }
           ]
         }}
+        naturalLanguagePatterns={{
+          questions: [
+            "Como o Eventrix aumenta o engajamento?",
+            "Quais integrações o Eventrix possui?"
+          ],
+          commands: [
+            "Quero uma demo do Eventrix",
+            "Gerar proposta"
+          ],
+          comparisons: [
+            "Eventrix vs plataformas tradicionais",
+            "Eventos com IA vs sem IA"
+          ],
+          benefits: [
+            "Aumento do engajamento",
+            "Melhoria do ROI",
+            "Automação de processos"
+          ]
+        }}
       />
       
       <EventSchema
