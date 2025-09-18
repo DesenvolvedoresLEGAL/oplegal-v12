@@ -7,6 +7,14 @@ import SectionTitle from '@/components/SectionTitle';
 import SEOHead from '@/components/SEOHead';
 import WebPageSchema from '@/components/seo/WebPageSchema';
 import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const StatusPage = () => {
   const [lastUpdate, setLastUpdate] = useState(new Date());
@@ -168,6 +176,21 @@ const StatusPage = () => {
         url="https://operadora.legal/universo/status"
         type="website"
       />
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technical"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="about"
+        focusKeyword="status serviços LEGAL"
+      />
+      <SEOCrawlerOptimization />
       <WebPageSchema
         name="Status dos Serviços | LEGAL"
         description="Monitore em tempo real o status de todos os serviços e produtos LEGAL."

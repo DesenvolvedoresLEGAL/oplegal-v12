@@ -15,6 +15,14 @@ import FeaturedPosts from '@/components/tectec/FeaturedPosts';
 import PostsList from '@/components/tectec/PostsList';
 import TecTecSidebar from '@/components/tectec/TecTecSidebar';
 import { blogPosts, blogSchema } from '@/data/TecTecData';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const TecTecPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -44,6 +52,22 @@ const TecTecPage = () => {
         preconnect={['https://fonts.googleapis.com', 'https://images.unsplash.com']}
         prefetch={['/universo/tectec/1', '/universo/tectec/2']}
       />
+
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="about"
+        focusKeyword="blog tecnologia conectividade"
+      />
+      <SEOCrawlerOptimization />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Breadcrumb com rich snippets */}

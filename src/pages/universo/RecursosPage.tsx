@@ -18,6 +18,14 @@ import SectionTitle from '@/components/SectionTitle';
 import SEOHead from '@/components/SEOHead';
 import WebPageSchema from '@/components/seo/WebPageSchema';
 import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const RecursosPage = () => {
   const quickStartCards = [
@@ -113,6 +121,21 @@ const RecursosPage = () => {
         url="https://operadora.legal/universo/recursos"
         type="website"
       />
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="education"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="about"
+        focusKeyword="recursos LEGAL documentação"
+      />
+      <SEOCrawlerOptimization />
       <WebPageSchema
         name="Recursos LEGAL | Central de Conhecimento"
         description="Centro de recursos da LEGAL: documentação, tutoriais, ferramentas e conteúdos para maximizar seu uso da plataforma."

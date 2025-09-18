@@ -10,6 +10,14 @@ import SEOHead from '@/components/SEOHead';
 import WebPageSchema from '@/components/seo/WebPageSchema';
 import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 import ArticleSchema from '@/components/seo/ArticleSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const ImprensaPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -118,6 +126,21 @@ const ImprensaPage = () => {
         url="https://operadora.legal/universo/imprensa"
         type="website"
       />
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="media"
+        entityType="company"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="about"
+        focusKeyword="imprensa LEGAL press releases"
+      />
+      <SEOCrawlerOptimization />
       <WebPageSchema
         name="Imprensa LEGAL | Press Releases e Kit de Mídia"
         description="Centro de imprensa da LEGAL com releases, notícias, kit de mídia e materiais para jornalistas."

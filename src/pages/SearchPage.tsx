@@ -18,6 +18,14 @@ import SEOHead from '@/components/SEOHead';
 import WebPageSchema from '@/components/seo/WebPageSchema';
 import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 import SearchResultsPageSchema from '@/components/seo/SearchResultsPageSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 import { blogPosts, featuredPosts } from '@/data/TecTecData';
 
 // Dados dos produtos para busca
@@ -214,6 +222,21 @@ const SearchPage = () => {
         url={`https://operadora.legal/busca${searchQuery ? `?q=${encodeURIComponent(searchQuery)}` : ''}`}
         type="website"
       />
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="homepage"
+        focusKeyword="buscar LEGAL produtos"
+      />
+      <SEOCrawlerOptimization />
       <WebPageSchema
         name={searchQuery ? `Busca: ${searchQuery}` : 'Buscar LEGAL'}
         description={searchQuery ? `Resultados de busca para "${searchQuery}" no site da LEGAL` : 'Página de busca do site da LEGAL'}

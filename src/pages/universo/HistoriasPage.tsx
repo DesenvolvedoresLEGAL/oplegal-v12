@@ -10,6 +10,14 @@ import { Badge } from '@/components/ui/badge';
 import SectionTitle from '@/components/SectionTitle';
 import SEOHead from '@/components/SEOHead';
 import OptimizedImage from '@/components/OptimizedImage';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 interface Historia {
   id: string;
@@ -211,6 +219,22 @@ const HistoriasPage = () => {
         type="website"
         schemaData={schemaData}
       />
+
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="business"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="about"
+        focusKeyword="casos sucesso transformação digital"
+      />
+      <SEOCrawlerOptimization />
 
       <Helmet>
         <link rel="preload" href="https://images.unsplash.com/photo-1631549916768-4119b4220292" as="image" />
