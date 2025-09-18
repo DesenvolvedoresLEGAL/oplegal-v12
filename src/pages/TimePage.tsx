@@ -118,14 +118,14 @@ const TimePage = () => {
       <VoiceSearchOptimization />
       <GEOAdvancedOptimization 
         contentDomain="business"
-        entityType="organization"
+        entityType="company"
         optimizationLevel="advanced"
       />
       <RealUserMonitoring />
       <CoreWebVitalsMonitor enableReporting={true} />
       <AIFeedbackSystem enableRealTimeOptimization={true} />
       <AdvancedFeaturedSnippets 
-        pageType="organization"
+        pageType="about"
         focusKeyword="LEGAL time equipe"
       />
       <SEOCrawlerOptimization />

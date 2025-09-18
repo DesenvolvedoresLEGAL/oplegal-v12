@@ -10,6 +10,14 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Zap, Wifi, Cpu, Package, Users, TrendingUp, Shield, Clock } from 'lucide-react';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 const businessUnits = [{
   id: 'aero',
   name: 'LEGAL AERO',
@@ -100,14 +108,14 @@ const NegociosPage = () => {
       <VoiceSearchOptimization />
       <GEOAdvancedOptimization 
         contentDomain="business"
-        entityType="organization"
+        entityType="company"
         optimizationLevel="advanced"
       />
       <RealUserMonitoring />
       <CoreWebVitalsMonitor enableReporting={true} />
       <AIFeedbackSystem enableRealTimeOptimization={true} />
       <AdvancedFeaturedSnippets 
-        pageType="organization"
+        pageType="about"
         focusKeyword="LEGAL negócios soluções"
       />
       <SEOCrawlerOptimization />

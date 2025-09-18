@@ -322,11 +322,11 @@ const SEOCrawlerOptimization: React.FC<SEOCrawlerOptimizationProps> = ({ onMetri
         </span>
         {metrics && (
           <div data-ai-field="performance-metrics">
-            <span data-metric="lcp">{metrics.lcp}ms</span>
-            <span data-metric="fid">{metrics.fid}ms</span>
-            <span data-metric="cls">{metrics.cls}</span>
-            <span data-metric="fcp">{metrics.fcp}ms</span>
-            <span data-metric="ttfb">{metrics.ttfb}ms</span>
+            <span data-metric="lcp">{metrics.lcp || 0}ms</span>
+            <span data-metric="fid">{metrics.fid || 0}ms</span>
+            <span data-metric="cls">{metrics.cls || 0}</span>
+            <span data-metric="fcp">{metrics.fcp || 0}ms</span>
+            <span data-metric="ttfb">{metrics.ttfb || 0}ms</span>
           </div>
         )}
       </div>
@@ -348,17 +348,17 @@ const SEOCrawlerOptimization: React.FC<SEOCrawlerOptimizationProps> = ({ onMetri
               {
                 "@type": "PropertyValue",
                 "name": "Largest Contentful Paint",
-                "value": `${metrics.lcp}ms`
+                "value": `${metrics.lcp || 0}ms`
               },
               {
                 "@type": "PropertyValue", 
                 "name": "First Input Delay",
-                "value": `${metrics.fid}ms`
+                "value": `${metrics.fid || 0}ms`
               },
               {
                 "@type": "PropertyValue",
                 "name": "Cumulative Layout Shift", 
-                "value": metrics.cls.toString()
+                "value": metrics.cls?.toString() || "0"
               }
             ] : []
           })

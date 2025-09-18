@@ -30,14 +30,14 @@ const PlaceholderPage = () => {
       <VoiceSearchOptimization />
       <GEOAdvancedOptimization 
         contentDomain="technology"
-        entityType="website"
+        entityType="company"
         optimizationLevel="advanced"
       />
       <RealUserMonitoring />
       <CoreWebVitalsMonitor enableReporting={true} />
       <AIFeedbackSystem enableRealTimeOptimization={true} />
       <AdvancedFeaturedSnippets 
-        pageType="website"
+        pageType="homepage"
         focusKeyword="LEGAL tecnologia"
       />
       <SEOCrawlerOptimization />

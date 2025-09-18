@@ -131,14 +131,14 @@ const PrecosPage = () => {
       <VoiceSearchOptimization />
       <GEOAdvancedOptimization 
         contentDomain="business"
-        entityType="offer"
+        entityType="service"
         optimizationLevel="advanced"
       />
       <RealUserMonitoring />
       <CoreWebVitalsMonitor enableReporting={true} />
       <AIFeedbackSystem enableRealTimeOptimization={true} />
       <AdvancedFeaturedSnippets 
-        pageType="offer"
+        pageType="pricing"
         focusKeyword="LEGAL preços planos"
       />
       <SEOCrawlerOptimization />
