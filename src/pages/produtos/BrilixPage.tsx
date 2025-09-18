@@ -200,9 +200,10 @@ const BrilixPage = () => {
         systemRequirements={["Espaço para decolagem", "Condições climáticas favoráveis", "Autorização ANAC"]}
         securityFeatures={["Operadores certificados", "Sistemas redundantes", "Sensores de obstáculo", "Seguro total"]}
         performance={{
-          "Altura máxima": "120m",
-          "Autonomia": "45min",
-          "Eficiência": "95%"
+          "cpu": "Controle autônomo de voo",
+          "memory": "Armazenamento de rotas e mapas",
+          "network": "Conectividade 5G para monitoramento",
+          "storage": "Logs de operação e relatórios"
         }}
         deployment={["Serviço sob demanda", "Contratos mensais", "Manutenção programada"]}
         support={{

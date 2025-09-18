@@ -159,9 +159,18 @@ const NuvyoPage = () => {
         integrations={["Adobe Premiere", "DaVinci Resolve", "Final Cut Pro", "Plataformas de entrega"]}
         systemRequirements={["Condições climáticas favoráveis", "Autorização ANAC quando necessário", "Acesso ao local"]}
         securityFeatures={["Pilotos certificados", "Seguro de equipamentos", "Backup de dados", "Entrega segura"]}
-        performance={{ "Qualidade máxima": "8K", "Autonomia": "40min", "Satisfação": "98%" }}
+        performance={{
+          "cpu": "Processamento de vídeo 8K em tempo real",
+          "memory": "Armazenamento seguro de footage",
+          "network": "Upload rápido para entrega",
+          "storage": "Backup automático em nuvem"
+        }}
         deployment={["Serviço sob demanda", "Contratos mensais", "Pacotes de eventos"]}
-        support={{ sla: "Atendimento em 24h", channels: ["Suporte técnico", "WhatsApp", "Email"], documentation: "Guia de filmagem e checklist de pré-produção" }}
+        support={{
+          sla: "Atendimento em 24h",
+          channels: ["Suporte técnico", "WhatsApp", "Email"],
+          documentation: "Guia de filmagem e checklist de pré-produção"
+        }}
       />
       
       <MetricsAndBenchmarksAI

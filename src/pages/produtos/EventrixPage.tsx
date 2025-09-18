@@ -218,9 +218,10 @@ const EventrixPage = () => {
         systemRequirements={["Browser moderno", "Conexão estável", "JavaScript habilitado"]}
         securityFeatures={["Criptografia end-to-end", "LGPD compliance", "SSO integrado", "Backup automático"]}
         performance={{
-          "Latência API": "<200ms",
-          "Disponibilidade": "99.9%",
-          "Capacidade": "Ilimitada"
+          "cpu": "Processamento IA otimizado para eventos",
+          "memory": "Cache inteligente de participantes",
+          "network": "APIs <200ms latência",
+          "storage": "Big Data para análise preditiva"
         }}
         deployment={["Cloud", "Híbrido", "On-premise"]}
         support={{

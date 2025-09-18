@@ -145,9 +145,18 @@ const PingPage = () => {
         integrations={["WhatsApp Business API", "Instagram Graph API", "Facebook Messenger", "Telegram Bot", "Zendesk", "Freshdesk"]}
         systemRequirements={["Browser moderno", "Conexão estável", "Contas das redes sociais", "Permissões de administrador"]}
         securityFeatures={["Criptografia end-to-end", "LGPD compliance", "Backup automático", "Logs de auditoria"]}
-        performance={{ "Tempo resposta": "<3s", "Disponibilidade": "99.9%", "Canais": "10+" }}
+        performance={{
+          "cpu": "Processamento de mensagens em tempo real",
+          "memory": "Cache otimizado de conversas",
+          "network": "APIs <3s resposta garantida",
+          "storage": "Histórico seguro de mensagens"
+        }}
         deployment={["Cloud SaaS", "Integração API", "White Label"]}
-        support={{ sla: "99.9% uptime", channels: ["Suporte 24/7", "Onboarding dedicado", "Treinamento equipe"], documentation: "API docs e guias de integração META" }}
+        support={{
+          sla: "99.9% uptime",
+          channels: ["Suporte 24/7", "Onboarding dedicado", "Treinamento equipe"],
+          documentation: "API docs e guias de integração META"
+        }}
       />
       
       <MetricsAndBenchmarksAI

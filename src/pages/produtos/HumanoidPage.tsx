@@ -182,9 +182,10 @@ const HumanoidPage = () => {
         systemRequirements={["Browser moderno", "CRM configurado", "API keys de integração", "Conexão estável"]}
         securityFeatures={["Criptografia de dados", "LGPD compliance", "OAuth 2.0", "Audit trail completo"]}
         performance={{
-          "Precisão de qualificação": "92%",
-          "Leads por dia": "10.000+",
-          "Tempo de resposta": "<30s"
+          "cpu": "Otimizado para processamento em lote de leads",
+          "memory": "Uso eficiente com cache inteligente",
+          "network": "APIs otimizadas <30s resposta",
+          "storage": "Banco de dados escalável"
         }}
         deployment={["SaaS Cloud", "API Integration", "White Label"]}
         support={{
