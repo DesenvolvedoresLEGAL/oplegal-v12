@@ -12,6 +12,10 @@ import ChatbotButton from "@/components/ChatbotButton";
 import NewsletterExitPopup from "@/components/NewsletterExitPopup";
 import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
+import CoreWebVitalsMonitor from "@/components/seo/CoreWebVitalsMonitor";
+import IndustrySpecificSEO from "@/components/seo/IndustrySpecificSEO";
+import AdvancedFeaturedSnippets from "@/components/seo/AdvancedFeaturedSnippets";
+import GEOAdvancedOptimization from "@/components/seo/GEOAdvancedOptimization";
 
 const HomePage = () => {
   useScrollAnimations();
@@ -46,6 +50,23 @@ const HomePage = () => {
           secondaryButtonText="Ver Casos de Sucesso"
           secondaryButtonLink="/universo/historias"
           background="gradient"
+        />
+        
+        <CoreWebVitalsMonitor enableReporting={true} />
+        <IndustrySpecificSEO 
+          industries={["Tecnologia", "Corporativo", "Educação", "Entretenimento"]}
+          primarySolutions={["Smart Events™", "MAGICPASS™", "FitScore™", "GALAXIA™"]}
+          useCase="eventos-corporativos"
+        />
+        <AdvancedFeaturedSnippets 
+          pageType="homepage"
+          focusKeyword="Smart Events"
+          location="Brasil"
+        />
+        <GEOAdvancedOptimization 
+          contentDomain="smart_events"
+          entityType="company"
+          optimizationLevel="advanced"
         />
         
         <ChatbotButton />

@@ -20,6 +20,11 @@ import VoiceSearchOptimization from "@/components/optimization/VoiceSearchOptimi
 import ConversationalAIData from "@/components/optimization/ConversationalAIData";
 import FeaturedSnippetsOptimization from "@/components/optimization/FeaturedSnippetsOptimization";
 import NaturalLanguageOptimization from "@/components/optimization/NaturalLanguageOptimization";
+import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
+import CoreWebVitalsMonitor from "@/components/seo/CoreWebVitalsMonitor";
+import IndustrySpecificSEO from "@/components/seo/IndustrySpecificSEO";
+import AdvancedFeaturedSnippets from "@/components/seo/AdvancedFeaturedSnippets";
+import GEOAdvancedOptimization from "@/components/seo/GEOAdvancedOptimization";
 
 const Index = () => {
   useScrollAnimations();
@@ -76,6 +81,23 @@ const Index = () => {
         pageContext="smart_events_homepage"
         primaryEntities={["LEGAL TechCo", "Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™"]}
         semanticTopics={["eventos inteligentes", "tecnologia", "inteligência artificial", "inovação"]}
+      />
+      <LocalBusinessSchema />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <IndustrySpecificSEO 
+        industries={["Tecnologia", "Corporativo", "Educação", "Entretenimento"]}
+        primarySolutions={["Smart Events™", "MAGICPASS™", "FitScore™", "GALAXIA™"]}
+        useCase="eventos-corporativos"
+      />
+      <AdvancedFeaturedSnippets 
+        pageType="homepage"
+        focusKeyword="Smart Events"
+        location="Brasil"
+      />
+      <GEOAdvancedOptimization 
+        contentDomain="smart_events"
+        entityType="company"
+        optimizationLevel="advanced"
       />
       <PreloadResources />
       <PerformanceOptimizer />
