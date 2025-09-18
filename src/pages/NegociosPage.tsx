@@ -96,6 +96,22 @@ const NegociosPage = () => {
         ]}
       />
       
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="business"
+        entityType="organization"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="organization"
+        focusKeyword="LEGAL negócios soluções"
+      />
+      <SEOCrawlerOptimization />
+      
       <Breadcrumbs />
 
       <Helmet>

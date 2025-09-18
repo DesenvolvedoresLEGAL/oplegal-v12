@@ -16,6 +16,11 @@ import CoreWebVitalsMonitor from "@/components/seo/CoreWebVitalsMonitor";
 import IndustrySpecificSEO from "@/components/seo/IndustrySpecificSEO";
 import AdvancedFeaturedSnippets from "@/components/seo/AdvancedFeaturedSnippets";
 import GEOAdvancedOptimization from "@/components/seo/GEOAdvancedOptimization";
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const HomePage = () => {
   useScrollAnimations();
@@ -23,7 +28,22 @@ const HomePage = () => {
   return (
     <>
       <HomePageSEO />
-      <PreloadResources />
+      <PerformanceOptimizer />
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="company"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="homepage"
+        focusKeyword="LEGAL tecnologia eventos"
+      />
+      <SEOCrawlerOptimization />
       
       <main role="main" className="layout-stable">
         {/* Hero Section - H1 Principal */}

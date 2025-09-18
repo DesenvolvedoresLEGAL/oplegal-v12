@@ -10,6 +10,14 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import SectionTitle from '@/components/SectionTitle';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const UniversoPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -115,6 +123,22 @@ const UniversoPage = () => {
           description: "Maior TechCo do Brasil especializada em conectividade e eventos inteligentes"
         }}
       />
+
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="organization"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="organization"
+        focusKeyword="Universo LEGAL tecnologia"
+      />
+      <SEOCrawlerOptimization />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         {/* Hero Section */}

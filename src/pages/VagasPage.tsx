@@ -23,6 +23,14 @@ import SEOHead from '@/components/SEOHead';
 import WebPageSchema from '@/components/seo/WebPageSchema';
 import BreadcrumbsSchema from '@/components/seo/BreadcrumbsSchema';
 import JobPostingSchema from '@/components/seo/JobPostingSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const openPositions = [
   {
@@ -191,6 +199,22 @@ const VagasPage = () => {
           datePosted: "2025-01-01"
         }))}
       />
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="business"
+        entityType="organization"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="organization"
+        focusKeyword="LEGAL vagas carreiras"
+      />
+      <SEOCrawlerOptimization />
+      
       <BreadcrumbsSchema />
 
       <div className="bg-background text-foreground font-unica">

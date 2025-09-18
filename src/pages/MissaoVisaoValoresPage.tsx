@@ -12,6 +12,14 @@ import PrincipiosSection from '@/components/missao-visao-valores/PrincipiosSecti
 import ComoAgimosSection from '@/components/missao-visao-valores/ComoAgimosSection';
 import NossaHistoriaSection from '@/components/somos-legal/NossaHistoriaSection';
 import CallToAction from '@/components/CallToAction';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const MissaoVisaoValoresPage = () => {
   const pageSchema = {
@@ -51,6 +59,22 @@ const MissaoVisaoValoresPage = () => {
         type="website"
         schemaData={pageSchema}
       />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="business"
+        entityType="organization"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="organization"
+        focusKeyword="LEGAL missão visão valores"
+      />
+      <SEOCrawlerOptimization />
       
       <main className="bg-background text-foreground font-unica">
         <MissaoVisaoValoresHero />

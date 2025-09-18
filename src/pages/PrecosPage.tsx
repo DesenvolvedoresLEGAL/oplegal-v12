@@ -8,6 +8,14 @@ import { Calculator, TrendingUp, Clock, Users, AlertTriangle, CheckCircle } from
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 const PrecosPage = () => {
   const [selectedDays, setSelectedDays] = useState(15);
   const [selectedDemand, setSelectedDemand] = useState(60);
@@ -118,6 +126,22 @@ const PrecosPage = () => {
           { name: "Preços", url: "https://operadora.legal/precos" }
         ]}
       />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="business"
+        entityType="offer"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="offer"
+        focusKeyword="LEGAL preços planos"
+      />
+      <SEOCrawlerOptimization />
       
       <Breadcrumbs />
 

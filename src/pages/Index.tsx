@@ -25,6 +25,7 @@ import CoreWebVitalsMonitor from "@/components/seo/CoreWebVitalsMonitor";
 import IndustrySpecificSEO from "@/components/seo/IndustrySpecificSEO";
 import AdvancedFeaturedSnippets from "@/components/seo/AdvancedFeaturedSnippets";
 import GEOAdvancedOptimization from "@/components/seo/GEOAdvancedOptimization";
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
 
 const Index = () => {
   useScrollAnimations();
@@ -32,7 +33,24 @@ const Index = () => {
   return (
     <>
       <HomePageSEO />
-      <TechnicalSEO 
+      <PerformanceOptimizer />
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="company"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="homepage"
+        focusKeyword="LEGAL tecnologia eventos"
+      />
+      <SEOCrawlerOptimization />
+      
+      <TechnicalSEO
         canonical="https://operadora.legal"
         prefetchUrls={[
           "/smart-events",

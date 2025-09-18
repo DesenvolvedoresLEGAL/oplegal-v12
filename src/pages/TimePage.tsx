@@ -10,6 +10,14 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Users, Heart, Target, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const leadership = [{
   name: "Wagner",
@@ -105,6 +113,22 @@ const TimePage = () => {
           { name: "Nosso Time", url: "https://operadora.legal/time" }
         ]}
       />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="business"
+        entityType="organization"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="organization"
+        focusKeyword="LEGAL time equipe"
+      />
+      <SEOCrawlerOptimization />
       
       <Breadcrumbs />
 
