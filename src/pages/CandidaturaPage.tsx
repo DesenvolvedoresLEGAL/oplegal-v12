@@ -288,6 +288,7 @@ const CandidaturaPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

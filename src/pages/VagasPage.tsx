@@ -182,7 +182,7 @@ const VagasPage = () => {
       <JobPostingSchema
         jobs={openPositions.map(position => ({
           title: position.title,
-          description: position.responsibilities.join('. '),
+          description: position.description,
           department: position.department,
           location: position.location,
           type: position.type,
@@ -192,8 +192,8 @@ const VagasPage = () => {
         }))}
       />
       <BreadcrumbsSchema />
-  return (
-    <div className="bg-background text-foreground font-unica">
+
+      <div className="bg-background text-foreground font-unica">
       {/* Hero Section */}
       <section className="py-24 md:py-32 text-center bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -398,6 +398,7 @@ const VagasPage = () => {
         background="gradient"
       />
     </div>
+    </>
   );
 };
 
