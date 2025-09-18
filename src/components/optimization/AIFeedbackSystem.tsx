@@ -33,12 +33,14 @@ interface AITrend {
 interface AIFeedbackSystemProps {
   enabled?: boolean;
   realTimeMonitoring?: boolean;
+  enableRealTimeOptimization?: boolean;
   onFeedbackUpdate?: (metrics: AIFeedbackMetrics) => void;
 }
 
 const AIFeedbackSystem: React.FC<AIFeedbackSystemProps> = ({
   enabled = true,
   realTimeMonitoring = true,
+  enableRealTimeOptimization = true,
   onFeedbackUpdate
 }) => {
   const [metrics, setMetrics] = useState<AIFeedbackMetrics>({

@@ -15,6 +15,8 @@ interface ConversationalAIDataProps {
   domain?: string;
   conversationFlows?: ConversationFlow[];
   enableAdvancedNLP?: boolean;
+  intentClassification?: string[];
+  entityTypes?: string[];
 }
 
 const ConversationalAIData: React.FC<ConversationalAIDataProps> = ({

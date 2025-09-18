@@ -12,6 +12,9 @@ interface FeaturedSnippetsOptimizationProps {
   snippets?: FeaturedSnippetData[];
   businessName?: string;
   primaryKeywords?: string[];
+  pageType?: string;
+  primaryTopic?: string;
+  targetQuestions?: string[];
 }
 
 const FeaturedSnippetsOptimization: React.FC<FeaturedSnippetsOptimizationProps> = ({
