@@ -6,6 +6,14 @@ import ServiceSchema from '@/components/seo/ServiceSchema';
 import OfferSchema from '@/components/seo/OfferSchema';
 import AluguelHero from '@/components/aluguel/AluguelHero';
 import MainSolutions from '@/components/aluguel/MainSolutions';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 // Lazy load components that are not critical for above-the-fold
 const IndustryUseCases = lazy(() => import('@/components/aluguel/IndustryUseCases'));
@@ -162,6 +170,22 @@ const AluguelPage = () => {
         priceRange="R$ 2500-50000"
         url="https://operadora.legal/negocios/aluguel"
       />
+
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="about"
+        focusKeyword="aluguel equipamentos eventos"
+      />
+      <SEOCrawlerOptimization />
 
       <div className="bg-background text-foreground font-unica">
         {/* Above-the-fold content loads immediately */}

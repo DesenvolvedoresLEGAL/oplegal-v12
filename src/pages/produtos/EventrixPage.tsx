@@ -19,6 +19,13 @@ import MetricsAndBenchmarksAI from '@/components/seo/MetricsAndBenchmarksAI';
 import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
 import ConversationalAIData from '@/components/seo/ConversationalAIData';
 import EventSchema from '@/components/seo/EventSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const EventrixPage = () => {
   const eventrixFAQs = [
@@ -353,6 +360,21 @@ const EventrixPage = () => {
           }
         ]}
       />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="product"
+        focusKeyword="Eventrix gestão eventos IA"
+      />
+      <SEOCrawlerOptimization />
       
       <Breadcrumbs />
       

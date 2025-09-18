@@ -14,6 +14,14 @@ import NeuraFitTestimonials from '@/components/neurafit/NeuraFitTestimonials';
 import NeuraFitDemo from '@/components/neurafit/NeuraFitDemo';
 import NeuraFitFAQ from '@/components/neurafit/NeuraFitFAQ';
 import CallToAction from '@/components/CallToAction';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const NeuraFitPage = () => {
   const structuredData = {
@@ -89,6 +97,22 @@ const NeuraFitPage = () => {
       />
       
       <FAQPageSchema faqs={faqData} pageUrl="https://operadora.legal/produtos/neurafit" />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="product"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="product"
+        focusKeyword="NeuraFit desenvolvimento cognitivo"
+      />
+      <SEOCrawlerOptimization />
       
       <Breadcrumbs />
       

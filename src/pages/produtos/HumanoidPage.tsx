@@ -19,6 +19,13 @@ import TechnicalDocumentationAI from '@/components/seo/TechnicalDocumentationAI'
 import MetricsAndBenchmarksAI from '@/components/seo/MetricsAndBenchmarksAI';
 import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
 import ConversationalAIData from '@/components/seo/ConversationalAIData';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const HumanoidPage = () => {
   const humanoidFAQs = [
@@ -240,6 +247,21 @@ const HumanoidPage = () => {
           benefits: ["Mais leads qualificados", "Menor CAC", "Operação 24/7"]
         }}
       />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="product"
+        focusKeyword="Humanoid captação leads IA"
+      />
+      <SEOCrawlerOptimization />
       
       <Breadcrumbs />
       

@@ -10,6 +10,14 @@ import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 import CallToAction from '@/components/CallToAction';
 import { Button } from '@/components/ui/button';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const AssinaturaPage = () => {
   const benefits = [
@@ -142,6 +150,22 @@ const AssinaturaPage = () => {
         }}
         availability="InStock"
       />
+
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="pricing"
+        focusKeyword="assinatura 5G empresarial"
+      />
+      <SEOCrawlerOptimization />
 
       <div className="bg-background text-foreground font-unica">
         {/* Hero Section - Igual ao LEGAL AI */}

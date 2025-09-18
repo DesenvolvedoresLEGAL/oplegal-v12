@@ -12,6 +12,14 @@ import LinkAIDemo from '@/components/linkai/LinkAIDemo';
 import LinkAIFAQ from '@/components/linkai/LinkAIFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const LinkAIPage = () => {
   const linkAIFAQs = [
@@ -47,6 +55,22 @@ const LinkAIPage = () => {
         faqs={linkAIFAQs}
         productUrl="https://operadora.legal/produtos/linkai"
       />
+      
+      <AIKnowledgeProvider />
+      <VoiceSearchOptimization />
+      <GEOAdvancedOptimization 
+        contentDomain="technology"
+        entityType="service"
+        optimizationLevel="advanced"
+      />
+      <RealUserMonitoring />
+      <CoreWebVitalsMonitor enableReporting={true} />
+      <AIFeedbackSystem enableRealTimeOptimization={true} />
+      <AdvancedFeaturedSnippets 
+        pageType="product"
+        focusKeyword="LinkAI matchmaking IA"
+      />
+      <SEOCrawlerOptimization />
       
       <Breadcrumbs />
       

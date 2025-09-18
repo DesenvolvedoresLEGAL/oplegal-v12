@@ -17,6 +17,13 @@ import TechnicalDocumentationAI from '@/components/seo/TechnicalDocumentationAI'
 import MetricsAndBenchmarksAI from '@/components/seo/MetricsAndBenchmarksAI';
 import ConversationalAIData from '@/components/seo/ConversationalAIData';
 import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
+import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
+import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
+import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
+import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
+import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
+import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
 
 const Blue6Page = () => {
   // Phase 2 Enhanced SEO Data
@@ -105,7 +112,6 @@ const Blue6Page = () => {
         <Blue6Demo />
         <Blue6FAQ />
         
-        {/* Phase 2 Enhanced SEO Components */}
         <ProductFAQSchema 
           productName="Blue6" 
           faqs={blue6FAQs}
@@ -116,6 +122,21 @@ const Blue6Page = () => {
           productName="Blue6"
         />
         <RealUserMonitoring enabled={true} />
+        
+        <AIKnowledgeProvider />
+        <VoiceSearchOptimization />
+        <GEOAdvancedOptimization 
+          contentDomain="technology"
+          entityType="product"
+          optimizationLevel="advanced"
+        />
+        <CoreWebVitalsMonitor enableReporting={true} />
+        <AIFeedbackSystem enableRealTimeOptimization={true} />
+        <AdvancedFeaturedSnippets 
+          pageType="product"
+          focusKeyword="Blue6 hotspot wifi"
+        />
+        <SEOCrawlerOptimization />
         
         <CallToAction
           title="Revolucione sua Conectividade WiFi"
