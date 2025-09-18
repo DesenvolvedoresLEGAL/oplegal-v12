@@ -11,8 +11,49 @@ import FitScoreTestimonials from '@/components/fitscore/FitScoreTestimonials';
 import FitScoreDemo from '@/components/fitscore/FitScoreDemo';
 import FitScoreFAQ from '@/components/fitscore/FitScoreFAQ';
 import CallToAction from '@/components/CallToAction';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
+import HowToSchema from '@/components/seo/HowToSchema';
 
 const FitScorePage = () => {
+  const fitScoreFAQs = [
+    {
+      question: "Como o FitScore analisa o fit cultural dos candidatos?",
+      answer: "O FitScore utiliza algoritmos de processamento de linguagem natural para analisar respostas, histórico profissional e comportamento digital dos candidatos, comparando com o perfil cultural da empresa definido através de questionários estruturados e dados históricos de colaboradores bem-sucedidos."
+    },
+    {
+      question: "Qual é a precisão do matching de candidatos?",
+      answer: "Nosso sistema possui 95% de precisão no matching, baseado em análise de milhares de contratações bem-sucedidas. A IA considera mais de 150 variáveis incluindo skills técnicas, soft skills, experiência e compatibilidade cultural."
+    },
+    {
+      question: "O FitScore está em conformidade com a LGPD?",
+      answer: "Sim, 100%. Todos os dados são criptografados e processados seguindo rigorosamente as diretrizes da LGPD. Candidatos têm controle total sobre seus dados e podem solicitar exclusão a qualquer momento."
+    }
+  ];
+
+  const fitScoreHowToSteps = [
+    {
+      name: "Configuração do Perfil da Empresa",
+      text: "Configure o perfil cultural e os requisitos técnicos da sua empresa através de questionários estruturados e análise dos colaboradores atuais de alta performance.",
+      image: "https://operadora.legal/images/fitscore-setup.jpg"
+    },
+    {
+      name: "Integração com ATS",
+      text: "Conecte o FitScore com seu sistema de ATS existente através de APIs nativas, mantendo todos os processos atuais funcionando normalmente.",
+      image: "https://operadora.legal/images/fitscore-integration.jpg"
+    },
+    {
+      name: "Análise Inteligente de Candidatos",
+      text: "A IA analisa automaticamente todos os candidatos usando mais de 150 variáveis, gerando scores de compatibilidade cultural e técnica em tempo real.",
+      image: "https://operadora.legal/images/fitscore-analysis.jpg"
+    },
+    {
+      name: "Monitoring e Otimização",
+      text: "Monitore métricas de contratação através de dashboards em tempo real e otimize continuamente os critérios baseado no feedback dos resultados.",
+      image: "https://operadora.legal/images/fitscore-monitoring.jpg"
+    }
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -68,6 +109,24 @@ const FitScorePage = () => {
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
+      
+      <ProductFAQSchema
+        productName="FitScore - Copiloto de Contratação com IA"
+        faqs={fitScoreFAQs}
+        productUrl="https://operadora.legal/produtos/fitscore"
+      />
+      
+      <HowToSchema
+        name="Como Implementar o FitScore no Seu RH"
+        description="Guia completo para implementar o copiloto de contratação FitScore e revolucionar seus processos de RH com IA"
+        steps={fitScoreHowToSteps}
+        totalTime="P3W"
+        estimatedCost="A partir de R$ 25.000"
+        supply={["Dados de colaboradores atuais", "Histórico de contratações", "Perfil cultural da empresa"]}
+        tool={["Dashboard FitScore", "Integração ATS", "Analytics de RH"]}
+      />
+      
+      <Breadcrumbs />
       
       <main>
         <FitScoreHero />

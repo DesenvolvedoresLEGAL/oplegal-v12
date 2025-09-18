@@ -7,8 +7,49 @@ import GalaxiaBenefits from '@/components/galaxia/GalaxiaBenefits';
 import GalaxiaDifferentials from '@/components/galaxia/GalaxiaDifferentials';
 import GalaxiaTestimonialsEnhanced from '@/components/galaxia/GalaxiaTestimonialsEnhanced';
 import CallToAction from '@/components/CallToAction';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
+import HowToSchema from '@/components/seo/HowToSchema';
 
 const GalaxiaPage = () => {
+  const galaxiaFAQs = [
+    {
+      question: "O que diferencia GalaxIA de outras soluções de IA?",
+      answer: "GalaxIA oferece infraestrutura dedicada com clusters GPU NVIDIA A100/H100, APIs REST/GraphQL personalizadas, modelos LLM (GPT, BERT), Computer Vision (YOLO, ResNet) e fine-tuning proprietário. Diferente de soluções genéricas, cada implementação é arquitetada especificamente para suas necessidades de negócio."
+    },
+    {
+      question: "Qual o tempo de implementação?",
+      answer: "O tempo varia conforme a complexidade do projeto, mas tipicamente entre 4-12 semanas. Isso inclui análise de requisitos, configuração da infraestrutura, desenvolvimento de APIs personalizadas e treinamento dos modelos."
+    },
+    {
+      question: "Como funciona a escalabilidade automática?",
+      answer: "Nossa infraestrutura monitora constantemente a demanda e ajusta recursos automaticamente. Isso garante performance otimizada durante picos de uso e redução de custos durante períodos de baixa demanda."
+    }
+  ];
+
+  const galaxiaHowToSteps = [
+    {
+      name: "Análise de Necessidades",
+      text: "Nossa equipe de arquitetos de soluções analisa seus processos atuais, identifica gargalos e define os requisitos técnicos para sua infraestrutura de IA personalizada.",
+      image: "https://operadora.legal/images/galaxia-analysis.jpg"
+    },
+    {
+      name: "Design da Arquitetura",
+      text: "Projetamos uma arquitetura customizada com clusters GPU dedicados, APIs personalizadas e modelos de IA específicos para suas necessidades de negócio.",
+      image: "https://operadora.legal/images/galaxia-design.jpg"
+    },
+    {
+      name: "Implementação e Treinamento",
+      text: "Desenvolvemos e implementamos a solução, incluindo fine-tuning dos modelos com seus dados proprietários e integração com sistemas existentes.",
+      image: "https://operadora.legal/images/galaxia-implementation.jpg"
+    },
+    {
+      name: "Monitoramento e Otimização",
+      text: "Ativamos o monitoramento 24/7 e realizamos otimizações contínuas baseadas em performance e feedback dos usuários finais.",
+      image: "https://operadora.legal/images/galaxia-monitoring.jpg"
+    }
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -87,6 +128,24 @@ const GalaxiaPage = () => {
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
+      
+      <ProductFAQSchema
+        productName="GalaxIA™ - Inteligência Artificial sob medida"
+        faqs={galaxiaFAQs}
+        productUrl="https://operadora.legal/produtos/galaxia"
+      />
+      
+      <HowToSchema
+        name="Como Implementar GalaxIA™ na Sua Empresa"
+        description="Guia completo para implementar infraestrutura de IA personalizada com GalaxIA™ em ambientes empresariais"
+        steps={galaxiaHowToSteps}
+        totalTime="P4W"
+        estimatedCost="A partir de R$ 50.000"
+        supply={["Dados empresariais", "Definição de processos", "Requisitos de integração"]}
+        tool={["Clusters GPU dedicados", "APIs personalizadas", "Dashboard administrativo"]}
+      />
+      
+      <Breadcrumbs />
       
       <main>
         <GalaxiaHero />

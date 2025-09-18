@@ -9,6 +9,7 @@ import FitScoreBenefits from '@/components/fitscore/FitScoreBenefits';
 import FitScoreProcess from '@/components/fitscore/FitScoreProcess';
 import FitScoreUseCases from '@/components/fitscore/FitScoreUseCases';
 import FitScoreIntegration from '@/components/fitscore/FitScoreIntegration';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const FitScorePage = () => {
   return (
@@ -37,6 +38,8 @@ const FitScorePage = () => {
           currency: 'BRL'
         }}
       />
+      
+      <Breadcrumbs />
       
       <main>
         <FitScoreHero />

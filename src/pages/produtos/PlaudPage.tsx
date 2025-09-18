@@ -11,8 +11,25 @@ import PlaudFAQ from "@/components/plaud/PlaudFAQ";
 import PlaudPricingSection from "@/components/plaud/PlaudPricingSection";
 import CallToAction from "@/components/CallToAction";
 import ChatbotButton from "@/components/ChatbotButton";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import ProductFAQSchema from "@/components/seo/ProductFAQSchema";
 
 const PlaudPage = () => {
+  const plaudFAQs = [
+    {
+      question: "Como funciona a gravação de voz do Plaud?",
+      answer: "O Plaud utiliza tecnologia avançada de gravação com cancelamento de ruído e processamento de áudio em tempo real. Captura conversas com alta qualidade e as transcreve automaticamente usando IA de processamento de linguagem natural."
+    },
+    {
+      question: "Quantos idiomas o Plaud suporta?",
+      answer: "O Plaud suporta mais de 112 idiomas para transcrição e tradução automática, incluindo português brasileiro, inglês, espanhol, francês, alemão, japonês, chinês e muitos outros."
+    },
+    {
+      question: "O Plaud está em conformidade com a LGPD?",
+      answer: "Sim, completamente. Todas as gravações são criptografadas localmente no dispositivo e você tem controle total sobre onde e como os dados são armazenados. Oferecemos opções de processamento local para máxima privacidade."
+    }
+  ];
+
   return (
     <>
       <SEOHead 
@@ -22,6 +39,14 @@ const PlaudPage = () => {
         url="https://operadora.legal/produtos/plaud"
         canonical="https://operadora.legal/produtos/plaud"
       />
+      
+      <ProductFAQSchema
+        productName="Plaud - Gravação de Voz com IA"
+        faqs={plaudFAQs}
+        productUrl="https://operadora.legal/produtos/plaud"
+      />
+      
+      <Breadcrumbs />
       
       <main role="main">
         <PlaudHero />

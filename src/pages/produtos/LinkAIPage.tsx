@@ -10,8 +10,25 @@ import LinkAIUseCases from '@/components/linkai/LinkAIUseCases';
 import LinkAITestimonials from '@/components/linkai/LinkAITestimonials';
 import LinkAIDemo from '@/components/linkai/LinkAIDemo';
 import LinkAIFAQ from '@/components/linkai/LinkAIFAQ';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
 
 const LinkAIPage = () => {
+  const linkAIFAQs = [
+    {
+      question: "Como o LinkAI faz o matching de pessoas?",
+      answer: "O LinkAI analisa perfis profissionais, interesses, objetivos de networking e histórico de interações usando algoritmos de machine learning. A IA identifica pontos de sinergia e oportunidades de valor mútuo para criar conexões de alta qualidade."
+    },
+    {
+      question: "Qual a taxa de sucesso do matching?",
+      answer: "Nossa plataforma possui 95% de satisfação nas conexões realizadas, com 3x mais conexões relevantes comparado ao networking tradicional e ROI 5x superior para organizadores de eventos."
+    },
+    {
+      question: "LinkAI funciona para que tipos de eventos?",
+      answer: "LinkAI é ideal para eventos B2B, conferências corporativas, feiras de negócios, networking empresarial, meetups profissionais e qualquer evento onde networking qualificado é prioritário."
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -24,6 +41,14 @@ const LinkAIPage = () => {
         <meta property="og:url" content="https://legal.com.br/produtos/linkai" />
         <link rel="canonical" href="https://legal.com.br/produtos/linkai" />
       </Helmet>
+      
+      <ProductFAQSchema
+        productName="LinkAI - Matchmaking Inteligente com IA"
+        faqs={linkAIFAQs}
+        productUrl="https://operadora.legal/produtos/linkai"
+      />
+      
+      <Breadcrumbs />
       
       <main>
         <LinkAIHero />
