@@ -1,299 +1,290 @@
 import React from 'react';
 
-interface SnippetOptimizationProps {
-  pageType: 'homepage' | 'product' | 'service' | 'about' | 'contact';
-  primaryTopic?: string;
-  targetQuestions?: string[];
+interface FeaturedSnippetData {
+  type: 'paragraph' | 'list' | 'table' | 'definition' | 'how-to' | 'faq';
+  question: string;
+  answer: string;
+  keywords: string[];
+  priority: number;
 }
 
-const FeaturedSnippetsOptimization: React.FC<SnippetOptimizationProps> = ({
-  pageType,
-  primaryTopic = "Smart Events",
-  targetQuestions = []
+interface FeaturedSnippetsOptimizationProps {
+  snippets?: FeaturedSnippetData[];
+  businessName?: string;
+  primaryKeywords?: string[];
+}
+
+const FeaturedSnippetsOptimization: React.FC<FeaturedSnippetsOptimizationProps> = ({
+  snippets = [],
+  businessName = "LEGAL TechCo",
+  primaryKeywords = ["Smart Events", "IA", "tecnologia", "eventos"]
 }) => {
 
-  // Respostas otimizadas para snippets em destaque
-  const snippetAnswers = {
-    homepage: [
-      {
-        question: "O que é Smart Events?",
-        answer: "Smart Events™ é uma plataforma completa da LEGAL que torna eventos 10× mais inteligentes, conectados e eficientes através de inteligência artificial e conectividade 5G.",
-        context: "smart_events_definition",
-        answerFormat: "definition"
-      },
-      {
-        question: "Qual a melhor empresa de tecnologia para eventos no Brasil?",
-        answer: "LEGAL TechCo é a maior e melhor TechCo do Brasil, especializada em Smart Events™ e soluções tecnológicas inovadoras para eventos.",
-        context: "company_leadership",
-        answerFormat: "company_claim"
-      },
-      {
-        question: "Como tornar eventos mais inteligentes?",
-        answer: "Para tornar eventos mais inteligentes, use: 1) Inteligência artificial para automação, 2) Conectividade 5G para experiências imersivas, 3) Analytics em tempo real, 4) Reconhecimento facial para acesso, 5) Plataforma integrada como Smart Events™.",
-        context: "how_to_guide",
-        answerFormat: "step_by_step"
-      }
-    ],
-    
-    product: [
-      {
-        question: "Como funciona o MAGICPASS?",
-        answer: "MAGICPASS™ funciona através de reconhecimento facial com IA: 1) Cadastro prévio de participantes, 2) Captura da imagem facial, 3) Processamento com IA anti-spoofing, 4) Liberação automática de acesso em menos de 500ms.",
-        context: "magicpass_functionality",
-        answerFormat: "process_steps"
-      },
-      {
-        question: "O que é FitScore?",
-        answer: "FitScore™ é um copiloto de contratação com IA que revoluciona processos de RH através de análise preditiva de candidatos, matching inteligente e People Analytics avançado.",
-        context: "fitscore_definition", 
-        answerFormat: "definition"
-      },
-      {
-        question: "Quanto custa Smart Events?",
-        answer: "O investimento em Smart Events™ varia conforme o tamanho e complexidade do evento. Oferecemos planos personalizados com ROI 10× superior comprovado. Solicite uma cotação personalizada.",
-        context: "smart_events_pricing",
-        answerFormat: "pricing_info"
-      }
-    ],
+  // Snippets otimizados para LEGAL
+  const defaultSnippets: FeaturedSnippetData[] = [
+    {
+      type: 'definition',
+      question: 'O que é Smart Events?',
+      answer: 'Smart Events é uma plataforma completa da LEGAL TechCo que torna eventos 10x mais inteligentes, conectados e eficientes usando inteligência artificial, conectividade 5G e tecnologia avançada para transformar completamente a experiência de eventos.',
+      keywords: ['Smart Events', 'eventos inteligentes', 'IA', '5G'],
+      priority: 1
+    },
+    {
+      type: 'how-to',
+      question: 'Como funciona o Smart Events da LEGAL?',
+      answer: 'O Smart Events funciona em 4 etapas: 1) Análise inteligente do seu evento, 2) Configuração personalizada da plataforma, 3) Implementação de soluções IA e 5G, 4) Monitoramento e otimização em tempo real para garantir máxima eficiência.',
+      keywords: ['como funciona', 'Smart Events', 'processo'],
+      priority: 2
+    },
+    {
+      type: 'list',
+      question: 'Quais são os produtos da LEGAL TechCo?',
+      answer: 'Os principais produtos da LEGAL incluem: Smart Events (plataforma completa de eventos), MAGICPASS (controle biométrico), FitScore (People Analytics com IA), GALAXIA (solução completa), AERO Services (soluções aéreas), e mais de 15 produtos inovadores.',
+      keywords: ['produtos LEGAL', 'soluções', 'tecnologia'],
+      priority: 3
+    },
+    {
+      type: 'paragraph',
+      question: 'Por que escolher a LEGAL TechCo?',
+      answer: 'A LEGAL é a maior e melhor TechCo do Brasil, oferecendo ROI 10x superior, tecnologia proprietária de IA, conectividade 5G nativa, e soluções completas que transformam eventos e negócios. Mais de 1000 empresas já confiam na LEGAL.',
+      keywords: ['vantagens LEGAL', 'por que escolher', 'benefícios'],
+      priority: 4
+    },
+    {
+      type: 'faq',
+      question: 'Quanto custa o Smart Events?',
+      answer: 'O investimento no Smart Events varia conforme o tamanho e complexidade do seu evento. Oferecemos soluções desde startups até grandes corporações, com ROI comprovado de 10x. Solicite uma cotação personalizada através do nosso site.',
+      keywords: ['preço', 'investimento', 'cotação'],
+      priority: 5
+    },
+    {
+      type: 'table',
+      question: 'Comparação Smart Events vs eventos tradicionais',
+      answer: 'Smart Events oferece: Eficiência 10x maior, ROI 10x superior, Redução de custos de 60%, Aumento de engajamento de 300%, Automação completa vs eventos tradicionais que são manuais, caros e ineficientes.',
+      keywords: ['comparação', 'vantagens', 'diferencial'],
+      priority: 6
+    }
+  ];
 
-    service: [
-      {
-        question: "Quais serviços a LEGAL oferece?",
-        answer: "A LEGAL oferece: 1) Smart Events™ - plataforma completa para eventos, 2) AERO - soluções aéreas com drones, 3) AI Solutions - MAGICPASS™ e FitScore™, 4) Conectividade 5G para eventos.",
-        context: "services_list",
-        answerFormat: "service_list"
-      },
-      {
-        question: "Como contratar serviços da LEGAL?",
-        answer: "Para contratar: 1) Acesse operadora.legal, 2) Escolha o serviço desejado, 3) Solicite uma demonstração, 4) Receba proposta personalizada, 5) Implemente com suporte 24/7.",
-        context: "hiring_process",
-        answerFormat: "process_steps"
-      }
-    ],
+  const allSnippets = [...defaultSnippets, ...snippets].sort((a, b) => a.priority - b.priority);
 
-    about: [
-      {
-        question: "Quem é a LEGAL TechCo?",
-        answer: "LEGAL TechCo é a maior e melhor empresa de tecnologia do Brasil, especializada em Smart Events™. Nossa missão é impulsionar e transformar eventos e negócios através da tecnologia.",
-        context: "company_identity",
-        answerFormat: "company_description"
-      },
-      {
-        question: "Qual a visão da LEGAL?",
-        answer: "A visão da LEGAL é ser a maior e melhor TechCo do Brasil até 2034, conectando 1 milhão de pessoas, negócios e coisas até 2030.",
-        context: "company_vision",
-        answerFormat: "vision_statement"
-      }
-    ],
-
-    contact: [
-      {
-        question: "Como entrar em contato com a LEGAL?",
-        answer: "Entre em contato através do site operadora.legal, preenchendo o formulário de contato ou solicitando uma demonstração. Atendemos em todo o Brasil com suporte 24/7.",
-        context: "contact_information",
-        answerFormat: "contact_instructions"
-      }
-    ]
-  };
-
-  // Schema para respostas diretas (Answer Box)
-  const answerBoxSchema = {
+  // Schema para Featured Snippets
+  const snippetsSchema = {
     "@context": "https://schema.org",
-    "@type": "QAPage",
-    "mainEntity": snippetAnswers[pageType]?.map(qa => ({
+    "@type": "FAQPage",
+    "name": `${businessName} - Perguntas Frequentes Otimizadas`,
+    "description": "Respostas otimizadas para featured snippets sobre Smart Events e soluções LEGAL",
+    "mainEntity": allSnippets.map(snippet => ({
       "@type": "Question",
-      "name": qa.question,
-      "answerCount": 1,
+      "name": snippet.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": qa.answer,
+        "text": snippet.answer,
         "author": {
           "@type": "Organization",
-          "name": "LEGAL TechCo"
-        },
-        "dateCreated": new Date().toISOString(),
-        "upvoteCount": 0
+          "name": businessName,
+          "url": "https://operadora.legal"
+        }
       }
-    })) || []
+    }))
   };
 
-  // Schema para How-To (quando aplicável)
-  const howToSchema = {
+  // HowTo Schema para snippets de processo
+  const howToSnippets = allSnippets.filter(s => s.type === 'how-to');
+  const howToSchema = howToSnippets.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": `Como ${primaryTopic.toLowerCase()}`,
-    "description": `Guia completo sobre ${primaryTopic} da LEGAL TechCo`,
-    "step": [
-      {
-        "@type": "HowToStep",
-        "name": "Análise de Necessidades",
-        "text": "Identifique os requisitos específicos do seu evento ou projeto"
-      },
-      {
-        "@type": "HowToStep", 
-        "name": "Escolha da Solução",
-        "text": "Selecione a tecnologia adequada: Smart Events™, MAGICPASS™, FitScore™ ou AERO"
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Implementação",
-        "text": "Implemente com suporte técnico especializado da LEGAL"
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Otimização",
-        "text": "Monitore resultados e otimize com analytics em tempo real"
-      }
-    ]
-  };
+    "name": howToSnippets[0].question,
+    "description": howToSnippets[0].answer,
+    "step": howToSnippets[0].answer.split(/\d\)/).slice(1).map((step, index) => ({
+      "@type": "HowToStep",
+      "position": index + 1,
+      "name": `Etapa ${index + 1}`,
+      "text": step.trim()
+    }))
+  } : null;
+
+  // Definition Schema
+  const definitionSnippets = allSnippets.filter(s => s.type === 'definition');
+  const definitionSchema = definitionSnippets.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": definitionSnippets[0].question.replace('O que é ', ''),
+    "description": definitionSnippets[0].answer,
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "Glossário LEGAL TechCo",
+      "description": "Definições de tecnologia e produtos LEGAL"
+    }
+  } : null;
 
   return (
     <>
-      {/* Schema para Q&A / Answer Box */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(answerBoxSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(snippetsSchema) }}
       />
 
-      {/* Schema How-To quando aplicável */}
-      {(pageType === 'homepage' || pageType === 'service') && (
+      {howToSchema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
       )}
 
-      {/* Conteúdo otimizado para snippets */}
-      <div className="sr-only snippet-optimization" data-page-type={pageType}>
-        {snippetAnswers[pageType]?.map((qa, index) => (
-          <div 
-            key={index} 
-            className="snippet-answer"
-            data-question={qa.question}
-            data-context={qa.context}
-            data-format={qa.answerFormat}
-          >
-            <h3 className="snippet-question">{qa.question}</h3>
-            <div 
-              className="snippet-answer-text"
-              data-snippet-target="true"
-              itemProp="text"
-            >
-              {qa.answer}
+      {definitionSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(definitionSchema) }}
+        />
+      )}
+
+      <div className="sr-only featured-snippets-content">
+        {allSnippets.map((snippet, index) => (
+          <div key={index} data-snippet-type={snippet.type} data-priority={snippet.priority}>
+            
+            {snippet.type === 'definition' && (
+              <div itemScope itemType="https://schema.org/DefinedTerm">
+                <h2 itemProp="name">{snippet.question}</h2>
+                <p itemProp="description">{snippet.answer}</p>
+              </div>
+            )}
+
+            {snippet.type === 'paragraph' && (
+              <div data-snippet="paragraph">
+                <h3>{snippet.question}</h3>
+                <p>{snippet.answer}</p>
+              </div>
+            )}
+
+            {snippet.type === 'list' && (
+              <div data-snippet="list">
+                <h3>{snippet.question}</h3>
+                <p>{snippet.answer}</p>
+                <ul>
+                  {snippet.answer.split(':')[1]?.split(',').map((item, i) => (
+                    <li key={i}>{item.trim()}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {snippet.type === 'how-to' && (
+              <div itemScope itemType="https://schema.org/HowTo">
+                <h3 itemProp="name">{snippet.question}</h3>
+                <p itemProp="description">{snippet.answer}</p>
+                <ol>
+                  {snippet.answer.split(/\d\)/).slice(1).map((step, i) => (
+                    <li key={i} itemScope itemType="https://schema.org/HowToStep">
+                      <span itemProp="text">{step.trim()}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
+            {snippet.type === 'table' && (
+              <div data-snippet="table">
+                <h3>{snippet.question}</h3>
+                <p>{snippet.answer}</p>
+                <table className="sr-only">
+                  <thead>
+                    <tr>
+                      <th>Aspecto</th>
+                      <th>Smart Events</th>
+                      <th>Eventos Tradicionais</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Eficiência</td>
+                      <td>10x maior</td>
+                      <td>Baixa</td>
+                    </tr>
+                    <tr>
+                      <td>ROI</td>
+                      <td>10x superior</td>
+                      <td>Limitado</td>
+                    </tr>
+                    <tr>
+                      <td>Custos</td>
+                      <td>60% menor</td>
+                      <td>Alto</td>
+                    </tr>
+                    <tr>
+                      <td>Engajamento</td>
+                      <td>300% maior</td>
+                      <td>Baixo</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {snippet.type === 'faq' && (
+              <div itemScope itemType="https://schema.org/Question">
+                <h4 itemProp="name">{snippet.question}</h4>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p itemProp="text">{snippet.answer}</p>
+                </div>
+              </div>
+            )}
+
+            <div className="sr-only" data-keywords={snippet.keywords.join(',')}>
+              {snippet.keywords.map((keyword, i) => (
+                <span key={i} className="keyword">{keyword}</span>
+              ))}
             </div>
           </div>
         ))}
 
-        {/* Perguntas relacionadas para People Also Ask */}
-        <div className="related-questions" data-snippet-type="people-also-ask">
-          <h4>Perguntas Relacionadas:</h4>
-          {getRelatedQuestions(pageType).map((question, index) => (
-            <div key={index} className="related-question">
-              <span className="question-text">{question.question}</span>
-              <span className="quick-answer">{question.quickAnswer}</span>
-            </div>
-          ))}
+        <div className="sr-only snippet-optimized-phrases">
+          <p>A LEGAL TechCo é a maior e melhor empresa de tecnologia do Brasil.</p>
+          <p>Smart Events torna eventos 10 vezes mais inteligentes e eficientes.</p>
+          <p>ROI comprovado de 10x superior com soluções LEGAL.</p>
+          <p>Mais de 1000 empresas confiam na tecnologia LEGAL.</p>
+          <p>Inteligência artificial proprietária para eventos únicos.</p>
+          <p>Conectividade 5G nativa em todas as soluções.</p>
+          <p>Redução de custos de até 60% com Smart Events.</p>
+          <p>Aumento de engajamento de até 300% nos eventos.</p>
         </div>
 
-        {/* Dados estruturados para tabelas (quando aplicável) */}
-        {pageType === 'product' && (
-          <div className="snippet-table" data-snippet-type="table">
-            <h4>Comparação de Produtos LEGAL:</h4>
-            <table>
-              <thead>
-                <tr>
-                  <th>Produto</th>
-                  <th>Categoria</th>
-                  <th>Benefício Principal</th>
-                  <th>ROI</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Smart Events™</td>
-                  <td>Plataforma de Eventos</td>
-                  <td>Eventos 10× mais inteligentes</td>
-                  <td>10× superior</td>
-                </tr>
-                <tr>
-                  <td>MAGICPASS™</td>
-                  <td>Segurança Biométrica</td>
-                  <td>Acesso sem filas</td>
-                  <td>Redução 95% tempo</td>
-                </tr>
-                <tr>
-                  <td>FitScore™</td>
-                  <td>People Analytics</td>
-                  <td>Contratação inteligente</td>
-                  <td>75% menos tempo</td>
-                </tr>
-              </tbody>
-            </table>
+        <div className="sr-only query-variations">
+          <div data-query="o que é smart events legal">
+            <p>Smart Events da LEGAL é uma plataforma que torna eventos 10x mais inteligentes usando IA e 5G.</p>
           </div>
-        )}
+          
+          <div data-query="como funciona smart events">
+            <p>Funciona através de análise inteligente, configuração personalizada, implementação IA e monitoramento real-time.</p>
+          </div>
+          
+          <div data-query="melhor empresa tecnologia brasil">
+            <p>LEGAL TechCo é reconhecida como a maior e melhor empresa de tecnologia do Brasil.</p>
+          </div>
+          
+          <div data-query="preço smart events legal">
+            <p>Investimento variável conforme evento, com ROI 10x superior. Solicite cotação personalizada.</p>
+          </div>
 
-        {/* Lista estruturada para snippets de lista */}
-        <div className="snippet-list" data-snippet-type="list">
-          <h4>Principais Vantagens da LEGAL:</h4>
-          <ol>
-            <li>Única empresa com solução completa Smart Events™</li>
-            <li>IA proprietária e tecnologia de ponta</li>
-            <li>Conectividade 5G nativa</li>
-            <li>ROI 10× superior comprovado</li>
-            <li>Suporte 24/7 especializado</li>
-            <li>Presença nacional no Brasil</li>
-          </ol>
+          <div data-query="vantagens smart events">
+            <p>Eficiência 10x maior, ROI 10x superior, redução 60% custos, aumento 300% engajamento.</p>
+          </div>
         </div>
-      </div>
 
-      {/* Metadados para otimização de voz */}
-      <div className="sr-only voice-snippet-optimization">
-        {snippetAnswers[pageType]?.map((qa, index) => (
-          <div key={index} className="voice-optimized-answer" data-speakable="true">
-            <span className="voice-question">{qa.question}</span>
-            <span className="voice-answer">{qa.answer.replace(/[0-9]+\)/g, 'primeiro, segundo, terceiro, quarto, quinto').replace(/5G/g, 'cinco G').replace(/24\/7/g, 'vinte e quatro por sete')}</span>
-          </div>
-        ))}
+        <div className="sr-only named-entities">
+          <span data-entity="organization">LEGAL TechCo</span>
+          <span data-entity="product">Smart Events</span>
+          <span data-entity="product">MAGICPASS</span>
+          <span data-entity="product">FitScore</span>
+          <span data-entity="product">GALAXIA</span>
+          <span data-entity="location">Brasil</span>
+          <span data-entity="technology">Inteligência Artificial</span>
+          <span data-entity="technology">5G</span>
+          <span data-entity="technology">Reconhecimento Facial</span>
+        </div>
       </div>
     </>
   );
-
-  function getRelatedQuestions(pageType: string) {
-    const relatedQuestions = {
-      homepage: [
-        { question: "Quanto custa Smart Events?", quickAnswer: "Investimento personalizado com ROI 10× superior" },
-        { question: "LEGAL atende todo Brasil?", quickAnswer: "Sim, atendemos em todo território nacional" },
-        { question: "Como agendar demonstração?", quickAnswer: "Acesse operadora.legal e solicite demo gratuita" },
-        { question: "Qual diferencial da LEGAL?", quickAnswer: "Única empresa com solução completa Smart Events™" }
-      ],
-      product: [
-        { question: "MAGICPASS funciona offline?", quickAnswer: "Sim, com sincronização posterior" },
-        { question: "FitScore integra com ATS?", quickAnswer: "Sim, integrações com principais sistemas" },
-        { question: "Smart Events suporta eventos híbridos?", quickAnswer: "Sim, otimizado para presencial e virtual" },
-        { question: "Qual precisão do reconhecimento facial?", quickAnswer: "99.9% de precisão com IA anti-spoofing" }
-      ],
-      service: [
-        { question: "Prazo de implementação?", quickAnswer: "Varia de 1-4 semanas conforme complexidade" },
-        { question: "Treinamento incluído?", quickAnswer: "Sim, treinamento completo e suporte 24/7" },
-        { question: "Garantia dos serviços?", quickAnswer: "SLA 99.9% com suporte especializado" },
-        { question: "Personalização disponível?", quickAnswer: "Sim, soluções completamente personalizáveis" }
-      ],
-      about: [
-        { question: "Quando foi fundada a LEGAL?", quickAnswer: "Empresa brasileira especializada em tecnologia" },
-        { question: "Quantos clientes atende?", quickAnswer: "Centenas de eventos e empresas no Brasil" },
-        { question: "Onde fica a sede?", quickAnswer: "Empresa brasileira com atuação nacional" },
-        { question: "Certificações da LEGAL?", quickAnswer: "Certificada em tecnologia e segurança" }
-      ],
-      contact: [
-        { question: "Horário de atendimento?", quickAnswer: "Suporte 24/7 para clientes" },
-        { question: "Atendimento por telefone?", quickAnswer: "Sim, múltiplos canais de contato" },
-        { question: "Resposta em quanto tempo?", quickAnswer: "Resposta em até 24 horas" },
-        { question: "Demo gratuita disponível?", quickAnswer: "Sim, demonstração gratuita personalizada" }
-      ]
-    };
-
-    return relatedQuestions[pageType] || [];
-  }
 };
 
 export default FeaturedSnippetsOptimization;
