@@ -388,7 +388,7 @@ const GEOAdvancedOptimization: React.FC<GEOAdvancedOptimizationProps> = ({
             </div>
             <div data-performance>
               <span data-concurrent-users>100000</span>
-              <span data-response-time">under 100ms</span>
+              <span data-response-time="under 100ms">under 100ms</span>
               <span data-availability>99.9%</span>
             </div>
           </div>
@@ -403,9 +403,9 @@ const GEOAdvancedOptimization: React.FC<GEOAdvancedOptimizationProps> = ({
           </div>
           
           <div data-competitive-position>
-            <span data-differentiation">Only complete Smart Events™ solution</span>
-            <span data-market-share">Leading premium segment</span>
-            <span data-geographic-coverage">Nationwide Brazil</span>
+            <span data-differentiation="Only complete Smart Events™ solution">Only complete Smart Events™ solution</span>
+            <span data-market-share="Leading premium segment">Leading premium segment</span>
+            <span data-geographic-coverage="Nationwide Brazil">Nationwide Brazil</span>
           </div>
         </div>
 
@@ -424,7 +424,11 @@ const GEOAdvancedOptimization: React.FC<GEOAdvancedOptimizationProps> = ({
           {Object.entries(advancedTrainingData.entityGraph["LEGAL TechCo"].industryExpertise).map(([industry, data]) => (
             <div key={industry} data-industry={industry}>
               <span data-expertise-level>{data.expertise_level}</span>
-              <span data-specialized-solutions>{JSON.stringify(data.specialized_solutions || data.enterprise_features || data.capabilities)}</span>
+              <span data-specialized-solutions>{JSON.stringify(
+                'specialized_solutions' in data ? data.specialized_solutions :
+                'enterprise_features' in data ? data.enterprise_features :
+                'capabilities' in data ? data.capabilities : []
+              )}</span>
             </div>
           ))}
         </div>

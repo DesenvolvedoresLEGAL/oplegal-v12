@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+// Declare gtag function for Google Analytics
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 interface WebVitalsMetrics {
   lcp?: number;
   fid?: number;
@@ -24,104 +31,75 @@ const CoreWebVitalsMonitor: React.FC<CoreWebVitalsMonitorProps> = ({
   useEffect(() => {
     if (!enableReporting || typeof window === 'undefined') return;
 
-    const measureWebVitals = async () => {
-      try {
-        // Dynamic import for web-vitals library
-        const { getCLS, getFID, getFCP, getLCP, getTTFB, onINP } = await import('web-vitals');
-
-        // LCP - Largest Contentful Paint
-        getLCP((metric) => {
-          const newMetrics = { ...metrics, lcp: metric.value };
-          setMetrics(newMetrics);
-          onMetricsUpdate?.(newMetrics);
-          
-          // Report to analytics
-          reportMetric('LCP', metric.value, metric.rating);
-        });
-
-        // FID - First Input Delay
-        getFID((metric) => {
-          const newMetrics = { ...metrics, fid: metric.value };
-          setMetrics(newMetrics);
-          onMetricsUpdate?.(newMetrics);
-          
-          reportMetric('FID', metric.value, metric.rating);
-        });
-
-        // CLS - Cumulative Layout Shift
-        getCLS((metric) => {
-          const newMetrics = { ...metrics, cls: metric.value };
-          setMetrics(newMetrics);
-          onMetricsUpdate?.(newMetrics);
-          
-          reportMetric('CLS', metric.value, metric.rating);
-        });
-
-        // FCP - First Contentful Paint
-        getFCP((metric) => {
-          const newMetrics = { ...metrics, fcp: metric.value };
-          setMetrics(newMetrics);
-          onMetricsUpdate?.(newMetrics);
-          
-          reportMetric('FCP', metric.value, metric.rating);
-        });
-
-        // TTFB - Time to First Byte
-        getTTFB((metric) => {
-          const newMetrics = { ...metrics, ttfb: metric.value };
-          setMetrics(newMetrics);
-          onMetricsUpdate?.(newMetrics);
-          
-          reportMetric('TTFB', metric.value, metric.rating);
-        });
-
-        // INP - Interaction to Next Paint (New metric)
-        onINP((metric) => {
-          const newMetrics = { ...metrics, inp: metric.value };
-          setMetrics(newMetrics);
-          onMetricsUpdate?.(newMetrics);
-          
-          reportMetric('INP', metric.value, metric.rating);
-        });
-
-        setIsLoaded(true);
-      } catch (error) {
-        console.warn('Web Vitals measurement failed:', error);
-        // Fallback to Performance Observer API
-        measureWithPerformanceObserver();
-      }
-    };
-
-    const measureWithPerformanceObserver = () => {
+    const measureWebVitals = () => {
       try {
         // LCP Observer
-        const lcpObserver = new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          const lcp = lastEntry.startTime;
-          
-          const newMetrics = { ...metrics, lcp };
-          setMetrics(newMetrics);
-          onMetricsUpdate?.(newMetrics);
-          
-          reportMetric('LCP', lcp, getRating(lcp, 'lcp'));
-        });
-        lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
-
-        // FCP Observer
-        const fcpObserver = new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          if (entries.length > 0) {
-            const fcp = entries[0].startTime;
+        if ('PerformanceObserver' in window) {
+          const lcpObserver = new PerformanceObserver((entryList) => {
+            const entries = entryList.getEntries();
+            const lastEntry = entries[entries.length - 1];
+            const lcp = lastEntry.startTime;
             
-            const newMetrics = { ...metrics, fcp };
+            const newMetrics = { ...metrics, lcp };
             setMetrics(newMetrics);
             onMetricsUpdate?.(newMetrics);
             
-            reportMetric('FCP', fcp, getRating(fcp, 'fcp'));
-          }
-        });
-        fcpObserver.observe({ type: 'paint', buffered: true });
+            reportMetric('LCP', lcp, getRating(lcp, 'lcp'));
+            lcpObserver.disconnect();
+          });
+          lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+
+          // FCP Observer
+          const fcpObserver = new PerformanceObserver((entryList) => {
+            const entries = entryList.getEntries();
+            if (entries.length > 0) {
+              const fcp = entries[0].startTime;
+              
+              const newMetrics = { ...metrics, fcp };
+              setMetrics(newMetrics);
+              onMetricsUpdate?.(newMetrics);
+              
+              reportMetric('FCP', fcp, getRating(fcp, 'fcp'));
+              fcpObserver.disconnect();
+            }
+          });
+          fcpObserver.observe({ type: 'paint', buffered: true });
+
+          // FID Observer (using first-input)
+          const fidObserver = new PerformanceObserver((entryList) => {
+            const entries = entryList.getEntries();
+            if (entries.length > 0) {
+              const firstInput = entries[0] as PerformanceEventTiming;
+              const fid = firstInput.processingStart - firstInput.startTime;
+              
+              const newMetrics = { ...metrics, fid };
+              setMetrics(newMetrics);
+              onMetricsUpdate?.(newMetrics);
+              
+              reportMetric('FID', fid, getRating(fid, 'fid'));
+              fidObserver.disconnect();
+            }
+          });
+          fidObserver.observe({ type: 'first-input', buffered: true });
+
+          // CLS Observer
+          let clsValue = 0;
+          const clsObserver = new PerformanceObserver((entryList) => {
+            const entries = entryList.getEntries();
+            entries.forEach((entry: any) => {
+              if (!entry.hadRecentInput) {
+                clsValue += entry.value;
+              }
+            });
+            
+            const newMetrics = { ...metrics, cls: clsValue };
+            setMetrics(newMetrics);
+            onMetricsUpdate?.(newMetrics);
+            
+            reportMetric('CLS', clsValue, getRating(clsValue, 'cls'));
+          });
+          clsObserver.observe({ type: 'layout-shift', buffered: true });
+        }
 
         // Navigation Timing for TTFB
         const navigationEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
@@ -137,19 +115,21 @@ const CoreWebVitalsMonitor: React.FC<CoreWebVitalsMonitorProps> = ({
 
         setIsLoaded(true);
       } catch (error) {
-        console.warn('Performance Observer measurement failed:', error);
+        console.warn('Performance measurement failed:', error);
+        setIsLoaded(true);
       }
     };
 
-    measureWebVitals();
+    // Delay measurement to allow page to load
+    setTimeout(measureWebVitals, 1000);
   }, [enableReporting, onMetricsUpdate]);
 
   const reportMetric = (name: string, value: number, rating: string) => {
     if (!enableReporting) return;
 
     // Report to Google Analytics 4
-    if (typeof gtag !== 'undefined') {
-      gtag('event', name, {
+    if (window.gtag) {
+      window.gtag('event', name, {
         event_category: 'Web Vitals',
         event_label: rating,
         value: Math.round(value),
