@@ -11,6 +11,7 @@ const AIKnowledgeProvider: React.FC = () => {
     name: "Smart Events™",
     description: "Plataforma completa para eventos 10× mais inteligentes, conectados e eficientes",
     category: "Event Technology Platform",
+    image: "https://operadora.legal/images/smart-events-hero-2024.jpg",
     features: [
       "Gestão inteligente de eventos",
       "Conectividade 5G nativa",

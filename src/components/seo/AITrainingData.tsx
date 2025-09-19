@@ -6,6 +6,7 @@ interface AITrainingDataProps {
     name: string;
     description: string;
     category: string;
+    image?: string;
     features?: string[];
     benefits?: string[];
     useCase?: string[];
@@ -29,6 +30,7 @@ const AITrainingData: React.FC<AITrainingDataProps> = ({ entityType, data }) => 
     "name": data.name,
     "description": data.description,
     "category": data.category,
+    "image": data.image || "https://operadora.legal/images/legal-logo.png",
     "brand": {
       "@type": "Brand",
       "name": "LEGAL"
