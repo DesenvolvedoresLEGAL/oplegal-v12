@@ -11,8 +11,10 @@ import SkipLink from "./components/SkipLink";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { AuthProvider } from "./hooks/useAuth";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import AdminRoute from "./components/auth/AdminRoute";
 
 // Lazy load non-critical pages to reduce initial bundle size
+const AuthPage = lazy(() => import("./components/auth/AuthPage"));
 const PlaceholderPage = lazy(() => import("./pages/PlaceholderPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const SmartEventsPage = lazy(() => import("./pages/SmartEventsPage"));
@@ -97,6 +99,7 @@ const App = () => {
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/auth" element={<AuthPage />} />
                 
                 {/* Smart Events */}
                 <Route path="/smart-events" element={<SmartEventsPage />} />
@@ -175,7 +178,7 @@ const App = () => {
                 <Route path="/universo/labs/global-analytics" element={<ProtectedRoute><PlaceholderPage /></ProtectedRoute>} />
                 
                 {/* Admin section */}
-                <Route path="/admin/tectec" element={<TecTecAdminPage />} />
+                <Route path="/admin/tectec" element={<AdminRoute><TecTecAdminPage /></AdminRoute>} />
                 
                 {/* Contact */}
                 <Route path="/contato" element={<ContatoPage />} />

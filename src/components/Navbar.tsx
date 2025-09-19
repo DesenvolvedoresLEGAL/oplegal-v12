@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench, TrendingUp, Search, Handshake, Cloud } from "lucide-react";
+import { Menu, X, ExternalLink, Wifi, Zap, Calendar, User, Target, Bot, Heart, Brain, Camera, MessageCircle, Plane, Settings, Users, Gauge, Globe, BookOpen, Star, Newspaper, Activity, HelpCircle, FileText, Cpu, Wrench, TrendingUp, Search, Handshake, Cloud, LogOut, LogIn } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
 import { 
   NavigationMenu,
   NavigationMenuContent,
@@ -19,6 +20,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
+  const { isAuthenticated, signOut, profile } = useAuth();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -430,11 +432,42 @@ const Navbar = () => {
             className="border-legal text-legal hover:bg-legal hover:text-white flex items-center"
             asChild
           >
-            <a href="" rel="noopener noreferrer">
+            <a href="https://blue.operadora.legal" target="_blank" rel="noopener noreferrer">
               Acesso Blue™
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
+
+          {/* Auth Buttons */}
+          {isAuthenticated ? (
+            <div className="flex items-center gap-2">
+              {profile && (
+                <span className="text-sm text-muted-foreground">
+                  Olá, {profile.full_name || profile.email}
+                </span>
+              )}
+              <Button 
+                onClick={signOut}
+                variant="ghost" 
+                size="sm"
+                className="text-legal hover:bg-legal hover:text-white flex items-center"
+              >
+                <LogOut className="mr-2 h-4 w-4" />
+                Sair
+              </Button>
+            </div>
+          ) : (
+            <Button 
+              variant="outline" 
+              className="border-legal text-legal hover:bg-legal hover:text-white flex items-center"
+              asChild
+            >
+              <Link to="/auth">
+                <LogIn className="mr-2 h-4 w-4" />
+                Entrar
+              </Link>
+            </Button>
+          )}
         </div>
 
         {/* Mobile Navigation Button */}
@@ -595,6 +628,36 @@ const Navbar = () => {
             Acesso Blue™
             <ExternalLink className="ml-2 h-4 w-4" />
           </a>
+
+          {/* Auth Buttons Mobile */}
+          {isAuthenticated ? (
+            <div className="mt-2 space-y-2">
+              {profile && (
+                <div className="px-4 py-2 text-sm text-muted-foreground border-b border-gray-100">
+                  Olá, {profile.full_name || profile.email}
+                </div>
+              )}
+              <button
+                onClick={() => {
+                  signOut();
+                  setIsMenuOpen(false);
+                }}
+                className="w-full px-4 py-3 text-sm font-medium text-red-600 hover:bg-red-50 rounded-md flex items-center"
+              >
+                <LogOut className="mr-2 h-4 w-4" />
+                Sair
+              </button>
+            </div>
+          ) : (
+            <Link 
+              to="/auth" 
+              className="px-4 py-3 mt-2 text-sm font-medium text-legal border border-legal rounded-md flex items-center justify-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <LogIn className="mr-2 h-4 w-4" />
+              Entrar
+            </Link>
+          )}
         </div>
       </div>
     </nav>

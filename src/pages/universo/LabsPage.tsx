@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 
 const LabsPage = () => {
-  const { logout } = useAuth();
+  const { signOut } = useAuth();
 
   const labsTools = [
     {
@@ -137,7 +137,7 @@ const LabsPage = () => {
               </div>
               
               <Button
-                onClick={logout}
+                onClick={signOut}
                 variant="outline"
                 className="flex items-center gap-2"
               >
