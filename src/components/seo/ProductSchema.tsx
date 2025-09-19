@@ -50,7 +50,7 @@ const ProductSchema: React.FC<ProductSchemaProps> = ({
   const currentDate = new Date().toISOString();
   const baseSchema = {
     "@context": "https://schema.org",
-    "@type": applicationCategory ? "SoftwareApplication" : "Service",
+    "@type": applicationCategory ? "SoftwareApplication" : "Product",
     "name": productName,
     "description": description,
     "url": url,
@@ -127,10 +127,10 @@ const ProductSchema: React.FC<ProductSchemaProps> = ({
     "screenshot": image
   } : baseSchema;
 
-  // Adicionar pricing se fornecido
-  const finalSchema = pricing ? {
+  // Adicionar pricing se fornecido, senão usar fallback
+  const finalSchema = {
     ...softwareSchema,
-    "offers": {
+    "offers": pricing ? {
       "@type": "Offer",
       "price": pricing.price || "0",
       "priceCurrency": pricing.currency || "BRL",
@@ -149,8 +149,19 @@ const ProductSchema: React.FC<ProductSchemaProps> = ({
         "name": manufacturer,
         "url": "https://operadora.legal"
       }
+    } : {
+      "@type": "Offer",
+      "availability": availability,
+      "price": "0",
+      "priceCurrency": "BRL",
+      "url": "https://operadora.legal/contato",
+      "seller": {
+        "@type": "Organization",
+        "name": "LEGAL",
+        "url": "https://operadora.legal"
+      }
     }
-  } : softwareSchema;
+  };
 
   return (
     <script

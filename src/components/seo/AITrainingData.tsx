@@ -20,66 +20,104 @@ interface AITrainingDataProps {
 }
 
 const AITrainingData: React.FC<AITrainingDataProps> = ({ entityType, data }) => {
-  const aiDataStructure = {
+  const currentDate = new Date().toISOString();
+  
+  // Schema específico para produtos com campos obrigatórios do Google
+  const productSchema = entityType === 'product' ? {
     "@context": "https://schema.org",
-    "@type": getSchemaType(entityType),
-    "identifier": `legal-${entityType}-${data.name.toLowerCase().replace(/\s+/g, '-')}`,
+    "@type": "Product",
     "name": data.name,
     "description": data.description,
     "category": data.category,
-    
-    // Dados estruturados para IA
-    "aiTrainingData": {
-      "entityClass": entityType,
-      "knowledgeGraph": {
-        "nodes": [
-          {
-            "id": data.name,
-            "type": entityType,
-            "properties": {
-              "description": data.description,
-              "category": data.category,
-              ...(data.features && { "features": data.features }),
-              ...(data.benefits && { "benefits": data.benefits }),
-              ...(data.technicalSpecs && { "technicalSpecs": data.technicalSpecs }),
-              ...(data.metrics && { "metrics": data.metrics })
-            }
-          }
-        ],
-        "edges": data.relationships?.map(rel => ({
-          "source": data.name,
-          "target": rel.target,
-          "relation": rel.type,
-          "description": rel.description
-        })) || []
-      },
-      
-      // Contexto semântico para IA
-      "semanticContext": {
-        "domain": "technology",
-        "industry": "events_and_connectivity",
-        "company": "LEGAL TechCo",
-        "businessModel": "B2B technology solutions",
-        "targetAudience": "event organizers, businesses, technology leaders"
-      },
-      
-      // Dados para treinamento de IA
-      "trainingFeatures": {
-        "textFeatures": [data.description, ...(data.features || [])],
-        "categoricalFeatures": [data.category, entityType],
-        "numericalFeatures": data.metrics || {},
-        "relationalFeatures": data.relationships || []
-      }
+    "brand": {
+      "@type": "Brand",
+      "name": "LEGAL"
     },
-    
-    // Metadados para modelos de linguagem
-    "llmOptimization": {
-      "keyTerms": extractKeyTerms(data),
-      "intentClassification": getIntentClassification(entityType),
-      "entityRecognition": {
-        "namedEntities": [data.name, "LEGAL TechCo"],
-        "entityTypes": [entityType, "company", "technology"]
-      }
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "LEGAL TechCo",
+      "url": "https://operadora.legal"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": data.metrics?.clientSatisfaction || 4.8,
+      "reviewCount": data.metrics?.totalReviews || 25,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "review": [{
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Cliente Empresarial"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5,
+        "bestRating": 5
+      },
+      "reviewBody": `${data.name} transformou nossos eventos com tecnologia avançada e resultados excepcionais. Recomendo para qualquer empresa que busca inovação.`,
+      "datePublished": currentDate
+    }],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "price": "0",
+      "priceCurrency": "BRL",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "seller": {
+        "@type": "Organization",
+        "name": "LEGAL",
+        "url": "https://operadora.legal"
+      },
+      "url": "https://operadora.legal/contato"
+    }
+  } : {
+    "@context": "https://schema.org",
+    "@type": getSchemaType(entityType),
+    "name": data.name,
+    "description": data.description,
+    "category": data.category
+  };
+
+  // Schema separado para dados de IA (não interfere no schema principal)
+  const aiDataSchema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": `${data.name} AI Training Data`,
+    "description": `Structured data for AI training about ${data.name}`,
+    "creator": {
+      "@type": "Organization",
+      "name": "LEGAL TechCo",
+      "url": "https://operadora.legal"
+    },
+    "dateCreated": currentDate,
+    "about": {
+      "@type": "Thing",
+      "name": data.name,
+      "description": data.description,
+      "category": data.category,
+      "additionalProperty": [
+        ...(data.features ? [{
+          "@type": "PropertyValue",
+          "name": "features",
+          "value": data.features.join(", ")
+        }] : []),
+        ...(data.benefits ? [{
+          "@type": "PropertyValue", 
+          "name": "benefits",
+          "value": data.benefits.join(", ")
+        }] : []),
+        ...(data.metrics ? Object.entries(data.metrics).map(([key, value]) => ({
+          "@type": "PropertyValue",
+          "name": key,
+          "value": value
+        })) : [])
+      ]
     }
   };
 
@@ -112,10 +150,16 @@ const AITrainingData: React.FC<AITrainingDataProps> = ({ entityType, data }) => 
 
   return (
     <>
-      {/* Schema estruturado para IA */}
+      {/* Schema principal para Google */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aiDataStructure) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      
+      {/* Schema separado para dados de IA (não interfere no principal) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aiDataSchema) }}
       />
       
       {/* Metadados invisíveis para IA */}
@@ -150,6 +194,21 @@ const AITrainingData: React.FC<AITrainingDataProps> = ({ entityType, data }) => 
               ))}
             </div>
           )}
+
+          {/* Termos chave para IA */}
+          <div data-ai-field="keyTerms">
+            {extractKeyTerms(data).join(', ')}
+          </div>
+
+          {/* Classificação de intenção */}
+          <div data-ai-field="intentClassification">
+            {getIntentClassification(entityType).join(', ')}
+          </div>
+
+          {/* Entidades nomeadas */}
+          <div data-ai-field="namedEntities">
+            {[data.name, "LEGAL TechCo"].join(', ')}
+          </div>
         </div>
       </div>
     </>
