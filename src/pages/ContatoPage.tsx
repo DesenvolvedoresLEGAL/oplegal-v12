@@ -120,8 +120,8 @@ const ContatoPage = () => {
   const onSubmit = async (data: FormData) => {
     console.log('Form submitted:', data);
 
-    const CONTACT_EMAIL = 'sos@operadora.legal';
-    const EMAILJS_SERVICE_ID = 'service_wi3kvx7';
+    const CONTACT_EMAIL = 'legaloperadora@gmail.com';
+    const EMAILJS_SERVICE_ID = 'service_fihjh1m';
     const EMAILJS_TEMPLATE_ID = 'template_5l2767r';
     const EMAILJS_USER_ID = 'oLw9xvmdczE218mGh';
 
@@ -131,11 +131,13 @@ const ContatoPage = () => {
     const phone = data.phone;
     const subject = data.subject;
     const message = `
+      Assunto: ${subject},\n
       Nome: ${name},\n
       Email: ${email},\n
       Empresa: ${company},\n
       Telefone: ${phone}\n
       ------------------------------\n
+      Mesagem:\n
       ${data.message}\n`;
 
     const templateParams = {
