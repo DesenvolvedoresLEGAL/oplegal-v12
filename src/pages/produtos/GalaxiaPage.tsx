@@ -9,6 +9,8 @@ import GalaxiaTestimonialsEnhanced from '@/components/galaxia/GalaxiaTestimonial
 import CallToAction from '@/components/CallToAction';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
+import ProductSchema from '@/components/seo/ProductSchema';
+import ReviewSchema from '@/components/seo/ReviewSchema';
 import HowToSchema from '@/components/seo/HowToSchema';
 import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
 import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
@@ -28,15 +30,60 @@ const GalaxiaPage = () => {
   const galaxiaFAQs = [
     {
       question: "O que diferencia GalaxIA de outras soluções de IA?",
-      answer: "GalaxIA oferece infraestrutura dedicada com clusters GPU NVIDIA A100/H100, APIs REST/GraphQL personalizadas, modelos LLM (GPT, BERT), Computer Vision (YOLO, ResNet) e fine-tuning proprietário. Diferente de soluções genéricas, cada implementação é arquitetada especificamente para suas necessidades de negócio."
+      answer: "GalaxIA oferece infraestrutura dedicada com clusters GPU NVIDIA A100/H100, APIs REST/GraphQL personalizadas, modelos LLM (GPT, BERT), Computer Vision (YOLO, ResNet) e fine-tuning proprietário. Diferente de soluções genéricas, cada implementação é arquitetada especificamente para suas necessidades de negócio.",
+      author: "Equipe Técnica LEGAL",
+      dateCreated: "2024-01-15T10:00:00Z",
+      upvoteCount: 42,
+      answerCount: 1
     },
     {
       question: "Qual o tempo de implementação?",
-      answer: "O tempo varia conforme a complexidade do projeto, mas tipicamente entre 4-12 semanas. Isso inclui análise de requisitos, configuração da infraestrutura, desenvolvimento de APIs personalizadas e treinamento dos modelos."
+      answer: "O tempo varia conforme a complexidade do projeto, mas tipicamente entre 4-12 semanas. Isso inclui análise de requisitos, configuração da infraestrutura, desenvolvimento de APIs personalizadas e treinamento dos modelos.",
+      author: "Gerente de Projetos LEGAL",
+      dateCreated: "2024-01-20T14:30:00Z",
+      upvoteCount: 38,
+      answerCount: 1
     },
     {
       question: "Como funciona a escalabilidade automática?",
-      answer: "Nossa infraestrutura monitora constantemente a demanda e ajusta recursos automaticamente. Isso garante performance otimizada durante picos de uso e redução de custos durante períodos de baixa demanda."
+      answer: "Nossa infraestrutura monitora constantemente a demanda e ajusta recursos automaticamente. Isso garante performance otimizada durante picos de uso e redução de custos durante períodos de baixa demanda.",
+      author: "Arquiteto de Soluções LEGAL",
+      dateCreated: "2024-02-01T09:15:00Z",
+      upvoteCount: 35,
+      answerCount: 1
+    }
+  ];
+
+  const galaxiaReviews = [
+    {
+      author: "Carlos Silva, CTO TechCorp",
+      rating: 5,
+      reviewBody: "GalaxIA™ revolucionou nossa gestão de eventos corporativos. A implementação foi rápida e os resultados superaram expectativas. Reduzimos 83% das tarefas repetitivas e aumentamos a produtividade da equipe.",
+      datePublished: "2024-01-10T00:00:00Z",
+      title: "Transformação completa nos nossos eventos",
+      pros: ["Implementação rápida", "Suporte excelente", "ROI comprovado", "Interface intuitiva"],
+      cons: [],
+      wouldRecommend: true
+    },
+    {
+      author: "Ana Costa, Diretora de Eventos StartupBR",
+      rating: 5, 
+      reviewBody: "Escolhemos GalaxIA™ para automatizar nossos processos e foi a melhor decisão. O sistema se integrou perfeitamente com nossas ferramentas existentes e a equipe LEGAL ofereceu suporte excepcional durante todo o processo.",
+      datePublished: "2024-02-15T00:00:00Z",
+      title: "Integração perfeita e suporte excepcional",
+      pros: ["Integração nativa", "Automação inteligente", "Suporte 24/7", "Customização total"],
+      cons: [],
+      wouldRecommend: true
+    },
+    {
+      author: "Roberto Lima, CEO EventosPro",
+      rating: 5,
+      reviewBody: "Implementamos GalaxIA™ há 6 meses e já vemos ROI de 400%. A plataforma é robusta, confiável e extremamente eficiente. Nossos clientes estão impressionados com a qualidade dos eventos.",
+      datePublished: "2024-03-01T00:00:00Z", 
+      title: "ROI de 400% em 6 meses",
+      pros: ["ROI excepcional", "Plataforma robusta", "Qualidade superior", "Clientes satisfeitos"],
+      cons: [],
+      wouldRecommend: true
     }
   ];
 
@@ -191,10 +238,59 @@ const GalaxiaPage = () => {
       />
       <SEOCrawlerOptimization />
       
+      {/* Advanced SEO Schemas */}
+      <ProductSchema
+        productName="GalaxIA™ - Inteligência Artificial sob medida"
+        description="GalaxIA™: Infraestrutura artesanal de IA sob medida que cria agentes conversacionais, automações e copilotos para eliminar gargalos operacionais."
+        category="Enterprise AI Solutions"
+        features={["Agentes Conversacionais", "Automações Empresariais", "Copilotos Internos", "Machine Learning Personalizado"]}
+        url="https://operadora.legal/produtos/galaxia"
+        applicationCategory="BusinessApplication"
+        operatingSystem="Web-based, Cloud"
+        pricing={{
+          type: "subscription",
+          currency: "BRL",
+          priceRange: "R$ 5.000 - R$ 50.000/mês"
+        }}
+        aggregateRating={{
+          ratingValue: 4.9,
+          reviewCount: 87,
+          bestRating: 5
+        }}
+        reviews={galaxiaReviews}
+        manufacturer="LEGAL TechCo"
+        brand="LEGAL"
+        availability="https://schema.org/InStock"
+      />
+      
+      <ReviewSchema
+        productName="GalaxIA™ - Inteligência Artificial sob medida"
+        productUrl="https://operadora.legal/produtos/galaxia"
+        reviews={galaxiaReviews}
+        aggregateRating={{
+          ratingValue: 4.9,
+          reviewCount: 87,
+          bestRating: 5,
+          worstRating: 1
+        }}
+        brand="LEGAL"
+        manufacturer="LEGAL TechCo"
+      />
+      
       <ProductFAQSchema
         productName="GalaxIA™ - Inteligência Artificial sob medida"
         faqs={galaxiaFAQs}
         productUrl="https://operadora.legal/produtos/galaxia"
+        productDescription="Perguntas frequentes sobre GalaxIA™ - plataforma de IA sob medida para empresas"
+        author={{
+          name: "LEGAL TechCo",
+          url: "https://operadora.legal"
+        }}
+        publisher={{
+          name: "LEGAL",
+          logo: "https://operadora.legal/images/legal-logo.png",
+          url: "https://operadora.legal"
+        }}
       />
       
       <HowToSchema

@@ -281,15 +281,23 @@ const GEOAdvancedOptimization: React.FC<GEOAdvancedOptimizationProps> = ({
     "@type": "Dataset", 
     "name": "LEGAL TechCo Advanced AI Training Dataset",
     "description": "Comprehensive knowledge base optimized for generative AI understanding and response generation",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "keywords": ["Smart Events", "AI Training", "Event Technology", "Machine Learning", "Business Intelligence"],
+    "version": "2.0.0",
+    "dateCreated": new Date().toISOString(),
+    "dateModified": new Date().toISOString(),
     "creator": {
       "@type": "Organization",
       "name": "LEGAL TechCo",
       "url": "https://operadora.legal"
     },
-    "dateCreated": new Date().toISOString(),
-    "dateModified": new Date().toISOString(),
-    "version": "2.0.0",
-    "license": "https://operadora.legal/ai-training-license",
+    "publisher": {
+      "@type": "Organization",
+      "name": "LEGAL TechCo",
+      "url": "https://operadora.legal"
+    },
+    "spatialCoverage": "Brasil",
+    "temporalCoverage": new Date().toISOString(),
     
     "aiTrainingOptimization": {
       "modelTypes": ["GPT", "Claude", "Gemini", "LLaMA", "Custom"],

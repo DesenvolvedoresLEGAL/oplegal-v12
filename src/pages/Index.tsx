@@ -32,29 +32,40 @@ const Index = () => {
   
   return (
     <>
+      {/* Core SEO Components - Only Once */}
       <HomePageSEO />
       <PerformanceOptimizer />
+      <PreloadResources />
+      
+      {/* AI & Optimization Components - Consolidated */}
       <AIKnowledgeProvider />
-      <VoiceSearchOptimization />
+      <VoiceSearchOptimization 
+        businessName="LEGAL TechCo"
+        primaryKeywords={["Smart Events", "eventos inteligentes", "IA", "reconhecimento facial"]}
+        location="Brasil"
+        services={["Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™", "AERO Services"]}
+      />
       <GEOAdvancedOptimization 
-        contentDomain="technology"
+        contentDomain="smart_events_technology"
         entityType="company"
-        optimizationLevel="advanced"
+        optimizationLevel="expert"
       />
       <RealUserMonitoring />
       <CoreWebVitalsMonitor enableReporting={true} />
       <AIFeedbackSystem enableRealTimeOptimization={true} />
       <AdvancedFeaturedSnippets 
         pageType="homepage"
-        focusKeyword="LEGAL tecnologia eventos"
+        focusKeyword="LEGAL smart events tecnologia"
+        location="Brasil"
       />
       <SEOCrawlerOptimization />
       
+      {/* Structured Data */}
       <TechnicalSEO
         canonical="https://operadora.legal"
         prefetchUrls={[
           "/smart-events",
-          "/negocios/ai",
+          "/negocios/ai", 
           "/contato"
         ]}
         preloadResources={[
@@ -76,14 +87,13 @@ const Index = () => {
           name: "Entre em Contato"
         }}
       />
-      <AIKnowledgeProvider />
-      <SEOCrawlerOptimization />
-      <AIFeedbackSystem enableRealTimeOptimization={true} />
-      <VoiceSearchOptimization 
-        businessName="LEGAL TechCo"
-        primaryKeywords={["Smart Events", "eventos inteligentes", "IA", "reconhecimento facial"]}
-        location="Brasil"
-        services={["Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™", "AERO Services"]}
+      <LocalBusinessSchema />
+      
+      {/* Industry & Content Optimization */}
+      <IndustrySpecificSEO 
+        industries={["Tecnologia", "Corporativo", "Educação", "Entretenimento"]}
+        primarySolutions={["Smart Events™", "MAGICPASS™", "FitScore™", "GALAXIA™"]}
+        useCase="eventos-corporativos"
       />
       <ConversationalAIData 
         domain="events"
@@ -100,25 +110,6 @@ const Index = () => {
         primaryEntities={["LEGAL TechCo", "Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™"]}
         semanticTopics={["eventos inteligentes", "tecnologia", "inteligência artificial", "inovação"]}
       />
-      <LocalBusinessSchema />
-      <CoreWebVitalsMonitor enableReporting={true} />
-      <IndustrySpecificSEO 
-        industries={["Tecnologia", "Corporativo", "Educação", "Entretenimento"]}
-        primarySolutions={["Smart Events™", "MAGICPASS™", "FitScore™", "GALAXIA™"]}
-        useCase="eventos-corporativos"
-      />
-      <AdvancedFeaturedSnippets 
-        pageType="homepage"
-        focusKeyword="Smart Events"
-        location="Brasil"
-      />
-      <GEOAdvancedOptimization 
-        contentDomain="smart_events"
-        entityType="company"
-        optimizationLevel="advanced"
-      />
-      <PreloadResources />
-      <PerformanceOptimizer />
       
       <main itemScope itemType="https://schema.org/WebPage">
         <HeroSection />
