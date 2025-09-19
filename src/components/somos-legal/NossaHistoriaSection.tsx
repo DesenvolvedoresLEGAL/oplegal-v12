@@ -9,7 +9,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 const historia = [
   { year: "2010", event: "Wagner tem a ideia de instalar WiFi em seu carro." },
@@ -63,13 +62,6 @@ const NossaHistoriaSection = () => {
         <div className="relative mt-16">
           <Carousel
             setApi={setApi}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-                stopOnInteraction: true,
-                stopOnMouseEnter: true,
-              }),
-            ]}
             opts={{
               align: "start",
               loop: true,

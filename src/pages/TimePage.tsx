@@ -46,17 +46,12 @@ const teamMembers = [{
   name: "João Parolini",
   role: "Assistente de Suporte",
   department: "Tecnologia",
-  avatar: "/lovable-uploads/409a6cff-65e1-4ae6-afc3-41bc8ba21267.png"
+  avatar: "/lovable-uploads/joao-parolini-new.jpg"
 }, {
   name: "Ionara Nobre",
   role: "Consultora de Tecnologia",
   department: "Comercial",
   avatar: "/lovable-uploads/ec8585f2-9fa4-4e5e-8828-2b478bc0fa8a.png"
-}, {
-  name: "Paulla Emanuella",
-  role: "Consultora de Tecnologia",
-  department: "Comercial",
-  avatar: "/lovable-uploads/ab6e9137-1847-43f1-ba36-fe48fc86f960.png"
 }, {
   name: "Gustavo Macedo",
   role: "Dev Full Stack 1",
@@ -72,6 +67,31 @@ const teamMembers = [{
   role: "Analista de CS",
   department: "Relacionamento",
   avatar: "/lovable-uploads/36102e60-647e-4517-ba26-a46508790bd2.png"
+}, {
+  name: "Robério Santos",
+  role: "Gestor Comercial",
+  department: "Comercial",
+  avatar: "/lovable-uploads/roberio-santos.png"
+}, {
+  name: "Jaqueline Mota",
+  role: "Consultora de Tecnologia",
+  department: "Comercial",
+  avatar: "/lovable-uploads/jaqueline-mota.png"
+}, {
+  name: "Gabriel Sanabria",
+  role: "Dev Full Stack 3",
+  department: "Tecnologia",
+  avatar: "/lovable-uploads/gabriel-sanabria.png"
+}, {
+  name: "Leonardo Honório",
+  role: "Consultor de Tecnologia",
+  department: "Comercial",
+  avatar: "/lovable-uploads/leonardo-honorio.png"
+}, {
+  name: "Gibson Cruz",
+  role: "Dev Full Stack 2",
+  department: "Tecnologia",
+  avatar: "/lovable-uploads/gibson-cruz.jpg"
 }];
 const values = [{
   icon: <Target className="w-8 h-8 text-legal-cyan" />,
@@ -236,7 +256,7 @@ const TimePage = () => {
               <p className="text-lg font-light">Anos de Experiência</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">10+</div>
+              <div className="text-4xl md:text-5xl font-black text-legal-cyan mb-2">15+</div>
               <p className="text-lg font-light">Colaboradores</p>
             </div>
             <div className="text-center">
