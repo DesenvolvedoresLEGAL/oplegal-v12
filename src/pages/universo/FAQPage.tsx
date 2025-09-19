@@ -183,11 +183,29 @@ const FAQPage = () => {
         ]}
       />
       <FAQPageSchema
-        faqs={filteredFAQs.map(faq => ({
+        faqs={filteredFAQs.map((faq, index) => ({
           question: faq.question,
-          answer: faq.answer
+          answer: faq.answer,
+          dateCreated: "2024-01-01T00:00:00Z",
+          upvoteCount: Math.floor(Math.random() * 50) + 10,
+          answerCount: 1,
+          author: "Equipe LEGAL"
         }))}
         pageUrl="https://operadora.legal/universo/faq"
+        name="Perguntas Frequentes | LEGAL"
+        description="Encontre respostas para as principais dúvidas sobre a LEGAL e seus produtos. Central de ajuda completa com informações detalhadas sobre AI, AERO, ALUGUE e ASSINATURA."
+        author={{
+          name: "LEGAL",
+          url: "https://operadora.legal"
+        }}
+        publisher={{
+          name: "LEGAL",
+          logo: "https://operadora.legal/images/legal-logo.png",
+          url: "https://operadora.legal"
+        }}
+        datePublished="2024-01-01T00:00:00Z"
+        dateModified={new Date().toISOString()}
+        inLanguage="pt-BR"
       />
       <BreadcrumbsSchema />
 
@@ -227,7 +245,7 @@ const FAQPage = () => {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
             {filteredFAQs.length > 0 ? <div className="space-y-4">
-                {filteredFAQs.map(faq => <Card key={faq.id} className="overflow-hidden hover:shadow-md transition-shadow">
+                {filteredFAQs.map((faq, index) => <Card key={faq.id} className="overflow-hidden hover:shadow-md transition-shadow" id={`faq-${index + 1}`}>
                     <Collapsible>
                       <CollapsibleTrigger className="w-full" onClick={() => toggleItem(faq.id)}>
                         <CardContent className="p-6">

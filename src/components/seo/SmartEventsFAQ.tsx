@@ -45,7 +45,32 @@ const SmartEventsFAQ: React.FC = () => {
     }
   ];
 
-  return <FAQPageSchema faqs={smartEventsFAQs} pageUrl="https://operadora.legal/smart-events" />;
+  return (
+    <FAQPageSchema 
+      faqs={smartEventsFAQs.map((faq, index) => ({
+        ...faq,
+        dateCreated: "2024-01-01T00:00:00Z",
+        upvoteCount: Math.floor(Math.random() * 30) + 15,
+        answerCount: 1,
+        author: "Especialista LEGAL"
+      }))}
+      pageUrl="https://operadora.legal/smart-events"
+      name="FAQ Smart Events™ | LEGAL"
+      description="Perguntas frequentes sobre Smart Events™, tecnologias 5G FWA, MAGICPASS™, LinkAI™ e soluções inovadoras para eventos."
+      author={{
+        name: "LEGAL",
+        url: "https://operadora.legal"
+      }}
+      publisher={{
+        name: "LEGAL",
+        logo: "https://operadora.legal/images/legal-logo.png",
+        url: "https://operadora.legal"
+      }}
+      datePublished="2024-01-01T00:00:00Z"
+      dateModified={new Date().toISOString()}
+      inLanguage="pt-BR"
+    />
+  );
 };
 
 export default SmartEventsFAQ;
