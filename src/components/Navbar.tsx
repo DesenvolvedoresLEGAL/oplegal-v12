@@ -464,7 +464,7 @@ const Navbar = () => {
             >
               <Link to="/auth">
                 <LogIn className="mr-2 h-4 w-4" />
-                Entrar
+                Acesso Labs™
               </Link>
             </Button>
           )}
@@ -655,7 +655,7 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               <LogIn className="mr-2 h-4 w-4" />
-              Entrar
+              Acesso Labs™
             </Link>
           )}
         </div>
