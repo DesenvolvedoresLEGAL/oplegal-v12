@@ -13,11 +13,9 @@ import NewsletterExitPopup from "@/components/NewsletterExitPopup";
 import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
 import CoreWebVitalsMonitor from "@/components/seo/CoreWebVitalsMonitor";
-import IndustrySpecificSEO from "@/components/seo/IndustrySpecificSEO";
 import AdvancedFeaturedSnippets from "@/components/seo/AdvancedFeaturedSnippets";
 import GEOAdvancedOptimization from "@/components/seo/GEOAdvancedOptimization";
 import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
-import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
 import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
 import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
 import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
@@ -30,7 +28,6 @@ const HomePage = () => {
       <HomePageSEO />
       <PerformanceOptimizer />
       <AIKnowledgeProvider />
-      <VoiceSearchOptimization />
       <GEOAdvancedOptimization 
         contentDomain="technology"
         entityType="company"
@@ -73,21 +70,6 @@ const HomePage = () => {
         />
         
         <CoreWebVitalsMonitor enableReporting={true} />
-        <IndustrySpecificSEO 
-          industries={["Tecnologia", "Corporativo", "Educação", "Entretenimento"]}
-          primarySolutions={["Smart Events™", "MAGICPASS™", "FitScore™", "GALAXIA™"]}
-          useCase="eventos-corporativos"
-        />
-        <AdvancedFeaturedSnippets 
-          pageType="homepage"
-          focusKeyword="Smart Events"
-          location="Brasil"
-        />
-        <GEOAdvancedOptimization 
-          contentDomain="smart_events"
-          entityType="company"
-          optimizationLevel="advanced"
-        />
         
         <ChatbotButton />
         <NewsletterExitPopup />

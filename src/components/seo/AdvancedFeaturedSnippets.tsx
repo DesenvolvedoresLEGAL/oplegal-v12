@@ -163,201 +163,91 @@ const AdvancedFeaturedSnippets: React.FC<AdvancedFeaturedSnippetsProps> = ({
     "quanto custa smart events": "O investimento em Smart Events varia conforme o tamanho do evento, começando em cinquenta mil reais para eventos pequenos, mas o retorno é de três a dez vezes o investimento inicial."
   };
 
-  // Consolidated QAPage schema with single mainEntity array
+  // Consolidated FAQPage schema with single mainEntity array
   const advancedSnippetSchema = {
     "@context": "https://schema.org",
-    "@type": "QAPage",
+    "@type": "FAQPage",
+    "@id": "https://operadora.legal/#faq",
+    "name": "Perguntas Frequentes LEGAL TechCo",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "O que é Smart Events™?",
-        "text": "Definição de Smart Events™ e como funciona a solução da LEGAL.",
-        "answerCount": 1,
-        "dateCreated": "2025-01-01T00:00:00Z",
-        "author": {
-          "@type": "Person",
-          "name": "Equipe LEGAL",
-          "url": "https://operadora.legal"
-        },
+        "name": "Como Smart Events™ funciona em hackathons?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Smart Events™ são eventos com infraestrutura tecnológica 100% integrada que utiliza Inteligência Artificial, conectividade 5G, reconhecimento facial e IoT para criar experiências 10× mais inteligentes, conectadas e eficientes.",
-          "datePublished": "2025-01-01T00:00:00Z",
-          "author": {
-            "@type": "Organization",
-            "name": "LEGAL TechCo",
-            "url": "https://operadora.legal"
-          },
-          "upvoteCount": 0,
-          "url": "https://operadora.legal/pergunta/smart-events"
+          "text": "Smart Events™ oferece uma plataforma colaborativa em tempo real, sistemas de votação com IA e networking automático entre participantes com habilidades complementares."
         }
       },
       {
         "@type": "Question",
-        "name": "O que é MAGICPASS™?",
-        "text": "Definição de MAGICPASS™ e como funciona a solução da LEGAL.",
-        "answerCount": 1,
-        "dateCreated": "2025-01-01T00:00:00Z",
-        "author": {
-          "@type": "Person",
-          "name": "Equipe LEGAL",
-          "url": "https://operadora.legal"
-        },
+        "name": "MAGICPASS™ funciona para controle de acesso em demo days?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "MAGICPASS™ é um sistema de controle de acesso biométrico que utiliza reconhecimento facial com IA anti-spoofing, permitindo entrada em eventos em menos de 500 ms sem filas ou credenciais físicas.",
-          "datePublished": "2025-01-01T00:00:00Z",
-          "author": {
-            "@type": "Organization",
-            "name": "LEGAL TechCo",
-            "url": "https://operadora.legal"
-          },
-          "upvoteCount": 0,
-          "url": "https://operadora.legal/pergunta/magicpass"
+          "text": "Sim. MAGICPASS™ permite acesso diferenciado para investidores, mentores e participantes, com analytics de interesse por startup em tempo real."
         }
       },
       {
         "@type": "Question",
-        "name": "O que é FitScore™?",
-        "text": "Definição de FitScore™ e como funciona a solução da LEGAL.",
-        "answerCount": 1,
-        "dateCreated": "2025-01-01T00:00:00Z",
-        "author": {
-          "@type": "Person",
-          "name": "Equipe LEGAL",
-          "url": "https://operadora.legal"
-        },
+        "name": "Smart Events™ integra com sistemas corporativos?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "FitScore™ é um copiloto de contratação com Inteligência Artificial que revoluciona processos de RH através de análise preditiva de candidatos, matching inteligente e People Analytics avançado, reduzindo 75% o tempo de contratação.",
-          "datePublished": "2025-01-01T00:00:00Z",
-          "author": {
-            "@type": "Organization",
-            "name": "LEGAL TechCo",
-            "url": "https://operadora.legal"
-          },
-          "upvoteCount": 0,
-          "url": "https://operadora.legal/pergunta/fitscore"
+          "text": "Sim. Smart Events™ possui APIs nativas para integração com CRM, ERP, Active Directory e as principais plataformas corporativas."
         }
       },
       {
         "@type": "Question",
-        "name": "Como organizar um evento inteligente?",
-        "text": "Guia completo para organizar um evento inteligente com LEGAL TechCo.",
-        "answerCount": 1,
-        "dateCreated": "2025-01-01T00:00:00Z",
-        "author": {
-          "@type": "Person",
-          "name": "Equipe LEGAL",
-          "url": "https://operadora.legal"
-        },
+        "name": "Como medir o ROI de eventos corporativos?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "1. Defina objetivos claros e métricas de sucesso do evento. 2. Escolha a plataforma Smart Events™ adequada ao tamanho. 3. Implemente MAGICPASS™ para credenciamento sem filas. 4. Configure analytics em tempo real para monitoramento. 5. Ative IA para personalização automática da experiência. 6. Integre conectividade 5G para experiências imersivas.",
-          "datePublished": "2025-01-01T00:00:00Z",
-          "author": {
-            "@type": "Organization",
-            "name": "LEGAL TechCo",
-            "url": "https://operadora.legal"
-          },
-          "upvoteCount": 0,
-          "url": "https://operadora.legal/pergunta/como-organizar-evento-inteligente"
+          "text": "A plataforma oferece dashboards com métricas específicas: engajamento por área, leads gerados, satisfação por departamento e impacto nos KPIs corporativos."
         }
       },
       {
         "@type": "Question",
-        "name": "Como implementar reconhecimento facial?",
-        "text": "Guia completo para implementar reconhecimento facial com LEGAL TechCo.",
-        "answerCount": 1,
-        "dateCreated": "2025-01-01T00:00:00Z",
-        "author": {
-          "@type": "Person",
-          "name": "Equipe LEGAL",
-          "url": "https://operadora.legal"
-        },
+        "name": "O que é Smart Events da LEGAL?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "1. Cadastre participantes antecipadamente na plataforma. 2. Configure câmeras compatíveis nos pontos de acesso. 3. Teste o sistema MAGICPASS™ com dados de exemplo. 4. Treine a equipe para operação e contingências. 5. Ative monitoramento em tempo real no evento. 6. Colete feedback e otimize para os próximos eventos.",
-          "datePublished": "2025-01-01T00:00:00Z",
-          "author": {
-            "@type": "Organization",
-            "name": "LEGAL TechCo",
-            "url": "https://operadora.legal"
-          },
-          "upvoteCount": 0,
-          "url": "https://operadora.legal/pergunta/como-implementar-reconhecimento-facial"
+          "text": "Smart Events™ é uma plataforma completa da LEGAL que torna eventos dez vezes mais inteligentes, conectados e eficientes, usando inteligência artificial e conectividade 5G."
         }
       },
       {
         "@type": "Question",
-        "name": "Como medir o ROI de um evento?",
-        "text": "Guia completo para medir o ROI de eventos com LEGAL TechCo.",
-        "answerCount": 1,
-        "dateCreated": "2025-01-01T00:00:00Z",
-        "author": {
-          "@type": "Person",
-          "name": "Equipe LEGAL",
-          "url": "https://operadora.legal"
-        },
+        "name": "Como a LEGAL pode ajudar minha empresa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "1. Estabeleça um baseline de custos e resultados anteriores. 2. Configure dashboards de analytics pré-evento. 3. Monitore métricas em tempo real durante o evento. 4. Colete dados de satisfação e engajamento. 5. Analise a conversão de leads e oportunidades. 6. Compare os resultados com eventos tradicionais.",
-          "datePublished": "2025-01-01T00:00:00Z",
-          "author": {
-            "@type": "Organization",
-            "name": "LEGAL TechCo",
-            "url": "https://operadora.legal"
-          },
-          "upvoteCount": 0,
-          "url": "https://operadora.legal/pergunta/como-medir-roi-evento"
+          "text": "A LEGAL oferece soluções de Smart Events™, inteligência artificial, conectividade 5G e serviços aéreos para transformar completamente seus eventos e negócios."
         }
       },
       {
         "@type": "Question",
-        "name": "Quanto custa Smart Events™?",
-        "text": "Informações sobre preços e investimento no Smart Events™.",
-        "answerCount": 1,
-        "dateCreated": "2025-01-01T00:00:00Z",
-        "author": {
-          "@type": "Person",
-          "name": "Equipe LEGAL",
-          "url": "https://operadora.legal"
-        },
+        "name": "Onde a LEGAL atua?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O investimento em Smart Events™ varia de R$ 50.000 a R$ 500.000, conforme o tamanho e a complexidade do evento, com ROI médio de 300% a 1.000% e payback em 3 a 6 meses.",
-          "datePublished": "2025-01-01T00:00:00Z",
-          "author": {
-            "@type": "Organization",
-            "name": "LEGAL TechCo",
-            "url": "https://operadora.legal"
-          },
-          "upvoteCount": 0,
-          "url": "https://operadora.legal/pergunta/quanto-custa-smart-events"
+          "text": "A LEGAL atua em todo o Brasil, sendo a maior e melhor empresa de tecnologia do país especializada em eventos inteligentes."
         }
       },
       {
         "@type": "Question",
-        "name": "Qual é o preço do MAGICPASS™?",
-        "text": "Informações sobre preços e investimento do MAGICPASS™.",
-        "answerCount": 1,
-        "dateCreated": "2025-01-01T00:00:00Z",
-        "author": {
-          "@type": "Person",
-          "name": "Equipe LEGAL",
-          "url": "https://operadora.legal"
-        },
+        "name": "Como entrar em contato com a LEGAL?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "MAGICPASS™ custa a partir de R$ 15.000 para eventos pequenos, com preço por participante decrescente conforme o volume, incluindo hardware, software e suporte completo.",
-          "datePublished": "2025-01-01T00:00:00Z",
-          "author": {
-            "@type": "Organization",
-            "name": "LEGAL TechCo",
-            "url": "https://operadora.legal"
-          },
-          "upvoteCount": 0,
-          "url": "https://operadora.legal/pergunta/preco-magicpass"
+          "text": "Você pode entrar em contato através do site operadora.legal ou solicitar uma demonstração dos produtos Smart Events™."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que torna a LEGAL diferente das outras empresas de tecnologia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A LEGAL é única por ser a maior TechCo do Brasil especializada exclusivamente em Smart Events™, oferecendo ROI 10× superior através de IA proprietária e 5G nativo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como o Smart Events™ melhora a eficiência dos eventos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Smart Events™ aumenta a eficiência em 10× através de automação inteligente, análise preditiva, reconhecimento facial e conectividade 5G para otimização em tempo real."
         }
       }
     ]
