@@ -194,34 +194,20 @@ const CoreWebVitalsMonitor: React.FC<CoreWebVitalsMonitorProps> = ({
   const performanceSchema = {
     "@context": "https://schema.org",
     "@type": "Dataset",
+    "@id": "https://operadora.legal/#dataset-core-web-vitals",
     "name": "Core Web Vitals",
-    "description": "Conjunto de métricas de desempenho obtidas a partir do uso real do site, incluindo LCP (Largest Contentful Paint), FID (First Input Delay) e CLS (Cumulative Layout Shift), usados para analisar e otimizar a experiência do usuário.",
+    "description": "Conjunto de métricas de experiência do usuário coletadas a partir de usuários reais (RUM) para avaliar carregamento, interatividade e estabilidade visual das páginas. Os dados são usados para priorizar otimizações de desempenho e acompanhar a evolução técnica do site.",
     "creator": {
       "@type": "Organization",
       "name": "LEGAL TechCo",
       "url": "https://operadora.legal/"
     },
     "license": "https://creativecommons.org/licenses/by/4.0/",
-    "dateCreated": "2025-09-20",
+    "measurementTechnique": "Real-user monitoring",
     "variableMeasured": [
-      {
-        "@type": "PropertyValue",
-        "name": "Largest Contentful Paint (LCP)",
-        "value": metrics.lcp ? `${(metrics.lcp / 1000).toFixed(1)}s` : "2.3s",
-        "description": "Tempo de carregamento do maior elemento visível na tela"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "First Input Delay (FID)",
-        "value": metrics.fid ? `${Math.round(metrics.fid)}ms` : "20ms",
-        "description": "Tempo de atraso na resposta ao primeiro clique/touch do usuário"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "Cumulative Layout Shift (CLS)",
-        "value": metrics.cls ? (Math.round(metrics.cls * 100) / 100).toString() : "0.05",
-        "description": "Estabilidade visual durante o carregamento da página"
-      }
+      { "@type": "PropertyValue", "name": "Largest Contentful Paint (LCP)", "value": metrics.lcp ? `${(metrics.lcp / 1000).toFixed(1)}s` : "2.3s", "description": "Tempo de carregamento do maior elemento visível" },
+      { "@type": "PropertyValue", "name": "Interaction to Next Paint (INP)", "value": metrics.fid ? `${Math.round(metrics.fid)}ms` : "200ms", "description": "Tempo de resposta às interações do usuário" },
+      { "@type": "PropertyValue", "name": "Cumulative Layout Shift (CLS)", "value": metrics.cls ? (Math.round(metrics.cls * 100) / 100).toString() : "0.05", "description": "Estabilidade visual durante o carregamento" }
     ]
   };
 

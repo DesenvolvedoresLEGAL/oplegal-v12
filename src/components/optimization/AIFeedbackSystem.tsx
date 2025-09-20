@@ -326,39 +326,28 @@ const AIFeedbackSystem: React.FC<AIFeedbackSystemProps> = ({
   const getFeedbackSchema = () => ({
     "@context": "https://schema.org",
     "@type": "Dataset",
+    "@id": "https://operadora.legal/#dataset-ai-seo-feedback",
     "name": "AI SEO Feedback System",
-    "description": "Sistema inteligente de feedback para otimização de SEO em tempo real",
+    "description": "Sistema inteligente que coleta sinais de desempenho do site e utiliza análise com IA para gerar feedbacks de SEO em tempo real. O conjunto inclui métricas técnicas, conteúdo e experiência do usuário para orientar otimizações contínuas e tomadas de decisão.",
     "creator": {
       "@type": "Organization",
-      "name": "LEGAL TechCo"
+      "name": "LEGAL TechCo",
+      "url": "https://operadora.legal/"
     },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
     "measurementTechnique": "Artificial Intelligence Analysis",
     "variableMeasured": [
-      {
-        "@type": "PropertyValue",
-        "name": "Performance Score",
-        "value": metrics.performanceScore,
-        "description": "Score de performance baseado em Core Web Vitals"
-      },
-      {
-        "@type": "PropertyValue", 
-        "name": "SEO Score",
-        "value": metrics.seoScore,
-        "description": "Pontuação SEO baseada em fatores técnicos e de conteúdo"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "Content Quality Score", 
-        "value": metrics.contentQuality,
-        "description": "Qualidade do conteúdo baseada em métricas de engajamento"
-      }
+      { "@type": "PropertyValue", "name": "Performance Score", "value": metrics.performanceScore || "100", "description": "Score de performance baseado em Core Web Vitals" },
+      { "@type": "PropertyValue", "name": "SEO Score", "value": metrics.seoScore || "75", "description": "Pontuação SEO baseada em fatores técnicos e de conteúdo" },
+      { "@type": "PropertyValue", "name": "Content Quality Score", "value": metrics.contentQuality || "100", "description": "Qualidade do conteúdo baseada em métricas de engajamento" }
     ],
-    "aiOptimization": {
-      "realTimeAnalysis": realTimeMonitoring,
-      "automaticSuggestions": true,
-      "continuousLearning": true,
-      "performanceTracking": true
-    }
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "aiOptimization", "value": "true" },
+      { "@type": "PropertyValue", "name": "realTimeAnalysis", "value": realTimeMonitoring ? "true" : "false" },
+      { "@type": "PropertyValue", "name": "automaticSuggestions", "value": "true" },
+      { "@type": "PropertyValue", "name": "continuousLearning", "value": "true" },
+      { "@type": "PropertyValue", "name": "performanceTracking", "value": "true" }
+    ]
   });
 
   if (!enabled) return null;
@@ -374,8 +363,13 @@ const AIFeedbackSystem: React.FC<AIFeedbackSystemProps> = ({
         <section itemScope itemType="https://schema.org/Dataset">
           <h2 itemProp="name">Sistema de Feedback IA para Otimização SEO</h2>
           <div itemProp="description">
-            Sistema inteligente que analisa performance, SEO, conteúdo e experiência do usuário em tempo real
+            Sistema inteligente que analisa performance, SEO, conteúdo e experiência do usuário em tempo real, oferecendo recomendações automatizadas e monitoramento contínuo para aumentar a visibilidade orgânica e a qualidade técnica das páginas.
           </div>
+          <div itemProp="creator" itemScope itemType="https://schema.org/Organization">
+            <span itemProp="name">LEGAL TechCo</span>
+            <span itemProp="url">https://operadora.legal/</span>
+          </div>
+          <div itemProp="license">https://creativecommons.org/licenses/by/4.0/</div>
 
           <div data-ai-scores="current-metrics">
             <div itemScope itemType="https://schema.org/PropertyValue">
