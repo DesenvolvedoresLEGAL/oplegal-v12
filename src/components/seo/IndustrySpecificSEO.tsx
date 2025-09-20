@@ -147,20 +147,7 @@ const IndustrySpecificSEO: React.FC<IndustrySpecificSEOProps> = ({
             "name": solution,
             "description": `${solution} otimizado para ${industry}`
           })) || []
-        },
-        "review": data.caseStudies?.[0] ? {
-          "@type": "Review",
-          "reviewBody": data.caseStudies[0].result,
-          "author": {
-            "@type": "Organization",
-            "name": data.caseStudies[0].company
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": 5,
-            "bestRating": 5
-          }
-        } : undefined
+        }
       };
     })
   };
