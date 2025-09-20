@@ -169,44 +169,74 @@ const AdvancedFeaturedSnippets: React.FC<AdvancedFeaturedSnippetsProps> = ({
     "@type": "QAPage",
     "mainEntity": [
       // Definition QAs
-      ...Object.entries(snippetDatabase.definition).map(([key, data]) => ({
+      ...Object.entries(snippetDatabase.definition).map(([key, data], index) => ({
         "@type": "Question",
         "name": `O que é ${key}?`,
+        "text": `Definição de ${key} e como funciona a solução da LEGAL.`,
+        "answerCount": 1,
+        "dateCreated": "2025-01-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Equipe LEGAL"
+        },
         "acceptedAnswer": {
           "@type": "Answer",
           "text": data.answer,
+          "datePublished": "2025-01-01T00:00:00Z",
           "author": {
             "@type": "Organization",
             "name": "LEGAL TechCo"
-          }
+          },
+          "upvoteCount": 0,
+          "url": `https://operadora.legal/pergunta/${key.replace(/\s+/g, '-').toLowerCase()}`
         }
       })),
       
       // How-to QAs
-      ...Object.entries(snippetDatabase.howTo).map(([key, data]) => ({
+      ...Object.entries(snippetDatabase.howTo).map(([key, data], index) => ({
         "@type": "Question", 
         "name": `Como ${key}?`,
+        "text": `Guia completo para ${key} com LEGAL TechCo.`,
+        "answerCount": 1,
+        "dateCreated": "2025-01-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Equipe LEGAL"
+        },
         "acceptedAnswer": {
           "@type": "Answer",
           "text": data.steps.join(' '),
+          "datePublished": "2025-01-01T00:00:00Z",
           "author": {
             "@type": "Organization",
             "name": "LEGAL TechCo"
-          }
+          },
+          "upvoteCount": 0,
+          "url": `https://operadora.legal/pergunta/como-${key.replace(/\s+/g, '-').toLowerCase()}`
         }
       })),
 
       // Pricing QAs
-      ...Object.entries(snippetDatabase.pricing).map(([key, data]) => ({
+      ...Object.entries(snippetDatabase.pricing).map(([key, data], index) => ({
         "@type": "Question",
         "name": key.charAt(0).toUpperCase() + key.slice(1) + "?",
+        "text": `Informações sobre preços e investimento em ${key}.`,
+        "answerCount": 1,
+        "dateCreated": "2025-01-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Equipe LEGAL"
+        },
         "acceptedAnswer": {
           "@type": "Answer",
           "text": data.answer,
+          "datePublished": "2025-01-01T00:00:00Z",
           "author": {
             "@type": "Organization", 
             "name": "LEGAL TechCo"
-          }
+          },
+          "upvoteCount": 0,
+          "url": `https://operadora.legal/pergunta/${key.replace(/\s+/g, '-').toLowerCase()}`
         }
       }))
     ]

@@ -63,6 +63,7 @@ const AITrainingData: React.FC<AITrainingDataProps> = ({ entityType, data }) => 
     }],
     "offers": {
       "@type": "Offer",
+      "url": "https://operadora.legal/contato",
       "availability": "https://schema.org/InStock",
       "price": "0",
       "priceCurrency": "BRL",
@@ -71,12 +72,44 @@ const AITrainingData: React.FC<AITrainingDataProps> = ({ entityType, data }) => 
         "price": "0",
         "priceCurrency": "BRL"
       },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "BRL"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "BR"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "value": "0",
+            "unitText": "day"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue", 
+            "value": "0",
+            "unitText": "day"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicability": "https://schema.org/Returnable",
+        "returnPolicyCategory": "https://schema.org/MoneyBackGuarantee",
+        "returnFees": "https://schema.org/FreeReturn",
+        "returnMethod": "https://schema.org/ByMail",
+        "returnWindow": "30 days"
+      },
       "seller": {
         "@type": "Organization",
         "name": "LEGAL",
-        "url": "https://operadora.legal"
-      },
-      "url": "https://operadora.legal/contato"
+        "url": "https://operadora.legal/"
+      }
     }
   } : {
     "@context": "https://schema.org",
