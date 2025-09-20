@@ -178,7 +178,7 @@ const RealUserMonitoring: React.FC<RealUserMonitoringProps> = ({
     return 'poor';
   };
 
-  // Performance Schema for search engines
+  // Performance Schema for search engines - usando nome diferente para evitar conflito
   const performanceSchema = {
     "@context": "https://schema.org",
     "@type": "WebPageElement",
@@ -186,8 +186,14 @@ const RealUserMonitoring: React.FC<RealUserMonitoringProps> = ({
     "description": "Performance metrics collected from real users",
     "mainEntity": {
       "@type": "DataSet",
-      "name": "Core Web Vitals",
-      "description": "Real user performance metrics",
+      "name": "RUM Performance Dataset",
+      "description": "Comprehensive real user monitoring dataset containing performance metrics, user agent data, connection information and device capabilities for continuous site optimization and user experience enhancement.",
+      "creator": {
+        "@type": "Organization",
+        "name": "LEGAL TechCo",
+        "url": "https://operadora.legal/"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
       "distribution": Object.entries(metrics).map(([key, value]) => ({
         "@type": "DataDownload",
         "name": key,
