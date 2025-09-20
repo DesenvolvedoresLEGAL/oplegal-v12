@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { getPageSEOConfig, DISABLE_ALL_AUTO_DATASETS } from '@/config/seoConfig';
 
 // Declare gtag function for Google Analytics
 declare global {
@@ -19,14 +21,21 @@ interface WebVitalsMetrics {
 interface CoreWebVitalsMonitorProps {
   onMetricsUpdate?: (metrics: WebVitalsMetrics) => void;
   enableReporting?: boolean;
+  enableDataset?: boolean;
 }
 
 const CoreWebVitalsMonitor: React.FC<CoreWebVitalsMonitorProps> = ({
   onMetricsUpdate,
-  enableReporting = true
+  enableReporting = true,
+  enableDataset = true
 }) => {
+  const location = useLocation();
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [isLoaded, setIsLoaded] = useState(false);
+
+  // Verificar se deve renderizar Dataset baseado na configuração
+  const config = getPageSEOConfig(location.pathname);
+  const shouldRenderDataset = !DISABLE_ALL_AUTO_DATASETS && enableDataset && config.coreWebVitals;
 
   useEffect(() => {
     if (!enableReporting || typeof window === 'undefined') return;
@@ -218,13 +227,15 @@ const CoreWebVitalsMonitor: React.FC<CoreWebVitalsMonitorProps> = ({
 
   return (
     <>
-      {/* Performance Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(performanceSchema) }}
-      />
+      {/* Performance Schema - Apenas quando configurado */}
+      {shouldRenderDataset && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(performanceSchema) }}
+        />
+      )}
 
-      {/* Hidden performance data for crawlers */}
+      {/* Hidden performance data for crawlers - sempre presente para SEO */}
       <div className="sr-only" data-web-vitals="performance-metrics">
         <div data-metric="site-speed-optimization">
           <span data-lcp={metrics.lcp ? Math.round(metrics.lcp) : null}>

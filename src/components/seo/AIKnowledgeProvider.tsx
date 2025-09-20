@@ -1,10 +1,25 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import { getPageSEOConfig, DISABLE_ALL_AUTO_DATASETS } from '@/config/seoConfig';
 import { generateAIDataFeed } from '@/data/AIDataFeed';
 import LLMOptimizedContent from '@/components/seo/LLMOptimizedContent';
 import AITrainingData from '@/components/seo/AITrainingData';
 import ConsolidatedFAQSchema from '@/components/seo/ConsolidatedFAQSchema';
 
-const AIKnowledgeProvider: React.FC = () => {
+interface AIKnowledgeProviderProps {
+  enabled?: boolean;
+}
+
+const AIKnowledgeProvider: React.FC<AIKnowledgeProviderProps> = ({ 
+  enabled = false 
+}) => {
+  const location = useLocation();
+  
+  // Verificar se deve renderizar baseado na configuração
+  if (DISABLE_ALL_AUTO_DATASETS || !enabled) {
+    return null;
+  }
+  
   const dataFeed = generateAIDataFeed();
 
   // Dados estruturados para Smart Events™

@@ -8,108 +8,22 @@ import CallToAction from "@/components/CallToAction";
 import ChatbotButton from "@/components/ChatbotButton";
 import NewsletterExitPopup from "@/components/NewsletterExitPopup";
 import FeaturedPosts from "@/components/tectec/FeaturedPosts";
-import HomePageSEO from "@/components/seo/HomePageSEO";
 import PreloadResources from "@/components/PreloadResources";
 import PerformanceOptimizer from "@/components/PerformanceOptimizer";
-import TechnicalSEO from "@/components/seo/TechnicalSEO";
-import WebPageSchema from "@/components/seo/WebPageSchema";
-import AIKnowledgeProvider from "@/components/seo/AIKnowledgeProvider";
-import SEOCrawlerOptimization from "@/components/optimization/SEOCrawlerOptimization";
-import AIFeedbackSystem from "@/components/optimization/AIFeedbackSystem";
-import VoiceSearchOptimization from "@/components/optimization/VoiceSearchOptimization";
-import ConversationalAIData from "@/components/optimization/ConversationalAIData";
-import FeaturedSnippetsOptimization from "@/components/optimization/FeaturedSnippetsOptimization";
-import NaturalLanguageOptimization from "@/components/optimization/NaturalLanguageOptimization";
-import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
-import CoreWebVitalsMonitor from "@/components/seo/CoreWebVitalsMonitor";
-import IndustrySpecificSEO from "@/components/seo/IndustrySpecificSEO";
-import AdvancedFeaturedSnippets from "@/components/seo/AdvancedFeaturedSnippets";
-import GEOAdvancedOptimization from "@/components/seo/GEOAdvancedOptimization";
-import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
+import SEODatasetManager from "@/components/seo/SEODatasetManager";
 
 const Index = () => {
   useScrollAnimations();
   
   return (
     <>
-      {/* Core SEO Components - Only Once */}
-      <HomePageSEO />
+      {/* Performance Components */}
       <PerformanceOptimizer />
       <PreloadResources />
       
-      {/* AI & Optimization Components - Consolidated */}
-      <AIKnowledgeProvider />
-      <VoiceSearchOptimization 
-        businessName="LEGAL TechCo"
-        primaryKeywords={["Smart Events", "eventos inteligentes", "IA", "reconhecimento facial"]}
-        location="Brasil"
-        services={["Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™", "AERO Services"]}
-      />
-      <GEOAdvancedOptimization 
-        contentDomain="smart_events_technology"
-        entityType="company"
-        optimizationLevel="expert"
-      />
-      <RealUserMonitoring />
-      <CoreWebVitalsMonitor enableReporting={true} />
-      <AIFeedbackSystem enableRealTimeOptimization={true} />
-      <AdvancedFeaturedSnippets 
-        pageType="homepage"
-        focusKeyword="LEGAL smart events tecnologia"
-        location="Brasil"
-      />
-      <SEOCrawlerOptimization />
+      {/* Centralized SEO Dataset Control - DISABLED BY DEFAULT */}
+      {/* <SEODatasetManager /> */}
       
-      {/* Structured Data */}
-      <TechnicalSEO
-        canonical="https://operadora.legal"
-        prefetchUrls={[
-          "/smart-events",
-          "/negocios/ai", 
-          "/contato"
-        ]}
-        preloadResources={[
-          { href: "/fonts/main.woff2", as: "font", type: "font/woff2" }
-        ]}
-      />
-      <WebPageSchema
-        name="LEGAL TechCo - Smart Events™ e Soluções Tecnológicas"
-        description="A maior e melhor TechCo do Brasil. Revolucionamos eventos com Smart Events™, IA, conectividade 5G e soluções aéreas inovadoras."
-        url="https://operadora.legal"
-        mainEntity={{
-          type: "Organization",
-          name: "LEGAL TechCo",
-          description: "Empresa de tecnologia especializada em Smart Events™ e soluções inovadoras"
-        }}
-        potentialAction={{
-          type: "ContactAction",
-          target: "https://operadora.legal/contato",
-          name: "Entre em Contato"
-        }}
-      />
-      <LocalBusinessSchema />
-      
-      {/* Industry & Content Optimization */}
-      <IndustrySpecificSEO 
-        industries={["Tecnologia", "Corporativo", "Educação", "Entretenimento"]}
-        primarySolutions={["Smart Events™", "MAGICPASS™", "FitScore™", "GALAXIA™"]}
-        useCase="eventos-corporativos"
-      />
-      <ConversationalAIData 
-        domain="events"
-        intentClassification={["product_inquiry", "pricing_request", "demo_request", "company_info"]}
-        entityTypes={["product_name", "technology", "business_need", "location"]}
-      />
-      <FeaturedSnippetsOptimization 
-        pageType="homepage"
-        primaryTopic="Smart Events"
-        targetQuestions={["O que é Smart Events", "Como tornar eventos inteligentes", "Melhor empresa de tecnologia para eventos"]}
-      />
-      <NaturalLanguageOptimization 
-        pageContext="smart_events_homepage"
-        primaryEntities={["LEGAL TechCo", "Smart Events™", "GALAXIA™", "MAGICPASS™", "FitScore™"]}
-        semanticTopics={["eventos inteligentes", "tecnologia", "inteligência artificial", "inovação"]}
-      />
       
       <main itemScope itemType="https://schema.org/WebPage">
         <HeroSection />
