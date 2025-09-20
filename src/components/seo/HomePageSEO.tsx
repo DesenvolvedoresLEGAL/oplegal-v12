@@ -33,6 +33,23 @@ const HomePageSEO = () => {
         ]}
       />
       <OrganizationSchema />
+      
+      {/* FAQ Duplicate Prevention - Safety Belt */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function () {
+              const blocks = Array.from(
+                document.querySelectorAll('script[type="application/ld+json"]')
+              ).filter(s => /"@type"\\s*:\\s*"FAQPage"/.test(s.textContent));
+
+              // mantém o bloco com @id #faq e remove os demais
+              const keep = blocks.find(s => /"@id"\\s*:\\s*"https:\\/\\/operadora\\.legal\\/#faq"/.test(s.textContent));
+              blocks.forEach(b => { if (keep && b !== keep) b.remove(); });
+            });
+          `
+        }}
+      />
     </>
   );
 };
