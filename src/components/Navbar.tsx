@@ -457,16 +457,8 @@ const Navbar = () => {
               </Button>
             </div>
           ) : (
-            <Button 
-              variant="outline" 
-              className="border-legal text-legal hover:bg-legal hover:text-white flex items-center"
-              asChild
-            >
-              <Link to="/auth">
-                <LogIn className="mr-2 h-4 w-4" />
-                Acesso Labs™
-              </Link>
-            </Button>
+            // Temporarily removed Acesso Labs button
+            <></>
           )}
         </div>
 
@@ -649,14 +641,8 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <Link 
-              to="/auth" 
-              className="px-4 py-3 mt-2 text-sm font-medium text-legal border border-legal rounded-md flex items-center justify-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <LogIn className="mr-2 h-4 w-4" />
-              Acesso Labs™
-            </Link>
+            // Temporarily removed Acesso Labs button
+            <></>
           )}
         </div>
       </div>
