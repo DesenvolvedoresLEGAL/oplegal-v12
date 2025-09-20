@@ -163,82 +163,203 @@ const AdvancedFeaturedSnippets: React.FC<AdvancedFeaturedSnippetsProps> = ({
     "quanto custa smart events": "O investimento em Smart Events varia conforme o tamanho do evento, começando em cinquenta mil reais para eventos pequenos, mas o retorno é de três a dez vezes o investimento inicial."
   };
 
-  // Advanced schema for featured snippets
+  // Consolidated QAPage schema with single mainEntity array
   const advancedSnippetSchema = {
     "@context": "https://schema.org",
     "@type": "QAPage",
     "mainEntity": [
-      // Definition QAs
-      ...Object.entries(snippetDatabase.definition).map(([key, data], index) => ({
+      {
         "@type": "Question",
-        "name": `O que é ${key}?`,
-        "text": `Definição de ${key} e como funciona a solução da LEGAL.`,
+        "name": "O que é Smart Events™?",
+        "text": "Definição de Smart Events™ e como funciona a solução da LEGAL.",
         "answerCount": 1,
         "dateCreated": "2025-01-01T00:00:00Z",
         "author": {
           "@type": "Person",
-          "name": "Equipe LEGAL"
+          "name": "Equipe LEGAL",
+          "url": "https://operadora.legal"
         },
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": data.answer,
+          "text": "Smart Events™ são eventos com infraestrutura tecnológica 100% integrada que utiliza Inteligência Artificial, conectividade 5G, reconhecimento facial e IoT para criar experiências 10× mais inteligentes, conectadas e eficientes.",
           "datePublished": "2025-01-01T00:00:00Z",
           "author": {
             "@type": "Organization",
-            "name": "LEGAL TechCo"
+            "name": "LEGAL TechCo",
+            "url": "https://operadora.legal"
           },
           "upvoteCount": 0,
-          "url": `https://operadora.legal/pergunta/${key.replace(/\s+/g, '-').toLowerCase()}`
+          "url": "https://operadora.legal/pergunta/smart-events"
         }
-      })),
-      
-      // How-to QAs
-      ...Object.entries(snippetDatabase.howTo).map(([key, data], index) => ({
-        "@type": "Question", 
-        "name": `Como ${key}?`,
-        "text": `Guia completo para ${key} com LEGAL TechCo.`,
+      },
+      {
+        "@type": "Question",
+        "name": "O que é MAGICPASS™?",
+        "text": "Definição de MAGICPASS™ e como funciona a solução da LEGAL.",
         "answerCount": 1,
         "dateCreated": "2025-01-01T00:00:00Z",
         "author": {
           "@type": "Person",
-          "name": "Equipe LEGAL"
+          "name": "Equipe LEGAL",
+          "url": "https://operadora.legal"
         },
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": data.steps.join(' '),
+          "text": "MAGICPASS™ é um sistema de controle de acesso biométrico que utiliza reconhecimento facial com IA anti-spoofing, permitindo entrada em eventos em menos de 500 ms sem filas ou credenciais físicas.",
           "datePublished": "2025-01-01T00:00:00Z",
           "author": {
             "@type": "Organization",
-            "name": "LEGAL TechCo"
+            "name": "LEGAL TechCo",
+            "url": "https://operadora.legal"
           },
           "upvoteCount": 0,
-          "url": `https://operadora.legal/pergunta/como-${key.replace(/\s+/g, '-').toLowerCase()}`
+          "url": "https://operadora.legal/pergunta/magicpass"
         }
-      })),
-
-      // Pricing QAs
-      ...Object.entries(snippetDatabase.pricing).map(([key, data], index) => ({
+      },
+      {
         "@type": "Question",
-        "name": key.charAt(0).toUpperCase() + key.slice(1) + "?",
-        "text": `Informações sobre preços e investimento em ${key}.`,
+        "name": "O que é FitScore™?",
+        "text": "Definição de FitScore™ e como funciona a solução da LEGAL.",
         "answerCount": 1,
         "dateCreated": "2025-01-01T00:00:00Z",
         "author": {
           "@type": "Person",
-          "name": "Equipe LEGAL"
+          "name": "Equipe LEGAL",
+          "url": "https://operadora.legal"
         },
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": data.answer,
+          "text": "FitScore™ é um copiloto de contratação com Inteligência Artificial que revoluciona processos de RH através de análise preditiva de candidatos, matching inteligente e People Analytics avançado, reduzindo 75% o tempo de contratação.",
           "datePublished": "2025-01-01T00:00:00Z",
           "author": {
-            "@type": "Organization", 
-            "name": "LEGAL TechCo"
+            "@type": "Organization",
+            "name": "LEGAL TechCo",
+            "url": "https://operadora.legal"
           },
           "upvoteCount": 0,
-          "url": `https://operadora.legal/pergunta/${key.replace(/\s+/g, '-').toLowerCase()}`
+          "url": "https://operadora.legal/pergunta/fitscore"
         }
-      }))
+      },
+      {
+        "@type": "Question",
+        "name": "Como organizar um evento inteligente?",
+        "text": "Guia completo para organizar um evento inteligente com LEGAL TechCo.",
+        "answerCount": 1,
+        "dateCreated": "2025-01-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Equipe LEGAL",
+          "url": "https://operadora.legal"
+        },
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1. Defina objetivos claros e métricas de sucesso do evento. 2. Escolha a plataforma Smart Events™ adequada ao tamanho. 3. Implemente MAGICPASS™ para credenciamento sem filas. 4. Configure analytics em tempo real para monitoramento. 5. Ative IA para personalização automática da experiência. 6. Integre conectividade 5G para experiências imersivas.",
+          "datePublished": "2025-01-01T00:00:00Z",
+          "author": {
+            "@type": "Organization",
+            "name": "LEGAL TechCo",
+            "url": "https://operadora.legal"
+          },
+          "upvoteCount": 0,
+          "url": "https://operadora.legal/pergunta/como-organizar-evento-inteligente"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como implementar reconhecimento facial?",
+        "text": "Guia completo para implementar reconhecimento facial com LEGAL TechCo.",
+        "answerCount": 1,
+        "dateCreated": "2025-01-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Equipe LEGAL",
+          "url": "https://operadora.legal"
+        },
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1. Cadastre participantes antecipadamente na plataforma. 2. Configure câmeras compatíveis nos pontos de acesso. 3. Teste o sistema MAGICPASS™ com dados de exemplo. 4. Treine a equipe para operação e contingências. 5. Ative monitoramento em tempo real no evento. 6. Colete feedback e otimize para os próximos eventos.",
+          "datePublished": "2025-01-01T00:00:00Z",
+          "author": {
+            "@type": "Organization",
+            "name": "LEGAL TechCo",
+            "url": "https://operadora.legal"
+          },
+          "upvoteCount": 0,
+          "url": "https://operadora.legal/pergunta/como-implementar-reconhecimento-facial"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como medir o ROI de um evento?",
+        "text": "Guia completo para medir o ROI de eventos com LEGAL TechCo.",
+        "answerCount": 1,
+        "dateCreated": "2025-01-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Equipe LEGAL",
+          "url": "https://operadora.legal"
+        },
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1. Estabeleça um baseline de custos e resultados anteriores. 2. Configure dashboards de analytics pré-evento. 3. Monitore métricas em tempo real durante o evento. 4. Colete dados de satisfação e engajamento. 5. Analise a conversão de leads e oportunidades. 6. Compare os resultados com eventos tradicionais.",
+          "datePublished": "2025-01-01T00:00:00Z",
+          "author": {
+            "@type": "Organization",
+            "name": "LEGAL TechCo",
+            "url": "https://operadora.legal"
+          },
+          "upvoteCount": 0,
+          "url": "https://operadora.legal/pergunta/como-medir-roi-evento"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto custa Smart Events™?",
+        "text": "Informações sobre preços e investimento no Smart Events™.",
+        "answerCount": 1,
+        "dateCreated": "2025-01-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Equipe LEGAL",
+          "url": "https://operadora.legal"
+        },
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O investimento em Smart Events™ varia de R$ 50.000 a R$ 500.000, conforme o tamanho e a complexidade do evento, com ROI médio de 300% a 1.000% e payback em 3 a 6 meses.",
+          "datePublished": "2025-01-01T00:00:00Z",
+          "author": {
+            "@type": "Organization",
+            "name": "LEGAL TechCo",
+            "url": "https://operadora.legal"
+          },
+          "upvoteCount": 0,
+          "url": "https://operadora.legal/pergunta/quanto-custa-smart-events"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual é o preço do MAGICPASS™?",
+        "text": "Informações sobre preços e investimento do MAGICPASS™.",
+        "answerCount": 1,
+        "dateCreated": "2025-01-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Equipe LEGAL",
+          "url": "https://operadora.legal"
+        },
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MAGICPASS™ custa a partir de R$ 15.000 para eventos pequenos, com preço por participante decrescente conforme o volume, incluindo hardware, software e suporte completo.",
+          "datePublished": "2025-01-01T00:00:00Z",
+          "author": {
+            "@type": "Organization",
+            "name": "LEGAL TechCo",
+            "url": "https://operadora.legal"
+          },
+          "upvoteCount": 0,
+          "url": "https://operadora.legal/pergunta/preco-magicpass"
+        }
+      }
     ]
   };
 
