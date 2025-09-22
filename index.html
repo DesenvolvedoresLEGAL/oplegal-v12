@@ -190,6 +190,21 @@
       });
     });
     </script>
+    
+    <!-- Kill switch: remove QAPage duplicado/indevido na HOME -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var isHome = location.pathname === '/' || location.pathname === '/index.html';
+      if (!isHome) return;
+      document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
+        try {
+          var j = JSON.parse(s.textContent);
+          var types = Array.isArray(j['@type']) ? j['@type'] : [j['@type']];
+          if (types && types.includes('QAPage')) s.remove();
+        } catch(e){}
+      });
+    });
+    </script>
   </head>
 
   <body>
