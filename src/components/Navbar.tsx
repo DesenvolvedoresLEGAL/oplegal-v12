@@ -145,18 +145,18 @@ const Navbar = () => {
                       <div>
                         <h3 className="text-sm font-semibold text-legal mb-3 uppercase tracking-wide">IA & Inovação</h3>
                         <div className="space-y-3">
-                          <Link to="/produtos/galaxia" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
-                            <Cloud className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
-                            <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">GalaxIA</div>
-                              <p className="text-xs text-muted-foreground">Infraestrutura de IA Personalizada</p>
-                            </div>
-                          </Link>
                           <Link to="/produtos/humanoid" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Bot className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
                               <div className="text-sm font-medium text-foreground group-hover:text-legal">Humanoid</div>
                               <p className="text-xs text-muted-foreground">Robô para Geração de Negócios</p>
+                            </div>
+                          </Link>
+                          <Link to="/produtos/caramelox" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
+                            <Cloud className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
+                            <div>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Caramelox</div>
+                              <p className="text-xs text-muted-foreground">Plataforma de IA conversacional para prospecção e atendimento</p>
                             </div>
                           </Link>
                           <a href="https://vitai.operadora.legal" target="_blank" rel="noopener noreferrer" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">

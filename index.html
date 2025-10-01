@@ -205,6 +205,66 @@
       });
     });
     </script>
+    
+    <!-- Swap de itens no mega-menu: GalaxIA -> Humanoid e Humanoid -> Caramelox -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // tenta achar a coluna do mega-menu "IA & Inovação"
+      const menuRoot = Array.from(document.querySelectorAll('.mega-menu, nav, [role="menu"]'))
+        .find(el => /IA\s*&?\s*Inova[cç]ão/i.test(el.textContent || ''));
+
+      if (!menuRoot) return;
+
+      function updateItem(labelRegex, newLabel, newHref, newDesc) {
+        const a = Array.from(menuRoot.querySelectorAll('a')).find(x => labelRegex.test(x.textContent.trim()));
+        if (!a) return;
+
+        // título
+        const titleEl = a.querySelector('.menu-title, .title, strong, span') || a;
+        titleEl.textContent = newLabel;
+
+        // link
+        if (newHref) a.href = newHref;
+
+        // descrição (se existir)
+        const descEl = a.querySelector('.menu-desc, .desc, small, p');
+        if (descEl && newDesc) descEl.textContent = newDesc;
+
+        // acessibilidade / tracking
+        a.setAttribute('aria-label', newLabel);
+        a.dataset.product = newLabel.toLowerCase()
+          .normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\W+/g,'-');
+      }
+
+      // 1) GalaxIA -> Humanoid
+      updateItem(/^\s*galaxia\s*$/i,
+                 'Humanoid',
+                 '/produtos/humanoid',
+                 'Robô para Geração de Negócios');
+
+      // 2) Humanoid -> Caramelox
+      updateItem(/^\s*humanoid\s*$/i,
+                 'Caramelox',
+                 '/produtos/caramelox',
+                 'Plataforma de IA conversacional para prospecção e atendimento');
+      
+      // Opcional: corrige JSON-LD de navegação, se existir
+      document.querySelectorAll('script[type="application/ld+json"]').forEach(s => {
+        try {
+          const j = JSON.parse(s.textContent);
+          const types = Array.isArray(j['@type']) ? j['@type'] : [j['@type']];
+          if (types && types.includes('SiteNavigationElement')) {
+            const list = j.itemListElement || j.hasPart || [];
+            list.forEach(it => {
+              if (it.name && /galaxia/i.test(it.name)) { it.name = 'Humanoid'; it.url = 'https://operadora.legal/produtos/humanoid'; }
+              if (it.name && /humanoid/i.test(it.name)) { it.name = 'Caramelox'; it.url = 'https://operadora.legal/produtos/caramelox'; }
+            });
+            s.textContent = JSON.stringify(j);
+          }
+        } catch(e){}
+      });
+    });
+    </script>
   </head>
 
   <body>
