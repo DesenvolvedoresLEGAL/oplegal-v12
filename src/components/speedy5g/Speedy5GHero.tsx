@@ -17,7 +17,7 @@ const Speedy5GHero = () => {
           <div className="flex items-center justify-center gap-3 mb-6">
             <Signal className="w-12 h-12 text-legal-cyan" />
             <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wider" style={{ letterSpacing: '0.05em' }}>
-              Speedy5G
+              Speedy
             </h1>
           </div>
           <p className="text-lg md:text-xl font-light max-w-4xl mx-auto mb-8">

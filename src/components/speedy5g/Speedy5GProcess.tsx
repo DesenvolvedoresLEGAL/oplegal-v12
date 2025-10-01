@@ -30,7 +30,7 @@ const Speedy5GProcess = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Implementação Speedy5G"
+          title="Implementação Speedy"
           subtitle="Processo estruturado em 4 etapas para máxima performance desde o primeiro dia"
           center
         />

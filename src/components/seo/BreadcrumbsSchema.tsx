@@ -61,7 +61,7 @@ const BreadcrumbsSchema: React.FC<BreadcrumbsSchemaProps> = ({ customBreadcrumbs
       'neurafit': 'NeuraFit™',
       'linkai': 'LinkAI™',
       'plaud': 'Plaud™',
-      'speedy5g': 'Speedy5G™',
+      'speedy5g': 'Speedy™',
       'ai': 'Inteligência Artificial',
       'contato': 'Contato',
       'sobre': 'Sobre',

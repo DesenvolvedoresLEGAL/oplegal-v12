@@ -26,8 +26,8 @@ import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimiza
 const Speedy5GPage = () => {
   const faqData = [
     {
-      question: "Qual a velocidade real do Speedy5G?",
-      answer: "O Speedy5G oferece velocidades de download de até 10Gbps e upload de até 2Gbps, com latência inferior a 5ms, garantindo performance superior para aplicações empresariais críticas."
+      question: "Qual a velocidade real do Speedy?",
+      answer: "O Speedy oferece velocidades de download de até 10Gbps e upload de até 2Gbps, com latência inferior a 5ms, garantindo performance superior para aplicações empresariais críticas."
     },
     {
       question: "Como funciona a tecnologia FWA?",
@@ -38,8 +38,8 @@ const Speedy5GPage = () => {
       answer: "Atualmente cobrimos as principais regiões metropolitanas do Brasil, com planos de expansão contínua. Consulte nossa equipe para verificar disponibilidade em sua região."
     },
     {
-      question: "O Speedy5G substitui totalmente a fibra óptica?",
-      answer: "Para muitas aplicações sim, especialmente onde a fibra não está disponível ou instalação é complexa. O Speedy5G oferece performance comparável com flexibilidade superior."
+      question: "O Speedy substitui totalmente a fibra óptica?",
+      answer: "Para muitas aplicações sim, especialmente onde a fibra não está disponível ou instalação é complexa. O Speedy oferece performance comparável com flexibilidade superior."
     },
     {
       question: "Como é o processo de instalação?",
@@ -50,16 +50,16 @@ const Speedy5GPage = () => {
   return (
     <>
       <SEOHead
-        title="Speedy5G™ - Conectividade 5G Ultra-Rápida FWA | LEGAL"
-        description="Speedy5G: Solução de conectividade 5G empresarial de alta performance. Velocidade de até 10Gbps, latência ultra-baixa e cobertura nacional para transformar sua operação."
-        keywords="Speedy5G, 5G empresarial, conectividade alta velocidade, internet 5G, LEGAL, baixa latência, FWA"
+        title="Speedy™ - Conectividade 5G Ultra-Rápida FWA | LEGAL"
+        description="Speedy: Solução de conectividade 5G empresarial de alta performance. Velocidade de até 10Gbps, latência ultra-baixa e cobertura nacional para transformar sua operação."
+        keywords="Speedy, 5G empresarial, conectividade alta velocidade, internet 5G, LEGAL, baixa latência, FWA"
         canonical="https://operadora.legal/produtos/speedy5g"
         image="https://operadora.legal/images/speedy5g-hero-2024.jpg"
         type="product"
       />
       
       <ProductSchema
-        productName="Speedy5G™"
+        productName="Speedy™"
         description="Solução de conectividade 5G empresarial de alta performance com tecnologia FWA"
         category="Conectividade Empresarial"
         features={["Velocidade até 10Gbps", "Latência < 5ms", "Instalação rápida", "Cobertura nacional"]}
@@ -86,7 +86,7 @@ const Speedy5GPage = () => {
       <AIFeedbackSystem enableRealTimeOptimization={true} />
       <AdvancedFeaturedSnippets 
         pageType="product"
-        focusKeyword="Speedy5G conectividade 5G"
+        focusKeyword="Speedy conectividade 5G"
       />
       <SEOCrawlerOptimization />
       
@@ -103,7 +103,7 @@ const Speedy5GPage = () => {
         <Speedy5GDemo />
         <Speedy5GFAQ />
         <CallToAction
-          title="Acelere seu Negócio com Speedy5G"
+          title="Acelere seu Negócio com Speedy"
           subtitle="Descubra como a conectividade 5G ultra-rápida pode transformar sua operação. Fale com nossos especialistas e receba uma proposta personalizada."
           buttonText="Solicitar Demonstração"
           buttonLink="/contato?produto=speedy5g"

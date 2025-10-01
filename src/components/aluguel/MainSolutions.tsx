@@ -16,9 +16,9 @@ import {
 const MainSolutions = () => {
   const mainSolutions = [
     {
-      name: 'SPEEDY 5G',
+      name: 'SPEEDY',
       tagline: 'Internet 5G Plug-and-Play',
-      description: 'Nossa solução SPEEDY 5G revoluciona o aluguel de internet para eventos corporativos. Com roteadores FWA 5G de última geração, oferecemos conectividade ultra-rápida, estável e de fácil instalação. Ideal para transmissões ao vivo, credenciamento digital, e operações que exigem internet premium temporária.',
+      description: 'Nossa solução SPEEDY revoluciona o aluguel de internet para eventos corporativos. Com roteadores FWA 5G de última geração, oferecemos conectividade ultra-rápida, estável e de fácil instalação. Ideal para transmissões ao vivo, credenciamento digital, e operações que exigem internet premium temporária.',
       icon: <Zap className="w-8 h-8" />,
       features: [
         'Velocidade até 1 Gbps simétrica',

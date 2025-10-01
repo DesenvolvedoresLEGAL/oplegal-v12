@@ -33,7 +33,7 @@ const Speedy5GUseCases = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Casos de Uso Estratégicos"
-          subtitle="Speedy5G potencializa operações que exigem conectividade de classe mundial"
+          subtitle="Speedy potencializa operações que exigem conectividade de classe mundial"
           center
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

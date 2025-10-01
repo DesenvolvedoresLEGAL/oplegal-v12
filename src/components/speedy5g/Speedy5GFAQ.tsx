@@ -11,8 +11,8 @@ import SectionTitle from '@/components/SectionTitle';
 const Speedy5GFAQ = () => {
   const faqs = [
     {
-      question: "Qual é a velocidade real do Speedy5G?",
-      answer: "O Speedy5G oferece velocidades de download de até 10Gbps e upload de até 2Gbps, com latência ultra-baixa de apenas 1ms. As velocidades reais dependem da localização e condições da rede, mas garantimos pelo menos 80% da velocidade contratada."
+      question: "Qual é a velocidade real do Speedy?",
+      answer: "O Speedy oferece velocidades de download de até 10Gbps e upload de até 2Gbps, com latência ultra-baixa de apenas 1ms. As velocidades reais dependem da localização e condições da rede, mas garantimos pelo menos 80% da velocidade contratada."
     },
     {
       question: "Em quanto tempo é feita a instalação?",
@@ -41,7 +41,7 @@ const Speedy5GFAQ = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Perguntas Frequentes"
-          subtitle="Tire suas dúvidas sobre o Speedy5G e nossa conectividade ultra-rápida"
+          subtitle="Tire suas dúvidas sobre o Speedy e nossa conectividade ultra-rápida"
           center
         />
         

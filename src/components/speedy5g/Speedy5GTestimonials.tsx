@@ -9,7 +9,7 @@ const Speedy5GTestimonials = () => {
     {
       name: "Eduardo Santos",
       role: "CTO, MediaTech",
-      content: "Speedy5G transformou nossa produção. Upload de vídeos 4K que levava horas agora acontece em minutos. Produtividade revolucionária.",
+      content: "Speedy transformou nossa produção. Upload de vídeos 4K que levava horas agora acontece em minutos. Produtividade revolucionária.",
       rating: 5
     },
     {
@@ -21,7 +21,7 @@ const Speedy5GTestimonials = () => {
     {
       name: "Carlos Rodrigues",
       role: "CEO, GameStudio",
-      content: "Para e-sports profissional, Speedy5G é game changer. Zero lag, máxima performance. Nossos jogadores têm vantagem competitiva real.",
+      content: "Para e-sports profissional, Speedy é game changer. Zero lag, máxima performance. Nossos jogadores têm vantagem competitiva real.",
       rating: 5
     }
   ];
@@ -31,7 +31,7 @@ const Speedy5GTestimonials = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Depoimentos de Clientes"
-          subtitle="Veja como o Speedy5G transformou a conectividade de empresas líderes"
+          subtitle="Veja como o Speedy transformou a conectividade de empresas líderes"
           center
         />
         

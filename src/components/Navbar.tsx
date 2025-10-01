@@ -85,7 +85,7 @@ const Navbar = () => {
                           <Link to="/produtos/speedy5g" className="flex items-start p-2 rounded-md group hover:bg-accent/40 transition-colors">
                             <Zap className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
-                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Speedy 5G</div>
+                              <div className="text-sm font-medium text-foreground group-hover:text-legal">Speedy</div>
                               <p className="text-xs text-muted-foreground">Internet Plug and Play</p>
                             </div>
                           </Link>
@@ -518,7 +518,7 @@ const Navbar = () => {
                 Sonix - Delivery de Tudo com Drone
               </Link>
               <Link to="/produtos/speedy5g" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
-                Speedy 5G - Internet Plug and Play
+                Speedy - Internet Plug and Play
               </Link>
               <Link to="/produtos/plaud" className="px-4 py-2 text-xs hover:bg-gray-100 rounded-md" onClick={() => setIsMenuOpen(false)}>
                 Plaud - Gravação de Voz com IA

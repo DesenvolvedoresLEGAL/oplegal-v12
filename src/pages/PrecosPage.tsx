@@ -20,7 +20,7 @@ import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimiza
 const PrecosPage = () => {
   const [selectedDays, setSelectedDays] = useState(15);
   const [selectedDemand, setSelectedDemand] = useState(60);
-  const [selectedPlan, setSelectedPlan] = useState("SPEEDY 5G PRO");
+  const [selectedPlan, setSelectedPlan] = useState("SPEEDY PRO");
   const [fidelidade, setFidelidade] = useState("sem");
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -32,11 +32,11 @@ const PrecosPage = () => {
     }
   };
   const baseRates = {
-    "SPEEDY 5G LITE": 150,
-    "SPEEDY 5G PLUS": 300,
-    "SPEEDY 5G PRO": 600,
-    "SPEEDY 5G ULTRA": 900,
-    "SPEEDY 5G LIVE": 500
+    "SPEEDY LITE": 150,
+    "SPEEDY PLUS": 300,
+    "SPEEDY PRO": 600,
+    "SPEEDY ULTRA": 900,
+    "SPEEDY LIVE": 500
   };
   const getAdvanceFactor = (days: number) => {
     if (days >= 30) return -0.1;
@@ -201,7 +201,7 @@ const PrecosPage = () => {
               {/* SPEEDY 5G LITE */}
               <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G LITE</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY LITE</h3>
                   <div className="space-y-3 mb-6">
                     <div className="text-white">
                       <div className="font-semibold">QUANTIDADE DE DADOS</div>
@@ -226,7 +226,7 @@ const PrecosPage = () => {
               {/* SPEEDY 5G PLUS */}
               <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G PLUS</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY PLUS</h3>
                   <div className="space-y-3 mb-6">
                     <div className="text-white">
                       <div className="font-semibold">QUANTIDADE DE DADOS</div>
@@ -251,7 +251,7 @@ const PrecosPage = () => {
               {/* SPEEDY 5G PRO */}
               <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G PRO</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY PRO</h3>
                   <div className="space-y-3 mb-6">
                     <div className="text-white">
                       <div className="font-semibold">QUANTIDADE DE DADOS</div>
@@ -276,7 +276,7 @@ const PrecosPage = () => {
               {/* SPEEDY 5G ULTRA */}
               <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G ULTRA</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">SPEEDY ULTRA</h3>
                   <div className="space-y-3 mb-6">
                     <div className="text-white">
                       <div className="font-semibold">QUANTIDADE DE DADOS</div>
@@ -302,7 +302,7 @@ const PrecosPage = () => {
             {/* SPEEDY 5G LIVE */}
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 relative overflow-hidden">
               <div className="text-center">
-                <h3 className="text-xl font-bold text-white mb-4">SPEEDY 5G LIVE</h3>
+                <h3 className="text-xl font-bold text-white mb-4">SPEEDY LIVE</h3>
                 <div className="space-y-3 mb-6">
                   <div className="text-white">
                     <div className="font-semibold">QUANTIDADE DE DADOS</div>

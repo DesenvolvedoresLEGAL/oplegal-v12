@@ -10,7 +10,7 @@ const Speedy5GDemo = () => {
     <section className="py-20 bg-gradient-to-r from-legal-purple/10 to-legal-cyan/10">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Experimente o Speedy5G"
+          title="Experimente o Speedy"
           subtitle="Veja na prática como nossa conectividade 5G revoluciona sua operação"
           center
         />
