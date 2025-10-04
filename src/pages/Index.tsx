@@ -1,6 +1,7 @@
 import React from "react";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
-import HeroSection from "@/components/sections/HeroSection";
+import HumanoidHomeHero from "@/components/sections/HumanoidHomeHero";
+import SmartEventsSection from "@/components/sections/SmartEventsSection";
 import WhyLegalSection from "@/components/sections/WhyLegalSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import SuccessStoriesSection from "@/components/sections/SuccessStoriesSection";
@@ -26,7 +27,8 @@ const Index = () => {
       
       
       <main itemScope itemType="https://schema.org/WebPage">
-        <HeroSection />
+        <HumanoidHomeHero />
+        <SmartEventsSection />
         <WhyLegalSection />
         <SuccessStoriesSection />
         <ProductsSection />
