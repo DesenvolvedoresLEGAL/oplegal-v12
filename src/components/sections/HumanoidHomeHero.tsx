@@ -37,7 +37,7 @@ const HumanoidHomeHero = () => {
           
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            Descubra o primeiro Workspace de IA que integra dados, pessoas e processos em um único espaço de consciência empresarial.
+            Descubra o primeiro Workspace de IA para empresas que integra dados, pessoas, integrações, automações e processos em uma única plataforma.
           </p>
           
           {/* CTAs */}
