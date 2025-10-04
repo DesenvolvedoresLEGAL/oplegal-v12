@@ -2,7 +2,8 @@
 import React from "react";
 import HomePageSEO from "@/components/seo/HomePageSEO";
 import PreloadResources from "@/components/PreloadResources";
-import HeroSection from "@/components/sections/HeroSection";
+import HumanoidHomeHero from "@/components/sections/HumanoidHomeHero";
+import SmartEventsSection from "@/components/sections/SmartEventsSection";
 import WhyLegalSection from "@/components/sections/WhyLegalSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import SuccessStoriesSection from "@/components/sections/SuccessStoriesSection";
@@ -43,8 +44,11 @@ const HomePage = () => {
       <SEOCrawlerOptimization />
       
       <main role="main" className="layout-stable">
-        {/* Hero Section - H1 Principal */}
-        <HeroSection />
+        {/* Hero Section - H1 Principal - HUMANOID */}
+        <HumanoidHomeHero />
+        
+        {/* Smart Events Section - H2 */}
+        <SmartEventsSection />
         
         {/* Por que LEGAL - Credibilidade e Números */}
         <WhyLegalSection />
