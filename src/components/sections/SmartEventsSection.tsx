@@ -42,8 +42,7 @@ const SmartEventsSection = () => {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="border-legal-green text-legal-green hover:bg-legal-green/10 font-semibold px-8 py-6 text-lg"
+              className="bg-white text-legal hover:bg-white/90 font-semibold px-8 py-6 text-lg"
             >
               <Link to="/smart-events">
                 Conheça Smart Events™

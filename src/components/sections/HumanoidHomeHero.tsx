@@ -54,8 +54,7 @@ const HumanoidHomeHero = () => {
             
             <Button
               size="lg"
-              variant="outline"
-              className="border-legal-cyan text-legal-cyan hover:bg-legal-cyan/10 font-semibold px-8 py-6 text-lg"
+              className="bg-white text-legal hover:bg-white/90 font-semibold px-8 py-6 text-lg"
               onClick={(e) => e.preventDefault()}
             >
               Criar conta grátis
