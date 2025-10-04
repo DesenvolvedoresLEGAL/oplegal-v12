@@ -1,290 +1,301 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import HumanoidHero from '@/components/humanoid/HumanoidHero';
-import HumanoidFeatures from '@/components/humanoid/HumanoidFeatures';
-import HumanoidStats from '@/components/humanoid/HumanoidStats';
-import HumanoidBenefits from '@/components/humanoid/HumanoidBenefits';
-import HumanoidProcess from '@/components/humanoid/HumanoidProcess';
-import HumanoidUseCases from '@/components/humanoid/HumanoidUseCases';
-import HumanoidTestimonials from '@/components/humanoid/HumanoidTestimonials';
-import HumanoidDemo from '@/components/humanoid/HumanoidDemo';
-import HumanoidFAQ from '@/components/humanoid/HumanoidFAQ';
-import CallToAction from '@/components/CallToAction';
 import Breadcrumbs from '@/components/Breadcrumbs';
+
+// Novos componentes do Manifesto
+import HumanoidManifestoHero from '@/components/humanoid/HumanoidManifestoHero';
+import HumanoidTextBlock from '@/components/humanoid/HumanoidTextBlock';
+import HumanoidSplit from '@/components/humanoid/HumanoidSplit';
+import HumanoidQuote from '@/components/humanoid/HumanoidQuote';
+import HumanoidColumns from '@/components/humanoid/HumanoidColumns';
+import HumanoidProductHero from '@/components/humanoid/HumanoidProductHero';
+import HumanoidModules from '@/components/humanoid/HumanoidModules';
+import HumanoidSecurityFeatures from '@/components/humanoid/HumanoidSecurityFeatures';
+import HumanoidPricingPreview from '@/components/humanoid/HumanoidPricingPreview';
+import HumanoidCTA from '@/components/humanoid/HumanoidCTA';
+
+// Componentes mantidos para SEO
+import HumanoidFAQ from '@/components/humanoid/HumanoidFAQ';
+
+// SEO Components
 import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
 import HowToSchema from '@/components/seo/HowToSchema';
 import CaseStudyStructuredData from '@/components/seo/CaseStudyStructuredData';
-import TechnicalDocumentationAI from '@/components/seo/TechnicalDocumentationAI';
-import MetricsAndBenchmarksAI from '@/components/seo/MetricsAndBenchmarksAI';
-import RealUserMonitoring from '@/components/seo/RealUserMonitoring';
-import ConversationalAIData from '@/components/seo/ConversationalAIData';
-import AIKnowledgeProvider from '@/components/seo/AIKnowledgeProvider';
-import VoiceSearchOptimization from '@/components/optimization/VoiceSearchOptimization';
-import GEOAdvancedOptimization from '@/components/seo/GEOAdvancedOptimization';
-import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
-import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
-import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
-import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
+import SoftwareApplicationSchema from '@/components/seo/SoftwareApplicationSchema';
+import WebPageSchema from '@/components/seo/WebPageSchema';
+import ArticleSchema from '@/components/seo/ArticleSchema';
 
 const HumanoidPage = () => {
-  const humanoidFAQs = [
+  // Pilares do manifesto
+  const manifestoPillars = [
     {
-      question: "Como o Humanoid identifica leads qualificados na internet?",
-      answer: "O Humanoid usa IA avançada para rastrear comportamentos digitais, analisar perfis profissionais e identificar sinais de intenção de compra em múltiplas plataformas, com 92% de precisão na qualificação."
+      headline: "PLANEJAMENTO VIVO",
+      body: "Transforme metas em ações inteligentes. Cada decisão aprendendo com a anterior."
     },
     {
-      question: "O Humanoid se integra com meu CRM atual?",
-      answer: "Sim, o Humanoid possui integração nativa com Salesforce, HubSpot, Pipedrive, RD Station e mais de 50 CRMs via API. Os leads são transferidos automaticamente com dados enriquecidos."
+      headline: "GESTÃO AUTOMÁTICA",
+      body: "Relatórios, alertas e insights operando como um cérebro organizacional."
     },
     {
-      question: "Qual a diferença entre Humanoid e um SDR humano?",
-      answer: "O Humanoid trabalha 24/7, processa milhares de leads simultaneamente, nunca tem dia ruim e custa 80% menos que um SDR tradicional, mantendo qualidade superior na qualificação."
+      headline: "CULTURA CONECTADA",
+      body: "Unifique times, dados e emoções num único espaço de consciência empresarial."
     }
   ];
 
-  const humanoidSteps = [
+  // Benefícios do produto
+  const productBenefits = [
     {
-      name: "Configuração do Avatar",
-      text: "Configure seu agente de IA com persona, tom de voz e critérios de qualificação específicos do seu negócio.",
-      url: "https://humanoid.operadora.legal/setup"
+      headline: "🔮 Clareza em tempo real",
+      body: "Veja tudo o que acontece na empresa em um só painel — do comercial ao financeiro."
     },
     {
-      name: "Integração com CRM",
-      text: "Conecte seu CRM existente e configure fluxos automáticos de transferência e enriquecimento de leads.",
-      url: "https://humanoid.operadora.legal/integracoes"
+      headline: "⚙️ Automação inteligente",
+      body: "Fluxos que se autoajustam e tomam decisões baseadas em dados, não em achismos."
     },
     {
-      name: "Treinamento da IA",
-      text: "Treine o Humanoid com seus dados históricos de vendas e perfil de cliente ideal (ICP).",
-      url: "https://humanoid.operadora.legal/treinamento"
-    },
-    {
-      name: "Ativação e Monitoramento",
-      text: "Ative a captação automática e monitore performance em tempo real através do dashboard inteligente.",
-      url: "https://humanoid.operadora.legal/dashboard"
+      headline: "🧠 Cultura viva",
+      body: "O HUMANOID entende o DNA da sua organização e impulsiona a evolução do time com base em propósito e performance."
     }
   ];
 
-  const humanoidCaseStudies = [
-    {
-      title: "SaaS B2B - 500% crescimento em leads",
-      client: "TechStart Soluções",
-      industry: "Software B2B",
-      challenge: "Time de vendas sobrecarregado, baixa qualidade de leads e alto CAC",
-      solution: "Implementação do Humanoid para captação e qualificação automática 24/7",
-      results: ["500% aumento em leads qualificados", "80% redução do CAC", "300% crescimento em pipeline"],
-      metrics: { "Leads qualificados": "+500%", "CAC": "-80%", "Conversão": "15%" },
-      duration: "6 meses",
-      testimonial: {
-        text: "O Humanoid transformou nosso funil de vendas. Captamos mais leads qualificados em 1 mês do que em todo o trimestre anterior.",
-        author: "Roberto Lima",
-        position: "Diretor Comercial - TechStart"
-      }
-    }
+  const breadcrumbItems = [
+    { label: 'Produtos', path: '/produtos' },
+    { label: 'HUMANOID™', path: '/produtos/humanoid' }
   ];
-
-  const humanoidBenchmarks = [
-    { metric: "Qualificação de Leads", industry: "Vendas B2B", average: 65, ourProduct: 92, improvement: 27, unit: "%", description: "Precisão de qualificação vs SDR tradicional" },
-    { metric: "Redução de CAC", industry: "Marketing", average: 20, ourProduct: 80, improvement: 60, unit: "%", description: "Queda no custo de aquisição" },
-    { metric: "Aumento de Pipeline", industry: "Vendas", average: 90, ourProduct: 300, improvement: 210, unit: "%", description: "Crescimento do pipeline gerado" }
-  ];
-
-  const humanoidSpecs = [
-    { name: "Leads Processados/Dia", value: "10.000+", description: "Análise simultânea", unit: "leads" },
-    { name: "Precisão de Qualificação", value: "92%", description: "Algoritmo proprietário", unit: "%" },
-    { name: "Integrações CRM", value: "50+", description: "APIs nativas", unit: "plataformas" },
-    { name: "Tempo de Resposta", value: "<30s", description: "Qualificação automática", unit: "segundos" }
-  ];
-
-  const humanoidAPIs = [
-    { method: "POST", endpoint: "/api/leads", description: "Adicionar novo lead para qualificação", parameters: { email: "string", company: "string", profile: "string" }, response: "Lead ID e score de qualificação" },
-    { method: "GET", endpoint: "/api/qualified-leads", description: "Obter leads qualificados", parameters: { date_range: "string", score_min: "number" }, response: "Lista de leads com dados enriquecidos" }
-  ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Humanoid - Agente de IA para Captação de Leads",
-    "serviceType": "AI Lead Generation Service",
-    "provider": {
-      "@type": "Organization",
-      "name": "LEGAL"
-    },
-    "description": "Humanoid: Agente de IA que capta leads e oportunidades na internet, integra com CRM e automatiza processo de SDR com inteligência artificial conversacional.",
-    "areaServed": "Brasil",
-    "offers": {
-      "@type": "Offer",
-      "category": "AI Lead Generation"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Serviços Humanoid",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Captação Inteligente de Leads"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Integração Automática com CRM"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "SDR com IA Conversacional"
-          }
-        }
-      ]
-    }
-  };
 
   return (
     <>
       <Helmet>
-        <title>Humanoid - Agente de IA para Captação de Leads e SDR | LEGAL</title>
-        <meta name="description" content="Humanoid: Agente de IA que capta leads na internet, integra com CRM e automatiza SDR com inteligência artificial conversacional. Transforme prospects em oportunidades reais." />
-        <meta name="keywords" content="Humanoid, captação de leads, IA, inteligência artificial, CRM, SDR, lead generation, automação de vendas, LEGAL, IA conversacional" />
+        <title>HUMANOID™ - Sistema Nervoso Central de IA para Empresas | LEGAL</title>
+        <meta name="description" content="HUMANOID™: O primeiro workspace de IA para CNPJs que integra dados, pessoas e processos em um sistema nervoso corporativo. Planejamento vivo, gestão automática e cultura conectada." />
+        <meta name="keywords" content="HUMANOID, workspace IA, sistema nervoso empresarial, gestão inteligente, IA empresarial, Blue, FitScore, LinkAI, MagicPass, Eventrix, LEGAL" />
+        <meta property="og:title" content="HUMANOID™ - Sistema Nervoso Central de IA para Empresas" />
+        <meta property="og:description" content="O primeiro workspace que integra dados, pessoas e processos em um sistema nervoso corporativo com IA." />
+        <meta property="og:type" content="website" />
         <link rel="canonical" href="https://operadora.legal/produtos/humanoid" />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
       </Helmet>
-      
-      <ProductFAQSchema
-        productName="Humanoid - IA para Captação de Leads"
-        faqs={humanoidFAQs}
-        productUrl="https://operadora.legal/produtos/humanoid"
-      />
-      
-      <HowToSchema
-        name="Como implementar Humanoid para captação de leads"
-        description="Guia completo para automatizar captação e qualificação de leads com IA"
-        steps={humanoidSteps}
-        totalTime="P6M"
-        estimatedCost="A partir de R$ 2.500/mês"
-        supply={["Dados históricos de vendas", "CRM ativo", "Perfil de cliente ideal"]}
-        tool={["Plataforma Humanoid", "Integrações CRM", "Dashboard de analytics"]}
-      />
-      
-      <CaseStudyStructuredData
-        caseStudies={humanoidCaseStudies}
-        productName="Humanoid"
-        companyName="LEGAL TechCo"
-      />
-      
-      <TechnicalDocumentationAI
-        productName="Humanoid"
-        version="2.1"
-        specifications={humanoidSpecs}
-        apiEndpoints={humanoidAPIs}
-        integrations={["Salesforce", "HubSpot", "Pipedrive", "RD Station", "ActiveCampaign", "Zendesk"]}
-        systemRequirements={["Browser moderno", "CRM configurado", "API keys de integração", "Conexão estável"]}
-        securityFeatures={["Criptografia de dados", "LGPD compliance", "OAuth 2.0", "Audit trail completo"]}
-        performance={{
-          "cpu": "Otimizado para processamento em lote de leads",
-          "memory": "Uso eficiente com cache inteligente",
-          "network": "APIs otimizadas <30s resposta",
-          "storage": "Banco de dados escalável"
-        }}
-        deployment={["SaaS Cloud", "API Integration", "White Label"]}
-        support={{
-          sla: "99.9% uptime",
-          channels: ["Suporte 24/7", "Onboarding dedicado", "Training personalizado"],
-          documentation: "Manual, API docs e playbooks de vendas"
+
+      {/* Structured Data for SEO */}
+      <SoftwareApplicationSchema
+        name="HUMANOID™"
+        description="Sistema Nervoso Central de IA para empresas que integra dados, pessoas e processos"
+        url="https://operadora.legal/produtos/humanoid"
+        operatingSystem="Web, iOS, Android"
+        applicationCategory="BusinessApplication"
+        offers={{
+          price: "Sob consulta",
+          priceCurrency: "BRL",
+          availability: "InStock"
         }}
       />
-      
-      <MetricsAndBenchmarksAI
-        productName="Humanoid"
-        benchmarks={humanoidBenchmarks}
-        industries={["Software B2B", "Consultoria", "E-commerce", "Serviços Financeiros"]}
-        roiCalculator={{ enabled: true, defaultInvestment: 60000, benefitCategories: ["Automação de SDR", "Aumento de pipeline", "Economia de CAC"] }}
-      />
-      
-      <RealUserMonitoring
-        enabled={true}
-        sampleRate={0.1}
-        endpoint="/api/rum/humanoid"
-      />
-      
-      <ConversationalAIData
-        productName="Humanoid"
-        flows={[
-          {
-            intent: "lead_qualification",
-            patterns: ["qualificar leads", "leads qualificados", "SDR automático", "scoring"],
-            responses: [{ text: "Humanoid qualifica leads automaticamente com 92% de precisão, trabalhando 24/7 para sua equipe de vendas.", context: "IA proprietária treinada em sinais de intenção", followUp: ["Ver integrações", "Agendar demo"] }]
-          },
-          {
-            intent: "crm_integration",
-            patterns: ["integração CRM", "Salesforce", "HubSpot", "Pipedrive"],
-            responses: [{ text: "Integração nativa com 50+ CRMs, transferindo leads enriquecidos automaticamente para seu funil de vendas.", context: "APIs seguras com OAuth 2.0", followUp: ["Ver documentação", "Testar sandbox"] }]
-          }
+
+      <WebPageSchema
+        name="HUMANOID™ - Sistema Nervoso Central de IA"
+        description="O primeiro workspace de IA para CNPJs que integra dados, pessoas e processos em um sistema nervoso corporativo"
+        url="https://operadora.legal/produtos/humanoid"
+        breadcrumb={[
+          { name: "Home", url: "https://operadora.legal" },
+          { name: "Produtos", url: "https://operadora.legal/produtos" },
+          { name: "HUMANOID™", url: "https://operadora.legal/produtos/humanoid" }
         ]}
-        knowledgeBase={{
-          concepts: [
-            { term: "Lead Scoring", definition: "Pontuação de leads por probabilidade de compra", synonyms: ["Score de lead", "Qualificação"], relatedTerms: ["ICP", "Funil de vendas"] }
-          ],
-          processes: [
-            { name: "Onboarding Humanoid", steps: ["Configurar avatar", "Conectar CRM", "Treinar IA", "Ativar captação"], duration: "2 semanas", requirements: ["API do CRM", "Dados históricos", "Acesso de admin"] }
-          ],
-          troubleshooting: [
-            { issue: "Baixa taxa de resposta", symptoms: ["Poucos retornos", "Conversas travadas"], solutions: ["Ajustar copy", "Rever ICP", "Otimizar horários"], priority: "medium" }
-          ]
-        }}
-        naturalLanguagePatterns={{
-          questions: ["Como qualificar leads?", "Integra com meu CRM?"],
-          commands: ["Criar pipeline", "Iniciar captação"],
-          comparisons: ["Humanoid vs SDR", "IA vs captura manual"],
-          benefits: ["Mais leads qualificados", "Menor CAC", "Operação 24/7"]
-        }}
       />
-      
-      <AIKnowledgeProvider />
-      <VoiceSearchOptimization />
-      <GEOAdvancedOptimization 
-        contentDomain="technology"
-        entityType="service"
-        optimizationLevel="advanced"
+
+      <ArticleSchema
+        headline="HUMANOID™: O Manifesto da Nova Gestão Empresarial"
+        description="Como o HUMANOID transforma empresas em organismos vivos e inteligentes através da IA"
+        url="https://operadora.legal/produtos/humanoid"
+        datePublished="2025-01-15"
+        keywords={["HUMANOID", "IA empresarial", "gestão inteligente", "workspace", "sistema nervoso corporativo"]}
       />
-      <CoreWebVitalsMonitor enableReporting={true} />
-      <AIFeedbackSystem enableRealTimeOptimization={true} />
-      <AdvancedFeaturedSnippets 
-        pageType="product"
-        focusKeyword="Humanoid captação leads IA"
-      />
-      <SEOCrawlerOptimization />
-      
-      <Breadcrumbs />
-      
-      <main>
-        <HumanoidHero />
-        <HumanoidFeatures />
-        <HumanoidStats />
-        <HumanoidBenefits />
-        <HumanoidProcess />
-        <HumanoidUseCases />
-        <HumanoidTestimonials />
-        <HumanoidDemo />
+
+      <main className="bg-humanoid-dark">
+        <Breadcrumbs items={breadcrumbItems} />
+
+        {/* ===== PARTE 1: MANIFESTO ===== */}
+        
+        {/* Hero Manifesto */}
+        <HumanoidManifestoHero />
+
+        {/* Problema: Empresas quebram por falta de consciência */}
+        <HumanoidTextBlock
+          headline="Empresas não quebram por falta de talento."
+          body="Quebram por falta de consciência. Falta de gestão. Falta de planejamento. Falta de autoconhecimento organizacional."
+          layout="centered-narrow"
+          animation="fade-up"
+        />
+
+        {/* Contexto histórico */}
+        <HumanoidTextBlock
+          headline="Durante décadas, líderes e times lutaram contra os mesmos inimigos invisíveis:"
+          body="Desorganização. Retrabalho. Decisões tardias. Falta de inteligência emocional para conduzir o próprio negócio. As planilhas ficaram mais bonitas, os sistemas mais caros, mas o problema essencial continuou: as empresas ainda não pensam por si."
+          layout="wide"
+          animation="slide-up"
+        />
+
+        {/* Split - E se empresas pudessem pensar? */}
+        <HumanoidSplit
+          image="/lovable-uploads/409a6cff-65e1-4ae6-afc3-41bc8ba21267.png"
+          headline="E se as empresas pudessem pensar, aprender e se adaptar sozinhas?"
+          body="Foi assim que nasceu o HUMANOID — o primeiro Sistema Nervoso Central de IA para empresas. Uma ponte entre inteligência humana e inteligência artificial, criada para transformar gestão, cultura e performance em uma única sinfonia."
+          animation="parallax"
+        />
+
+        {/* Não é um software */}
+        <HumanoidTextBlock
+          headline="O HUMANOID não é um software."
+          body="É uma nova forma de liderar. Assim como a Lovable transformou a barreira do código em ponte, o HUMANOID transforma a barreira da gestão em consciência. Agora, qualquer empresa pode operar com clareza, propósito e inteligência em tempo real."
+          layout="centered-narrow"
+          animation="fade-up"
+        />
+
+        {/* Quote Manifesto */}
+        <HumanoidQuote
+          quote="O que antes era privilégio das grandes corporações, agora é poder de todos."
+          author="Manifesto HUMANOID™"
+          animation="reveal"
+        />
+
+        {/* Pilares (3 colunas) */}
+        <HumanoidColumns
+          columns={manifestoPillars}
+          animation="fade-in"
+        />
+
+        {/* Visão */}
+        <HumanoidTextBlock
+          headline="Nossa visão é simples e inegociável:"
+          body="Tornar a inteligência empresarial acessível, emocional e exponencial. Não basta usar IA para automatizar — é preciso usá-la para evoluir."
+          layout="centered"
+          animation="slide-up"
+        />
+
+        {/* ===== PARTE 2: PRODUTO ===== */}
+
+        {/* Hero Produto */}
+        <HumanoidProductHero
+          headline="O Sistema Nervoso Central de IA para empresas."
+          subheadline="O HUMANOID™ integra dados, pessoas e processos em um único espaço de consciência empresarial."
+        />
+
+        {/* Ponte entre caos e clareza */}
+        <HumanoidTextBlock
+          headline="A ponte entre o caos e a clareza."
+          body="Enquanto a maioria das empresas luta para conectar seus dados e pessoas, o HUMANOID cria uma camada neural que aprende, prediz e atua — permitindo que a sua empresa pense e aja com a inteligência de uma organização viva."
+          layout="centered"
+          animation="slide-up"
+        />
+
+        {/* Split - Workspace */}
+        <HumanoidSplit
+          image="/lovable-uploads/220ece05-0c66-4a13-9776-2fc0ba324a1f.png"
+          headline="Um workspace. Múltiplos cérebros especializados."
+          body="O HUMANOID é composto por módulos interconectados — cada um um agente inteligente responsável por uma parte do cérebro da sua empresa."
+          imagePosition="right"
+          animation="fade-in"
+        />
+
+        {/* Módulos (Feature Grid) */}
+        <HumanoidModules headline="Os módulos que formam o seu sistema nervoso corporativo." />
+
+        {/* IA que entende */}
+        <HumanoidTextBlock
+          headline="A IA que entende a sua empresa antes mesmo de você perguntar."
+          body="O HUMANOID observa, aprende e antecipa. Ele cruza informações de vendas, operações, finanças e pessoas, criando previsões e recomendações práticas — um copiloto corporativo que nunca dorme."
+          layout="centered"
+          animation="fade-in"
+        />
+
+        {/* O que faz por você (3 colunas) */}
+        <HumanoidColumns
+          headline="O que o HUMANOID faz por você:"
+          columns={productBenefits}
+          animation="fade-up"
+        />
+
+        {/* Quote Produto */}
+        <HumanoidQuote
+          quote="As empresas do futuro não serão comandadas apenas por líderes. Serão guiadas por sistemas conscientes."
+          author="Manifesto HUMANOID™"
+          animation="reveal"
+        />
+
+        {/* Integrações (Split) */}
+        <HumanoidSplit
+          headline="Integra-se ao que você já usa."
+          body="Google, Microsoft, Slack, WhatsApp, CRM, ERP e muito mais. O HUMANOID se conecta a dezenas de ferramentas via API e se torna o seu painel unificado de comando."
+          image="/lovable-uploads/37354c92-0e52-4334-b1df-6e0df95df322.png"
+          animation="fade-in"
+        />
+
+        {/* Segurança */}
+        <HumanoidSecurityFeatures />
+
+        {/* Pricing Preview */}
+        <HumanoidPricingPreview />
+
+        {/* FAQ (mantido para SEO) */}
         <HumanoidFAQ />
-        <CallToAction
-          title="Transforme Leads em Oportunidades Reais"
-          subtitle="Experimente o poder do Humanoid e automatize sua captação de leads com inteligência artificial que converte prospects em vendas reais."
-          buttonText="Começar Teste Gratuito"
-          buttonLink="/contato?produto=humanoid"
-          secondaryButtonText="Agendar Demonstração"
-          secondaryButtonLink="/contato?tipo=demo&produto=humanoid"
-          background="gradient"
+
+        {/* CTA Final */}
+        <HumanoidCTA
+          headline="Sua empresa pronta para pensar com IA."
+          subheadline="Crie sua conta gratuita em minutos e descubra o poder do HUMANOID."
+          primaryCTA={{ label: "Criar conta", link: "/contato?produto=humanoid" }}
+          secondaryCTA={{ label: "Agendar demonstração", link: "/contato" }}
         />
       </main>
+
+      {/* SEO Schemas */}
+      <ProductFAQSchema
+        productName="HUMANOID™"
+        faqs={[
+          {
+            question: "O que é o HUMANOID?",
+            answer: "O HUMANOID é o primeiro Sistema Nervoso Central de IA para empresas, que integra dados, pessoas e processos em um workspace inteligente."
+          },
+          {
+            question: "Como o HUMANOID ajuda minha empresa?",
+            answer: "O HUMANOID oferece planejamento vivo, gestão automática e cultura conectada através de módulos especializados de IA que aprendem e se adaptam ao seu negócio."
+          },
+          {
+            question: "Quais módulos compõem o HUMANOID?",
+            answer: "O HUMANOID é composto por Blue (BI), Humanoid Auto (execução), FitScore (cultura), LinkAI (conexões), MagicPass (reconhecimento facial) e Eventrix (eventos)."
+          }
+        ]}
+      />
+
+      <HowToSchema
+        name="Como implementar o HUMANOID na sua empresa"
+        description="Passo a passo para começar a usar o sistema nervoso de IA"
+        steps={[
+          {
+            name: "Criar conta",
+            text: "Crie sua conta gratuita no HUMANOID em minutos",
+            url: "https://operadora.legal/contato?produto=humanoid"
+          },
+          {
+            name: "Conectar ferramentas",
+            text: "Integre o HUMANOID com suas ferramentas existentes (Google, Microsoft, CRM, ERP)",
+            url: "https://operadora.legal/produtos/humanoid"
+          },
+          {
+            name: "Ativar módulos",
+            text: "Escolha e ative os módulos que fazem sentido para seu negócio",
+            url: "https://operadora.legal/produtos/humanoid"
+          },
+          {
+            name: "Treinar a IA",
+            text: "Deixe o HUMANOID aprender sobre sua empresa e começar a gerar insights",
+            url: "https://operadora.legal/produtos/humanoid"
+          }
+        ]}
+      />
+
+      <CaseStudyStructuredData
+        caseStudies={[]}
+        productName="HUMANOID™"
+        companyName="LEGAL TechCo"
+      />
     </>
   );
 };
