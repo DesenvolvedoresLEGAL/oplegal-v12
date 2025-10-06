@@ -43,9 +43,7 @@ const HumanoidHomeHero = () => {
               <Link to="/produtos/humanoid">Conhecer HUMANOID</Link>
             </Button>
 
-            <Button size="lg" className="bg-white text-legal hover:bg-white/90 font-semibold px-8 py-6 text-lg" onClick={e => e.preventDefault()}>
-              Criar conta grátis
-            </Button>
+            <Button size="lg" className="bg-white text-legal hover:bg-white/90 font-semibold px-8 py-6 text-lg" onClick={e => e.preventDefault()}>Criar conta grátis</Button>
           </div>
         </div>
       </div>
