@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 
 const HumanoidHomeHero = () => {
   return (
-    <section className="hero-instant relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-foreground via-foreground to-primary text-background">
+    <section className="hero-instant relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] text-background">
       {/* Dot Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div 
