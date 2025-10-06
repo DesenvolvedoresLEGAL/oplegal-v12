@@ -4,17 +4,17 @@ import { ArrowDown } from "lucide-react";
 
 const HumanoidHomeHero = () => {
   return (
-    <section className="hero-instant relative min-h-screen flex items-center justify-center overflow-hidden bg-legal-black text-white">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      
-      {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-legal-black via-legal-black/95 to-legal-black" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-legal/10 via-transparent to-legal-cyan/10" />
-      
-      {/* Floating Elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-legal-green/5 rounded-full blur-3xl animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-legal-cyan/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+    <section className="hero-instant relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-foreground via-foreground to-primary text-background">
+      {/* Dot Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', 
+            backgroundSize: '48px 48px' 
+          }} 
+        />
+      </div>
       
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
