@@ -30,7 +30,7 @@ const HumanoidHomeHero = () => {
           {/* Subheadline */}
           <p style={{
           animationDelay: "0.2s"
-        }} className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto animate-fade-up text-slate-50">
+        }} className="text-lg sm:text-xl max-w-3xl mx-auto animate-fade-up text-slate-50 md:text-3xl text-center font-extrabold">
             Empresas não quebram por falta de talento. Quebram por falta de consciência, gestão, planejamento e
             autoconhecimento organizacional.
           </p>
