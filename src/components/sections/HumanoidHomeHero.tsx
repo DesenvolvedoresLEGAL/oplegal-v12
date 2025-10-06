@@ -4,18 +4,17 @@ import { ArrowDown } from "lucide-react";
 
 const HumanoidHomeHero = () => {
   return (
-    <section className="hero-instant relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] text-background">
+    <section className="hero-instant relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e40af] to-[#3b82f6] text-background">
       {/* Dot Pattern */}
-      <div 
-        className="absolute inset-0 opacity-20" 
-        style={{
-          backgroundImage: 'radial-gradient(circle, rgba(59, 130, 246, 0.3) 1px, transparent 1px)',
-          backgroundSize: '50px 50px'
-        }}
-      />
-      
-      {/* Radial Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0F172A]/20" />
+      <div className="absolute inset-0 opacity-10">
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', 
+            backgroundSize: '48px 48px' 
+          }} 
+        />
+      </div>
       
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
