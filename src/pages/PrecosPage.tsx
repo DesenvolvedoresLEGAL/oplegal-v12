@@ -166,14 +166,10 @@ const PrecosPage = () => {
           </div>
 
           {/* Categorias de Serviços */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('locacao-fwa')}>
               <h3 className="text-xl font-bold text-white mb-2">Aluguel de Internet para Eventos</h3>
               <p className="text-white/80 text-sm">Preços dinâmicos por evento</p>
-            </Card>
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('assinatura-fwa')}>
-              <h3 className="text-xl font-bold text-white mb-2">Planos de Assinatura de Internet</h3>
-              <p className="text-white/80 text-sm">Planos mensais e anuais</p>
             </Card>
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-center cursor-pointer hover:bg-white/20 transition-all" onClick={() => scrollToSection('servicos-drone')}>
               <h3 className="text-xl font-bold text-white mb-2">Serviços Drone</h3>
@@ -471,81 +467,6 @@ const PrecosPage = () => {
             </div>
           </Card>
 
-          {/* Assinatura FWA 5G */}
-          <Card id="assinatura-fwa" className="p-8 mb-12 bg-white/5 backdrop-blur-sm border-white/10">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-white">Assinatura FWA 5G</h2>
-            </div>
-            
-            {/* Seletor de Fidelidade */}
-            <div className="flex justify-center mb-8">
-              <div className="bg-white/10 rounded-lg p-1 flex">
-                {[{
-                value: "sem",
-                label: "Sem Fidelidade"
-              }, {
-                value: "12",
-                label: "12 meses"
-              }, {
-                value: "24",
-                label: "24 meses"
-              }].map(option => <button key={option.value} onClick={() => setFidelidade(option.value)} className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${fidelidade === option.value ? "bg-legal-cyan text-legal" : "text-white hover:text-legal-cyan"}`}>
-                    {option.label}
-                  </button>)}
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="group p-6 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-legal-cyan/30 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-4">SPEEDY 5G LITE</h3>
-                <div className="text-3xl font-bold text-legal-cyan mb-6">
-                  R$ {fidelidade === "sem" ? "500" : fidelidade === "12" ? "300" : "200"}<span className="text-lg">/mês</span>
-                </div>
-                <ul className="text-white/80 space-y-3 text-sm">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>100GB de dados</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Até 5 conexões simultâneas</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>WiFi6 incluso</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Velocidade 5G: Download 400 Mbps / Upload 100 Mbps</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>SLA de 99,9%</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Instalação Plug and Play</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Suporte Remoto 24h</li>
-                </ul>
-              </div>
-              <div className="group p-6 bg-white/5 hover:bg-white/10 rounded-xl border-2 border-legal-cyan transition-all duration-300 relative">
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-legal-cyan text-legal px-3 py-1 rounded-full text-xs font-semibold">POPULAR</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">SPEEDY 5G PRO</h3>
-                <div className="text-3xl font-bold text-legal-cyan mb-6">
-                  R$ {fidelidade === "sem" ? "1.000" : fidelidade === "12" ? "600" : "400"}<span className="text-lg">/mês</span>
-                </div>
-                <ul className="text-white/80 space-y-3 text-sm">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>300GB de dados</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Até 10 conexões simultâneas</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>WiFi6 incluso</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Velocidade 5G: Download 400 Mbps / Upload 100 Mbps</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>SLA de 99,9%</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Instalação Plug and Play</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Suporte Remoto 24h</li>
-                </ul>
-              </div>
-              <div className="group p-6 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-legal-cyan/30 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-4">SPEEDY 5G ULTRA</h3>
-                <div className="text-3xl font-bold text-legal-cyan mb-6">
-                  R$ {fidelidade === "sem" ? "2.000" : fidelidade === "12" ? "1.200" : "800"}<span className="text-lg">/mês</span>
-                </div>
-                <ul className="text-white/80 space-y-3 text-sm">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>600GB de dados</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Até 20 conexões simultâneas</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>WiFi6 incluso</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Velocidade 5G: Download 400 Mbps / Upload 100 Mbps</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>SLA de 99,9%</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Instalação Plug and Play</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-legal-cyan rounded-full mr-3"></span>Suporte Remoto 24h</li>
-                </ul>
-              </div>
-            </div>
-          </Card>
 
           {/* Serviços de Drone */}
           <Card id="servicos-drone" className="p-8 mb-12 bg-gray-900/95 backdrop-blur-sm border-gray-700">
