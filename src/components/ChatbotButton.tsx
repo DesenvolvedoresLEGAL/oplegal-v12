@@ -18,7 +18,7 @@ const ChatbotButton = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="sticky bottom-6 ml-auto mr-6 w-fit z-50 float-right clear-both">
       <a
         href={whatsappUrl}
         target="_blank"
