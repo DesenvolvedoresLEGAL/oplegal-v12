@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { createPortal } from 'react-dom';
 
 const WhatsAppIcon = () => (
   <svg 
@@ -17,18 +17,19 @@ const ChatbotButton = () => {
   const message = encodeURIComponent("Quero conhecer mais sobre a LEGAL");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
-  return (
-    <div className="sticky bottom-6 ml-auto mr-6 w-fit z-50 float-right clear-both">
+  return createPortal(
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[9999] pointer-events-none pb-[env(safe-area-inset-bottom)] pr-[env(safe-area-inset-right)]">
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110 flex items-center justify-center"
+        className="bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110 flex items-center justify-center pointer-events-auto"
         aria-label="Falar no WhatsApp com a LEGAL"
       >
         <WhatsAppIcon />
       </a>
-    </div>
+    </div>,
+    document.body
   );
 };
 
