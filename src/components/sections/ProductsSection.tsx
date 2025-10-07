@@ -13,6 +13,20 @@ interface ProductsSectionProps {
 const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
   const products = [
     {
+      title: "ALUGUE",
+      description: "Internet e tech sob demanda",
+      icon: <Wifi className="w-8 h-8" strokeWidth={1.5} />,
+      link: "/negocios/alugue",
+      features: ["Internet 5G", "Rede & WiFi", "Gadgets"]
+    },
+    {
+      title: "AI",
+      description: "Ganhe eficiência e escalabilidade",
+      icon: <Brain className="w-8 h-8" strokeWidth={1.5} />,
+      link: "/negocios/ai",
+      features: ["Eventrix", "Humanoid", "LinkAI"]
+    },
+    {
       title: "AERO",
       description: "Soluções aéreas incríveis com Drones",
       icon: <svg className="w-8 h-8" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -32,33 +46,6 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
       </svg>,
       link: "/negocios/aero",
       features: ["Foto/Filmagem", "Delivery inteligente", "Limpeza de estruturas"]
-    },
-    {
-      title: "AI",
-      description: "Ganhe eficiência e escalabilidade",
-      icon: <Brain className="w-8 h-8" strokeWidth={1.5} />,
-      link: "/negocios/ai",
-      features: ["Eventrix", "Humanoid", "LinkAI"]
-    },
-    {
-      title: "ALUGUE",
-      description: "Internet e tech sob demanda",
-      icon: <Wifi className="w-8 h-8" strokeWidth={1.5} />,
-      link: "/negocios/alugue",
-      features: ["Internet 5G", "Rede & WiFi", "Gadgets"]
-    },
-    {
-      title: "ASSINATURA",
-      description: "Conectividade para seu negócio",
-      icon: <svg className="w-8 h-8" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-        <line x1="8" y1="21" x2="16" y2="21"/>
-        <line x1="12" y1="17" x2="12" y2="21"/>
-        <path d="M6 8h4"/>
-        <path d="M6 12h8"/>
-      </svg>,
-      link: "/negocios/assinatura",
-      features: ["Planos Sob Medida", "Links Backup", "SLA 99,9%"]
     }
   ];
 
@@ -71,7 +58,7 @@ const ProductsSection = ({ titleOverride }: ProductsSectionProps) => {
           center={true}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <Card 
               key={index} 
