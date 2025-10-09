@@ -22,7 +22,7 @@ const HumanoidHomeHero = () => {
           {/* Main Headline */}
           <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-up">
             O futuro das empresas não será <span className="text-legal-green">humano</span> ou{" "}
-            <span className="text-legal">artificial</span>.
+            <span className="text-white">artificial</span>.
             <br />
             Será <span className="text-legal-cyan">HUMANOID</span>.
           </h1>
