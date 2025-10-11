@@ -3,8 +3,10 @@ import { Brain, Network, Zap } from 'lucide-react';
 
 const HumanoidSolutionSection = () => {
   return (
-    <section className="py-32 bg-gradient-to-br from-gray-900 via-legal/20 to-gray-900 text-white">
-      <div className="container mx-auto px-4">
+    <section className="py-32 bg-gradient-to-br from-legal-purple/10 via-transparent to-legal/10 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(3,249,255,0.08),transparent_60%)]" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-8 animate-fade-in">

@@ -3,7 +3,7 @@ import { Sparkles } from 'lucide-react';
 
 const HumanoidVisionSection = () => {
   return (
-    <section className="py-32 bg-gradient-to-br from-legal via-legal-purple to-legal text-white relative overflow-hidden">
+    <section className="py-32 bg-gradient-to-br from-legal/20 via-legal-purple/20 to-legal/20 text-white relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(3,249,255,0.15),transparent_70%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] opacity-20" />

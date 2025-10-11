@@ -40,12 +40,6 @@ const config: Config = {
         'legal-black': 'hsl(var(--legal-black))',
         'legal-gray': 'hsl(var(--legal-gray))',
         
-        // HUMANOID Brand Colors
-        'humanoid-dark': '#0B153C',
-        'humanoid-accent': '#3737FF',
-        'humanoid-highlight': '#F2B90C',
-        'humanoid-light': '#F4F4F8',
-        
         // shadcn/ui color system
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

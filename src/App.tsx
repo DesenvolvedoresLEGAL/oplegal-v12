@@ -118,6 +118,7 @@ const App = () => {
                 <Route path="/produtos/magicpass" element={<MagicPassProdutoPage />} />
                 <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
                 <Route path="/produtos/humanoid" element={<HumanoidPage />} />
+                <Route path="/humanoid" element={<Navigate to="/produtos/humanoid" replace />} />
                 <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
                 <Route path="/produtos/neurafit" element={<NeuraFitPage />} />
                 <Route path="/produtos/nuvyo" element={<NuvyoPage />} />
