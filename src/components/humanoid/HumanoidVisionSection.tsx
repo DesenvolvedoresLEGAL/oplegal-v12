@@ -3,12 +3,8 @@ import { Sparkles } from 'lucide-react';
 
 const HumanoidVisionSection = () => {
   return (
-    <section className="py-32 bg-gradient-to-br from-legal/20 via-legal-purple/20 to-legal/20 text-white relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(3,249,255,0.15),transparent_70%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] opacity-20" />
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-32 bg-legal text-white relative overflow-hidden">
+      <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center space-y-12 animate-fade-in">
           {/* Icon Header */}
           <div className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md rounded-full border border-legal-cyan/30">

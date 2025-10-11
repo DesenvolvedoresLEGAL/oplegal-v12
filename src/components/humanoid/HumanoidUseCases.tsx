@@ -42,7 +42,7 @@ const HumanoidUseCases = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-legal/10 via-transparent to-legal-purple/10 text-white">
+    <section className="py-32 bg-legal text-white">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-6 mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-cyan/20 backdrop-blur-sm rounded-full border border-legal-cyan/30">

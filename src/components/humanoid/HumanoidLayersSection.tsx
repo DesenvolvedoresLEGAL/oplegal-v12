@@ -50,18 +50,18 @@ const HumanoidLayersSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-gray-900 to-legal/30 text-white">
+    <section className="py-32 bg-gray-50 text-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-6 animate-fade-in">
-            <Badge className="bg-legal-cyan/20 text-legal-cyan border-legal-cyan/30">
+            <Badge className="bg-legal/10 text-legal border-legal/20">
               AS 4 CAMADAS
             </Badge>
-            <h2 className="font-haas text-3xl md:text-5xl font-black leading-tight">
+            <h2 className="font-haas text-3xl md:text-5xl font-black leading-tight text-legal">
               Como Funciona o HUMANOID™
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Quatro camadas interconectadas que transformam sua empresa em um organismo inteligente
             </p>
           </div>
@@ -73,11 +73,11 @@ const HumanoidLayersSection = () => {
               return (
                 <div 
                   key={index}
-                  className="relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-legal-cyan/50 transition-all group animate-fade-up"
+                  className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-legal-cyan/50 shadow-sm transition-all group animate-fade-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Number Badge */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-legal to-legal-purple rounded-full flex items-center justify-center font-bold text-2xl border-4 border-gray-900">
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-legal to-legal-purple rounded-full flex items-center justify-center font-bold text-2xl border-4 border-gray-50 text-white">
                     {layer.number}
                   </div>
 
@@ -90,14 +90,14 @@ const HumanoidLayersSection = () => {
                       <h3 className="font-haas text-2xl font-bold text-legal-cyan">
                         {layer.title}
                       </h3>
-                      <p className="text-sm text-white/60 font-semibold">
+                      <p className="text-sm text-gray-600 font-semibold">
                         {layer.subtitle}
                       </p>
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-white/80 leading-relaxed mb-4">
+                  <p className="text-gray-700 leading-relaxed mb-4">
                     {layer.description}
                   </p>
 
@@ -105,7 +105,7 @@ const HumanoidLayersSection = () => {
                   {layer.bullets && (
                     <ul className="space-y-2 mb-4 ml-4">
                       {layer.bullets.map((bullet, i) => (
-                        <li key={i} className="text-white/70 text-sm flex items-start gap-2">
+                        <li key={i} className="text-gray-700 text-sm flex items-start gap-2">
                           <span className="text-legal-cyan mt-1">•</span>
                           <span>{bullet}</span>
                         </li>

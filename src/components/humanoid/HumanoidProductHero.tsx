@@ -15,10 +15,9 @@ const HumanoidProductHero: React.FC<HumanoidProductHeroProps> = ({
   video
 }) => {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-gray-900 via-legal/20 to-gray-900 text-white overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center justify-center bg-legal text-white overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(3,249,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(3,249,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,hsl(var(--legal)/0.15),transparent_50%)]" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-10 animate-fade-in">

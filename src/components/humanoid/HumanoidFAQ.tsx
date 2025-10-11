@@ -41,13 +41,13 @@ const HumanoidFAQ = () => {
   ];
 
   return (
-    <section className="py-32 bg-gray-900 text-white">
+    <section className="py-32 bg-white text-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16 animate-fade-in">
-          <h2 className="font-haas text-3xl md:text-5xl font-black">
+          <h2 className="font-haas text-3xl md:text-5xl font-black text-legal">
             Perguntas <span className="text-legal-cyan">Frequentes</span>
           </h2>
-          <p className="text-xl text-white/70">
+          <p className="text-xl text-gray-700">
             Esclareça suas dúvidas sobre o HUMANOID™
           </p>
         </div>
@@ -58,12 +58,12 @@ const HumanoidFAQ = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`} 
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-6 hover:border-legal-cyan/50 transition-all"
+                className="bg-gray-50 border border-gray-200 rounded-lg px-6 hover:border-legal-cyan/50 transition-all"
               >
-                <AccordionTrigger className="text-left font-semibold text-white hover:text-legal-cyan">
+                <AccordionTrigger className="text-left font-semibold text-legal hover:text-legal-cyan">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-white/70 pb-4 leading-relaxed">
+                <AccordionContent className="text-gray-700 pb-4 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -71,7 +71,7 @@ const HumanoidFAQ = () => {
           </Accordion>
           
           <div className="text-center mt-16">
-            <p className="text-white/70 mb-6 text-lg">Ainda tem dúvidas sobre o HUMANOID?</p>
+            <p className="text-gray-700 mb-6 text-lg">Ainda tem dúvidas sobre o HUMANOID?</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg" 
@@ -82,7 +82,7 @@ const HumanoidFAQ = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-legal-cyan text-legal-cyan hover:bg-legal-cyan hover:text-gray-900"
+                className="border-2 border-legal-cyan text-legal-cyan hover:bg-legal-cyan hover:text-white"
               >
                 Ver Cases de Sucesso
               </Button>

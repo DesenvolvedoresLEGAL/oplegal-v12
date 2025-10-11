@@ -26,7 +26,7 @@ const HumanoidSecurityFeatures = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-legal-purple/10 via-transparent to-legal/10 text-white relative overflow-hidden">
+    <section className="py-32 bg-white text-gray-900 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
@@ -41,16 +41,16 @@ const HumanoidSecurityFeatures = () => {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-legal-cyan/50 transition-all group animate-fade-up"
+                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-legal-cyan/50 shadow-sm transition-all group animate-fade-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-legal-cyan mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
-                <h3 className="font-haas text-xl font-bold mb-3">
+                <h3 className="font-haas text-xl font-bold mb-3 text-legal">
                   {feature.title}
                 </h3>
-                <p className="text-base text-white/70 leading-relaxed">
+                <p className="text-base text-gray-700 leading-relaxed">
                   {feature.body}
                 </p>
               </div>
@@ -59,10 +59,10 @@ const HumanoidSecurityFeatures = () => {
 
           {/* Footer Message */}
           <div className="text-center pt-8 animate-fade-up" style={{ animationDelay: '400ms' }}>
-            <p className="text-xl md:text-2xl font-bold">
+            <p className="text-xl md:text-2xl font-bold text-legal">
               Sua inteligência é sua.
             </p>
-            <p className="text-lg text-white/70 mt-2">
+            <p className="text-lg text-gray-700 mt-2">
               Segura, isolada e sob <span className="text-legal-cyan font-semibold">total controle</span>.
             </p>
           </div>

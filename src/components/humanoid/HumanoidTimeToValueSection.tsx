@@ -24,7 +24,7 @@ const HumanoidTimeToValueSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-legal/10 via-transparent to-legal-purple/10 text-white">
+    <section className="py-32 bg-white text-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
@@ -34,7 +34,7 @@ const HumanoidTimeToValueSection = () => {
               <span className="text-sm font-bold tracking-wider text-legal-cyan">TIME-TO-VALUE</span>
             </div>
             
-            <h2 className="font-haas text-3xl md:text-5xl font-black leading-tight">
+            <h2 className="font-haas text-3xl md:text-5xl font-black leading-tight text-legal">
               Implantação em <span className="text-legal-cyan">dias</span>, não em meses.
             </h2>
           </div>
@@ -60,17 +60,17 @@ const HumanoidTimeToValueSection = () => {
 
                 {/* Icon */}
                 <div className="flex justify-center">
-                  <div className="p-4 bg-white/5 backdrop-blur-sm rounded-2xl text-legal-cyan">
+                  <div className="p-4 bg-gray-50 rounded-2xl text-legal-cyan">
                     {step.icon}
                   </div>
                 </div>
 
                 {/* Content */}
                 <div>
-                  <h3 className="font-haas text-xl md:text-2xl font-bold mb-3">
+                  <h3 className="font-haas text-xl md:text-2xl font-bold mb-3 text-legal">
                     {step.title}
                   </h3>
-                  <p className="text-white/70 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -80,7 +80,7 @@ const HumanoidTimeToValueSection = () => {
 
           {/* Footer */}
           <div className="text-center pt-8 animate-fade-up" style={{ animationDelay: '450ms' }}>
-            <p className="text-xl md:text-2xl font-bold">
+            <p className="text-xl md:text-2xl font-bold text-legal">
               O HUMANOID entrega valor na <span className="text-legal-cyan">primeira semana</span> de uso.
             </p>
           </div>

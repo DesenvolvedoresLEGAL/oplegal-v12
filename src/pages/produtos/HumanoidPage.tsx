@@ -75,9 +75,7 @@ const HumanoidPage = () => {
         keywords={["HUMANOID", "IA empresarial", "gestão inteligente", "workspace", "automação"]}
       />
 
-      <main className="bg-gradient-to-br from-legal via-legal/20 to-legal-purple relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(3,249,255,0.05),transparent_70%)]" />
-        <div className="relative z-10">
+      <main>
           <Breadcrumbs items={breadcrumbItems} />
 
         <HumanoidProductHero
@@ -103,7 +101,6 @@ const HumanoidPage = () => {
         />
 
         <HumanoidFAQ />
-        </div>
       </main>
 
       <ProductFAQSchema

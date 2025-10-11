@@ -2,9 +2,7 @@ import React from 'react';
 
 const HumanoidProblemSection = () => {
   return (
-    <section className="py-32 bg-gradient-to-br from-legal/10 via-transparent to-legal-purple/10 text-white relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(3,249,255,0.08),transparent_60%)]" />
+    <section className="py-32 bg-white text-gray-900 relative overflow-hidden">
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
@@ -13,17 +11,17 @@ const HumanoidProblemSection = () => {
             <span className="text-sm font-bold tracking-wider">O PROBLEMA</span>
           </div>
           
-          <h2 className="font-haas text-4xl md:text-6xl font-black leading-tight mb-8">
+          <h2 className="font-haas text-4xl md:text-6xl font-black leading-tight mb-8 text-legal">
             Sua empresa tem dados demais…<br />
             mas <span className="text-legal-cyan">decisões de menos</span>.
           </h2>
           
-          <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-12">
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12">
             Os times estão sobrecarregados, os sistemas não conversam<br className="hidden md:block" />
             e o retrabalho virou rotina.
           </p>
           
-          <div className="space-y-6 text-2xl md:text-3xl font-bold">
+          <div className="space-y-6 text-2xl md:text-3xl font-bold text-legal">
             <p className="animate-fade-up" style={{ animationDelay: '200ms' }}>
               O que falta não é tecnologia.
             </p>
@@ -32,7 +30,7 @@ const HumanoidProblemSection = () => {
             </p>
           </div>
           
-          <p className="text-xl md:text-2xl text-white/80 pt-8 animate-fade-up" style={{ animationDelay: '600ms' }}>
+          <p className="text-xl md:text-2xl text-gray-700 pt-8 animate-fade-up" style={{ animationDelay: '600ms' }}>
             As empresas do futuro não serão maiores — serão <span className="text-legal-cyan font-bold">mais inteligentes</span>.
           </p>
         </div>
