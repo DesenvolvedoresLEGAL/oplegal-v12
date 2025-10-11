@@ -26,14 +26,14 @@ const HumanoidSecurityFeatures = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-gray-900 to-[hsl(242,97%,37%)]/20 text-white">
+    <section className="py-32 bg-gradient-to-br from-gray-900 to-legal/20 text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-6 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-[hsl(176,98%,51%)]/20 backdrop-blur-sm rounded-full border border-[hsl(176,98%,51%)]/30">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-cyan/20 backdrop-blur-sm rounded-full border border-legal-cyan/30">
               <span className="text-2xl">🔒</span>
-              <span className="text-sm font-bold tracking-wider text-[hsl(176,98%,51%)]">SEGURANÇA E GOVERNANÇA</span>
+              <span className="text-sm font-bold tracking-wider text-legal-cyan">SEGURANÇA E GOVERNANÇA</span>
             </div>
           </div>
           
@@ -41,10 +41,10 @@ const HumanoidSecurityFeatures = () => {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[hsl(176,98%,51%)]/50 transition-all group animate-fade-up"
+                className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-legal-cyan/50 transition-all group animate-fade-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-[hsl(176,98%,51%)] mb-4 group-hover:scale-110 transition-transform">
+                <div className="text-legal-cyan mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="font-haas text-xl font-bold mb-3">
@@ -63,7 +63,7 @@ const HumanoidSecurityFeatures = () => {
               Sua inteligência é sua.
             </p>
             <p className="text-lg text-white/70 mt-2">
-              Segura, isolada e sob <span className="text-[hsl(176,98%,51%)] font-semibold">total controle</span>.
+              Segura, isolada e sob <span className="text-legal-cyan font-semibold">total controle</span>.
             </p>
           </div>
         </div>

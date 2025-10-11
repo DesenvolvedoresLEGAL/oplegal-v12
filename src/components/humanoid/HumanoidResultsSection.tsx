@@ -31,7 +31,7 @@ const HumanoidResultsSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-[hsl(242,97%,37%)] to-[hsl(242,86%,58%)] text-white relative overflow-hidden">
+    <section className="py-32 bg-gradient-to-br from-legal to-legal-purple text-white relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
       
@@ -50,10 +50,10 @@ const HumanoidResultsSection = () => {
             {metrics.map((metric, index) => (
               <div 
                 key={index}
-                className="text-center space-y-4 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 hover:border-[hsl(176,98%,51%)]/50 transition-all animate-fade-up"
+                className="text-center space-y-4 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 hover:border-legal-cyan/50 transition-all animate-fade-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="inline-flex p-4 bg-[hsl(176,98%,51%)]/20 rounded-full text-[hsl(176,98%,51%)]">
+                <div className="inline-flex p-4 bg-legal-cyan/20 rounded-full text-legal-cyan">
                   {metric.icon}
                 </div>
                 <div>
@@ -67,7 +67,7 @@ const HumanoidResultsSection = () => {
           {/* Footer Message */}
           <div className="text-center space-y-6 pt-8 animate-fade-up" style={{ animationDelay: '500ms' }}>
             <p className="text-2xl md:text-3xl font-bold">
-              O HUMANOID <span className="text-[hsl(176,98%,51%)]">mede o impacto real</span> de cada ação.
+              O HUMANOID <span className="text-legal-cyan">mede o impacto real</span> de cada ação.
             </p>
             <p className="text-xl text-white/80">
               Sem achismo. Com <span className="font-bold text-white">números</span>.

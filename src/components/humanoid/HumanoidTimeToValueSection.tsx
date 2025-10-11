@@ -29,13 +29,13 @@ const HumanoidTimeToValueSection = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-6 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-[hsl(176,98%,51%)]/20 backdrop-blur-sm rounded-full border border-[hsl(176,98%,51%)]/30">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-cyan/20 backdrop-blur-sm rounded-full border border-legal-cyan/30">
               <span className="text-2xl">⚙️</span>
-              <span className="text-sm font-bold tracking-wider text-[hsl(176,98%,51%)]">TIME-TO-VALUE</span>
+              <span className="text-sm font-bold tracking-wider text-legal-cyan">TIME-TO-VALUE</span>
             </div>
             
             <h2 className="font-haas text-3xl md:text-5xl font-black leading-tight">
-              Implantação em <span className="text-[hsl(176,98%,51%)]">dias</span>, não em meses.
+              Implantação em <span className="text-legal-cyan">dias</span>, não em meses.
             </h2>
           </div>
 
@@ -49,18 +49,18 @@ const HumanoidTimeToValueSection = () => {
               >
                 {/* Number */}
                 <div className="relative inline-block">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[hsl(242,97%,37%)] to-[hsl(242,86%,58%)] rounded-full flex items-center justify-center font-haas text-4xl font-black border-4 border-[hsl(176,98%,51%)]">
+                  <div className="w-20 h-20 bg-gradient-to-br from-legal to-legal-purple rounded-full flex items-center justify-center font-haas text-4xl font-black border-4 border-legal-cyan">
                     {step.number}
                   </div>
                   {/* Connector line (except last) */}
                   {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 left-full w-full h-1 bg-gradient-to-r from-[hsl(176,98%,51%)] to-transparent -translate-y-1/2" />
+                    <div className="hidden md:block absolute top-1/2 left-full w-full h-1 bg-gradient-to-r from-legal-cyan to-transparent -translate-y-1/2" />
                   )}
                 </div>
 
                 {/* Icon */}
                 <div className="flex justify-center">
-                  <div className="p-4 bg-white/5 backdrop-blur-sm rounded-2xl text-[hsl(176,98%,51%)]">
+                  <div className="p-4 bg-white/5 backdrop-blur-sm rounded-2xl text-legal-cyan">
                     {step.icon}
                   </div>
                 </div>
@@ -81,7 +81,7 @@ const HumanoidTimeToValueSection = () => {
           {/* Footer */}
           <div className="text-center pt-8 animate-fade-up" style={{ animationDelay: '450ms' }}>
             <p className="text-xl md:text-2xl font-bold">
-              O HUMANOID entrega valor na <span className="text-[hsl(176,98%,51%)]">primeira semana</span> de uso.
+              O HUMANOID entrega valor na <span className="text-legal-cyan">primeira semana</span> de uso.
             </p>
           </div>
         </div>

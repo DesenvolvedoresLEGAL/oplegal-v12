@@ -45,12 +45,12 @@ const HumanoidUseCases = () => {
     <section className="py-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-6 mb-16 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-[hsl(176,98%,51%)]/20 backdrop-blur-sm rounded-full border border-[hsl(176,98%,51%)]/30">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-cyan/20 backdrop-blur-sm rounded-full border border-legal-cyan/30">
             <span className="text-2xl">💼</span>
-            <span className="text-sm font-bold tracking-wider text-[hsl(176,98%,51%)]">CASOS DE USO</span>
+            <span className="text-sm font-bold tracking-wider text-legal-cyan">CASOS DE USO</span>
           </div>
           <h2 className="font-haas text-3xl md:text-5xl font-black">
-            HUMANOID em <span className="text-[hsl(176,98%,51%)]">ação</span>
+            HUMANOID em <span className="text-legal-cyan">ação</span>
           </h2>
         </div>
         
@@ -58,14 +58,14 @@ const HumanoidUseCases = () => {
           {useCases.map((useCase, index) => (
             <div 
               key={index} 
-              className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[hsl(176,98%,51%)]/50 transition-all group animate-fade-up"
+              className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-legal-cyan/50 transition-all group animate-fade-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="space-y-6">
                 {/* Icon & Emoji */}
                 <div className="flex items-center gap-4">
                   <span className="text-4xl">{useCase.emoji}</span>
-                  <div className="p-3 bg-[hsl(176,98%,51%)]/20 rounded-xl text-[hsl(176,98%,51%)] group-hover:scale-110 transition-transform">
+                  <div className="p-3 bg-legal-cyan/20 rounded-xl text-legal-cyan group-hover:scale-110 transition-transform">
                     {useCase.icon}
                   </div>
                 </div>
@@ -84,7 +84,7 @@ const HumanoidUseCases = () => {
                 <div className="space-y-3 pt-4 border-t border-white/10">
                   {useCase.results.map((result, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <span className="text-[hsl(176,98%,51%)] mt-0.5 flex-shrink-0">✅</span>
+                      <span className="text-legal-cyan mt-0.5 flex-shrink-0">✅</span>
                       <span className="text-white/80 text-sm font-medium">{result}</span>
                     </div>
                   ))}

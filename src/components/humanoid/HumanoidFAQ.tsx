@@ -45,7 +45,7 @@ const HumanoidFAQ = () => {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16 animate-fade-in">
           <h2 className="font-haas text-3xl md:text-5xl font-black">
-            Perguntas <span className="text-[hsl(176,98%,51%)]">Frequentes</span>
+            Perguntas <span className="text-legal-cyan">Frequentes</span>
           </h2>
           <p className="text-xl text-white/70">
             Esclareça suas dúvidas sobre o HUMANOID™
@@ -58,9 +58,9 @@ const HumanoidFAQ = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`} 
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-6 hover:border-[hsl(176,98%,51%)]/50 transition-all"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-6 hover:border-legal-cyan/50 transition-all"
               >
-                <AccordionTrigger className="text-left font-semibold text-white hover:text-[hsl(176,98%,51%)]">
+                <AccordionTrigger className="text-left font-semibold text-white hover:text-legal-cyan">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-white/70 pb-4 leading-relaxed">
@@ -75,14 +75,14 @@ const HumanoidFAQ = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-[hsl(242,97%,37%)] to-[hsl(242,86%,58%)] hover:from-[hsl(242,86%,58%)] hover:to-[hsl(242,97%,37%)] text-white border-2 border-[hsl(176,98%,51%)]/50"
+                className="bg-gradient-to-r from-legal to-legal-purple hover:from-legal-purple hover:to-legal text-white border-2 border-legal-cyan/50"
               >
                 Falar com Especialista
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-[hsl(176,98%,51%)] text-[hsl(176,98%,51%)] hover:bg-[hsl(176,98%,51%)] hover:text-gray-900"
+                className="border-2 border-legal-cyan text-legal-cyan hover:bg-legal-cyan hover:text-gray-900"
               >
                 Ver Cases de Sucesso
               </Button>
