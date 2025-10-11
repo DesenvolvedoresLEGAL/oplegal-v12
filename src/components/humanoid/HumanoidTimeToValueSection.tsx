@@ -49,7 +49,7 @@ const HumanoidTimeToValueSection = () => {
               >
                 {/* Number */}
                 <div className="relative inline-block">
-                  <div className="w-20 h-20 bg-gradient-to-br from-legal to-legal-purple rounded-full flex items-center justify-center font-haas text-4xl font-black border-4 border-legal-purple">
+                  <div className="w-20 h-20 bg-gradient-to-br from-legal to-legal-purple rounded-full flex items-center justify-center font-haas text-4xl font-black border-4 border-legal-purple text-white">
                     {step.number}
                   </div>
                   {/* Connector line (except last) */}
