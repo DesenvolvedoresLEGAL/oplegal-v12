@@ -7,70 +7,84 @@ import { Button } from '@/components/ui/button';
 const HumanoidFAQ = () => {
   const faqs = [
     {
-      question: "Como o Humanoid identifica leads qualificados na internet?",
-      answer: "O Humanoid utiliza IA avançada para rastrear sinais de intenção de compra em múltiplas fontes: redes sociais, fóruns, sites de review, job boards e outras plataformas. Analisa comportamentos, menções de problemas e necessidades específicas do seu segmento."
+      question: "O que é o HUMANOID™?",
+      answer: "O HUMANOID é um workspace de Inteligência Artificial que conecta dados, processos e agentes produtivos para que sua empresa entenda, decida e aja automaticamente — com governança, segurança e ROI mensurável."
     },
     {
-      question: "Quais CRMs são compatíveis com a integração automática?",
-      answer: "Integramos com os principais CRMs do mercado: Salesforce, HubSpot, Pipedrive, RD Station, Agendor, e muitos outros. Também oferecemos APIs para CRMs customizados e sistemas proprietários."
+      question: "Como funciona o sistema de créditos (VOLTS™)?",
+      answer: "O HUMANOID opera por créditos de execução chamados VOLTS. Cada VOLT representa uma operação inteligente realizada por seus agentes. Os créditos são consumidos por ações, inferências de IA, voz e automações."
     },
     {
-      question: "Como funciona a qualificação via WhatsApp e ligações?",
-      answer: "Após captar o lead, nossa IA inicia conversas via WhatsApp (integração com Ping) com abordagem personalizada. Para leads de maior valor, realiza ligações com IA conversacional natural que qualifica budget, autoridade, necessidade e timing (BANT)."
+      question: "Quais sistemas o HUMANOID integra?",
+      answer: "O HUMANOID se conecta com CRM, ERP, planilhas, WhatsApp, e-mails, Google, Microsoft, Slack e dezenas de outras ferramentas via API. Ele se torna o painel unificado de comando da sua empresa."
     },
     {
-      question: "A IA conversacional nas ligações é detectada pelos prospects?",
-      answer: "Nossa IA conversacional é extremamente natural e humanizada. Utiliza tecnologia de última geração com entonação, pausas e respostas contextuais. A taxa de detecção é inferior a 5%, e quando detectada, é vista positivamente pela eficiência."
+      question: "Quanto tempo leva a implantação?",
+      answer: "A implantação do HUMANOID acontece em dias, não em meses. Você conecta seus sistemas, ativa seus agentes e vê resultados na primeira semana de uso."
     },
     {
-      question: "Como garanto que os leads são do meu segmento ideal?",
-      answer: "Durante o setup, mapeamos seu ICP (Ideal Customer Profile) com critérios específicos: segmento, tamanho da empresa, localização, tecnologias usadas, comportamentos digitais e sinais de intenção. A IA aprende continuamente com seus melhores clientes."
+      question: "O HUMANOID é seguro e está em conformidade com a LGPD?",
+      answer: "Sim. O HUMANOID possui LGPD by design, controle de acesso RBAC, auditoria total de todas as operações e transparência completa nos custos em tempo real. Sua inteligência é sua, segura e isolada."
     },
     {
-      question: "Qual o volume de leads que posso esperar?",
-      answer: "O volume varia por segmento e ICP, mas clientes típicos veem aumento de 200-400% na captação qualificada. Em média, geramos 50-200 leads qualificados por mês, dependendo do nicho e configurações."
+      question: "Posso começar gratuitamente?",
+      answer: "Sim! O plano Auto oferece 100 créditos diários inclusos para você testar seus primeiros agentes — sem cartão de crédito."
     },
     {
-      question: "Como protegem os dados dos leads captados?",
-      answer: "Seguimos rigorosamente a LGPD e melhores práticas de segurança. Todos os dados são criptografados, armazenados em servidores seguros no Brasil, e temos políticas claras de retenção e exclusão de dados."
+      question: "Quais são os casos de uso do HUMANOID?",
+      answer: "O HUMANOID atende diversos casos de uso: eventos (Smart Events com reconhecimento facial), jurídico (geração de petições e cobranças), comercial B2B (SDRs de IA), e muitos outros segmentos que precisam de automação inteligente."
     },
     {
-      question: "Posso personalizar as mensagens e abordagens da IA?",
-      answer: "Totalmente personalizável. Definimos tom de voz, scripts base, objeções comuns, proposta de valor e abordagem específica para seu negócio. A IA mantém consistência da marca em todas as interações."
+      question: "Como o HUMANOID mede ROI?",
+      answer: "Cada ação do HUMANOID é auditada, medida e registrada. Você sabe exatamente quanto tempo economizou, quanto custou cada operação e quanto retornou em receita gerada ou perdas evitadas. IA com responsabilidade financeira."
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-32 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
-        <SectionTitle
-          title="Perguntas Frequentes"
-          subtitle="Esclareça suas dúvidas sobre captação de leads e SDR com inteligência artificial"
-          center
-        />
+        <div className="text-center space-y-4 mb-16 animate-fade-in">
+          <h2 className="font-haas text-3xl md:text-5xl font-black">
+            Perguntas <span className="text-[hsl(176,98%,51%)]">Frequentes</span>
+          </h2>
+          <p className="text-xl text-white/70">
+            Esclareça suas dúvidas sobre o HUMANOID™
+          </p>
+        </div>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
-                <AccordionTrigger className="text-left font-semibold text-legal hover:text-legal-purple">
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-6 hover:border-[hsl(176,98%,51%)]/50 transition-all"
+              >
+                <AccordionTrigger className="text-left font-semibold text-white hover:text-[hsl(176,98%,51%)]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-4">
+                <AccordionContent className="text-white/70 pb-4 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
           
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Ainda tem dúvidas sobre captação automatizada?</p>
+          <div className="text-center mt-16">
+            <p className="text-white/70 mb-6 text-lg">Ainda tem dúvidas sobre o HUMANOID?</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-legal hover:bg-legal/90">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-[hsl(242,97%,37%)] to-[hsl(242,86%,58%)] hover:from-[hsl(242,86%,58%)] hover:to-[hsl(242,97%,37%)] text-white border-2 border-[hsl(176,98%,51%)]/50"
+              >
                 Falar com Especialista
               </Button>
-              <Button size="lg" variant="outline" className="border-legal text-legal hover:bg-legal hover:text-white">
-                Ver Mais Cases
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-[hsl(176,98%,51%)] text-[hsl(176,98%,51%)] hover:bg-[hsl(176,98%,51%)] hover:text-gray-900"
+              >
+                Ver Cases de Sucesso
               </Button>
             </div>
           </div>

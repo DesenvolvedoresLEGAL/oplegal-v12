@@ -7,46 +7,90 @@ import { Building, ShoppingCart, Heart, Briefcase } from 'lucide-react';
 const HumanoidUseCases = () => {
   const useCases = [
     {
-      title: "Tecnologia & SaaS",
-      description: "Captação de empresas buscando soluções digitais, qualificação de budget e timing de decisão",
-      icon: <Building className="w-6 h-6" />
+      emoji: "🎪",
+      title: "Eventos (Smart Events)",
+      description: "Agentes cuidam do credenciamento com reconhecimento facial, atendimento no WhatsApp e pós-evento automático.",
+      results: [
+        "Check-in 5x mais rápido",
+        "Relatórios prontos em minutos",
+        "Zero fila, zero estresse"
+      ],
+      icon: <Building className="w-8 h-8" />
     },
     {
-      title: "E-commerce & Varejo",
-      description: "Identificação de lojistas, marketplaces e empreendedores digitais prontos para escalar",
-      icon: <ShoppingCart className="w-6 h-6" />
+      emoji: "⚖️",
+      title: "Jurídico",
+      description: "Agentes geram petições, triagens e cobranças automáticas.",
+      results: [
+        "3x mais produtividade por advogado",
+        "Redução drástica de erros e atrasos",
+        "Compliance garantido"
+      ],
+      icon: <Briefcase className="w-8 h-8" />
     },
     {
-      title: "Serviços Profissionais", 
-      description: "Captação de escritórios, consultorias e prestadores de serviços especializados",
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    {
-      title: "Saúde & Bem-estar",
-      description: "Prospecção de clínicas, laboratórios e profissionais da saúde em expansão",
-      icon: <Heart className="w-6 h-6" />
+      emoji: "💬",
+      title: "Comercial B2B",
+      description: "SDRs de IA ligam, qualificam leads e atualizam o CRM automaticamente.",
+      results: [
+        "+60% em reuniões marcadas",
+        "-70% no custo de aquisição",
+        "Equipes focadas em fechamento"
+      ],
+      icon: <ShoppingCart className="w-8 h-8" />
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <div className="container mx-auto px-4">
-        <SectionTitle
-          title="Segmentos Atendidos"
-          subtitle="Humanoid se adapta a diferentes mercados e nichos para captação especializada"
-          center
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="text-center space-y-6 mb-16 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-[hsl(176,98%,51%)]/20 backdrop-blur-sm rounded-full border border-[hsl(176,98%,51%)]/30">
+            <span className="text-2xl">💼</span>
+            <span className="text-sm font-bold tracking-wider text-[hsl(176,98%,51%)]">CASOS DE USO</span>
+          </div>
+          <h2 className="font-haas text-3xl md:text-5xl font-black">
+            HUMANOID em <span className="text-[hsl(176,98%,51%)]">ação</span>
+          </h2>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {useCases.map((useCase, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="text-legal mb-4 flex justify-center">
-                  {useCase.icon}
+            <div 
+              key={index} 
+              className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[hsl(176,98%,51%)]/50 transition-all group animate-fade-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="space-y-6">
+                {/* Icon & Emoji */}
+                <div className="flex items-center gap-4">
+                  <span className="text-4xl">{useCase.emoji}</span>
+                  <div className="p-3 bg-[hsl(176,98%,51%)]/20 rounded-xl text-[hsl(176,98%,51%)] group-hover:scale-110 transition-transform">
+                    {useCase.icon}
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-legal mb-3">{useCase.title}</h3>
-                <p className="text-gray-600 text-sm">{useCase.description}</p>
-              </CardContent>
-            </Card>
+                
+                {/* Title */}
+                <h3 className="font-haas text-2xl font-bold">
+                  {useCase.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-white/70 leading-relaxed">
+                  {useCase.description}
+                </p>
+                
+                {/* Results */}
+                <div className="space-y-3 pt-4 border-t border-white/10">
+                  {useCase.results.map((result, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <span className="text-[hsl(176,98%,51%)] mt-0.5 flex-shrink-0">✅</span>
+                      <span className="text-white/80 text-sm font-medium">{result}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

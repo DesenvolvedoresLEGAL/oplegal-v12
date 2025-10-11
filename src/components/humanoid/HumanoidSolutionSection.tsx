@@ -1,0 +1,67 @@
+import React from 'react';
+import { Brain, Network, Zap } from 'lucide-react';
+
+const HumanoidSolutionSection = () => {
+  return (
+    <section className="py-32 bg-gradient-to-br from-gray-900 via-[hsl(242,97%,37%)]/20 to-gray-900 text-white">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto space-y-16">
+          {/* Header */}
+          <div className="text-center space-y-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-[hsl(176,98%,51%)]/20 backdrop-blur-sm rounded-full border border-[hsl(176,98%,51%)]/30">
+              <span className="text-2xl">🚀</span>
+              <span className="text-sm font-bold tracking-wider text-[hsl(176,98%,51%)]">A SOLUÇÃO</span>
+            </div>
+            
+            <h2 className="font-haas text-4xl md:text-6xl font-black leading-tight">
+              <span className="text-[hsl(176,98%,51%)]">HUMANOID™</span>
+            </h2>
+          </div>
+
+          {/* Main Content */}
+          <div className="text-center space-y-8 animate-fade-up">
+            <p className="text-2xl md:text-3xl font-bold leading-relaxed">
+              O HUMANOID é o <span className="text-[hsl(176,98%,51%)]">cérebro digital</span> da sua empresa.
+            </p>
+            
+            <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-4xl mx-auto">
+              Um workspace onde tudo se conecta — pessoas, processos, sistemas e IA —<br className="hidden md:block" />
+              para que sua operação <span className="text-white font-semibold">pense, decida e aja automaticamente</span>.
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-3 gap-8 pt-8">
+            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-[hsl(176,98%,51%)]/50 transition-all animate-fade-up" style={{ animationDelay: '100ms' }}>
+              <div className="inline-flex p-4 bg-[hsl(176,98%,51%)]/20 rounded-full">
+                <Brain className="w-8 h-8 text-[hsl(176,98%,51%)]" />
+              </div>
+              <p className="text-lg font-bold">Ele <span className="text-[hsl(176,98%,51%)]">entende</span> o que está acontecendo.</p>
+            </div>
+
+            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-[hsl(176,98%,51%)]/50 transition-all animate-fade-up" style={{ animationDelay: '200ms' }}>
+              <div className="inline-flex p-4 bg-[hsl(176,98%,51%)]/20 rounded-full">
+                <Network className="w-8 h-8 text-[hsl(176,98%,51%)]" />
+              </div>
+              <p className="text-lg font-bold">Ele toma <span className="text-[hsl(176,98%,51%)]">decisões com contexto</span>.</p>
+            </div>
+
+            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-[hsl(176,98%,51%)]/50 transition-all animate-fade-up" style={{ animationDelay: '300ms' }}>
+              <div className="inline-flex p-4 bg-[hsl(176,98%,51%)]/20 rounded-full">
+                <Zap className="w-8 h-8 text-[hsl(176,98%,51%)]" />
+              </div>
+              <p className="text-lg font-bold">Ele <span className="text-[hsl(176,98%,51%)]">executa tarefas</span> em segundos.</p>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <p className="text-xl md:text-2xl text-white/70 text-center pt-8 animate-fade-up" style={{ animationDelay: '400ms' }}>
+            E tudo isso com <span className="text-white font-semibold">segurança</span>, <span className="text-white font-semibold">trilha de auditoria</span> e <span className="text-[hsl(176,98%,51%)] font-bold">ROI real</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HumanoidSolutionSection;
