@@ -4,4 +4,4 @@ project_id = "mvkawsgrjnbdufdgzwwd"
 verify_jwt = false
 
 [functions.newsletter-signup-secure]
-verify_jwt = false
+verify_jwt = true
