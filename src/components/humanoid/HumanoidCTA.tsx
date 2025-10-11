@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Brain } from 'lucide-react';
 
 interface CTAButton {
   label: string;
@@ -18,43 +18,36 @@ interface HumanoidCTAProps {
 const HumanoidCTA: React.FC<HumanoidCTAProps> = ({
   headline,
   subheadline,
-  primaryCTA,
-  secondaryCTA
+  primaryCTA
 }) => {
   return (
-    <section className="py-32 bg-gradient-to-br from-gray-900 via-[hsl(242,97%,37%)] to-[hsl(242,86%,58%)] text-white relative overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-br from-gray-900 via-legal to-legal-purple overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(3,249,255,0.2),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:100px_100px] opacity-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--legal-cyan)/0.15),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--legal)/0.15),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(3,249,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(3,249,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-10 animate-fade-in">
-          {/* Quote Section */}
-          <div className="space-y-8 mb-12">
-            <div className="inline-flex p-2 bg-[hsl(176,98%,51%)]/20 rounded-full">
-              <span className="text-4xl">✨</span>
-            </div>
-            
-            <p className="font-haas text-2xl md:text-4xl font-black leading-tight italic">
+        <div className="max-w-4xl mx-auto text-center space-y-12 animate-fade-in">
+          {/* Quote Box */}
+          <div className="bg-white/5 backdrop-blur-sm border-l-4 border-legal-cyan rounded-r-xl p-8 mb-12 animate-fade-in">
+            <blockquote className="text-2xl md:text-3xl font-black text-white italic leading-relaxed">
               "Toda empresa tem um coração.<br />
-              Mas só as mais inteligentes têm um <span className="text-[hsl(176,98%,51%)]">sistema nervoso central</span>."
-            </p>
-            
-            <p className="text-xl text-white/70">
-              Esse é o <span className="text-[hsl(176,98%,51%)] font-bold">HUMANOID™</span>.
-            </p>
+              Mas só as mais inteligentes têm um sistema nervoso central."
+            </blockquote>
+            <p className="text-legal-cyan font-bold mt-4 text-xl">— HUMANOID™</p>
           </div>
 
-          {/* Divider */}
-          <div className="flex items-center justify-center gap-4 py-8">
-            <div className="h-px w-32 bg-gradient-to-r from-transparent to-[hsl(176,98%,51%)]" />
-            <span className="text-2xl">🔹</span>
-            <div className="h-px w-32 bg-gradient-to-l from-transparent to-[hsl(176,98%,51%)]" />
+          {/* Divider with icon */}
+          <div className="flex items-center gap-4 my-12">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-legal-cyan/50 to-transparent" />
+            <Brain className="w-8 h-8 text-legal-cyan" />
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-legal-cyan/50 to-transparent" />
           </div>
 
-          {/* CTA Section */}
+          {/* Main CTA Content */}
           <div className="space-y-6">
-            <h2 className="font-haas text-3xl md:text-5xl font-black leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
               {headline}
             </h2>
             
@@ -62,18 +55,16 @@ const HumanoidCTA: React.FC<HumanoidCTAProps> = ({
               {subheadline}
             </p>
             
-            <div className="pt-8 animate-fade-up">
-              <Button 
-                asChild 
-                size="lg"
-                className="bg-white hover:bg-white/90 text-[hsl(242,97%,37%)] text-xl px-16 py-8 h-auto rounded-full font-bold shadow-2xl group"
-              >
-                <Link to={primaryCTA.link} className="inline-flex items-center gap-3">
-                  {primaryCTA.label}
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                </Link>
-              </Button>
-            </div>
+            <Button 
+              asChild 
+              size="lg"
+              className="bg-white hover:bg-white/90 text-legal text-lg px-12 py-6 h-auto rounded-full font-black shadow-2xl group transition-all duration-300 hover:scale-105"
+            >
+              <Link to={primaryCTA.link} className="flex items-center gap-3">
+                {primaryCTA.label}
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
