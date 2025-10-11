@@ -2,7 +2,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import SectionTitle from '@/components/SectionTitle';
-import { Building, ShoppingCart, Heart, Briefcase } from 'lucide-react';
 
 const HumanoidUseCases = () => {
   const useCases = [
@@ -14,8 +13,7 @@ const HumanoidUseCases = () => {
         "Check-in 5x mais rápido",
         "Relatórios prontos em minutos",
         "Zero fila, zero estresse"
-      ],
-      icon: <Building className="w-8 h-8" />
+      ]
     },
     {
       emoji: "⚖️",
@@ -25,8 +23,7 @@ const HumanoidUseCases = () => {
         "3x mais produtividade por advogado",
         "Redução drástica de erros e atrasos",
         "Compliance garantido"
-      ],
-      icon: <Briefcase className="w-8 h-8" />
+      ]
     },
     {
       emoji: "💬",
@@ -36,8 +33,7 @@ const HumanoidUseCases = () => {
         "+60% em reuniões marcadas",
         "-70% no custo de aquisição",
         "Equipes focadas em fechamento"
-      ],
-      icon: <ShoppingCart className="w-8 h-8" />
+      ]
     }
   ];
 
@@ -47,10 +43,10 @@ const HumanoidUseCases = () => {
         <div className="text-center space-y-6 mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-purple/20 backdrop-blur-sm rounded-full border border-legal-purple/30">
             <span className="text-2xl">💼</span>
-            <span className="text-sm font-bold tracking-wider text-legal-purple">CASOS DE USO</span>
+            <span className="text-sm font-bold tracking-wider text-white">CASOS DE USO</span>
           </div>
           <h2 className="font-haas text-3xl md:text-5xl font-black">
-            HUMANOID em <span className="text-legal-purple">ação</span>
+            HUMANOID em <span className="text-white">ação</span>
           </h2>
         </div>
         
@@ -62,12 +58,9 @@ const HumanoidUseCases = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="space-y-6">
-                {/* Icon & Emoji */}
+                {/* Emoji */}
                 <div className="flex items-center gap-4">
                   <span className="text-4xl">{useCase.emoji}</span>
-                  <div className="p-3 bg-legal-purple/20 rounded-xl text-legal-purple group-hover:scale-110 transition-transform">
-                    {useCase.icon}
-                  </div>
                 </div>
                 
                 {/* Title */}
