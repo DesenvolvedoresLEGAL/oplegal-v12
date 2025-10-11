@@ -73,7 +73,7 @@ const HumanoidLayersSection = () => {
               return (
                 <div 
                   key={index}
-                  className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-legal-cyan/50 shadow-sm transition-all group animate-fade-up"
+                  className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-legal-purple/50 shadow-sm transition-all group animate-fade-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Number Badge */}
@@ -83,11 +83,11 @@ const HumanoidLayersSection = () => {
 
                   {/* Icon */}
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 bg-legal-cyan/20 rounded-xl text-legal-cyan group-hover:scale-110 transition-transform">
+                    <div className="p-3 bg-legal-purple/20 rounded-xl text-legal-purple group-hover:scale-110 transition-transform">
                       <Icon className="w-10 h-10" />
                     </div>
                     <div>
-                      <h3 className="font-haas text-2xl font-bold text-legal-cyan">
+                      <h3 className="font-haas text-2xl font-bold text-legal-purple">
                         {layer.title}
                       </h3>
                       <p className="text-sm text-gray-600 font-semibold">
@@ -106,7 +106,7 @@ const HumanoidLayersSection = () => {
                     <ul className="space-y-2 mb-4 ml-4">
                       {layer.bullets.map((bullet, i) => (
                         <li key={i} className="text-gray-700 text-sm flex items-start gap-2">
-                          <span className="text-legal-cyan mt-1">•</span>
+                          <span className="text-legal-purple mt-1">•</span>
                           <span>{bullet}</span>
                         </li>
                       ))}
@@ -114,7 +114,7 @@ const HumanoidLayersSection = () => {
                   )}
 
                   {/* Highlight */}
-                  <p className="text-legal-cyan font-bold italic mt-6 border-l-4 border-legal-cyan pl-4">
+                  <p className="text-legal-purple font-bold italic mt-6 border-l-4 border-legal-purple pl-4">
                     {layer.highlight}
                   </p>
                 </div>
