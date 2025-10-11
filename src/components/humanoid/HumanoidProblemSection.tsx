@@ -13,7 +13,7 @@ const HumanoidProblemSection = () => {
           
           <h2 className="font-haas text-4xl md:text-6xl font-black leading-tight mb-8 text-legal">
             Sua empresa tem dados demais…<br />
-            mas <span className="text-legal-cyan">decisões de menos</span>.
+            mas <span className="text-legal-purple">decisões de menos</span>.
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12">
@@ -26,12 +26,12 @@ const HumanoidProblemSection = () => {
               O que falta não é tecnologia.
             </p>
             <p className="animate-fade-up" style={{ animationDelay: '400ms' }}>
-              É <span className="text-legal-cyan">coordenação</span>.
+              É <span className="text-legal-purple">coordenação</span>.
             </p>
           </div>
           
           <p className="text-xl md:text-2xl text-gray-700 pt-8 animate-fade-up" style={{ animationDelay: '600ms' }}>
-            As empresas do futuro não serão maiores — serão <span className="text-legal-cyan font-bold">mais inteligentes</span>.
+            As empresas do futuro não serão maiores — serão <span className="text-legal-purple font-bold">mais inteligentes</span>.
           </p>
         </div>
       </div>

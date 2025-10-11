@@ -31,9 +31,9 @@ const HumanoidSecurityFeatures = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-6 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-cyan/20 backdrop-blur-sm rounded-full border border-legal-cyan/30">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-purple/20 backdrop-blur-sm rounded-full border border-legal-purple/30">
               <span className="text-2xl">🔒</span>
-              <span className="text-sm font-bold tracking-wider text-legal-cyan">SEGURANÇA E GOVERNANÇA</span>
+              <span className="text-sm font-bold tracking-wider text-legal-purple">SEGURANÇA E GOVERNANÇA</span>
             </div>
           </div>
           
@@ -41,10 +41,10 @@ const HumanoidSecurityFeatures = () => {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-legal-cyan/50 shadow-sm transition-all group animate-fade-up"
+                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-legal-purple/50 shadow-sm transition-all group animate-fade-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-legal-cyan mb-4 group-hover:scale-110 transition-transform">
+                <div className="text-legal-purple mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="font-haas text-xl font-bold mb-3 text-legal">
@@ -63,7 +63,7 @@ const HumanoidSecurityFeatures = () => {
               Sua inteligência é sua.
             </p>
             <p className="text-lg text-gray-700 mt-2">
-              Segura, isolada e sob <span className="text-legal-cyan font-semibold">total controle</span>.
+              Segura, isolada e sob <span className="text-legal-purple font-semibold">total controle</span>.
             </p>
           </div>
         </div>

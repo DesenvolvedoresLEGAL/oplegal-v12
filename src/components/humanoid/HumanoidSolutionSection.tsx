@@ -8,20 +8,20 @@ const HumanoidSolutionSection = () => {
         <div className="max-w-5xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-cyan/20 backdrop-blur-sm rounded-full border border-legal-cyan/30">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-purple/20 backdrop-blur-sm rounded-full border border-legal-purple/30">
               <span className="text-2xl">🚀</span>
-              <span className="text-sm font-bold tracking-wider text-legal-cyan">A SOLUÇÃO</span>
+              <span className="text-sm font-bold tracking-wider text-legal-purple">A SOLUÇÃO</span>
             </div>
             
             <h2 className="font-haas text-4xl md:text-6xl font-black leading-tight">
-              <span className="text-legal-cyan">HUMANOID™</span>
+              <span className="text-legal-purple">HUMANOID™</span>
             </h2>
           </div>
 
           {/* Main Content */}
           <div className="text-center space-y-8 animate-fade-up">
             <p className="text-2xl md:text-3xl font-bold leading-relaxed">
-              O HUMANOID é o <span className="text-legal-cyan">cérebro digital</span> da sua empresa.
+              O HUMANOID é o <span className="text-legal-purple">cérebro digital</span> da sua empresa.
             </p>
             
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-4xl mx-auto">
@@ -32,31 +32,31 @@ const HumanoidSolutionSection = () => {
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-3 gap-8 pt-8">
-            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-cyan/50 transition-all animate-fade-up" style={{ animationDelay: '100ms' }}>
-              <div className="inline-flex p-4 bg-legal-cyan/20 rounded-full">
-                <Brain className="w-8 h-8 text-legal-cyan" />
+            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-purple/50 transition-all animate-fade-up" style={{ animationDelay: '100ms' }}>
+              <div className="inline-flex p-4 bg-legal-purple/20 rounded-full">
+                <Brain className="w-8 h-8 text-legal-purple" />
               </div>
-              <p className="text-lg font-bold">Ele <span className="text-legal-cyan">entende</span> o que está acontecendo.</p>
+              <p className="text-lg font-bold">Ele <span className="text-legal-purple">entende</span> o que está acontecendo.</p>
             </div>
 
-            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-cyan/50 transition-all animate-fade-up" style={{ animationDelay: '200ms' }}>
-              <div className="inline-flex p-4 bg-legal-cyan/20 rounded-full">
-                <Network className="w-8 h-8 text-legal-cyan" />
+            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-purple/50 transition-all animate-fade-up" style={{ animationDelay: '200ms' }}>
+              <div className="inline-flex p-4 bg-legal-purple/20 rounded-full">
+                <Network className="w-8 h-8 text-legal-purple" />
               </div>
-              <p className="text-lg font-bold">Ele toma <span className="text-legal-cyan">decisões com contexto</span>.</p>
+              <p className="text-lg font-bold">Ele toma <span className="text-legal-purple">decisões com contexto</span>.</p>
             </div>
 
-            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-cyan/50 transition-all animate-fade-up" style={{ animationDelay: '300ms' }}>
-              <div className="inline-flex p-4 bg-legal-cyan/20 rounded-full">
-                <Zap className="w-8 h-8 text-legal-cyan" />
+            <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-purple/50 transition-all animate-fade-up" style={{ animationDelay: '300ms' }}>
+              <div className="inline-flex p-4 bg-legal-purple/20 rounded-full">
+                <Zap className="w-8 h-8 text-legal-purple" />
               </div>
-              <p className="text-lg font-bold">Ele <span className="text-legal-cyan">executa tarefas</span> em segundos.</p>
+              <p className="text-lg font-bold">Ele <span className="text-legal-purple">executa tarefas</span> em segundos.</p>
             </div>
           </div>
 
           {/* Footer */}
           <p className="text-xl md:text-2xl text-white/70 text-center pt-8 animate-fade-up" style={{ animationDelay: '400ms' }}>
-            E tudo isso com <span className="text-white font-semibold">segurança</span>, <span className="text-white font-semibold">trilha de auditoria</span> e <span className="text-legal-cyan font-bold">ROI real</span>.
+            E tudo isso com <span className="text-white font-semibold">segurança</span>, <span className="text-white font-semibold">trilha de auditoria</span> e <span className="text-legal-purple font-bold">ROI real</span>.
           </p>
         </div>
       </div>

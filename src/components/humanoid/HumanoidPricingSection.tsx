@@ -23,7 +23,7 @@ const HumanoidPricingSection = () => {
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
             Cresça no seu ritmo com energia por VOLTS™ — sem limite de agentes.
           </p>
-          <p className="text-sm md:text-base text-legal-cyan bg-legal-cyan/10 backdrop-blur-sm px-6 py-3 rounded-lg inline-block border border-legal-cyan/20">
+          <p className="text-sm md:text-base text-legal-purple bg-legal-purple/10 backdrop-blur-sm px-6 py-3 rounded-lg inline-block border border-legal-purple/20">
             Todos os planos incluem membros ilimitados (RBAC), conectores de catálogo, analytics e alertas 70/90/100%.
           </p>
         </div>
@@ -32,10 +32,10 @@ const HumanoidPricingSection = () => {
         <TooltipProvider>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Card 1 - ORIGIN */}
-            <div className="bg-white border border-gray-200 hover:border-legal-cyan/50 rounded-2xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg animate-fade-up">
+            <div className="bg-white border border-gray-200 hover:border-legal-purple/50 rounded-2xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg animate-fade-up">
               <div className="space-y-6">
                 <div className="space-y-3">
-                  <Badge className="bg-legal-cyan/20 text-legal-cyan border-legal-cyan/30">
+                  <Badge className="bg-legal-purple/20 text-legal-purple border-legal-purple/30">
                     Microempreendedores
                   </Badge>
                   <h3 className="text-2xl font-black text-legal">Origin</h3>
@@ -45,7 +45,7 @@ const HumanoidPricingSection = () => {
 
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Zap className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Zap className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>
                       <Tooltip>
                         <TooltipTrigger className="underline decoration-dotted">VOLTS/mês</TooltipTrigger>
@@ -57,7 +57,7 @@ const HumanoidPricingSection = () => {
                     </span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Zap className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Zap className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>Torneira diária para testes</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
@@ -81,7 +81,7 @@ const HumanoidPricingSection = () => {
                     <span>Studio no/low-code</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Webhook className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Webhook className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>Webhooks de saída básicos</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
@@ -100,7 +100,7 @@ const HumanoidPricingSection = () => {
 
                 <Button 
                   asChild 
-                  className="w-full bg-legal-cyan hover:bg-legal-cyan/90 text-white font-bold"
+                  className="w-full bg-legal-purple hover:bg-legal-purple/90 text-white font-bold"
                 >
                   <Link to="/contato?produto=humanoid&plano=origin">Começar agora</Link>
                 </Button>
@@ -108,7 +108,7 @@ const HumanoidPricingSection = () => {
             </div>
 
             {/* Card 2 - FUSION */}
-            <div className="bg-white border border-gray-200 hover:border-legal-cyan/50 rounded-2xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-white border border-gray-200 hover:border-legal-purple/50 rounded-2xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg animate-fade-up" style={{ animationDelay: '0.1s' }}>
               <div className="space-y-6">
                 <div className="space-y-3">
                   <Badge className="bg-legal-purple/20 text-legal-purple border-legal-purple/30">
@@ -121,11 +121,11 @@ const HumanoidPricingSection = () => {
 
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Zap className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Zap className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>VOLTS/mês + rollover 20%</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Zap className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Zap className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>Torneira diária média</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
@@ -145,7 +145,7 @@ const HumanoidPricingSection = () => {
                     <span>Sandboxes: 6 | Concorrência: 25 simultâneas</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Database className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Database className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>Logs: 1 ano | Export CSV/JSON</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
@@ -187,7 +187,7 @@ const HumanoidPricingSection = () => {
 
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Zap className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Zap className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>Auto-recarga contratual + rollover 20%</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
@@ -215,7 +215,7 @@ const HumanoidPricingSection = () => {
                     </span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <BarChart className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <BarChart className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>
                       <Tooltip>
                         <TooltipTrigger className="underline decoration-dotted">BI</TooltipTrigger>
@@ -235,7 +235,7 @@ const HumanoidPricingSection = () => {
                     <span>Sandboxes: 10 | Concorrência: 100</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Database className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Database className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>
                       Logs: 1 ano | Export{' '}
                       <Tooltip>
@@ -270,10 +270,10 @@ const HumanoidPricingSection = () => {
               <div className="space-y-6">
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
-                    <Badge className="bg-gradient-to-r from-legal-purple to-legal-cyan text-white border-0">
+                    <Badge className="bg-gradient-to-r from-legal-purple to-legal-purple text-white border-0">
                       Enterprise
                     </Badge>
-                    <Crown className="w-5 h-5 text-legal-cyan" />
+                    <Crown className="w-5 h-5 text-legal-purple" />
                   </div>
                   <h3 className="text-2xl font-black text-legal">Matrix</h3>
                   <p className="text-gray-600 text-sm">Corporações</p>
@@ -282,7 +282,7 @@ const HumanoidPricingSection = () => {
 
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Crown className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Crown className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>Contrato Enterprise (VOLTS, SLO/SLA custom)</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
@@ -294,7 +294,7 @@ const HumanoidPricingSection = () => {
                     <span>BYOK/HSM, compliance internacional</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Globe className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Globe className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>Multi-região / on-prem / edge</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
@@ -306,7 +306,7 @@ const HumanoidPricingSection = () => {
                     <span>Data feeds corporativos + BI avançado</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
-                    <Database className="w-5 h-5 text-legal-cyan shrink-0 mt-0.5" />
+                    <Database className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
                     <span>Logs: 1-3 anos (contrato)</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
@@ -321,7 +321,7 @@ const HumanoidPricingSection = () => {
 
                 <Button 
                   asChild 
-                  className="w-full bg-gradient-to-r from-legal-purple to-legal-cyan hover:opacity-90 text-white font-bold"
+                  className="w-full bg-legal-purple hover:bg-legal-purple/90 text-white font-bold"
                 >
                   <Link to="/contato?produto=humanoid&plano=matrix">Fale com time Enterprise</Link>
                 </Button>
