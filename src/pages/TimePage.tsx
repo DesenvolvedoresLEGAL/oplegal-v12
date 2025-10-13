@@ -88,10 +88,10 @@ const teamMembers = [{
   department: "Comercial",
   avatar: "/lovable-uploads/leonardo-honorio.png"
 }, {
-  name: "Gibson Cruz",
-  role: "Dev Full Stack 2",
-  department: "Tecnologia",
-  avatar: "/lovable-uploads/gibson-cruz.jpg"
+  name: "Lais Lima",
+  role: "Consultora de Tecnologia",
+  department: "Comercial",
+  avatar: "/lovable-uploads/lais-lima.jpg"
 }];
 const values = [{
   icon: <Target className="w-8 h-8 text-legal-cyan" />,
