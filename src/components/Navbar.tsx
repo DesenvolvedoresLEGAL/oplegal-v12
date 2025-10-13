@@ -169,7 +169,7 @@ const Navbar = () => {
                             <FileText className="w-5 h-5 text-legal-green mt-1 mr-3 group-hover:text-legal" />
                             <div>
                               <div className="text-sm font-medium text-gray-900 group-hover:text-legal">Recursos</div>
-                              <p className="text-xs text-gray-500">Conteúdos, Dicas e Ferramentas</p>
+                              <p className="text-xs text-gray-500">Dicas e Ferramentas</p>
                             </div>
                           </Link>
                           <Link to="/universo/imprensa" className="flex items-start p-2 hover:bg-gray-50 rounded-md group">
