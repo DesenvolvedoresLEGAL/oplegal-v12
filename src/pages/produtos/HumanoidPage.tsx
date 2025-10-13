@@ -15,6 +15,7 @@ import HumanoidTimeToValueSection from '@/components/humanoid/HumanoidTimeToValu
 import HumanoidVisionSection from '@/components/humanoid/HumanoidVisionSection';
 import HumanoidCTA from '@/components/humanoid/HumanoidCTA';
 import HumanoidFAQ from '@/components/humanoid/HumanoidFAQ';
+import HumanoidChatbot from '@/components/humanoid/HumanoidChatbot';
 
 // SEO Components
 import ProductFAQSchema from '@/components/seo/ProductFAQSchema';
@@ -102,6 +103,8 @@ const HumanoidPage = () => {
 
         <HumanoidFAQ />
       </main>
+
+      <HumanoidChatbot />
 
       <ProductFAQSchema
         productName="HUMANOID™"

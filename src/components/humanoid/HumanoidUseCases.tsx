@@ -38,7 +38,7 @@ const HumanoidUseCases = () => {
   ];
 
   return (
-    <section className="py-32 bg-legal text-white">
+    <section id="casos-de-uso" className="py-32 bg-legal text-white">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-6 mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-purple/20 backdrop-blur-sm rounded-full border border-legal-purple/30">

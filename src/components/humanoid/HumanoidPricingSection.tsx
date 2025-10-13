@@ -12,7 +12,7 @@ import {
 
 const HumanoidPricingSection = () => {
   return (
-    <section className="relative py-24 bg-gray-50 overflow-hidden">
+    <section id="pricing" className="relative py-24 bg-gray-50 overflow-hidden">
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
