@@ -80,7 +80,7 @@ const HumanoidPage = () => {
           <Breadcrumbs items={breadcrumbItems} />
 
         <HumanoidProductHero
-          headline="O Sistema Nervoso Central da Sua Empresa"
+          headline="O 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente."
           subheadline="Um workspace de Inteligência Artificial que conecta dados, processos e agentes produtivos para entender, decidir e agir no seu negócio — com governança, segurança e ROI mensurável."
         />
 
