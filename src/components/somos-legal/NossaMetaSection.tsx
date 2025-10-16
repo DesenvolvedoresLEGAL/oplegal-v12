@@ -6,7 +6,7 @@ import { Target } from 'lucide-react';
 
 const NossaMetaSection = () => {
   const targetConnections = 1000000;
-  const currentConnectionsInitial = 166729; // Valor inicial dado no prompt
+  const currentConnectionsInitial = 249865; // Valor atual atualizado
   const [displayedConnections, setDisplayedConnections] = useState(0);
 
   useEffect(() => {

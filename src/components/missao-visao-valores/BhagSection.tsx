@@ -36,12 +36,12 @@ const BhagSection = () => {
             <div className="inline-flex items-center justify-center p-8 bg-legal text-white rounded-3xl mb-8 shadow-2xl">
               <Users size={64} className="mr-4" />
               <div className="text-left">
-                <div className="text-4xl md:text-6xl font-black">195.338</div>
+                <div className="text-4xl md:text-6xl font-black">1.000.000</div>
                 <div className="text-xl md:text-2xl">conexões até 2030</div>
               </div>
             </div>
             <p className="text-2xl md:text-3xl font-bold text-legal mb-4">
-              Conectar 195.338 pessoas, negócios e coisas no Brasil até 2030
+              Conectar 1.000.000 pessoas, negócios e coisas no Brasil até 2030
             </p>
           </div>
 
