@@ -58,7 +58,7 @@ const HumanoidPricingSection = () => {
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
                     <Zap className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
-                    <span>Torneira diária para testes</span>
+                    <span>Energia diária para testes</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
                     <Users className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
@@ -126,7 +126,7 @@ const HumanoidPricingSection = () => {
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
                     <Zap className="w-5 h-5 text-legal-purple shrink-0 mt-0.5" />
-                    <span>Torneira diária média</span>
+                    <span>Energia diária média</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-700 text-sm">
                     <Link2 className="w-5 h-5 text-legal shrink-0 mt-0.5" />
