@@ -35,6 +35,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [loading, setLoading] = useState(true);
 
   const fetchProfile = async (userId: string) => {
+    // Profiles table not created yet - skipping profile fetch
+    // TODO: Uncomment this when profiles table is created
+    /*
     try {
       const { data, error } = await supabase
         .from('profiles')
@@ -51,6 +54,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     } catch (error) {
       console.error('Error in fetchProfile:', error);
     }
+    */
   };
 
   useEffect(() => {
