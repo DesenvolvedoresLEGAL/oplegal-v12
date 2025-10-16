@@ -51,6 +51,7 @@ const formSchema = z.object({
     .optional(),
   phone: z.string()
     .max(20, 'Telefone deve ter no máximo 20 caracteres')
+    .regex(/^[\d\s\(\)\-\+]*$/, 'Telefone deve conter apenas números e caracteres válidos')
     .trim()
     .optional(),
   subject: z.string()
@@ -147,6 +148,15 @@ const ContatoPage = () => {
       });
 
       if (error) {
+        // Check for rate limiting
+        if (error.message?.includes('429') || error.message?.includes('Rate limit')) {
+          toast({
+            title: "Limite de requisições atingido",
+            description: "Você enviou muitas mensagens recentemente. Por favor, aguarde 15 minutos antes de tentar novamente.",
+            variant: "destructive",
+          });
+          return;
+        }
         throw error;
       }
 
@@ -161,7 +171,7 @@ const ContatoPage = () => {
 
       form.reset();
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('Error sending email');
       toast({
         title: "Erro ao enviar mensagem",
         description: "Não foi possível enviar sua mensagem. Por favor, tente novamente ou entre em contato por telefone.",

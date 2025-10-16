@@ -70,7 +70,7 @@ const TecTecSidebar: React.FC<TecTecSidebarProps> = ({
           </p>
           <form className="space-y-3" onSubmit={(e) => {
             e.preventDefault();
-            console.log('Newsletter signup:', email);
+            // Process newsletter signup without logging PII
             setEmail('');
           }}>
             <Input

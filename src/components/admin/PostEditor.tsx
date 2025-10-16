@@ -80,7 +80,6 @@ const PostEditor = ({ post, onSave, onCancel }) => {
     };
     
     // Aqui você pode abrir uma modal de preview ou nova aba
-    console.log('Preview data:', previewData);
     alert('Funcionalidade de preview será implementada em breve!');
   };
 
