@@ -66,43 +66,14 @@ const NewsletterExitPopup = () => {
       return;
     }
 
-    setIsLoading(true);
-
-    try {
-      // Call Mailchimp API through Supabase Edge Function
-      const response = await fetch('https://mvkawsgrjnbdufdgzwwd.supabase.co/functions/v1/newsletter-signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          name,
-          source: 'exit-intent-popup'
-        }),
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Sucesso! 🎉",
-          description: "Você foi cadastrado em nossa newsletter! Em breve receberá nossos conteúdos exclusivos.",
-        });
-        setIsOpen(false);
-        setEmail('');
-        setName('');
-      } else {
-        throw new Error('Erro no cadastro');
-      }
-    } catch (error) {
-      console.error('Newsletter signup error:', error);
-      toast({
-        title: "Erro no cadastro",
-        description: "Houve um problema ao cadastrar seu email. Tente novamente.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    // Newsletter functionality temporarily disabled (no backend)
+    toast({
+      title: "Em breve! 🚀",
+      description: "A funcionalidade de newsletter estará disponível em breve.",
+    });
+    setIsOpen(false);
+    setEmail('');
+    setName('');
   };
 
   return (

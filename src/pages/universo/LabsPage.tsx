@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
 import SEOHead from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -22,7 +21,6 @@ import {
 } from 'lucide-react';
 
 const LabsPage = () => {
-  const { signOut } = useAuth();
 
   const labsTools = [
     {
@@ -135,15 +133,6 @@ const LabsPage = () => {
                   Ambiente de testes e desenvolvimento de novos recursos.
                 </p>
               </div>
-              
-              <Button
-                onClick={signOut}
-                variant="outline"
-                className="flex items-center gap-2"
-              >
-                <LogOut className="w-4 h-4" />
-                Sair
-              </Button>
             </div>
 
             {/* Warning Banner */}

@@ -9,12 +9,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SkipLink from "./components/SkipLink";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { AuthProvider } from "./hooks/useAuth";
-import ProtectedRoute from "./components/auth/ProtectedRoute";
-import AdminRoute from "./components/auth/AdminRoute";
 
 // Lazy load non-critical pages to reduce initial bundle size
-const AuthPage = lazy(() => import("./components/auth/AuthPage"));
 const PlaceholderPage = lazy(() => import("./pages/PlaceholderPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const SmartEventsPage = lazy(() => import("./pages/SmartEventsPage"));
@@ -88,10 +84,9 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <AuthProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
           <SkipLink />
           <Navbar />
           <main id="main-content" role="main" tabIndex={-1}>
@@ -99,7 +94,6 @@ const App = () => {
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/auth" element={<AuthPage />} />
                 
                 {/* Smart Events */}
                 <Route path="/smart-events" element={<SmartEventsPage />} />
@@ -167,19 +161,6 @@ const App = () => {
                 <Route path="/universo/status" element={<StatusPage />} />
                 <Route path="/universo/faq" element={<FAQPage />} />
                 
-                {/* Labs section - Protected routes */}
-                <Route path="/universo/labs" element={<ProtectedRoute><LabsPage /></ProtectedRoute>} />
-                <Route path="/universo/labs/executive" element={<ProtectedRoute><ExecutiveDashboard /></ProtectedRoute>} />
-                <Route path="/universo/labs/roi" element={<ProtectedRoute><ROIAnalytics /></ProtectedRoute>} />
-                <Route path="/universo/labs/seo" element={<ProtectedRoute><SEOPerformance /></ProtectedRoute>} />
-                <Route path="/universo/labs/ai-dashboard" element={<ProtectedRoute><AIAnalyticsDashboard /></ProtectedRoute>} />
-                <Route path="/universo/labs/user-behavior" element={<ProtectedRoute><UserBehaviorAnalysis /></ProtectedRoute>} />
-                <Route path="/universo/labs/performance-insights" element={<ProtectedRoute><PerformanceInsights /></ProtectedRoute>} />
-                <Route path="/universo/labs/conversion-funnel" element={<ProtectedRoute><ConversionFunnelAI /></ProtectedRoute>} />
-                <Route path="/universo/labs/global-analytics" element={<ProtectedRoute><PlaceholderPage /></ProtectedRoute>} />
-                
-                {/* Admin section */}
-                <Route path="/admin/tectec" element={<AdminRoute><TecTecAdminPage /></AdminRoute>} />
                 
                 {/* Contact */}
                 <Route path="/contato" element={<ContatoPage />} />
@@ -201,7 +182,6 @@ const App = () => {
           </main>
           <Footer />
         </BrowserRouter>
-        </AuthProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );
