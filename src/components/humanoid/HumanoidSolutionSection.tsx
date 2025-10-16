@@ -34,21 +34,21 @@ const HumanoidSolutionSection = () => {
           <div className="grid md:grid-cols-3 gap-8 pt-8">
             <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-purple/50 transition-all animate-fade-up" style={{ animationDelay: '100ms' }}>
               <div className="inline-flex p-4 bg-legal-purple/20 rounded-full">
-                <Brain className="w-8 h-8 text-legal-purple" />
+                <Brain className="w-8 h-8 text-white" />
               </div>
               <p className="text-lg font-bold">Ele <span className="text-white">entende</span> o que está acontecendo.</p>
             </div>
 
             <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-purple/50 transition-all animate-fade-up" style={{ animationDelay: '200ms' }}>
               <div className="inline-flex p-4 bg-legal-purple/20 rounded-full">
-                <Network className="w-8 h-8 text-legal-purple" />
+                <Network className="w-8 h-8 text-white" />
               </div>
               <p className="text-lg font-bold">Ele toma <span className="text-white">decisões com contexto</span>.</p>
             </div>
 
             <div className="text-center space-y-4 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-legal-purple/50 transition-all animate-fade-up" style={{ animationDelay: '300ms' }}>
               <div className="inline-flex p-4 bg-legal-purple/20 rounded-full">
-                <Zap className="w-8 h-8 text-legal-purple" />
+                <Zap className="w-8 h-8 text-white" />
               </div>
               <p className="text-lg font-bold">Ele <span className="text-white">executa tarefas</span> em segundos.</p>
             </div>
