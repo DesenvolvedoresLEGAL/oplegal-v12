@@ -33,6 +33,7 @@ const historia = [
   { year: "2024", event: "Comemoramos 10 anos de vida. Apenas 2% das empresas no Brasil alcançam esse marco. Parabéns LEGAL!" },
   { year: "2024", event: "Atingimos mais de 7.000 clientes atendidos e 100.000 pessoas, negócios e coisas conectadas." },
   { year: "2025", event: "Lançamento da unidade de negócios de Inteligência Artificial." },
+  { year: "2025", event: "Criação do Humanoid, o 1º Sistema Operacional de IA do Brasil" },
   { year: "Futuro", event: "Mais marcos incríveis por vir..." }
 ];
 
