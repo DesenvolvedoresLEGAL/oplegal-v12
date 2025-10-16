@@ -34,10 +34,10 @@ const HumanoidPage = () => {
   return (
     <>
       <Helmet>
-        <title>HUMANOID™ - Sistema Nervoso Central de IA para Empresas | LEGAL</title>
-        <meta name="description" content="HUMANOID™: Workspace de IA que conecta dados, processos e agentes produtivos. Entenda, decida e aja automaticamente com governança, segurança e ROI mensurável." />
-        <meta name="keywords" content="HUMANOID, workspace IA, sistema nervoso empresarial, gestão inteligente, IA empresarial, automação inteligente, LEGAL" />
-        <meta property="og:title" content="HUMANOID™ - Sistema Nervoso Central de IA para Empresas" />
+        <title>HUMANOID™ - Sua empresa acaba de ganhar um cérebro | LEGAL</title>
+        <meta name="description" content="O HUMANOID é o 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente. Conecta dados, processos e agentes produtivos com governança e segurança." />
+        <meta name="keywords" content="HUMANOID, sistema operacional IA, workspace IA, gestão inteligente, IA empresarial, automação inteligente, LEGAL" />
+        <meta property="og:title" content="HUMANOID™ - Sua empresa acaba de ganhar um cérebro" />
         <meta property="og:description" content="Workspace de IA que conecta dados, processos e agentes produtivos para empresas inteligentes." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://operadora.legal/produtos/humanoid" />
@@ -58,8 +58,8 @@ const HumanoidPage = () => {
       />
 
       <WebPageSchema
-        name="HUMANOID™ - Sistema Nervoso Central de IA"
-        description="Workspace de IA que conecta dados, processos e agentes produtivos"
+        name="HUMANOID™ - Sua empresa acaba de ganhar um cérebro"
+        description="O 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente"
         url="https://operadora.legal/produtos/humanoid"
         breadcrumb={[
           { name: "Home", url: "https://operadora.legal" },
@@ -69,8 +69,8 @@ const HumanoidPage = () => {
       />
 
       <ArticleSchema
-        headline="HUMANOID™: O Sistema Nervoso Central da Sua Empresa"
-        description="Como o HUMANOID transforma empresas em organismos inteligentes através da IA"
+        headline="HUMANOID™: Sua empresa acaba de ganhar um cérebro"
+        description="O 1º Sistema Operacional de IA que transforma empresas brasileiras em máquinas de execução inteligente"
         url="https://operadora.legal/produtos/humanoid"
         datePublished="2025-01-15"
         keywords={["HUMANOID", "IA empresarial", "gestão inteligente", "workspace", "automação"]}
@@ -80,8 +80,8 @@ const HumanoidPage = () => {
           <Breadcrumbs items={breadcrumbItems} />
 
         <HumanoidProductHero
-          headline="O 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente."
-          subheadline="Um workspace de Inteligência Artificial que conecta dados, processos e agentes produtivos para entender, decidir e agir no seu negócio — com governança, segurança e ROI mensurável."
+          headline="Sua empresa acaba de ganhar um cérebro."
+          subheadline="O HUMANOID é o 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente."
         />
 
         <HumanoidProblemSection />
