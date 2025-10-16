@@ -111,8 +111,7 @@ const MapeamentoIAPage: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    // Aqui você implementaria o envio dos dados
-    console.log('Dados da pesquisa:', formData);
+    // Enviar dados para processamento sem logging de PII
     setIsSubmitted(true);
   };
 
