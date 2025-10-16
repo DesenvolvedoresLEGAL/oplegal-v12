@@ -34,16 +34,33 @@ import {
   Headphones,
   Building
 } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-
+import { supabase } from '@/integrations/supabase/client';
 
 const formSchema = z.object({
-  name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
-  email: z.string().email('Email inválido'),
-  company: z.string().optional(),
-  phone: z.string().optional(),
-  subject: z.string().min(5, 'Assunto deve ter pelo menos 5 caracteres'),
-  message: z.string().min(10, 'Mensagem deve ter pelo menos 10 caracteres'),
+  name: z.string()
+    .min(2, 'Nome deve ter pelo menos 2 caracteres')
+    .max(100, 'Nome deve ter no máximo 100 caracteres')
+    .trim(),
+  email: z.string()
+    .email('Email inválido')
+    .max(255, 'Email deve ter no máximo 255 caracteres')
+    .trim(),
+  company: z.string()
+    .max(100, 'Nome da empresa deve ter no máximo 100 caracteres')
+    .trim()
+    .optional(),
+  phone: z.string()
+    .max(20, 'Telefone deve ter no máximo 20 caracteres')
+    .trim()
+    .optional(),
+  subject: z.string()
+    .min(5, 'Assunto deve ter pelo menos 5 caracteres')
+    .max(200, 'Assunto deve ter no máximo 200 caracteres')
+    .trim(),
+  message: z.string()
+    .min(10, 'Mensagem deve ter pelo menos 10 caracteres')
+    .max(2000, 'Mensagem deve ter no máximo 2000 caracteres')
+    .trim(),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -118,45 +135,24 @@ const ContatoPage = () => {
   });
 
   const onSubmit = async (data: FormData) => {
-    console.log('Form submitted:', data);
-
-    const CONTACT_EMAIL = 'legaloperadora@gmail.com';
-    const EMAILJS_SERVICE_ID = 'service_fihjh1m';
-    const EMAILJS_TEMPLATE_ID = 'template_5l2767r';
-    const EMAILJS_USER_ID = 'oLw9xvmdczE218mGh';
-
-    const name = data.name;
-    const email = data.email;
-    const company = data.company;
-    const phone = data.phone;
-    const subject = data.subject;
-    const message = `
-      Assunto: ${subject},\n
-      Nome: ${name},\n
-      Email: ${email},\n
-      Empresa: ${company},\n
-      Telefone: ${phone}\n
-      ------------------------------\n
-      Mesagem:\n
-      ${data.message}\n`;
-
-    const templateParams = {
-      to_email: CONTACT_EMAIL,
-      from_name: name,
-      from_email: email,
-      company: company,
-      phone: phone,
-      subject: subject,
-      message: message,
-    };
-
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_USER_ID
-      );
+      const { data: result, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: data.name,
+          email: data.email,
+          company: data.company,
+          phone: data.phone,
+          message: `${data.subject}\n\n${data.message}`,
+        },
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      if (!result?.success) {
+        throw new Error(result?.error || 'Falha ao enviar email');
+      }
 
       toast({
         title: "Mensagem enviada!",
@@ -167,9 +163,10 @@ const ContatoPage = () => {
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
-        title: "Mensagem não enviada!",
-        description: "Erro ao enviar o email, confira os dados e tente novamente.",
-      })
+        title: "Erro ao enviar mensagem",
+        description: "Não foi possível enviar sua mensagem. Por favor, tente novamente ou entre em contato por telefone.",
+        variant: "destructive",
+      });
     }
   };
 
