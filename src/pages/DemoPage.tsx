@@ -87,11 +87,11 @@ const DemoPage = () => {
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
-                  Solicitar Demonstração
+                  Veja o Humanoid em ação
                 </h1>
                 
                 <p className="text-xl md:text-2xl mb-8 text-gray-300">
-                  Agende uma demonstração personalizada e descubra como o Humanoid pode transformar seu negócio
+                  Adoraríamos mostrar como o Humanoid pode se tornar o 1º Sistema Operacional de IA da sua empresa
                 </p>
               </div>
 
@@ -103,14 +103,14 @@ const DemoPage = () => {
                       Email Corporativo *
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-legal w-5 h-5 z-10" />
                       <input
                         id="email"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="seu@email.com"
-                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-legal/30 bg-legal-black/50 text-white placeholder:text-gray-500 focus:border-legal focus:ring-2 focus:ring-legal/20 transition-all"
+                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-legal/30 bg-white text-legal placeholder:text-legal/50 focus:border-legal focus:ring-2 focus:ring-legal/20 transition-all"
                         required
                       />
                     </div>
@@ -121,14 +121,14 @@ const DemoPage = () => {
                       Nome da Empresa *
                     </label>
                     <div className="relative">
-                      <Building2 className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <Building2 className="absolute left-3 top-1/2 transform -translate-y-1/2 text-legal w-5 h-5 z-10" />
                       <input
                         id="company"
                         type="text"
                         value={companyName}
                         onChange={(e) => setCompanyName(e.target.value)}
                         placeholder="Sua empresa"
-                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-legal/30 bg-legal-black/50 text-white placeholder:text-gray-500 focus:border-legal focus:ring-2 focus:ring-legal/20 transition-all"
+                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-legal/30 bg-white text-legal placeholder:text-legal/50 focus:border-legal focus:ring-2 focus:ring-legal/20 transition-all"
                         required
                       />
                     </div>
