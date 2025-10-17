@@ -41,13 +41,7 @@ const SignUpPage = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-legal-purple/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto text-center space-y-12 animate-fade-in">
-              {/* Badge "Em breve" */}
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-500/30">
-                <Sparkles className="w-5 h-5 text-green-400" />
-                <span className="text-sm font-bold tracking-wider text-green-400">EM BREVE</span>
-              </div>
-              
+          <div className="max-w-5xl mx-auto text-center space-y-12 animate-fade-in">
               {/* Headline */}
               <h1 className="font-haas text-4xl md:text-6xl lg:text-7xl font-black leading-tight text-white">
                 <span className="text-legal-cyan">🧠</span> Sua empresa acaba de ganhar um cérebro
@@ -63,8 +57,8 @@ const SignUpPage = () => {
                 <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-2 border-legal-cyan/20">
                   <div className="flex flex-col items-center text-center space-y-6">
                     {/* Ícone WhatsApp */}
-                    <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center">
-                      <MessageCircle className="w-10 h-10 text-green-500" />
+                    <div className="w-20 h-20 bg-legal-purple/10 rounded-full flex items-center justify-center">
+                      <MessageCircle className="w-10 h-10 text-legal-purple" />
                     </div>
                     
                     {/* Texto */}
@@ -81,7 +75,7 @@ const SignUpPage = () => {
                     <Button
                       asChild
                       size="lg"
-                      className="bg-green-500 hover:bg-green-600 text-white font-bold px-10 py-6 text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+                      className="bg-legal-purple hover:bg-legal-purple/90 text-white font-bold px-10 py-6 text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105"
                     >
                       <a 
                         href="https://wa.me/5511999572394?text=Quero%20ser%20um%20dos%20primeiros%20a%20usar%20o%20Humanoid"
@@ -94,13 +88,6 @@ const SignUpPage = () => {
                       </a>
                     </Button>
                   </div>
-                </div>
-              </div>
-
-              {/* Scroll indicator */}
-              <div className="pt-12 flex justify-center">
-                <div className="w-6 h-10 border-2 border-legal-cyan/50 rounded-full flex items-start justify-center p-2">
-                  <div className="w-1.5 h-3 bg-legal-cyan rounded-full animate-bounce" />
                 </div>
               </div>
             </div>
