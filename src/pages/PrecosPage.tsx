@@ -454,31 +454,32 @@ const PrecosPage = () => {
       </section>
 
       {/* SEÇÃO 6 - CTA FINAL */}
-      <section className="py-24 bg-gradient-to-br from-legal-primary via-legal to-legal-purple relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-[#020cbc] via-[#4d2bfb] to-[#020cbc] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
               O futuro das empresas não será humano ou artificial.
               <br />
-              <span className="text-legal-cyan">Será HUMANOID.</span>
+              <span className="bg-gradient-to-r from-[#03f9ff] to-[#03f9ff] bg-clip-text text-transparent">
+                Será HUMANOID.
+              </span>
             </h2>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto font-medium">
               Junte-se às empresas que já estão construindo o futuro dos negócios inteligentes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-legal hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105"
+                className="bg-white text-[#020cbc] hover:bg-[#03f9ff] hover:text-[#020cbc] font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <Link to="/produtos/humanoid">Ativar workspace gratuito</Link>
               </Button>
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-legal font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#020cbc] font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105"
               >
                 <Link to="/produtos/speedy5g">Solicitar cotação Speedy 5G</Link>
               </Button>
