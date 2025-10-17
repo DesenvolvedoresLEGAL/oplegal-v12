@@ -199,7 +199,7 @@ const Navbar = () => {
             className="text-legal hover:text-legal-purple"
             asChild
           >
-            <Link to="/contato">Ver Demo</Link>
+            <Link to="/demo">Ver Demo</Link>
           </Button>
           
           {/* Acessar Humanoid */}
@@ -309,7 +309,7 @@ const Navbar = () => {
               className="w-full text-legal hover:text-legal-purple"
               asChild
             >
-              <Link to="/contato" onClick={() => setIsMenuOpen(false)}>Ver Demo</Link>
+              <Link to="/demo" onClick={() => setIsMenuOpen(false)}>Ver Demo</Link>
             </Button>
             
             <Button 
