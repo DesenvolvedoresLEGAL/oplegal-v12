@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex-shrink-0">
+        <Link to="/" className="flex-shrink-0 mr-16">
           <img 
             src="/lovable-uploads/0de2869f-f080-4ad5-9ba8-575aea2f9695.png" 
             alt="LEGAL" 
@@ -49,7 +49,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation - Left Aligned */}
-        <div className="hidden lg:flex items-center gap-12 flex-grow">
+        <div className="hidden lg:flex items-center flex-grow">
           <NavigationMenu>
             <NavigationMenuList className="gap-0">
               {/* HUMANOID */}
