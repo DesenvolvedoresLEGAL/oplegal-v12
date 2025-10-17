@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ExternalLink, Search, LogOut, LogIn, BookOpen, Star, Users, Newspaper, Activity, HelpCircle, FileText, TrendingUp } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Menu, X, ExternalLink, BookOpen, Star, Users, Newspaper, Activity, HelpCircle, FileText, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
   NavigationMenu,
@@ -11,24 +11,13 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
-import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(`/busca?q=${encodeURIComponent(searchQuery.trim())}`);
-      setSearchQuery("");
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,9 +48,9 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Navigation - Centered */}
-        <div className="hidden lg:flex items-center justify-center flex-grow">
-          <NavigationMenu className="mx-auto">
+        {/* Desktop Navigation - Left Aligned */}
+        <div className="hidden lg:flex items-center gap-8 flex-grow">
+          <NavigationMenu>
             <NavigationMenuList className="gap-0">
               {/* HUMANOID */}
               <NavigationMenuItem>
@@ -192,40 +181,44 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* Contato */}
+              {/* Preços */}
               <NavigationMenuItem>
-                <Link to="/contato" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-purple px-2")}>
-                  Contato
+                <Link to="/precos" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-purple px-2")}>
+                  Preços
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
 
-        {/* Right side - Search bar and BLUE access button */}
-        <div className="hidden lg:flex items-center gap-4">
-          {/* Search Bar */}
-          <form onSubmit={handleSearch} className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-            <Input
-              type="text"
-              placeholder="Buscar produtos, conteúdos..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 pr-4 py-2 w-48 border-gray-300 focus:border-legal focus:ring-legal"
-            />
-          </form>
+        {/* Right side - CTA Buttons */}
+        <div className="hidden lg:flex items-center gap-3">
+          {/* Ver Demo */}
+          <Button 
+            variant="ghost" 
+            className="text-legal hover:text-legal-purple"
+            asChild
+          >
+            <Link to="/contato">Ver Demo</Link>
+          </Button>
           
-          {/* BLUE Access Button */}
+          {/* Acessar Humanoid */}
           <Button 
             variant="outline" 
-            className="border-legal text-legal hover:bg-legal hover:text-white flex items-center"
+            className="border-legal text-legal hover:bg-legal hover:text-white"
             asChild
           >
             <a href="https://blue.operadora.legal" target="_blank" rel="noopener noreferrer">
-              Acesso Blue™
-              <ExternalLink className="ml-2 h-4 w-4" />
+              Acessar Humanoid
             </a>
+          </Button>
+
+          {/* Criar Conta */}
+          <Button 
+            className="bg-legal-green text-black hover:bg-legal-green/90"
+            asChild
+          >
+            <Link to="/contato">Criar Conta</Link>
           </Button>
         </div>
 
@@ -304,21 +297,38 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Contato */}
-          <Link to="/contato" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
-            Contato
+          {/* Preços */}
+          <Link to="/precos" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+            Preços
           </Link>
 
-          {/* Acesso Blue */}
-          <a 
-            href="https://blue.operadora.legal" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="px-4 py-3 mt-2 text-sm font-medium bg-legal text-white rounded-md flex items-center justify-center"
-          >
-            Acesso Blue™
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
+          {/* CTA Buttons */}
+          <div className="space-y-2 mt-4">
+            <Button 
+              variant="ghost" 
+              className="w-full text-legal hover:text-legal-purple"
+              asChild
+            >
+              <Link to="/contato" onClick={() => setIsMenuOpen(false)}>Ver Demo</Link>
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              className="w-full border-legal text-legal hover:bg-legal hover:text-white"
+              asChild
+            >
+              <a href="https://blue.operadora.legal" target="_blank" rel="noopener noreferrer">
+                Acessar Humanoid
+              </a>
+            </Button>
+
+            <Button 
+              className="w-full bg-legal-green text-black hover:bg-legal-green/90"
+              asChild
+            >
+              <Link to="/contato" onClick={() => setIsMenuOpen(false)}>Criar Conta</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
