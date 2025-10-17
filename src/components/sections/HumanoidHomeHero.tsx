@@ -31,8 +31,7 @@ const HumanoidHomeHero = () => {
           <p style={{
           animationDelay: "0.2s"
         }} className="text-lg sm:text-xl max-w-3xl mx-auto animate-fade-up text-slate-50 md:text-3xl text-center font-extrabold">
-            Empresas não quebram por falta de talento. Quebram por falta de consciência, gestão, planejamento e
-            autoconhecimento organizacional.
+            Porque o novo poder competitivo não é contratar mais gente, é conectar cérebros, dados e decisões em um sistema que pensa e executa com você.
           </p>
 
           {/* CTAs */}
