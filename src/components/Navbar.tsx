@@ -52,10 +52,10 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center flex-grow">
           <NavigationMenu>
             <NavigationMenuList className="gap-0">
-              {/* HUMANOID */}
+              {/* Humanoid */}
               <NavigationMenuItem>
                 <Link to="/produtos/humanoid" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-purple px-2")}>
-                  HUMANOID™
+                  Humanoid™
                 </Link>
               </NavigationMenuItem>
 
@@ -240,9 +240,9 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-2 max-h-[80vh] overflow-y-auto">
-          {/* HUMANOID */}
+          {/* Humanoid */}
           <Link to="/produtos/humanoid" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
-            HUMANOID™
+            Humanoid™
           </Link>
 
           {/* SmartEvents */}

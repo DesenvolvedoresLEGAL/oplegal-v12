@@ -14,14 +14,14 @@ const HumanoidSolutionSection = () => {
             </div>
             
             <h2 className="font-haas text-4xl md:text-6xl font-black leading-tight">
-              <span className="text-white">HUMANOID™</span>
+              <span className="text-white">Humanoid™</span>
             </h2>
           </div>
 
           {/* Main Content */}
           <div className="text-center space-y-8 animate-fade-up">
             <p className="text-2xl md:text-3xl font-bold leading-relaxed">
-              O HUMANOID é o <span className="text-white">cérebro digital</span> da sua empresa.
+              O Humanoid é o <span className="text-white">cérebro digital</span> da sua empresa.
             </p>
             
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-4xl mx-auto">

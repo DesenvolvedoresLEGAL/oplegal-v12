@@ -64,7 +64,7 @@ const HumanoidResultsSection = () => {
           {/* Footer Message */}
           <div className="text-center space-y-6 pt-8 animate-fade-up" style={{ animationDelay: '500ms' }}>
             <p className="text-2xl md:text-3xl font-bold">
-              O HUMANOID <span className="text-legal-cyan">mede o impacto real</span> de cada ação.
+              O Humanoid <span className="text-legal-cyan">mede o impacto real</span> de cada ação.
             </p>
             <p className="text-xl text-white/80">
               Sem achismo. Com <span className="font-bold text-white">números</span>.

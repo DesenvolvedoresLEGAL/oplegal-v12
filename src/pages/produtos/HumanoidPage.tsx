@@ -28,16 +28,16 @@ import ArticleSchema from '@/components/seo/ArticleSchema';
 const HumanoidPage = () => {
   const breadcrumbItems = [
     { label: 'Produtos', path: '/produtos' },
-    { label: 'HUMANOID™', path: '/produtos/humanoid' }
+    { label: 'Humanoid™', path: '/produtos/humanoid' }
   ];
 
   return (
     <>
       <Helmet>
-        <title>HUMANOID™ - Sua empresa acaba de ganhar um cérebro | LEGAL</title>
-        <meta name="description" content="O HUMANOID é o 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente. Conecta dados, processos e agentes produtivos com governança e segurança." />
-        <meta name="keywords" content="HUMANOID, sistema operacional IA, workspace IA, gestão inteligente, IA empresarial, automação inteligente, LEGAL" />
-        <meta property="og:title" content="HUMANOID™ - Sua empresa acaba de ganhar um cérebro" />
+        <title>Humanoid™ - Sua empresa acaba de ganhar um cérebro | LEGAL</title>
+        <meta name="description" content="O Humanoid é o 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente. Conecta dados, processos e agentes produtivos com governança e segurança." />
+        <meta name="keywords" content="Humanoid, sistema operacional IA, workspace IA, gestão inteligente, IA empresarial, automação inteligente, LEGAL" />
+        <meta property="og:title" content="Humanoid™ - Sua empresa acaba de ganhar um cérebro" />
         <meta property="og:description" content="Workspace de IA que conecta dados, processos e agentes produtivos para empresas inteligentes." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://operadora.legal/produtos/humanoid" />
@@ -45,7 +45,7 @@ const HumanoidPage = () => {
 
       {/* Structured Data for SEO */}
       <SoftwareApplicationSchema
-        name="HUMANOID™"
+        name="Humanoid™"
         description="Sistema Nervoso Central de IA para empresas que integra dados, processos e agentes produtivos"
         url="https://operadora.legal/produtos/humanoid"
         operatingSystem="Web, iOS, Android"
@@ -58,22 +58,22 @@ const HumanoidPage = () => {
       />
 
       <WebPageSchema
-        name="HUMANOID™ - Sua empresa acaba de ganhar um cérebro"
+        name="Humanoid™ - Sua empresa acaba de ganhar um cérebro"
         description="O 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente"
         url="https://operadora.legal/produtos/humanoid"
         breadcrumb={[
           { name: "Home", url: "https://operadora.legal" },
           { name: "Produtos", url: "https://operadora.legal/produtos" },
-          { name: "HUMANOID™", url: "https://operadora.legal/produtos/humanoid" }
+          { name: "Humanoid™", url: "https://operadora.legal/produtos/humanoid" }
         ]}
       />
 
       <ArticleSchema
-        headline="HUMANOID™: Sua empresa acaba de ganhar um cérebro"
+        headline="Humanoid™: Sua empresa acaba de ganhar um cérebro"
         description="O 1º Sistema Operacional de IA que transforma empresas brasileiras em máquinas de execução inteligente"
         url="https://operadora.legal/produtos/humanoid"
         datePublished="2025-01-15"
-        keywords={["HUMANOID", "IA empresarial", "gestão inteligente", "workspace", "automação"]}
+        keywords={["Humanoid", "IA empresarial", "gestão inteligente", "workspace", "automação"]}
       />
 
       <main>
@@ -81,7 +81,7 @@ const HumanoidPage = () => {
 
         <HumanoidProductHero
           headline="Sua empresa acaba de ganhar um cérebro."
-          subheadline="O HUMANOID é o 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente."
+          subheadline="O Humanoid é o 1º Sistema Operacional de IA criado para transformar empresas brasileiras em máquinas de execução inteligente."
         />
 
         <HumanoidProblemSection />
@@ -96,7 +96,7 @@ const HumanoidPage = () => {
         
         <HumanoidCTA
           headline="Crie sua conta gratuita agora"
-          subheadline="Conecte seus sistemas, ative seus primeiros agentes e veja o HUMANOID agir. Transforme sua empresa em um organismo inteligente."
+          subheadline="Conecte seus sistemas, ative seus primeiros agentes e veja o Humanoid agir. Transforme sua empresa em um organismo inteligente."
           primaryCTA={{ label: "Ativar workspace gratuito", link: "/contato?produto=humanoid" }}
           secondaryCTA={{ label: "", link: "" }}
         />
@@ -107,15 +107,15 @@ const HumanoidPage = () => {
       <HumanoidChatbot />
 
       <ProductFAQSchema
-        productName="HUMANOID™"
+        productName="Humanoid™"
         faqs={[
           {
-            question: "O que é o HUMANOID?",
-            answer: "O HUMANOID é um workspace de IA que conecta dados, processos e agentes produtivos para empresas."
+            question: "O que é o Humanoid?",
+            answer: "O Humanoid é um workspace de IA que conecta dados, processos e agentes produtivos para empresas."
           },
           {
             question: "Como funciona o sistema de créditos?",
-            answer: "O HUMANOID opera por créditos chamados VOLTS, consumidos por ações, inferências, voz e automações."
+            answer: "O Humanoid opera por créditos chamados VOLTS, consumidos por ações, inferências, voz e automações."
           }
         ]}
       />
@@ -132,7 +132,7 @@ const HumanoidPage = () => {
 
       <CaseStudyStructuredData
         caseStudies={[]}
-        productName="HUMANOID™"
+        productName="Humanoid™"
         companyName="LEGAL TechCo"
       />
     </>

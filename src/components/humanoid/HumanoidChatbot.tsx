@@ -60,7 +60,7 @@ const HumanoidChatbot = () => {
 
   const handleWhatsApp = () => {
     const phoneNumber = '5511999999999'; // Substitua pelo número real
-    const message = encodeURIComponent('Olá! Gostaria de conhecer mais sobre o HUMANOID™ e como pode transformar meu negócio.');
+    const message = encodeURIComponent('Olá! Gostaria de conhecer mais sobre o Humanoid™ e como pode transformar meu negócio.');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -87,7 +87,7 @@ const HumanoidChatbot = () => {
                 <Bot className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-lg">HUMANOID™</h3>
+                <h3 className="font-bold text-lg">Humanoid™</h3>
                 <p className="text-xs text-white/80">Geralmente responde em segundos</p>
               </div>
             </div>

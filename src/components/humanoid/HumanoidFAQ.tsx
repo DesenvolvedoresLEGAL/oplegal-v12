@@ -7,36 +7,36 @@ import { Button } from '@/components/ui/button';
 const HumanoidFAQ = () => {
   const faqs = [
     {
-      question: "O que é o HUMANOID™?",
-      answer: "O HUMANOID é um workspace de Inteligência Artificial que conecta dados, processos e agentes produtivos para que sua empresa entenda, decida e aja automaticamente — com governança, segurança e ROI mensurável."
+      question: "O que é o Humanoid™?",
+      answer: "O Humanoid é um workspace de Inteligência Artificial que conecta dados, processos e agentes produtivos para que sua empresa entenda, decida e aja automaticamente — com governança, segurança e ROI mensurável."
     },
     {
       question: "Como funciona o sistema de créditos (VOLTS™)?",
-      answer: "O HUMANOID opera por créditos de execução chamados VOLTS. Cada VOLT representa uma operação inteligente realizada por seus agentes. Os créditos são consumidos por ações, inferências de IA, voz e automações."
+      answer: "O Humanoid opera por créditos de execução chamados VOLTS. Cada VOLT representa uma operação inteligente realizada por seus agentes. Os créditos são consumidos por ações, inferências de IA, voz e automações."
     },
     {
-      question: "Quais sistemas o HUMANOID integra?",
-      answer: "O HUMANOID se conecta com CRM, ERP, planilhas, WhatsApp, e-mails, Google, Microsoft, Slack e dezenas de outras ferramentas via API. Ele se torna o painel unificado de comando da sua empresa."
+      question: "Quais sistemas o Humanoid integra?",
+      answer: "O Humanoid se conecta com CRM, ERP, planilhas, WhatsApp, e-mails, Google, Microsoft, Slack e dezenas de outras ferramentas via API. Ele se torna o painel unificado de comando da sua empresa."
     },
     {
       question: "Quanto tempo leva a implantação?",
-      answer: "A implantação do HUMANOID acontece em dias, não em meses. Você conecta seus sistemas, ativa seus agentes e vê resultados na primeira semana de uso."
+      answer: "A implantação do Humanoid acontece em dias, não em meses. Você conecta seus sistemas, ativa seus agentes e vê resultados na primeira semana de uso."
     },
     {
-      question: "O HUMANOID é seguro e está em conformidade com a LGPD?",
-      answer: "Sim. O HUMANOID possui LGPD by design, controle de acesso RBAC, auditoria total de todas as operações e transparência completa nos custos em tempo real. Sua inteligência é sua, segura e isolada."
+      question: "O Humanoid é seguro e está em conformidade com a LGPD?",
+      answer: "Sim. O Humanoid possui LGPD by design, controle de acesso RBAC, auditoria total de todas as operações e transparência completa nos custos em tempo real. Sua inteligência é sua, segura e isolada."
     },
     {
       question: "Posso começar gratuitamente?",
       answer: "Sim! O plano Auto oferece 100 créditos diários inclusos para você testar seus primeiros agentes — sem cartão de crédito."
     },
     {
-      question: "Quais são os casos de uso do HUMANOID?",
-      answer: "O HUMANOID atende diversos casos de uso: eventos (Smart Events com reconhecimento facial), jurídico (geração de petições e cobranças), comercial B2B (SDRs de IA), e muitos outros segmentos que precisam de automação inteligente."
+      question: "Quais são os casos de uso do Humanoid?",
+      answer: "O Humanoid atende diversos casos de uso: eventos (Smart Events com reconhecimento facial), jurídico (geração de petições e cobranças), comercial B2B (SDRs de IA), e muitos outros segmentos que precisam de automação inteligente."
     },
     {
-      question: "Como o HUMANOID mede ROI?",
-      answer: "Cada ação do HUMANOID é auditada, medida e registrada. Você sabe exatamente quanto tempo economizou, quanto custou cada operação e quanto retornou em receita gerada ou perdas evitadas. IA com responsabilidade financeira."
+      question: "Como o Humanoid mede ROI?",
+      answer: "Cada ação do Humanoid é auditada, medida e registrada. Você sabe exatamente quanto tempo economizou, quanto custou cada operação e quanto retornou em receita gerada ou perdas evitadas. IA com responsabilidade financeira."
     }
   ];
 
@@ -48,7 +48,7 @@ const HumanoidFAQ = () => {
             Perguntas <span className="text-legal-cyan">Frequentes</span>
           </h2>
           <p className="text-xl text-gray-700">
-            Esclareça suas dúvidas sobre o HUMANOID™
+            Esclareça suas dúvidas sobre o Humanoid™
           </p>
         </div>
         
@@ -71,7 +71,7 @@ const HumanoidFAQ = () => {
           </Accordion>
           
           <div className="text-center mt-16">
-            <p className="text-gray-700 mb-6 text-lg">Ainda tem dúvidas sobre o HUMANOID?</p>
+            <p className="text-gray-700 mb-6 text-lg">Ainda tem dúvidas sobre o Humanoid?</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg" 

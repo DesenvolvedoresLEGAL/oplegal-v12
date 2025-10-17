@@ -23,7 +23,7 @@ const HumanoidProductHero: React.FC<HumanoidProductHeroProps> = ({
         <div className="max-w-5xl mx-auto text-center space-y-10 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-legal-cyan/20 backdrop-blur-sm rounded-full border border-legal-cyan/30">
             <Brain className="w-6 h-6 text-legal-cyan" />
-            <span className="text-sm font-bold tracking-wider text-legal-cyan">HUMANOID™</span>
+            <span className="text-sm font-bold tracking-wider text-legal-cyan">Humanoid™</span>
           </div>
           
           <h1 className="font-haas text-4xl md:text-6xl lg:text-7xl font-black leading-tight">

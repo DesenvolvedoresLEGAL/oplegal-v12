@@ -35,7 +35,7 @@ const HumanoidCTA: React.FC<HumanoidCTAProps> = ({
               "Toda empresa tem um coração.<br />
               Mas só as mais inteligentes têm um sistema nervoso central."
             </blockquote>
-            <p className="text-legal-cyan font-bold mt-4 text-xl">— HUMANOID™</p>
+            <p className="text-legal-cyan font-bold mt-4 text-xl">— Humanoid™</p>
           </div>
 
           {/* Divider with icon */}

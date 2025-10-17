@@ -21,7 +21,7 @@ const HumanoidModules: React.FC<HumanoidModulesProps> = ({
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Blue™ — Inteligência Analítica",
-      body: "BI vivo com dashboards preditivos e automações que transformam dados em decisões. O cérebro analítico do HUMANOID."
+      body: "BI vivo com dashboards preditivos e automações que transformam dados em decisões. O cérebro analítico do Humanoid."
     },
     {
       icon: <Bot className="w-8 h-8" />,

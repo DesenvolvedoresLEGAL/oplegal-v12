@@ -24,7 +24,7 @@ const HumanoidHomeHero = () => {
             O futuro das empresas não será <span className="text-legal-green">humano</span> ou{" "}
             <span className="text-white">artificial</span>.
             <br />
-            Será <span className="text-legal-cyan">HUMANOID</span>.
+            Será <span className="text-legal-cyan">Humanoid</span>.
           </h1>
 
           {/* Subheadline */}
@@ -39,7 +39,7 @@ const HumanoidHomeHero = () => {
           animationDelay: "0.4s"
         }}>
             <Button asChild size="lg" className="btn-primary bg-legal-green hover:bg-legal-green/90 text-legal-black font-semibold px-8 py-6 text-lg">
-              <Link to="/produtos/humanoid">Conhecer HUMANOID</Link>
+              <Link to="/produtos/humanoid">Conhecer Humanoid</Link>
             </Button>
 
             <Button size="lg" className="bg-white text-legal hover:bg-white/90 font-semibold px-8 py-6 text-lg" onClick={e => e.preventDefault()}>Criar conta grátis</Button>

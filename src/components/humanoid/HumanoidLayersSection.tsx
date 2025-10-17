@@ -10,7 +10,7 @@ const HumanoidLayersSection = () => {
       icon: Database,
       title: 'ENTENDE',
       subtitle: 'Estruturador de Dados Inteligente',
-      description: 'O HUMANOID coleta, organiza e entende todas as informações da sua empresa. Ele conecta CRM, ERP, planilhas, WhatsApp, e-mails e APIs — limpando o caos e transformando tudo em dados com sentido e contexto.',
+      description: 'O Humanoid coleta, organiza e entende todas as informações da sua empresa. Ele conecta CRM, ERP, planilhas, WhatsApp, e-mails e APIs — limpando o caos e transformando tudo em dados com sentido e contexto.',
       highlight: 'É como dar consciência aos seus sistemas.'
     },
     {
@@ -19,7 +19,7 @@ const HumanoidLayersSection = () => {
       icon: Brain,
       title: 'DECIDE',
       subtitle: 'Camada de Inteligência e Correlação',
-      description: 'Com os dados estruturados, o HUMANOID aprende padrões e entende relações. Ele identifica gargalos, detecta oportunidades e recomenda ações.',
+      description: 'Com os dados estruturados, o Humanoid aprende padrões e entende relações. Ele identifica gargalos, detecta oportunidades e recomenda ações.',
       highlight: 'Ele não apenas organiza informações. Ele entende o que elas significam.'
     },
     {
@@ -28,7 +28,7 @@ const HumanoidLayersSection = () => {
       icon: Bot,
       title: 'AGE',
       subtitle: 'Orquestração de Agentes Produtivos',
-      description: 'O HUMANOID orquestra agentes inteligentes que executam tarefas automaticamente:',
+      description: 'O Humanoid orquestra agentes inteligentes que executam tarefas automaticamente:',
       bullets: [
         'Ligam para leads e agendam reuniões',
         'Credenciam pessoas em eventos',
@@ -36,7 +36,7 @@ const HumanoidLayersSection = () => {
         'Atualizam sistemas e planilhas',
         'Geram relatórios e cobranças'
       ],
-      highlight: 'Enquanto seu time pensa, o HUMANOID executa.'
+      highlight: 'Enquanto seu time pensa, o Humanoid executa.'
     },
     {
       number: '4',
@@ -59,7 +59,7 @@ const HumanoidLayersSection = () => {
               AS 4 CAMADAS
             </Badge>
             <h2 className="font-haas text-3xl md:text-5xl font-black leading-tight text-legal">
-              Como Funciona o HUMANOID™
+              Como Funciona o Humanoid™
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Quatro camadas interconectadas que transformam sua empresa em um organismo inteligente

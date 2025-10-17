@@ -24,7 +24,7 @@ const HumanoidManifestoHero = () => {
           </h1>
           
           <p className="text-3xl md:text-5xl font-bold text-humanoid-highlight animate-reveal">
-            Será HUMANOID.
+            Será Humanoid.
           </p>
           
           <div className="pt-8 animate-fade-up">
