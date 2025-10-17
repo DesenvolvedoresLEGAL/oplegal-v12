@@ -95,7 +95,7 @@ const HumanoidPage = () => {
         <HumanoidCTA
           headline="Crie sua conta gratuita agora"
           subheadline="Conecte seus sistemas, ative seus primeiros agentes e veja o Humanoid agir. Transforme sua empresa em um organismo inteligente."
-          primaryCTA={{ label: "Ativar workspace gratuito", link: "/contato?produto=humanoid" }}
+          primaryCTA={{ label: "Ativar workspace gratuito", link: "/signup" }}
           secondaryCTA={{ label: "", link: "" }}
         />
 

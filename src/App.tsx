@@ -71,6 +71,7 @@ const UserBehaviorAnalysis = lazy(() => import("./components/analytics/UserBehav
 const PerformanceInsights = lazy(() => import("./components/analytics/PerformanceInsights"));
 const ConversionFunnelAI = lazy(() => import("./components/analytics/ConversionFunnelAI"));
 const DemoPage = lazy(() => import("./pages/DemoPage"));
+const SignUpPage = lazy(() => import("./pages/SignUpPage"));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -165,6 +166,9 @@ const App = () => {
                 
                 {/* Demo */}
                 <Route path="/demo" element={<DemoPage />} />
+                
+                {/* Sign Up */}
+                <Route path="/signup" element={<SignUpPage />} />
                 
                 {/* Contact */}
                 <Route path="/contato" element={<ContatoPage />} />

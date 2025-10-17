@@ -218,7 +218,7 @@ const Navbar = () => {
             className="bg-legal-green text-black hover:bg-legal-green/90"
             asChild
           >
-            <Link to="/contato">Criar Conta</Link>
+            <Link to="/signup">Criar Conta</Link>
           </Button>
         </div>
 
@@ -326,7 +326,7 @@ const Navbar = () => {
               className="w-full bg-legal-green text-black hover:bg-legal-green/90"
               asChild
             >
-              <Link to="/contato" onClick={() => setIsMenuOpen(false)}>Criar Conta</Link>
+              <Link to="/signup" onClick={() => setIsMenuOpen(false)}>Criar Conta</Link>
             </Button>
           </div>
         </div>

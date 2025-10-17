@@ -40,7 +40,7 @@ const HumanoidProductHero: React.FC<HumanoidProductHeroProps> = ({
               size="lg"
               className="bg-gradient-to-r from-legal to-legal-purple hover:from-legal-purple hover:to-legal text-white text-lg px-12 py-6 h-auto rounded-full font-bold shadow-2xl border-2 border-legal-cyan/50"
             >
-              <Link to="/contato?produto=humanoid">Ativar minha conta grátis</Link>
+              <Link to="/signup">Ativar minha conta grátis</Link>
             </Button>
           </div>
         </div>
