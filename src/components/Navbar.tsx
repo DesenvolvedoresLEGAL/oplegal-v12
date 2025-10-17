@@ -49,7 +49,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation - Left Aligned */}
-        <div className="hidden lg:flex items-center gap-8 flex-grow">
+        <div className="hidden lg:flex items-center gap-12 flex-grow">
           <NavigationMenu>
             <NavigationMenuList className="gap-0">
               {/* HUMANOID */}
