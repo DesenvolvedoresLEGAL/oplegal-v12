@@ -17,6 +17,7 @@ import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
 import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
 import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
 import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
+import HumanoidPricingSection from '@/components/humanoid/HumanoidPricingSection';
 const PrecosPage = () => {
   const [selectedDays, setSelectedDays] = useState(15);
   const [selectedDemand, setSelectedDemand] = useState(60);
@@ -581,6 +582,9 @@ const PrecosPage = () => {
               </div>
             </div>
           </Card>
+
+          {/* Planos Humanoid */}
+          <HumanoidPricingSection />
 
         </div>
       </div>

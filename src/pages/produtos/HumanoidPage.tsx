@@ -10,7 +10,6 @@ import HumanoidLayersSection from '@/components/humanoid/HumanoidLayersSection';
 import HumanoidUseCases from '@/components/humanoid/HumanoidUseCases';
 import HumanoidSecurityFeatures from '@/components/humanoid/HumanoidSecurityFeatures';
 import HumanoidResultsSection from '@/components/humanoid/HumanoidResultsSection';
-import HumanoidPricingSection from '@/components/humanoid/HumanoidPricingSection';
 import HumanoidTimeToValueSection from '@/components/humanoid/HumanoidTimeToValueSection';
 import HumanoidVisionSection from '@/components/humanoid/HumanoidVisionSection';
 import HumanoidCTA from '@/components/humanoid/HumanoidCTA';
@@ -90,7 +89,6 @@ const HumanoidPage = () => {
         <HumanoidUseCases />
         <HumanoidSecurityFeatures />
         <HumanoidResultsSection />
-        <HumanoidPricingSection />
         <HumanoidTimeToValueSection />
         <HumanoidVisionSection />
         
