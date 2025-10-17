@@ -1,9 +1,7 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
-
 const HumanoidVisionSection = () => {
-  return (
-    <section className="py-32 bg-legal text-white relative overflow-hidden">
+  return <section className="py-32 bg-legal text-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center space-y-12 animate-fade-in">
           {/* Icon Header */}
@@ -32,9 +30,7 @@ const HumanoidVisionSection = () => {
 
           {/* Vision Statement */}
           <div className="space-y-6 max-w-4xl mx-auto">
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              O HUMANOID é o primeiro passo para essa nova geração:
-            </p>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">O Humanoid é o primeiro passo para essa nova geração:</p>
             
             <p className="text-2xl md:text-3xl font-bold leading-relaxed">
               empresas que <span className="text-legal-cyan">aprendem</span>, <span className="text-legal-cyan">decidem</span> e <span className="text-legal-cyan">agem</span>
@@ -52,8 +48,6 @@ const HumanoidVisionSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HumanoidVisionSection;
