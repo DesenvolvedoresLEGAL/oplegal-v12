@@ -44,15 +44,14 @@ const SignUpPage = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-5xl mx-auto text-center space-y-16 animate-fade-in">
               {/* Headline */}
-              <div className="space-y-8">
-                <h1 className="font-haas text-5xl md:text-6xl lg:text-8xl font-black leading-[1.1] text-white drop-shadow-2xl">
-                  <span className="text-legal-cyan">🧠</span> Sua empresa acaba<br />de ganhar um cérebro
+              <div className="space-y-6">
+                <h1 className="font-haas text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white drop-shadow-2xl">
+                  <span className="text-legal-cyan">🧠</span> Sua empresa acaba de ganhar um cérebro
                 </h1>
                 
                 {/* Subheadline */}
-                <p className="text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed max-w-4xl mx-auto font-light">
-                  Estamos terminando de construir o sistema nervoso central do Humanoid.<br />
-                  Se quiser ser um dos primeiros, entre em contato:
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  Estamos terminando de construir o sistema nervoso central do Humanoid. Se quiser ser um dos primeiros, entre em contato:
                 </p>
               </div>
               
@@ -70,10 +69,10 @@ const SignUpPage = () => {
                     
                     {/* Texto */}
                     <div className="space-y-3">
-                      <h3 className="text-3xl md:text-4xl font-black text-legal font-haas">
+                      <h3 className="text-2xl md:text-3xl font-black text-legal font-haas">
                         Fale com nossa equipe
                       </h3>
-                      <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                      <p className="text-base text-gray-600 leading-relaxed max-w-lg">
                         Entre em contato via WhatsApp e garanta seu acesso prioritário ao Humanoid™
                       </p>
                     </div>
@@ -82,7 +81,7 @@ const SignUpPage = () => {
                     <Button
                       asChild
                       size="lg"
-                      className="bg-legal-purple hover:bg-legal-purple/90 text-white font-bold px-12 py-7 text-xl rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+                      className="bg-legal-purple hover:bg-legal-purple/90 text-white font-bold px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                     >
                       <a 
                         href="https://wa.me/5511999572394?text=Quero%20ser%20um%20dos%20primeiros%20a%20usar%20o%20Humanoid"
