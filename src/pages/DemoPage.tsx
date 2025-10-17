@@ -154,19 +154,6 @@ const DemoPage = () => {
                   </button>
                 </form>
               </Card>
-
-              {/* Client Logos */}
-              <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                <p className="text-sm text-gray-300 mb-6">
-                  Empresas que confiam na LEGAL
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-90">
-                  <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-nestle.png" alt="Nestlé" className="w-full h-full object-contain" /></div>
-                  <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-itau.png" alt="Itaú" className="w-full h-full object-contain" /></div>
-                  <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-sharkpro.png" alt="SharkPro" className="w-full h-full object-contain" /></div>
-                  <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-picpay.png" alt="PicPay" className="w-full h-full object-contain" /></div>
-                </div>
-              </div>
             </div>
           ) : (
             <div className="max-w-2xl mx-auto text-center animate-fade-in">
@@ -189,6 +176,45 @@ const DemoPage = () => {
           )}
         </div>
 
+      </section>
+
+      {/* Empresas que confiam na LEGAL */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-black text-center text-legal mb-12 font-haas">
+            Empresas que confiam na LEGAL
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+            <div className="w-32 h-24 flex items-center justify-center grayscale">
+              <OptimizedImage 
+                src="/lovable-uploads/logo-nestle.png"
+                alt="Nestlé"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="w-32 h-24 flex items-center justify-center grayscale">
+              <OptimizedImage 
+                src="/lovable-uploads/logo-itau.png"
+                alt="Itaú"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="w-32 h-24 flex items-center justify-center grayscale">
+              <OptimizedImage 
+                src="/lovable-uploads/logo-sharkpro.png"
+                alt="SharkPro"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="w-32 h-24 flex items-center justify-center grayscale">
+              <OptimizedImage 
+                src="/lovable-uploads/logo-picpay.png"
+                alt="PicPay"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
