@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { MessageCircle, Brain, Sparkles } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebPageSchema from '@/components/seo/WebPageSchema';
+import OptimizedImage from '@/components/OptimizedImage';
 
 const SignUpPage = () => {
   const breadcrumbItems = [
@@ -95,6 +96,59 @@ const SignUpPage = () => {
                     </Button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Empresas que confiam na LEGAL */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-black text-center text-legal mb-12 font-haas">
+              Empresas que confiam na LEGAL
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center max-w-6xl mx-auto">
+              <div className="w-32 h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+                <OptimizedImage 
+                  src="/lovable-uploads/logo-nestle.png"
+                  alt="Nestlé"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="w-32 h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+                <OptimizedImage 
+                  src="/lovable-uploads/logo-itau.png"
+                  alt="Itaú"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="w-32 h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+                <OptimizedImage 
+                  src="/lovable-uploads/logo-sharkpro.png"
+                  alt="SharkPro"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="w-32 h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+                <OptimizedImage 
+                  src="/lovable-uploads/logo-ambev.png"
+                  alt="Ambev"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="w-32 h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+                <OptimizedImage 
+                  src="/lovable-uploads/logo-chinalink.png"
+                  alt="China Link"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="w-32 h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+                <OptimizedImage 
+                  src="/lovable-uploads/logo-picpay.png"
+                  alt="PicPay"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>
