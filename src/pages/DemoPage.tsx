@@ -82,11 +82,6 @@ const DemoPage = () => {
             <div className="max-w-2xl mx-auto">
               {/* Hero Section */}
               <div className="text-center mb-12 animate-fade-in">
-                <div className="inline-block bg-legal-purple bg-opacity-20 text-legal-purple px-4 py-2 rounded-full text-sm font-medium mb-6">
-                  <Sparkles className="w-4 h-4 inline mr-2" />
-                  Veja o Humanoid em ação
-                </div>
-                
                 <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
                   Veja o Humanoid em ação
                 </h1>
