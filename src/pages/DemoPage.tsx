@@ -160,12 +160,10 @@ const DemoPage = () => {
                 <p className="text-sm text-gray-300 mb-6">
                   Empresas que confiam na LEGAL
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-90">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-90">
                   <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-nestle.png" alt="Nestlé" className="w-full h-full object-contain" /></div>
                   <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-itau.png" alt="Itaú" className="w-full h-full object-contain" /></div>
                   <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-sharkpro.png" alt="SharkPro" className="w-full h-full object-contain" /></div>
-                  <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-ambev.png" alt="Ambev" className="w-full h-full object-contain" /></div>
-                  <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-chinalink.png" alt="China Link" className="w-full h-full object-contain" /></div>
                   <div className="w-28 h-16 md:w-32 md:h-20 grayscale"><OptimizedImage src="/lovable-uploads/logo-picpay.png" alt="PicPay" className="w-full h-full object-contain" /></div>
                 </div>
               </div>

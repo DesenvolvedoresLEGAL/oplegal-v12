@@ -107,7 +107,7 @@ const SignUpPage = () => {
             <h2 className="text-2xl md:text-3xl font-black text-center text-legal mb-12 font-haas">
               Empresas que confiam na LEGAL
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
               <div className="w-32 h-24 flex items-center justify-center grayscale">
                 <OptimizedImage 
                   src="/lovable-uploads/logo-nestle.png"
@@ -126,20 +126,6 @@ const SignUpPage = () => {
                 <OptimizedImage 
                   src="/lovable-uploads/logo-sharkpro.png"
                   alt="SharkPro"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="w-32 h-24 flex items-center justify-center grayscale">
-                <OptimizedImage 
-                  src="/lovable-uploads/logo-ambev.png"
-                  alt="Ambev"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="w-32 h-24 flex items-center justify-center grayscale">
-                <OptimizedImage 
-                  src="/lovable-uploads/logo-chinalink.png"
-                  alt="China Link"
                   className="w-full h-full object-contain"
                 />
               </div>
