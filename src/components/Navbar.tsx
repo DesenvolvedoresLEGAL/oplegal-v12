@@ -208,9 +208,7 @@ const Navbar = () => {
             className="border-legal text-legal hover:bg-legal hover:text-white"
             asChild
           >
-            <a href="https://blue.operadora.legal" target="_blank" rel="noopener noreferrer">
-              Acessar Humanoid
-            </a>
+            <Link to="/signup">Acessar Humanoid</Link>
           </Button>
 
           {/* Criar Conta */}
@@ -317,9 +315,7 @@ const Navbar = () => {
               className="w-full border-legal text-legal hover:bg-legal hover:text-white"
               asChild
             >
-              <a href="https://blue.operadora.legal" target="_blank" rel="noopener noreferrer">
-                Acessar Humanoid
-              </a>
+              <Link to="/signup" onClick={() => setIsMenuOpen(false)}>Acessar Humanoid</Link>
             </Button>
 
             <Button 
