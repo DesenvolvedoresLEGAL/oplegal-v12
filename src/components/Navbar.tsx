@@ -215,7 +215,7 @@ const Navbar = () => {
 
           {/* Criar Conta */}
           <Button 
-            className="bg-legal-green text-black hover:bg-legal-green/90"
+            className="bg-legal text-white hover:bg-white hover:text-legal"
             asChild
           >
             <Link to="/signup">Criar Conta</Link>
@@ -323,7 +323,7 @@ const Navbar = () => {
             </Button>
 
             <Button 
-              className="w-full bg-legal-green text-black hover:bg-legal-green/90"
+              className="w-full bg-legal text-white hover:bg-white hover:text-legal"
               asChild
             >
               <Link to="/signup" onClick={() => setIsMenuOpen(false)}>Criar Conta</Link>
