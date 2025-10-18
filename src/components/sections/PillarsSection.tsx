@@ -6,6 +6,7 @@ import {
   Activity, 
   Layers, 
   BarChart3, 
+  Plane,
   ArrowRight 
 } from "lucide-react";
 import SectionTitle from "../SectionTitle";
@@ -44,6 +45,12 @@ const PillarsSection = () => {
       title: "Smart Insight",
       description: "ROI em tempo real com FitScore™ para métricas tangíveis e insights precisos.",
       features: ["Analytics em tempo real", "FitScore™", "Métricas de ROI", "Insights preditivos"]
+    },
+    {
+      icon: <Plane size={36} />,
+      title: "Smart Flight",
+      description: "Serviços aéreos autônomos com drones para filmagem, entregas, segurança e monitoramento.",
+      features: ["Foto/Filmagem 8K", "Delivery de precisão", "Segurança aérea", "Limpeza e manutenção"]
     },
   ];
 

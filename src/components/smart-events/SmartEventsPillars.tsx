@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Wifi, Radio, Activity, Layers, BarChart3 } from 'lucide-react';
+import { Wifi, Radio, Activity, Layers, BarChart3, Plane } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 
@@ -36,13 +36,19 @@ const SmartEventsPillars = () => {
       description: "ROI em tempo real com FitScore™ para métricas tangíveis e insights precisos.",
       features: ["Analytics em tempo real", "FitScore™", "Métricas de ROI", "Insights preditivos"]
     },
+    {
+      icon: <Plane size={36} />,
+      title: "Smart Flight",
+      description: "Serviços aéreos autônomos com drones para filmagem, entregas, segurança e monitoramento.",
+      features: ["Foto/Filmagem 8K", "Delivery de precisão", "Segurança aérea", "Limpeza e manutenção"]
+    },
   ];
 
   return (
     <section className="py-20 bg-white" id="pilares">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Os 5 Pilares Smart Events™"
+          title="Os 6 Pilares Smart Events™"
           subtitle="Uma abordagem revolucionária para eventos que integra tecnologias avançadas para criar experiências mais inteligentes, conectadas e lucrativas."
           center
         />
