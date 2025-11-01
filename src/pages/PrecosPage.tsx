@@ -108,18 +108,19 @@ const PrecosPage = () => {
       {/* SEÇÃO 1 - HERO */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-legal-primary via-legal-secondary to-legal-purple pt-24 pb-16">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6)' }}>
               Planos criados para o futuro dos negócios inteligentes
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white font-semibold max-w-2xl mx-auto" style={{ textShadow: '0 3px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)' }}>
               Escolha o plano ideal para sua empresa — de conectividade 5G até automações com Inteligência Artificial.
             </p>
             <Button
               onClick={scrollToPlans}
               size="lg"
-              className="bg-legal-cyan text-legal hover:bg-legal-cyan/90 font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105"
+              className="bg-legal-cyan text-legal hover:bg-legal-cyan/90 font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105 shadow-2xl"
             >
               Começar agora
               <ArrowDown className="ml-2 w-5 h-5 animate-bounce" />
