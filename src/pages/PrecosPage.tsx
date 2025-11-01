@@ -106,7 +106,7 @@ const PrecosPage = () => {
       </Helmet>
 
       {/* SEÇÃO 1 - HERO */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-legal-primary via-legal-secondary to-legal-purple pt-24 pb-16">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#020cbc] via-[#4d2bfb] to-[#020cbc] pt-24 pb-16">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
