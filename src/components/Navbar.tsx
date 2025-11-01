@@ -52,13 +52,6 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center flex-grow">
           <NavigationMenu>
             <NavigationMenuList className="gap-0">
-              {/* Humanoid */}
-              <NavigationMenuItem>
-                <Link to="/produtos/humanoid" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-purple px-2")}>
-                  Humanoid™
-                </Link>
-              </NavigationMenuItem>
-
               {/* SmartEvents */}
               <NavigationMenuItem>
                 <Link to="/smart-events" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-legal hover:text-legal-purple px-2")}>
@@ -201,15 +194,6 @@ const Navbar = () => {
           >
             <Link to="/demo">Ver Demo</Link>
           </Button>
-          
-          {/* Acessar Humanoid */}
-          <Button 
-            variant="outline" 
-            className="border-legal text-legal hover:bg-legal hover:text-white"
-            asChild
-          >
-            <Link to="/signup">Acessar Humanoid</Link>
-          </Button>
 
           {/* Criar Conta */}
           <Button 
@@ -238,11 +222,6 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-2 max-h-[80vh] overflow-y-auto">
-          {/* Humanoid */}
-          <Link to="/produtos/humanoid" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
-            Humanoid™
-          </Link>
-
           {/* SmartEvents */}
           <Link to="/smart-events" className="px-4 py-3 text-sm font-medium hover:bg-gray-100 rounded-md border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             SmartEvents™
@@ -309,16 +288,8 @@ const Navbar = () => {
             >
               <Link to="/demo" onClick={() => setIsMenuOpen(false)}>Ver Demo</Link>
             </Button>
-            
-            <Button 
-              variant="outline" 
-              className="w-full border-legal text-legal hover:bg-legal hover:text-white"
-              asChild
-            >
-              <Link to="/signup" onClick={() => setIsMenuOpen(false)}>Acessar Humanoid</Link>
-            </Button>
 
-            <Button 
+            <Button
               className="w-full bg-legal text-white hover:bg-white hover:text-legal"
               asChild
             >

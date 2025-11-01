@@ -50,7 +50,6 @@ const BrilixPage = lazy(() => import("./pages/produtos/BrilixPage"));
 const EventrixProdutoPage = lazy(() => import("./pages/produtos/EventrixPage"));
 const MagicPassProdutoPage = lazy(() => import("./pages/produtos/MagicPassPage"));
 const FitScoreProdutoPage = lazy(() => import("./pages/produtos/FitScorePage"));
-const HumanoidPage = lazy(() => import("./pages/produtos/HumanoidPage"));
 const LinkAIProdutoPage = lazy(() => import("./pages/produtos/LinkAIPage"));
 const NuvyoPage = lazy(() => import("./pages/produtos/NuvyoPage"));
 const PingPage = lazy(() => import("./pages/produtos/PingPage"));
@@ -113,8 +112,6 @@ const App = () => {
                 <Route path="/produtos/eventrix" element={<EventrixProdutoPage />} />
                 <Route path="/produtos/magicpass" element={<MagicPassProdutoPage />} />
                 <Route path="/produtos/fitscore" element={<FitScoreProdutoPage />} />
-                <Route path="/produtos/humanoid" element={<HumanoidPage />} />
-                <Route path="/humanoid" element={<Navigate to="/produtos/humanoid" replace />} />
                 <Route path="/produtos/linkai" element={<LinkAIProdutoPage />} />
                 <Route path="/produtos/neurafit" element={<NeuraFitPage />} />
                 <Route path="/produtos/nuvyo" element={<NuvyoPage />} />

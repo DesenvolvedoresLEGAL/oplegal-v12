@@ -21,7 +21,6 @@ import CoreWebVitalsMonitor from '@/components/seo/CoreWebVitalsMonitor';
 import AIFeedbackSystem from '@/components/optimization/AIFeedbackSystem';
 import AdvancedFeaturedSnippets from '@/components/seo/AdvancedFeaturedSnippets';
 import SEOCrawlerOptimization from '@/components/optimization/SEOCrawlerOptimization';
-import HumanoidPricingSection from '@/components/humanoid/HumanoidPricingSection';
 import { ArrowDown, Check, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -39,21 +38,21 @@ const PrecosPage = () => {
   return (
     <>
       <SEOHead
-        title="Planos LEGAL – Conectividade 5G e Inteligência Artificial para Empresas"
-        description="Conheça os planos da LEGAL – Internet 5G para eventos e HUMANOID™, o 1º Sistema Operacional de IA para empresas brasileiras. Compare planos e ative agora o seu workspace inteligente."
-        keywords="planos LEGAL, internet 5G, HUMANOID, IA para empresas, SPEEDY 5G, preços"
+        title="Planos LEGAL – Conectividade 5G para Eventos e Empresas"
+        description="Conheça os planos da LEGAL – Internet 5G ultra-rápida para eventos e negócios. Compare planos e ative agora sua conectividade."
+        keywords="planos LEGAL, internet 5G, SPEEDY 5G, preços, eventos, conectividade"
         canonical="https://operadora.legal/precos"
         image="https://operadora.legal/images/precos-legal-2024.jpg"
         type="website"
       />
       
       <OfferSchema 
-        name="Planos LEGAL - 5G e IA"
-        description="Internet 5G ultra-rápida e Sistema Operacional de IA para empresas"
+        name="Planos LEGAL - 5G"
+        description="Internet 5G ultra-rápida para eventos e negócios"
         itemOffered={{
           type: "Service",
-          name: "SPEEDY 5G e HUMANOID",
-          description: "Conectividade 5G e IA para eventos e negócios",
+          name: "SPEEDY 5G",
+          description: "Conectividade 5G para eventos e negócios",
           category: "Tecnologia Empresarial"
         }}
         seller={{
@@ -100,10 +99,10 @@ const PrecosPage = () => {
       <Breadcrumbs />
 
       <Helmet>
-        <title>Planos LEGAL – Conectividade 5G e Inteligência Artificial para Empresas</title>
-        <meta name="description" content="Conheça os planos da LEGAL – Internet 5G para eventos e HUMANOID™, o 1º Sistema Operacional de IA para empresas brasileiras. Compare planos e ative agora o seu workspace inteligente." />
-        <meta property="og:title" content="Planos LEGAL – 5G + IA para Empresas" />
-        <meta property="og:description" content="Internet 5G ultra-rápida e Sistema Operacional de IA. Planos a partir de R$ 150/dia." />
+        <title>Planos LEGAL – Conectividade 5G para Eventos e Empresas</title>
+        <meta name="description" content="Conheça os planos da LEGAL – Internet 5G ultra-rápida para eventos e negócios. Compare planos e ative agora sua conectividade." />
+        <meta property="og:title" content="Planos LEGAL – 5G para Empresas" />
+        <meta property="og:description" content="Internet 5G ultra-rápida para eventos. Planos a partir de R$ 150/dia." />
       </Helmet>
 
       {/* SEÇÃO 1 - HERO */}
@@ -305,89 +304,7 @@ const PrecosPage = () => {
         </div>
       </section>
 
-      {/* SEÇÃO 3 - HUMANOID™ */}
-      <HumanoidPricingSection />
-
-      {/* SEÇÃO 4 - COMPARATIVO RESUMIDO */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 space-y-4 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-legal">
-              Compare os planos HUMANOID™
-            </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Encontre o plano perfeito para o tamanho e necessidades da sua empresa.
-            </p>
-          </div>
-
-          <div className="max-w-6xl mx-auto overflow-x-auto">
-            <table className="w-full border-collapse animate-fade-up">
-              <thead>
-                <tr className="bg-legal-purple text-white">
-                  <th className="p-4 text-left font-black text-lg">Recurso</th>
-                  <th className="p-4 text-center font-black text-lg">Origin</th>
-                  <th className="p-4 text-center font-black text-lg">Fusion</th>
-                  <th className="p-4 text-center font-black text-lg bg-legal">Scale</th>
-                  <th className="p-4 text-center font-black text-lg">Matrix</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="p-4 font-medium text-gray-900">Energia (VOLTS/mês)</td>
-                  <td className="p-4 text-center text-gray-700">Base</td>
-                  <td className="p-4 text-center text-gray-700">Média</td>
-                  <td className="p-4 text-center text-legal font-bold">Alta</td>
-                  <td className="p-4 text-center text-gray-700">Custom</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 bg-gray-50">
-                  <td className="p-4 font-medium text-gray-900">Rollover</td>
-                  <td className="p-4 text-center text-gray-700">20%</td>
-                  <td className="p-4 text-center text-gray-700">20%</td>
-                  <td className="p-4 text-center text-legal font-bold">20%</td>
-                  <td className="p-4 text-center text-gray-700">Custom</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="p-4 font-medium text-gray-900">Nº de Sandboxes</td>
-                  <td className="p-4 text-center text-gray-700">3</td>
-                  <td className="p-4 text-center text-gray-700">6</td>
-                  <td className="p-4 text-center text-legal font-bold">10</td>
-                  <td className="p-4 text-center text-gray-700">Ilimitado</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 bg-gray-50">
-                  <td className="p-4 font-medium text-gray-900">Nível de Suporte</td>
-                  <td className="p-4 text-center text-gray-700">8×5</td>
-                  <td className="p-4 text-center text-gray-700">Prioridade 8×5</td>
-                  <td className="p-4 text-center text-legal font-bold">Prioridade 12×5</td>
-                  <td className="p-4 text-center text-gray-700">24×7 Dedicado</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="p-4 font-medium text-gray-900">APIs / Conectores</td>
-                  <td className="p-4 text-center text-gray-700">Webhooks básicos</td>
-                  <td className="p-4 text-center text-gray-700">API parcial</td>
-                  <td className="p-4 text-center text-legal font-bold">API completa</td>
-                  <td className="p-4 text-center text-gray-700">API + VPC privada</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 bg-gray-50">
-                  <td className="p-4 font-medium text-gray-900">SSO/SAML</td>
-                  <td className="p-4 text-center text-gray-400">—</td>
-                  <td className="p-4 text-center text-gray-400">—</td>
-                  <td className="p-4 text-center"><Check className="w-5 h-5 text-legal inline" /></td>
-                  <td className="p-4 text-center"><Check className="w-5 h-5 text-legal inline" /></td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="p-4 font-medium text-gray-900">White-label</td>
-                  <td className="p-4 text-center text-gray-400">—</td>
-                  <td className="p-4 text-center"><Check className="w-5 h-5 text-legal inline" /></td>
-                  <td className="p-4 text-center"><Check className="w-5 h-5 text-legal inline" /></td>
-                  <td className="p-4 text-center"><Check className="w-5 h-5 text-legal inline" /></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* SEÇÃO 5 - FAQ */}
+      {/* SEÇÃO 4 - FAQ */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">

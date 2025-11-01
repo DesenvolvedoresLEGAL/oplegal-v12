@@ -94,7 +94,7 @@ const PersonalizedResponseEngine: React.FC<PersonalizedResponseEngineProps> = ({
         technical: 'FitScore™ implementa algoritmos de natural language processing (NLP) e sentiment analysis para scoring de compatibilidade, com modelos ensemble que processam 500+ variáveis comportamentais e técnicas.'
       },
       confidence: 0.90,
-      products: ['FitScore', 'NeuraFit', 'Humanoid']
+      products: ['FitScore', 'NeuraFit']
     }
   ], []);
 

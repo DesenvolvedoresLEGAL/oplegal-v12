@@ -96,7 +96,7 @@ const NewsletterExitPopup = () => {
             />
           </div>
           <DialogTitle className="text-2xl font-bold" style={{ color: '#020cbc !important' }}>
-            Fala comigo humanoide,
+            Olá,
           </DialogTitle>
           <DialogDescription className="text-gray-600">
             Cadastre-se em nossa newsletter e fique conectado com os mais variados temas de tecnologia e inovação.

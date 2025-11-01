@@ -15,14 +15,14 @@ const SignUpPage = () => {
   return (
     <>
       <Helmet>
-        <title>Criar Conta Humanoid™ | LEGAL</title>
-        <meta name="description" content="Seja um dos primeiros a usar o Humanoid, o 1º Sistema Operacional de IA para empresas brasileiras." />
+        <title>Criar Conta | LEGAL</title>
+        <meta name="description" content="Crie sua conta LEGAL e tenha acesso às melhores soluções de tecnologia e IA para eventos e negócios." />
         <link rel="canonical" href="https://operadora.legal/signup" />
       </Helmet>
 
       <WebPageSchema
-        name="Criar Conta Humanoid™"
-        description="Seja um dos primeiros a usar o Humanoid, o 1º Sistema Operacional de IA para empresas brasileiras"
+        name="Criar Conta LEGAL"
+        description="Crie sua conta LEGAL e tenha acesso às melhores soluções de tecnologia e IA para eventos e negócios"
         url="https://operadora.legal/signup"
         breadcrumb={[
           { name: "Home", url: "https://operadora.legal" },
@@ -47,12 +47,12 @@ const SignUpPage = () => {
               {/* Headline */}
               <div className="space-y-6">
                 <h1 className="font-haas text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white drop-shadow-2xl">
-                  <span className="text-legal-cyan">🧠</span> Sua empresa acaba de ganhar um cérebro
+                  <span className="text-legal-cyan">🚀</span> Transforme seu negócio com tecnologia LEGAL
                 </h1>
                 
                 {/* Subheadline */}
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                  Estamos terminando de construir o sistema nervoso central do Humanoid. Se quiser ser um dos primeiros, entre em contato:
+                  Tenha acesso às melhores soluções de IA e tecnologia para eventos e negócios. Entre em contato com nossa equipe:
                 </p>
               </div>
               
@@ -74,7 +74,7 @@ const SignUpPage = () => {
                         Fale com nossa equipe
                       </h3>
                       <p className="text-base text-gray-600 leading-relaxed max-w-lg">
-                        Entre em contato via WhatsApp e garanta seu acesso prioritário ao Humanoid™
+                        Entre em contato via WhatsApp e conheça nossas soluções
                       </p>
                     </div>
                     
@@ -85,7 +85,7 @@ const SignUpPage = () => {
                       className="bg-legal-purple hover:bg-legal-purple/90 text-white font-bold px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                     >
                       <a 
-                        href="https://wa.me/5511999572394?text=Quero%20ser%20um%20dos%20primeiros%20a%20usar%20o%20Humanoid"
+                        href="https://wa.me/5511999572394?text=Quero%20conhecer%20as%20soluções%20LEGAL"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-3"

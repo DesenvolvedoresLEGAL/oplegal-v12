@@ -76,7 +76,7 @@ const DynamicContentGenerator: React.FC<DynamicContentProps> = ({
   const analyzeUserContext = useCallback(() => {
     const industryMapping = {
       'eventos': ['Smart Events™', 'MAGICPASS™', 'Eventrix'],
-      'rh': ['FitScore™', 'NeuraFit', 'Humanoid'],
+      'rh': ['FitScore™', 'NeuraFit'],
       'tecnologia': ['Galaxia', 'Blue6', 'Brilix'],
       'fitness': ['NeuraFit', 'FitScore™', 'Ping']
     };
