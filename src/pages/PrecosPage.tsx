@@ -320,13 +320,14 @@ const PrecosPage = () => {
             <Accordion type="single" collapsible className="space-y-4 animate-fade-up">
               <AccordionItem value="item-1" className="bg-white border border-gray-200 rounded-lg px-6">
                 <AccordionTrigger className="text-left font-bold text-legal hover:text-legal-purple">
-                  Como funcionam os VOLTS™?
+                  Qual a diferença entre os planos Speedy 5G?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-700">
-                  VOLTS™ são unidades de energia que alimentam seus agentes de IA no HUMANOID™. 
-                  Cada execução de agente consome uma quantidade específica de VOLTS, dependendo da complexidade 
-                  da tarefa. Você pode acompanhar o consumo em tempo real no dashboard e fazer top-ups sempre que necessário. 
-                  Com rollover de 20%, os VOLTS não utilizados são acumulados para o próximo mês.
+                  Cada plano Speedy 5G é dimensionado para atender necessidades específicas de eventos e negócios. 
+                  O Speedy Lite é ideal para pequenos eventos com até 3 conexões simultâneas, enquanto o Speedy Live 
+                  é voltado para transmissões ao vivo com dados ilimitados. A principal diferença está na capacidade 
+                  de dados por dia, número de conexões simultâneas e área de cobertura. Entre em contato para 
+                  que possamos indicar o plano ideal para sua necessidade.
                 </AccordionContent>
               </AccordionItem>
 
@@ -336,8 +337,8 @@ const PrecosPage = () => {
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-700">
                   Sim! O SPEEDY 5G™ está disponível em todo o território nacional com cobertura garantida. 
-                  Para eventos internacionais, consulte nosso time comercial para soluções personalizadas. 
-                  Já o HUMANOID™ é 100% cloud e pode ser acessado de qualquer lugar do mundo, 
+                  Para eventos internacionais, consulte nosso time comercial para soluções personalizadas de conectividade 
+                  e tecnologia. Nossos produtos baseados em nuvem podem ser acessados de qualquer lugar do mundo, 
                   bastando ter conexão com a internet.
                 </AccordionContent>
               </AccordionItem>
@@ -373,16 +374,17 @@ const PrecosPage = () => {
       {/* SEÇÃO 6 - CTA FINAL */}
       <section className="py-24 bg-gradient-to-br from-[#020cbc] via-[#4d2bfb] to-[#020cbc] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
-              O futuro das empresas não será humano ou artificial.
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight drop-shadow-lg">
+              O futuro dos negócios inteligentes começa agora.
               <br />
-              <span className="bg-gradient-to-r from-[#03f9ff] to-[#03f9ff] bg-clip-text text-transparent">
-                Será HUMANOID.
+              <span className="text-[#03f9ff] drop-shadow-[0_0_30px_rgba(3,249,255,0.5)]">
+                Conecte-se com a LEGAL.
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto font-medium">
+            <p className="text-lg md:text-xl text-white/95 max-w-2xl mx-auto font-medium drop-shadow-md">
               Junte-se às empresas que já estão construindo o futuro dos negócios inteligentes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
@@ -391,14 +393,14 @@ const PrecosPage = () => {
                 size="lg"
                 className="bg-white text-[#020cbc] hover:bg-[#03f9ff] hover:text-[#020cbc] font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105 shadow-xl"
               >
-                <Link to="/produtos/humanoid">Ativar workspace gratuito</Link>
+                <Link to="/signup">Ativar workspace gratuito</Link>
               </Button>
               <Button
                 asChild
                 size="lg"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#020cbc] font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#020cbc] font-bold text-lg px-8 py-6 h-auto transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                <Link to="/produtos/speedy5g">Solicitar cotação Speedy 5G</Link>
+                <Link to="/contato?produto=speedy5g">Solicitar cotação Speedy 5G</Link>
               </Button>
             </div>
           </div>
