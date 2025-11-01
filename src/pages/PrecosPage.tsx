@@ -111,10 +111,10 @@ const PrecosPage = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6)' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
               Planos criados para o futuro dos negócios inteligentes
             </h1>
-            <p className="text-lg md:text-xl text-white font-semibold max-w-2xl mx-auto" style={{ textShadow: '0 3px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)' }}>
+            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto">
               Escolha o plano ideal para sua empresa — de conectividade 5G até automações com Inteligência Artificial.
             </p>
             <Button
